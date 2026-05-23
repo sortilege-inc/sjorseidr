@@ -1,0 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Normandy Tribunal Workbook — 1223</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturCook:wght@700&display=swap');
+
+:root{
+  --ink:#221a12;
+  --ink-soft:#4a3c2c;
+  --parch:#ede0c4;
+  --parch-2:#e2d2ad;
+  --parch-deep:#d8c39a;
+  --gold:#9a6b1f;
+  --gold-bright:#c69b3f;
+  --rust:#8a3324;
+  --rust-bright:#b54a32;
+  --teal:#2c6b66;
+  --teal-bright:#3f8f86;
+  --player:#1d5fb0;
+  --player-bright:#2f7fd6;
+  --line:#6b5436;
+  --shadow:rgba(50,32,12,.45);
+  --green:#3e6b35;
+  --purple:#5b3a8a;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:'EB Garamond',Georgia,serif;
+  color:var(--ink);
+  background:
+    radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;
+  min-height:100vh;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(120,80,30,.06) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(90,60,20,.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 50% 85%, rgba(120,80,30,.05) 0 2px, transparent 3px);
+  background-size:140px 140px,180px 180px,160px 160px;
+  opacity:.6;mix-blend-mode:multiply;
+}
+.app{position:relative;z-index:1;max-width:1240px;margin:0 auto;padding:0 22px 60px}
+
+/* ---------- header ---------- */
+header{
+  display:flex;align-items:center;gap:18px;
+  padding:14px 4px 12px;
+  border-bottom:2px solid var(--line);
+}
+.crest{
+  flex:none;width:50px;height:50px;border-radius:50%;
+  display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%, var(--gold-bright), var(--gold) 70%, #6e4c14);
+  color:#fff6df;font-family:'Cinzel',serif;font-weight:700;font-size:21px;
+  box-shadow:inset 0 0 0 2px rgba(255,240,205,.5), 0 3px 8px var(--shadow);
+}
+.title h1{
+  font-family:'Cinzel',serif;font-weight:700;letter-spacing:.06em;
+  margin:0;font-size:clamp(20px,2.6vw,32px);color:var(--ink);
+  text-shadow:0 1px 0 rgba(255,245,220,.6);
+}
+.title .sub{font-style:italic;color:var(--ink-soft);font-size:14px;letter-spacing:.04em}
+.headspace{flex:1}
+.headctl{display:flex;gap:8px;align-items:center}
+.status{font-style:italic;font-size:12px;color:var(--ink-soft);margin-right:8px}
+.status.dirty{color:var(--rust);font-style:normal;font-weight:600}
+.status.saved{color:var(--green)}
+.btn{
+  font-family:'Cinzel',serif;font-size:12px;letter-spacing:.05em;cursor:pointer;
+  border:1.5px solid var(--gold);color:var(--ink);
+  background:linear-gradient(180deg,#f3e8cd,#e3d2aa);
+  padding:8px 13px;border-radius:6px;box-shadow:0 2px 4px var(--shadow);
+  transition:transform .12s, box-shadow .12s, background .12s;
+}
+.btn:hover{transform:translateY(-1px);box-shadow:0 4px 9px var(--shadow);background:linear-gradient(180deg,#f8eed4,#e9d9b4)}
+.btn.primary{background:linear-gradient(180deg,#d8b76a,#c69b3f);border-color:#7a5318}
+.btn.primary:hover{background:linear-gradient(180deg,#e6c478,#d4a94a)}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* ---------- tabs ---------- */
+.tabs{
+  display:flex;gap:2px;margin-top:14px;
+  border-bottom:2px solid var(--line);
+  flex-wrap:wrap;
+}
+.tab{
+  font-family:'Cinzel',serif;font-size:13px;letter-spacing:.05em;
+  padding:10px 16px;cursor:pointer;color:var(--ink-soft);
+  border:1.5px solid transparent;border-bottom:none;border-radius:8px 8px 0 0;
+  background:transparent;transition:background .12s,color .12s,border-color .12s;
+}
+.tab:hover{background:rgba(198,155,63,.12);color:var(--ink)}
+.tab.active{color:var(--ink);background:linear-gradient(180deg,#f4ead0,#e6d6af);
+  border-color:var(--gold);border-bottom-color:var(--parch);font-weight:600;
+  position:relative;top:2px;box-shadow:0 -2px 5px rgba(0,0,0,.06)}
+
+.subtabs{
+  display:flex;gap:4px;margin:10px 0 16px;padding:5px;
+  background:rgba(120,90,40,.1);border-radius:8px;border:1px solid rgba(120,90,40,.2);
+  flex-wrap:wrap;
+}
+.subtab{
+  font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.04em;cursor:pointer;
+  padding:6px 12px;border-radius:5px;color:var(--ink-soft);transition:all .12s;
+  border:none;background:transparent;
+}
+.subtab:hover{background:rgba(198,155,63,.15);color:var(--ink)}
+.subtab.active{background:linear-gradient(180deg,#f3e8cd,#e2d0a8);color:var(--ink);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+
+/* ---------- main panels ---------- */
+.panel{padding:14px 0 30px}
+.panel h2{
+  font-family:'Cinzel',serif;font-weight:600;letter-spacing:.05em;
+  font-size:22px;margin:0 0 6px;color:var(--ink);
+}
+.panel .lede{color:var(--ink-soft);font-style:italic;font-size:14px;line-height:1.5;margin:0 0 16px;max-width:840px}
+
+.empty-page{padding:80px 20px;text-align:center;color:var(--ink-soft);font-style:italic}
+.empty-page .icon{font-size:48px;color:var(--gold);display:block;margin-bottom:14px;font-style:normal}
+
+/* ---------- tally table ---------- */
+.tally-wrap{overflow-x:auto;background:linear-gradient(180deg,rgba(244,235,213,.5),rgba(232,217,178,.4));
+  border:1.5px solid var(--gold);border-radius:10px;box-shadow:0 2px 10px var(--shadow)}
+table.tally{width:100%;border-collapse:collapse;font-size:13.5px}
+table.tally thead th{
+  background:linear-gradient(180deg,#d4b06e,#b88a3f);color:#fff6df;
+  font-family:'Cinzel',serif;font-weight:600;letter-spacing:.04em;font-size:11.5px;
+  padding:9px 8px;text-align:center;border:1px solid #7a5318;text-transform:uppercase;
+}
+table.tally thead th:first-child,table.tally tbody td:first-child{text-align:left;padding-left:12px;width:170px}
+table.tally tbody td{padding:6px 8px;text-align:center;border:1px solid rgba(120,90,40,.25);}
+table.tally tbody tr{transition:background .12s}
+table.tally tbody tr:nth-child(odd) td{background:rgba(244,235,213,.4)}
+table.tally tbody tr:hover td{background:rgba(198,155,63,.18)}
+table.tally tbody tr.player td{background:rgba(29,95,176,.12)}
+table.tally tbody tr.player:hover td{background:rgba(29,95,176,.22)}
+.cov-name{font-family:'Cinzel',serif;font-size:13.5px}
+.tot{font-family:'Cinzel',serif;font-weight:700;font-size:15px;color:var(--ink);background:rgba(198,155,63,.16)!important}
+.rk{font-family:'Cinzel',serif;font-weight:700;background:rgba(198,155,63,.22)!important}
+.rk.gold{background:linear-gradient(150deg,#f1d77e,#d4a93a)!important}
+.rk.silver{background:linear-gradient(150deg,#dadada,#a8a8a8)!important}
+.rk.bronze{background:linear-gradient(150deg,#e7b07b,#bb7a3a)!important}
+
+.legend-bar{display:flex;gap:14px;font-size:11.5px;color:var(--ink-soft);margin:10px 4px 0;flex-wrap:wrap}
+.legend-bar .lg{display:flex;align-items:center;gap:5px}
+.legend-bar .sw{width:12px;height:12px;border-radius:3px;border:1px solid rgba(0,0,0,.3)}
+
+/* ---------- bracket / event view ---------- */
+.event-head{display:flex;align-items:baseline;gap:14px;margin-bottom:10px}
+.event-head h2{margin:0}
+.event-head .scoring{font-size:13px;color:var(--ink-soft);font-style:italic}
+.event-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:18px;margin-top:8px}
+@media (max-width:880px){.event-grid{grid-template-columns:1fr}}
+.sect{background:linear-gradient(180deg,rgba(244,235,213,.55),rgba(232,217,178,.45));
+  border:1.5px solid var(--gold);border-radius:10px;padding:14px 16px 16px;box-shadow:0 2px 8px var(--shadow)}
+.sect h3{font-family:'Cinzel',serif;font-weight:600;letter-spacing:.07em;font-size:13px;
+  text-transform:uppercase;color:var(--gold);margin:0 0 10px;padding-bottom:6px;
+  border-bottom:1px solid rgba(120,90,40,.3)}
+
+.round-h{font-family:'Cinzel',serif;font-size:12px;color:var(--ink-soft);
+  letter-spacing:.08em;text-transform:uppercase;margin:14px 0 6px;
+  padding-bottom:3px;border-bottom:1px dotted rgba(120,90,40,.4)}
+.round-h:first-child{margin-top:0}
+.match{display:grid;grid-template-columns:30px 1fr 1fr auto;gap:8px;align-items:center;padding:4px 0;
+  border-bottom:1px dotted rgba(120,90,40,.3);font-size:13.5px}
+.match:last-child{border-bottom:none}
+.match .mno{font-family:'Cinzel',serif;color:var(--gold);font-weight:600}
+.match .team{padding:3px 6px;border-radius:4px}
+.match .team.winner{background:rgba(154,107,31,.18);font-weight:600}
+.match select{font-family:'EB Garamond',serif;font-size:13px;
+  padding:3px 6px;border:1px solid rgba(120,90,40,.4);border-radius:5px;
+  background:rgba(244,235,213,.7);color:var(--ink);min-width:130px;cursor:pointer}
+
+.place-tbl{width:100%;border-collapse:collapse;font-size:13.5px}
+.place-tbl th{font-family:'Cinzel',serif;font-size:11px;font-weight:600;
+  color:var(--ink-soft);text-align:left;padding:5px 6px;border-bottom:1px solid rgba(120,90,40,.3);
+  letter-spacing:.06em;text-transform:uppercase}
+.place-tbl td{padding:5px 6px;border-bottom:1px dotted rgba(120,90,40,.25)}
+.place-tbl tr:last-child td{border-bottom:none}
+.place-tbl input[type=number]{width:54px;padding:3px 5px;font-size:13px;
+  border:1px solid rgba(120,90,40,.4);border-radius:4px;background:rgba(244,235,213,.7);
+  font-family:'EB Garamond',serif;text-align:center}
+.place-tbl input[type=number]::-webkit-outer-spin-button,.place-tbl input[type=number]::-webkit-inner-spin-button{opacity:.6}
+.place-tbl .pts{font-family:'Cinzel',serif;font-weight:600;text-align:right;color:var(--gold);width:48px}
+.place-tbl .pts.hot{color:var(--rust)}
+.place-tbl tr.player td{background:rgba(29,95,176,.08)}
+.compete-chk{width:18px;height:18px;cursor:pointer;accent-color:var(--gold)}
+
+.stage2-grid{display:grid;grid-template-columns:1fr auto;gap:5px 10px;font-size:13px}
+.stage2-grid .t{padding:3px 0}
+.stage2-grid .p{font-family:'Cinzel',serif;font-weight:600;text-align:right;color:var(--gold)}
+
+.event-banner{padding:8px 12px;margin:0 0 14px;border-radius:6px;font-size:13px;font-style:italic}
+.event-banner.cancelled{background:rgba(138,51,36,.14);color:var(--rust);border:1px solid rgba(138,51,36,.4)}
+
+/* ---------- prize ranks ---------- */
+.prize-tbl{width:100%;border-collapse:collapse;font-size:13.5px;background:linear-gradient(180deg,rgba(244,235,213,.5),rgba(232,217,178,.4));
+  border:1.5px solid var(--gold);border-radius:10px;overflow:hidden;box-shadow:0 2px 10px var(--shadow)}
+.prize-tbl th{background:linear-gradient(180deg,#d4b06e,#b88a3f);color:#fff6df;
+  font-family:'Cinzel',serif;font-weight:600;letter-spacing:.04em;font-size:11.5px;
+  padding:9px 10px;text-align:left;border:1px solid #7a5318;text-transform:uppercase}
+.prize-tbl td{padding:7px 10px;border:1px solid rgba(120,90,40,.25)}
+.prize-tbl tr:nth-child(odd) td{background:rgba(244,235,213,.4)}
+.prize-tbl input[type=text]{font-family:'EB Garamond',serif;font-size:13.5px;
+  border:1px solid transparent;background:transparent;width:100%;padding:2px 4px;border-radius:3px}
+.prize-tbl input[type=text]:hover,.prize-tbl input[type=text]:focus{border-color:rgba(120,90,40,.4);background:rgba(244,235,213,.8);outline:none}
+.prize-tbl input[type=number]{width:64px;padding:3px 5px;font-size:13px;
+  border:1px solid rgba(120,90,40,.4);border-radius:4px;background:rgba(244,235,213,.7);
+  font-family:'EB Garamond',serif;text-align:center}
+.prize-tbl .seat-rank{font-family:'Cinzel',serif;font-weight:700;color:var(--rust);font-style:italic}
+
+/* ---------- cards (vis / library) ---------- */
+.filterbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:14px;padding:8px 10px;
+  background:rgba(120,90,40,.08);border:1px solid rgba(120,90,40,.18);border-radius:8px}
+.filterbar .label{font-family:'Cinzel',serif;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);margin-right:6px}
+.fbtn{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.04em;cursor:pointer;
+  border:1px solid rgba(120,90,40,.3);background:rgba(244,235,213,.6);color:var(--ink-soft);
+  padding:4px 10px;border-radius:14px;transition:all .12s}
+.fbtn:hover{background:rgba(244,235,213,.95);color:var(--ink)}
+.fbtn.on{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:#fff6df;border-color:#7a5318;font-weight:600}
+.search-input{flex:1;min-width:160px;font-family:'EB Garamond',serif;font-size:13px;
+  padding:6px 10px;border:1px solid rgba(120,90,40,.35);border-radius:6px;background:rgba(244,235,213,.7)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.card{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);
+  border:1.5px solid rgba(120,90,40,.45);border-radius:10px;padding:12px 14px 13px;
+  box-shadow:0 2px 6px var(--shadow);position:relative;display:flex;flex-direction:column;gap:6px;
+  transition:transform .12s,box-shadow .12s,border-color .12s}
+.card:hover{transform:translateY(-1px);box-shadow:0 4px 10px var(--shadow);border-color:var(--gold)}
+.card-head{display:flex;justify-content:space-between;align-items:start;gap:8px}
+.card-title{font-family:'Cinzel',serif;font-size:15px;font-weight:600;color:var(--ink);line-height:1.2}
+.card-sub{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin-top:-2px}
+.badge{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.05em;padding:2px 7px;border-radius:10px;
+  color:#fff6df;font-weight:600;flex:none}
+.badge.aquam{background:#3a6e8a}.badge.auram{background:#88a0c7}.badge.corpus{background:#8a4646}
+.badge.creo{background:#c0823f}.badge.herbam{background:#4f6a3a}.badge.imaginem{background:#7e5fa0}
+.badge.intellego{background:#386b86}.badge.mentem{background:#5d3a72}.badge.muto{background:#7a4f8d}
+.badge.perdo{background:#3a3a3a}.badge.rego{background:#a0701f}.badge.terram{background:#6b4f2c}
+.badge.vim{background:#1a4d72}.badge.animal{background:#704c2c}.badge.ignem{background:#a8341a}
+.card-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:12px;color:var(--ink-soft)}
+.tag{display:inline-block;background:rgba(120,90,40,.15);padding:1px 7px;border-radius:9px;
+  font-size:11px;color:var(--ink-soft);border:1px solid rgba(120,90,40,.25)}
+.tag.canon{background:rgba(154,107,31,.16);color:var(--gold);border-color:rgba(154,107,31,.3)}
+.tag.avail{background:rgba(44,107,102,.16);color:var(--teal);border-color:rgba(44,107,102,.35)}
+.tag.proposed{background:rgba(91,58,138,.16);color:var(--purple);border-color:rgba(91,58,138,.4)}
+.card-notes{font-size:13px;line-height:1.45;color:var(--ink);margin-top:2px}
+.card-actions{display:flex;gap:5px;align-items:center}
+.icon-btn{cursor:pointer;border:none;background:transparent;color:var(--ink-soft);font-size:14px;
+  padding:3px 6px;border-radius:4px;transition:background .12s,color .12s}
+.icon-btn:hover{background:rgba(154,107,31,.18);color:var(--ink)}
+.icon-btn.danger:hover{background:rgba(138,51,36,.18);color:var(--rust)}
+
+/* card edit mode */
+.card.editing{border-color:var(--gold);box-shadow:0 0 0 2px rgba(198,155,63,.4),0 3px 10px var(--shadow)}
+.card.editing input,.card.editing select,.card.editing textarea{
+  font-family:'EB Garamond',serif;font-size:13.5px;padding:4px 7px;
+  border:1px solid rgba(120,90,40,.4);border-radius:5px;background:rgba(255,250,235,.85);width:100%}
+.card.editing .card-title input{font-family:'Cinzel',serif;font-size:15px;font-weight:600}
+.card.editing textarea{min-height:62px;resize:vertical;line-height:1.4}
+.card.editing .edit-row{display:flex;gap:6px;align-items:center}
+.card.editing .edit-row label{font-family:'Cinzel',serif;font-size:10.5px;color:var(--ink-soft);
+  text-transform:uppercase;letter-spacing:.05em;min-width:50px;flex:none}
+
+.lib-section{margin-bottom:22px}
+.lib-section .lib-section-h{font-family:'UnifrakturCook','Cinzel',serif;font-size:22px;color:var(--ink);
+  margin:0 0 10px;padding-bottom:4px;border-bottom:2px solid var(--gold)}
+
+.add-btn{margin-bottom:14px}
+
+.filter-count{margin-left:auto;font-size:11.5px;color:var(--ink-soft);font-style:italic}
+
+footer{margin-top:30px;padding-top:14px;border-top:1px solid rgba(120,90,40,.3);
+  font-size:11.5px;color:var(--ink-soft);font-style:italic;text-align:center;line-height:1.6}
+
+.dialog-backdrop{position:fixed;inset:0;background:rgba(40,25,8,.55);z-index:50;
+  display:none;align-items:center;justify-content:center;padding:20px}
+.dialog-backdrop.open{display:flex}
+.dialog{background:linear-gradient(180deg,#f4ead0,#e6d6af);border:2px solid var(--gold);
+  border-radius:10px;padding:20px 24px;max-width:480px;width:100%;box-shadow:0 10px 40px rgba(0,0,0,.4)}
+.dialog h3{font-family:'Cinzel',serif;margin:0 0 10px;font-weight:600;color:var(--ink)}
+.dialog p{margin:0 0 14px;line-height:1.5;color:var(--ink)}
+.dialog-actions{display:flex;justify-content:flex-end;gap:8px}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="crest">N</div>
+    <div class="title">
+      <h1>Normandy Tribunal Workbook</h1>
+      <div class="sub">Tourney scoring · Vis registry · Library — A.D. 1223</div>
+    </div>
+    <div class="headspace"></div>
+    <div class="headctl">
+      <span id="status" class="status">No file loaded</span>
+      <button class="btn" id="loadBtn">Load JSON</button>
+      <button class="btn primary" id="saveBtn" disabled>Save JSON</button>
+    </div>
+  </header>
+
+  <input type="file" id="fileInput" accept=".json,application/json" style="display:none">
+
+  <div class="tabs" id="tabs">
+    <div class="tab active" data-tab="tally">Tally</div>
+    <div class="tab" data-tab="events">Brackets &amp; Events</div>
+    <div class="tab" data-tab="prizes">Prize Ranks</div>
+    <div class="tab" data-tab="vis">Vis Sources</div>
+    <div class="tab" data-tab="library">Library</div>
+  </div>
+
+  <div id="content"></div>
+
+  <footer>
+    Compiled for the use of member covenants of the Normandy Tribunal · A.D. 1223 · <em>Omnia in commune</em><br>
+    Companion to the <em>1223 Tribunal Map</em> · Sources: <em>The Lion &amp; the Lily</em> and the covenants' own records
+  </footer>
+</div>
+
+<div class="dialog-backdrop" id="dialog">
+  <div class="dialog">
+    <h3 id="dlgTitle">Notice</h3>
+    <p id="dlgMsg"></p>
+    <div class="dialog-actions">
+      <button class="btn" id="dlgCancel" style="display:none">Cancel</button>
+      <button class="btn primary" id="dlgOk">OK</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   STATE
+   ============================================================ */
+let STATE = null;
+let fileHandle = null;
+let activeTab = 'tally';
+let activeEvent = 'Certamen';
+let activeVisFilter = {category:'all', art:'all', status:'all', q:''};
+let activeLibFilter = {type:'all', booktype:'all', q:''};
+let dirty = false;
+const LS_KEY = 'tribunal_workbook_state_v1';
+
+/* ============================================================
+   UTIL
+   ============================================================ */
+const $ = (sel,root=document)=>root.querySelector(sel);
+const $$ = (sel,root=document)=>Array.from(root.querySelectorAll(sel));
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function setStatus(text, kind=''){const el=$('#status');el.textContent=text;el.className='status '+kind;}
+function setDirty(d){
+  dirty=d;
+  $('#saveBtn').disabled = !STATE;
+  if(d){setStatus('Unsaved changes', 'dirty');}
+}
+function alertDialog(title, msg){
+  $('#dlgTitle').textContent = title;
+  $('#dlgMsg').textContent = msg;
+  $('#dlgCancel').style.display = 'none';
+  $('#dialog').classList.add('open');
+  return new Promise(res=>{
+    $('#dlgOk').onclick = ()=>{$('#dialog').classList.remove('open');res(true);};
+  });
+}
+function confirmDialog(title, msg){
+  $('#dlgTitle').textContent = title;
+  $('#dlgMsg').textContent = msg;
+  $('#dlgCancel').style.display = '';
+  $('#dialog').classList.add('open');
+  return new Promise(res=>{
+    $('#dlgOk').onclick = ()=>{$('#dialog').classList.remove('open');res(true);};
+    $('#dlgCancel').onclick = ()=>{$('#dialog').classList.remove('open');res(false);};
+  });
+}
+
+/* ============================================================
+   LOAD / SAVE
+   ============================================================ */
+async function tryFetchInitial(){
+  try{
+    const r = await fetch('./tribunal_data.json',{cache:'no-store'});
+    if(!r.ok) throw new Error('not ok');
+    STATE = await r.json();
+    setStatus('Loaded tribunal_data.json (read-only — use Save to download a copy)', 'saved');
+    render();
+  } catch(e){
+    // try localStorage as a fallback
+    const cached = localStorage.getItem(LS_KEY);
+    if(cached){
+      try{
+        STATE = JSON.parse(cached);
+        setStatus('Restored from autosave — click Load JSON to reconnect the file', 'dirty');
+        render();
+        return;
+      }catch(_){}
+    }
+    renderEmpty();
+  }
+}
+
+async function openFilePicker(){
+  if(window.showOpenFilePicker){
+    try{
+      const [h] = await window.showOpenFilePicker({
+        types:[{description:'Tribunal JSON',accept:{'application/json':['.json']}}],
+        multiple:false
+      });
+      fileHandle = h;
+      const f = await h.getFile();
+      const txt = await f.text();
+      STATE = JSON.parse(txt);
+      setStatus('Linked to ' + h.name, 'saved');
+      render();
+    } catch(err){
+      if(err.name !== 'AbortError') alertDialog('Load failed', err.message);
+    }
+  } else {
+    $('#fileInput').click();
+  }
+}
+
+$('#fileInput').addEventListener('change', async e => {
+  const f = e.target.files[0]; if(!f) return;
+  try{
+    STATE = JSON.parse(await f.text());
+    fileHandle = null;
+    setStatus('Loaded ' + f.name + ' (save will download a copy)', 'saved');
+    render();
+  } catch(err){
+    alertDialog('Load failed', err.message);
+  }
+  e.target.value = '';
+});
+
+async function saveJson(){
+  if(!STATE) return;
+  const json = JSON.stringify(STATE, null, 2);
+  localStorage.setItem(LS_KEY, json);
+  if(fileHandle){
+    try{
+      const w = await fileHandle.createWritable();
+      await w.write(json);
+      await w.close();
+      dirty=false;
+      setStatus('Saved to ' + fileHandle.name + ' · ' + new Date().toLocaleTimeString(), 'saved');
+      return;
+    } catch(err){
+      alertDialog('Save failed', err.message + ' — downloading a copy instead.');
+    }
+  }
+  // download fallback
+  const blob = new Blob([json],{type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href=url; a.download='tribunal_data.json'; a.click();
+  URL.revokeObjectURL(url);
+  dirty=false;
+  setStatus('Downloaded tribunal_data.json · ' + new Date().toLocaleTimeString(), 'saved');
+}
+
+$('#loadBtn').onclick = openFilePicker;
+$('#saveBtn').onclick = saveJson;
+
+// autosave to localStorage (debounced)
+let autosaveT = null;
+function autosave(){
+  if(!STATE) return;
+  clearTimeout(autosaveT);
+  autosaveT = setTimeout(()=>{
+    try{ localStorage.setItem(LS_KEY, JSON.stringify(STATE)); }catch(_){}
+  }, 600);
+}
+
+/* ============================================================
+   SCORING CALCULATIONS
+   ============================================================ */
+function pointsFor(event, name){
+  const ev = STATE.tournament.events[event];
+  if(!ev) return 0;
+  // Most events: place 1=top, 2=second, 3-4=third tier; + competed +1
+  if(event === 'Melee'){
+    const rec = (ev.entries||{})[name];
+    if(!rec) return 0;
+    const s = rec.standing;
+    if(s===1) return 6;
+    if(s===2||s===3||s===4) return 2;
+    if(s===5) return 1;
+    return 0;
+  }
+  if(event === 'Norman Conquest' && ev.cancelled){
+    return 0;
+  }
+  const rec = (ev.placement||{})[name];
+  if(!rec) return 0;
+  const sc = ev.scoring;
+  let pts = 0;
+  if(rec.place===1) pts += sc['1']||0;
+  else if(rec.place===2) pts += sc['2']||0;
+  else if(rec.place===3||rec.place===4) pts += sc['3-4']||0;
+  if((rec.competed||'').toUpperCase()==='Y') pts += sc.participation||0;
+  return pts;
+}
+function totalFor(name){
+  const events = STATE.tournament.events;
+  let t = 1; // starting +1 (matches sheet Start col)
+  for(const ev of Object.keys(events)) t += pointsFor(ev, name);
+  return t;
+}
+function leaderboard(){
+  const arr = STATE.tournament.covenants.map(n=>({name:n,total:totalFor(n)}));
+  arr.sort((a,b)=>b.total-a.total || a.name.localeCompare(b.name));
+  let lastTotal=null,lastRank=0;
+  arr.forEach((it,i)=>{
+    if(it.total!==lastTotal){lastRank=i+1;lastTotal=it.total;}
+    it.rank=lastRank;
+  });
+  return arr;
+}
+function rankMap(){
+  const m = {};
+  leaderboard().forEach(it=>{m[it.name]=it.rank;});
+  return m;
+}
+
+/* ============================================================
+   RENDER ROOT
+   ============================================================ */
+function renderEmpty(){
+  $('#content').innerHTML = `<div class="empty-page">
+    <span class="icon">✦</span>
+    <p>No workbook loaded.</p>
+    <p style="margin-top:8px"><button class="btn primary" onclick="document.getElementById('loadBtn').click()">Choose tribunal_data.json</button></p>
+    <p style="margin-top:18px;font-size:12.5px;max-width:480px;margin-left:auto;margin-right:auto">
+      Browsers can't read sibling files when the page is opened via <code>file://</code>.
+      Click <b>Load JSON</b> and pick <code>tribunal_data.json</code> from this folder; the page will
+      keep a live link to it so <b>Save</b> writes back in place (Chromium browsers only — others get a download).
+    </p>
+  </div>`;
+}
+
+function render(){
+  if(!STATE){ renderEmpty(); return; }
+  $('#saveBtn').disabled = false;
+  $$('.tab').forEach(t=>t.classList.toggle('active', t.dataset.tab===activeTab));
+  switch(activeTab){
+    case 'tally': renderTally(); break;
+    case 'events': renderEvent(); break;
+    case 'prizes': renderPrizes(); break;
+    case 'vis': renderVis(); break;
+    case 'library': renderLibrary(); break;
+  }
+}
+
+$$('.tab').forEach(t=>t.onclick=()=>{activeTab=t.dataset.tab;render();});
+
+/* ============================================================
+   TALLY
+   ============================================================ */
+function renderTally(){
+  const events = Object.keys(STATE.tournament.events);
+  const rm = rankMap();
+  const ncCancelled = !!(STATE.tournament.events['Norman Conquest']||{}).cancelled;
+
+  let rows = STATE.tournament.covenants.map(n=>{
+    const cells = events.map(ev=>{
+      const p = pointsFor(ev, n);
+      const cls = p>2 ? 'hot' : '';
+      return `<td class="${cls}">${p}</td>`;
+    }).join('');
+    const tot = totalFor(n);
+    const rk = rm[n];
+    const rkCls = rk===1?'gold':(rk===2?'silver':(rk===3?'bronze':''));
+    const isP = (n==='Sjórseiðr' || n==='Sjórseiðr');
+    return `<tr class="${isP?'player':''}">
+      <td class="cov-name">${esc(n)}</td>
+      <td>1</td>
+      ${cells}
+      <td class="tot">${tot}</td>
+      <td class="rk ${rkCls}">${rk}</td>
+    </tr>`;
+  }).join('');
+
+  const evHeaders = events.map(ev=>`<th title="${esc(STATE.tournament.events[ev].scoring.desc||'')}">${esc(ev)}</th>`).join('');
+
+  $('#content').innerHTML = `
+    <div class="panel">
+      <h2>Point Tally — Hermetic Tourney 1223</h2>
+      <p class="lede">Starting tally = 1 (visitor / participation seed). Each event column is computed from its bracket and final placement.${ncCancelled?` <b style="color:var(--rust)">The Norman Conquest was cancelled — zero points across the board.</b>`:''}</p>
+      <div class="tally-wrap">
+        <table class="tally">
+          <thead><tr>
+            <th>Covenant</th><th>Start</th>${evHeaders}<th>Total</th><th>Rank</th>
+          </tr></thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+      <div class="legend-bar">
+        <div class="lg"><div class="sw" style="background:rgba(29,95,176,.4)"></div>Player covenant (Sjórseiðr)</div>
+        <div class="lg"><div class="sw" style="background:rgba(198,155,63,.35)"></div>Total / Rank columns are computed</div>
+        <div class="lg"><div class="sw" style="background:linear-gradient(150deg,#f1d77e,#d4a93a)"></div>Gold / Silver / Bronze</div>
+      </div>
+    </div>`;
+}
+
+/* ============================================================
+   EVENTS / BRACKETS
+   ============================================================ */
+function renderEvent(){
+  const events = Object.keys(STATE.tournament.events);
+  if(!events.includes(activeEvent)) activeEvent = events[0];
+  const subtabs = events.map(ev=>`<button class="subtab ${ev===activeEvent?'active':''}" data-ev="${esc(ev)}">${esc(ev)}</button>`).join('');
+  $('#content').innerHTML = `
+    <div class="panel">
+      <div class="subtabs">${subtabs}</div>
+      <div id="eventBody"></div>
+    </div>`;
+  $$('.subtab').forEach(b=>b.onclick=()=>{activeEvent=b.dataset.ev;renderEvent();});
+  renderEventBody();
+}
+
+function renderEventBody(){
+  const ev = activeEvent;
+  const data = STATE.tournament.events[ev];
+  const sc = data.scoring || {};
+  let scoringTxt = '';
+  if(ev==='Melee') scoringTxt = '1st = 6 pts · 2nd–4th = 2 each · 5th = 1';
+  else scoringTxt = `1st = ${sc['1']} · 2nd = ${sc['2']} · 3rd/4th = ${sc['3-4']} each · Participation = +${sc.participation||0}`;
+
+  let html = `<div class="event-head">
+    <h2>${esc(ev)}</h2>
+    <div class="scoring">${esc(sc.desc||'')} <b style="margin-left:8px">${esc(scoringTxt)}</b></div>
+  </div>`;
+
+  if(ev==='Norman Conquest' && data.cancelled){
+    html += `<div class="event-banner cancelled"><b>Cancelled.</b> No points are awarded for this event; final placement entries below remain for reference.</div>`;
+  }
+
+  if(ev==='Melee'){
+    html += renderMelee(data);
+  } else if(ev==='Norman Conquest'){
+    html += renderNormanConquest(data);
+  } else {
+    html += `<div class="event-grid">
+      ${renderBracket(ev, data)}
+      ${renderPlacement(ev, data)}
+    </div>`;
+  }
+
+  $('#eventBody').innerHTML = html;
+  bindEventHandlers(ev);
+}
+
+function teamOptions(selected, includeBlank=true){
+  const opts = STATE.tournament.covenants.map(c=>`<option value="${esc(c)}" ${c===selected?'selected':''}>${esc(c)}</option>`).join('');
+  return (includeBlank?`<option value=""></option>`:'') + opts;
+}
+
+function renderBracket(evName, data){
+  let html = `<div class="sect"><h3>Bracket</h3>`;
+  let currentRound = null;
+  data.bracket.forEach(m=>{
+    if(m.round !== currentRound){
+      currentRound = m.round;
+      html += `<div class="round-h">${esc(currentRound||'')}</div>`;
+    }
+    const aWin = m.winner && m.winner===m.a;
+    const bWin = m.winner && m.winner===m.b;
+    html += `<div class="match" data-match="${m.match}">
+      <div class="mno">${m.match}</div>
+      <div class="team ${aWin?'winner':''}">${esc(m.a||'—')}</div>
+      <div class="team ${bWin?'winner':''}">${esc(m.b||'—')}</div>
+      <select data-action="winner" data-match="${m.match}">
+        <option value=""></option>
+        <option value="${esc(m.a)}" ${m.winner===m.a?'selected':''}>${esc(m.a||'')}</option>
+        <option value="${esc(m.b)}" ${m.winner===m.b?'selected':''}>${esc(m.b||'')}</option>
+      </select>
+    </div>`;
+  });
+  html += `</div>`;
+  return html;
+}
+
+function renderPlacement(evName, data){
+  let rows = STATE.tournament.covenants.map(c=>{
+    const rec = (data.placement||{})[c] || {place:null,competed:'Y'};
+    const pts = pointsFor(evName, c);
+    const cls = pts>2 ? 'hot' : '';
+    const isP = (c==='Sjórseiðr' || c==='Sjórseiðr');
+    return `<tr class="${isP?'player':''}" data-team="${esc(c)}">
+      <td class="cov-name">${esc(c)}</td>
+      <td><input type="number" min="1" max="4" data-action="place" value="${rec.place||''}" placeholder="—"></td>
+      <td style="text-align:center"><input type="checkbox" class="compete-chk" data-action="competed" ${(rec.competed||'').toUpperCase()==='Y'?'checked':''}></td>
+      <td class="pts ${cls}">${pts}</td>
+    </tr>`;
+  }).join('');
+  return `<div class="sect"><h3>Final Placement</h3>
+    <table class="place-tbl">
+      <thead><tr><th>Team</th><th>Place</th><th>Competed</th><th style="text-align:right">Points</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>`;
+}
+
+function renderMelee(data){
+  let rows = STATE.tournament.covenants.map(c=>{
+    const rec = (data.entries||{})[c] || {champions:0, standing:null};
+    const pts = pointsFor('Melee', c);
+    const cls = pts>2 ? 'hot' : '';
+    const isP = (c==='Sjórseiðr' || c==='Sjórseiðr');
+    return `<tr class="${isP?'player':''}" data-team="${esc(c)}">
+      <td class="cov-name">${esc(c)}</td>
+      <td><input type="number" min="0" data-action="champions" value="${rec.champions||0}"></td>
+      <td><input type="number" min="1" max="5" data-action="standing" value="${rec.standing||''}" placeholder="—"></td>
+      <td class="pts ${cls}">${pts}</td>
+    </tr>`;
+  }).join('');
+  return `<div class="sect" style="max-width:760px"><h3>Champions &amp; Standing</h3>
+    <p style="font-size:12.5px;font-style:italic;color:var(--ink-soft);margin:0 0 10px">
+      Enter the number of grogs / companions registered per covenant, then the final standing (1–5; blank = eliminated below 5th).</p>
+    <table class="place-tbl">
+      <thead><tr><th>Team</th><th>Champions</th><th>Standing</th><th style="text-align:right">Points</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table></div>`;
+}
+
+function renderNormanConquest(data){
+  const stage2Rows = (data.stage2||[]).map((s,i)=>`<div class="t">${esc(s.team)}</div><div class="p">${s.points} pts</div>`).join('');
+  let placementRows = STATE.tournament.covenants.map(c=>{
+    const rec = (data.placement||{})[c] || {place:null,competed:'Y'};
+    const pts = pointsFor('Norman Conquest', c);
+    const cls = pts>2 ? 'hot' : '';
+    const isP = (c==='Sjórseiðr' || c==='Sjórseiðr');
+    return `<tr class="${isP?'player':''}" data-team="${esc(c)}">
+      <td class="cov-name">${esc(c)}</td>
+      <td><input type="number" min="1" max="4" data-action="place" value="${rec.place||''}" placeholder="—"></td>
+      <td style="text-align:center"><input type="checkbox" class="compete-chk" data-action="competed" ${(rec.competed||'').toUpperCase()==='Y'?'checked':''}></td>
+      <td class="pts ${cls}">${pts}</td>
+    </tr>`;
+  }).join('');
+  return `<div class="event-grid">
+    <div class="sect"><h3>Stage 2 — Vassal's Dilemma (Quaesitor scores)</h3>
+      ${stage2Rows ? `<div class="stage2-grid">${stage2Rows}</div>` : '<p style="font-style:italic;color:var(--ink-soft)">No stage-2 scores recorded.</p>'}
+      <div style="margin-top:14px;padding-top:10px;border-top:1px dotted rgba(120,90,40,.3);display:flex;align-items:center;gap:10px">
+        <label style="font-size:12px;color:var(--ink-soft)"><input type="checkbox" id="ncCancelToggle" ${data.cancelled?'checked':''}> Mark event cancelled (zero points)</label>
+      </div>
+    </div>
+    <div class="sect"><h3>Final Placement</h3>
+      <table class="place-tbl">
+        <thead><tr><th>Team</th><th>Place</th><th>Competed</th><th style="text-align:right">Points</th></tr></thead>
+        <tbody>${placementRows}</tbody>
+      </table>
+    </div>
+  </div>`;
+}
+
+function bindEventHandlers(evName){
+  const data = STATE.tournament.events[evName];
+  if(evName !== 'Melee' && evName !== 'Norman Conquest'){
+    $$('select[data-action="winner"]', $('#eventBody')).forEach(s=>{
+      s.onchange = e=>{
+        const m = parseInt(s.dataset.match,10);
+        const match = data.bracket.find(x=>x.match===m);
+        if(match){ match.winner = s.value; setDirty(true); autosave(); renderEventBody(); }
+      };
+    });
+  }
+  $$('input[data-action]', $('#eventBody')).forEach(inp=>{
+    inp.onchange = ()=>{
+      const tr = inp.closest('tr');
+      const team = tr.dataset.team;
+      const action = inp.dataset.action;
+      if(evName === 'Melee'){
+        data.entries[team] = data.entries[team] || {champions:0, standing:null};
+        if(action==='champions') data.entries[team].champions = parseInt(inp.value,10)||0;
+        if(action==='standing') data.entries[team].standing = inp.value===''?null:(parseInt(inp.value,10)||null);
+      } else {
+        data.placement[team] = data.placement[team] || {place:null, competed:'Y'};
+        if(action==='place') data.placement[team].place = inp.value===''?null:(parseInt(inp.value,10)||null);
+        if(action==='competed') data.placement[team].competed = inp.checked ? 'Y' : '';
+      }
+      setDirty(true); autosave(); renderEventBody();
+    };
+  });
+  const ncToggle = $('#ncCancelToggle');
+  if(ncToggle){
+    ncToggle.onchange = ()=>{
+      data.cancelled = ncToggle.checked;
+      setDirty(true); autosave(); renderEventBody();
+    };
+  }
+}
+
+/* ============================================================
+   PRIZE RANKS
+   ============================================================ */
+function renderPrizes(){
+  const lb = leaderboard();
+  const ranks = STATE.tournament.prize_ranks || [];
+  const byRank = {};
+  lb.forEach(it=>{
+    if(!byRank[it.rank]) byRank[it.rank]=[];
+    byRank[it.rank].push(it);
+  });
+  let rows = ranks.map((p,i)=>{
+    const winners = byRank[p.rank]||[];
+    const cov = winners.length===1 ? winners[0].name :
+                (winners.length>1 ? `<i>${winners.length} tied</i>` : '<i>— TBD —</i>');
+    const tot = winners.length===1 ? winners[0].total : (winners.length>1 ? winners[0].total : '');
+    return `<tr data-i="${i}">
+      <td class="seat-rank">${p.rank}</td>
+      <td><input type="text" data-field="seat" value="${esc(p.seat||'')}"></td>
+      <td><input type="number" min="0" data-field="pawns" value="${p.pawns||0}"></td>
+      <td>${cov}</td>
+      <td style="text-align:center">${tot}</td>
+    </tr>`;
+  }).join('');
+  $('#content').innerHTML = `<div class="panel">
+    <h2>Prize Ranks &amp; Distribution</h2>
+    <p class="lede">Ranks fill automatically from the live tally. Edit seat names and prize-pawn values inline; saves go back to the JSON.</p>
+    <table class="prize-tbl">
+      <thead><tr><th>Rank</th><th>Seat / Honor</th><th>Pawns</th><th>Covenant (auto)</th><th style="text-align:center">Total Pts</th></tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+  </div>`;
+  $$('.prize-tbl input').forEach(inp=>{
+    inp.onchange = ()=>{
+      const i = parseInt(inp.closest('tr').dataset.i,10);
+      const f = inp.dataset.field;
+      if(f==='seat') STATE.tournament.prize_ranks[i].seat = inp.value;
+      if(f==='pawns') STATE.tournament.prize_ranks[i].pawns = parseInt(inp.value,10)||0;
+      setDirty(true); autosave();
+    };
+  });
+}
+
+/* ============================================================
+   VIS
+   ============================================================ */
+const ARTS = ['Animal','Aquam','Auram','Corpus','Creo','Herbam','Ignem','Imaginem','Intellego','Mentem','Muto','Perdo','Rego','Terram','Vim'];
+const VIS_STATUSES = ['Canon','Available','Proposed'];
+
+function renderVis(){
+  const f = activeVisFilter;
+  const all = STATE.vis_sources || [];
+  let list = all.filter(v=>{
+    if(f.category!=='all' && v.category!==f.category) return false;
+    if(f.art!=='all' && v.art!==f.art) return false;
+    if(f.status!=='all' && !(v.status||'').toLowerCase().includes(f.status.toLowerCase())) return false;
+    if(f.q){
+      const q = f.q.toLowerCase();
+      if(!(v.name+' '+v.notes+' '+v.art+' '+v.yield+' '+v.status).toLowerCase().includes(q)) return false;
+    }
+    return true;
+  });
+
+  const categoryBtns = ['all','Tropaeum','Luctatio'].map(c=>`<button class="fbtn ${f.category===c?'on':''}" data-cat="${c}">${c==='all'?'All':c}</button>`).join('');
+  const artBtns = ['all',...ARTS].map(a=>`<button class="fbtn ${f.art===a?'on':''}" data-art="${a}">${a==='all'?'All Arts':a}</button>`).join('');
+  const statusBtns = ['all',...VIS_STATUSES].map(s=>`<button class="fbtn ${f.status===s?'on':''}" data-status="${s}">${s==='all'?'All Status':s}</button>`).join('');
+
+  let cards = list.map(v=>visCard(v)).join('');
+  if(!cards) cards = `<div style="grid-column:1/-1;text-align:center;color:var(--ink-soft);font-style:italic;padding:40px">No matching vis sources.</div>`;
+
+  $('#content').innerHTML = `<div class="panel">
+    <h2>Vis Sources</h2>
+    <p class="lede"><b>Tropaea</b> are Tribunal common property leased through the Tourney; <b>Luctationes</b> are open contests requiring effort or risk. Click ✎ to edit; ✚ to add a new entry.</p>
+    <div class="filterbar">
+      <span class="label">Type:</span> ${categoryBtns}
+      <span class="label">Art:</span> ${artBtns}
+      <span class="label">Status:</span> ${statusBtns}
+      <input class="search-input" type="text" placeholder="Search name or notes…" value="${esc(f.q)}" id="visSearch">
+      <span class="filter-count">${list.length} of ${all.length}</span>
+    </div>
+    <div class="add-btn"><button class="btn primary" id="addVisBtn">✚  Add Vis Source</button></div>
+    <div class="cards" id="visCards">${cards}</div>
+  </div>`;
+
+  $$('.filterbar .fbtn[data-cat]').forEach(b=>b.onclick=()=>{activeVisFilter.category=b.dataset.cat;renderVis();});
+  $$('.filterbar .fbtn[data-art]').forEach(b=>b.onclick=()=>{activeVisFilter.art=b.dataset.art;renderVis();});
+  $$('.filterbar .fbtn[data-status]').forEach(b=>b.onclick=()=>{activeVisFilter.status=b.dataset.status;renderVis();});
+  $('#visSearch').oninput = e=>{activeVisFilter.q=e.target.value; clearTimeout(window._vsT); window._vsT=setTimeout(renderVis,200);};
+  $('#addVisBtn').onclick = ()=>{
+    const id = 'v' + Date.now().toString(36);
+    STATE.vis_sources.unshift({id, category:'Tropaeum', art:'Aquam', name:'New source', yield:'', status:'Proposed', notes:''});
+    setDirty(true); autosave(); renderVis();
+    setTimeout(()=>{
+      const card = document.querySelector(`.card[data-id="${id}"]`);
+      if(card){ card.scrollIntoView({behavior:'smooth',block:'center'}); toggleVisEdit(id,true); }
+    },50);
+  };
+  bindVisCardHandlers();
+}
+
+function visCard(v){
+  const statusCls = (v.status||'').toLowerCase().includes('canon')?'canon':((v.status||'').toLowerCase().includes('avail')?'avail':'proposed');
+  const artCls = (v.art||'').toLowerCase();
+  return `<div class="card" data-id="${esc(v.id)}" data-mode="view">
+    <div class="card-head">
+      <div>
+        <div class="card-title">${esc(v.name||'')}</div>
+        <div class="card-sub">${esc(v.category)}</div>
+      </div>
+      <span class="badge ${artCls}">${esc(v.art||'')}</span>
+    </div>
+    <div class="card-meta">
+      <span class="tag">${esc(v.yield||'—')}</span>
+      <span class="tag ${statusCls}">${esc(v.status||'—')}</span>
+      <div class="card-actions" style="margin-left:auto">
+        <button class="icon-btn" data-action="edit" title="Edit">✎</button>
+        <button class="icon-btn danger" data-action="delete" title="Delete">✕</button>
+      </div>
+    </div>
+    <div class="card-notes">${esc(v.notes||'')}</div>
+  </div>`;
+}
+
+function visCardEdit(v){
+  const cats = ['Tropaeum','Luctatio'].map(c=>`<option ${c===v.category?'selected':''} value="${c}">${c}</option>`).join('');
+  const arts = ARTS.map(a=>`<option ${a===v.art?'selected':''} value="${a}">${a}</option>`).join('');
+  return `<div class="card editing" data-id="${esc(v.id)}" data-mode="edit">
+    <div class="edit-row"><label>Name</label><input data-field="name" value="${esc(v.name||'')}"></div>
+    <div class="edit-row"><label>Category</label><select data-field="category">${cats}</select>
+      <label style="margin-left:10px">Art</label><select data-field="art">${arts}</select></div>
+    <div class="edit-row"><label>Yield</label><input data-field="yield" value="${esc(v.yield||'')}"></div>
+    <div class="edit-row"><label>Status</label><input data-field="status" value="${esc(v.status||'')}"></div>
+    <div class="edit-row" style="align-items:flex-start"><label style="padding-top:4px">Notes</label><textarea data-field="notes">${esc(v.notes||'')}</textarea></div>
+    <div class="card-actions" style="justify-content:flex-end">
+      <button class="icon-btn" data-action="done" title="Done">✓ Done</button>
+    </div>
+  </div>`;
+}
+
+function bindVisCardHandlers(){
+  $$('#visCards .card').forEach(card=>{
+    const id = card.dataset.id;
+    card.querySelectorAll('button[data-action]').forEach(btn=>{
+      btn.onclick = async (e)=>{
+        e.stopPropagation();
+        if(btn.dataset.action==='edit') toggleVisEdit(id,true);
+        else if(btn.dataset.action==='done') toggleVisEdit(id,false);
+        else if(btn.dataset.action==='delete'){
+          if(await confirmDialog('Delete vis source','Remove this vis source from the registry?')){
+            STATE.vis_sources = STATE.vis_sources.filter(x=>x.id!==id);
+            setDirty(true); autosave(); renderVis();
+          }
+        }
+      };
+    });
+    card.querySelectorAll('input[data-field], select[data-field], textarea[data-field]').forEach(inp=>{
+      inp.oninput = inp.onchange = ()=>{
+        const v = STATE.vis_sources.find(x=>x.id===id);
+        if(v){ v[inp.dataset.field] = inp.value; setDirty(true); autosave(); }
+      };
+    });
+  });
+}
+
+function toggleVisEdit(id, on){
+  const v = STATE.vis_sources.find(x=>x.id===id);
+  if(!v) return;
+  const card = document.querySelector(`#visCards .card[data-id="${id}"]`);
+  if(!card) return;
+  const html = on ? visCardEdit(v) : visCard(v);
+  const tmp = document.createElement('div'); tmp.innerHTML = html;
+  card.replaceWith(tmp.firstChild);
+  bindVisCardHandlers();
+}
+
+/* ============================================================
+   LIBRARY
+   ============================================================ */
+const BOOKTYPES = [{k:'summa',l:'Summa'},{k:'tractatus',l:'Tractatus'},{k:'lab',l:'Lab Texts'}];
+
+function renderLibrary(){
+  const f = activeLibFilter;
+  const all = STATE.library || [];
+  let list = all.filter(b=>{
+    if(f.type!=='all' && b.type!==f.type) return false;
+    if(f.booktype!=='all' && b.booktype!==f.booktype) return false;
+    if(f.q){
+      const q = f.q.toLowerCase();
+      if(!(b.title+' '+b.author+' '+(b.tags||[]).join(' ')+' '+b.section).toLowerCase().includes(q)) return false;
+    }
+    return true;
+  });
+
+  // group by section
+  const sections = {};
+  list.forEach(b=>{
+    const s = b.section || 'Uncategorized';
+    if(!sections[s]) sections[s]=[];
+    sections[s].push(b);
+  });
+
+  const typeBtns = [['all','All'],['canonical','Canon only'],['suggested','Suggested only']]
+    .map(([k,l])=>`<button class="fbtn ${f.type===k?'on':''}" data-type="${k}">${l}</button>`).join('');
+  const btBtns = [['all','All formats'],...BOOKTYPES.map(t=>[t.k,t.l])]
+    .map(([k,l])=>`<button class="fbtn ${f.booktype===k?'on':''}" data-bt="${k}">${l}</button>`).join('');
+
+  let sectionsHtml = Object.keys(sections).map(s=>{
+    const cards = sections[s].map(b=>libCard(b)).join('');
+    return `<div class="lib-section"><div class="lib-section-h">${esc(s)}</div><div class="cards">${cards}</div></div>`;
+  }).join('');
+  if(!sectionsHtml) sectionsHtml = `<div style="text-align:center;color:var(--ink-soft);font-style:italic;padding:40px">No matching books.</div>`;
+
+  $('#content').innerHTML = `<div class="panel">
+    <h2>Tribunal Library — Liber Bibliothecae Tribunalis</h2>
+    <p class="lede">Books held in common by the Tribunal — donated under Perpauca Bonisagi's compact and available to all member covenants. Canonical entries are from <em>The Lion &amp; the Lily</em>; suggested additions fill gaps in the collection.</p>
+    <div class="filterbar">
+      <span class="label">Origin:</span> ${typeBtns}
+      <span class="label">Format:</span> ${btBtns}
+      <input class="search-input" type="text" placeholder="Search title, author, tags…" value="${esc(f.q)}" id="libSearch">
+      <span class="filter-count">${list.length} of ${all.length}</span>
+    </div>
+    <div class="add-btn"><button class="btn primary" id="addLibBtn">✚  Add Book</button></div>
+    ${sectionsHtml}
+  </div>`;
+
+  $$('.filterbar .fbtn[data-type]').forEach(b=>b.onclick=()=>{activeLibFilter.type=b.dataset.type;renderLibrary();});
+  $$('.filterbar .fbtn[data-bt]').forEach(b=>b.onclick=()=>{activeLibFilter.booktype=b.dataset.bt;renderLibrary();});
+  $('#libSearch').oninput = e=>{activeLibFilter.q=e.target.value; clearTimeout(window._lsT); window._lsT=setTimeout(renderLibrary,200);};
+  $('#addLibBtn').onclick = ()=>{
+    const id = 'b' + Date.now().toString(36);
+    STATE.library.unshift({id, section:'Hermetic Arts — Forms', type:'suggested', booktype:'summa', title:'New book', author:'', tags:[], bp:''});
+    setDirty(true); autosave(); renderLibrary();
+    setTimeout(()=>{
+      const card = document.querySelector(`.card[data-id="${id}"]`);
+      if(card){ card.scrollIntoView({behavior:'smooth',block:'center'}); toggleLibEdit(id,true); }
+    },50);
+  };
+  bindLibCardHandlers();
+}
+
+function libCard(b){
+  const isCanon = b.type==='canonical';
+  const tagHtml = (b.tags||[]).map(t=>`<span class="tag">${esc(t)}</span>`).join('');
+  return `<div class="card" data-id="${esc(b.id)}" data-mode="view">
+    <div class="card-head">
+      <div>
+        <div class="card-title">${esc(b.title||'')}</div>
+        <div class="card-sub">${esc(b.author||'')}</div>
+      </div>
+      <span class="tag ${isCanon?'canon':'avail'}" style="font-family:'Cinzel',serif;font-size:10px;letter-spacing:.05em">${isCanon?'Canon':'Suggested'}</span>
+    </div>
+    <div class="card-meta">
+      ${tagHtml}
+      ${b.bp?`<span class="tag" style="background:rgba(154,107,31,.25);color:var(--gold);border-color:var(--gold);font-weight:600">${esc(b.bp)}</span>`:''}
+      <div class="card-actions" style="margin-left:auto">
+        <button class="icon-btn" data-action="edit" title="Edit">✎</button>
+        <button class="icon-btn danger" data-action="delete" title="Delete">✕</button>
+      </div>
+    </div>
+  </div>`;
+}
+
+function libCardEdit(b){
+  const sectionList = [...new Set((STATE.library||[]).map(x=>x.section).filter(Boolean))];
+  const sects = sectionList.map(s=>`<option ${s===b.section?'selected':''} value="${esc(s)}">${esc(s)}</option>`).join('');
+  const types = [['canonical','Canon'],['suggested','Suggested']].map(([k,l])=>`<option ${b.type===k?'selected':''} value="${k}">${l}</option>`).join('');
+  const bts = BOOKTYPES.map(t=>`<option ${b.booktype===t.k?'selected':''} value="${t.k}">${t.l}</option>`).join('');
+  const tagText = (b.tags||[]).join(' · ');
+  return `<div class="card editing" data-id="${esc(b.id)}" data-mode="edit">
+    <div class="edit-row"><label>Title</label><input data-field="title" value="${esc(b.title||'')}"></div>
+    <div class="edit-row"><label>Author</label><input data-field="author" value="${esc(b.author||'')}"></div>
+    <div class="edit-row"><label>Section</label><select data-field="section">${sects}<option value="__new__">+ New section…</option></select></div>
+    <div class="edit-row"><label>Origin</label><select data-field="type">${types}</select>
+      <label style="margin-left:10px">Format</label><select data-field="booktype">${bts}</select></div>
+    <div class="edit-row"><label>Tags</label><input data-field="tags" value="${esc(tagText)}" placeholder="Summa · Rego · Lvl 10 · Q 11"></div>
+    <div class="edit-row"><label>BP</label><input data-field="bp" value="${esc(b.bp||'')}" placeholder="21 BP"></div>
+    <div class="card-actions" style="justify-content:flex-end">
+      <button class="icon-btn" data-action="done" title="Done">✓ Done</button>
+    </div>
+  </div>`;
+}
+
+function bindLibCardHandlers(){
+  $$('#content .card').forEach(card=>{
+    const id = card.dataset.id;
+    card.querySelectorAll('button[data-action]').forEach(btn=>{
+      btn.onclick = async (e)=>{
+        e.stopPropagation();
+        if(btn.dataset.action==='edit') toggleLibEdit(id,true);
+        else if(btn.dataset.action==='done') toggleLibEdit(id,false);
+        else if(btn.dataset.action==='delete'){
+          if(await confirmDialog('Delete book','Remove this book from the library?')){
+            STATE.library = STATE.library.filter(x=>x.id!==id);
+            setDirty(true); autosave(); renderLibrary();
+          }
+        }
+      };
+    });
+    card.querySelectorAll('input[data-field], select[data-field], textarea[data-field]').forEach(inp=>{
+      inp.oninput = inp.onchange = ()=>{
+        const b = STATE.library.find(x=>x.id===id);
+        if(!b) return;
+        const f = inp.dataset.field;
+        if(f==='tags'){
+          b.tags = inp.value.split(/[·,;|]/).map(s=>s.trim()).filter(Boolean);
+        } else if(f==='section' && inp.value==='__new__'){
+          const nm = prompt('Name for the new section:'); if(nm){ b.section = nm; renderLibrary(); }
+        } else {
+          b[f] = inp.value;
+        }
+        setDirty(true); autosave();
+      };
+    });
+  });
+}
+
+function toggleLibEdit(id, on){
+  const b = STATE.library.find(x=>x.id===id);
+  if(!b) return;
+  const card = document.querySelector(`#content .card[data-id="${id}"]`);
+  if(!card) return;
+  const html = on ? libCardEdit(b) : libCard(b);
+  const tmp = document.createElement('div'); tmp.innerHTML = html;
+  card.replaceWith(tmp.firstChild);
+  bindLibCardHandlers();
+}
+
+/* ============================================================
+   BOOTSTRAP
+   ============================================================ */
+window.addEventListener('beforeunload', e=>{
+  if(dirty){ e.preventDefault(); e.returnValue = ''; }
+});
+tryFetchInitial();
+</script>
+</body>
+</html>

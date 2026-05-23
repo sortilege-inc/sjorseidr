@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Normandy Tribunal — Vis Sources & Library</title>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --parchment: #f5edd6;
+    --parchment-dark: #e8d9b5;
+    --parchment-mid: #efe3c1;
+    --ink: #1c1209;
+    --ink-mid: #3d2a10;
+    --ink-light: #6b4c2a;
+    --red: #8b1a1a;
+    --red-light: #c0392b;
+    --teal: #1a5c52;
+    --teal-light: #2e7d70;
+    --purple: #3d2066;
+    --purple-light: #5b3a8a;
+    --gold: #a07830;
+    --gold-light: #c49a3c;
+    --border: rgba(100, 70, 20, 0.25);
+    --border-strong: rgba(100, 70, 20, 0.5);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #2a1f0e;
+    background-image:
+      radial-gradient(ellipse at 20% 20%, rgba(80,50,10,0.4) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 80%, rgba(40,20,5,0.5) 0%, transparent 60%);
+    font-family: 'Crimson Pro', Georgia, serif;
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    background: var(--parchment);
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    border: 1px solid var(--border-strong);
+    box-shadow: 0 0 0 6px #1a1208, 0 0 0 8px rgba(160,120,48,0.3), 0 20px 80px rgba(0,0,0,0.8);
+    padding: 3rem 3.5rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(to right, rgba(150,110,50,0.08) 0%, transparent 4%),
+      linear-gradient(to left, rgba(150,110,50,0.08) 0%, transparent 4%),
+      linear-gradient(to bottom, rgba(150,110,50,0.06) 0%, transparent 3%);
+    pointer-events: none;
+  }
+
+  .corner {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0.4;
+  }
+  .corner-tl { top: 16px; left: 16px; }
+  .corner-tr { top: 16px; right: 16px; transform: scaleX(-1); }
+  .corner-bl { bottom: 16px; left: 16px; transform: scaleY(-1); }
+  .corner-br { bottom: 16px; right: 16px; transform: scale(-1); }
+
+  header {
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 1.5rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+  }
+
+  header::after {
+    content: '✦ ✦ ✦';
+    display: block;
+    font-size: 14px;
+    color: var(--gold);
+    letter-spacing: 0.5em;
+    margin-top: 1rem;
+  }
+
+  .tribunal-title {
+    font-family: 'Cinzel', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: 0.04em;
+    line-height: 1.1;
+    text-shadow: 1px 1px 0 rgba(255,255,255,0.3);
+  }
+
+  .tribunal-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 0.4rem;
+  }
+
+  .tribunal-date {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-light);
+    margin-top: 0.5rem;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+    gap: 0;
+    margin-bottom: 2.5rem;
+    border: 1px solid var(--border-strong);
+    overflow: hidden;
+    border-radius: 3px;
+  }
+
+  nav button {
+    flex: 1;
+    padding: 0.6rem 0.5rem;
+    background: var(--parchment-mid);
+    border: none;
+    border-right: 1px solid var(--border-strong);
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--ink-mid);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-transform: uppercase;
+  }
+
+  nav button:last-child { border-right: none; }
+
+  nav button:hover {
+    background: var(--parchment-dark);
+    color: var(--ink);
+  }
+
+  nav button.active {
+    background: var(--ink);
+    color: var(--parchment);
+  }
+
+  /* Sections */
+  .section { display: none; }
+  .section.active { display: block; }
+
+  .section-heading {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--ink);
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+  }
+
+  .section-heading .count {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--gold);
+    font-family: 'Crimson Pro', serif;
+    font-style: italic;
+  }
+
+  .section-desc {
+    font-style: italic;
+    color: var(--ink-light);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  /* Filter bar */
+  .filter-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1.5rem;
+    align-items: center;
+  }
+
+  .filter-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-right: 4px;
+  }
+
+  .filter-btn {
+    padding: 3px 10px;
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    border-radius: 2px;
+    font-family: 'Crimson Pro', serif;
+    font-size: 0.8rem;
+    color: var(--ink-mid);
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+
+  .filter-btn:hover { background: var(--parchment-dark); }
+
+  .filter-btn.active {
+    background: var(--ink);
+    color: var(--parchment);
+    border-color: var(--ink);
+  }
+
+  /* Vis source cards */
+  .vis-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 2rem;
+  }
+
+  .vis-card {
+    background: var(--parchment-mid);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 14px 16px;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+
+  .vis-card:hover { border-color: var(--border-strong); }
+
+  .vis-card.hidden { display: none; }
+
+  .vis-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .vis-name {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+    flex: 1;
+  }
+
+  .art-badge {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 2px 7px;
+    border-radius: 2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .vis-meta {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .yield-tag {
+    font-size: 0.8rem;
+    color: var(--ink-mid);
+    font-weight: 400;
+  }
+
+  .yield-tag strong {
+    font-weight: 600;
+    color: var(--ink);
+  }
+
+  .type-tag {
+    font-size: 0.72rem;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.06em;
+    padding: 1px 6px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+
+  .type-trop { background: rgba(26,92,82,0.12); color: var(--teal); border: 1px solid rgba(26,92,82,0.25); }
+  .type-luct { background: rgba(61,32,102,0.1); color: var(--purple); border: 1px solid rgba(61,32,102,0.2); }
+  .type-canon { background: rgba(160,120,48,0.12); color: var(--gold); border: 1px solid rgba(160,120,48,0.3); }
+
+  .vis-notes {
+    font-size: 0.87rem;
+    color: var(--ink-mid);
+    line-height: 1.55;
+    font-style: italic;
+  }
+
+  /* Art badge colors */
+  .art-Aquam    { background: #1a4a7a; color: #d4e8ff; }
+  .art-Auram    { background: #3d5a00; color: #d8f0a0; }
+  .art-Animal   { background: #5a3000; color: #ffe0b0; }
+  .art-Corpus   { background: #6b1a1a; color: #ffd8d8; }
+  .art-Creo     { background: #7a5a00; color: #fff0b0; }
+  .art-Herbam   { background: #1a5a1a; color: #c8f0c8; }
+  .art-Ignem    { background: #7a2200; color: #ffd0b0; }
+  .art-Imaginem { background: #4a1a6b; color: #e8d0ff; }
+  .art-Intellego{ background: #1a4a5a; color: #c8eeff; }
+  .art-Mentem   { background: #3d1a5a; color: #e0c8ff; }
+  .art-Muto     { background: #2a4a00; color: #d8f0a8; }
+  .art-Perdo    { background: #3a1a00; color: #ffd0a8; }
+  .art-Rego     { background: #00364a; color: #b8e8f8; }
+  .art-Terram   { background: #3a2a00; color: #f0e0a8; }
+  .art-Vim      { background: #1a1a5a; color: #c8c8ff; }
+
+  /* Table layout for vis sources */
+  .vis-table-wrap {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-strong);
+    border-radius: 3px;
+  }
+
+  .vis-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+
+  .vis-table thead tr {
+    background: var(--ink);
+    color: var(--parchment);
+  }
+
+  .vis-table thead th {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 9px 12px;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .vis-table tbody tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.1s;
+  }
+
+  .vis-table tbody tr:hover { background: var(--parchment-dark); }
+  .vis-table tbody tr.hidden { display: none; }
+
+  .vis-table tbody td {
+    padding: 8px 12px;
+    vertical-align: middle;
+    color: var(--ink-mid);
+    line-height: 1.4;
+  }
+
+  .vis-table tbody td:first-child {
+    font-weight: 600;
+    color: var(--ink);
+    font-family: 'Crimson Pro', serif;
+  }
+
+  .vis-table tbody td .notes-text {
+    font-style: italic;
+    font-size: 0.83rem;
+  }
+
+  /* Library */
+  .lib-section-head {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 5px;
+    margin: 1.8rem 0 10px;
+  }
+
+  .lib-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+  }
+
+  .lib-card {
+    background: var(--parchment-mid);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    padding: 12px 14px;
+    transition: border-color 0.2s;
+  }
+
+  .lib-card:hover { border-color: var(--border-strong); }
+  .lib-card.hidden { display: none; }
+
+  .lib-card.canonical { border-left: 3px solid var(--gold); }
+  .lib-card.suggested { border-left: 3px solid var(--teal-light); }
+
+  .lib-title {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+
+  .lib-author {
+    font-size: 0.8rem;
+    color: var(--ink-light);
+    margin-bottom: 8px;
+  }
+
+  .lib-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .lib-tag {
+    font-size: 0.72rem;
+    padding: 2px 7px;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    background: var(--parchment);
+    color: var(--ink-mid);
+    font-family: 'Crimson Pro', serif;
+  }
+
+  .lib-tag.type-tag-s { background: rgba(139,26,26,0.08); color: var(--red); border-color: rgba(139,26,26,0.2); }
+  .lib-tag.type-tag-t { background: rgba(26,92,82,0.1); color: var(--teal); border-color: rgba(26,92,82,0.2); }
+  .lib-tag.type-tag-l { background: rgba(61,32,102,0.1); color: var(--purple); border-color: rgba(61,32,102,0.2); }
+
+  .lib-bp {
+    font-size: 0.72rem;
+    color: var(--gold);
+    font-family: 'Cinzel', serif;
+    letter-spacing: 0.05em;
+  }
+
+  /* Legend */
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 1.5rem;
+    padding: 10px 14px;
+    background: var(--parchment-mid);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    font-size: 0.82rem;
+    color: var(--ink-mid);
+  }
+
+  .legend-item { display: flex; align-items: center; gap: 7px; }
+  .legend-swatch { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+
+  /* Divider */
+  .divider {
+    text-align: center;
+    color: var(--gold);
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+    margin: 2rem 0;
+    opacity: 0.6;
+  }
+
+  /* Footnote */
+  .footnote {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.8rem;
+    font-style: italic;
+    color: var(--ink-light);
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 600px) {
+    .page { padding: 1.5rem 1.2rem 2rem; }
+    .tribunal-title { font-size: 1.8rem; }
+    .vis-grid { grid-template-columns: 1fr; }
+    .lib-grid { grid-template-columns: 1fr; }
+    nav button { font-size: 0.6rem; padding: 0.5rem 0.3rem; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Corner ornaments -->
+  <svg class="corner corner-tl" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 5 L5 30 Q5 5 30 5 Z" stroke="#a07830" stroke-width="1" fill="none"/>
+    <path d="M5 5 L55 5 M5 5 L5 55" stroke="#a07830" stroke-width="1.5"/>
+    <circle cx="5" cy="5" r="3" fill="#a07830"/>
+    <path d="M15 5 Q15 15 5 15" stroke="#a07830" stroke-width="0.7" fill="none"/>
+    <path d="M5 15 Q15 15 15 25" stroke="#a07830" stroke-width="0.7" fill="none"/>
+  </svg>
+  <svg class="corner corner-tr" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 5 L5 30 Q5 5 30 5 Z" stroke="#a07830" stroke-width="1" fill="none"/>
+    <path d="M5 5 L55 5 M5 5 L5 55" stroke="#a07830" stroke-width="1.5"/>
+    <circle cx="5" cy="5" r="3" fill="#a07830"/>
+    <path d="M15 5 Q15 15 5 15" stroke="#a07830" stroke-width="0.7" fill="none"/>
+  </svg>
+  <svg class="corner corner-bl" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 5 L5 30 Q5 5 30 5 Z" stroke="#a07830" stroke-width="1" fill="none"/>
+    <path d="M5 5 L55 5 M5 5 L5 55" stroke="#a07830" stroke-width="1.5"/>
+    <circle cx="5" cy="5" r="3" fill="#a07830"/>
+    <path d="M15 5 Q15 15 5 15" stroke="#a07830" stroke-width="0.7" fill="none"/>
+  </svg>
+  <svg class="corner corner-br" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 5 L5 30 Q5 5 30 5 Z" stroke="#a07830" stroke-width="1" fill="none"/>
+    <path d="M5 5 L55 5 M5 5 L5 55" stroke="#a07830" stroke-width="1.5"/>
+    <circle cx="5" cy="5" r="3" fill="#a07830"/>
+    <path d="M15 5 Q15 15 5 15" stroke="#a07830" stroke-width="0.7" fill="none"/>
+  </svg>
+
+  <header>
+    <div class="tribunal-title">Normandy Tribunal</div>
+    <div class="tribunal-subtitle">Liber Virium et Bibliothecae</div>
+    <div class="tribunal-date">A compendium of vis sources and books held in common — Anno Domini 1220</div>
+  </header>
+
+  <nav>
+    <button class="active" onclick="showSection('tropaea')">Tropaea</button>
+    <button onclick="showSection('luctationes')">Luctationes</button>
+    <button onclick="showSection('all-vis')">All Vis (Table)</button>
+    <button onclick="showSection('library')">Library</button>
+  </nav>
+
+  <!-- TROPAEA -->
+  <div id="tropaea" class="section active">
+    <div class="section-heading">Tropaea <span class="count">Tribunal common property — won by Tourney lease</span></div>
+    <p class="section-desc">Vis sources requiring minimal effort to harvest. Distributed among Tribunal members on seven-year leases through the Hermetic Tourney. The holder of a lease has exclusive rights to harvest.</p>
+
+    <div class="filter-bar">
+      <span class="filter-label">Filter by Art:</span>
+      <button class="filter-btn active" onclick="filterCards('trop','all')">All</button>
+      <button class="filter-btn" onclick="filterCards('trop','Aquam')">Aquam</button>
+      <button class="filter-btn" onclick="filterCards('trop','Auram')">Auram</button>
+      <button class="filter-btn" onclick="filterCards('trop','Corpus')">Corpus</button>
+      <button class="filter-btn" onclick="filterCards('trop','Creo')">Creo</button>
+      <button class="filter-btn" onclick="filterCards('trop','Herbam')">Herbam</button>
+      <button class="filter-btn" onclick="filterCards('trop','Imaginem')">Imaginem</button>
+      <button class="filter-btn" onclick="filterCards('trop','Intellego')">Intellego</button>
+      <button class="filter-btn" onclick="filterCards('trop','Mentem')">Mentem</button>
+      <button class="filter-btn" onclick="filterCards('trop','Muto')">Muto</button>
+      <button class="filter-btn" onclick="filterCards('trop','Perdo')">Perdo</button>
+      <button class="filter-btn" onclick="filterCards('trop','Rego')">Rego</button>
+      <button class="filter-btn" onclick="filterCards('trop','Terram')">Terram</button>
+      <button class="filter-btn" onclick="filterCards('trop','Vim')">Vim</button>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background:#a07830;"></div>From <em>The Lion &amp; the Lily</em></div>
+      <div class="legend-item"><div class="legend-swatch" style="background:#1a5c52;"></div>From your campaign's available tropaea list</div>
+      <div class="legend-item"><div class="legend-swatch" style="background:#5b3a8a;"></div>Newly proposed additions</div>
+    </div>
+
+    <div class="vis-grid" id="trop-grid">
+
+      <!-- Canon from Lion & Lily -->
+      <div class="vis-card" data-section="trop" data-art="Aquam">
+        <div class="vis-card-header">
+          <div class="vis-name">Secluded Beach Foam</div>
+          <span class="art-badge art-Aquam">Aquam</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Varies</strong></span>
+          <span class="type-tag type-canon">Canon</span>
+        </div>
+        <div class="vis-notes">On St. Martin's Day, Aquam vis in the form of sea foam is cast up onto a secluded beach.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Intellego">
+        <div class="vis-card-header">
+          <div class="vis-name">The Secluded Pool</div>
+          <span class="art-badge art-Intellego">Intellego</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Rare</strong> (~every 3 yrs)</span>
+          <span class="type-tag type-canon">Canon</span>
+        </div>
+        <div class="vis-notes">Water collected when the image of the second full moon in a month is reflected in a secluded pool. Occurs about once every three years.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Auram">
+        <div class="vis-card-header">
+          <div class="vis-name">The Hilltop Weather</div>
+          <span class="art-badge art-Auram">Auram</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-canon">Canon</span>
+        </div>
+        <div class="vis-notes">If the weather atop a particular hill can be captured in a bottle of blue glass on midwinter's day, it becomes Auram vis.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Corpus">
+        <div class="vis-card-header">
+          <div class="vis-name">The Leper Colony Bandages</div>
+          <span class="art-badge art-Corpus">Corpus</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-canon">Canon</span>
+        </div>
+        <div class="vis-notes">The discarded bandages of a certain leper colony are Corpus vis.</div>
+      </div>
+
+      <!-- Campaign tropaea from uploaded image -->
+      <div class="vis-card" data-section="trop" data-art="Imaginem">
+        <div class="vis-card-header">
+          <div class="vis-name">Tapestry Threads of Bayeux</div>
+          <span class="art-badge art-Imaginem">Imaginem</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>6 pawns</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Golden threads appear among the embroidery on feast days. Must be plucked before vespers.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Aquam">
+        <div class="vis-card-header">
+          <div class="vis-name">Mont-Saint-Michel Tide Pools</div>
+          <span class="art-badge art-Aquam">Aquam</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>5 pawns</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Spring tide crystallization — salt crystals that form in the tide pools at the base of the mount during the great spring tides.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Creo">
+        <div class="vis-card-header">
+          <div class="vis-name">The Confessor's Library</div>
+          <span class="art-badge art-Creo">Creo</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>4 pawns</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Marginalia manifest in monastery books — fresh illuminated letters appear overnight in the margins of certain texts at the monastery.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Vim">
+        <div class="vis-card-header">
+          <div class="vis-name">Channel Islands Source</div>
+          <span class="art-badge art-Vim">Vim</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>4 pawns</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Disputed jurisdiction — Jersey. The precise nature of this source and its harvest method are recorded at Confluensis.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Muto">
+        <div class="vis-card-header">
+          <div class="vis-name">Cider Press of Domfront</div>
+          <span class="art-badge art-Muto">Muto</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>3 pawns</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">St. Martin's Day harvest. The first pressing at a particular ancient cider press yields a few cups of fluid that is Muto vis before turning to ordinary cider.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Perdo">
+        <div class="vis-card-header">
+          <div class="vis-name">Drowned Village Bells</div>
+          <span class="art-badge art-Perdo">Perdo</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>3 pawns</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Barnacles on submerged bells. A village swallowed by the sea long ago; the barnacles that grow on the sunken bells carry Perdo vis and must be scraped free by a diver.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Herbam">
+        <div class="vis-card-header">
+          <div class="vis-name">The Diedne Garden</div>
+          <span class="art-badge art-Herbam">Herbam</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>3 pawns</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Politically contested. An overgrown garden at a ruined Diedne covenant site still produces three unusual herbs each spring. Multiple covenants claim historical rights.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Rego">
+        <div class="vis-card-header">
+          <div class="vis-name">Pilgrim Road Stones</div>
+          <span class="art-badge art-Rego">Rego</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>2 pawns</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Santiago route markers. Certain milestone stones on the pilgrim road to Santiago bear the vis — collected by pressing wax against the face of the stone on a feast of St. James.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Corpus">
+        <div class="vis-card-header">
+          <div class="vis-name">Norman Barrow Frost</div>
+          <span class="art-badge art-Corpus">Corpus</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>2 pawns</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Winter solstice hoarfrost. The frost that forms inside the burial chamber of a Norman barrow on the solstice is Corpus vis — it must be scraped free before dawn.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Intellego">
+        <div class="vis-card-header">
+          <div class="vis-name">Shepherd's Stone</div>
+          <span class="art-badge art-Intellego">Intellego</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>1 pawn</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Midsummer's Eve weeping. A lone standing stone in a sheep pasture "weeps" a single drop of moisture on Midsummer's Eve, regardless of the weather.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Auram">
+        <div class="vis-card-header">
+          <div class="vis-name">Market Cross Weather</div>
+          <span class="art-badge art-Auram">Auram</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>1 pawn</strong>/year</span>
+          <span class="type-tag type-trop">Available</span>
+        </div>
+        <div class="vis-notes">Specific weather patterns on market day. Once a year, a peculiar wind circles a market cross in a particular town. Captured in a sealed jar, it is Auram vis.</div>
+      </div>
+
+      <!-- Newly proposed tropaea -->
+      <div class="vis-card" data-section="trop" data-art="Aquam">
+        <div class="vis-card-header">
+          <div class="vis-name">The Needles, Belle-Île</div>
+          <span class="art-badge art-Aquam">Aquam</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Seasonal</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">At peak high tide when wind is from the west, the surf against a sea-stack cluster produces dense persistent foam unlike ordinary sea-froth. Collected in sealed vessel before the tide turns.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Imaginem">
+        <div class="vis-card-header">
+          <div class="vis-name">The Singing Stones, St. Malo</div>
+          <span class="art-badge art-Imaginem">Imaginem</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">Flat schist stones near the Rance estuary ring with a metallic tone when struck in sequence. The shimmer in the air captured on parchment pressed to the stone is Imaginem vis. Must be a still day.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Creo">
+        <div class="vis-card-header">
+          <div class="vis-name">Grove of St. Lié, Montagne de Reims</div>
+          <span class="art-badge art-Creo">Creo</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">Pale flowers bloom on a burial mound in early spring before anything else stirs. Petals gathered at dawn while still wet with dew are Creo vis. Wilt and lose potency by midday.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Herbam">
+        <div class="vis-card-header">
+          <div class="vis-name">Ancient Oak of the Forest of Lyons</div>
+          <span class="art-badge art-Herbam">Herbam</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>3 pawns</strong>/year</span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">Three golden-shelled acorns appear on Michaelmas and remain for nine days. Castle garrison considers the tree their property — mundane trespass is the obstacle, not magic.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Vim">
+        <div class="vis-card-header">
+          <div class="vis-name">Carnac Solstice Shadow</div>
+          <span class="art-badge art-Vim">Vim</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">At the center of the great avenues, one menhir casts no shadow at noon on the summer solstice. The absence, captured in black cloth pressed to the stone's base, is Vim vis.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Terram">
+        <div class="vis-card-header">
+          <div class="vis-name">Champ-Dolent Menhir, near Dol</div>
+          <span class="art-badge art-Terram">Terram</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>2 pawns</strong>/year</span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">On the anniversary of the Schism War battle, red-brown dust forms at the menhir's base. Swept into a jar before rain falls, it is Terram vis. House Guernicus watches this site.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Intellego">
+        <div class="vis-card-header">
+          <div class="vis-name">Roman Temple of Mars, Corseul</div>
+          <span class="art-badge art-Intellego">Intellego</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">Midwinter frost forms letter-like patterns on the inside of the ruined round temple walls. Scraped from brick before noon, this frost-water is Intellego vis. Requires entering the regio at dawn.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Corpus">
+        <div class="vis-card-header">
+          <div class="vis-name">Gâvre Forest Leper Hospital</div>
+          <span class="art-badge art-Corpus">Corpus</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Monthly</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">The hospital burns its dead. Ash from these pyres contains Corpus vis if gathered before rain falls. The brothers are charitable but not blind — regular visitors invite Church scrutiny.</div>
+      </div>
+
+      <div class="vis-card" data-section="trop" data-art="Mentem">
+        <div class="vis-card-header">
+          <div class="vis-name">Crossroads Chapel, Champagne Road</div>
+          <span class="art-badge art-Mentem">Mentem</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>~2 pawns</strong>/year</span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">Travelers who confess their deepest secret to the empty chapel find a small rough stone on the threshold when they leave. Appears without pattern, ~twice yearly. Must be gathered before sunset.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LUCTATIONES -->
+  <div id="luctationes" class="section">
+    <div class="section-heading">Luctationes <span class="count">Tribunal common property — open to all, effort or danger required</span></div>
+    <p class="section-desc">Vis sources requiring significant effort, skill, or danger to harvest. Any magus may attempt them, but success confers no exclusive rights in subsequent years. Winning a luctatio is a feat in itself.</p>
+
+    <div class="filter-bar">
+      <span class="filter-label">Filter by Art:</span>
+      <button class="filter-btn active" onclick="filterCards('luct','all')">All</button>
+      <button class="filter-btn" onclick="filterCards('luct','Animal')">Animal</button>
+      <button class="filter-btn" onclick="filterCards('luct','Ignem')">Ignem</button>
+      <button class="filter-btn" onclick="filterCards('luct','Mentem')">Mentem</button>
+      <button class="filter-btn" onclick="filterCards('luct','Muto')">Muto</button>
+      <button class="filter-btn" onclick="filterCards('luct','Perdo')">Perdo</button>
+      <button class="filter-btn" onclick="filterCards('luct','Rego')">Rego</button>
+      <button class="filter-btn" onclick="filterCards('luct','Vim')">Vim</button>
+    </div>
+
+    <div class="vis-grid" id="luct-grid">
+
+      <!-- Canon luctationes -->
+      <div class="vis-card" data-section="luct" data-art="Perdo">
+        <div class="vis-card-header">
+          <div class="vis-name">The Basilisk Tree</div>
+          <span class="art-badge art-Perdo">Perdo</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-canon">Canon</span>
+        </div>
+        <div class="vis-notes">A tree in a forest has a basilisk family nesting in its roots. The fruit of the tree, if the basilisks permit collection, is Perdo vis.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Mentem">
+        <div class="vis-card-header">
+          <div class="vis-name">The Ghostly Maiden's Song</div>
+          <span class="art-badge art-Mentem">Mentem</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-canon">Canon</span>
+        </div>
+        <div class="vis-notes">The mournful song of a ghostly maiden is Mentem vis. She must first be enticed to sing her lament, then the magus must capture the song in physical form.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Animal">
+        <div class="vis-card-header">
+          <div class="vis-name">The Falcon's Cliff</div>
+          <span class="art-badge art-Animal">Animal</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-canon">Canon</span>
+        </div>
+        <div class="vis-notes">A falcon nests on a cliff ledge every year. On the same day, a serpent tries to steal an egg. If prevented, the egg contains Animal vis. If the serpent succeeds, it contains Vim vis (if caught).</div>
+      </div>
+
+      <!-- New luctationes -->
+      <div class="vis-card" data-section="luct" data-art="Animal">
+        <div class="vis-card-header">
+          <div class="vis-name">The Siren of Décollé Point</div>
+          <span class="art-badge art-Animal">Animal</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Variable</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">A siren inhabits the sea-cave near St. Malo. If persuaded to leave the cave willingly — not tricked or compelled — scales she sheds passing into daylight are Animal vis. She shatters boats in response to deception.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Vim">
+        <div class="vis-card-header">
+          <div class="vis-name">The Ghost Fleet of Barfleur</div>
+          <span class="art-badge art-Vim">Vim</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong> (winter)</span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">On stormy winter nights, a spectral fleet passes Barfleur. The trailing ship's lantern still burns. A magus who boards it by ordinary seamanship and asks the captain where he sails receives a coal that is Vim vis.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Perdo">
+        <div class="vis-card-header">
+          <div class="vis-name">The Faux de Verzy</div>
+          <span class="art-badge art-Perdo">Perdo</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Variable</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">The dark dwarfs of the twisted beech grove leave behind bundles of Perdo vis — remnants of their enchantments. Must be collected at night. Faerie aura 4; Hermetic magic is unreliable and draws their attention.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Animal">
+        <div class="vis-card-header">
+          <div class="vis-name">The Boar King's Hunt</div>
+          <span class="art-badge art-Animal">Animal</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong> (autumn)</span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">Finding one of the Boar King's abandoned carcasses and reporting it to his court before the ravens do earns the right to harvest — the heart contains Animal vis. Taking without reporting is a grave insult he never forgets.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Mentem">
+        <div class="vis-card-header">
+          <div class="vis-name">The Hague-Dicke Ghost</div>
+          <span class="art-badge art-Mentem">Mentem</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong> (winter solstice)</span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">An old Norse ghost recites the names of all he killed on the longest night. Listen through to dawn without speaking, and he says one true thing about your future. Written in Old Norse immediately, this is Mentem vis. Any interruption rouses all the ghosts.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Rego">
+        <div class="vis-card-header">
+          <div class="vis-name">Kerbourg Megalith Alley</div>
+          <span class="art-badge art-Rego">Rego</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong> (equinox)</span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">Two consenting magi perform certamen within the alley on the equinox. The loser's sigil pools in the capstone. Marsh-water held up to catch the drip holds Rego vis. The stones know if certamen is faked.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Ignem">
+        <div class="vis-card-header">
+          <div class="vis-name">The Lutin's Sacred Fire</div>
+          <span class="art-badge art-Ignem">Ignem</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong> (winter)</span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">Lutin servants of a Norman farmstead light a fire without wood in an old sacred well each winter. If a magus earns a coal from them freely — not by trade, compulsion, or magic — the coal is Ignem vis and stays lit for a year.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Muto">
+        <div class="vis-card-header">
+          <div class="vis-name">The Shifting Book, Abbaye de Jumièges</div>
+          <span class="art-badge art-Muto">Muto</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">Recovered "pages" (actually fish-skin) whose text shifts over weeks. A scholar who reads cover-to-cover and recites the changed passages from memory absorbs Muto vis, manifest as iridescence in their saliva for one season. The monks believe it a holy relic.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Perdo">
+        <div class="vis-card-header">
+          <div class="vis-name">Ruins of Caput Capra, Loire</div>
+          <span class="art-badge art-Perdo">Perdo</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>Annual</strong></span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed</span>
+        </div>
+        <div class="vis-notes">On the anniversary of the youngest Diedne covenant's fall, a fist-sized lump of fused stone and ash appears in the ruin. Always in a different location. Confluensis apprentices visit annually — harvesting in their presence is diplomatically fraught.</div>
+      </div>
+
+      <div class="vis-card" data-section="luct" data-art="Vim">
+        <div class="vis-card-header">
+          <div class="vis-name">The Branugurix Seal, Mount Dol</div>
+          <span class="art-badge art-Vim">Vim</span>
+        </div>
+        <div class="vis-meta">
+          <span class="yield-tag"><strong>1 pawn</strong>/year (if successful)</span>
+          <span class="type-tag type-luct" style="background:rgba(61,32,102,0.08);color:#5b3a8a;border-color:rgba(61,32,102,0.15);">Proposed — High Danger</span>
+        </div>
+        <div class="vis-notes">The sealed entrance to the Diedne domus magna thins once yearly. Pressing a hand against the hillside and resisting the seal's pushback (Stamina + Magic Theory 12+) draws out Vim vis. Botching risks being pulled inside. House Guernicus actively watches this site.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ALL VIS TABLE -->
+  <div id="all-vis" class="section">
+    <div class="section-heading">All Vis Sources <span class="count">Summary table — tropaea and luctationes combined</span></div>
+    <p class="section-desc">A complete record of known Tribunal vis sources for reference at council. Sources marked as "Proposed" are newly identified and not yet entered into the official Tribunal record at Confluensis.</p>
+
+    <div class="filter-bar">
+      <span class="filter-label">Type:</span>
+      <button class="filter-btn active" onclick="filterTable('all')">All</button>
+      <button class="filter-btn" onclick="filterTable('Canon')">Canon</button>
+      <button class="filter-btn" onclick="filterTable('Available')">Available</button>
+      <button class="filter-btn" onclick="filterTable('Proposed')">Proposed</button>
+      <button class="filter-btn" onclick="filterTable('Tropaeum')">Tropaea only</button>
+      <button class="filter-btn" onclick="filterTable('Luctatio')">Luctationes only</button>
+    </div>
+
+    <div class="vis-table-wrap">
+      <table class="vis-table">
+        <thead>
+          <tr>
+            <th>Source</th>
+            <th>Art</th>
+            <th>Yield/Yr</th>
+            <th>Type</th>
+            <th>Status</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody id="vis-table-body">
+          <!-- Tropaea -->
+          <tr data-type="Canon" data-category="Tropaeum"><td>Secluded Beach Foam</td><td><span class="art-badge art-Aquam" style="font-size:0.65rem;padding:1px 5px">Aquam</span></td><td>Varies</td><td>Tropaeum</td><td>Canon</td><td class="notes-text">St. Martin's Day sea foam</td></tr>
+          <tr data-type="Canon" data-category="Tropaeum"><td>The Secluded Pool</td><td><span class="art-badge art-Intellego" style="font-size:0.65rem;padding:1px 5px">Intellego</span></td><td>~1/3 years</td><td>Tropaeum</td><td>Canon</td><td class="notes-text">Second full moon in a month reflected</td></tr>
+          <tr data-type="Canon" data-category="Tropaeum"><td>The Hilltop Weather</td><td><span class="art-badge art-Auram" style="font-size:0.65rem;padding:1px 5px">Auram</span></td><td>Annual</td><td>Tropaeum</td><td>Canon</td><td class="notes-text">Blue glass bottle, midwinter's day</td></tr>
+          <tr data-type="Canon" data-category="Tropaeum"><td>Leper Colony Bandages</td><td><span class="art-badge art-Corpus" style="font-size:0.65rem;padding:1px 5px">Corpus</span></td><td>Annual</td><td>Tropaeum</td><td>Canon</td><td class="notes-text">Discarded bandages</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>Tapestry Threads of Bayeux</td><td><span class="art-badge art-Imaginem" style="font-size:0.65rem;padding:1px 5px">Imaginem</span></td><td>6 pawns</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Golden threads on feast days</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>Mont-Saint-Michel Tide Pools</td><td><span class="art-badge art-Aquam" style="font-size:0.65rem;padding:1px 5px">Aquam</span></td><td>5 pawns</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Spring tide crystallization</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>The Confessor's Library</td><td><span class="art-badge art-Creo" style="font-size:0.65rem;padding:1px 5px">Creo</span></td><td>4 pawns</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Marginalia manifest in monastery books</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>Channel Islands Source</td><td><span class="art-badge art-Vim" style="font-size:0.65rem;padding:1px 5px">Vim</span></td><td>4 pawns</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Disputed jurisdiction — Jersey</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>Cider Press of Domfront</td><td><span class="art-badge art-Muto" style="font-size:0.65rem;padding:1px 5px">Muto</span></td><td>3 pawns</td><td>Tropaeum</td><td>Available</td><td class="notes-text">St. Martin's Day harvest</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>Drowned Village Bells</td><td><span class="art-badge art-Perdo" style="font-size:0.65rem;padding:1px 5px">Perdo</span></td><td>3 pawns</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Barnacles on submerged bells</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>The Diedne Garden</td><td><span class="art-badge art-Herbam" style="font-size:0.65rem;padding:1px 5px">Herbam</span></td><td>3 pawns</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Politically contested</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>Pilgrim Road Stones</td><td><span class="art-badge art-Rego" style="font-size:0.65rem;padding:1px 5px">Rego</span></td><td>2 pawns</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Santiago route markers</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>Norman Barrow Frost</td><td><span class="art-badge art-Corpus" style="font-size:0.65rem;padding:1px 5px">Corpus</span></td><td>2 pawns</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Winter solstice hoarfrost</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>Shepherd's Stone</td><td><span class="art-badge art-Intellego" style="font-size:0.65rem;padding:1px 5px">Intellego</span></td><td>1 pawn</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Midsummer's Eve weeping</td></tr>
+          <tr data-type="Available" data-category="Tropaeum"><td>Market Cross Weather</td><td><span class="art-badge art-Auram" style="font-size:0.65rem;padding:1px 5px">Auram</span></td><td>1 pawn</td><td>Tropaeum</td><td>Available</td><td class="notes-text">Specific weather patterns on market day</td></tr>
+          <tr data-type="Proposed" data-category="Tropaeum"><td>The Needles, Belle-Île</td><td><span class="art-badge art-Aquam" style="font-size:0.65rem;padding:1px 5px">Aquam</span></td><td>Seasonal</td><td>Tropaeum</td><td>Proposed</td><td class="notes-text">Peak high tide, westerly wind</td></tr>
+          <tr data-type="Proposed" data-category="Tropaeum"><td>Singing Stones, St. Malo</td><td><span class="art-badge art-Imaginem" style="font-size:0.65rem;padding:1px 5px">Imaginem</span></td><td>Annual</td><td>Tropaeum</td><td>Proposed</td><td class="notes-text">Still-day only, Rance estuary</td></tr>
+          <tr data-type="Proposed" data-category="Tropaeum"><td>Grove of St. Lié</td><td><span class="art-badge art-Creo" style="font-size:0.65rem;padding:1px 5px">Creo</span></td><td>Annual</td><td>Tropaeum</td><td>Proposed</td><td class="notes-text">Dawn petals, early spring; near Dominion</td></tr>
+          <tr data-type="Proposed" data-category="Tropaeum"><td>Ancient Oak, Forest of Lyons</td><td><span class="art-badge art-Herbam" style="font-size:0.65rem;padding:1px 5px">Herbam</span></td><td>3 pawns</td><td>Tropaeum</td><td>Proposed</td><td class="notes-text">Michaelmas golden acorns; castle garrison</td></tr>
+          <tr data-type="Proposed" data-category="Tropaeum"><td>Carnac Solstice Shadow</td><td><span class="art-badge art-Vim" style="font-size:0.65rem;padding:1px 5px">Vim</span></td><td>Annual</td><td>Tropaeum</td><td>Proposed</td><td class="notes-text">Midsummer noon; black cloth on stone base</td></tr>
+          <tr data-type="Proposed" data-category="Tropaeum"><td>Champ-Dolent Menhir</td><td><span class="art-badge art-Terram" style="font-size:0.65rem;padding:1px 5px">Terram</span></td><td>2 pawns</td><td>Tropaeum</td><td>Proposed</td><td class="notes-text">Schism War anniversary; Guernicus watches</td></tr>
+          <tr data-type="Proposed" data-category="Tropaeum"><td>Roman Temple, Corseul</td><td><span class="art-badge art-Intellego" style="font-size:0.65rem;padding:1px 5px">Intellego</span></td><td>Annual</td><td>Tropaeum</td><td>Proposed</td><td class="notes-text">Midwinter frost-text; regio access needed</td></tr>
+          <tr data-type="Proposed" data-category="Tropaeum"><td>Gâvre Forest Hospital Ash</td><td><span class="art-badge art-Corpus" style="font-size:0.65rem;padding:1px 5px">Corpus</span></td><td>Monthly</td><td>Tropaeum</td><td>Proposed</td><td class="notes-text">Before rain; Church scrutiny risk</td></tr>
+          <tr data-type="Proposed" data-category="Tropaeum"><td>Crossroads Chapel Stone</td><td><span class="art-badge art-Mentem" style="font-size:0.65rem;padding:1px 5px">Mentem</span></td><td>~2/year</td><td>Tropaeum</td><td>Proposed</td><td class="notes-text">After a true confession; gather before sunset</td></tr>
+          <!-- Luctationes -->
+          <tr data-type="Canon" data-category="Luctatio"><td>The Basilisk Tree</td><td><span class="art-badge art-Perdo" style="font-size:0.65rem;padding:1px 5px">Perdo</span></td><td>Annual</td><td>Luctatio</td><td>Canon</td><td class="notes-text">Basilisk family must permit harvest</td></tr>
+          <tr data-type="Canon" data-category="Luctatio"><td>The Ghostly Maiden's Song</td><td><span class="art-badge art-Mentem" style="font-size:0.65rem;padding:1px 5px">Mentem</span></td><td>Annual</td><td>Luctatio</td><td>Canon</td><td class="notes-text">Entice to sing; capture in physical form</td></tr>
+          <tr data-type="Canon" data-category="Luctatio"><td>The Falcon's Cliff</td><td><span class="art-badge art-Animal" style="font-size:0.65rem;padding:1px 5px">Animal</span></td><td>Annual</td><td>Luctatio</td><td>Canon</td><td class="notes-text">Prevent serpent from taking egg; or catch serpent for Vim</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>The Siren of Décollé Point</td><td><span class="art-badge art-Animal" style="font-size:0.65rem;padding:1px 5px">Animal</span></td><td>Variable</td><td>Luctatio</td><td>Proposed</td><td class="notes-text">Persuade to leave cave willingly; no magic</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>Ghost Fleet of Barfleur</td><td><span class="art-badge art-Vim" style="font-size:0.65rem;padding:1px 5px">Vim</span></td><td>Annual</td><td>Luctatio</td><td>Proposed</td><td class="notes-text">Board trailing ship by seamanship; winter storms only</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>The Faux de Verzy</td><td><span class="art-badge art-Perdo" style="font-size:0.65rem;padding:1px 5px">Perdo</span></td><td>Variable</td><td>Luctatio</td><td>Proposed</td><td class="notes-text">Retrieve dwarf-bundles at night; Faerie aura 4</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>The Boar King's Hunt</td><td><span class="art-badge art-Animal" style="font-size:0.65rem;padding:1px 5px">Animal</span></td><td>Annual</td><td>Luctatio</td><td>Proposed</td><td class="notes-text">Find carcass, report to court before ravens do</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>Hague-Dicke Ghost</td><td><span class="art-badge art-Mentem" style="font-size:0.65rem;padding:1px 5px">Mentem</span></td><td>Annual</td><td>Luctatio</td><td>Proposed</td><td class="notes-text">Endure full night recitation; no interruption</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>Kerbourg Megalith Alley</td><td><span class="art-badge art-Rego" style="font-size:0.65rem;padding:1px 5px">Rego</span></td><td>Annual</td><td>Luctatio</td><td>Proposed</td><td class="notes-text">Two magi; certamen on equinox; must be genuine</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>The Lutin's Sacred Fire</td><td><span class="art-badge art-Ignem" style="font-size:0.65rem;padding:1px 5px">Ignem</span></td><td>Annual</td><td>Luctatio</td><td>Proposed</td><td class="notes-text">Earn coal freely from lutin; no magic, no compulsion</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>The Shifting Book, Jumièges</td><td><span class="art-badge art-Muto" style="font-size:0.65rem;padding:1px 5px">Muto</span></td><td>Annual</td><td>Luctatio</td><td>Proposed</td><td class="notes-text">Read and recite changed text from memory; monks' relic</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>Ruins of Caput Capra</td><td><span class="art-badge art-Perdo" style="font-size:0.65rem;padding:1px 5px">Perdo</span></td><td>Annual</td><td>Luctatio</td><td>Proposed</td><td class="notes-text">Anniversary of fall; Confluensis apprentices watch</td></tr>
+          <tr data-type="Proposed" data-category="Luctatio"><td>The Branugurix Seal</td><td><span class="art-badge art-Vim" style="font-size:0.65rem;padding:1px 5px">Vim</span></td><td>1 (if success)</td><td>Luctatio</td><td>Proposed — ⚠ High Risk</td><td class="notes-text">Sta+MT 12+; botch risks entry; Guernicus watches</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- LIBRARY -->
+  <div id="library" class="section">
+    <div class="section-heading">Tribunal Library <span class="count">Books held in common — Liber Bibliothecae Tribunalis</span></div>
+    <p class="section-desc">Books donated to the Tribunal as a whole, following the practice established by Perpauca Bonisagi. Available to all member covenants. Canonical entries are from <em>The Lion &amp; the Lily</em>; suggested additions fill gaps in the collection.</p>
+
+    <div class="filter-bar">
+      <span class="filter-label">Filter:</span>
+      <button class="filter-btn active" onclick="filterLib('all')">All</button>
+      <button class="filter-btn" onclick="filterLib('canonical')">Canon only</button>
+      <button class="filter-btn" onclick="filterLib('suggested')">Suggested only</button>
+      <button class="filter-btn" onclick="filterLib('summa')">Summae</button>
+      <button class="filter-btn" onclick="filterLib('tractatus')">Tractatus</button>
+      <button class="filter-btn" onclick="filterLib('lab')">Lab Texts</button>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-swatch" style="background:#a07830;"></div>Canonical — from <em>The Lion &amp; the Lily</em></div>
+      <div class="legend-item"><div class="legend-swatch" style="background:#1a5c52;"></div>Suggested addition</div>
+    </div>
+
+    <div class="lib-section-head">Hermetic Arts — Techniques</div>
+    <div class="lib-grid">
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">On the Shaping Hand</div>
+        <div class="lib-author">Aldric of Tremere</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Rego</span>
+          <span class="lib-tag">Lvl 10 · Q 11</span>
+          <span class="lib-bp">21 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">Semina Rerum</div>
+        <div class="lib-author">Felicia of Bonisagus</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Creo</span>
+          <span class="lib-tag">Lvl 10 · Q 10</span>
+          <span class="lib-bp">20 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">The Discerning Eye</div>
+        <div class="lib-author">Anastasia of Guernicus</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Intellego</span>
+          <span class="lib-tag">Lvl 8 · Q 12</span>
+          <span class="lib-bp">20 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="tractatus">
+        <div class="lib-title">The Unwinding</div>
+        <div class="lib-author">Bertrand Fax Mentis of Tytalus</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-t">Tractatus</span>
+          <span class="lib-tag">Perdo</span>
+          <span class="lib-tag">Q 10</span>
+          <span class="lib-bp">10 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="tractatus">
+        <div class="lib-title">The Lying Mirror</div>
+        <div class="lib-author">Mireille of Jerbiton</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-t">Tractatus</span>
+          <span class="lib-tag">Muto</span>
+          <span class="lib-tag">Q 11</span>
+          <span class="lib-bp">11 BP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lib-section-head">Hermetic Arts — Forms</div>
+    <div class="lib-grid">
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="summa">
+        <div class="lib-title">The Babble Within Thought</div>
+        <div class="lib-author">Hicuccus of Criamon</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Mentem</span>
+          <span class="lib-tag">Lvl 12 · Q 11</span>
+          <span class="lib-bp">23 BP</span>
+        </div>
+      </div>
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="summa">
+        <div class="lib-title">The Dismal Itch</div>
+        <div class="lib-author">Azenis of Tytalus</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Corpus</span>
+          <span class="lib-tag">Lvl 10 · Q 11</span>
+          <span class="lib-bp">21 BP</span>
+        </div>
+      </div>
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="summa">
+        <div class="lib-title">De Lapii</div>
+        <div class="lib-author">Jeremias filius Guernicus</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa (Branch)</span>
+          <span class="lib-tag">Terram</span>
+          <span class="lib-tag">Lvl 17 · Q 14</span>
+          <span class="lib-bp">31 BP</span>
+        </div>
+      </div>
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="summa">
+        <div class="lib-title">Mirrors of the Soul</div>
+        <div class="lib-author">Perpauca Bonisagi</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Imaginem</span>
+          <span class="lib-tag">Lvl 12 · Q 16</span>
+          <span class="lib-bp">28 BP</span>
+        </div>
+      </div>
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="summa">
+        <div class="lib-title">The Primal Power</div>
+        <div class="lib-author">Peter of Uist</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Aquam</span>
+          <span class="lib-tag">Lvl 9 · Q 17</span>
+          <span class="lib-bp">26 BP</span>
+        </div>
+      </div>
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="summa">
+        <div class="lib-title">Unveiling the Tempest</div>
+        <div class="lib-author">Daniel Tonatris</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Auram</span>
+          <span class="lib-tag">Lvl 8 · Q 12</span>
+          <span class="lib-bp">20 BP</span>
+        </div>
+      </div>
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="tractatus">
+        <div class="lib-title">The Peril of Phoebos</div>
+        <div class="lib-author">Perpauca Bonisagi</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-t">Tractatus</span>
+          <span class="lib-tag">Ignem</span>
+          <span class="lib-tag">Q 11</span>
+          <span class="lib-bp">11 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">Pelts and Sinew</div>
+        <div class="lib-author">Goswin of Bjornaer</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Animal</span>
+          <span class="lib-tag">Lvl 10 · Q 11</span>
+          <span class="lib-bp">21 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">Root and Branch and Bole</div>
+        <div class="lib-author">Sylvaine of Merinita</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Herbam</span>
+          <span class="lib-tag">Lvl 10 · Q 10</span>
+          <span class="lib-bp">20 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">The Greater Flame</div>
+        <div class="lib-author">Raoul of Flambeau</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Ignem</span>
+          <span class="lib-tag">Lvl 12 · Q 10</span>
+          <span class="lib-bp">22 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">Speculum Potestatis</div>
+        <div class="lib-author">Ulfric of Bonisagus</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Vim</span>
+          <span class="lib-tag">Lvl 10 · Q 11</span>
+          <span class="lib-bp">21 BP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lib-section-head">Hermetic Theory &amp; Abilities</div>
+    <div class="lib-grid">
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="summa">
+        <div class="lib-title">Insights from Twilight</div>
+        <div class="lib-author">Perpauca Bonisagi</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Magic Theory</span>
+          <span class="lib-tag">Lvl 6 · Q 11</span>
+          <span class="lib-bp">28 BP</span>
+        </div>
+      </div>
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="summa">
+        <div class="lib-title">Subtle Knives</div>
+        <div class="lib-author">Jacinda of Flambeau</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Penetration</span>
+          <span class="lib-tag">Lvl 5 · Q 8</span>
+          <span class="lib-bp">23 BP</span>
+        </div>
+      </div>
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="tractatus">
+        <div class="lib-title">Research Notes on Aegis of the Hearth</div>
+        <div class="lib-author">Notatus and others</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-t">Tractatus</span>
+          <span class="lib-tag">Spell Mastery</span>
+          <span class="lib-tag">Q 11 + Lab Text Lvl 20</span>
+          <span class="lib-bp">15 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">The Courteous Defense</div>
+        <div class="lib-author">Théophile of Jerbiton</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Parma Magica</span>
+          <span class="lib-tag">Lvl 4 · Q 9</span>
+          <span class="lib-bp">21 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="tractatus">
+        <div class="lib-title">The Practiced Hand</div>
+        <div class="lib-author">Mathilda of Verditius</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-t">Tractatus</span>
+          <span class="lib-tag">Finesse</span>
+          <span class="lib-tag">Q 10</span>
+          <span class="lib-bp">10 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="tractatus">
+        <div class="lib-title">On Clarity in the Storm</div>
+        <div class="lib-author">Anon. (Criamon attribution)</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-t">Tractatus</span>
+          <span class="lib-tag">Concentration</span>
+          <span class="lib-tag">Q 9</span>
+          <span class="lib-bp">9 BP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lib-section-head">Lab Texts</div>
+    <div class="lib-grid">
+      <div class="lib-card canonical" data-libtype="canonical" data-booktype="lab">
+        <div class="lib-title">The Mole's Work</div>
+        <div class="lib-author">Adanos Lutorum of Tytalus</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-l">Lab Texts</span>
+          <span class="lib-tag">Rock of Viscid Clay</span>
+          <span class="lib-tag">Earth That Breaks No More</span>
+          <span class="lib-tag">The Forgiving Earth</span>
+          <span class="lib-bp">11 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="lab">
+        <div class="lib-title">Formulae of the Norman Shore</div>
+        <div class="lib-author">Compiled at Confluensis</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-l">Lab Texts</span>
+          <span class="lib-tag">ReAq &amp; CrAu spells, Lvl 10–20</span>
+          <span class="lib-bp">12 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="lab">
+        <div class="lib-title">The Tytalan Primer of Strife</div>
+        <div class="lib-author">Comp. House Tytalus scribes</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-l">Lab Texts</span>
+          <span class="lib-tag">PeVi &amp; ReVi spells, Lvl 10–25</span>
+          <span class="lib-bp">14 BP</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="lib-section-head">Mundane Knowledge</div>
+    <div class="lib-grid">
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">Historia Normannorum</div>
+        <div class="lib-author">William of Jumièges (1025–1090)</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Area Lore: Normandy</span>
+          <span class="lib-tag">Lvl 5 · Q 9</span>
+          <span class="lib-bp">24 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">Legends of Brittany</div>
+        <div class="lib-author">Celeres of Bonisagus</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Faerie Lore</span>
+          <span class="lib-tag">Lvl 3 · Q 5</span>
+          <span class="lib-bp">14 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="tractatus">
+        <div class="lib-title">The Compact Explained</div>
+        <div class="lib-author">Gilles of Guernicus</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-t">Tractatus</span>
+          <span class="lib-tag">Order of Hermes Lore</span>
+          <span class="lib-tag">Q 8</span>
+          <span class="lib-bp">8 BP</span>
+        </div>
+      </div>
+      <div class="lib-card suggested" data-libtype="suggested" data-booktype="summa">
+        <div class="lib-title">The Physician's Mirror</div>
+        <div class="lib-author">Anon. (monastic)</div>
+        <div class="lib-tags">
+          <span class="lib-tag type-tag-s">Summa</span>
+          <span class="lib-tag">Medicine</span>
+          <span class="lib-tag">Lvl 4 · Q 8</span>
+          <span class="lib-bp">20 BP</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footnote">
+    Compiled for the use of member covenants of the Normandy Tribunal · Anno Domini 1220 · <em>Omnia in commune</em><br>
+    Canonical entries from <em>The Lion &amp; the Lily</em> (Atlas Games, 2007) · Supplementary entries proposed by the covenant's magi
+  </div>
+
+</div>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.querySelectorAll('nav button').forEach((b, i) => {
+      const ids = ['tropaea','luctationes','all-vis','library'];
+      b.classList.toggle('active', ids[i] === id);
+    });
+  }
+
+  function filterCards(section, art) {
+    const cards = document.querySelectorAll(`[data-section="${section}"]`);
+    cards.forEach(c => {
+      c.classList.toggle('hidden', art !== 'all' && c.dataset.art !== art);
+    });
+    const bar = section === 'trop'
+      ? document.querySelector('#tropaea .filter-bar')
+      : document.querySelector('#luctationes .filter-bar');
+    bar.querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.textContent.trim() === (art === 'all' ? 'All' : art));
+    });
+  }
+
+  function filterTable(filter) {
+    const rows = document.querySelectorAll('#vis-table-body tr');
+    rows.forEach(r => {
+      if (filter === 'all') { r.classList.remove('hidden'); return; }
+      if (filter === 'Tropaeum') { r.classList.toggle('hidden', r.dataset.category !== 'Tropaeum'); return; }
+      if (filter === 'Luctatio') { r.classList.toggle('hidden', r.dataset.category !== 'Luctatio'); return; }
+      r.classList.toggle('hidden', r.dataset.type !== filter);
+    });
+    document.querySelector('#all-vis .filter-bar').querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.textContent.trim().replace(' only','').replace(' only','') === filter || (b.textContent.includes('All') && filter === 'all') || (b.textContent.includes('Tropaea') && filter === 'Tropaeum') || (b.textContent.includes('Luctationes') && filter === 'Luctatio'));
+    });
+  }
+
+  function filterLib(filter) {
+    const cards = document.querySelectorAll('.lib-card');
+    cards.forEach(c => {
+      let show = true;
+      if (filter === 'canonical') show = c.dataset.libtype === 'canonical';
+      else if (filter === 'suggested') show = c.dataset.libtype === 'suggested';
+      else if (filter === 'summa') show = c.dataset.booktype === 'summa';
+      else if (filter === 'tractatus') show = c.dataset.booktype === 'tractatus';
+      else if (filter === 'lab') show = c.dataset.booktype === 'lab';
+      c.classList.toggle('hidden', !show);
+    });
+    document.querySelector('#library .filter-bar').querySelectorAll('.filter-btn').forEach(b => {
+      b.classList.toggle('active', b.textContent.trim().toLowerCase() === filter || (b.textContent === 'All' && filter === 'all'));
+    });
+  }
+</script>
+</body>
+</html>

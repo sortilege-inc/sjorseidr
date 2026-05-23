@@ -1,0 +1,2265 @@
+{
+  "meta": {
+    "title": "Normandy Tribunal Workbook — 1223",
+    "compiled": "A.D. 1223",
+    "schema_version": 1
+  },
+  "vis_sources": [
+    {
+      "id": "v001",
+      "category": "Tropaeum",
+      "art": "Aquam",
+      "name": "Secluded Beach Foam",
+      "yield": "Varies",
+      "status": "Canon",
+      "notes": "On St. Martin's Day, Aquam vis in the form of sea foam is cast up onto a secluded beach."
+    },
+    {
+      "id": "v002",
+      "category": "Tropaeum",
+      "art": "Intellego",
+      "name": "The Secluded Pool",
+      "yield": "Rare (~every 3 yrs)",
+      "status": "Canon",
+      "notes": "Water collected when the image of the second full moon in a month is reflected in a secluded pool. Occurs about once every three years."
+    },
+    {
+      "id": "v003",
+      "category": "Tropaeum",
+      "art": "Auram",
+      "name": "The Hilltop Weather",
+      "yield": "Annual",
+      "status": "Canon",
+      "notes": "If the weather atop a particular hill can be captured in a bottle of blue glass on midwinter's day, it becomes Auram vis."
+    },
+    {
+      "id": "v004",
+      "category": "Tropaeum",
+      "art": "Corpus",
+      "name": "The Leper Colony Bandages",
+      "yield": "Annual",
+      "status": "Canon",
+      "notes": "The discarded bandages of a certain leper colony are Corpus vis."
+    },
+    {
+      "id": "v005",
+      "category": "Tropaeum",
+      "art": "Imaginem",
+      "name": "Tapestry Threads of Bayeux",
+      "yield": "6 pawns /year",
+      "status": "Available",
+      "notes": "Golden threads appear among the embroidery on feast days. Must be plucked before vespers."
+    },
+    {
+      "id": "v006",
+      "category": "Tropaeum",
+      "art": "Aquam",
+      "name": "Mont-Saint-Michel Tide Pools",
+      "yield": "5 pawns /year",
+      "status": "Available",
+      "notes": "Spring tide crystallization — salt crystals that form in the tide pools at the base of the mount during the great spring tides."
+    },
+    {
+      "id": "v007",
+      "category": "Tropaeum",
+      "art": "Creo",
+      "name": "The Confessor's Library",
+      "yield": "4 pawns /year",
+      "status": "Available",
+      "notes": "Marginalia manifest in monastery books — fresh illuminated letters appear overnight in the margins of certain texts at the monastery."
+    },
+    {
+      "id": "v008",
+      "category": "Tropaeum",
+      "art": "Vim",
+      "name": "Channel Islands Source",
+      "yield": "4 pawns /year",
+      "status": "Available",
+      "notes": "Disputed jurisdiction — Jersey. The precise nature of this source and its harvest method are recorded at Confluensis."
+    },
+    {
+      "id": "v009",
+      "category": "Tropaeum",
+      "art": "Muto",
+      "name": "Cider Press of Domfront",
+      "yield": "3 pawns /year",
+      "status": "Available",
+      "notes": "St. Martin's Day harvest. The first pressing at a particular ancient cider press yields a few cups of fluid that is Muto vis before turning to ordinary cider."
+    },
+    {
+      "id": "v010",
+      "category": "Tropaeum",
+      "art": "Perdo",
+      "name": "Drowned Village Bells",
+      "yield": "3 pawns /year",
+      "status": "Available",
+      "notes": "Barnacles on submerged bells. A village swallowed by the sea long ago; the barnacles that grow on the sunken bells carry Perdo vis and must be scraped free by a diver."
+    },
+    {
+      "id": "v011",
+      "category": "Tropaeum",
+      "art": "Herbam",
+      "name": "The Diedne Garden",
+      "yield": "3 pawns /year",
+      "status": "Available",
+      "notes": "Politically contested. An overgrown garden at a ruined Diedne covenant site still produces three unusual herbs each spring. Multiple covenants claim historical rights."
+    },
+    {
+      "id": "v012",
+      "category": "Tropaeum",
+      "art": "Rego",
+      "name": "Pilgrim Road Stones",
+      "yield": "2 pawns /year",
+      "status": "Available",
+      "notes": "Santiago route markers. Certain milestone stones on the pilgrim road to Santiago bear the vis — collected by pressing wax against the face of the stone on a feast of St. James."
+    },
+    {
+      "id": "v013",
+      "category": "Tropaeum",
+      "art": "Corpus",
+      "name": "Norman Barrow Frost",
+      "yield": "2 pawns /year",
+      "status": "Available",
+      "notes": "Winter solstice hoarfrost. The frost that forms inside the burial chamber of a Norman barrow on the solstice is Corpus vis — it must be scraped free before dawn."
+    },
+    {
+      "id": "v014",
+      "category": "Tropaeum",
+      "art": "Intellego",
+      "name": "Shepherd's Stone",
+      "yield": "1 pawn /year",
+      "status": "Available",
+      "notes": "Midsummer's Eve weeping. A lone standing stone in a sheep pasture \"weeps\" a single drop of moisture on Midsummer's Eve, regardless of the weather."
+    },
+    {
+      "id": "v015",
+      "category": "Tropaeum",
+      "art": "Auram",
+      "name": "Market Cross Weather",
+      "yield": "1 pawn /year",
+      "status": "Available",
+      "notes": "Specific weather patterns on market day. Once a year, a peculiar wind circles a market cross in a particular town. Captured in a sealed jar, it is Auram vis."
+    },
+    {
+      "id": "v016",
+      "category": "Tropaeum",
+      "art": "Aquam",
+      "name": "The Needles, Belle-Île",
+      "yield": "Seasonal",
+      "status": "Proposed",
+      "notes": "At peak high tide when wind is from the west, the surf against a sea-stack cluster produces dense persistent foam unlike ordinary sea-froth. Collected in sealed vessel before the tide turns."
+    },
+    {
+      "id": "v017",
+      "category": "Tropaeum",
+      "art": "Imaginem",
+      "name": "The Singing Stones, St. Malo",
+      "yield": "Annual",
+      "status": "Proposed",
+      "notes": "Flat schist stones near the Rance estuary ring with a metallic tone when struck in sequence. The shimmer in the air captured on parchment pressed to the stone is Imaginem vis. Must be a still day."
+    },
+    {
+      "id": "v018",
+      "category": "Tropaeum",
+      "art": "Creo",
+      "name": "Grove of St. Lié, Montagne de Reims",
+      "yield": "Annual",
+      "status": "Proposed",
+      "notes": "Pale flowers bloom on a burial mound in early spring before anything else stirs. Petals gathered at dawn while still wet with dew are Creo vis. Wilt and lose potency by midday."
+    },
+    {
+      "id": "v019",
+      "category": "Tropaeum",
+      "art": "Herbam",
+      "name": "Ancient Oak of the Forest of Lyons",
+      "yield": "3 pawns /year",
+      "status": "Proposed",
+      "notes": "Three golden-shelled acorns appear on Michaelmas and remain for nine days. Castle garrison considers the tree their property — mundane trespass is the obstacle, not magic."
+    },
+    {
+      "id": "v020",
+      "category": "Tropaeum",
+      "art": "Vim",
+      "name": "Carnac Solstice Shadow",
+      "yield": "Annual",
+      "status": "Proposed",
+      "notes": "At the center of the great avenues, one menhir casts no shadow at noon on the summer solstice. The absence, captured in black cloth pressed to the stone's base, is Vim vis."
+    },
+    {
+      "id": "v021",
+      "category": "Tropaeum",
+      "art": "Terram",
+      "name": "Champ-Dolent Menhir, near Dol",
+      "yield": "2 pawns /year",
+      "status": "Proposed",
+      "notes": "On the anniversary of the Schism War battle, red-brown dust forms at the menhir's base. Swept into a jar before rain falls, it is Terram vis. House Guernicus watches this site."
+    },
+    {
+      "id": "v022",
+      "category": "Tropaeum",
+      "art": "Intellego",
+      "name": "Roman Temple of Mars, Corseul",
+      "yield": "Annual",
+      "status": "Proposed",
+      "notes": "Midwinter frost forms letter-like patterns on the inside of the ruined round temple walls. Scraped from brick before noon, this frost-water is Intellego vis. Requires entering the regio at dawn."
+    },
+    {
+      "id": "v023",
+      "category": "Tropaeum",
+      "art": "Corpus",
+      "name": "Gâvre Forest Leper Hospital",
+      "yield": "Monthly",
+      "status": "Proposed",
+      "notes": "The hospital burns its dead. Ash from these pyres contains Corpus vis if gathered before rain falls. The brothers are charitable but not blind — regular visitors invite Church scrutiny."
+    },
+    {
+      "id": "v024",
+      "category": "Tropaeum",
+      "art": "Mentem",
+      "name": "Crossroads Chapel, Champagne Road",
+      "yield": "~2 pawns /year",
+      "status": "Proposed",
+      "notes": "Travelers who confess their deepest secret to the empty chapel find a small rough stone on the threshold when they leave. Appears without pattern, ~twice yearly. Must be gathered before sunset."
+    },
+    {
+      "id": "v025",
+      "category": "Luctatio",
+      "art": "Perdo",
+      "name": "The Basilisk Tree",
+      "yield": "Annual",
+      "status": "Canon",
+      "notes": "A tree in a forest has a basilisk family nesting in its roots. The fruit of the tree, if the basilisks permit collection, is Perdo vis."
+    },
+    {
+      "id": "v026",
+      "category": "Luctatio",
+      "art": "Mentem",
+      "name": "The Ghostly Maiden's Song",
+      "yield": "Annual",
+      "status": "Canon",
+      "notes": "The mournful song of a ghostly maiden is Mentem vis. She must first be enticed to sing her lament, then the magus must capture the song in physical form."
+    },
+    {
+      "id": "v027",
+      "category": "Luctatio",
+      "art": "Animal",
+      "name": "The Falcon's Cliff",
+      "yield": "Annual",
+      "status": "Canon",
+      "notes": "A falcon nests on a cliff ledge every year. On the same day, a serpent tries to steal an egg. If prevented, the egg contains Animal vis. If the serpent succeeds, it contains Vim vis (if caught)."
+    },
+    {
+      "id": "v028",
+      "category": "Luctatio",
+      "art": "Animal",
+      "name": "The Siren of Décollé Point",
+      "yield": "Variable",
+      "status": "Proposed",
+      "notes": "A siren inhabits the sea-cave near St. Malo. If persuaded to leave the cave willingly — not tricked or compelled — scales she sheds passing into daylight are Animal vis. She shatters boats in response to deception."
+    },
+    {
+      "id": "v029",
+      "category": "Luctatio",
+      "art": "Vim",
+      "name": "The Ghost Fleet of Barfleur",
+      "yield": "Annual (winter)",
+      "status": "Proposed",
+      "notes": "On stormy winter nights, a spectral fleet passes Barfleur. The trailing ship's lantern still burns. A magus who boards it by ordinary seamanship and asks the captain where he sails receives a coal that is Vim vis."
+    },
+    {
+      "id": "v030",
+      "category": "Luctatio",
+      "art": "Perdo",
+      "name": "The Faux de Verzy",
+      "yield": "Variable",
+      "status": "Proposed",
+      "notes": "The dark dwarfs of the twisted beech grove leave behind bundles of Perdo vis — remnants of their enchantments. Must be collected at night. Faerie aura 4; Hermetic magic is unreliable and draws their attention."
+    },
+    {
+      "id": "v031",
+      "category": "Luctatio",
+      "art": "Animal",
+      "name": "The Boar King's Hunt",
+      "yield": "Annual (autumn)",
+      "status": "Proposed",
+      "notes": "Finding one of the Boar King's abandoned carcasses and reporting it to his court before the ravens do earns the right to harvest — the heart contains Animal vis. Taking without reporting is a grave insult he never forgets."
+    },
+    {
+      "id": "v032",
+      "category": "Luctatio",
+      "art": "Mentem",
+      "name": "The Hague-Dicke Ghost",
+      "yield": "Annual (winter solstice)",
+      "status": "Proposed",
+      "notes": "An old Norse ghost recites the names of all he killed on the longest night. Listen through to dawn without speaking, and he says one true thing about your future. Written in Old Norse immediately, this is Mentem vis. Any interruption rouses all the ghosts."
+    },
+    {
+      "id": "v033",
+      "category": "Luctatio",
+      "art": "Rego",
+      "name": "Kerbourg Megalith Alley",
+      "yield": "Annual (equinox)",
+      "status": "Proposed",
+      "notes": "Two consenting magi perform certamen within the alley on the equinox. The loser's sigil pools in the capstone. Marsh-water held up to catch the drip holds Rego vis. The stones know if certamen is faked."
+    },
+    {
+      "id": "v034",
+      "category": "Luctatio",
+      "art": "Ignem",
+      "name": "The Lutin's Sacred Fire",
+      "yield": "Annual (winter)",
+      "status": "Proposed",
+      "notes": "Lutin servants of a Norman farmstead light a fire without wood in an old sacred well each winter. If a magus earns a coal from them freely — not by trade, compulsion, or magic — the coal is Ignem vis and stays lit for a year."
+    },
+    {
+      "id": "v035",
+      "category": "Luctatio",
+      "art": "Muto",
+      "name": "The Shifting Book, Abbaye de Jumièges",
+      "yield": "Annual",
+      "status": "Proposed",
+      "notes": "Recovered \"pages\" (actually fish-skin) whose text shifts over weeks. A scholar who reads cover-to-cover and recites the changed passages from memory absorbs Muto vis, manifest as iridescence in their saliva for one season. The monks believe it a holy relic."
+    },
+    {
+      "id": "v036",
+      "category": "Luctatio",
+      "art": "Perdo",
+      "name": "Ruins of Caput Capra, Loire",
+      "yield": "Annual",
+      "status": "Proposed",
+      "notes": "On the anniversary of the youngest Diedne covenant's fall, a fist-sized lump of fused stone and ash appears in the ruin. Always in a different location. Confluensis apprentices visit annually — harvesting in their presence is diplomatically fraught."
+    },
+    {
+      "id": "v037",
+      "category": "Luctatio",
+      "art": "Vim",
+      "name": "The Branugurix Seal, Mount Dol",
+      "yield": "1 pawn /year (if successful)",
+      "status": "Proposed — High Danger",
+      "notes": "The sealed entrance to the Diedne domus magna thins once yearly. Pressing a hand against the hillside and resisting the seal's pushback (Stamina + Magic Theory 12+) draws out Vim vis. Botching risks being pulled inside. House Guernicus actively watches this site."
+    }
+  ],
+  "library": [
+    {
+      "id": "b001",
+      "section": "Hermetic Arts — Techniques",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "On the Shaping Hand",
+      "author": "Aldric of Tremere",
+      "tags": [
+        "Summa",
+        "Rego",
+        "Lvl 10 · Q 11"
+      ],
+      "bp": "21 BP"
+    },
+    {
+      "id": "b002",
+      "section": "Hermetic Arts — Techniques",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "Semina Rerum",
+      "author": "Felicia of Bonisagus",
+      "tags": [
+        "Summa",
+        "Creo",
+        "Lvl 10 · Q 10"
+      ],
+      "bp": "20 BP"
+    },
+    {
+      "id": "b003",
+      "section": "Hermetic Arts — Techniques",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "The Discerning Eye",
+      "author": "Anastasia of Guernicus",
+      "tags": [
+        "Summa",
+        "Intellego",
+        "Lvl 8 · Q 12"
+      ],
+      "bp": "20 BP"
+    },
+    {
+      "id": "b004",
+      "section": "Hermetic Arts — Techniques",
+      "type": "suggested",
+      "booktype": "tractatus",
+      "title": "The Unwinding",
+      "author": "Bertrand Fax Mentis of Tytalus",
+      "tags": [
+        "Tractatus",
+        "Perdo",
+        "Q 10"
+      ],
+      "bp": "10 BP"
+    },
+    {
+      "id": "b005",
+      "section": "Hermetic Arts — Techniques",
+      "type": "suggested",
+      "booktype": "tractatus",
+      "title": "The Lying Mirror",
+      "author": "Mireille of Jerbiton",
+      "tags": [
+        "Tractatus",
+        "Muto",
+        "Q 11"
+      ],
+      "bp": "11 BP"
+    },
+    {
+      "id": "b006",
+      "section": "Hermetic Arts — Forms",
+      "type": "canonical",
+      "booktype": "summa",
+      "title": "The Babble Within Thought",
+      "author": "Hicuccus of Criamon",
+      "tags": [
+        "Summa",
+        "Mentem",
+        "Lvl 12 · Q 11"
+      ],
+      "bp": "23 BP"
+    },
+    {
+      "id": "b007",
+      "section": "Hermetic Arts — Forms",
+      "type": "canonical",
+      "booktype": "summa",
+      "title": "The Dismal Itch",
+      "author": "Azenis of Tytalus",
+      "tags": [
+        "Summa",
+        "Corpus",
+        "Lvl 10 · Q 11"
+      ],
+      "bp": "21 BP"
+    },
+    {
+      "id": "b008",
+      "section": "Hermetic Arts — Forms",
+      "type": "canonical",
+      "booktype": "summa",
+      "title": "De Lapii",
+      "author": "Jeremias filius Guernicus",
+      "tags": [
+        "Summa (Branch)",
+        "Terram",
+        "Lvl 17 · Q 14"
+      ],
+      "bp": "31 BP"
+    },
+    {
+      "id": "b009",
+      "section": "Hermetic Arts — Forms",
+      "type": "canonical",
+      "booktype": "summa",
+      "title": "Mirrors of the Soul",
+      "author": "Perpauca Bonisagi",
+      "tags": [
+        "Summa",
+        "Imaginem",
+        "Lvl 12 · Q 16"
+      ],
+      "bp": "28 BP"
+    },
+    {
+      "id": "b010",
+      "section": "Hermetic Arts — Forms",
+      "type": "canonical",
+      "booktype": "summa",
+      "title": "The Primal Power",
+      "author": "Peter of Uist",
+      "tags": [
+        "Summa",
+        "Aquam",
+        "Lvl 9 · Q 17"
+      ],
+      "bp": "26 BP"
+    },
+    {
+      "id": "b011",
+      "section": "Hermetic Arts — Forms",
+      "type": "canonical",
+      "booktype": "summa",
+      "title": "Unveiling the Tempest",
+      "author": "Daniel Tonatris",
+      "tags": [
+        "Summa",
+        "Auram",
+        "Lvl 8 · Q 12"
+      ],
+      "bp": "20 BP"
+    },
+    {
+      "id": "b012",
+      "section": "Hermetic Arts — Forms",
+      "type": "canonical",
+      "booktype": "tractatus",
+      "title": "The Peril of Phoebos",
+      "author": "Perpauca Bonisagi",
+      "tags": [
+        "Tractatus",
+        "Ignem",
+        "Q 11"
+      ],
+      "bp": "11 BP"
+    },
+    {
+      "id": "b013",
+      "section": "Hermetic Arts — Forms",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "Pelts and Sinew",
+      "author": "Goswin of Bjornaer",
+      "tags": [
+        "Summa",
+        "Animal",
+        "Lvl 10 · Q 11"
+      ],
+      "bp": "21 BP"
+    },
+    {
+      "id": "b014",
+      "section": "Hermetic Arts — Forms",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "Root and Branch and Bole",
+      "author": "Sylvaine of Merinita",
+      "tags": [
+        "Summa",
+        "Herbam",
+        "Lvl 10 · Q 10"
+      ],
+      "bp": "20 BP"
+    },
+    {
+      "id": "b015",
+      "section": "Hermetic Arts — Forms",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "The Greater Flame",
+      "author": "Raoul of Flambeau",
+      "tags": [
+        "Summa",
+        "Ignem",
+        "Lvl 12 · Q 10"
+      ],
+      "bp": "22 BP"
+    },
+    {
+      "id": "b016",
+      "section": "Hermetic Arts — Forms",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "Speculum Potestatis",
+      "author": "Ulfric of Bonisagus",
+      "tags": [
+        "Summa",
+        "Vim",
+        "Lvl 10 · Q 11"
+      ],
+      "bp": "21 BP"
+    },
+    {
+      "id": "b017",
+      "section": "Hermetic Theory & Abilities",
+      "type": "canonical",
+      "booktype": "summa",
+      "title": "Insights from Twilight",
+      "author": "Perpauca Bonisagi",
+      "tags": [
+        "Summa",
+        "Magic Theory",
+        "Lvl 6 · Q 11"
+      ],
+      "bp": "28 BP"
+    },
+    {
+      "id": "b018",
+      "section": "Hermetic Theory & Abilities",
+      "type": "canonical",
+      "booktype": "summa",
+      "title": "Subtle Knives",
+      "author": "Jacinda of Flambeau",
+      "tags": [
+        "Summa",
+        "Penetration",
+        "Lvl 5 · Q 8"
+      ],
+      "bp": "23 BP"
+    },
+    {
+      "id": "b019",
+      "section": "Hermetic Theory & Abilities",
+      "type": "canonical",
+      "booktype": "tractatus",
+      "title": "Research Notes on Aegis of the Hearth",
+      "author": "Notatus and others",
+      "tags": [
+        "Tractatus",
+        "Spell Mastery",
+        "Q 11 + Lab Text Lvl 20"
+      ],
+      "bp": "15 BP"
+    },
+    {
+      "id": "b020",
+      "section": "Hermetic Theory & Abilities",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "The Courteous Defense",
+      "author": "Théophile of Jerbiton",
+      "tags": [
+        "Summa",
+        "Parma Magica",
+        "Lvl 4 · Q 9"
+      ],
+      "bp": "21 BP"
+    },
+    {
+      "id": "b021",
+      "section": "Hermetic Theory & Abilities",
+      "type": "suggested",
+      "booktype": "tractatus",
+      "title": "The Practiced Hand",
+      "author": "Mathilda of Verditius",
+      "tags": [
+        "Tractatus",
+        "Finesse",
+        "Q 10"
+      ],
+      "bp": "10 BP"
+    },
+    {
+      "id": "b022",
+      "section": "Hermetic Theory & Abilities",
+      "type": "suggested",
+      "booktype": "tractatus",
+      "title": "On Clarity in the Storm",
+      "author": "Anon. (Criamon attribution)",
+      "tags": [
+        "Tractatus",
+        "Concentration",
+        "Q 9"
+      ],
+      "bp": "9 BP"
+    },
+    {
+      "id": "b023",
+      "section": "Lab Texts",
+      "type": "canonical",
+      "booktype": "lab",
+      "title": "The Mole's Work",
+      "author": "Adanos Lutorum of Tytalus",
+      "tags": [
+        "Lab Texts",
+        "Rock of Viscid Clay",
+        "Earth That Breaks No More",
+        "The Forgiving Earth"
+      ],
+      "bp": "11 BP"
+    },
+    {
+      "id": "b024",
+      "section": "Lab Texts",
+      "type": "suggested",
+      "booktype": "lab",
+      "title": "Formulae of the Norman Shore",
+      "author": "Compiled at Confluensis",
+      "tags": [
+        "Lab Texts",
+        "ReAq & CrAu spells, Lvl 10–20"
+      ],
+      "bp": "12 BP"
+    },
+    {
+      "id": "b025",
+      "section": "Lab Texts",
+      "type": "suggested",
+      "booktype": "lab",
+      "title": "The Tytalan Primer of Strife",
+      "author": "Comp. House Tytalus scribes",
+      "tags": [
+        "Lab Texts",
+        "PeVi & ReVi spells, Lvl 10–25"
+      ],
+      "bp": "14 BP"
+    },
+    {
+      "id": "b026",
+      "section": "Mundane Knowledge",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "Historia Normannorum",
+      "author": "William of Jumièges (1025–1090)",
+      "tags": [
+        "Summa",
+        "Area Lore: Normandy",
+        "Lvl 5 · Q 9"
+      ],
+      "bp": "24 BP"
+    },
+    {
+      "id": "b027",
+      "section": "Mundane Knowledge",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "Legends of Brittany",
+      "author": "Celeres of Bonisagus",
+      "tags": [
+        "Summa",
+        "Faerie Lore",
+        "Lvl 3 · Q 5"
+      ],
+      "bp": "14 BP"
+    },
+    {
+      "id": "b028",
+      "section": "Mundane Knowledge",
+      "type": "suggested",
+      "booktype": "tractatus",
+      "title": "The Compact Explained",
+      "author": "Gilles of Guernicus",
+      "tags": [
+        "Tractatus",
+        "Order of Hermes Lore",
+        "Q 8"
+      ],
+      "bp": "8 BP"
+    },
+    {
+      "id": "b029",
+      "section": "Mundane Knowledge",
+      "type": "suggested",
+      "booktype": "summa",
+      "title": "The Physician's Mirror",
+      "author": "Anon. (monastic)",
+      "tags": [
+        "Summa",
+        "Medicine",
+        "Lvl 4 · Q 8"
+      ],
+      "bp": "20 BP"
+    }
+  ],
+  "tournament": {
+    "covenants": [
+      "Fudarus",
+      "Confluensis",
+      "Florum",
+      "Montverte",
+      "Oleron",
+      "Dragon's Rest",
+      "Nidi",
+      "Spider's Palace",
+      "Requies Aeterna",
+      "Atsingani",
+      "Cunfin",
+      "Exspectatio",
+      "Atramentum Renatus",
+      "Scarem Montem",
+      "Lapis Crudus",
+      "Eboris",
+      "Semita Errabunda",
+      "Sjórseiðr",
+      "Arx Argentea",
+      "Merces Aurea",
+      "Carnac",
+      "Bellum Iocari",
+      "Turris Vigilans",
+      "Umbra Silvae"
+    ],
+    "events": {
+      "Certamen": {
+        "scoring": {
+          "1": 25,
+          "2": 15,
+          "3-4": 8,
+          "participation": 1,
+          "desc": "Knockout wizard-duel. The most prestigious event."
+        },
+        "bracket": [
+          {
+            "match": 1,
+            "round": "Round of 24",
+            "a": "Fudarus",
+            "b": "Sjórseiðr",
+            "winner": "Fudarus"
+          },
+          {
+            "match": 2,
+            "round": "Round of 24",
+            "a": "Confluensis",
+            "b": "Carnac",
+            "winner": "Confluensis"
+          },
+          {
+            "match": 3,
+            "round": "Round of 24",
+            "a": "Florum",
+            "b": "Bellum Iocari",
+            "winner": "Bellum Iocari"
+          },
+          {
+            "match": 4,
+            "round": "Round of 24",
+            "a": "Montverte",
+            "b": "Turris Vigilans",
+            "winner": "Montverte"
+          },
+          {
+            "match": 5,
+            "round": "Round of 24",
+            "a": "Oleron",
+            "b": "Umbra Silvae",
+            "winner": "Oleron"
+          },
+          {
+            "match": 6,
+            "round": "Round of 24",
+            "a": "Dragon's Rest",
+            "b": "Merces Aurea",
+            "winner": "Merces Aurea"
+          },
+          {
+            "match": 7,
+            "round": "Round of 24",
+            "a": "Nidi",
+            "b": "Arx Argentea",
+            "winner": "Arx Argentea"
+          },
+          {
+            "match": 8,
+            "round": "Round of 24",
+            "a": "Spider's Palace",
+            "b": "Semita Errabunda",
+            "winner": "Spider's Palace"
+          },
+          {
+            "match": 9,
+            "round": "Round of 24",
+            "a": "Requies Aeterna",
+            "b": "Eboris",
+            "winner": "Requies Aeterna"
+          },
+          {
+            "match": 10,
+            "round": "Round of 24",
+            "a": "Atsingani",
+            "b": "Lapis Crudus",
+            "winner": "Lapis Crudus"
+          },
+          {
+            "match": 11,
+            "round": "Round of 24",
+            "a": "Cunfin",
+            "b": "Scarem Montem",
+            "winner": "Cunfin"
+          },
+          {
+            "match": 12,
+            "round": "Round of 24",
+            "a": "Exspectatio",
+            "b": "Atramentum Renatus",
+            "winner": "Exspectatio"
+          },
+          {
+            "match": 13,
+            "round": "Later Rounds",
+            "a": "Fudarus",
+            "b": "Confluensis",
+            "winner": "Fudarus"
+          },
+          {
+            "match": 14,
+            "round": "Later Rounds",
+            "a": "Bellum Iocari",
+            "b": "Montverte",
+            "winner": "Bellum Iocari"
+          },
+          {
+            "match": 15,
+            "round": "Later Rounds",
+            "a": "Oleron",
+            "b": "Merces Aurea",
+            "winner": "Merces Aurea"
+          },
+          {
+            "match": 16,
+            "round": "Later Rounds",
+            "a": "Arx Argentea",
+            "b": "Spider's Palace",
+            "winner": "Spider's Palace"
+          },
+          {
+            "match": 17,
+            "round": "Later Rounds",
+            "a": "Requies Aeterna",
+            "b": "Lapis Crudus",
+            "winner": "Requies Aeterna"
+          },
+          {
+            "match": 18,
+            "round": "Later Rounds",
+            "a": "Cunfin",
+            "b": "Exspectatio",
+            "winner": "Cunfin"
+          },
+          {
+            "match": 19,
+            "round": "Later Rounds",
+            "a": "Fudarus",
+            "b": "Bellum Iocari",
+            "winner": "Bellum Iocari"
+          },
+          {
+            "match": 20,
+            "round": "Later Rounds",
+            "a": "Merces Aurea",
+            "b": "Spider's Palace",
+            "winner": "Merces Aurea"
+          },
+          {
+            "match": 21,
+            "round": "Later Rounds",
+            "a": "Requies Aeterna",
+            "b": "Cunfin",
+            "winner": "Cunfin"
+          },
+          {
+            "match": 22,
+            "round": "Later Rounds",
+            "a": "Bellum Iocari",
+            "b": "Merces Aurea",
+            "winner": "Bellum Iocari"
+          },
+          {
+            "match": 23,
+            "round": "Later Rounds",
+            "a": "Merces Aurea",
+            "b": "Cunfin",
+            "winner": "Merces Aurea"
+          },
+          {
+            "match": 24,
+            "round": "Later Rounds",
+            "a": "Merces Aurea",
+            "b": "Bellum Iocari",
+            "winner": "Merces Aurea"
+          }
+        ],
+        "placement": {
+          "Fudarus": {
+            "place": 4,
+            "competed": "Y"
+          },
+          "Confluensis": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Florum": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Montverte": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Oleron": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Dragon's Rest": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Nidi": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Spider's Palace": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Requies Aeterna": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atsingani": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Cunfin": {
+            "place": 3,
+            "competed": "Y"
+          },
+          "Exspectatio": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atramentum Renatus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Scarem Montem": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Lapis Crudus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Eboris": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Semita Errabunda": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Sjórseiðr": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Arx Argentea": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Merces Aurea": {
+            "place": 1,
+            "competed": "Y"
+          },
+          "Carnac": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Bellum Iocari": {
+            "place": 2,
+            "competed": "Y"
+          },
+          "Turris Vigilans": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Umbra Silvae": {
+            "place": null,
+            "competed": "Y"
+          }
+        }
+      },
+      "Dimicatio": {
+        "scoring": {
+          "1": 23,
+          "2": 12,
+          "3-4": 6,
+          "participation": 1,
+          "desc": "Flambeau forceless-casting duel — dangerous."
+        },
+        "bracket": [
+          {
+            "match": 1,
+            "round": "Round of 24",
+            "a": "Oleron",
+            "b": "Atramentum Renatus",
+            "winner": "Oleron"
+          },
+          {
+            "match": 2,
+            "round": "Round of 24",
+            "a": "Fudarus",
+            "b": "Scarem Montem",
+            "winner": "Scarem Montem"
+          },
+          {
+            "match": 3,
+            "round": "Round of 24",
+            "a": "Confluensis",
+            "b": "Lapis Crudus",
+            "winner": "Confluensis"
+          },
+          {
+            "match": 4,
+            "round": "Round of 24",
+            "a": "Florum",
+            "b": "Eboris",
+            "winner": "Florum"
+          },
+          {
+            "match": 5,
+            "round": "Round of 24",
+            "a": "Montverte",
+            "b": "Semita Errabunda",
+            "winner": "Semita Errabunda"
+          },
+          {
+            "match": 6,
+            "round": "Round of 24",
+            "a": "Dragon's Rest",
+            "b": "Arx Argentea",
+            "winner": "Arx Argentea"
+          },
+          {
+            "match": 7,
+            "round": "Round of 24",
+            "a": "Nidi",
+            "b": "Merces Aurea",
+            "winner": "Nidi"
+          },
+          {
+            "match": 8,
+            "round": "Round of 24",
+            "a": "Spider's Palace",
+            "b": "Umbra Silvae",
+            "winner": "Spider's Palace"
+          },
+          {
+            "match": 9,
+            "round": "Round of 24",
+            "a": "Requies Aeterna",
+            "b": "Turris Vigilans",
+            "winner": "Turris Vigilans"
+          },
+          {
+            "match": 10,
+            "round": "Round of 24",
+            "a": "Atsingani",
+            "b": "Bellum Iocari",
+            "winner": "Atsingani"
+          },
+          {
+            "match": 11,
+            "round": "Round of 24",
+            "a": "Cunfin",
+            "b": "Carnac",
+            "winner": "Cunfin"
+          },
+          {
+            "match": 12,
+            "round": "Round of 24",
+            "a": "Exspectatio",
+            "b": "Sjórseiðr",
+            "winner": "Sjórseiðr"
+          },
+          {
+            "match": 13,
+            "round": "Later Rounds",
+            "a": "Oleron",
+            "b": "Scarem Montem",
+            "winner": "Oleron"
+          },
+          {
+            "match": 14,
+            "round": "Later Rounds",
+            "a": "Confluensis",
+            "b": "Florum",
+            "winner": "Florum"
+          },
+          {
+            "match": 15,
+            "round": "Later Rounds",
+            "a": "Semita Errabunda",
+            "b": "Arx Argentea",
+            "winner": "Arx Argentea"
+          },
+          {
+            "match": 16,
+            "round": "Later Rounds",
+            "a": "Nidi",
+            "b": "Spider's Palace",
+            "winner": "Nidi"
+          },
+          {
+            "match": 17,
+            "round": "Later Rounds",
+            "a": "Turris Vigilans",
+            "b": "Atsingani",
+            "winner": "Turris Vigilans"
+          },
+          {
+            "match": 18,
+            "round": "Later Rounds",
+            "a": "Cunfin",
+            "b": "Sjórseiðr",
+            "winner": "Sjórseiðr"
+          },
+          {
+            "match": 19,
+            "round": "Later Rounds",
+            "a": "Oleron",
+            "b": "Florum",
+            "winner": "Oleron"
+          },
+          {
+            "match": 20,
+            "round": "Later Rounds",
+            "a": "Arx Argentea",
+            "b": "Nidi",
+            "winner": "Nidi"
+          },
+          {
+            "match": 21,
+            "round": "Later Rounds",
+            "a": "Turris Vigilans",
+            "b": "Sjórseiðr",
+            "winner": "Sjórseiðr"
+          },
+          {
+            "match": 22,
+            "round": "Later Rounds",
+            "a": "Oleron",
+            "b": "Nidi",
+            "winner": "Oleron"
+          },
+          {
+            "match": 23,
+            "round": "Later Rounds",
+            "a": "Nidi",
+            "b": "Sjórseiðr",
+            "winner": ""
+          },
+          {
+            "match": 24,
+            "round": "Later Rounds",
+            "a": "Sjórseiðr",
+            "b": "Oleron",
+            "winner": ""
+          }
+        ],
+        "placement": {
+          "Fudarus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Confluensis": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Florum": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Montverte": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Oleron": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Dragon's Rest": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Nidi": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Spider's Palace": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Requies Aeterna": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atsingani": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Cunfin": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Exspectatio": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atramentum Renatus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Scarem Montem": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Lapis Crudus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Eboris": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Semita Errabunda": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Sjórseiðr": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Arx Argentea": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Merces Aurea": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Carnac": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Bellum Iocari": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Turris Vigilans": {
+            "place": 4,
+            "competed": "Y"
+          },
+          "Umbra Silvae": {
+            "place": null,
+            "competed": "Y"
+          }
+        }
+      },
+      "Hastiludium": {
+        "scoring": {
+          "1": 20,
+          "2": 10,
+          "3-4": 5,
+          "participation": 1,
+          "desc": "\"Mounted\" magical melee on improvised mounts."
+        },
+        "bracket": [
+          {
+            "match": 1,
+            "round": "Round of 24",
+            "a": "Confluensis",
+            "b": "Umbra Silvae",
+            "winner": "Umbra Silvae"
+          },
+          {
+            "match": 2,
+            "round": "Round of 24",
+            "a": "Fudarus",
+            "b": "Turris Vigilans",
+            "winner": "Fudarus"
+          },
+          {
+            "match": 3,
+            "round": "Round of 24",
+            "a": "Florum",
+            "b": "Bellum Iocari",
+            "winner": "Bellum Iocari"
+          },
+          {
+            "match": 4,
+            "round": "Round of 24",
+            "a": "Oleron",
+            "b": "Carnac",
+            "winner": "Carnac"
+          },
+          {
+            "match": 5,
+            "round": "Round of 24",
+            "a": "Montverte",
+            "b": "Sjórseiðr",
+            "winner": "Sjórseiðr"
+          },
+          {
+            "match": 6,
+            "round": "Round of 24",
+            "a": "Dragon's Rest",
+            "b": "Arx Argentea",
+            "winner": "Arx Argentea"
+          },
+          {
+            "match": 7,
+            "round": "Round of 24",
+            "a": "Nidi",
+            "b": "Semita Errabunda",
+            "winner": "Nidi"
+          },
+          {
+            "match": 8,
+            "round": "Round of 24",
+            "a": "Spider's Palace",
+            "b": "Eboris",
+            "winner": "Eboris"
+          },
+          {
+            "match": 9,
+            "round": "Round of 24",
+            "a": "Requies Aeterna",
+            "b": "Lapis Crudus",
+            "winner": "Lapis Crudus"
+          },
+          {
+            "match": 10,
+            "round": "Round of 24",
+            "a": "Atsingani",
+            "b": "Scarem Montem",
+            "winner": "Atsingani"
+          },
+          {
+            "match": 11,
+            "round": "Round of 24",
+            "a": "Cunfin",
+            "b": "Merces Aurea",
+            "winner": "Merces Aurea"
+          },
+          {
+            "match": 12,
+            "round": "Round of 24",
+            "a": "Exspectatio",
+            "b": "Atramentum Renatus",
+            "winner": "Exspectatio"
+          },
+          {
+            "match": 13,
+            "round": "Later Rounds",
+            "a": "Umbra Silvae",
+            "b": "Fudarus",
+            "winner": "Umbra Silvae"
+          },
+          {
+            "match": 14,
+            "round": "Later Rounds",
+            "a": "Bellum Iocari",
+            "b": "Carnac",
+            "winner": "Bellum Iocari"
+          },
+          {
+            "match": 15,
+            "round": "Later Rounds",
+            "a": "Sjórseiðr",
+            "b": "Arx Argentea",
+            "winner": "Sjórseiðr"
+          },
+          {
+            "match": 16,
+            "round": "Later Rounds",
+            "a": "Nidi",
+            "b": "Eboris",
+            "winner": "Eboris"
+          },
+          {
+            "match": 17,
+            "round": "Later Rounds",
+            "a": "Lapis Crudus",
+            "b": "Atsingani",
+            "winner": "Lapis Crudus"
+          },
+          {
+            "match": 18,
+            "round": "Later Rounds",
+            "a": "Merces Aurea",
+            "b": "Exspectatio",
+            "winner": "Merces Aurea"
+          },
+          {
+            "match": 19,
+            "round": "Later Rounds",
+            "a": "Umbra Silvae",
+            "b": "Bellum Iocari",
+            "winner": "Bellum Iocari"
+          },
+          {
+            "match": 20,
+            "round": "Later Rounds",
+            "a": "Sjórseiðr",
+            "b": "Eboris",
+            "winner": "Sjórseiðr"
+          },
+          {
+            "match": 21,
+            "round": "Later Rounds",
+            "a": "Lapis Crudus",
+            "b": "Merces Aurea",
+            "winner": "Lapis Crudus"
+          },
+          {
+            "match": 22,
+            "round": "Later Rounds",
+            "a": "Bellum Iocari",
+            "b": "Sjórseiðr",
+            "winner": ""
+          },
+          {
+            "match": 23,
+            "round": "Later Rounds",
+            "a": "Sjórseiðr",
+            "b": "Lapis Crudus",
+            "winner": ""
+          },
+          {
+            "match": 24,
+            "round": "Later Rounds",
+            "a": "Bellum Iocari",
+            "b": "Lapis Crudus",
+            "winner": "Lapis Crudus"
+          }
+        ],
+        "placement": {
+          "Fudarus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Confluensis": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Florum": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Montverte": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Oleron": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Dragon's Rest": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Nidi": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Spider's Palace": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Requies Aeterna": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atsingani": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Cunfin": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Exspectatio": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atramentum Renatus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Scarem Montem": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Lapis Crudus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Eboris": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Semita Errabunda": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Sjórseiðr": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Arx Argentea": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Merces Aurea": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Carnac": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Bellum Iocari": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Turris Vigilans": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Umbra Silvae": {
+            "place": 4,
+            "competed": "Y"
+          }
+        }
+      },
+      "Joust": {
+        "scoring": {
+          "1": 20,
+          "2": 8,
+          "3-4": 3,
+          "participation": 1,
+          "desc": "Mounted knightly charge, best of three."
+        },
+        "bracket": [
+          {
+            "match": 1,
+            "round": "Round of 24",
+            "a": "Dragon's Rest",
+            "b": "Scarem Montem",
+            "winner": "Scarem Montem"
+          },
+          {
+            "match": 2,
+            "round": "Round of 24",
+            "a": "Nidi",
+            "b": "Lapis Crudus",
+            "winner": "Nidi"
+          },
+          {
+            "match": 3,
+            "round": "Round of 24",
+            "a": "Spider's Palace",
+            "b": "Eboris",
+            "winner": "Spider's Palace"
+          },
+          {
+            "match": 4,
+            "round": "Round of 24",
+            "a": "Requies Aeterna",
+            "b": "Semita Errabunda",
+            "winner": "Semita Errabunda"
+          },
+          {
+            "match": 5,
+            "round": "Round of 24",
+            "a": "Fudarus",
+            "b": "Arx Argentea",
+            "winner": "Arx Argentea"
+          },
+          {
+            "match": 6,
+            "round": "Round of 24",
+            "a": "Confluensis",
+            "b": "Merces Aurea",
+            "winner": "Confluensis"
+          },
+          {
+            "match": 7,
+            "round": "Round of 24",
+            "a": "Florum",
+            "b": "Umbra Silvae",
+            "winner": "Umbra Silvae"
+          },
+          {
+            "match": 8,
+            "round": "Round of 24",
+            "a": "Montverte",
+            "b": "Turris Vigilans",
+            "winner": "Montverte"
+          },
+          {
+            "match": 9,
+            "round": "Round of 24",
+            "a": "Oleron",
+            "b": "Bellum Iocari",
+            "winner": "Oleron"
+          },
+          {
+            "match": 10,
+            "round": "Round of 24",
+            "a": "Atsingani",
+            "b": "Carnac",
+            "winner": "Atsingani"
+          },
+          {
+            "match": 11,
+            "round": "Round of 24",
+            "a": "Cunfin",
+            "b": "Sjórseiðr",
+            "winner": "Sjórseiðr"
+          },
+          {
+            "match": 12,
+            "round": "Round of 24",
+            "a": "Exspectatio",
+            "b": "Atramentum Renatus",
+            "winner": "Exspectatio"
+          },
+          {
+            "match": 13,
+            "round": "Later Rounds",
+            "a": "Scarem Montem",
+            "b": "Nidi",
+            "winner": "Scarem Montem"
+          },
+          {
+            "match": 14,
+            "round": "Later Rounds",
+            "a": "Spider's Palace",
+            "b": "Semita Errabunda",
+            "winner": "Semita Errabunda"
+          },
+          {
+            "match": 15,
+            "round": "Later Rounds",
+            "a": "Arx Argentea",
+            "b": "Confluensis",
+            "winner": "Arx Argentea"
+          },
+          {
+            "match": 16,
+            "round": "Later Rounds",
+            "a": "Umbra Silvae",
+            "b": "Montverte",
+            "winner": "Montverte"
+          },
+          {
+            "match": 17,
+            "round": "Later Rounds",
+            "a": "Oleron",
+            "b": "Atsingani",
+            "winner": "Oleron"
+          },
+          {
+            "match": 18,
+            "round": "Later Rounds",
+            "a": "Sjórseiðr",
+            "b": "Exspectatio",
+            "winner": "Sjórseiðr"
+          },
+          {
+            "match": 19,
+            "round": "Later Rounds",
+            "a": "Scarem Montem",
+            "b": "Semita Errabunda",
+            "winner": "Semita Errabunda"
+          },
+          {
+            "match": 20,
+            "round": "Later Rounds",
+            "a": "Arx Argentea",
+            "b": "Montverte",
+            "winner": "Montverte"
+          },
+          {
+            "match": 21,
+            "round": "Later Rounds",
+            "a": "Oleron",
+            "b": "Sjórseiðr",
+            "winner": ""
+          },
+          {
+            "match": 22,
+            "round": "Later Rounds",
+            "a": "Semita Errabunda",
+            "b": "Montverte",
+            "winner": "Montverte"
+          },
+          {
+            "match": 23,
+            "round": "Later Rounds",
+            "a": "Montverte",
+            "b": "",
+            "winner": ""
+          },
+          {
+            "match": 24,
+            "round": "Later Rounds",
+            "a": "",
+            "b": "Semita Errabunda",
+            "winner": ""
+          }
+        ],
+        "placement": {
+          "Fudarus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Confluensis": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Florum": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Montverte": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Oleron": {
+            "place": 4,
+            "competed": "Y"
+          },
+          "Dragon's Rest": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Nidi": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Spider's Palace": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Requies Aeterna": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atsingani": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Cunfin": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Exspectatio": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atramentum Renatus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Scarem Montem": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Lapis Crudus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Eboris": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Semita Errabunda": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Sjórseiðr": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Arx Argentea": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Merces Aurea": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Carnac": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Bellum Iocari": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Turris Vigilans": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Umbra Silvae": {
+            "place": null,
+            "competed": "Y"
+          }
+        }
+      },
+      "Melee": {
+        "scoring": {
+          "1": 6,
+          "2-4": 2,
+          "5": 1,
+          "desc": "Grogs & companions only, no magic; last castle standing."
+        },
+        "entries": {
+          "Fudarus": {
+            "champions": 20,
+            "standing": null
+          },
+          "Confluensis": {
+            "champions": 4,
+            "standing": 4
+          },
+          "Florum": {
+            "champions": 23,
+            "standing": null
+          },
+          "Montverte": {
+            "champions": 2,
+            "standing": 2
+          },
+          "Oleron": {
+            "champions": 6,
+            "standing": null
+          },
+          "Dragon's Rest": {
+            "champions": 13,
+            "standing": null
+          },
+          "Nidi": {
+            "champions": 15,
+            "standing": null
+          },
+          "Spider's Palace": {
+            "champions": 24,
+            "standing": null
+          },
+          "Requies Aeterna": {
+            "champions": 17,
+            "standing": null
+          },
+          "Atsingani": {
+            "champions": 8,
+            "standing": null
+          },
+          "Cunfin": {
+            "champions": 12,
+            "standing": null
+          },
+          "Exspectatio": {
+            "champions": 21,
+            "standing": null
+          },
+          "Atramentum Renatus": {
+            "champions": 10,
+            "standing": null
+          },
+          "Scarem Montem": {
+            "champions": 16,
+            "standing": null
+          },
+          "Lapis Crudus": {
+            "champions": 22,
+            "standing": null
+          },
+          "Eboris": {
+            "champions": 9,
+            "standing": null
+          },
+          "Semita Errabunda": {
+            "champions": 3,
+            "standing": 3
+          },
+          "Sjórseiðr": {
+            "champions": 1,
+            "standing": 1
+          },
+          "Arx Argentea": {
+            "champions": 7,
+            "standing": null
+          },
+          "Merces Aurea": {
+            "champions": 14,
+            "standing": null
+          },
+          "Carnac": {
+            "champions": 11,
+            "standing": null
+          },
+          "Bellum Iocari": {
+            "champions": 18,
+            "standing": null
+          },
+          "Turris Vigilans": {
+            "champions": 19,
+            "standing": null
+          },
+          "Umbra Silvae": {
+            "champions": 5,
+            "standing": 5
+          }
+        }
+      },
+      "Norman Conquest": {
+        "scoring": {
+          "1": 12,
+          "2": 8,
+          "3-4": 3,
+          "participation": 1,
+          "desc": "Montverte's Host's Choice — staged event."
+        },
+        "stage2": [
+          {
+            "team": "Atramentum Renatus",
+            "points": 2
+          },
+          {
+            "team": "Scarem Montem",
+            "points": 10
+          },
+          {
+            "team": "Montverte",
+            "points": 3
+          },
+          {
+            "team": "Eboris",
+            "points": 5
+          },
+          {
+            "team": "Semita Errabunda",
+            "points": 8
+          },
+          {
+            "team": "Requies Aeterna",
+            "points": 7
+          },
+          {
+            "team": "Turris Vigilans",
+            "points": 3
+          },
+          {
+            "team": "Umbra Silvae",
+            "points": 4
+          },
+          {
+            "team": "Lapis Crudus",
+            "points": 2
+          },
+          {
+            "team": "Nidi",
+            "points": 7
+          }
+        ],
+        "placement": {
+          "Fudarus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Confluensis": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Florum": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Montverte": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Oleron": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Dragon's Rest": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Nidi": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Spider's Palace": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Requies Aeterna": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atsingani": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Cunfin": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Exspectatio": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Atramentum Renatus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Scarem Montem": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Lapis Crudus": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Eboris": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Semita Errabunda": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Sjórseiðr": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Arx Argentea": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Merces Aurea": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Carnac": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Bellum Iocari": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Turris Vigilans": {
+            "place": null,
+            "competed": "Y"
+          },
+          "Umbra Silvae": {
+            "place": null,
+            "competed": "Y"
+          }
+        },
+        "cancelled": true
+      }
+    },
+    "prize_ranks": [
+      {
+        "rank": 1,
+        "seat": "Siege of Normandy",
+        "pawns": 31
+      },
+      {
+        "rank": 2,
+        "seat": "Siege of Valor",
+        "pawns": 24
+      },
+      {
+        "rank": 3,
+        "seat": "",
+        "pawns": 18
+      },
+      {
+        "rank": 4,
+        "seat": "",
+        "pawns": 15
+      },
+      {
+        "rank": 5,
+        "seat": "",
+        "pawns": 13
+      },
+      {
+        "rank": 6,
+        "seat": "",
+        "pawns": 11
+      },
+      {
+        "rank": 7,
+        "seat": "Siege of Notatus",
+        "pawns": 17
+      },
+      {
+        "rank": 8,
+        "seat": "",
+        "pawns": 8
+      },
+      {
+        "rank": 9,
+        "seat": "",
+        "pawns": 7
+      },
+      {
+        "rank": 10,
+        "seat": "",
+        "pawns": 6
+      },
+      {
+        "rank": 11,
+        "seat": "",
+        "pawns": 6
+      },
+      {
+        "rank": 12,
+        "seat": "",
+        "pawns": 5
+      },
+      {
+        "rank": 13,
+        "seat": "Siege of Shame",
+        "pawns": 0
+      },
+      {
+        "rank": 14,
+        "seat": "",
+        "pawns": 11
+      },
+      {
+        "rank": 15,
+        "seat": "",
+        "pawns": 3
+      },
+      {
+        "rank": 16,
+        "seat": "",
+        "pawns": 5
+      },
+      {
+        "rank": 17,
+        "seat": "",
+        "pawns": 4
+      },
+      {
+        "rank": 18,
+        "seat": "",
+        "pawns": 3
+      },
+      {
+        "rank": 19,
+        "seat": "",
+        "pawns": 5
+      },
+      {
+        "rank": 20,
+        "seat": "",
+        "pawns": 1
+      },
+      {
+        "rank": 21,
+        "seat": "Siege of Alms (6+6)",
+        "pawns": 12
+      },
+      {
+        "rank": 22,
+        "seat": "",
+        "pawns": 0
+      },
+      {
+        "rank": 23,
+        "seat": "",
+        "pawns": 0
+      },
+      {
+        "rank": 24,
+        "seat": "",
+        "pawns": 0
+      }
+    ]
+  }
+}
