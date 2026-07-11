@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sjórseiðr — Covenant Archive</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturCook:wght@700&display=swap');
+
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86;
+  --purple:#5b3a8a; --green:#3e6b35;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;
+  min-height:100vh;
+  padding:56px 20px 80px;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(120,80,30,.06) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(90,60,20,.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 50% 85%, rgba(120,80,30,.05) 0 2px, transparent 3px);
+  background-size:140px 140px,180px 180px,160px 160px;opacity:.6;mix-blend-mode:multiply;
+}
+.wrap{position:relative;z-index:1;max-width:880px;margin:0 auto}
+
+header{text-align:center;margin-bottom:48px}
+.crest{font-family:'UnifrakturCook','Cinzel',serif;font-size:clamp(40px,8vw,64px);color:var(--rust);
+  text-shadow:0 2px 0 rgba(255,255,255,.35), 0 1px 12px var(--shadow);margin:0 0 6px;letter-spacing:1px}
+.subtitle{font-family:'Cinzel',serif;font-weight:500;letter-spacing:3px;text-transform:uppercase;
+  font-size:13px;color:var(--ink-soft);margin:0 0 18px}
+.blurb{max-width:560px;margin:0 auto;font-size:17px;line-height:1.6;color:var(--ink-soft);font-style:italic}
+
+.divider{display:flex;align-items:center;gap:14px;margin:34px auto 34px;max-width:420px}
+.divider::before,.divider::after{content:"";flex:1;height:1px;
+  background:linear-gradient(90deg,transparent,var(--line),transparent)}
+.divider span{font-size:18px;color:var(--gold);opacity:.8}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+
+a.card{
+  display:block;position:relative;text-decoration:none;color:inherit;
+  background:linear-gradient(180deg,var(--parch) 0%,var(--parch-deep) 100%);
+  border:1px solid var(--line);border-radius:6px;
+  padding:22px 24px 20px;
+  box-shadow:0 1px 0 rgba(255,255,255,.4) inset, 0 10px 24px -14px var(--shadow);
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+a.card:hover{
+  transform:translateY(-3px);
+  border-color:var(--gold);
+  box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 16px 30px -14px var(--shadow);
+}
+a.card::before{
+  content:"";position:absolute;inset:5px;border:1px solid rgba(106,84,54,.35);border-radius:3px;
+  pointer-events:none;
+}
+.card-icon{font-size:28px;line-height:1;margin-bottom:10px;display:block}
+.card-title{font-family:'Cinzel',serif;font-weight:600;font-size:18px;color:var(--rust-bright);
+  margin:0 0 8px;letter-spacing:.3px}
+.card-desc{font-size:15px;line-height:1.5;color:var(--ink-soft);margin:0}
+.card-tag{display:inline-block;margin-top:12px;font-family:'Cinzel',serif;font-size:11px;
+  letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.85}
+
+footer{text-align:center;margin-top:56px;font-size:13px;color:var(--ink-soft);opacity:.75}
+footer a{color:var(--teal-bright)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <p class="crest">Sjórseiðr</p>
+    <p class="subtitle">A ship-based Covenant of the North Sea</p>
+    <p class="blurb">The covenant archive — chronicle, tribunal records, and reference
+      library for the Normandy Tribunal of A.D. 1223.</p>
+  </header>
+
+  <div class="divider"><span>⚓</span></div>
+
+  <div class="grid">
+
+    <a class="card" href="sjorseidr_chronicle.html">
+      <span class="card-icon">📖</span>
+      <p class="card-title">Chronicle of Events</p>
+      <p class="card-desc">The covenant's full story timeline — verified history and
+        proposed drafts awaiting review, season by season.</p>
+      <span class="card-tag">Chronicle</span>
+    </a>
+
+    <a class="card" href="normandy_tribunal_1223.html">
+      <span class="card-icon">🗺️</span>
+      <p class="card-title">The Normandy Tribunal — 1223</p>
+      <p class="card-desc">Interactive map of the Tribunal's covenants, with a
+        toggle between covenant profiles and the tournament standings.</p>
+      <span class="card-tag">Map &amp; Standings</span>
+    </a>
+
+    <a class="card" href="tribunal_workbook.html">
+      <span class="card-icon">📊</span>
+      <p class="card-title">Tribunal Workbook — 1223</p>
+      <p class="card-desc">Editable scoring workbook — vis sources, library prizes,
+        and tournament brackets, loaded live from the data file.</p>
+      <span class="card-tag">Workbook</span>
+    </a>
+
+    <a class="card" href="normandy_tribunal_reference.html">
+      <span class="card-icon">🕯️</span>
+      <p class="card-title">Vis Sources &amp; Library</p>
+      <p class="card-desc">Reference catalogue of the Tribunal's known vis sources
+        and library holdings.</p>
+      <span class="card-tag">Reference</span>
+    </a>
+
+  </div>
+
+  <footer>
+    Compiled A.D. 1223 · <a href="https://github.com/sortilege-inc/sjorseidr">sortilege-inc/sjorseidr</a>
+  </footer>
+
+</div>
+</body>
+</html>
