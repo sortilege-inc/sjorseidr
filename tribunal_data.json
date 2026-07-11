@@ -56,8 +56,8 @@
       "art": "Aquam",
       "name": "Mont-Saint-Michel Tide Pools",
       "yield": "5 pawns /year",
-      "status": "Available",
-      "notes": "Spring tide crystallization — salt crystals that form in the tide pools at the base of the mount during the great spring tides."
+      "status": "Claimed — Sjórseiðr",
+      "notes": "Spring tide crystallization — salt crystals that form in the tide pools at the base of the mount during the great spring tides. Claimed by Sjórseiðr as the covenant's first prize pick, Tribunal 1223."
     },
     {
       "id": "v007",
@@ -450,7 +450,8 @@
         "Terram",
         "Lvl 17 · Q 14"
       ],
-      "bp": "31 BP"
+      "bp": "31 BP",
+      "claimed_by": "Sjórseiðr (tribunal prize, 1223 — first library pick)"
     },
     {
       "id": "b009",
@@ -590,7 +591,8 @@
         "Penetration",
         "Lvl 5 · Q 8"
       ],
-      "bp": "23 BP"
+      "bp": "23 BP",
+      "claimed_by": "Sjórseiðr (tribunal prize, 1223 — second library pick)"
     },
     {
       "id": "b019",
@@ -1299,7 +1301,7 @@
             "competed": "Y"
           },
           "Sjórseiðr": {
-            "place": null,
+            "place": 2,
             "competed": "Y"
           },
           "Arx Argentea": {
@@ -1564,7 +1566,7 @@
             "competed": "Y"
           },
           "Lapis Crudus": {
-            "place": null,
+            "place": 2,
             "competed": "Y"
           },
           "Eboris": {
@@ -1576,7 +1578,7 @@
             "competed": "Y"
           },
           "Sjórseiðr": {
-            "place": null,
+            "place": 1,
             "competed": "Y"
           },
           "Arx Argentea": {
@@ -1797,7 +1799,7 @@
             "competed": "Y"
           },
           "Montverte": {
-            "place": null,
+            "place": 1,
             "competed": "Y"
           },
           "Oleron": {
@@ -1853,7 +1855,7 @@
             "competed": "Y"
           },
           "Sjórseiðr": {
-            "place": null,
+            "place": 2,
             "competed": "Y"
           },
           "Arx Argentea": {
@@ -2143,22 +2145,26 @@
       {
         "rank": 1,
         "seat": "Siege of Normandy",
-        "pawns": 31
+        "pawns": 31,
+        "covenant": "Sjórseiðr"
       },
       {
         "rank": 2,
         "seat": "Siege of Valor",
-        "pawns": 24
+        "pawns": 24,
+        "covenant": "Oleron"
       },
       {
         "rank": 3,
         "seat": "",
-        "pawns": 18
+        "pawns": 18,
+        "covenant": "Merces Aurea"
       },
       {
         "rank": 4,
         "seat": "",
-        "pawns": 15
+        "pawns": 15,
+        "covenant": "Montverte"
       },
       {
         "rank": 5,
@@ -2173,7 +2179,8 @@
       {
         "rank": 7,
         "seat": "Siege of Notatus",
-        "pawns": 17
+        "pawns": 17,
+        "covenant": "Fudarus"
       },
       {
         "rank": 8,
@@ -2203,7 +2210,8 @@
       {
         "rank": 13,
         "seat": "Siege of Shame",
-        "pawns": 0
+        "pawns": 0,
+        "covenant": "Confluensis"
       },
       {
         "rank": 14,
@@ -2243,7 +2251,8 @@
       {
         "rank": 21,
         "seat": "Siege of Alms (6+6)",
-        "pawns": 12
+        "pawns": 12,
+        "covenant": "Florum"
       },
       {
         "rank": 22,
