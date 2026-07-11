@@ -1,0 +1,126 @@
+{
+  "meta": {
+    "title": "Fleet & Crew Roster",
+    "schema_version": 1
+  },
+  "ships": [
+    {
+      "id": "tide-of-memory",
+      "name": "Tide of Memory",
+      "owner": "Dagmar",
+      "status": "Active",
+      "description": "Originally covenant founder Solving Epicurusson's ship; inherited by Dagmar after Solving vanished into Twilight (1220). Carries Solving's summoning bell and astrolabe, and the covenant's magical Master Chart, which tracks the whole fleet's positions. The covenant's mobile library is also housed aboard."
+    },
+    {
+      "id": "brineborn",
+      "name": "Brineborn",
+      "owner": "Éogan Dobhartha",
+      "status": "Active",
+      "description": "Éogan's ship. The regular home for grogs Garrett and Drest, and — as of Fall 1223 — the vessel carrying the party's Ireland expedition."
+    },
+    {
+      "id": "adamant",
+      "name": "Adamant",
+      "owner": "Valerian de Castellane",
+      "status": "Active",
+      "description": "Valerian's ship. Very likely the fleet's fifth hull, commissioned at Bergen in 1220 and given to Valerian on his arrival in 1222 — though the name \"Adamant\" itself isn't attached in-text until Fall 1223 (see open question q013b)."
+    },
+    {
+      "id": "storm-dragon",
+      "name": "Storm Dragon",
+      "owner": "Valdemar Bjornsson",
+      "status": "Active",
+      "description": "Valdemar's personal Viking drakar — distinct from the main covenant fleet, used mainly for river/inland transit (e.g. up the Sarthe to Le Mans in Summer 1223)."
+    },
+    {
+      "id": "scholars-wake",
+      "name": "The Scholar's Wake",
+      "owner": "Dustin Page / covenant trade",
+      "status": "Uncertain",
+      "description": "The covenant's trade vessel in the early chronicle (recruited Stijntje aboard in 1220; Valerian's belongings teleported onto its deck in 1222), worked with merchant-agent Heynric Baert. Doesn't appear again in the record after Spring 1222 — unclear whether it's still active, still named, or has simply folded into generic \"the fleet\" references. See open question q013d."
+    },
+    {
+      "id": "maelstroms-maw",
+      "name": "Maelstrom's Maw",
+      "owner": "formerly Nequam of Tytalus, then Kor Ex Flambeau",
+      "status": "Lost / missing",
+      "description": "Nequam's ship, handed to Kor Ex Flambeau in Summer 1220. Survived a sky-ship crash during a meteor storm (Winter 1220-21) but, per \"Debates about Valerian, new Tribunal, Chests, etc\" (Winter 1221-22): \"His ship did not come in, and the Master's Chart no longer tracks it.\" Neither Nequam nor Kor remain in the covenant's active roster — this is the last confirmed sighting of either. See open question q013."
+    },
+    {
+      "id": "hound-of-cassel",
+      "name": "Hound of Cassel",
+      "owner": "captured prize, disposition undecided",
+      "status": "Fate unknown",
+      "description": "A rival covenant's trade vessel, raided by Valdemar's crew in Summer 1221 — yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. The party debated keeping it as a prize versus selling it quietly at a \"shadow port\"; no later event confirms what actually happened to it. Possibly relevant to the still-unidentified ship \"pirated from Scarem Montem\" (open question q001) if it was never sold off after all."
+    }
+  ],
+
+  "characters": {
+    "Dagmar": {"role": "Magus (Criamon)", "affiliation": "Sjórseiðr", "note": "De facto covenant leader. Inherited the Tide of Memory from his vanished parens, Solving."},
+    "Dustin Page": {"role": "Magus (Bonisagus)", "affiliation": "Sjórseiðr", "note": "Trade-minded; teaching apprentice Stijntje."},
+    "Éogan Dobhartha": {"role": "Magus (Ex Miscellanea)", "affiliation": "Sjórseiðr", "note": "From Connacht, Hibernia; a hostage-exchange hedge-magic background. Captains the Brineborn."},
+    "Valdemar Bjornsson": {"role": "Magus (Diedne)", "affiliation": "Sjórseiðr", "note": "Skyclad Viking war-magus; centuries-old survivor of a regio. Married to Rán. Owns the Storm Dragon."},
+    "Wilhelm Stienauer": {"role": "Magus (Bonisagus), guest", "affiliation": "Rhine Tribunal (Durenmar) — not yet a Sjórseiðr member", "note": "Folk-magic thesis researcher; his stolen Latin thesis copy is held by Scarem Montem."},
+    "Valerian de Castellane": {"role": "Magus (House Guernicus, Quaesitor)", "affiliation": "Sjórseiðr (uneasy ally)", "note": "Rescued from imprisonment by the Duke of Brabant; politically dangerous, runs unilateral side-deals. Captains the Adamant."},
+    "Rán": {"role": "Companion", "affiliation": "Valdemar's wife", "note": "A deep-sea Drifter (fae); passes among Hermetic society with a Presence+Guile stress die."},
+    "Stijntje Kuiper": {"role": "Apprentice", "affiliation": "Dustin Page's apprentice", "note": "Recruited aboard the Scholar's Wake, 1220. Ran away from a noble household."},
+    "Rosie": {"role": "Companion", "affiliation": "Covenant familiar/mascot (magical pig)", "note": "Travels with the party generally, not tied to one ship."},
+    "Hilda": {"role": "Companion", "affiliation": "Wilhelm Stienauer's scribe/assistant", "note": "Organizational spine of Wilhelm's thesis-review process."},
+    "Karl": {"role": "Companion", "affiliation": "Wilhelm Stienauer's research assistant", "note": "One of two field researchers who study folk practitioners in situ."},
+    "Dietrich": {"role": "NPC, mundane", "affiliation": "Wilhelm Stienauer's brother", "note": "Professor of medicine and philosophy at a Cologne cathedral school; a gifted rhetorician defending the folk-magic thesis."},
+    "Garrett": {"role": "Grog", "affiliation": "Brineborn", "note": "Combat grog; also fought in the Hound of Cassel raid and the grog melee."},
+    "Drest": {"role": "Grog", "affiliation": "Brineborn", "note": "Combat/distraction grog; tackled opposing melee defenders at the Tribunal."},
+    "Angus McPherson": {"role": "Grog", "affiliation": "Sjórseiðr (unspecified ship)", "note": "\"Completely legitimate sailor\"; home-circle defender in the Tribunal grog melee."},
+    "Adam Smith": {"role": "Grog / companion", "affiliation": "Scholar's Wake, later Stijntje's protector", "note": "Taught Stijntje knots and rigging."},
+    "Father Lachlan": {"role": "Companion, priest", "affiliation": "Maelstrom's Maw (historically), general covenant companion", "note": "Cheerful and curious; has taken to life among magi with unusual ease."},
+    "Ka'wa'ill": {"role": "Companion, merfolk", "affiliation": "Recruited via the Brineborn", "note": "Also rode with Valdemar's piracy raid."}
+  },
+
+  "snapshots": [
+    {
+      "id": "s1223-summer-tribunal",
+      "label": "Summer 1223 — sailing for the Tribunal",
+      "sort_iso": "1223-06-01T00:00",
+      "note": "The Storm Dragon carried the party inland from the coast up the Sarthe to Le Mans; grogs Garrett and Drest (regularly Brineborn crew) traveled as part of the general Tribunal expedition.",
+      "assignments": [
+        {
+          "ship": "storm-dragon",
+          "crew": ["Dagmar", "Éogan Dobhartha", "Dustin Page", "Valdemar Bjornsson", "Valerian de Castellane", "Stijntje Kuiper", "Rán", "Adam Smith", "Garrett", "Drest"]
+        },
+        {
+          "ship": "brineborn",
+          "crew": [],
+          "note": "Home ship for Garrett/Drest between legs; not separately crewed for this river transit."
+        }
+      ]
+    },
+    {
+      "id": "s1223-fall-split",
+      "label": "Fall 1223 — the post-Tribunal split",
+      "sort_iso": "1223-10-01T00:00",
+      "note": "After the Tribunal's close, the covenant split three ways: north to Dragon's Rest/Scarem Montem/Ireland, a rendezvous run to Dragon's Rest, and Dagmar's solo winter at Oleron.",
+      "assignments": [
+        {
+          "ship": "brineborn",
+          "crew": ["Éogan Dobhartha", "Wilhelm Stienauer", "Dustin Page", "Stijntje Kuiper", "Hilda"],
+          "note": "Plus one of Wilhelm's two research assistants (Karl or the unnamed one — not specified which). Route: Dragon's Rest → Scarem Montem (recovering Wilhelm's stolen thesis) → Ireland. Dustin/Stijntje's presence on this specific hull is a reasonable assumption, not explicitly restated (see open question q013d)."
+        },
+        {
+          "ship": "adamant",
+          "crew": ["Valerian de Castellane", "Dietrich"],
+          "note": "Plus Wilhelm's other research assistant (whichever one didn't travel on the Brineborn) toward a rendezvous at Dragon's Rest."
+        },
+        {
+          "ship": "tide-of-memory",
+          "crew": ["Dagmar"],
+          "note": "Sails to Oleron, where Dagmar winters in person; the ship returns for him in spring 1224."
+        },
+        {
+          "ship": "storm-dragon",
+          "crew": ["Valdemar Bjornsson"],
+          "note": "No explicit travel plan recorded for Valdemar this leg — presumed to remain with his own ship."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "meta": {
+    "title": "Open Questions for the Storyteller",
+    "schema_version": 1
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "category": "Plot Thread",
+      "question": "Which ship, exactly, was pirated from Scarem Montem?",
+      "context": "While planning Wilhelm's 1224 return trip, the table half-remembered that one of the covenant's own ships was originally taken from Scarem Montem — but didn't pin down which one, or the circumstances. Two candidates surface elsewhere in the chronicle but neither is confirmed: the Maelstrom's Maw (its original acquisition by Nequam is never described) and the Hound of Cassel (a raided prize ship from an unnamed rival covenant, not stated to be Scarem Montem's).",
+      "raised_in": "Session 7 (2026-06-20)",
+      "raised_event": "An old wrinkle resurfaces: one of the covenant's ships was pirated from Scarem Montem",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q002",
+      "category": "Plot Thread",
+      "question": "Ship-for-book swap with Scarem Montem, or treat the ship as already \"fair's fair\"?",
+      "context": "Two framings floated and left unresolved: offer to return the pirated ship in exchange for Wilhelm's stolen Latin thesis copy, or just quietly keep both since the theft already balances the ledger.",
+      "raised_in": "Session 7 (2026-06-20)",
+      "raised_event": "An old wrinkle resurfaces: one of the covenant's ships was pirated from Scarem Montem",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q003",
+      "category": "Tribunal / Prizes",
+      "question": "What are the remaining ~20 prize pawns actually being spent on?",
+      "context": "Only the first three picks (Mont-Saint-Michel tide pools, the Terram summa \"De Lapii\", Subtle Knives) are locked in. The GM's notes on the rest of the prize list were incomplete as of session 7 and still need a second pass.",
+      "raised_in": "Session 7 (2026-06-20)",
+      "raised_event": "Looking to 1224: back to Scarem Montem, and a still-unfinished prize list",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q004",
+      "category": "Covenant Business",
+      "question": "Who staffs which vis-harvesting season now that the resource list has grown?",
+      "context": "Explicitly deferred at the table as \"too much to think about right now.\" With a much larger prize/resource footprint post-Tribunal, the covenant needs a real delegation plan.",
+      "raised_in": "Session 7 (2026-06-20)",
+      "raised_event": "Looking to 1224: back to Scarem Montem, and a still-unfinished prize list",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q005",
+      "category": "Timeline / Continuity",
+      "question": "What was Valerian's interrogation of Wilhelm actually concurrent with?",
+      "context": "The event's date field still reads \"during Dagmar's dimicatio semifinal,\" but the GM-corrected Day-4 chronological order now places it after both the dimicatio semifinal AND the dimicatio final. Either the concurrency detail needs updating, or the event's position does.",
+      "raised_in": "Flagged during Day-4 reorder review (2026-07-11)",
+      "raised_event": "Valerian interrogates Wilhelm about the Brabant/Church conspiracy",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q006",
+      "category": "NPC / Identity",
+      "question": "Who was Dagmar's first Dimicatio-final opponent, really?",
+      "context": "Recording has his name as something close to \"Quaerus\" — a Tytalus magus, first of two opponents in the final (the second was Karis ex Criamon, representing Oleron).",
+      "raised_in": "Session 6 (2026-05-23)",
+      "raised_event": "Dagmar's dimicatio final — a clean win, then a mirror-match loss to Karis of Oleron",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q007",
+      "category": "NPC / Identity",
+      "question": "Who exactly was on Lapis Crudus's Hastiludium-final roster?",
+      "context": "A \"premier\" Flambeau plus Tremere/Flambeau support, roster uncertain even to the GM in the moment. Worth nailing down if Lapis Crudus recurs.",
+      "raised_in": "Session 6 (2026-05-23)",
+      "raised_event": "Hastiludium final vs. Lapis Crudus — first place",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q008",
+      "category": "World Detail",
+      "question": "Is \"Siege of Notatus\" the real name of the 7th-place honor, or a mis-transcription?",
+      "context": "Confirmed only against the tribunal workbook's prize-rank table (which itself may have been typed from the same unclear audio) — not independently verified against the session recording.",
+      "raised_in": "Session 6 (2026-05-23)",
+      "raised_event": "Tribunal final standings: Sjórseiðr takes first overall, Confluensis takes the \"Siege of Shame\"",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q009",
+      "category": "Research",
+      "question": "What closes the gap in Wilhelm's thesis — a hedge tradition for sea-current-finding or storm prediction?",
+      "context": "Dowsing-for-fresh-water is confirmed as a hedge tradition; open-ocean current-finding or weather prediction is the thesis's weakest citation and the whole reason for the Ireland trip.",
+      "raised_in": "Session 6 (2026-05-23)",
+      "raised_event": "Wilhelm pitches Éogan on hedge-magic sea/weather traditions for the thesis",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q010",
+      "category": "Plot Thread",
+      "question": "Does Éogan ever tell the rest of the covenant about Bridget of Scarem Montem's Lotharingian pitch?",
+      "context": "Bridget (House Tremere) offered to hold Éogan's Tourney winnings outside Normandy's recall jurisdiction, as part of a broader Lotharingian-secession pitch. As of the Tribunal, Éogan had kept this to himself.",
+      "raised_in": "Session 2 (2026-02-21)",
+      "raised_event": "Bridget of Scarem Montem's Lotharingian pitch",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q011",
+      "category": "Plot Thread",
+      "question": "Does Dagmar ever surface what he saw of Valerian's unilateral contraband trade?",
+      "context": "Dagmar caught Valerian trading Rhine-Tribunal-contraband books with an unidentified Montverte magus and quietly walked away without confronting him or reporting it. A second, untrusted axis through the Montverte relationship that's never been addressed.",
+      "raised_in": "Session 2 (2026-02-21)",
+      "raised_event": "Dagmar spots Valerian trading contraband",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q012",
+      "category": "Covenant Business",
+      "question": "What happens to the three magically-sealed chests taken from the Hound of Cassel?",
+      "context": "Legal status is a deliberately fuzzy area; the covenant decided to hold them \"for now,\" prepared to return them if Scarem Montem comes asking. Never revisited since.",
+      "raised_in": "Earlier session (pre-Tribunal)",
+      "raised_event": "Debates about Valerian, new Tribunal, Chests, etc",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q013",
+      "category": "World Detail",
+      "question": "What's the current status of the Maelstrom's Maw?",
+      "context": "Originally Nequam of Tytalus's ship, handed off to Kor Ex Flambeau in Summer 1220. Per \"Debates about Valerian, new Tribunal, Chests, etc\" (Winter 1221-22): \"Kor's Absence: His ship did not come in, and the Master's Chart no longer tracks it.\" Neither Nequam nor Kor appear in the covenant's current active-magi roster — this reads as the last confirmed sighting of both the magus and the ship, with nothing since reactivating either. Lost, or just gone quiet?",
+      "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
+      "raised_event": "The handoff of the Maelstrom's Maw",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q013b",
+      "category": "World Detail",
+      "question": "Is the \"Adamant\" the same ship as the fleet's fifth hull, commissioned at Bergen and given to Valerian?",
+      "context": "\"Sorting through Solving's letters...\" (Spring 1220) has a shipwright's letter announcing the fifth and final ship of the fleet is complete at Bergen. \"Valerian's Arrival\" (Spring 1222) has Valerian \"given the newly purchased fifth ship and skeleton crew.\" The name \"Adamant\" only appears later, in the Fall 1223 travel-planning material — the identification is a strong inference from the timeline, not something stated outright anywhere in-text.",
+      "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
+      "raised_event": "Valerian's Arrival",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q013c",
+      "category": "World Detail",
+      "question": "What happened to the Hound of Cassel — the ship captured in the Summer 1221 piracy raid?",
+      "context": "Raided from an unnamed rival sea-trading covenant by Valdemar's crew; yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. Text has the party debating \"keep as prize or sink,\" leaning toward \"find a shadow port for sale\" — but no later event confirms whether it was sold, kept, or renamed. Possibly relevant to q001 (the ship pirated from Scarem Montem) if it was never actually sold off.",
+      "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
+      "raised_event": "Summer piracy",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q013d",
+      "category": "World Detail",
+      "question": "Is \"The Scholar's Wake\" still an active covenant ship, and which hull does Stijntje/Dustin actually sail on to Ireland?",
+      "context": "The Scholar's Wake (Stijntje's original recruiting ship, Spring 1220; also where Valerian's belongings teleported in on his arrival, Spring 1222) doesn't appear again in the text after that — unclear if it's still active in 1223 or has been folded into general \"the fleet\" references. Relatedly: the Fall 1223 travel plan names only the Brineborn (Éogan, Wilhelm, Hilda, one assistant) and the Adamant (Valerian, Dietrich, two assistants); a later addendum has Dustin opting in and bringing Stijntje, without re-stating which hull they board. Brineborn is the reasonable assumption but isn't textually explicit.",
+      "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
+      "raised_event": "Ireland travel plan finalized: Dublin, the coast, and wintering near Carrick",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q013e",
+      "category": "NPC / Identity",
+      "question": "Does Captain Absalom actually captain the Maelstrom's Maw, or a separate ship trading with it?",
+      "context": "\"Trade / Trading vis / A Hamlet to Work In\" (Summer 1221) has Kor sending \"Captain Absalom off to trade with the Maelstrom's Maw\" — grammatically ambiguous between Absalom captaining a different vessel that trades WITH the Maelstrom's Maw, or a garbled reference to Absalom captaining the Maelstrom's Maw itself.",
+      "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
+      "raised_event": "Trade / Trading vis / A Hamlet to Work In",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q014",
+      "category": "Plot Thread",
+      "question": "Does Hervé of Turris Vigilans's mutual-defense pact ever get formally invoked?",
+      "context": "Valdemar accepted the blue sash (the signal of accord) but never wore it publicly. His joust \"win\" over Hervé was unintentional (Rosie's squeal spooked Hervé's mount) — does Hervé believe that, and does the pact still stand?",
+      "raised_in": "Session 5 (2026-05-09)",
+      "raised_event": "Hervé of Turris Vigilans's mutual-defense pact for Valdemar",
+      "status": "Open",
+      "answer": ""
+    },
+    {
+      "id": "q015",
+      "category": "Character",
+      "question": "What are Wilhelm's remaining Virtues and Flaws?",
+      "context": "Sheet as introduced only firmly lists Minor Magical Focus; two further Virtues (and a full Flaws list) are still marked TBD.",
+      "raised_in": "Session 4 (2026-04-04)",
+      "raised_event": "Wilhelm Stienauer ex Bonisagus arrives",
+      "status": "Open",
+      "answer": ""
+    }
+  ]
+}

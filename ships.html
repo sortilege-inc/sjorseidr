@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sjórseiðr — Fleet &amp; Crew</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturCook:wght@700&display=swap');
+
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86;
+  --purple:#5b3a8a; --green:#3e6b35;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;
+  min-height:100vh;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(120,80,30,.06) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(90,60,20,.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 50% 85%, rgba(120,80,30,.05) 0 2px, transparent 3px);
+  background-size:140px 140px,180px 180px,160px 160px;opacity:.6;mix-blend-mode:multiply;
+}
+.wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:32px 20px 80px;
+  transition:margin-right .2s ease}
+.wrap.sidebar-open{margin-right:min(320px,90vw)}
+a{color:var(--teal-bright)}
+
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+  border-bottom:2px solid var(--line);padding-bottom:16px;margin-bottom:22px}
+.crumb{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--rust-bright);margin:4px 0 2px}
+.subtitle{font-style:italic;color:var(--ink-soft);font-size:14.5px;margin:0}
+
+.tabs{display:flex;gap:4px;margin-bottom:18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tab{font-family:'Cinzel',serif;font-size:12.5px;letter-spacing:.03em;padding:9px 16px;cursor:pointer;
+  color:var(--ink-soft);border-bottom:3px solid transparent;transition:color .12s,border-color .12s}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--rust-bright);border-color:var(--rust-bright);font-weight:600}
+
+.snap-note{font-style:italic;color:var(--ink-soft);font-size:14px;margin:0 0 18px;
+  padding:10px 14px;background:rgba(120,90,40,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0}
+
+.ship-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.ship-card{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);
+  border:1.5px solid rgba(120,90,40,.45);border-radius:10px;padding:14px 16px 15px;
+  box-shadow:0 2px 6px var(--shadow)}
+.ship-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:4px}
+.ship-name{font-family:'Cinzel',serif;font-weight:600;font-size:16.5px;color:var(--ink)}
+.ship-owner{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin:0 0 8px}
+.ship-status{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.04em;text-transform:uppercase;
+  padding:2px 8px;border-radius:9px;white-space:nowrap;flex:none}
+.ship-status.active{background:rgba(62,107,53,.16);color:var(--green);border:1px solid rgba(62,107,53,.4)}
+.ship-status.lost,.ship-status.fate-unknown{background:rgba(138,51,36,.14);color:var(--rust);border:1px solid rgba(138,51,36,.4)}
+.ship-status.uncertain{background:rgba(154,107,31,.16);color:var(--gold);border:1px solid rgba(154,107,31,.4)}
+.ship-desc{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin:0 0 10px}
+.ship-note{font-size:12.5px;line-height:1.45;color:var(--ink-soft);font-style:italic;margin:0 0 10px}
+.crew-label{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-soft);margin-bottom:6px}
+.crew-list{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:'EB Garamond',serif;font-size:13px;cursor:pointer;
+  background:rgba(244,235,213,.7);border:1px solid rgba(120,90,40,.4);border-radius:14px;
+  padding:3px 11px;color:var(--ink);transition:all .12s}
+.chip:hover{background:var(--gold-bright);color:#fff6df;border-color:#7a5318}
+.crew-empty{font-size:12.5px;font-style:italic;color:var(--ink-soft)}
+
+.ref-list{display:flex;flex-direction:column;gap:12px}
+
+/* sidebar */
+#sidebar{position:fixed;top:0;right:-340px;width:min(320px,90vw);height:100vh;z-index:50;
+  background:linear-gradient(180deg,var(--parch),var(--parch-deep));
+  border-left:2px solid var(--line);box-shadow:-8px 0 24px var(--shadow);
+  transition:right .2s ease;overflow-y:auto;padding:20px}
+#sidebar.open{right:0}
+#sidebarClose{position:absolute;top:14px;right:14px;background:none;border:none;font-size:20px;
+  cursor:pointer;color:var(--ink-soft);line-height:1}
+#sidebarClose:hover{color:var(--rust)}
+.sb-name{font-family:'Cinzel',serif;font-weight:600;font-size:20px;color:var(--rust-bright);margin:26px 0 2px}
+.sb-role{font-style:italic;color:var(--ink-soft);font-size:14px;margin:0 0 2px}
+.sb-affil{font-size:13px;color:var(--ink-soft);margin:0 0 14px}
+.sb-note{font-size:14.5px;line-height:1.55;margin:0 0 18px}
+.sb-stub{border:1.5px dashed rgba(120,90,40,.5);border-radius:8px;padding:14px;
+  text-align:center;color:var(--ink-soft);font-style:italic;font-size:13px}
+#overlay{position:fixed;inset:0;background:rgba(30,20,10,.25);z-index:40;display:none}
+#overlay.open{display:block}
+
+footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);opacity:.75}
+</style>
+</head>
+<body>
+<div id="overlay"></div>
+<div id="sidebar">
+  <button id="sidebarClose">✕</button>
+  <div id="sidebarContent"></div>
+</div>
+
+<div class="wrap" id="wrap">
+  <header>
+    <div>
+      <div class="crumb"><a href="index.html">Sjórseiðr</a> · Covenant Archive</div>
+      <h1>Fleet &amp; Crew</h1>
+      <p class="subtitle">Who's aboard which ship, by story period. Click a name for a quick character card.</p>
+    </div>
+  </header>
+
+  <div class="tabs" id="tabs"></div>
+  <div id="content"></div>
+
+  <footer>Character sheets are a stub for now — click-through is wired up, the sheets themselves come later.</footer>
+</div>
+
+<script>
+const $ = s=>document.querySelector(s);
+const $$ = s=>Array.from(document.querySelectorAll(s));
+const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+let DATA = null;
+let activeTab = null; // snapshot id, or 'all-ships'
+
+async function load(){
+  try{
+    const r = await fetch('./ships.json', {cache:'no-store'});
+    DATA = await r.json();
+    activeTab = (DATA.snapshots[0]||{}).id || 'all-ships';
+    render();
+  }catch(e){
+    $('#content').innerHTML = `<div class="snap-note">Could not load ships.json — open via a local server, not file://.<br>${esc(e.message)}</div>`;
+  }
+}
+
+function statusClass(status){
+  return (status||'').toLowerCase().replace(/[^a-z]+/g,'-').replace(/(^-|-$)/g,'');
+}
+
+function shipById(id){ return DATA.ships.find(s=>s.id===id); }
+
+function renderTabs(){
+  const snapTabs = DATA.snapshots.map(s=>
+    `<div class="tab ${activeTab===s.id?'active':''}" data-tab="${esc(s.id)}">${esc(s.label)}</div>`).join('');
+  $('#tabs').innerHTML = snapTabs +
+    `<div class="tab ${activeTab==='all-ships'?'active':''}" data-tab="all-ships">All Ships (reference)</div>`;
+  $$('.tab').forEach(t=>t.onclick=()=>{activeTab=t.dataset.tab;render();});
+}
+
+function crewChips(names){
+  if(!names || !names.length) return `<div class="crew-empty">— no crew listed for this leg —</div>`;
+  return `<div class="crew-list">${names.map(n=>`<button class="chip" data-name="${esc(n)}">${esc(n)}</button>`).join('')}</div>`;
+}
+
+function renderSnapshot(snap){
+  const cards = snap.assignments.map(a=>{
+    const ship = shipById(a.ship);
+    if(!ship) return '';
+    return `<div class="ship-card">
+      <div class="ship-head">
+        <div>
+          <div class="ship-name">${esc(ship.name)}</div>
+          <div class="ship-owner">${esc(ship.owner)}</div>
+        </div>
+        <span class="ship-status ${statusClass(ship.status)}">${esc(ship.status)}</span>
+      </div>
+      <div class="crew-label">Aboard this leg</div>
+      ${crewChips(a.crew)}
+      ${a.note ? `<p class="ship-note" style="margin-top:10px">${esc(a.note)}</p>` : ''}
+    </div>`;
+  }).join('');
+  $('#content').innerHTML = `
+    <p class="snap-note">${esc(snap.note||'')}</p>
+    <div class="ship-grid">${cards}</div>
+  `;
+}
+
+function renderAllShips(){
+  const cards = DATA.ships.map(ship=>`<div class="ship-card">
+      <div class="ship-head">
+        <div>
+          <div class="ship-name">${esc(ship.name)}</div>
+          <div class="ship-owner">${esc(ship.owner)}</div>
+        </div>
+        <span class="ship-status ${statusClass(ship.status)}">${esc(ship.status)}</span>
+      </div>
+      <p class="ship-desc">${esc(ship.description)}</p>
+    </div>`).join('');
+  $('#content').innerHTML = `
+    <p class="snap-note">Full fleet reference, independent of any single time period — including ships lost, retired, or of uncertain status.</p>
+    <div class="ship-grid ref-list">${cards}</div>
+  `;
+}
+
+function render(){
+  renderTabs();
+  if(activeTab === 'all-ships') renderAllShips();
+  else{
+    const snap = DATA.snapshots.find(s=>s.id===activeTab);
+    if(snap) renderSnapshot(snap); else renderAllShips();
+  }
+  $$('.chip').forEach(c=>c.onclick=()=>openSidebar(c.dataset.name));
+}
+
+function openSidebar(name){
+  const c = (DATA.characters||{})[name] || {};
+  $('#sidebarContent').innerHTML = `
+    <div class="sb-name">${esc(name)}</div>
+    <p class="sb-role">${esc(c.role||'Role unrecorded')}</p>
+    <p class="sb-affil">${esc(c.affiliation||'')}</p>
+    <p class="sb-note">${esc(c.note||'')}</p>
+    <div class="sb-stub">📜 Full character sheet — coming soon</div>
+  `;
+  $('#sidebar').classList.add('open');
+  $('#overlay').classList.add('open');
+  $('#wrap').classList.add('sidebar-open');
+}
+function closeSidebar(){
+  $('#sidebar').classList.remove('open');
+  $('#overlay').classList.remove('open');
+  $('#wrap').classList.remove('sidebar-open');
+}
+$('#sidebarClose').onclick = closeSidebar;
+$('#overlay').onclick = closeSidebar;
+
+load();
+</script>
+</body>
+</html>
