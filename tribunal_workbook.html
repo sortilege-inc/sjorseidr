@@ -248,6 +248,22 @@ table.tally tbody tr.player:hover td{background:rgba(29,95,176,.22)}
 .tag.canon{background:rgba(154,107,31,.16);color:var(--gold);border-color:rgba(154,107,31,.3)}
 .tag.avail{background:rgba(44,107,102,.16);color:var(--teal);border-color:rgba(44,107,102,.35)}
 .tag.proposed{background:rgba(91,58,138,.16);color:var(--purple);border-color:rgba(91,58,138,.4)}
+.tag.claimed{background:rgba(154,107,31,.22);color:#7a5318;border-color:rgba(154,107,31,.5);font-weight:600}
+
+/* ---------- claimed prizes (expandable) ---------- */
+.claimed-toggle{margin-top:16px;border:1.5px solid var(--gold);border-radius:10px;
+  background:linear-gradient(180deg,rgba(244,235,213,.6),rgba(232,217,178,.45));
+  box-shadow:0 2px 10px var(--shadow);overflow:hidden}
+.claimed-toggle summary{cursor:pointer;list-style:none;padding:11px 16px;
+  font-family:'Cinzel',serif;font-weight:600;font-size:13.5px;color:var(--rust);
+  display:flex;align-items:center;gap:8px;user-select:none}
+.claimed-toggle summary::-webkit-details-marker{display:none}
+.claimed-toggle summary::before{content:'▸';display:inline-block;transition:transform .15s;color:var(--gold)}
+.claimed-toggle[open] summary::before{transform:rotate(90deg)}
+.claimed-toggle summary .count{font-family:'EB Garamond',serif;font-weight:400;font-style:italic;
+  color:var(--ink-soft);font-size:12.5px;margin-left:2px}
+.claimed-body{padding:2px 16px 14px}
+.claimed-empty{padding:4px 0 8px;font-style:italic;color:var(--ink-soft);font-size:13px}
 .card-notes{font-size:13px;line-height:1.45;color:var(--ink);margin-top:2px}
 .card-actions{display:flex;gap:5px;align-items:center}
 .icon-btn{cursor:pointer;border:none;background:transparent;color:var(--ink-soft);font-size:14px;
@@ -565,7 +581,7 @@ function renderTally(){
   const rm = rankMap();
   const ncCancelled = !!(STATE.tournament.events['Norman Conquest']||{}).cancelled;
 
-  let rows = STATE.tournament.covenants.map(n=>{
+  let rows = leaderboard().map(it=>it.name).map(n=>{
     const cells = events.map(ev=>{
       const p = pointsFor(ev, n);
       const cls = p>2 ? 'hot' : '';
@@ -603,7 +619,46 @@ function renderTally(){
         <div class="lg"><div class="sw" style="background:rgba(198,155,63,.35)"></div>Total / Rank columns are computed</div>
         <div class="lg"><div class="sw" style="background:linear-gradient(150deg,#f1d77e,#d4a93a)"></div>Gold / Silver / Bronze</div>
       </div>
+      ${renderClaimedPrizes()}
     </div>`;
+}
+
+/* Prizes actually drafted/claimed so far — vis sources with a "Claimed…"
+   status, and library items with a claimed_by note. Distinct from the
+   Prize Ranks tab, which tracks rank->seat->pawns, not which specific
+   item was taken. */
+function claimedPrizeList(){
+  const claimedVis = (STATE.vis_sources||[])
+    .filter(v=>(v.status||'').toLowerCase().startsWith('claimed'))
+    .map(v=>({
+      kind:'Vis Source', name:v.name,
+      by:(v.status||'').split('—')[1]?.trim() || (v.status||'').replace(/claimed/i,'').trim() || '—',
+      detail:`${v.art||''}${v.yield?` · ${v.yield}`:''}`,
+    }));
+  const claimedLib = (STATE.library||[])
+    .filter(b=>b.claimed_by)
+    .map(b=>({
+      kind:'Library', name:b.title,
+      by:(b.claimed_by||'').split('(')[0].trim() || b.claimed_by,
+      detail:[b.section, ...(b.tags||[])].filter(Boolean).join(' · '),
+    }));
+  return [...claimedVis, ...claimedLib];
+}
+function renderClaimedPrizes(){
+  const items = claimedPrizeList();
+  const rows = items.map(it=>`<tr>
+      <td><span class="tag claimed">${esc(it.kind)}</span></td>
+      <td class="seat-rank" style="font-style:normal">${esc(it.name)}</td>
+      <td>${esc(it.by)}</td>
+      <td style="color:var(--ink-soft)">${esc(it.detail)}</td>
+    </tr>`).join('');
+  const body = items.length
+    ? `<table class="prize-tbl"><thead><tr><th>Type</th><th>Item</th><th>Claimed By</th><th>Detail</th></tr></thead><tbody>${rows}</tbody></table>`
+    : `<div class="claimed-empty">No prizes marked as claimed yet — set a vis source's status to “Claimed — &lt;Covenant&gt;”, or add a <code>claimed_by</code> note to a library entry.</div>`;
+  return `<details class="claimed-toggle">
+    <summary>Prizes Claimed So Far <span class="count">(${items.length})</span></summary>
+    <div class="claimed-body">${body}</div>
+  </details>`;
 }
 
 /* ============================================================
@@ -894,7 +949,8 @@ function renderVis(){
 }
 
 function visCard(v){
-  const statusCls = (v.status||'').toLowerCase().includes('canon')?'canon':((v.status||'').toLowerCase().includes('avail')?'avail':'proposed');
+  const vs = (v.status||'').toLowerCase();
+  const statusCls = vs.includes('claimed')?'claimed':(vs.includes('canon')?'canon':(vs.includes('avail')?'avail':'proposed'));
   const artCls = (v.art||'').toLowerCase();
   return `<div class="card" data-id="${esc(v.id)}" data-mode="view">
     <div class="card-head">
