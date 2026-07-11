@@ -91,11 +91,11 @@
       "type": "Question",
       "category": "World Detail",
       "title": "Which specific ship does Stijntje/Dustin actually sail on for the Ireland leg?",
-      "context": "The Fall 1223 travel plan names only the Brineborn (Éogan, Wilhelm, Hilda, one assistant) and the Adamant (Valerian, Dietrich, one assistant); a later addendum has Dustin opting in and bringing Stijntje, without re-stating which hull they board. Brineborn is the reasonable assumption but isn't textually explicit.",
+      "context": "The Fall 1223 travel plan names only the Brineborn (Éogan, Wilhelm, Hilda, one assistant) and the Adamant (Valerian, Dietrich, one assistant); a later addendum has Dustin opting in and bringing Stijntje, without re-stating which hull they board.",
       "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
       "raised_event": "Ireland travel plan finalized: Dublin, the coast, and wintering near Carrick",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Confirmed by the GM (2026-07-13): the Scholar's Wake — Dustin and Stijntje sail their own ship, traveling alongside the Brineborn."
     },
     {
       "id": "q013e",
@@ -116,8 +116,8 @@
       "context": "\"Traveling to the Tribunal\" and \"Up the Sarthe to Le Mans\" (Summer 1223) both describe Garrett/Garrat Coffin and Drest as \"from the Brineborn.\" The current standing-crew roster instead places Garrat Coffin on Veðrdreki (the Storm Dragon), with only Drest remaining on the Brineborn.",
       "raised_in": "Cross-referenced against the GM's crew roster (2026-07-13)",
       "raised_event": "Traveling to the Tribunal",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Confirmed by the GM (2026-07-13): he transferred."
     },
     {
       "id": "q015",
@@ -272,6 +272,52 @@
       "context": "Murmurs of \"molesting the fairies\" circled the room when Valdemar introduced her openly. A Presence+Guile stress-die success held the appearance for the moment, but nobody has confronted it since — what would actually happen if the Tribunal investigated?",
       "raised_in": "Session 2 (2026-02-21)",
       "raised_event": "Valdemar introduces Rán at the feast",
+      "status": "Open",
+      "resolution": ""
+    },
+
+    {
+      "id": "t019",
+      "type": "Thread",
+      "category": "Research",
+      "title": "Wilhelm's plan to turn folk magic into a real \"pocket\" magic system.",
+      "context": "Player's stated research roadmap: (1) mine Hermetic texts — probably a Root or two — for hedge-magic inspiration; (2) turn that into actual Insight, ideally as ceremonial spells folk wizards can learn; (3) send the research assistants out into Ireland to gather more raw material; (4) fold the results back into the folk-magic system properly, which needs formulaic spellcasting (no more halving rolls to cast), ceremonial casting (adding Aura + Philosophiae), and — as a bonus, since folk magic already uses them informally — a correct integration of props. Basic enchanting (already loosely possible via Magic Lore + vis) is flagged as a later, incremental step. Player's own assessment: the first three are \"REALLY EASY\" to incorporate — the Learned Magicians seem to have worked out parts of it already without any Magic Theory at all.",
+      "raised_in": "Player notes (2026-07-13)",
+      "raised_event": "Wilhelm pitches Éogan on hedge-magic sea/weather traditions for the thesis",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t020",
+      "type": "Thread",
+      "category": "Covenant Business",
+      "title": "Wilhelm may pitch the covenant a mundane vis-factory proof-of-concept.",
+      "context": "Once he has his thesis back, Wilhelm's player floated getting the covenant to set up a mundane vis factory if they're short on vis — both a practical fix and a live proof-of-concept for his folk-magic theories.",
+      "raised_in": "Player notes (2026-07-13)",
+      "raised_event": "Wilhelm's manuscript reveals a Divine-vis wrinkle",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t021",
+      "type": "Thread",
+      "category": "Character",
+      "title": "Dietrich plans to self-initiate via Magic Lore so he can formally teach Magic Theory at Cologne.",
+      "context": "Refines the earlier plan (session 7: a season getting initiated into a minor virtue to teach the folk-magic system). Per the player's latest notes, Dietrich is specifically aiming to learn enough Magic Lore to self-initiate — the broader goal being to teach actual Magic Theory at his university, not just the folk system.",
+      "raised_in": "Player notes (2026-07-13)",
+      "raised_event": "Dietrich pitches folk magic to scholars and a Redcap; Dustin interrogates him",
+      "status": "Open",
+      "resolution": ""
+    },
+
+    {
+      "id": "q017",
+      "type": "Question",
+      "category": "Research",
+      "title": "How does learning a NEW folk-magic guideline work once you're already initiated into a branch?",
+      "context": "Fairly settled: folk magic can be learned via Original Research/Experimentation, or via initiation. Genuinely open: once initiated into a branch (e.g. abjuration, scrying, cursing, warding), does learning a further new guideline in that SAME branch require a full initiation script / Original Research again, or is it progressively easier — the way learning a new scrying guideline gets easier once you're already initiated into scrying generally? Player's stated preference is the latter.",
+      "raised_in": "Player notes (2026-07-13)",
+      "raised_event": "Dietrich pitches folk magic to scholars and a Redcap; Dustin interrogates him",
       "status": "Open",
       "resolution": ""
     }

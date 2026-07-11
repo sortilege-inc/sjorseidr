@@ -137,8 +137,13 @@
       "assignments": [
         {
           "ship": "brineborn",
-          "crew": ["Éogan Dobhartha", "Wilhelm Stienauer", "Dustin Page", "Stijntje Kuiper", "Hilda"],
-          "note": "Plus one of Wilhelm's two research assistants (Karl or the unnamed one — not specified which). Route: Dragon's Rest → Scarem Montem (recovering Wilhelm's stolen thesis) → Ireland. Dustin/Stijntje's presence on this specific hull is a reasonable assumption, not explicitly restated (see the Open Questions page)."
+          "crew": ["Éogan Dobhartha", "Wilhelm Stienauer", "Hilda"],
+          "note": "Plus one of Wilhelm's two research assistants (Karl or the unnamed one — not specified which). Route: Dragon's Rest → Scarem Montem (recovering Wilhelm's stolen thesis) → Ireland."
+        },
+        {
+          "ship": "scholars-wake",
+          "crew": ["Dustin Page", "Stijntje Kuiper"],
+          "note": "Sailing their own ship alongside the Brineborn for the Ireland leg, rather than boarding it."
         },
         {
           "ship": "adamant",
