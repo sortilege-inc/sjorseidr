@@ -14,11 +14,11 @@
       "type": "Question",
       "category": "World Detail",
       "title": "Which ship, exactly, was pirated from Scarem Montem?",
-      "context": "While planning Wilhelm's 1224 return trip, the table half-remembered that one of the covenant's own ships was originally taken from Scarem Montem — but didn't pin down which one, or the circumstances. A stub \"Tremere Ship / Scarem Montem\" entry now exists on the Fleet & Crew page pending detail.",
+      "context": "While planning Wilhelm's 1224 return trip, the table half-remembered that one of the covenant's own ships was originally taken from Scarem Montem — but didn't pin down which one, or the circumstances.",
       "raised_in": "Session 7 (2026-06-20)",
       "raised_event": "An old wrinkle resurfaces: one of the covenant's ships was pirated from Scarem Montem",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Confirmed by the GM (2026-07-13): it's the Hound of Cassel — a Tremere-crewed Scarem Montem vessel, raided by Valdemar's crew in Summer 1221 (\"Summer piracy\")."
     },
     {
       "id": "q003",
@@ -80,11 +80,11 @@
       "type": "Question",
       "category": "World Detail",
       "title": "What happened to the Hound of Cassel — the ship captured in the Summer 1221 piracy raid?",
-      "context": "Raided from an unnamed rival sea-trading covenant by Valdemar's crew; yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. The party debated \"keep as prize or sink,\" leaning toward selling at a shadow port — but no event ever confirmed what actually happened to it.",
+      "context": "Raided by Valdemar's crew from what's now confirmed to be a Tremere-crewed Scarem Montem vessel; yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. The party debated \"keep as prize or sink,\" leaning toward selling at a shadow port — but no event ever confirmed what actually happened to it.",
       "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
       "raised_event": "Summer piracy",
       "status": "Resolved",
-      "resolution": "Per the GM (2026-07-13): Wilhelm will effectively gain the Hound of Cassel, either to keep as his own ship or to use as a trade chip — most plausibly toward Scarem Montem, for his stolen thesis."
+      "resolution": "Per the GM (2026-07-13): Wilhelm will effectively gain the Hound of Cassel, either to keep as his own ship or to use as a trade chip — and since it's the very ship pirated from Scarem Montem (see q001), that trade chip is literally their own hull back."
     },
     {
       "id": "q013d",
@@ -136,7 +136,7 @@
       "type": "Thread",
       "category": "Plot",
       "title": "The ship-for-book swap with Scarem Montem hasn't been pitched yet.",
-      "context": "Two framings were floated: rough justice (\"fair's fair,\" they took the book, the covenant already has a ship) or a literal bargaining chip. Now that Wilhelm is set to gain the Hound of Cassel specifically as a possible trade asset, does the party actually offer it when he goes back in 1224?",
+      "context": "Two framings were floated: rough justice (\"fair's fair,\" they took the book, the covenant already has the ship) or a literal bargaining chip. Now confirmed the Hound of Cassel IS the ship pirated from Scarem Montem, and Wilhelm is set to gain it — does the party actually offer their own hull back in exchange for the thesis when he returns in 1224?",
       "raised_in": "Session 7 (2026-06-20)",
       "raised_event": "An old wrinkle resurfaces: one of the covenant's ships was pirated from Scarem Montem",
       "status": "Open",

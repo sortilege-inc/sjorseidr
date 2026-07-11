@@ -66,17 +66,10 @@
     {
       "id": "hound-of-cassel",
       "name": "Hound of Cassel",
+      "aka": "the Tremere ship, formerly Scarem Montem's",
       "owner": "Wilhelm Stienauer (disposition undecided)",
       "status": "Reassigned",
-      "description": "A rival covenant's trade vessel, raided by Valdemar's crew in Summer 1221 — yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. Its fate sat undecided for years; Wilhelm is now set to effectively gain the ship, either to use outright or as a trade chip — most plausibly toward Scarem Montem, in exchange for his stolen thesis.",
-      "standing_crew": []
-    },
-    {
-      "id": "tremere-scarem-montem",
-      "name": "Tremere Ship / Scarem Montem",
-      "owner": "Scarem Montem",
-      "status": "Unclear",
-      "description": "A vessel tied to Scarem Montem, flagged as relevant but not yet fully detailed — possibly connected to the still-unidentified ship \"pirated from Scarem Montem\" (see the Open Questions page). Crew and exact relationship to the covenant's fleet not yet recorded.",
+      "description": "Confirmed: this is the ship pirated from Scarem Montem — a Tremere-crewed vessel, raided by Valdemar's crew in Summer 1221. Yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. Its fate sat undecided for years; Wilhelm is now set to effectively gain the ship, either to use outright or as a trade chip — handing Scarem Montem back their own hull in exchange for his stolen thesis.",
       "standing_crew": []
     }
   ],
