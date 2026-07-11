@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Open Questions for the Storyteller</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturCook:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=UnifrakturCook:wght@700&display=swap');
 
 :root{
   --parch:#ede0c4; --parch-deep:#d8c39a;
@@ -31,7 +31,7 @@ body::before{
     radial-gradient(circle at 50% 85%, rgba(120,80,30,.05) 0 2px, transparent 3px);
   background-size:140px 140px,180px 180px,160px 160px;opacity:.6;mix-blend-mode:multiply;
 }
-.wrap{position:relative;z-index:1;max-width:920px;margin:0 auto;padding:32px 20px 80px}
+.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:32px 20px 80px}
 a{color:var(--teal-bright)}
 
 header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
@@ -41,6 +41,17 @@ header{display:flex;justify-content:space-between;align-items:flex-start;gap:16p
 h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--rust-bright);margin:4px 0 2px}
 .subtitle{font-style:italic;color:var(--ink-soft);font-size:14.5px;margin:0}
 .status{font-family:'Cinzel',serif;font-size:11.5px;color:var(--ink-soft);text-align:right;white-space:nowrap}
+
+/* type tabs */
+.typetabs{display:flex;gap:4px;margin-bottom:6px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.typetab{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.03em;padding:9px 16px;cursor:pointer;
+  color:var(--ink-soft);border-bottom:3px solid transparent;transition:color .12s,border-color .12s;
+  display:flex;align-items:center;gap:7px}
+.typetab:hover{color:var(--ink)}
+.typetab.active{color:var(--rust-bright);border-color:var(--rust-bright);font-weight:600}
+.typetab .n{font-family:'EB Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-soft)}
+.type-desc{font-style:italic;color:var(--ink-soft);font-size:13.5px;margin:10px 0 18px;
+  padding:10px 14px;background:rgba(120,90,40,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0}
 
 .filterbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:18px;padding:8px 10px;
   background:rgba(120,90,40,.08);border:1px solid rgba(120,90,40,.18);border-radius:8px}
@@ -55,14 +66,21 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 
 .qlist{display:flex;flex-direction:column;gap:12px}
 .qcard{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);
-  border:1.5px solid rgba(120,90,40,.45);border-radius:10px;padding:14px 18px 15px;
+  border:1.5px solid rgba(120,90,40,.45);border-left-width:5px;border-radius:10px;padding:14px 18px 15px;
   box-shadow:0 2px 6px var(--shadow);transition:border-color .12s}
 .qcard:hover{border-color:var(--gold)}
-.qcard.answered{opacity:.7}
+.qcard.type-question{border-left-color:var(--rust-bright)}
+.qcard.type-thread{border-left-color:var(--teal)}
+.qcard.type-consequence{border-left-color:var(--purple)}
+.qcard.resolved{opacity:.65}
 .qcard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px}
+.qtags{display:flex;gap:6px;flex-wrap:wrap}
 .qtag{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
-  padding:2px 8px;border-radius:9px;background:rgba(91,58,138,.16);color:var(--purple);
-  border:1px solid rgba(91,58,138,.4);white-space:nowrap}
+  padding:2px 8px;border-radius:9px;white-space:nowrap}
+.qtag.type-question{background:rgba(181,74,50,.14);color:var(--rust-bright);border:1px solid rgba(181,74,50,.35)}
+.qtag.type-thread{background:rgba(44,107,102,.16);color:var(--teal);border:1px solid rgba(44,107,102,.35)}
+.qtag.type-consequence{background:rgba(91,58,138,.16);color:var(--purple);border:1px solid rgba(91,58,138,.4)}
+.qtag.cat{background:rgba(120,90,40,.15);color:var(--ink-soft);border:1px solid rgba(120,90,40,.25)}
 .qquestion{font-weight:600;font-size:16.5px;line-height:1.35;margin:0 0 6px}
 .qcontext{font-size:14px;line-height:1.5;color:var(--ink-soft);margin:0 0 8px}
 .qmeta{font-size:12px;color:var(--ink-soft);font-style:italic}
@@ -91,11 +109,13 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
     <div>
       <div class="crumb"><a href="index.html">Sjórseiðr</a> · Covenant Archive</div>
       <h1>Open Questions for the Storyteller</h1>
-      <p class="subtitle">Threads the table has raised but not yet resolved — check one off as it's answered.</p>
+      <p class="subtitle">Questions needing a ruling, threads nobody's picked back up, and consequences still waiting to land.</p>
     </div>
     <div class="status" id="status">Loading…</div>
   </header>
 
+  <div class="typetabs" id="typetabs"></div>
+  <div class="type-desc" id="typeDesc"></div>
   <div class="filterbar" id="filterbar"></div>
   <div class="qlist" id="qlist"></div>
 
@@ -110,8 +130,11 @@ const $ = s=>document.querySelector(s);
 const $$ = s=>Array.from(document.querySelectorAll(s));
 const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
-const LS_KEY = 'sjorseidr_open_questions_v1';
+const LS_KEY = 'sjorseidr_open_questions_v2';
+const TYPE_ORDER = ['Question','Thread','Consequence'];
+const TYPE_ICON = {Question:'❓', Thread:'🧵', Consequence:'⚖️'};
 let STATE = null;
+let activeType = 'all';
 let filter = {category:'all', status:'all'};
 
 async function load(){
@@ -122,14 +145,13 @@ async function load(){
     if(cached){
       try{
         const c = JSON.parse(cached);
-        // merge cached status/answer onto freshly-fetched questions, by id
-        const byId = {}; (c.questions||[]).forEach(q=>byId[q.id]=q);
-        STATE.questions.forEach(q=>{
-          if(byId[q.id]){ q.status = byId[q.id].status; q.answer = byId[q.id].answer; }
+        const byId = {}; (c.items||[]).forEach(q=>byId[q.id]=q);
+        STATE.items.forEach(q=>{
+          if(byId[q.id]){ q.status = byId[q.id].status; q.resolution = byId[q.id].resolution; }
         });
       }catch(_){}
     }
-    $('#status').textContent = `${STATE.questions.length} questions loaded`;
+    $('#status').textContent = `${STATE.items.length} items loaded`;
     render();
   }catch(e){
     $('#qlist').innerHTML = `<div class="empty">Could not load open_questions.json — open this page via a local server, not file://.<br>${esc(e.message)}</div>`;
@@ -141,69 +163,97 @@ function autosave(){
   localStorage.setItem(LS_KEY, JSON.stringify(STATE));
 }
 
+function typeClass(t){ return 'type-' + (t||'').toLowerCase(); }
+
 function categories(){
-  return [...new Set(STATE.questions.map(q=>q.category))].sort();
+  const pool = activeType==='all' ? STATE.items : STATE.items.filter(i=>i.type===activeType);
+  return [...new Set(pool.map(q=>q.category))].sort();
+}
+
+function renderTypeTabs(){
+  const counts = {}; TYPE_ORDER.forEach(t=>counts[t]=STATE.items.filter(i=>i.type===t).length);
+  const allTab = `<div class="typetab ${activeType==='all'?'active':''}" data-type="all">All <span class="n">(${STATE.items.length})</span></div>`;
+  const tabs = TYPE_ORDER.map(t=>
+    `<div class="typetab ${activeType===t?'active':''}" data-type="${t}">${TYPE_ICON[t]} ${t}s <span class="n">(${counts[t]})</span></div>`).join('');
+  $('#typetabs').innerHTML = allTab + tabs;
+  $$('.typetab').forEach(el=>el.onclick=()=>{activeType=el.dataset.type; filter.category='all'; render();});
+
+  const descs = {
+    all: 'Everything the table has flagged, mixed together.',
+    Question: STATE.meta.types.Question,
+    Thread: STATE.meta.types.Thread,
+    Consequence: STATE.meta.types.Consequence,
+  };
+  $('#typeDesc').textContent = descs[activeType];
 }
 
 function renderFilterbar(){
   const cats = ['all', ...categories()];
   const catBtns = cats.map(c=>`<button class="fbtn ${filter.category===c?'on':''}" data-cat="${esc(c)}">${c==='all'?'All Categories':esc(c)}</button>`).join('');
-  const statuses = ['all','Open','Answered'];
+  const statuses = ['all','Open','Resolved'];
   const statusBtns = statuses.map(s=>`<button class="fbtn ${filter.status===s?'on':''}" data-status="${esc(s)}">${s==='all'?'All Status':esc(s)}</button>`).join('');
-  const openCount = STATE.questions.filter(q=>q.status!=='Answered').length;
+  const pool = activeType==='all' ? STATE.items : STATE.items.filter(i=>i.type===activeType);
+  const openCount = pool.filter(q=>q.status!=='Resolved').length;
   $('#filterbar').innerHTML = `
     <span class="label">Category:</span> ${catBtns}
     <span class="label" style="margin-left:8px">Status:</span> ${statusBtns}
     <span class="spacer"></span>
-    <span class="count">${openCount} still open · ${STATE.questions.length} total</span>
+    <span class="count">${openCount} still open · ${pool.length} total</span>
   `;
   $$('#filterbar .fbtn[data-cat]').forEach(b=>b.onclick=()=>{filter.category=b.dataset.cat;render();});
   $$('#filterbar .fbtn[data-status]').forEach(b=>b.onclick=()=>{filter.status=b.dataset.status;render();});
 }
 
 function qCard(q){
-  const answered = q.status === 'Answered';
-  return `<div class="qcard ${answered?'answered':''}" data-id="${esc(q.id)}">
+  const resolved = q.status === 'Resolved';
+  const tc = typeClass(q.type);
+  const resolveLabel = q.type === 'Question' ? 'Answered' : (q.type === 'Thread' ? 'Picked up' : 'Resolved');
+  return `<div class="qcard ${tc} ${resolved?'resolved':''}" data-id="${esc(q.id)}">
     <div class="qcard-top">
-      <span class="qtag">${esc(q.category)}</span>
+      <div class="qtags">
+        <span class="qtag ${tc}">${TYPE_ICON[q.type]} ${esc(q.type)}</span>
+        <span class="qtag cat">${esc(q.category)}</span>
+      </div>
       <div class="qanswer-toggle">
-        <input type="checkbox" id="chk-${esc(q.id)}" ${answered?'checked':''}>
-        <label for="chk-${esc(q.id)}">Answered</label>
+        <input type="checkbox" id="chk-${esc(q.id)}" ${resolved?'checked':''}>
+        <label for="chk-${esc(q.id)}">${resolveLabel}</label>
       </div>
     </div>
-    <p class="qquestion">${esc(q.question)}</p>
+    <p class="qquestion">${esc(q.title)}</p>
     <p class="qcontext">${esc(q.context)}</p>
     <div class="qmeta">Raised in <b>${esc(q.raised_in)}</b> — <i>${esc(q.raised_event)}</i></div>
-    <div class="qanswer-box" style="${answered?'':'display:none'}">
-      <textarea placeholder="Resolution / GM ruling…">${esc(q.answer||'')}</textarea>
+    <div class="qanswer-box" style="${resolved?'':'display:none'}">
+      <textarea placeholder="Resolution / GM ruling…">${esc(q.resolution||'')}</textarea>
     </div>
   </div>`;
 }
 
 function render(){
+  renderTypeTabs();
   renderFilterbar();
-  let list = STATE.questions.filter(q=>{
+  let list = STATE.items.filter(q=>{
+    if(activeType!=='all' && q.type!==activeType) return false;
     if(filter.category!=='all' && q.category!==filter.category) return false;
     if(filter.status!=='all' && (q.status||'Open')!==filter.status) return false;
     return true;
   });
   $('#qlist').innerHTML = list.length
     ? list.map(qCard).join('')
-    : `<div class="empty">No questions match this filter.</div>`;
+    : `<div class="empty">Nothing matches this filter.</div>`;
 
   $$('.qcard').forEach(card=>{
     const id = card.dataset.id;
-    const q = STATE.questions.find(x=>x.id===id);
+    const q = STATE.items.find(x=>x.id===id);
     const chk = card.querySelector('input[type=checkbox]');
     const box = card.querySelector('.qanswer-box');
     const ta = card.querySelector('textarea');
     chk.onchange = ()=>{
-      q.status = chk.checked ? 'Answered' : 'Open';
+      q.status = chk.checked ? 'Resolved' : 'Open';
       box.style.display = chk.checked ? '' : 'none';
-      card.classList.toggle('answered', chk.checked);
+      card.classList.toggle('resolved', chk.checked);
       autosave();
     };
-    ta.oninput = ()=>{ q.answer = ta.value; autosave(); };
+    ta.oninput = ()=>{ q.resolution = ta.value; autosave(); };
   });
 }
 

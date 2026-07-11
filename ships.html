@@ -62,9 +62,12 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .ship-status{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.04em;text-transform:uppercase;
   padding:2px 8px;border-radius:9px;white-space:nowrap;flex:none}
 .ship-status.active{background:rgba(62,107,53,.16);color:var(--green);border:1px solid rgba(62,107,53,.4)}
-.ship-status.lost,.ship-status.fate-unknown{background:rgba(138,51,36,.14);color:var(--rust);border:1px solid rgba(138,51,36,.4)}
-.ship-status.uncertain{background:rgba(154,107,31,.16);color:var(--gold);border:1px solid rgba(154,107,31,.4)}
+.ship-status.lost,.ship-status.missing,.ship-status.fate-unknown{background:rgba(138,51,36,.14);color:var(--rust);border:1px solid rgba(138,51,36,.4)}
+.ship-status.uncertain,.ship-status.unclear{background:rgba(154,107,31,.16);color:var(--gold);border:1px solid rgba(154,107,31,.4)}
+.ship-status.reassigned{background:rgba(44,107,102,.16);color:var(--teal);border:1px solid rgba(44,107,102,.35)}
+.ship-status.no-longer-part-of-the-covenant{background:rgba(74,60,44,.14);color:var(--ink-soft);border:1px solid rgba(74,60,44,.3)}
 .ship-desc{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin:0 0 10px}
+.ship-captain{font-style:italic;color:var(--ink-soft);font-size:12px;margin:-6px 0 8px}
 .ship-note{font-size:12.5px;line-height:1.45;color:var(--ink-soft);font-style:italic;margin:0 0 10px}
 .crew-label{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
   color:var(--ink-soft);margin-bottom:6px}
@@ -153,9 +156,21 @@ function renderTabs(){
   $$('.tab').forEach(t=>t.onclick=()=>{activeTab=t.dataset.tab;render();});
 }
 
-function crewChips(names){
-  if(!names || !names.length) return `<div class="crew-empty">— no crew listed for this leg —</div>`;
+function crewChips(names, emptyText){
+  if(!names || !names.length) return `<div class="crew-empty">— ${esc(emptyText||'no crew listed')} —</div>`;
   return `<div class="crew-list">${names.map(n=>`<button class="chip" data-name="${esc(n)}">${esc(n)}</button>`).join('')}</div>`;
+}
+
+function shipHeadHtml(ship){
+  const displayName = ship.aka ? `${esc(ship.name)} <span style="font-weight:400;font-style:italic;color:var(--ink-soft);font-size:13px">(aka ${esc(ship.aka)})</span>` : esc(ship.name);
+  return `<div class="ship-head">
+      <div>
+        <div class="ship-name">${displayName}</div>
+        <div class="ship-owner">${esc(ship.owner)}</div>
+      </div>
+      <span class="ship-status ${statusClass(ship.status)}">${esc(ship.status)}</span>
+    </div>
+    ${ship.captain ? `<p class="ship-captain">Captained by ${esc(ship.captain)}</p>` : ''}`;
 }
 
 function renderSnapshot(snap){
@@ -163,15 +178,9 @@ function renderSnapshot(snap){
     const ship = shipById(a.ship);
     if(!ship) return '';
     return `<div class="ship-card">
-      <div class="ship-head">
-        <div>
-          <div class="ship-name">${esc(ship.name)}</div>
-          <div class="ship-owner">${esc(ship.owner)}</div>
-        </div>
-        <span class="ship-status ${statusClass(ship.status)}">${esc(ship.status)}</span>
-      </div>
+      ${shipHeadHtml(ship)}
       <div class="crew-label">Aboard this leg</div>
-      ${crewChips(a.crew)}
+      ${crewChips(a.crew, 'no crew listed for this leg')}
       ${a.note ? `<p class="ship-note" style="margin-top:10px">${esc(a.note)}</p>` : ''}
     </div>`;
   }).join('');
@@ -183,14 +192,11 @@ function renderSnapshot(snap){
 
 function renderAllShips(){
   const cards = DATA.ships.map(ship=>`<div class="ship-card">
-      <div class="ship-head">
-        <div>
-          <div class="ship-name">${esc(ship.name)}</div>
-          <div class="ship-owner">${esc(ship.owner)}</div>
-        </div>
-        <span class="ship-status ${statusClass(ship.status)}">${esc(ship.status)}</span>
-      </div>
+      ${shipHeadHtml(ship)}
       <p class="ship-desc">${esc(ship.description)}</p>
+      <div class="crew-label">Standing crew</div>
+      ${crewChips(ship.standing_crew, 'no standing crew recorded')}
+      ${ship.former_crew && ship.former_crew.length ? `<div class="crew-label" style="margin-top:8px">Formerly</div>${crewChips(ship.former_crew, '')}` : ''}
     </div>`).join('');
   $('#content').innerHTML = `
     <p class="snap-note">Full fleet reference, independent of any single time period — including ships lost, retired, or of uncertain status.</p>
