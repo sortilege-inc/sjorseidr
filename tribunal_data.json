@@ -245,8 +245,8 @@
       "art": "Animal",
       "name": "The Falcon's Cliff",
       "yield": "Annual",
-      "status": "Canon",
-      "notes": "A falcon nests on a cliff ledge every year. On the same day, a serpent tries to steal an egg. If prevented, the egg contains Animal vis. If the serpent succeeds, it contains Vim vis (if caught)."
+      "status": "Claimed — Sjórseiðr",
+      "notes": "A falcon nests on a cliff ledge every year. On the same day, a serpent tries to steal an egg. If prevented, the egg contains Animal vis. If the serpent succeeds, it contains Vim vis (if caught). Claimed by Sjórseiðr as a tribunal prize pick; harvested by Dagmar in Spring 1224 (Animal vis, six weeks worth)."
     },
     {
       "id": "v028",
@@ -422,7 +422,8 @@
         "Mentem",
         "Lvl 12 · Q 11"
       ],
-      "bp": "23 BP"
+      "bp": "23 BP",
+      "claimed_by": "Sjórseiðr (tribunal prize, 1223 — Dagmar's winter reading pick)"
     },
     {
       "id": "b007",
@@ -731,7 +732,8 @@
         "Order of Hermes Lore",
         "Q 8"
       ],
-      "bp": "8 BP"
+      "bp": "8 BP",
+      "claimed_by": "Sjórseiðr (tribunal prize, 1223)"
     },
     {
       "id": "b029",

@@ -458,5 +458,206 @@
     "notes": "Travel and season assignments locked in for the trip home. CORRECTED 2026-06-20: the covenant does NOT winter on the Isle of Man this year after all — see session 7, they push on to winter near Carrick, Ireland instead. Running gag: Wilhelm's been sitting on a bottomless grain dish for weeks without mentioning it (quantity also corrected 2026-06-20: six million cubic yards, not one).",
     "source": "Transcript 2026-05-23 — closing-session travel/season planning.",
     "body_text": "**Travel.** The **Brineborn** (Éogan's ship) carries Éogan, Wilhelm, Hilda, and one research assistant north toward **Dragon's Rest**, then **Scarem Montem** (to retrieve Wilhelm's stolen Latin thesis copy), then on to **Ireland** for Wilhelm's promised folk-magic fieldwork. Separately, **Valerian**, aboard the **Adamant**, ferries **Dietrich**, Hilda's remaining research assistant, and Wilhelm's other assistant toward a rendezvous at Dragon's Rest.\n**Wintering — SUPERSEDED, see session 7 (2026-06-20).** The table's first pass at this had the covenant wintering on the Isle of Man; that was revised one session later to wintering near Carrick, Ireland instead, with the Isle of Man kept only as a waypoint stop (see [053_2026-06-20_ireland-travel-plan-finalized] for the corrected version).\n**Autumn season assignments:**\n  • **Dagmar** — heading to Oleron with the covenant's prize books; see the dedicated session-7 entry for the expanded plan (he ends up wintering there, not just spending a season).\n  • **Dustin** — Learn Teaching from Henri (apprenticeship prerequisite).\n  • **Wilhelm** — undecided between Ireland weather-magic fieldwork and a research track reverse-engineering formulaic (ritual) magic's underlying structure by close study of Hermetic ritual, spontaneous, potion, and enchantment sub-systems plus the semi-integrated longevity-ritual and Parma Magica traditions — looking for the shared principle underneath all of it.\n  • **Éogan** — developing spells to industrialize dried-fruit and fruit-juice separation as a **non-magical, tradable commodity** for dockside trade, with an eye toward tribunal-to-tribunal arbitrage (some tribunals police magically-produced goods far more strictly than others).\n  • **Dustin** — two seasons teaching his apprentice **Stijntje** a minor virtue: **Inventive Genius** in spring, then **Auram** in summer.\n  • **Dietrich** — a season getting initiated (through one of the tribunal contacts made this week) into a minor virtue, so he can formally teach the folk-magic system at his Cologne cathedral school starting Fall — needed to satisfy his twice-yearly teaching obligation as a master there.\n  • Still unassigned: the recurring **Summer Fog** and **Black Horse of Boulogne** vis-source seasons. Valerian was previously pegged for Summer Fog.\n**Running gag.** Wilhelm's graduation research project turns out to be a large stone dish that is **always full of grain** (CORRECTED 2026-06-20: **six million cubic yards'** worth before it would ever run dry, not one — a delay-cast effect that delays by *volume poured out* rather than by time, which the table confirmed is a standard Hermetic ritual effect, not a homebrew \"virtual\" spell) — magically produced content by any tribunal's reckoning, and thus a genuine arbitrage asset next to the covenant's existing enchanted freshwater barrels. He'd apparently had it out and in casual use for weeks before it occurred to him, entirely without irony, to mention it to his hosts."
+  },
+  {
+    "id": "p055",
+    "file": "055_2026-07-11_the-fleets-trade-income-while-the-covenant-was-away-at-the-t.md",
+    "sort_iso": "1223-06-24T12:00",
+    "session": "2026-07-11",
+    "scene": "Summer 1223 — the fleet's trade, retroactively tallied",
+    "title": "The fleet's trade income while the covenant was away at the Tribunal",
+    "icon": "💰",
+    "timeline": "☀️ Summer 1223",
+    "date": "Summer 1223, during the Tribunal week",
+    "cast": [
+      "Éogan Dobhartha",
+      "Dustin Page"
+    ],
+    "activity_type": "Covenant Business",
+    "status": "Proposed",
+    "notes": "While the magi competed at the Tribunal, the covenant's three ships kept trading. Éogan's standing orders kept the Brineborn conservative; the Scholar's Wake, left to Heynric's judgment, swung bigger and it paid off.",
+    "source": "Transcript 2026-07-11 — trade-income tally for the ships left behind at the Tribunal.",
+    "body_text": "With the magi occupied at Montverte, the covenant's ships carried on trading independently, each captain/crew making their own risk call.\n**Brineborn** — Éogan had left standing orders not to take risks in his absence. Low risk, low reward: netted **11 mythic pounds**. Confirmed the right call — the higher-risk play would have returned nothing this round.\n**Tide of Memory** — also played conservative, for a similarly modest but positive result.\n**The Scholar's Wake** — Dustin let Heynric the Merchant make the call. Heynric let it ride, cleared the bottom rung of risk, and came back with the best haul: **15 mythic pounds**.\n**Total: 35 mythic pounds richer**, collectively, on top of whatever the Tribunal itself paid out."
+  },
+  {
+    "id": "p056",
+    "file": "056_2026-07-11_casting-the-annual-aegis-of-the-hearth-near-harfleur.md",
+    "sort_iso": "1223-09-25T12:00",
+    "session": "2026-07-11",
+    "scene": "Fall 1223 — the annual Aegis renewal",
+    "title": "Casting the annual Aegis of the Hearth near Harfleur",
+    "icon": "🛡️",
+    "timeline": "🍂 Fall 1223",
+    "date": "Fall 1223, as the fleet splits for the season",
+    "cast": [
+      "Dagmar",
+      "Éogan Dobhartha"
+    ],
+    "activity_type": "Ritual Magic",
+    "status": "Proposed",
+    "notes": "Before scattering for the winter, the fleet convenes near Harfleur for the covenant's now-annual Aegis renewal. An exceptional roll makes the casting trivially safe. Two open snags: the Hound of Cassel isn't on the Master Chart and so isn't covered, and Ka'wa'ill — a magical creature himself — may need his own way past the boundary.",
+    "source": "Transcript 2026-07-11 — Aegis of the Hearth logistics and casting.",
+    "body_text": "Rather than let the covenant scatter for the season without magical protection, the fleet arranged to meet up near **Harfleur**, on the Channel, before splitting in different directions — a short detour, since Dagmar's ritual casting only takes a matter of minutes once everyone's in position.\n**Target: the Master Chart**, aboard the Tide of Memory — the same enchanted item Dagmar inherited from Solving that tracks the fleet's ships. Casting the Aegis on the Chart extends its protection to every ship the Chart tracks, without needing each hull cast individually.\n**Confirmed covered:** Veðrdreki (the Storm Dragon). **Confirmed NOT covered:** the **Hound of Cassel** — Wilhelm's newly assigned ship isn't on the Master Chart at all, so the Aegis doesn't reach it. (\"I'm sure that won't come up,\" — Wilhelm, tempting fate.)\n**The roll was absurd** — total around 30 against a routine casting threshold, high enough that the table joked Dagmar could've dropped ten points and still made it. Vis spent: 6 pawns, Rego and Vim in some combination.\n**Tokens for outsiders:** per the ritual's design, participating magi can hand out minor-enchantment tokens that let a non-covenant person pass the Aegis' boundary safely — Éogan is assumed to have made one for **Wilhelm**, leaning on their existing Arcane Connection. **Open question:** Ka'wa'ill is a magical creature, and the Aegis is specifically built to keep those out — does he need a token too, and can one even be made for him?"
+  },
+  {
+    "id": "p057",
+    "file": "057_2026-07-11_tribunal-experience-spent-finesse-an-aquam-push-and-a-magic-.md",
+    "sort_iso": "1223-10-05T12:00",
+    "session": "2026-07-11",
+    "scene": "Fall 1223 — Tribunal experience spent",
+    "title": "Tribunal experience spent: Finesse, an Aquam push, and a magic-theory boost",
+    "icon": "📖",
+    "timeline": "🍂 Fall 1223",
+    "date": "Fall 1223",
+    "cast": [
+      "Dagmar",
+      "Éogan Dobhartha",
+      "Dustin Page",
+      "Stijntje Kuiper"
+    ],
+    "activity_type": "Character Development",
+    "status": "Proposed",
+    "notes": "12 XP per magus for competing in the Tribunal tournament, plus Stijntje's own share as a participating apprentice. A mysterious extra 15 XP (\"an unending supply of 11xp\") showed up unexplained on at least one sheet — the GM flagged it to chase down, not yet resolved.",
+    "source": "Transcript 2026-07-11 — post-Tribunal experience allocation.",
+    "body_text": "**12 experience per magus**, awarded for the Tribunal tournament itself, splittable up to three ways per the GM's guidance to reflect what the character actually leaned on across the events.\n**Dagmar** — all 12 into **Finesse**, reflecting the season spent obsessively timing his spells in Dimicatio duels.\n**Éogan** — 5 into **Aquam** (enough to reach the next level), 5 into mastering **Mighty Torrent of Water** (put toward **quick-casting**), 2 into **Code of Hermes**.\n**Dustin** — 4 into **Magic Theory**, 4 into **Creo**, 4 into **Terram**.\n**Stijntje** (apprentice's share) — 5 into **Code of Hermes**, 5 into **Animal Handling**, and enough into **Magic Theory** to round out the level she was already close to completing.\n**Open thread, unresolved:** a stray **15 XP appeared \"pending\"** on at least one sheet with no clear source (jokingly dubbed \"an unending supply of 11xp\"). The GM made a note to track down where it came from rather than just letting it get spent blind."
+  },
+  {
+    "id": "p058",
+    "file": "058_2026-07-11_overland-to-carrick-a-toll-road-the-hill-of-uisneach-and-the.md",
+    "sort_iso": "1223-10-10T12:00",
+    "session": "2026-07-11",
+    "scene": "Fall 1223 — Ireland, the road to Carrick",
+    "title": "Overland to Carrick: a toll road, the Hill of Uisneach, and the road to Cruachan",
+    "icon": "🍀",
+    "timeline": "🍂 Fall 1223",
+    "date": "Fall 1223",
+    "cast": [
+      "Éogan Dobhartha",
+      "Dustin Page",
+      "Stijntje Kuiper"
+    ],
+    "activity_type": "Exploration",
+    "status": "Proposed",
+    "notes": "Dropped past Dublin by the Brineborn and Scholar's Wake — which then continue on to winter at the Isle of Man rather than the party itself — Éogan, Dustin, and Stijntje strike out overland for Carrick, by way of Tara, a talked-down toll stop, the Hill of Uisneach, and the threshold lands around Cruachan.",
+    "source": "Transcript 2026-07-11 — Dublin-to-Carrick travel montage.",
+    "body_text": "The **Brineborn** and **Scholar's Wake** drop the party just past **Dublin**, then continue up the coast to **Drogheda** to spare them the walk before turning off to winter at the **Isle of Man** — the crews, not the travelers; the plan is to reconvene back in Dublin once the ice breaks in spring.\nHeading inland toward the **Hill of Tara** — the seat of the Hibernian Tribunal's own meeting-place, ringed by burial mounds Éogan has seen before as an apprentice — the party is stopped by **three armed men** on the road, plausibly a toll, plausibly closer to banditry.\n**Éogan talks them down entirely** — a Communication roll in Gaelic using his travel-jargon specialty, dropping into the local dialect convincingly enough that the toll-men immediately clock him as native to the area and wave the group through, half-apologizing for having pegged them as an easy foreign mark.\nAn Intelligence-based **Ireland/magical-sites** check (very strong roll) turns up the **Hill of Uisneach** just off the route — a site of old fire festivals and bird-flight divination, especially potent for reading the coming winter's severity when visited in the fall. The party detours to stop there.\nContinuing deeper toward **Cruachan**, close to Samhain, the land shifts character — genuine threshold territory, \"the monstrous, the uncanny, the underworld\" close to the surface. Éogan tells Stijntje ghost-stories about **Fomorians** still lurking in the forests, partly to keep her steering clear of exactly the places that need steering clear of.\nCruachan itself isn't a proper Hermetic covenant — scattered **magical enclaves**, some temporary, some closer to permanent ritual-farming settlements. Hermetic magi are treaty-bound to **no more than three days at a time** inside Connacht itself, so the party keeps their stop brief before pushing on north to winter at **Carrick**."
+  },
+  {
+    "id": "p059",
+    "file": "059_2026-07-11_wintering-at-carrick-a-border-fortress-town-and-an-idiosyncr.md",
+    "sort_iso": "1223-11-01T12:00",
+    "session": "2026-07-11",
+    "scene": "Fall/Winter 1223 — settling into Carrick",
+    "title": "Wintering at Carrick: a border fortress town, and an idiosyncratic Bonisagus",
+    "icon": "🏰",
+    "timeline": "❄️ Winter 1223-24",
+    "date": "Winter 1223-24",
+    "cast": [
+      "Éogan Dobhartha",
+      "Dustin Page",
+      "Stijntje Kuiper"
+    ],
+    "activity_type": "Atmosphere",
+    "status": "Proposed",
+    "notes": "Carrick turns out to be a strategic chokepoint disproportionately fortified for its size. Dustin spends the winter soaking up language and culture with Éogan translating; en route they pass a Bonisagus magus whose narrow, idiosyncratic focus on a handful of Arts baffles Dustin.",
+    "source": "Transcript 2026-07-11 — arrival and settling into Carrick.",
+    "body_text": "**Carrick**, though a small town, sits at a geographic **bottleneck** along the northern valley route through Ireland — the natural corridor an English invasion would have to funnel through — and is built up militarily well beyond what its population would otherwise justify. Not because it defends anything valuable in itself, but because whoever holds it can stall an advance.\nInterior Ireland reads less like a melting pot and more like a **salad bowl** — communities half a mile apart keeping fiercely distinct dialects, folklore, and even magical idiosyncrasies, without necessarily being hostile to their neighbors. On the way in, the party passes a **Bonisagus magus** who has narrowed his entire practice down to a handful of Arts and Techniques, to the flat exclusion of everything else — a decision that reads as arbitrary rather than tactical, and leaves Dustin quietly baffled.\n**Dustin** spends his downtime soaking in language and culture (beyond his tutoring obligations); **Éogan** acts as willing translator and uses the time to get to know **Stijntje** better."
+  },
+  {
+    "id": "p060",
+    "file": "060_2026-07-11_continuing-the-tribunal-prize-draft-falcons-cliff-and-dagmar.md",
+    "sort_iso": "1223-11-15T12:00",
+    "session": "2026-07-11",
+    "scene": "Winter 1223-24 — Oleron",
+    "title": "Continuing the tribunal prize draft: Falcon's Cliff, and Dagmar's winter reading list",
+    "icon": "🦅",
+    "timeline": "❄️ Winter 1223-24",
+    "date": "Winter 1223-24",
+    "cast": [
+      "Dagmar"
+    ],
+    "activity_type": "Research",
+    "status": "Proposed",
+    "notes": "The tribunal prize draft continues asynchronously. The covenant adds Falcon's Cliff to its claimed vis sources, and Dagmar picks two library texts to read over the winter at Oleron — one of them a Mentem summa fit for a Criamon studying Mira/Karis's own tradition.",
+    "source": "Transcript 2026-07-11 — continuing tribunal library/resource draft.",
+    "body_text": "**Vis source claimed: Falcon's Cliff** — a falcon's nest on a coastal cliff not far northwest of the covenant's usual range, where a serpent tries to steal the egg each year. Preventing the theft yields Animal vis; catching the snake after a successful theft yields Vim instead. Flagged as one of the most conveniently reachable options on offer.\n**Library texts claimed:** \"**The Compact Explained**\" (a tractatus on Order of Hermes Lore) and \"**The Babble Within Thought**\" (a Mentem summa, Level 12 · Quality 11) — the latter picked specifically as a Criamon-relevant text.\n**Winter reading plan at Oleron:** Dagmar splits two seasons of study — **The Babble Within Thought** in Fall, and a personal loan from **Karis** (his old Dimicatio-final rival, now something like a mentor-in-residence at Oleron) in Winter."
+  },
+  {
+    "id": "p061",
+    "file": "061_2026-07-11_kariss-parting-gift-erroneous-meditations-on-the-enigma.md",
+    "sort_iso": "1223-12-15T12:00",
+    "session": "2026-07-11",
+    "scene": "Winter 1223-24 — Oleron",
+    "title": "Karis's parting gift: Erroneous Meditations on the Enigma",
+    "icon": "🔮",
+    "timeline": "❄️ Winter 1223-24",
+    "date": "Winter 1223-24",
+    "cast": [
+      "Dagmar"
+    ],
+    "activity_type": "Research",
+    "status": "Proposed",
+    "notes": "Karis warms up to Dagmar over the winter, eventually lending him a personal — and, per Karis, worthless — text. A strong Premonitions read reveals it as something else entirely: an extraordinarily detailed account, in diary form, of someone who vanished and came back. The parallel to Solving's own disappearance is not subtle.",
+    "source": "Transcript 2026-07-11 — Dagmar and Karis at Oleron, 'Erroneous Meditations on the Enigma.'",
+    "body_text": "Dagmar spent much of the winter trying — and, for a long stretch, failing — to get Karis to engage socially at all; the Criamon magus ignored him outright for what felt like weeks before finally acknowledging him with a blunt \"has the library been suitable for your work?\"\nOnce engaged, Karis proved genuinely willing to talk shop, using an archer's metaphor for the Enigma: aim close and small errors don't matter, but aim at something near the horizon and the same small error becomes miles of drift — and some magi, having only ever aimed close, mistake confidence for precision.\nKaris eventually lent Dagmar a personal text, dismissively titled **\"Erroneous Meditations on the Enigma\"** — his own tone throughout is some version of \"I already told you it's worthless, but if it makes you stop asking, fine.\"\n**Dagmar's Premonitions roll came back exceptional.** The text reads like a diary — someone trying to articulate an experience with the logical throughlines missing, the way a dream account never quite holds together. Whatever else it is, it's an **extremely high-resolution single data point** on someone who **disappeared and returned**, trying to describe what happened to them.\nUnstated but obvious at the table: this is close kin to the covenant's own defining mystery — **Solving's disappearance into Twilight** in 1220, and the possibility he could still return the same way this account's author apparently did. Dagmar is very interested; this may become his next research thread."
+  },
+  {
+    "id": "p062",
+    "file": "062_2026-07-11_the-changeling-boy-roadie.md",
+    "sort_iso": "1224-04-15T12:00",
+    "session": "2026-07-11",
+    "scene": "Spring 1224 — the return through Cruachan",
+    "title": "The changeling boy: Roadie",
+    "icon": "👶",
+    "timeline": "🌼 Spring 1224",
+    "date": "Spring 1224",
+    "cast": [
+      "Éogan Dobhartha",
+      "Dustin Page",
+      "Stijntje Kuiper"
+    ],
+    "activity_type": "Intrigue",
+    "status": "Proposed",
+    "notes": "Passing back through Cruachan, a hedge mage hands Éogan a young Gifted boy to deliver onward, as custom apparently allows. Days into the journey, Éogan works out the boy isn't human at all — and Stijntje independently starts to suspect the same. The party chooses discretion over confrontation, and a real missing child's fate is left to the receiving mages.",
+    "source": "Transcript 2026-07-11 — 'Roadie' the changeling, delivery through Cruachan.",
+    "body_text": "On the way back through Cruachan, before Samhain-season traffic, a **hedge mage** approaches Éogan with a young boy in tow and asks outright whether he's a Hermetic magus. On confirming, the hedge mage hands the boy over with no more ceremony than \"he's a little late, but he's owed delivery\" to the Hermetic covenant near the Hill of Uisneach — and simply trusts that presenting a Hermetic magus with the boy counts as fulfilling the obligation, no receipt required. Éogan accepts him.\n**The boy: \"Roadie,\" roughly eight and a half.** Talkative, unbothered, and matter-of-fact about his circumstances — his older brother was Gifted too, and was \"eaten by goblins\" before he could be handed over; Roadie was collected a couple of months later as, presumably, the replacement delivery. He's more curious than distressed, and will happily talk anyone's ear off given the chance — including several increasingly creative insults about how badly **Dustin** smells, which read less like genuine complaint and more like Roadie converting general unease into something he can weaponize.\nDays into the return journey, **Éogan's Fairy Lore roll** (with his usual bonus to social rolls involving fae) catches something off in Roadie's sleep — irregular breathing, joints bending the wrong way, an arm folded under him at an angle a human wouldn't hold. **Roadie is a changeling.**\nÉogan brings this to Dustin privately. Later the same day, unprompted, **Stijntje independently confronts Dustin**: \"why are you so concerned about Roadie... he's a creature, he's not a boy.\" Dustin deflects (a successful Communication/Leadership roll) without fully shutting her down — her curiosity is \"latent,\" not resolved.\n**The decision:** not force (too risky without an inescapable trap already laid — floated a salt circle as a fallback), not confrontation, not trade for now. The party completes the delivery as tasked, but plans to quietly brief the receiving Hermetic magi on their suspicion, reasoning this isn't their tribunal or their specialty to solve. **Open thread:** the actual Gifted child this changeling replaced is still out there somewhere with the Fae, and nobody the party trusts to find him has been told yet."
+  },
+  {
+    "id": "p063",
+    "file": "063_2026-07-11_dagmars-falcons-cliff-harvest.md",
+    "sort_iso": "1224-04-01T12:00",
+    "session": "2026-07-11",
+    "scene": "Spring 1224 — the Falcon's Cliff harvest",
+    "title": "Dagmar's Falcon's Cliff harvest",
+    "icon": "🦅",
+    "timeline": "🌼 Spring 1224",
+    "date": "Spring 1224",
+    "cast": [
+      "Dagmar"
+    ],
+    "activity_type": "Vis Harvesting",
+    "status": "Proposed",
+    "notes": "Heading north from Oleron, Dagmar stops to harvest the newly claimed Falcon's Cliff vis source — a clean, well-executed capture with a strong yield.",
+    "source": "Transcript 2026-07-11 — Falcon's Cliff harvest.",
+    "body_text": "En route north from Oleron, Dagmar stops to work the newly claimed **Falcon's Cliff** vis source — timed to the falcon's annual clutch, where a serpent tries to steal the egg each year.\n**Method:** an Intellego effect to pinpoint the nest and egg precisely, grogs stationed at range around the site, and **Eyes of the Eagle** to spot the serpent's approach and signal the grogs in time to intercept and capture it alive (uncertain at the time whether the vis-bearing material needed the creature dead or alive — it turned out either the egg or the captured snake could be converted afterward via a bit of magical working).\n**Result: a clean success** — a strong \"even/odd\" roll came up favorably, yielding a hearty six weeks' worth of vis from the harvest."
+  },
+  {
+    "id": "p064",
+    "file": "064_2026-07-11_a-hidden-regio-near-carnac.md",
+    "sort_iso": "1224-04-20T12:00",
+    "session": "2026-07-11",
+    "scene": "Spring 1224 — a discovery off Carnac",
+    "title": "A hidden regio near Carnac",
+    "icon": "🧭",
+    "timeline": "🌼 Spring 1224",
+    "date": "Spring 1224",
+    "cast": [
+      "Dagmar"
+    ],
+    "activity_type": "Exploration",
+    "status": "Proposed",
+    "notes": "Continuing his coastal survey between Fudarus and Confluensis territory, Dagmar's Eyes of the Eagle roll comes back an outrageous 52 and turns up a low-profile regio in sea caves near Carnac — apparently unnoticed by Carnac itself. He opts to explore it solo with grogs rather than loop the covenant in, expecting to be blamed for something regardless. Cliffhanger for next session.",
+    "source": "Transcript 2026-07-11 — regio discovery near Carnac, session cliffhanger.",
+    "body_text": "Continuing north from the Falcon's Cliff harvest, Dagmar resumes the **regio survey** he'd heard rumors about at the Tribunal, working the stretch of coast **between Fudarus and Confluensis** territory.\n**Method:** Eyes of the Eagle (plus an aura bonus) to scan for the tell-tale visual distortion of a regio boundary at long range — deliberately steering wide of Carnac itself along the way, since Dagmar's been avoiding known covenants' territory generally.\n**The roll: 52.** Far and away the highest number rolled at this table to date. The result: sea caves under the cliffs near Carnac, giving off a regio signature described as **a mirror-flash rather than a broadcast** — undetectable at normal range, and seemingly unnoticed by Carnac itself, whose own local aura reads as unremarkable. Getting inside means rowing into the caves.\n**Decision:** rather than loop Carnac in and risk a diplomatic mess (\"I'll just cut to the chase of them blaming us for something\"), Dagmar takes a handful of grogs and explores by rowboat alone. **To be continued** — the GM flagged this as something to develop further before the next session."
   }
 ]

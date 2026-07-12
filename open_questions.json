@@ -320,6 +320,85 @@
       "raised_event": "Dietrich pitches folk magic to scholars and a Redcap; Dustin interrogates him",
       "status": "Open",
       "resolution": ""
+    },
+
+    {
+      "id": "q018",
+      "type": "Question",
+      "category": "Rules",
+      "title": "Where did the mystery 15 XP (\"an unending supply of 11xp\") come from?",
+      "context": "Flagged live by the GM during Fall 1223 XP allocation — a stray, unexplained pool of pending experience showed up on at least one character sheet. The GM made a note to chase it down rather than let it get spent without knowing the source.",
+      "raised_in": "Session 8 (2026-07-11)",
+      "raised_event": "Tribunal experience spent: Finesse, an Aquam push, and a magic-theory boost",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "q019",
+      "type": "Question",
+      "category": "Rules",
+      "title": "Does Ka'wa'ill need his own token to pass the Aegis of the Hearth?",
+      "context": "The Aegis is specifically designed to exclude magical creatures — and Ka'wa'ill, the merfolk companion, is one. Wilhelm (a non-covenant human) gets a token via Éogan's Arcane Connection; it's unclear whether the same trick works for, or is even offered to, Ka'wa'ill.",
+      "raised_in": "Session 8 (2026-07-11)",
+      "raised_event": "Casting the annual Aegis of the Hearth near Harfleur",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "q020",
+      "type": "Question",
+      "category": "World Detail",
+      "title": "Does the Hound of Cassel ever get added to the Master Chart?",
+      "context": "As of the Fall 1223 Aegis casting, the Hound of Cassel isn't tracked by the Master Chart and so isn't covered by the annual renewal — flagged at the table with a knowing \"I'm sure that won't come up.\" Worth confirming whether this ever gets fixed, or stays a standing vulnerability.",
+      "raised_in": "Session 8 (2026-07-11)",
+      "raised_event": "Casting the annual Aegis of the Hearth near Harfleur",
+      "status": "Open",
+      "resolution": ""
+    },
+
+    {
+      "id": "t022",
+      "type": "Thread",
+      "category": "Research",
+      "title": "\"Erroneous Meditations on the Enigma\" reads like an account of vanishing and returning — echoing Solving.",
+      "context": "Karis's loaned text is, per an exceptional Premonitions read, an extremely detailed diary-style account of someone who disappeared and came back, with the causal throughlines missing the way a dream account's would be. The parallel to Solving's own 1220 disappearance into Twilight is obvious and unaddressed in-fiction so far.",
+      "raised_in": "Session 8 (2026-07-11)",
+      "raised_event": "Karis's parting gift: Erroneous Meditations on the Enigma",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t023",
+      "type": "Thread",
+      "category": "Plot",
+      "title": "A real Gifted child is still missing, taken by the Fae — Roadie was the replacement.",
+      "context": "The party chose not to interrogate or trade with the changeling directly, planning instead to quietly brief the receiving Hermetic magi near the Hill of Uisneach once the delivery completes. Whether that briefing happens, and whether anyone actually goes looking for the real child, is entirely unresolved.",
+      "raised_in": "Session 8 (2026-07-11)",
+      "raised_event": "The changeling boy: Roadie",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t024",
+      "type": "Thread",
+      "category": "World Detail",
+      "title": "Whose \"sea snake\" is up in the North Sea, and what is it?",
+      "context": "Raised in passing while coordinating the Aegis-casting meetup near Harfleur — one character has a \"sea snake\" currently up in the North Sea, on a different heading from the rest of the fleet's Channel rendezvous. Never clarified whose it is or what it actually is (mount, familiar, magic item).",
+      "raised_in": "Session 8 (2026-07-11)",
+      "raised_event": "Casting the annual Aegis of the Hearth near Harfleur",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t025",
+      "type": "Thread",
+      "category": "World Detail",
+      "title": "The regio near Carnac is still unexplored.",
+      "context": "Dagmar's spring 1224 coastal survey turned up sea caves under a low-profile regio near Carnac (apparently unnoticed by Carnac itself), on the strength of a 52 Eyes of the Eagle roll. He opted to row in solo with grogs rather than involve Carnac or the wider covenant. The GM explicitly flagged this as something to develop further before the next session — nothing inside has been described yet.",
+      "raised_in": "Session 8 (2026-07-11)",
+      "raised_event": "A hidden regio near Carnac",
+      "status": "Open",
+      "resolution": ""
     }
   ]
 }
