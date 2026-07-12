@@ -287,12 +287,12 @@
       "affiliation": "Maelstrom's Maw — missing",
       "note": "Last known working on a giant hovering stone platform; missing along with the ship."
     },
-    "Karis": {
+    "Caris": {
       "role": "Magus (Criamon)",
       "affiliation": "Oleron",
       "note": "Dagmar's Dimicatio-final rival, now a prickly mentor-in-residence at Oleron. Lent Dagmar a personal text, \"Erroneous Meditations on the Enigma,\" that turned out to be an unusually detailed account of someone who vanished and returned."
     },
-    "Roadie": {
+    "Rody": {
       "role": "Changeling (posing as a Gifted child)",
       "affiliation": "Handed off near Cruachan, en route to the Hermetic covenant near the Hill of Uisneach",
       "note": "About eight and a half, talkative and unbothered. Éogan identified him as a changeling via Fairy Lore; the real Gifted child he replaced is still unaccounted for."
@@ -398,7 +398,7 @@
       "id": "s1224-spring-pickups",
       "label": "Spring 1224 — thaw and pickups (in progress)",
       "sort_iso": "1224-04-01T00:00",
-      "note": "Still developing at the table as of the 2026-07-11 session — treat as provisional. Dagmar heads north from Oleron working vis sources and a new regio lead solo with grogs by rowboat; Éogan/Dustin/Stijntje start back through Cruachan toward Dublin, now with a changeling child, Roadie, in tow.",
+      "note": "Still developing at the table as of the 2026-07-11 session — treat as provisional. Dagmar heads north from Oleron working vis sources and a new regio lead solo with grogs by rowboat; Éogan/Dustin/Stijntje start back through Cruachan toward Dublin, now with a changeling child, Rody, in tow.",
       "assignments": [
         {
           "ship": "tide-of-memory",
@@ -408,7 +408,7 @@
         {
           "ship": "brineborn",
           "crew": ["Éogan Dobhartha", "Dustin Page", "Stijntje Kuiper"],
-          "note": "Return leg through Cruachan toward Dublin to reconvene with the ships once the ice breaks — now traveling with Roadie, a changeling child being delivered to the Hermetic covenant near the Hill of Uisneach. Wilhelm's whereabouts this leg aren't confirmed (not covered in this session)."
+          "note": "Return leg through Cruachan toward Dublin to reconvene with the ships once the ice breaks — now traveling with Rody, a changeling child being delivered to the Hermetic covenant near the Hill of Uisneach. Wilhelm's whereabouts this leg aren't confirmed (not covered in this session)."
         }
       ]
     }
