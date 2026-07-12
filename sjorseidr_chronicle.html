@@ -58,6 +58,8 @@ header{display:flex;align-items:center;gap:16px;padding:16px 4px 12px;border-bot
 .fbtn .ct{display:inline-block;margin-left:5px;padding:0 5px;border-radius:8px;font-size:10px;
   background:rgba(120,90,40,.18);color:var(--ink-soft);font-weight:600;border:1px solid rgba(120,90,40,.25)}
 .fbtn.on .ct{background:rgba(255,246,223,.28);color:#fff6df;border-color:rgba(255,246,223,.5)}
+.fbtn-more{font-style:italic;background:transparent;border-style:dashed;color:var(--gold)}
+.fbtn-more:hover{background:rgba(154,107,31,.12);color:var(--ink)}
 #typeFilter{display:flex;flex-wrap:wrap;gap:6px;flex:1 1 auto;align-items:center}
 .search{flex:1;min-width:180px;font-family:'EB Garamond',serif;font-size:13px;
   padding:5px 10px;border:1px solid rgba(120,90,40,.35);border-radius:6px;
@@ -264,6 +266,8 @@ function seasonGameYear(s){ return s ? s.yearStart : null; }
 let VERIFIED = [];
 let PROPOSED = [];
 let filter = {type:'all', q:''};
+let typeFilterExpanded = false;
+const TYPE_FILTER_COLLAPSED_COUNT = 6;
 
 /* ============================================================
    ACTIVITY-TYPE NORMALISATION
@@ -316,15 +320,40 @@ function renderTypeFilter(){
   const total = [...counts.values()].reduce((a,b)=>a+b,0);
   // Sort by descending count, alphabetical tiebreak.
   const ordered = [...counts.entries()].sort((a,b)=>b[1]-a[1] || a[0].localeCompare(b[0]));
+
+  let visible = ordered;
+  let hiddenCount = 0;
+  if(!typeFilterExpanded && ordered.length > TYPE_FILTER_COLLAPSED_COUNT){
+    visible = ordered.slice(0, TYPE_FILTER_COLLAPSED_COUNT);
+    // Keep the active filter visible even when collapsed, so its state
+    // (and the ability to click it off again) is never hidden from view.
+    if(filter.type!=='all' && !visible.some(([t])=>t===filter.type)){
+      const active = ordered.find(([t])=>t===filter.type);
+      if(active) visible = [...visible, active];
+    }
+    hiddenCount = ordered.length - visible.length;
+  }
+
   const chips = [
     `<button class="fbtn ${filter.type==='all'?'on':''}" data-type="all">All <span class="ct">${total}</span></button>`,
-    ...ordered.map(([t,n])=>`<button class="fbtn ${filter.type===t?'on':''}" data-type="${esc(t)}">${esc(t)} <span class="ct">${n}</span></button>`)
+    ...visible.map(([t,n])=>`<button class="fbtn ${filter.type===t?'on':''}" data-type="${esc(t)}">${esc(t)} <span class="ct">${n}</span></button>`)
   ];
+  if(!typeFilterExpanded && hiddenCount > 0){
+    chips.push(`<button class="fbtn fbtn-more" id="typeFilterMore">+${hiddenCount} more ▾</button>`);
+  } else if(typeFilterExpanded && ordered.length > TYPE_FILTER_COLLAPSED_COUNT){
+    chips.push(`<button class="fbtn fbtn-more" id="typeFilterMore">Show less ▴</button>`);
+  }
+
   $('#typeFilter').innerHTML = chips.join('');
-  $$('#typeFilter .fbtn').forEach(b=>b.onclick=()=>{
+  $$('#typeFilter .fbtn[data-type]').forEach(b=>b.onclick=()=>{
     filter.type = b.dataset.type;
     render();
   });
+  const moreBtn = $('#typeFilterMore');
+  if(moreBtn) moreBtn.onclick = ()=>{
+    typeFilterExpanded = !typeFilterExpanded;
+    render();
+  };
 }
 
 $('#search').oninput = e=>{filter.q=e.target.value;clearTimeout(window._st);window._st=setTimeout(render,180);};
@@ -365,7 +394,8 @@ function bucketAll(){
 function render(){
   renderTypeFilter();
   const seasons = bucketAll();
-  const keys = Object.keys(seasons).map(Number).sort((a,b)=>a-b);
+  // Descending: most recent season first, working back into the past.
+  const keys = Object.keys(seasons).map(Number).sort((a,b)=>b-a);
 
   // Build a stable timeline spine from the union of all (unfiltered) seasons.
   const spineSet = new Map();
@@ -376,7 +406,7 @@ function render(){
   if(spineSet.size===0){
     keys.forEach(k=>spineSet.set(k, seasons[k].parsed));
   }
-  const spine = Array.from(spineSet.entries()).sort((a,b)=>a[0]-b[0]).map(([k,s])=>({k,s}));
+  const spine = Array.from(spineSet.entries()).sort((a,b)=>b[0]-a[0]).map(([k,s])=>({k,s}));
 
   renderTimeline(spine, seasons);
 
@@ -519,10 +549,12 @@ function renderSeason(s, id){
   if(s.verified.length===0 && s.proposed.length===0){
     body = `<div class="empty-season">No events.</div>`;
   } else {
-    // Merge verified + proposed and order strictly by in-game datetime.
+    // Merge verified + proposed and order strictly by in-game datetime,
+    // most recent first (descending) to match the chronicle's overall
+    // most-recent-at-top ordering.
     // Verified entries keep their solid border; proposed keep the dashed
     // purple frame so the two are still visually distinct while interleaved.
-    const merged = [...s.verified, ...s.proposed].sort(byChron);
+    const merged = [...s.verified, ...s.proposed].sort((a,b)=>byChron(b,a));
     body += `<div class="scene-h">${merged.length} event${merged.length===1?'':'s'}, in chronological order — ${s.verified.length} verified, ${s.proposed.length} proposed</div>`;
 
     const isTribunalSeason = s.label && s.label.indexOf('Summer 1223') !== -1;
