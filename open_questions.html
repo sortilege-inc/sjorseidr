@@ -72,7 +72,9 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .qcard.type-question{border-left-color:var(--rust-bright)}
 .qcard.type-thread{border-left-color:var(--teal)}
 .qcard.type-consequence{border-left-color:var(--purple)}
+.qcard.type-tool{border-left-color:var(--green)}
 .qcard.resolved{opacity:.65}
+.qcard.flagged-delete{box-shadow:0 0 0 1.5px rgba(181,74,50,.45), 0 2px 6px var(--shadow)}
 .qcard-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:6px}
 .qtags{display:flex;gap:6px;flex-wrap:wrap}
 .qtag{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;
@@ -80,7 +82,9 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .qtag.type-question{background:rgba(181,74,50,.14);color:var(--rust-bright);border:1px solid rgba(181,74,50,.35)}
 .qtag.type-thread{background:rgba(44,107,102,.16);color:var(--teal);border:1px solid rgba(44,107,102,.35)}
 .qtag.type-consequence{background:rgba(91,58,138,.16);color:var(--purple);border:1px solid rgba(91,58,138,.4)}
+.qtag.type-tool{background:rgba(62,107,53,.16);color:var(--green);border:1px solid rgba(62,107,53,.4)}
 .qtag.cat{background:rgba(120,90,40,.15);color:var(--ink-soft);border:1px solid rgba(120,90,40,.25)}
+.qtag.status-delete{background:rgba(181,74,50,.22);color:var(--rust-bright);border:1px solid rgba(181,74,50,.55);font-weight:600}
 .qquestion{font-weight:600;font-size:16.5px;line-height:1.35;margin:0 0 6px}
 .qcontext{font-size:14px;line-height:1.5;color:var(--ink-soft);margin:0 0 8px}
 .qmeta{font-size:12px;color:var(--ink-soft);font-style:italic}
@@ -170,8 +174,8 @@ const $$ = s=>Array.from(document.querySelectorAll(s));
 const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const LS_KEY = 'sjorseidr_open_questions_v2';
-const TYPE_ORDER = ['Question','Thread','Consequence'];
-const TYPE_ICON = {Question:'❓', Thread:'🧵', Consequence:'⚖️'};
+const TYPE_ORDER = ['Question','Thread','Consequence','Tool'];
+const TYPE_ICON = {Question:'❓', Thread:'🧵', Consequence:'⚖️', Tool:'🔧'};
 let STATE = null;
 let activeType = 'all';
 let filter = {category:'all', status:'all'};
@@ -228,6 +232,7 @@ function renderTypeTabs(){
     Question: STATE.meta.types.Question,
     Thread: STATE.meta.types.Thread,
     Consequence: STATE.meta.types.Consequence,
+    Tool: STATE.meta.types.Tool,
     reference: 'Prepared but unused GM material — a home-port NPC roster, a sea-fae bestiary, and a Criamon riddle bank. Reference, not resolution-tracked.',
   };
   $('#typeDesc').textContent = descs[activeType];
@@ -236,7 +241,7 @@ function renderTypeTabs(){
 function renderFilterbar(){
   const cats = ['all', ...categories()];
   const catBtns = cats.map(c=>`<button class="fbtn ${filter.category===c?'on':''}" data-cat="${esc(c)}">${c==='all'?'All Categories':esc(c)}</button>`).join('');
-  const statuses = ['all','Open','Resolved'];
+  const statuses = ['all','Open','Confirm to delete','Resolved'];
   const statusBtns = statuses.map(s=>`<button class="fbtn ${filter.status===s?'on':''}" data-status="${esc(s)}">${s==='all'?'All Status':esc(s)}</button>`).join('');
   const pool = activeType==='all' ? STATE.items : STATE.items.filter(i=>i.type===activeType);
   const openCount = pool.filter(q=>q.status!=='Resolved').length;
@@ -252,13 +257,15 @@ function renderFilterbar(){
 
 function qCard(q){
   const resolved = q.status === 'Resolved';
+  const flaggedDelete = q.status === 'Confirm to delete';
   const tc = typeClass(q.type);
   const resolveLabel = q.type === 'Question' ? 'Answered' : (q.type === 'Thread' ? 'Picked up' : 'Resolved');
-  return `<div class="qcard ${tc} ${resolved?'resolved':''}" data-id="${esc(q.id)}">
+  return `<div class="qcard ${tc} ${resolved?'resolved':''} ${flaggedDelete?'flagged-delete':''}" data-id="${esc(q.id)}">
     <div class="qcard-top">
       <div class="qtags">
         <span class="qtag ${tc}">${TYPE_ICON[q.type]} ${esc(q.type)}</span>
         <span class="qtag cat">${esc(q.category)}</span>
+        ${flaggedDelete ? `<span class="qtag status-delete">🗑️ Confirm to delete</span>` : ''}
       </div>
       <div class="qanswer-toggle">
         <input type="checkbox" id="chk-${esc(q.id)}" ${resolved?'checked':''}>

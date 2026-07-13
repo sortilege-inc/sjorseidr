@@ -182,6 +182,18 @@ function renderTrade(){
     </div>
   `).join('');
   const bank = tg.banking || {};
+  const sc = tg.shipCosts || {};
+  const shipRows = (sc.ships||[]).map(s=>`
+    <div class="goods-region">
+      <h4>${esc(s.name)}${s.tag ? ` <span class="gaz-place-tag">— ${esc(s.tag)}</span>` : ''}</h4>
+      <ul>
+        ${s.capacity ? `<li><strong>Capacity:</strong> ${esc(s.capacity)}</li>` : ''}
+        ${s.crew ? `<li><strong>Crew:</strong> ${esc(s.crew)}</li>` : ''}
+        ${s.cost ? `<li><strong>Cost:</strong> ${esc(s.cost)}</li>` : ''}
+      </ul>
+      ${s.notes ? `<p>${esc(s.notes)}</p>` : ''}
+    </div>
+  `).join('');
   return `
     <div class="section">
       <div class="section-title">${esc(tg.title||'')}</div>
@@ -192,6 +204,12 @@ function renderTrade(){
       <div class="section-title">${esc(bank.title||'')}</div>
       <p class="note-flag">${esc(bank.note||'')}</p>
       <ul class="hazard-list">${(bank.points||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
+    </div>
+    <div class="section">
+      <div class="section-title">${esc(sc.title||'')}</div>
+      <p class="note-flag">${esc(sc.note||'')}</p>
+      <div class="goods-grid">${shipRows}</div>
+      ${sc.upkeepNote ? `<p class="note-flag">${esc(sc.upkeepNote)}</p>` : ''}
     </div>
   `;
 }

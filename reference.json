@@ -238,6 +238,37 @@
         "Jewish financiers provided vital financial services in many North Sea towns, especially in England and the Low Countries, often under the protection (and taxation) of kings or lords.",
         "Merchants borrowed capital to outfit ships or buy goods in bulk; profit-sharing ventures (an early investment partnership) were common in Hanseatic and Flemish contexts."
       ]
+    },
+    "shipCosts": {
+      "title": "Ship Costs (Ars Magica context)",
+      "note": "Rough pricing for the hull types most relevant to the covenant's own fleet, standard craftsmanship assumed — exceptional features (faerie wood, hidden compartments, sea-weathering enchantments) can double the cost or more.",
+      "ships": [
+        {
+          "name": "Knarr",
+          "tag": "Norse cargo vessel, coastal/oceanic",
+          "capacity": "~20–30 tons",
+          "crew": "~8–15",
+          "cost": "500–800 silver pennies (~5–8 Mythic Pounds)",
+          "notes": "Used for long-haul trade, sturdy in rough waters."
+        },
+        {
+          "name": "Cog",
+          "tag": "Early medieval merchant vessel — like the covenant's own ships",
+          "capacity": "80–125 tons",
+          "crew": "~12–30",
+          "cost": "2,000–4,000 silver pennies (~20–40 Mythic Pounds)",
+          "notes": "High-sided, with a single sail; ideal for North Sea travel."
+        },
+        {
+          "name": "Longship",
+          "tag": "Military-focused, shallow draft",
+          "capacity": "Small cargo, but fast and maneuverable",
+          "crew": "",
+          "cost": "15–25 Mythic Pounds",
+          "notes": "Sleek and intimidating, but less suited for hauling cargo."
+        }
+      ],
+      "upkeepNote": "Ongoing upkeep — crew wages, dock fees, repairs, and cargo insurance — runs 1–3 Mythic Pounds per season as a baseline."
     }
   },
   "gazetteer": {
