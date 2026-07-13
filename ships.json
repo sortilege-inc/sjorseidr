@@ -113,7 +113,7 @@
       "owner": "Wilhelm Stienauer (disposition undecided)",
       "status": "Reassigned",
       "description": "Confirmed: this is the ship pirated from Scarem Montem — a Tremere-crewed vessel, raided by Valdemar's crew in Summer 1221. Yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. Its fate sat undecided for years; Wilhelm is now set to effectively gain the ship, either to use outright or as a trade chip — handing Scarem Montem back their own hull in exchange for his stolen thesis.",
-      "standing_crew": []
+      "standing_crew": ["Wilhelm Stienauer"]
     }
   ],
   "characters": {
@@ -173,7 +173,7 @@
       "note": "One of two field researchers who study folk practitioners in situ."
     },
     "Dietrich": {
-      "role": "NPC, mundane",
+      "role": "Companion",
       "affiliation": "Wilhelm Stienauer's brother",
       "note": "Professor of medicine and philosophy at a Cologne cathedral school; a gifted rhetorician defending the folk-magic thesis."
     },
@@ -198,9 +198,9 @@
       "note": "\"Completely legitimate sailor\"; home-circle defender in the Tribunal grog melee."
     },
     "Garrat Coffin": {
-      "role": "Grog",
+      "role": "Companion",
       "affiliation": "Veðrdreki (Storm Dragon)",
-      "note": "Combat grog; also fought in the Hound of Cassel raid and the grog melee. (Chronicle's older text ties him to the Brineborn — see open question on the discrepancy.)"
+      "note": "Fought in the Hound of Cassel raid and the grog melee. (Chronicle's older text ties him to the Brineborn — see open question on the discrepancy.)"
     },
     "Giden": {
       "role": "Grog",
@@ -278,7 +278,7 @@
       "note": "Cheerful and curious; has taken to life among magi with unusual ease."
     },
     "Marina": {
-      "role": "Crew",
+      "role": "Magus",
       "affiliation": "The Gloaming (former covenant ship)",
       "note": ""
     },

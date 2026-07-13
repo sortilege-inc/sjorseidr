@@ -15,7 +15,7 @@ server-side code. Open [`index.html`](index.html) to get around.
 | [`tribunal_workbook.html`](tribunal_workbook.html) | `tribunal_data.json` | Editable scoring workbook — vis sources, library prizes, tournament brackets/tally, and a "Prizes Claimed So Far" rollup. Edits autosave to `localStorage`; Save downloads an updated JSON. |
 | [`normandy_tribunal_reference.html`](normandy_tribunal_reference.html) | — | Static reference catalogue of the Tribunal's vis sources and library holdings (source for `tribunal_data.json`'s vis/library sections). |
 | [`open_questions.html`](open_questions.html) | `open_questions.json` | The Storyteller page — split into **Questions** (need a GM ruling), **Threads** (dangling narrative hooks), and **Consequences** (already happened, fallout pending). Editable resolution status, same autosave/Save pattern as the workbook. |
-| [`ships.html`](ships.html) | `ships.json`, `magi.json`, `ship_details.json` | Fleet & crew roster — time-based crew snapshots plus an "All Ships" reference tab covering the full fleet history (including lost/retired hulls). Click a crew member for a sidebar card: the six magi get a full Foundry-sourced stat sheet (`magi.json`), everyone else gets the lightweight note card from `ships.json`'s `characters{}`. The "All Ships" cards also carry each ship's hull dimensions, enchanted devices, and laboratory stats (`ship_details.json`), Foundry-sourced. |
+| [`ships.html`](ships.html) | `ships.json`, `magi.json`, `npcs.json`, `ship_details.json` | Fleet & crew roster — time-based crew snapshots plus an "All Ships" reference tab covering the full fleet history (including lost/retired hulls). Click a crew member for a sidebar card: the six PC magi (`magi.json`) and 32 grogs/companions/NPC magi (`npcs.json`) get a full Foundry-sourced stat sheet; the 3 remaining names with no Foundry sheet (Hilda, Karl, Rody) get the lightweight note card from `ships.json`'s `characters{}`. Crew chips are color-coded by category (PC magus / NPC magus / companion / grog / other). The "All Ships" cards also carry each ship's hull dimensions, enchanted devices, and laboratory stats (`ship_details.json`), Foundry-sourced. |
 | [`covenant.html`](covenant.html) | `covenant.json` | Covenant sheet — founding year, tribunal, saga, aegis/regio, loyalty, yearly finances, and covenant-wide virtues & flaws. Meta only; library/vis/full inhabitant census stay in the workbook and `ships.json`. |
 | [`hiberian.html`](hiberian.html) | `maps/*.jpeg` | Extracted reference data + regional maps for the Hibernian Tribunal (Connacht, Leinster, Meath, Munster, Ulster), relevant to the party's Ireland arc. |
 
@@ -58,6 +58,46 @@ Portrait images for the five magi with real Foundry portraits were
 downloaded into `portraits/` (Willhelm has no portrait set in Foundry, so
 his card falls back to a placeholder glyph).
 
+`npcs.json` covers the other 32 named crew members — grogs, companions, and
+NPC magi — using the same extraction shape as `magi.json` (so the sidebar
+renders both with the same code), plus a `charType` field straight from
+Foundry (`magus`/`companion`/`grog`/`entity`/`mundane`) that also drives the
+crew-chip color coding. Unlike `magi.json`, entries are keyed by the
+`ships.json` canonical name directly (with the raw Foundry name kept in
+`foundryName`) rather than needing a separate alias map, since most of these
+32 differ from their ships.json name only by a Foundry-added descriptive
+suffix (e.g. "Pieter van Dijk" → "Pieter van Dijk - Surgeon") — `Dietrich`
+is the one real exception, filed in Foundry as "Deitrich Stienauer" (both
+a spelling and surname difference; ships.json's `characters{}` doesn't give
+him a surname). Portraits were downloaded for the 18 of 32 that had a real
+Foundry image (rest use the generic silhouette icon, same fallback as
+Willhelm's).
+
+Three names on the Fleet & Crew page have no Foundry actor at all — **Hilda**,
+**Karl**, and **Rody** — and keep the flavor-only stub card.
+
+Foundry's `charType` didn't always match `ships.json`'s prose, and GM
+review (2026-07-13) sorted out which side was right:
+- **Marina** is confirmed a magus — Foundry was right, `ships.json`'s old
+  "Crew" was stale. Updated `characters.Marina.role` to "Magus".
+- **Garrat Coffin** is confirmed a companion — Foundry was right,
+  `ships.json`'s old "Grog" was stale. Updated `characters["Garrat
+  Coffin"].role` to "Companion".
+- **Dietrich** is confirmed a companion — here Foundry was *wrong* (typed
+  `magus`); corrected by hand in `npcs.json` since there's no write
+  endpoint on the REST API to fix it at the source, so the live Foundry
+  sheet itself still says `magus`. Also confirmed: his surname is
+  Stienauer (he's Wilhelm's brother), matching the Foundry actor name
+  "Deitrich Stienauer" already used as his `foundryName`. Updated
+  `characters.Dietrich.role` to "Companion" too.
+
+**Giden** and **Rán** weren't covered by that review and are still open
+questions — Giden's Foundry `charType` is `companion` (untouched,
+unverified), and both his and Rán's sheets are otherwise essentially blank
+in Foundry (a name and a char type, zero characteristics/virtues/
+abilities) — so their sidebar cards will look sparse; that's the actual
+state of the Foundry data, not an extraction bug.
+
 `covenant.json` and `ship_details.json` were generated the same way (one-off
 script, not checked in), pulling:
 - the covenant actor (`Sjórseiðr`, subType `covenant`) for `covenant.json`'s
@@ -91,7 +131,10 @@ benefits even though its crew/lab data stays on record.
 Adamant and Hound of Cassel have no `possessionsCovenant` record in Foundry
 at all (Adamant is Valerian's personal ship, not covenant property; Hound of
 Cassel's disposition is still undecided) — Adamant does have a laboratory
-actor, Hound of Cassel has neither.
+actor, Hound of Cassel has neither. Hound of Cassel's `standing_crew` in
+`ships.json` was also empty even though its `owner` field already named
+Wilhelm — added him to `standing_crew` so he shows up as a clickable chip
+on that card too, not just unclickable owner text.
 
 The Magical Astrolabe's Item has `quantity: 5` and its description says
 "each ship in the fleet is issued with one" — per GM call, it's replicated
@@ -117,9 +160,9 @@ python3 -m http.server 8934 --directory sjorseidr
 The live Foundry world (`sjorseidr`, Ars Magica 5e / arm5e system) is
 reachable through the [FoundryVTT REST API Relay](https://foundryrestapi.com)
 when the GM has the world open and the relay module running. As of 2026-07-13
-this powers `magi.json`, `covenant.json`, and `ship_details.json` (one-time
-pulls, not a live view — see above); cross-checking open questions against
-live sheet data is still a possible future pass.
+this powers `magi.json`, `npcs.json`, `covenant.json`, and `ship_details.json`
+(one-time pulls, not a live view — see above); cross-checking open questions
+against live sheet data is still a possible future pass.
 
 - **Base URL:** `https://foundryrestapi.com`
 - **Auth:** `x-api-key: <key>` header on every request. Key is **not**
@@ -161,10 +204,10 @@ assuming a cached one is still valid.
 
 See [`open_questions.html`](open_questions.html) — it tracks the project's
 own in-fiction unknowns, not meta/tooling issues. As of this writing, the
-Fleet & Crew page's character sidebar is fully wired for the six magi
-(`magi.json`); everyone else (grogs, companions, NPCs) still gets the
-lightweight note-card stub, pending a similar data pass for non-Foundry
-cast members. Ship hull/enchanted-device/laboratory detail (`ship_details.json`)
+Fleet & Crew page's character sidebar is fully wired for the six PC magi
+(`magi.json`) and 32 more grogs/companions/NPC magi (`npcs.json`); only
+Hilda, Karl, and Rody (no Foundry sheet) still get the lightweight note-card
+stub. Ship hull/enchanted-device/laboratory detail (`ship_details.json`)
 covers 6 of the 8 ships.json entries — Adamant has a lab but no ship record,
 Hound of Cassel has neither (see the data pipeline section above for why).
 The covenant sheet (`covenant.json`) is meta-only for now — inhabitants,

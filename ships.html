@@ -245,16 +245,18 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
   </div>
   <div id="content"></div>
 
-  <footer>Full character sheets (pulled from Foundry) are wired up for the six magi. Everyone else still gets a quick-note card until fleshed out.</footer>
+  <footer>Full character sheets (pulled from Foundry) are wired up for the six PC magi and 32 more grogs, companions, and NPC magi. Hilda, Karl, and Rody have no Foundry sheet yet and still get the quick-note card.</footer>
 </div>
 
 <script>
 const $ = s=>document.querySelector(s);
 const $$ = s=>Array.from(document.querySelectorAll(s));
 const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cap = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
 
 let DATA = null;
 let MAGI = null; // name -> full sheet, keyed by exact Foundry name
+let NPCS = null; // name -> full sheet, keyed by ships.json canonical name
 let SHIP_DETAILS = null; // ships.json ship id -> hull/devices/lab detail
 let FLEET_NOTE = null;
 let activeTab = null; // snapshot id, or 'all-ships'
@@ -273,17 +275,30 @@ function findMagus(name){
   return null;
 }
 
+// Returns {sheet, kind:'magus'|'npc'} for anyone with a real Foundry sheet, else null.
+function findCharacterSheet(name){
+  const magus = findMagus(name);
+  if(magus) return {sheet: magus, kind: 'magus'};
+  if(NPCS && NPCS[name]) return {sheet: NPCS[name], kind: 'npc'};
+  return null;
+}
+
 async function load(){
   try{
-    const [shipsRes, magiRes, detailsRes] = await Promise.all([
+    const [shipsRes, magiRes, npcsRes, detailsRes] = await Promise.all([
       fetch('./ships.json', {cache:'no-store'}),
       fetch('./magi.json', {cache:'no-store'}).catch(()=>null),
+      fetch('./npcs.json', {cache:'no-store'}).catch(()=>null),
       fetch('./ship_details.json', {cache:'no-store'}).catch(()=>null),
     ]);
     DATA = await shipsRes.json();
     if(magiRes && magiRes.ok){
       const magiJson = await magiRes.json();
       MAGI = magiJson.magi || {};
+    }
+    if(npcsRes && npcsRes.ok){
+      const npcsJson = await npcsRes.json();
+      NPCS = npcsJson.npcs || {};
     }
     if(detailsRes && detailsRes.ok){
       const detailsJson = await detailsRes.json();
@@ -313,8 +328,20 @@ function renderTabs(){
 
 const GROG_ROLES = new Set(['crew','surgeon','sailing captain','merchant-agent']);
 
+// Prefer Foundry's own charType (ground truth) when we have a real sheet;
+// fall back to the ships.json role-string heuristic for the few names with
+// no Foundry sheet at all (e.g. Hilda, Karl, Rody).
 function characterCategory(name){
   if(findMagus(name)) return 'pc-magus';
+  const npc = NPCS && NPCS[name];
+  if(npc){
+    switch(npc.charType){
+      case 'magus': return 'npc-magus';
+      case 'companion': return 'companion';
+      case 'grog': return 'grog';
+      default: return 'other';
+    }
+  }
   const role = (((DATA.characters||{})[name]||{}).role || '').toLowerCase();
   if(role.includes('magus')) return 'npc-magus';
   if(role.includes('companion') || role === 'apprentice') return 'companion';
@@ -505,7 +532,10 @@ function magusSheetHtml(m){
   const portrait = m.portrait
     ? `<img class="sheet-portrait" src="${esc(m.portrait)}" alt="${esc(m.name)}">`
     : `<div class="sheet-portrait placeholder">🜛</div>`;
-  const sub = [m.house?`House ${m.house}`:'', m.parens?`parens ${m.parens}`:''].filter(Boolean).join(' · ');
+  const isMagus = !m.charType || m.charType==='magus';
+  const sub = isMagus
+    ? [m.house?`House ${m.house}`:'', m.parens?`parens ${m.parens}`:''].filter(Boolean).join(' · ')
+    : (m.charType ? cap(m.charType) : '');
   const metaChips = [
     m.age!=null?`Age ${m.age}`:'',
     m.apparentAge!=null && m.apparentAge!==m.age?`(apparent ${m.apparentAge})`:'',
@@ -539,8 +569,10 @@ function magusSheetHtml(m){
     <div class="sheet-section-title">Characteristics</div>
     ${charGridHtml(m.characteristics||{})}
 
+    ${(!m.charType || m.charType==='magus' || Object.values(m.arts||{}).some(a=>a.score>0)) ? `
     <div class="sheet-section-title">Arts</div>
     ${artsGridHtml(m.arts||{})}
+    ` : ''}
 
     ${m.personalityTraits && m.personalityTraits.length ? `
     <div class="sheet-section-title">Personality</div>
@@ -575,9 +607,9 @@ function magusSheetHtml(m){
 }
 
 function openSidebar(name){
-  const magus = findMagus(name);
-  if(magus){
-    $('#sidebarContent').innerHTML = magusSheetHtml(magus);
+  const found = findCharacterSheet(name);
+  if(found){
+    $('#sidebarContent').innerHTML = magusSheetHtml(found.sheet);
     $('#sidebar').classList.add('wide');
     $('#wrap').classList.add('sidebar-wide');
   } else {
