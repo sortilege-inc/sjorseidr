@@ -242,17 +242,6 @@
       "resolution": ""
     },
     {
-      "id": "q020",
-      "type": "Question",
-      "category": "World Detail",
-      "title": "Does the Hound of Cassel ever get added to the Master Chart?",
-      "context": "As of the Fall 1223 Aegis casting, the Hound of Cassel isn't tracked by the Master Chart and so isn't covered by the annual renewal — flagged at the table with a knowing \"I'm sure that won't come up.\" Worth confirming whether this ever gets fixed, or stays a standing vulnerability. Update: ships.json now confirms the Hound of Cassel is leaving the fleet entirely as of Spring 1224 (heading back to Scarem Montem as a trade chip) rather than being retained/integrated — which may make this question moot, but flagging for your call rather than closing it myself.",
-      "raised_in": "Session 8 (2026-07-11)",
-      "raised_event": "Casting the annual Aegis of the Hearth near Harfleur",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
       "id": "t022",
       "type": "Thread",
       "category": "Research",
@@ -524,18 +513,7 @@
       "context": "From an early 3-year speculative arc outline (never followed as written): the covenant begins near \"Bridge,\" and Normandy sees them as upstarts possibly violating Tribunal jurisdiction, demanding they justify their presence.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t041",
-      "type": "Thread",
-      "category": "Covenant Business",
-      "title": "Unused arc idea: the covenant's early income was floated as privateering or a Hanseatic smuggling deal.",
-      "context": "From the same early arc outline: facing the Poverty hook, a noble offers letters of marque (privateering), or a Hanseatic merchant offers an illegal smuggling operation (magical components or faerie contraband).",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Idea",
       "resolution": ""
     },
     {
@@ -543,10 +521,10 @@
       "type": "Thread",
       "category": "Plot",
       "title": "Unused arc idea: \"Infernal Corruption on Board\" — a ship suffers misfortunes and a crew member descends into madness.",
-      "context": "From the same early arc outline: cursed cargo, unexplained accidents, whispers at night, strange symbols on the hull, possibly ending in an exorcism or the ship being purged in fire. This reads as an early draft of what became the confirmed Possession Victim flaw and Captain Absalom's episode (see t029) — may be superseded by how that thread actually resolves, or may still hold unused specifics worth folding in.",
+      "context": "From the same early arc outline: cursed cargo, unexplained accidents, whispers at night, strange symbols on the hull, possibly ending in an exorcism or the ship being purged in fire. This reads as an early draft of what became the confirmed Possession Victim flaw and Captain Absalom's episode (see t029) — may be superseded by how that thread actually resolves, or may still hold unused specifics worth folding in. (2026-07-14: GM confirms still planning to use this.)",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Idea",
       "resolution": ""
     },
     {
@@ -557,18 +535,7 @@
       "context": "From the same early arc outline (Year 2): merfolk warn the magi the faerie ruler is unpredictable and vengeful; resolution options floated were a Faerie Pact, trickery, or risky combat.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t044",
-      "type": "Thread",
-      "category": "World Detail",
-      "title": "Unused arc idea: a secretive Hermetic covenant at Riga, and the Hanseatic League as ally or rival.",
-      "context": "From the same early arc outline (Year 2): a powerful, secretive covenant dominating Baltic magic, rumored to deal with dangerous spirits or an unknown tradition; the Hanseatic League wants magical favors in exchange for financial backing.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Idea",
       "resolution": ""
     },
     {
@@ -579,73 +546,7 @@
       "context": "From the same early arc outline (Year 2): a drifting, rune-and-frost-covered ship, crew missing or dead, containing an ancient magical artifact and a trapped entity (spirit, undead magus, or stranger).",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t046",
-      "type": "Thread",
-      "category": "World Detail",
-      "title": "Unused arc idea: an underwater seam of magical gold near Visby.",
-      "context": "From the same early arc outline (Year 3): options floated were mining it, selling the location, or claiming it as a long-term project requiring custom deep-sea mining devices.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t047",
-      "type": "Thread",
-      "category": "Diplomacy",
-      "title": "Unused arc idea: a three-way Tribunal conspiracy — Normandy wants control, Riga wants them gone, the Hanseatic League wants profit.",
-      "context": "From the same early arc outline (Year 3): a powerful Hermetic faction (a radical Bonisagus, Tremere spies, or a secretly-supportive Hibernian Tribunal) offers backing at a cost.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t048",
-      "type": "Thread",
-      "category": "Plot",
-      "title": "Unused arc idea: \"The Kraken's Revenge\" — a sea beast hunting the fleet.",
-      "context": "From the same early arc outline (Year 3): possibly an ancient sea faerie or something remembering an old wrong (perhaps tied to Éogan's fey troubles); resolution options floated were a magical weapon/harpoon, a terrible sacrifice, or a costly binding.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t049",
-      "type": "Thread",
-      "category": "Plot",
-      "title": "Unused arc ideas: several recurring hooks and long-term goals were never picked up.",
-      "context": "From the same early arc outline: recurring hooks (Dustin uncovering lost Hermetic magic in the deep; a rival Tytalus elementalist; a \"Cook Faerie Mage's\" dangerous experiments) and long-term goals (reaching Venice, founding a Baltic Tribunal, a \"legendary feat\" like slaying the kraken, building an airship, or finding the mythical land beyond the North Sea).",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t050",
-      "type": "Thread",
-      "category": "Character",
-      "title": "Early-campaign snapshot: Nequam, Éogan, and Marina's stated motivations to explore (and, for Marina, raid) were never revisited.",
-      "context": "From a very early \"Plot Threads (Active)\" status snapshot, presumably pre-dating most of actual play: Nequam wanted to explore and get away, Éogan wanted to explore, Marina wanted to explore and raid.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t051",
-      "type": "Thread",
-      "category": "NPC / Identity",
-      "title": "Early-campaign snapshot: \"the Guernicus mage that Solving stood up is pissed off and also captured by the authorities\" — never named or followed up.",
-      "context": "From the same early snapshot. Possibly unrelated to Valerian (confirmed Guernicus, and the eventual recipient of the ship originally earmarked \"for the Guernicus mage\" — see ships.json's Adamant note) since nothing suggests Valerian was ever \"stood up\" by Solving or captured by authorities in that way.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Idea",
       "resolution": ""
     },
     {
@@ -656,29 +557,7 @@
       "context": "From the same early snapshot — the concentrated vis source in the North Sea that motivated the covenant's founding was never located or searched for on-page.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t053",
-      "type": "Thread",
-      "category": "World Detail",
-      "title": "Early-campaign snapshot: \"auras are ephemeral and hard to find/not persistent\" — a stated constraint, never revisited.",
-      "context": "From the same early snapshot. Worth checking whether this is still true given later discoveries, e.g. the regio near Carnac (see t025).",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t054",
-      "type": "Thread",
-      "category": "Plot",
-      "title": "Early-campaign snapshot: Éogan's floated Dublin raid and Nequam's floated Faroe Islands trip didn't happen as originally framed.",
-      "context": "From the same early snapshot (\"Éogan might go to Dublin and raid,\" \"Nequam finds the Faroe Islands in summer?\") — the actual Ireland trip took a different shape, and Nequam left the covenant before any Faroe Islands beat could happen.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Open",
       "resolution": ""
     },
     {
@@ -689,7 +568,7 @@
       "context": "A small planned flavor beat from the GM's early prep (\"Upcoming\" list) — never confirmed as having happened.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Idea",
       "resolution": ""
     },
     {
@@ -700,7 +579,7 @@
       "context": "From the GM's early prep (\"Upcoming\" list): Novgorod, Rhine, Hiberian, Loch Leglean, Stonehenge, and Provençal were all floated as having a plausible claim, alongside the now-settled Normandy affiliation.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Idea",
       "resolution": ""
     },
     {
@@ -711,7 +590,7 @@
       "context": "From the GM's early prep (\"Upcoming\" list) — never specified further, never followed up on in play.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Idea",
       "resolution": ""
     },
     {
@@ -722,18 +601,7 @@
       "context": "From the GM's early prep (\"Upcoming\" list) — no further detail given.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t059",
-      "type": "Thread",
-      "category": "Character",
-      "title": "Unused character idea: Father Lachlan starting a Franciscan mission in England.",
-      "context": "From the GM's early prep (\"Upcoming\" list) — no further detail given; Father Lachlan's established bio has him spending the last decade in Ireland instead.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Idea",
       "resolution": ""
     },
     {
@@ -744,40 +612,7 @@
       "context": "From the GM's \"Magpie Selections\" brainstorm: Vitkir hedge magic / rune magic, drawing on Rival Magic and Ancient Magic sourcebooks.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t061",
-      "type": "Thread",
-      "category": "World Detail",
-      "title": "Unused worldbuilding: a taxonomy of \"spirits of the elements\" vs. true elementals, including an idea to find the covenant inside a volcano.",
-      "context": "From the same \"Magpie Selections\" brainstorm: Genomi, Lymphae, Zephyrus, and Phlegethi/ignigena/Vulcans/salamanders as distinct spirit categories.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t062",
-      "type": "Thread",
-      "category": "NPC / Identity",
-      "title": "Unused idea: Nequam's associations with a \"Conspiracy Theories\" circle, an \"Eristic Moot,\" or a Cabal (\"of the Lance\").",
-      "context": "From the same \"Magpie Selections\" brainstorm — moot now that Nequam has left the covenant, unless his current unknown whereabouts (see c013) ever tie back to one of these.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "t063",
-      "type": "Thread",
-      "category": "Timeline / Continuity",
-      "title": "Dagmar's very first season (Spring 1220) had detailed GM planning attached that was never confirmed as played out.",
-      "context": "The GM's prep has Dagmar reviewing Solving's papers, mothballing his experiments, cataloging his books, studying Rego via a covenant text (constrained by his Study Requirement flaw), and a ship trip to London for income — with two possible resolution mechanics offered (a stress roll, or a lower-ease-factor roll representing Solving's disorganized paperwork). Whether this happened as planned, and which option was used, was never confirmed in the chronicle.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page",
-      "raised_event": "",
-      "status": "Confirm to delete",
+      "status": "Idea",
       "resolution": ""
     },
     {

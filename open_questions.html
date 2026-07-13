@@ -85,6 +85,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .qtag.type-tool{background:rgba(62,107,53,.16);color:var(--green);border:1px solid rgba(62,107,53,.4)}
 .qtag.cat{background:rgba(120,90,40,.15);color:var(--ink-soft);border:1px solid rgba(120,90,40,.25)}
 .qtag.status-delete{background:rgba(181,74,50,.22);color:var(--rust-bright);border:1px solid rgba(181,74,50,.55);font-weight:600}
+.qtag.status-idea{background:rgba(154,107,31,.2);color:var(--gold);border:1px solid rgba(154,107,31,.5);font-weight:600}
 .qquestion{font-weight:600;font-size:16.5px;line-height:1.35;margin:0 0 6px}
 .qcontext{font-size:14px;line-height:1.5;color:var(--ink-soft);margin:0 0 8px}
 .qmeta{font-size:12px;color:var(--ink-soft);font-style:italic}
@@ -241,7 +242,7 @@ function renderTypeTabs(){
 function renderFilterbar(){
   const cats = ['all', ...categories()];
   const catBtns = cats.map(c=>`<button class="fbtn ${filter.category===c?'on':''}" data-cat="${esc(c)}">${c==='all'?'All Categories':esc(c)}</button>`).join('');
-  const statuses = ['all','Open','Confirm to delete','Resolved'];
+  const statuses = ['all','Open','Idea','Confirm to delete','Resolved'];
   const statusBtns = statuses.map(s=>`<button class="fbtn ${filter.status===s?'on':''}" data-status="${esc(s)}">${s==='all'?'All Status':esc(s)}</button>`).join('');
   const pool = activeType==='all' ? STATE.items : STATE.items.filter(i=>i.type===activeType);
   const openCount = pool.filter(q=>q.status!=='Resolved').length;
@@ -258,6 +259,7 @@ function renderFilterbar(){
 function qCard(q){
   const resolved = q.status === 'Resolved';
   const flaggedDelete = q.status === 'Confirm to delete';
+  const isIdea = q.status === 'Idea';
   const tc = typeClass(q.type);
   const resolveLabel = q.type === 'Question' ? 'Answered' : (q.type === 'Thread' ? 'Picked up' : 'Resolved');
   return `<div class="qcard ${tc} ${resolved?'resolved':''} ${flaggedDelete?'flagged-delete':''}" data-id="${esc(q.id)}">
@@ -266,6 +268,7 @@ function qCard(q){
         <span class="qtag ${tc}">${TYPE_ICON[q.type]} ${esc(q.type)}</span>
         <span class="qtag cat">${esc(q.category)}</span>
         ${flaggedDelete ? `<span class="qtag status-delete">🗑️ Confirm to delete</span>` : ''}
+        ${isIdea ? `<span class="qtag status-idea">💡 Idea</span>` : ''}
       </div>
       <div class="qanswer-toggle">
         <input type="checkbox" id="chk-${esc(q.id)}" ${resolved?'checked':''}>
