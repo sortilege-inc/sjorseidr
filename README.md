@@ -5,9 +5,11 @@ A data-driven set of static pages chronicling the Ars Magica campaign of
 here is plain HTML/CSS/JS reading from local JSON — no build step, no
 server-side code. Open [`index.html`](index.html) to get around.
 
-**Picking this up in a new session?** See "Next up" at the end of the
-[Notion merge](#notion-merge-2026-07-13) section below before doing anything
-else — there's a specific, already-scoped task waiting there.
+**Picking this up in a new session?** The [Notion merge](#notion-merge-2026-07-13)
+section below (including the [canon-vs-Notion contradiction
+review](#canon-vs-notion-contradiction-review-2026-07-13)) covers the archive's
+one-time Notion import; as of 2026-07-13 that whole arc is closed out. Check
+[`open_questions.html`](open_questions.html) for what's actually still open.
 
 ## Pages
 
@@ -352,51 +354,104 @@ commit at the end of a work session, referencing whatever commit was just
 made — there's inherently one commit of lag, which is normal for this
 pattern without a CI step to do it automatically.
 
-### Next up: canon-vs-Notion contradiction review
+### Canon-vs-Notion contradiction review (2026-07-13)
 
 Both Notion merge passes above were scoped around *absence* — pulling in
-content that wasn't on the site anywhere. What they did **not** do is an
-exhaustive line-by-line diff of every fact that appears in *both* places.
-A handful of contradictions surfaced anyway, opportunistically, along the
-way (see the bullet list below) — but the full sweep hasn't happened.
+content that wasn't on the site anywhere. This pass did the thing they
+didn't: an exhaustive line-by-line diff of every specific, checkable fact
+(name, date, number, ownership, relationship, what-happened-to-someone) that
+appears in *both* the Notion export and this repo's canon (`ships.json`,
+`npcs.json`, `magi.json`, `covenant.json`, `ship_details.json`,
+`tribunal_data.json`, `verified_events.json`, `open_questions.json`).
 
-**The plan, next session:** work back through the Notion export looking for
-places where a specific, checkable fact (a name, a date, a number, who owns
-what, who's related to whom, what happened to someone) disagrees with what's
-already committed to this repo as canon. For each one found, ask the GM
-directly rather than guessing which side is right — the pattern that worked
-well throughout both merge passes (Foundry vs. `ships.json` on Dietrich/
-Marina/Garrat Coffin/Maelstrom's Maw, all resolved by asking, not assuming)
-is the model to keep using. Once answered, update whichever file is wrong.
+Five parallel read-only passes covered the export by topic (Ars Magica Cast
+bios, Covenant Fleet/Charter, Tribunal/Tourney docs, timeline/narrative
+prep, world-reference/GM NPCs) and reported candidate contradictions back
+for cross-checking against the live site — including, for the tribunal
+questions, `normandy_tribunal_1223.html`'s own inline `DATA` blob, not just
+`tribunal_data.json`. Same rule as both merge passes: for anything that
+looked like a real disagreement, ask the GM rather than guess which side is
+right. The two items flagged at the end of the last pass (Giden/Rán's
+character type, the two World Gazetteer dating issues) were the opening
+batch; everything below followed from the full sweep.
 
-**Where to find things:**
-- Raw Notion export: `/home/hewhocutsdown/Working/Ars Magica/2026 Ars Magica/notion_export/`
-  — 125 Markdown files, **outside this repo**, not checked in. If it's gone,
-  it'll need re-pulling from the Notion API (see the Notion API section
-  above for the mechanics — the integration token isn't stored anywhere and
-  will need to be handed over again).
-- Site canon to check it against: `ships.json`, `npcs.json`, `magi.json`,
-  `covenant.json`, `ship_details.json`, `tribunal_data.json`,
-  `verified_events.json`, `open_questions.json`.
+**Fixed as a result (canon was wrong):**
+- **Giden** — ships.json's "Grog" was actually right (he was downgraded
+  in-fiction from companion); `npcs.json`'s Foundry-sourced `charType` was
+  the stale one, corrected `companion` → `grog`.
+- **Rán** — confirmed a fae NPC (matching `Ka'wa'ill`'s precedent, another
+  named fae with `charType: companion`); `npcs.json`'s `charType` corrected
+  `mundane` → `companion`.
+- **Southampton** (`reference.json`) — William Marshal's regency line
+  rewritten to past tense; he's no longer implied to be a current regent.
+- **Gerard "The Mule"** — `ships.json`'s "Companion" was stale; corrected to
+  `Grog`, matching `npcs.json`/Notion.
+- **Henri (failed apprentice)** — the reverse: `npcs.json`'s Foundry
+  `charType` of `grog` was actually the wrong one here (a Dietrich-style
+  case); corrected to `companion`, matching `ships.json`.
+- **Cy** — confirmed to be "Cyafti" in Notion (a fuller form of the same
+  grog's name, played by Pete); added an `aka` field to his `npcs.json`
+  entry.
+- **The Leper Colony Bandages** (`tribunal_data.json`, `v004`) — Notion's
+  tourney prep priced this as an available 1-pawn/year prize; canon had it
+  marked `status: "Canon"` (pre-existing, not in the pool). Per GM call,
+  moved into the tourney's available pool (`status: "Available"`, yield
+  normalized to `"1 pawn /year"`).
 
-**Already resolved this way, don't re-ask:** Dietrich and Marina's true
-character type, Garrat Coffin's true character type, the Maelstrom's Maw's
-hull type and current/former owner, Stijntje Kuiper's magus status (turned
-out not to be a contradiction at all).
+**Checked and confirmed correct as-is (no change):**
+- Boulogne-sur-Mer's "winter port" claim — chronicle (Bruges) wins, as
+  already marked in `reference.json`.
+- Ka'wa'ill's character type (`companion` — Notion's "Grog" was the
+  outlier).
+- Seven characters' birth-year drift between Notion and Foundry (Dagmar,
+  Dustin Page, Éogan Dobhartha, Kor Ex Flambeau, Stijntje Kuiper, Willem
+  "Sour" Jensen, Nequam of Tytalus, all 1-3 years off, non-uniformly) —
+  Foundry's values confirmed current across the board.
+- Sjórseiðr's 1209 founding year (a lone Normandy-Tribunal overview doc's
+  "c. 1190s" was the outlier, contradicted by two *other* Notion pages too).
+- Kor Ex Flambeau being listed as one of Sjórseiðr's "Current Magi" in that
+  same old Tribunal-overview doc — confirmed stale, he's gone with the
+  Maelstrom's Maw.
+- The "sixth ship" mentioned in two Notion asides — confirmed to be an
+  earlier-numbered reference to what became the Adamant (written back when
+  the Gloaming and Maelstrom's Maw were both still active), not a distinct
+  unclaimed hull.
+- The Breda reconnaissance trip's date — Winter 1221-22 (`verified_events.json`)
+  confirmed over Notion prep's "Spring 1222."
+- Hastiludium Round 1 — confirmed Sjórseiðr never actually faced Montverte
+  as scripted in Notion's tourney prep; the quarterfinal vs. Arx Argentea is
+  the real start of the bracket run in `verified_events.json`.
 
-**Flagged but not yet asked — good candidates to open with:**
-- Giden's Foundry `charType` (`companion`) was never independently
-  confirmed the way the others were.
-- Rán's status/charType is likewise unconfirmed.
-- Southampton's regency-council cast in the Mythic Europe gazetteer names
-  William Marshal as active regent — he died in 1219, so this is either a
-  simple dating error in the GM's notes or deliberately frozen at an
-  earlier point; worth confirming which before anyone treats it as current.
-- Boulogne-sur-Mer's gazetteer entry claims it was "the covenant's winter
-  port... likely the most frequent destination," which the chronicle
-  contradicts directly (the party settled on Bruges) — already marked
-  superseded in `reference.json`, but worth a GM sanity check in case it's
-  the *chronicle* that's wrong instead.
+**Resolved without needing to ask** — cross-checking against
+`normandy_tribunal_1223.html`'s own `DATA` (not just `tribunal_data.json`)
+showed several apparent Notion-vs-canon conflicts were really just
+Notion being internally inconsistent across its own pages, with canon
+already agreeing with the correct Notion version: Scarem Montem's liege
+(Montverte, not the "undetermined/Florum" aside in one doc), Umbra Silvae's
+vassal status (already `vassal-of-vassal` under Cunfin on-site, not
+"Independent" per one stray table), Carnac/Bellum Iocari's liege
+(already `Fudarus` on-site), and the Prize Rank 21 "Siege of Alms" seat
+(already `Florum` on-site — Atsingani's own site blurb already
+acknowledges this diverges from "the source material").
+
+Also discarded as **prep-vs-actual-play, not real contradictions** (same
+category as the already-known bracket gaps and the superseded
+`Valerian_de_Castellane.md` draft): several dimicatio/hastiludium
+opponent-identity guesses in `Opponent_Profile_ideas.md` (hedged as
+"likely X or Y" pre-tourney speculation) that don't match who actually
+showed up in `verified_events.json` — not treated as contradictions since
+the prep never asserted them as settled fact.
+
+**Already resolved this way from the prior passes, still don't re-ask:**
+Dietrich and Marina's true character type, Garrat Coffin's true character
+type, the Maelstrom's Maw's hull type and current/former owner, Stijntje
+Kuiper's magus status.
+
+**Where to find things**, if this ever needs re-running: raw Notion export
+at `/home/hewhocutsdown/Working/Ars Magica/2026 Ars Magica/notion_export/`
+(125 Markdown files, outside this repo, not checked in — re-pull from the
+Notion API per the section above if it's gone) against the eight canon
+JSON files listed at the top of this section.
 
 ## Open threads on this archive itself
 

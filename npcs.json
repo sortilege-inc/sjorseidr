@@ -972,6 +972,7 @@
     },
     "Cy": {
       "name": "Cy",
+      "aka": "Cyafti",
       "foundryName": "Cy - Shield Grog",
       "charType": "grog",
       "portrait": "portraits/npc_cy.webp",
@@ -2876,7 +2877,7 @@
     "Giden": {
       "name": "Giden",
       "foundryName": "Giden",
-      "charType": "companion",
+      "charType": "grog",
       "portrait": null,
       "house": "",
       "parens": "",
@@ -2992,7 +2993,7 @@
     "Henri (failed apprentice)": {
       "name": "Henri (failed apprentice)",
       "foundryName": "Henri - Failed Apprentice",
-      "charType": "grog",
+      "charType": "companion",
       "portrait": "portraits/npc_henri.png",
       "house": "",
       "parens": "",
@@ -7365,7 +7366,7 @@
     "Rán": {
       "name": "Rán",
       "foundryName": "Rán",
-      "charType": "mundane",
+      "charType": "companion",
       "portrait": "portraits/npc_ran.png",
       "house": "gen",
       "parens": "",

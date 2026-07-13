@@ -37,8 +37,8 @@
       "category": "Tropaeum",
       "art": "Corpus",
       "name": "The Leper Colony Bandages",
-      "yield": "Annual",
-      "status": "Canon",
+      "yield": "1 pawn /year",
+      "status": "Available",
       "notes": "The discarded bandages of a certain leper colony are Corpus vis."
     },
     {
