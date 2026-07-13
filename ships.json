@@ -8,10 +8,12 @@
       "id": "tide-of-memory",
       "name": "Tide of Memory",
       "owner": "Dagmar",
+      "captain": "Absalom",
       "status": "Active",
-      "description": "Originally covenant founder Solving Epicurusson's ship; inherited by Dagmar after Solving vanished into Twilight (1220). Carries Solving's summoning bell and astrolabe, and the covenant's magical Master Chart, which tracks the whole fleet's positions. The covenant's mobile library is also housed aboard.",
+      "description": "Originally covenant founder Solving Epicurusson's ship; inherited by Dagmar after Solving vanished into Twilight (1220). Carries Solving's summoning bell and astrolabe, and the covenant's magical Master Chart, which tracks the whole fleet's positions. The covenant's mobile library is also housed aboard. Captained by Absalom, who previously captained the Maelstrom's Maw.",
       "standing_crew": [
         "Dagmar",
+        "Absalom",
         "Reinier",
         "Willem 'Sour' Jensen",
         "Isabeau (aka Foxglove)",
@@ -94,7 +96,7 @@
       "name": "Maelstrom's Maw",
       "owner": "formerly Nequam of Tytalus, then Kor Ex Flambeau",
       "status": "Missing",
-      "description": "Nequam's ship, handed to Kor Ex Flambeau in Summer 1220. Survived a sky-ship crash during a meteor storm (Winter 1220-21), but confirmed missing — the ship never came in, and the covenant's Master Chart no longer tracks it. No longer part of the covenant's active fleet.",
+      "description": "Nequam's ship, handed to Kor Ex Flambeau in Summer 1220. Survived a sky-ship crash during a meteor storm (Winter 1220-21), but confirmed missing — the ship never came in, and the covenant's Master Chart no longer tracks it. No longer part of the covenant's active fleet. Its captain, Absalom, moved on to captain the Tide of Memory.",
       "standing_crew": [
         "Kor Ex Flambeau",
         "Hob",
@@ -103,16 +105,17 @@
         "Rostan"
       ],
       "former_crew": [
-        "Nequam of Tytalus"
+        "Nequam of Tytalus",
+        "Absalom"
       ]
     },
     {
       "id": "hound-of-cassel",
       "name": "Hound of Cassel",
       "aka": "the Tremere ship, formerly Scarem Montem's",
-      "owner": "Wilhelm Stienauer (disposition undecided)",
-      "status": "Reassigned",
-      "description": "Confirmed: this is the ship pirated from Scarem Montem — a Tremere-crewed vessel, raided by Valdemar's crew in Summer 1221. Yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. Its fate sat undecided for years; Wilhelm is now set to effectively gain the ship, either to use outright or as a trade chip — handing Scarem Montem back their own hull in exchange for his stolen thesis.",
+      "owner": "Wilhelm Stienauer",
+      "status": "En route to Scarem Montem",
+      "description": "Confirmed: this is the ship pirated from Scarem Montem — a Tremere-crewed vessel, raided by Valdemar's crew in Summer 1221. Yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. As of Spring 1224, it's under Wilhelm's control and heading back to Scarem Montem — handing them back their own hull as the trade chip for his stolen thesis.",
       "standing_crew": ["Wilhelm Stienauer"]
     }
   ],
@@ -200,7 +203,7 @@
     "Garrat Coffin": {
       "role": "Companion",
       "affiliation": "Veðrdreki (Storm Dragon)",
-      "note": "Fought in the Hound of Cassel raid and the grog melee. (Chronicle's older text ties him to the Brineborn — see open question on the discrepancy.)"
+      "note": "Fought in the Hound of Cassel raid and the grog melee. Transferred from the Brineborn to Veðrdreki before the Hound of Cassel capture (the chronicle's older text tying him to the Brineborn predates that transfer)."
     },
     "Giden": {
       "role": "Grog",
@@ -296,6 +299,11 @@
       "role": "Changeling (posing as a Gifted child)",
       "affiliation": "Handed off near Cruachan, en route to the Hermetic covenant near the Hill of Uisneach",
       "note": "About eight and a half, talkative and unbothered. Éogan identified him as a changeling via Fairy Lore; the real Gifted child he replaced is still unaccounted for."
+    },
+    "Absalom": {
+      "role": "Sailing captain",
+      "affiliation": "Tide of Memory",
+      "note": "Previously captained the Maelstrom's Maw; now captains the Tide of Memory under Dagmar."
     },
     "Nequam of Tytalus": {
       "role": "Former magus, elementalist",
@@ -408,7 +416,12 @@
         {
           "ship": "brineborn",
           "crew": ["Éogan Dobhartha", "Dustin Page", "Stijntje Kuiper"],
-          "note": "Return leg through Cruachan toward Dublin to reconvene with the ships once the ice breaks — now traveling with Rody, a changeling child being delivered to the Hermetic covenant near the Hill of Uisneach. Wilhelm's whereabouts this leg aren't confirmed (not covered in this session)."
+          "note": "Return leg through Cruachan toward Dublin to reconvene with the ships once the ice breaks — now traveling with Rody, a changeling child being delivered to the Hermetic covenant near the Hill of Uisneach."
+        },
+        {
+          "ship": "hound-of-cassel",
+          "crew": ["Wilhelm Stienauer"],
+          "note": "Heading back to Scarem Montem — returning the ship itself as the trade chip for Wilhelm's stolen thesis."
         }
       ]
     }

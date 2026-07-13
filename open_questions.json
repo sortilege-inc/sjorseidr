@@ -10,17 +10,6 @@
   },
   "items": [
     {
-      "id": "q001",
-      "type": "Question",
-      "category": "World Detail",
-      "title": "Which ship, exactly, was pirated from Scarem Montem?",
-      "context": "While planning Wilhelm's 1224 return trip, the table half-remembered that one of the covenant's own ships was originally taken from Scarem Montem — but didn't pin down which one, or the circumstances.",
-      "raised_in": "Session 7 (2026-06-20)",
-      "raised_event": "An old wrinkle resurfaces: one of the covenant's ships was pirated from Scarem Montem",
-      "status": "Resolved",
-      "resolution": "Confirmed by the GM (2026-07-13): it's the Hound of Cassel — a Tremere-crewed Scarem Montem vessel, raided by Valdemar's crew in Summer 1221 (\"Summer piracy\")."
-    },
-    {
       "id": "q003",
       "type": "Question",
       "category": "Tribunal / Prizes",
@@ -54,83 +43,6 @@
       "resolution": ""
     },
     {
-      "id": "q008",
-      "type": "Question",
-      "category": "World Detail",
-      "title": "Is \"Siege of Notatus\" the real name of the 7th-place honor, or a mis-transcription?",
-      "context": "Confirmed only against the tribunal workbook's prize-rank table (which itself may have been typed from the same unclear audio) — not independently verified against the session recording.",
-      "raised_in": "Session 6 (2026-05-23)",
-      "raised_event": "Tribunal final standings: Sjórseiðr takes first overall, Confluensis takes the \"Siege of Shame\"",
-      "status": "Open",
-      "resolution": ""
-    },
-    {
-      "id": "q013b",
-      "type": "Question",
-      "category": "World Detail",
-      "title": "Is the \"Adamant\" the same ship as the fleet's fifth hull, commissioned at Bergen and given to Valerian?",
-      "context": "\"Sorting through Solving's letters...\" (Spring 1220) has a shipwright's letter announcing the fifth and final ship of the fleet is complete at Bergen. \"Valerian's Arrival\" (Spring 1222) has Valerian \"given the newly purchased fifth ship and skeleton crew.\" The name \"Adamant\" only appears later.",
-      "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
-      "raised_event": "Valerian's Arrival",
-      "status": "Resolved",
-      "resolution": "Confirmed by the GM (2026-07-13): the Adamant is the fifth hull commissioned at Bergen."
-    },
-    {
-      "id": "q013c",
-      "type": "Question",
-      "category": "World Detail",
-      "title": "What happened to the Hound of Cassel — the ship captured in the Summer 1221 piracy raid?",
-      "context": "Raided by Valdemar's crew from what's now confirmed to be a Tremere-crewed Scarem Montem vessel; yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. The party debated \"keep as prize or sink,\" leaning toward selling at a shadow port — but no event ever confirmed what actually happened to it.",
-      "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
-      "raised_event": "Summer piracy",
-      "status": "Resolved",
-      "resolution": "Per the GM (2026-07-13): Wilhelm will effectively gain the Hound of Cassel, either to keep as his own ship or to use as a trade chip — and since it's the very ship pirated from Scarem Montem (see q001), that trade chip is literally their own hull back."
-    },
-    {
-      "id": "q013d",
-      "type": "Question",
-      "category": "World Detail",
-      "title": "Which specific ship does Stijntje/Dustin actually sail on for the Ireland leg?",
-      "context": "The Fall 1223 travel plan names only the Brineborn (Éogan, Wilhelm, Hilda, one assistant) and the Adamant (Valerian, Dietrich, one assistant); a later addendum has Dustin opting in and bringing Stijntje, without re-stating which hull they board.",
-      "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
-      "raised_event": "Ireland travel plan finalized: Dublin, the coast, and wintering near Carrick",
-      "status": "Resolved",
-      "resolution": "Confirmed by the GM (2026-07-13): the Scholar's Wake — Dustin and Stijntje sail their own ship, traveling alongside the Brineborn."
-    },
-    {
-      "id": "q013e",
-      "type": "Question",
-      "category": "NPC / Identity",
-      "title": "Did Captain Absalom actually captain the Maelstrom's Maw, or a separate ship trading with it?",
-      "context": "\"Trade / Trading vis / A Hamlet to Work In\" (Summer 1221) has Kor sending \"Captain Absalom off to trade with the Maelstrom's Maw\" — grammatically ambiguous between two different ships, or Absalom captaining the Maelstrom's Maw itself.",
-      "raised_in": "Cross-referenced from the Chronicle (2026-07-11)",
-      "raised_event": "Trade / Trading vis / A Hamlet to Work In",
-      "status": "Open",
-      "resolution": ""
-    },
-    {
-      "id": "q016",
-      "type": "Question",
-      "category": "World Detail",
-      "title": "Did Garrat Coffin transfer from the Brineborn to Veðrdreki at some point, or is the chronicle's older note wrong?",
-      "context": "\"Traveling to the Tribunal\" and \"Up the Sarthe to Le Mans\" (Summer 1223) both describe Garrett/Garrat Coffin and Drest as \"from the Brineborn.\" The current standing-crew roster instead places Garrat Coffin on Veðrdreki (the Storm Dragon), with only Drest remaining on the Brineborn.",
-      "raised_in": "Cross-referenced against the GM's crew roster (2026-07-13)",
-      "raised_event": "Traveling to the Tribunal",
-      "status": "Resolved",
-      "resolution": "Confirmed by the GM (2026-07-13): he transferred."
-    },
-    {
-      "id": "q015",
-      "type": "Question",
-      "category": "Character",
-      "title": "What are Wilhelm's remaining Virtues and Flaws?",
-      "context": "Sheet as introduced only firmly lists Minor Magical Focus; two further Virtues (and a full Flaws list) are still marked TBD.",
-      "raised_in": "Session 4 (2026-04-04)",
-      "raised_event": "Wilhelm Stienauer ex Bonisagus arrives",
-      "status": "Open",
-      "resolution": ""
-    },
-    {
       "id": "t002",
       "type": "Thread",
       "category": "Plot",
@@ -138,8 +50,8 @@
       "context": "Two framings were floated: rough justice (\"fair's fair,\" they took the book, the covenant already has the ship) or a literal bargaining chip. Now confirmed the Hound of Cassel IS the ship pirated from Scarem Montem, and Wilhelm is set to gain it — does the party actually offer their own hull back in exchange for the thesis when he returns in 1224?",
       "raised_in": "Session 7 (2026-06-20)",
       "raised_event": "An old wrinkle resurfaces: one of the covenant's ships was pirated from Scarem Montem",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Confirmed by the GM (2026-07-13): as of Spring 1224, the Hound of Cassel is under Wilhelm's control and heading back to Scarem Montem — the ship-for-book swap is happening."
     },
     {
       "id": "t009",
