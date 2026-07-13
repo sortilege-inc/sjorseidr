@@ -68,7 +68,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .ship-status.reassigned{background:rgba(44,107,102,.16);color:var(--teal);border:1px solid rgba(44,107,102,.35)}
 .ship-status.no-longer-part-of-the-covenant{background:rgba(74,60,44,.14);color:var(--ink-soft);border:1px solid rgba(74,60,44,.3)}
 .ship-desc{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin:0 0 10px}
-.ship-captain{font-style:italic;color:var(--ink-soft);font-size:12px;margin:-6px 0 8px}
+.ship-captain{font-style:italic;color:var(--ink-soft);font-size:12px;margin:0 0 8px}
 .ship-note{font-size:12.5px;line-height:1.45;color:var(--ink-soft);font-style:italic;margin:0 0 10px}
 .crew-label{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
   color:var(--ink-soft);margin-bottom:6px}
@@ -77,23 +77,43 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
   background:rgba(244,235,213,.7);border:1px solid rgba(120,90,40,.4);border-radius:14px;
   padding:3px 11px;color:var(--ink);transition:all .12s}
 .chip:hover{background:var(--gold-bright);color:#fff6df;border-color:#7a5318}
+.chip.pc-magus{background:rgba(181,74,50,.16);border-color:rgba(181,74,50,.5);color:var(--rust-bright);font-weight:600}
+.chip.npc-magus{background:rgba(91,58,138,.14);border-color:rgba(91,58,138,.45);color:var(--purple)}
+.chip.companion{background:rgba(44,107,102,.14);border-color:rgba(44,107,102,.4);color:var(--teal)}
+.chip.other{background:rgba(154,107,31,.16);border-color:rgba(154,107,31,.45);color:var(--gold)}
 .crew-empty{font-size:12.5px;font-style:italic;color:var(--ink-soft)}
+
+.chip-legend{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 18px;font-size:11.5px;color:var(--ink-soft)}
+.legend-item{display:flex;align-items:center;gap:5px}
+.legend-swatch{width:11px;height:11px;border-radius:50%;display:inline-block;border:1px solid rgba(120,90,40,.45);flex:none}
+.legend-swatch.pc-magus{background:var(--rust-bright);border-color:rgba(181,74,50,.6)}
+.legend-swatch.npc-magus{background:var(--purple);border-color:rgba(91,58,138,.6)}
+.legend-swatch.companion{background:var(--teal);border-color:rgba(44,107,102,.6)}
+.legend-swatch.grog{background:rgba(244,235,213,.9)}
+.legend-swatch.other{background:var(--gold);border-color:rgba(154,107,31,.6)}
 
 .ref-list{display:flex;flex-direction:column;gap:12px}
 
-.ship-dims{font-size:12px;font-style:italic;color:var(--ink-soft);margin:-6px 0 8px}
+/* All Ships cards are <details> — collapsed to just the name/owner/status row,
+   expand to reveal everything else (.ship-body). No nested collapsibles inside. */
+.ship-card summary.ship-summary{cursor:pointer;list-style:none;display:flex;align-items:flex-start;gap:8px}
+.ship-card summary.ship-summary::-webkit-details-marker{display:none}
+.ship-card summary.ship-summary::marker{display:none}
+.ship-card summary.ship-summary::before{content:'▸';color:var(--gold);flex:none;font-size:13px;margin-top:3px}
+.ship-card[open] summary.ship-summary::before{content:'▾'}
+.ship-card summary.ship-summary .ship-head{flex:1;margin-bottom:0}
+.ship-body{padding-top:12px}
+
+.ship-dims{font-size:12px;font-style:italic;color:var(--ink-soft);margin:0 0 8px}
 .ship-owner-line{font-size:12.5px;color:var(--ink-soft);margin:0 0 8px}
 .ship-owner-line .former{opacity:.85}
 .ship-covenant-status{font-size:12px;padding:5px 9px;border-radius:6px;background:rgba(138,51,36,.1);
   border:1px solid rgba(138,51,36,.3);color:var(--rust);margin:0 0 10px}
 .ship-note-flag{font-size:11.5px;font-style:italic;color:var(--ink-soft);opacity:.8;margin:0 0 8px}
 
-.detail-collapsible{margin-top:10px}
-.detail-collapsible summary{cursor:pointer;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.05em;
-  text-transform:uppercase;color:var(--ink-soft);padding:4px 0;list-style:none}
-.detail-collapsible summary::-webkit-details-marker{display:none}
-.detail-collapsible summary::before{content:'▸ ';color:var(--gold)}
-.detail-collapsible[open] summary::before{content:'▾ '}
+.detail-section{margin-top:14px}
+.detail-section-title{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-soft);margin:0 0 8px}
 
 .device-item{margin:6px 0;padding:7px 10px;background:rgba(244,235,213,.55);border-radius:6px;
   border:1px solid rgba(120,90,40,.3)}
@@ -216,6 +236,13 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
   </header>
 
   <div class="tabs" id="tabs"></div>
+  <div class="chip-legend">
+    <span class="legend-item"><span class="legend-swatch pc-magus"></span>PC Magus</span>
+    <span class="legend-item"><span class="legend-swatch npc-magus"></span>NPC Magus</span>
+    <span class="legend-item"><span class="legend-swatch companion"></span>Companion</span>
+    <span class="legend-item"><span class="legend-swatch grog"></span>Grog / Crew</span>
+    <span class="legend-item"><span class="legend-swatch other"></span>Other</span>
+  </div>
   <div id="content"></div>
 
   <footer>Full character sheets (pulled from Foundry) are wired up for the six magi. Everyone else still gets a quick-note card until fleshed out.</footer>
@@ -284,12 +311,23 @@ function renderTabs(){
   $$('.tab').forEach(t=>t.onclick=()=>{activeTab=t.dataset.tab;render();});
 }
 
-function crewChips(names, emptyText){
-  if(!names || !names.length) return `<div class="crew-empty">— ${esc(emptyText||'no crew listed')} —</div>`;
-  return `<div class="crew-list">${names.map(n=>`<button class="chip" data-name="${esc(n)}">${esc(n)}</button>`).join('')}</div>`;
+const GROG_ROLES = new Set(['crew','surgeon','sailing captain','merchant-agent']);
+
+function characterCategory(name){
+  if(findMagus(name)) return 'pc-magus';
+  const role = (((DATA.characters||{})[name]||{}).role || '').toLowerCase();
+  if(role.includes('magus')) return 'npc-magus';
+  if(role.includes('companion') || role === 'apprentice') return 'companion';
+  if(role.includes('grog') || GROG_ROLES.has(role)) return 'grog';
+  return 'other';
 }
 
-function shipHeadHtml(ship){
+function crewChips(names, emptyText){
+  if(!names || !names.length) return `<div class="crew-empty">— ${esc(emptyText||'no crew listed')} —</div>`;
+  return `<div class="crew-list">${names.map(n=>`<button class="chip ${characterCategory(n)}" data-name="${esc(n)}">${esc(n)}</button>`).join('')}</div>`;
+}
+
+function shipSummaryRowHtml(ship){
   const displayName = ship.aka ? `${esc(ship.name)} <span style="font-weight:400;font-style:italic;color:var(--ink-soft);font-size:13px">(aka ${esc(ship.aka)})</span>` : esc(ship.name);
   return `<div class="ship-head">
       <div>
@@ -297,7 +335,11 @@ function shipHeadHtml(ship){
         <div class="ship-owner">${esc(ship.owner)}</div>
       </div>
       <span class="ship-status ${statusClass(ship.status)}">${esc(ship.status)}</span>
-    </div>
+    </div>`;
+}
+
+function shipHeadHtml(ship){
+  return `${shipSummaryRowHtml(ship)}
     ${ship.captain ? `<p class="ship-captain">Captained by ${esc(ship.captain)}</p>` : ''}`;
 }
 
@@ -319,18 +361,21 @@ function renderSnapshot(snap){
 }
 
 function renderAllShips(){
-  const cards = DATA.ships.map(ship=>`<div class="ship-card">
-      ${shipHeadHtml(ship)}
-      <p class="ship-desc">${esc(ship.description)}</p>
-      <div class="crew-label">Standing crew</div>
-      ${crewChips(ship.standing_crew, 'no standing crew recorded')}
-      ${ship.former_crew && ship.former_crew.length ? `<div class="crew-label" style="margin-top:8px">Formerly</div>${crewChips(ship.former_crew, '')}` : ''}
-      ${shipDetailHtml(ship.id)}
-    </div>`).join('');
+  const cards = DATA.ships.map(ship=>`<details class="ship-card">
+      <summary class="ship-summary">${shipSummaryRowHtml(ship)}</summary>
+      <div class="ship-body">
+        ${ship.captain ? `<p class="ship-captain">Captained by ${esc(ship.captain)}</p>` : ''}
+        <p class="ship-desc">${esc(ship.description)}</p>
+        <div class="crew-label">Standing crew</div>
+        ${crewChips(ship.standing_crew, 'no standing crew recorded')}
+        ${ship.former_crew && ship.former_crew.length ? `<div class="crew-label" style="margin-top:8px">Formerly</div>${crewChips(ship.former_crew, '')}` : ''}
+        ${shipDetailHtml(ship.id)}
+      </div>
+    </details>`).join('');
   const fleetNote = FLEET_NOTE
-    ? `<p class="ship-note-flag" style="margin-top:-6px">${esc(FLEET_NOTE)}</p>` : '';
+    ? `<p class="ship-note-flag">${esc(FLEET_NOTE)}</p>` : '';
   $('#content').innerHTML = `
-    <p class="snap-note">Full fleet reference, independent of any single time period — including ships lost, retired, or of uncertain status.</p>
+    <p class="snap-note">Full fleet reference, independent of any single time period — including ships lost, retired, or of uncertain status. Click a ship to see its full details.</p>
     ${fleetNote}
     <div class="ship-grid ref-list">${cards}</div>
   `;
@@ -370,19 +415,19 @@ function shipDetailHtml(shipId){
   const dims = d.dimensions ? `<p class="ship-dims">${esc(d.dimensions)}</p>` : '';
 
   const devices = (d.enchantedDevices && d.enchantedDevices.length) ? `
-    <details class="detail-collapsible">
-      <summary>Enchanted Devices (${d.enchantedDevices.length})</summary>
+    <div class="detail-section">
+      <div class="detail-section-title">Enchanted Devices (${d.enchantedDevices.length})</div>
       ${d.enchantedDevices.map(deviceItemHtml).join('')}
-    </details>` : '';
+    </div>` : '';
 
   const lab = d.laboratory ? `
-    <details class="detail-collapsible">
-      <summary>Laboratory — ${esc(d.laboratory.name)}</summary>
-      <p class="lab-extra" style="margin:6px 0">${d.laboratory.owner?`Owner: ${esc(d.laboratory.owner)}<br>`:''}</p>
+    <div class="detail-section">
+      <div class="detail-section-title">Laboratory — ${esc(d.laboratory.name)}</div>
+      ${d.laboratory.owner?`<p class="lab-extra" style="margin:6px 0">Owner: ${esc(d.laboratory.owner)}</p>`:''}
       ${labStatGridHtml(d.laboratory)}
       ${d.laboratory.specialties?`<p class="lab-extra"><em>Specialties:</em> ${esc(d.laboratory.specialties).replace(/\n\n/g,', ')}</p>`:''}
       ${d.laboratory.features?`<p class="lab-extra"><em>Features:</em> ${esc(d.laboratory.features)}</p>`:''}
-    </details>` : '';
+    </div>` : '';
 
   return `${dims}${ownerLine}${covenantStatus}${note}${devices}${lab}`;
 }
