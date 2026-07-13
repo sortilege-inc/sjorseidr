@@ -404,6 +404,669 @@
       "raised_event": "",
       "status": "Open",
       "resolution": ""
+    },
+    {
+      "id": "q021",
+      "type": "Question",
+      "category": "Tribunal / Prizes",
+      "title": "What were Sjórseiðr's actual final placements in the Dimicatio, Hastiludium, and Joust?",
+      "context": "tribunal_data.json's own bracket data confirms Sjórseiðr reached the final four of all three events (Dimicatio: lost to Nidi or beat them then faced Oleron in the final; Hastiludium: faced Bellum Iocari then Lapis Crudus; Joust: faced Oleron) — but the winner field is blank on every one of those later-round matches. The GM's old Notion prep has the same gaps, so this isn't a site bug, just an unfinished bracket.",
+      "raised_in": "Cross-referenced from tribunal_data.json and the GM's Notion prep notes (undated)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "q022",
+      "type": "Question",
+      "category": "Covenant Business",
+      "title": "Did the 1223 Tribunal's prize windfall actually fix the covenant's structural deficit?",
+      "context": "A pre-Tribunal GM finance snapshot shows the covenant spending nearly triple its ~40 lb annual income (118 lb in expenditures, reduced from 133) with only a few years of reserves left. The Tribunal's ~31-pawn prize haul (see q003/q004, still unresolved) may paper over this rather than fix it — worth checking whether the underlying income shortfall persists.",
+      "raised_in": "GM's Notion prep notes (undated, pre-Tribunal finance snapshot)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t027",
+      "type": "Thread",
+      "category": "Plot",
+      "title": "The Rhine Church-infiltration conspiracy Valerian uncovered was never addressed.",
+      "context": "Per GM prep for Valerian's original arc, his offense was discovering that Rhine magi had infiltrated the Church hierarchy in Brabant — a Code-endangering secret that got him framed and imprisoned. Now that he's a covenant member, whether this conspiracy was ever exposed, contained, or left to fester hasn't come up.",
+      "raised_in": "GM's Notion prep notes (undated), \"The Situation with Valerian\"",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t028",
+      "type": "Thread",
+      "category": "NPC / Identity",
+      "title": "Magister Reynald de Grimbergen — the Duke of Brabant's double-agent counsel — was never confronted.",
+      "context": "GM prep names Reynald, a failed Rhine apprentice turned ducal advisor, as the one who forged the documents used to imprison Valerian, while quietly feeding intelligence back to his old Rhine handlers. His current status — exposed, still embedded, retaliating — is unaddressed.",
+      "raised_in": "GM's Notion prep notes (undated), \"The Situation with Valerian\"",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t029",
+      "type": "Thread",
+      "category": "Plot",
+      "title": "Captain Absalom's possession-like episode was never surfaced — and may explain the missing Maelstrom's Maw.",
+      "context": "Undated GM notes describe Captain Absalom secretly buying and then destroying psalters, reliquaries, and other consecrated items at sea while apparently not himself (\"his eyes were... wrong\"). Absalom is already tied to the unresolved fate of the missing Maelstrom's Maw and Kor Ex Flambeau (see c013), and the covenant carries a \"Possession Victim\" flaw that's never been played out — this reads as unused foreshadowing for what actually happened to that ship.",
+      "raised_in": "GM's Notion prep notes (undated), \"Evildoers\"",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t030",
+      "type": "Thread",
+      "category": "NPC / Identity",
+      "title": "Several Bruges locals independently claim to know something about Valerian's disappearance.",
+      "context": "GM-prepared Bruges NPCs never used in play include a dockhand who says he saw Valerian “dragged aboard a barge with black sails,” a lantern-boy who saw him leaving with “two monks with hard hands,” and a Castellan's guard captain with “special permission” from Duke Brabant who “may be directly tied to Valerian's disappearance.” The strongest lead: Sir Odo van Aerschot, a Brabantine-loyalist knight in Bruges, is explicitly noted as “suspected to be behind several disappearances in Bruges — including Valerian.” Two more knew him personally before the covenant — a madam who kept a lock of his hair, a dowager noblewoman who “may still mourn his absence,” and a companion who calls him “heart-sigh.” None of these leads have been pulled on. See also t026 (the unsigned “V.” letter) and t028 (Reynald de Grimbergen) — likely the same underlying conspiracy.",
+      "raised_in": "GM's Notion prep notes (undated), Bruges NPC roster",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t031",
+      "type": "Thread",
+      "category": "NPC / Identity",
+      "title": "Magus Benedictus of Jerbiton may be running the same recruitment pitch in more than one port.",
+      "context": "Benedictus tried to recruit Stijntje as an apprentice, drawn to The Scholar's Wake's \"unique, sea-bound laboratory\" and, more specifically, to her (see c025). Separate, unused GM notes place a magus of the same name in Southampton too, suspected by a local steward of \"unwholesome teachings\" and privately asked by a merchant to investigate ghost lights on the Solent. If it's the same Benedictus, he may have a broader pattern across Channel ports worth tracking.",
+      "raised_in": "GM's Notion prep notes (undated), Bruges NPC roster + Southampton gazetteer",
+      "raised_event": "Stijntje and Benedictus",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t032",
+      "type": "Thread",
+      "category": "Diplomacy",
+      "title": "Guillaume le Preux's mid-tournament alliance offer to Sjórseiðr was never pitched at the table.",
+      "context": "GM prep for the 1223 Tourney has Montverte's Praeco, Guillaume le Preux, approaching the young, liege-less covenant with an alliance offer once his own covenant's prestige started crumbling during the standings. Unclear whether this was ever actually raised in play — worth a GM check before treating it as live.",
+      "raised_in": "GM's Notion prep notes (undated), \"Opponent Profile ideas\"",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t033",
+      "type": "Thread",
+      "category": "Diplomacy",
+      "title": "Friedrich of Merces Aurea's separatist recruitment pitch to Sjórseiðr was never pitched at the table.",
+      "context": "GM prep flags Friedrich, the Merces Aurea coalition coordinator, as likely to sound out the covenant for a Lotharingian secession cause — distinct from Bridget of Scarem Montem's already-tracked pitch (t010). Unclear whether this was ever actually raised in play — worth a GM check before treating it as live.",
+      "raised_in": "GM's Notion prep notes (undated), \"Opponent Profile ideas\"",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t034",
+      "type": "Thread",
+      "category": "World Detail",
+      "title": "Where did Solving actually go?",
+      "context": "The covenant's founder and Dagmar's parens vanished into Twilight from Bruges in 1220 and still hasn't returned. Old GM notes float that he may have entered the Hypostasis (the Criamon concept of escape from the cycle of time that Dagmar's own research is fixated on) — but this was never more than a GM hypothesis, and nothing in the chronicle confirms or denies it.",
+      "raised_in": "GM's Notion prep notes (undated)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t035",
+      "type": "Thread",
+      "category": "NPC / Identity",
+      "title": "Why was Ka'wa'ill exiled from merfolk society?",
+      "context": "Merfolk lore in the GM's notes describes exile as \"something akin to a death sentence\" for most merfolk, given how insular their civilization is — which makes Ka'wa'ill's presence aboard Veðrdreki as \"the merman prince\" (see npcs.json) unusual and unexplained. The reason for his exile was never established.",
+      "raised_in": "GM's Notion prep notes (undated)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "c023",
+      "type": "Consequence",
+      "category": "Diplomacy",
+      "title": "The Duke of Brabant's relationship to the covenant, after being manipulated into imprisoning Valerian, was never resolved.",
+      "context": "Per GM prep, the Duke acted on forged authority he believed genuine and was left \"terrified\" and doubting himself once the deception started to unravel. Whether the covenant ever told him the truth, and what he now believes about Hermetic magi as a result, hasn't come up since.",
+      "raised_in": "GM's Notion prep notes (undated), \"The Situation with Valerian\"",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "c024",
+      "type": "Consequence",
+      "category": "NPC / Identity",
+      "title": "Captain Joris Van Damme's fate after the Hound of Cassel raid was never addressed.",
+      "context": "The Hound of Cassel's Scarem Montem-affiliated captain — proud, overconfident, per the GM's original raid prep, with a mate (\"One-Eye\" Dekker) and a mixed veteran/green crew — isn't mentioned in any account of the raid's aftermath (already resolved as \"Summer piracy,\" q001/c013c). Whether he was killed, ransomed, released, or is still at large is unknown.",
+      "raised_in": "GM's Notion prep notes (undated), \"Hounds of Cassel\"",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "c025",
+      "type": "Consequence",
+      "category": "Character",
+      "title": "Magus Benedictus read Stijntje's name from her mind, unprompted.",
+      "context": "When Benedictus of House Jerbiton approached the covenant's apprentice-candidate on the Bruges docks and conjured a small flame to entice her, he knew her name without being told — apparently lifted from her mind. Dustin drove him off before further contact. What else Benedictus perceived, and why he specifically targeted her (GM notes describe a deliberate courtship campaign — letters, gifts, an open invitation to Southampton \"for a season or two\"), was never established. See also t031.",
+      "raised_in": "Verified chronicle, \"Stijntje and Benedictus\"; GM's Notion prep notes on Benedictus (undated)",
+      "raised_event": "Stijntje and Benedictus",
+      "status": "Open",
+      "resolution": ""
     }
-  ]
+  ],
+  "gmReference": {
+    "brugesRoster": {
+      "title": "Bruges — Cast in Reserve",
+      "note": "Mundane NPCs the GM prepared for the covenant's home port. None have been used in play yet (per the GM's own notes) — pull from here rather than inventing a new face when a Bruges scene needs one.",
+      "entries": [
+        {
+          "name": "Anselmo ex Bonisagus",
+          "title": "Hermetic Scholar in Disguise",
+          "note": "Posing as a mundane doctor, Anselmo studies the northern humors and arcane sickness. Secretly writing a treatise on magical bloodlines. Keeps a raven that speaks riddles in Latin.",
+          "used": false
+        },
+        {
+          "name": "Benedictus of Jerbiton",
+          "title": "Jerbiton Magus, \"the Silver Tongue of Southampton\"",
+          "note": "A polished, silver-haired magus whose sanctum lies just beyond Southampton's old Roman walls, doubling as a salon for artists, merchants, and minor nobles. Believes beauty is a form of moral truth. Has taken an interest in Stijntje Kuiper — courting her with raven-borne letters and gifts, and an open invitation to visit his library-laced sanctum \"for a season or two.\" Behind the charm: he wants to build a salon of magical minds loyal to him.",
+          "used": false,
+          "linksTo": [
+            "c025",
+            "t031"
+          ]
+        },
+        {
+          "name": "Bertrand du Lys",
+          "title": "Exiled Knight of Hainaut",
+          "note": "A brooding swordsman and foreign noble fallen on hard times. Lives above a fletcher's shop. Rumored to have dueled a Duke's son. Possibly looking for redemption — or revenge.",
+          "used": false
+        },
+        {
+          "name": "Boudewijn van der Voorde",
+          "title": "Captain of the Watch",
+          "note": "Grizzled ex-soldier, loyal to the guilds, hates paperwork. Struggles balancing leniency toward the poor against brutality toward outlanders. Drinks too much but knows the city inside out. Could be swayed with principle — or silver.",
+          "used": false
+        },
+        {
+          "name": "Brother Joost",
+          "title": "Mad Anchorite",
+          "note": "Lives walled into a cell behind a chapel, speaking only once per day through a tiny window. On Saint's Days he speaks in rhymes that often predict events — or deaths. People leave coins and questions on slips of parchment.",
+          "used": false
+        },
+        {
+          "name": "Brother Savin",
+          "title": "Clerical Advocate for the Bishopric",
+          "note": "Sent from Tournai to monitor the city's moral climate. Walks the line between Church authority and local law. Often appears at trials involving sorcery or \"unnatural behavior.\" May be an agent of the Dominican Order — or something darker.",
+          "used": false
+        },
+        {
+          "name": "Brother Tomás",
+          "title": "Hospitaller at the Abbey of St. Andrew",
+          "note": "A quiet, Spanish-born monk with a sharp memory and gentle touch. His abbey holds records of river shipments and sick travelers, and he occasionally sees prophetic dreams.",
+          "used": false
+        },
+        {
+          "name": "Canon Gilles de Roon",
+          "title": "Political Preacher",
+          "note": "Stern-faced and ambitious, delivers fire-and-brimstone sermons against foreign entanglements and \"unclean miracles.\" Suspected of collusion with Brabant's envoys. Keeps a locked chest of anonymous donations in silver.",
+          "used": false
+        },
+        {
+          "name": "Cilene of Criamon",
+          "title": "Wandering Mystic",
+          "note": "A heavily tattooed woman with a strange cadence and no visible luggage. Preaches at corners and weeps when the moon wanes. Her cryptic words hold clues to regio entrances.",
+          "used": false
+        },
+        {
+          "name": "Colette-with-the-Bell",
+          "title": "Street Courtesan and Spy",
+          "note": "Young and charming, with a silver bell on her ankle. Trades rumors between nobles, sailors, and thieves. Claims to have seen \"the pretty one with the lute\" thrown into a laundry cart by cloaked men.",
+          "used": false,
+          "linksTo": [
+            "t030"
+          ]
+        },
+        {
+          "name": "Deacon Renard of Cambrai",
+          "title": "Visiting Inquisitor's Aide",
+          "note": "Thin, beady-eyed, always watching. Travels under the banner of a Church investigation into heretical activities. Claims he's here about Cathars, but shows keen interest in \"unlicensed healers and unnatural weather.\"",
+          "used": false
+        },
+        {
+          "name": "Dirk “Two-Fathoms” van Velsen",
+          "title": "Lame Dockhand",
+          "note": "Lost a leg to a kraken — or so he says. Spends his time carving obscene mermaids and watching the tide. Claims he saw Valerian dragged aboard a barge with black sails.",
+          "used": false,
+          "linksTo": [
+            "t030"
+          ]
+        },
+        {
+          "name": "Etienne the Dustwalker",
+          "title": "Redcap",
+          "note": "Thin, bone-pale, and always dusty. Moves between covenants disguised as a beggar. Delivers messages and smuggles magical items through Bruges under the guise of wine shipments.",
+          "used": false
+        },
+        {
+          "name": "Father Willem",
+          "title": "Old Harbormaster Priest",
+          "note": "Tends a shrine near the docks to St. Nicholas. Grizzled and fond of gin, but devout. Hears more confessions than anyone in Bruges, and keeps a coded book of what he learns — supposedly to \"pray more effectively.\"",
+          "used": false
+        },
+        {
+          "name": "Francois Malvoisin",
+          "title": "Antiquarian and Book Dealer",
+          "note": "Gnarled like the driftwood he collects, hoards texts and scraps of lore in his riverside shop. May have connections to Hermetic redcaps but denies all knowledge of magic.",
+          "used": false
+        },
+        {
+          "name": "Greet of the Orchard",
+          "title": "Elder Sex Worker Turned Healer",
+          "note": "Once a famed courtesan, now runs an herbal bathhouse for women. Offers charms and quiet advice. Knows who's coming and going in the pleasure district and keeps coded symbols on her entry door each night.",
+          "used": false
+        },
+        {
+          "name": "Hendrick Lamoen",
+          "title": "Night Watchman and Rat-Catcher",
+          "note": "Unkempt, paranoid, always armed with a lantern and spiked cudgel. Claims he's seen a \"man with mirrored eyes\" walking the rooftops at midnight.",
+          "used": false
+        },
+        {
+          "name": "Ingrid of the Mire",
+          "title": "Fae-Touched Midwife",
+          "note": "Her eyes reflect moonlight even during the day. Always knows when someone is pregnant — and sometimes what the child will be. Fears \"a boy born with iron in his mouth.\"",
+          "used": false
+        },
+        {
+          "name": "Isko of Reval",
+          "title": "Runaway Baltic Sailor",
+          "note": "Towering and soft-spoken, speaks broken Flemish and better Latin. Trying to disappear in Bruges after stealing a precious charm from his former captain. Superstitious and wary of magic.",
+          "used": false
+        },
+        {
+          "name": "Jakob d’Ypres",
+          "title": "Rival Dock Foreman",
+          "note": "Gruff and territorial. Hates magic, hates taxes, hates poets. Recently fired a man for \"asking too many questions about river routes to Dinant.\" Keeps a ledger under his bed — some pages removed.",
+          "used": false
+        },
+        {
+          "name": "Jan de Brakel",
+          "title": "Guild Master of the Carpenters",
+          "note": "Burly and thick-fingered, sawdust permanently in his beard. Secretly sheltering a Tytalus apprentice who fled his master.",
+          "used": false
+        },
+        {
+          "name": "Judicratix Margriet van Heule",
+          "title": "Chief Schepen",
+          "note": "Sharp-tongued, always veiled, entirely incorruptible (or so she insists). Keeps notes in a personal cipher. Jurisdiction over property disputes, thefts, and \"disruptions of civic peace.\" Suspects something unnatural in the canals.",
+          "used": false
+        },
+        {
+          "name": "Klaas the Candle-Boy",
+          "title": "Lantern Escort and Listener",
+          "note": "Hired to walk clients home safely at night, mostly silent and watchful. Exceptional memory for faces and footsteps. Recently saw someone matching Valerian's description leaving with \"two monks with hard hands.\"",
+          "used": false,
+          "linksTo": [
+            "t030"
+          ]
+        },
+        {
+          "name": "Lady Joan of Constantinople",
+          "title": "Countess of Flanders",
+          "note": "Elegant and intense, rules from Ghent, but her envoys keep a sharp eye on Bruges. Rarely seen in person, but every major noble in Bruges is either trying to support or subvert her. Secretly seeking magical aid to secure her lineage — perhaps a Hermetic opportunity.",
+          "used": false
+        },
+        {
+          "name": "Lady Ysabel van Aardenburg",
+          "title": "Merchant Matriarch",
+          "note": "Sharp-witted and impeccably dressed in Flemish silks, controls a powerful wool and dye trading house. Polite but fiercely protective of Bruges' autonomy from foreign nobles.",
+          "used": false
+        },
+        {
+          "name": "Lisette the Bold",
+          "title": "Madam of the Gilded Fig",
+          "note": "Raven-haired and iron-willed, runs the most luxurious brothel in Bruges. Her girls are trained in song, wit, and secrets. Valerian once performed here — Lisette keeps a lock of his hair.",
+          "used": false,
+          "linksTo": [
+            "t030"
+          ]
+        },
+        {
+          "name": "Madame Lieve",
+          "title": "Owner of the Crimson Duck Inn",
+          "note": "Witty, middle-aged, always one step ahead. Her tavern is a crossroads for gossip, illicit deals, and out-of-town couriers. Knows how to listen without seeming to.",
+          "used": false
+        },
+        {
+          "name": "Maeva the Windkeeper",
+          "title": "Barge Captain",
+          "note": "A Breton woman with a raven tattoo and hair in iron rings. Sails under no banner and fears no storm. Rumors say her ship can sail even with torn sails — and that she once kissed a selkie.",
+          "used": false
+        },
+        {
+          "name": "Magister Lambert",
+          "title": "City Scribe & Notary",
+          "note": "Impeccably organized, ink-stained fingers, bland expression. Quietly records all disputes, taxes, and legal matters. May have access to intercepted letters or Duke Brabant's agents' missives.",
+          "used": false
+        },
+        {
+          "name": "Marthe aux Cendres",
+          "title": "Local Wise Woman (Cunning Folk)",
+          "note": "Lives in a peat-hut on the edge of the marshes. People claim she speaks with ghosts and cures madness. The local clergy are suspicious, but none dare move against her openly.",
+          "used": false
+        },
+        {
+          "name": "Pieter van Cleeff",
+          "title": "Canal Boatman and Informant",
+          "note": "Wiry and grinning, knows the waterways better than anyone. Trades in rumors, contraband, and the occasional missing person.",
+          "used": false
+        },
+        {
+          "name": "Ragna “the Guilder”",
+          "title": "Fence & Secret Broker",
+          "note": "A large, laughing woman with scarred hands and fine clothes. Brokers secrets as easily as smuggled goods. Keeps a circle of loyal thugs and a hidden tunnel beneath her shop.",
+          "used": false
+        },
+        {
+          "name": "Roeland the Roper",
+          "title": "Ropemaker and Smuggler",
+          "note": "Broad-shouldered and cheerfully profane. His ropes are prized by sailors — but some include knotted symbols only certain buyers understand. Secretly a courier for Etienne the Dustwalker.",
+          "used": false
+        },
+        {
+          "name": "Sir Rombout de Noyon",
+          "title": "Commander of the Castellan's Guard",
+          "note": "Noble-born, self-righteous, disdainful of commoners. Trains his men like soldiers, tolerates no insubordination, and has \"special permission\" from Duke Brabant to act outside Bruges' charter. May be directly tied to Valerian's disappearance.",
+          "used": false,
+          "linksTo": [
+            "t030"
+          ]
+        },
+        {
+          "name": "Sister Annelies",
+          "title": "Abbess of the Veiled Heart",
+          "note": "Warm but commanding, tends to fallen women and abandoned children. Known for sharp negotiation with the city's merchants. Whispers say she once healed a blind beggar — who immediately fled the city.",
+          "used": false
+        },
+        {
+          "name": "Tomkin “The Little Lord”",
+          "title": "Effeminate Companion",
+          "note": "Dressed in velvet and blush, caters to nobles and scholars alike. Collects poetry, keeps a diary disguised as a songbook. Knows Valerian personally — calls him \"heart-sigh.\" Will trade knowledge for a new gown.",
+          "used": false,
+          "linksTo": [
+            "t030"
+          ]
+        },
+        {
+          "name": "Willem de Lichtervelde",
+          "title": "Court Scribe & Informant",
+          "note": "Thin, quiet, invisible at most gatherings. Records confessions, trial outcomes, civic pronouncements. Known to pass quiet bribes to ensure charges \"go missing.\" Might help the players — for the right cause or price.",
+          "used": false
+        },
+        {
+          "name": "Baron Arnulf van Maele",
+          "title": "Stoic Elder Noble, House van Maele",
+          "note": "Proud, frost-haired, and blunt. Supports Bruges' civic independence and funds local hospitals and churches. Loyal to Countess Joan. Believes in alliances with Hermetic magi, but keeps it very discreet.",
+          "used": false
+        },
+        {
+          "name": "Sir Odo van Aerschot",
+          "title": "Knight and Diplomat, House van Aerschot (Brabantine loyalists)",
+          "note": "Young, well-dressed, venomously polite. Suspected to be behind several disappearances in Bruges — including Valerian's. Maintains a suspiciously large household guard and discreetly meets with Church figures.",
+          "used": false,
+          "linksTo": [
+            "t030"
+          ]
+        },
+        {
+          "name": "Lady Ermengarde van Ruddervoorde",
+          "title": "Dowager with Ambition, House van Ruddervoorde",
+          "note": "Wears silks from Outremer, drinks heavy wine, speaks in riddles. Hosts salons where songs, lies, and truths blur. Once patronized Valerian, and may still mourn his absence.",
+          "used": false,
+          "linksTo": [
+            "t030"
+          ]
+        },
+        {
+          "name": "Diederik van Aardenburg",
+          "title": "Young Lord-in-Waiting, House van Aardenburg",
+          "note": "Hot-headed and eager to prove himself. Dabbles in fencing, philosophy, and potentially Hermetic ideas. Might become an ally or pawn depending on the party's approach. Kin to Lady Ysabel van Aardenburg.",
+          "used": false
+        }
+      ]
+    },
+    "seaFae": {
+      "title": "Sea Fae Bestiary",
+      "note": "Deep-sea fae, organized by ocean depth. Meant to feel alien and incomprehensible the deeper you go — GM reference for anything involving the covenant's fae/merfolk entanglements (Rán, Ka'wa'ill, Marina).",
+      "poem": {
+        "title": "The Depths Hold Many Names",
+        "stanzas": [
+          "The winds at play on silvered tides,\nThe gilded lords of mist and spray.\nThey dance and weave, they trick and smile,\nBut do not trust their fleeting guile.",
+          "Below them dine the drowned kings\nand with them sailors lost at sea\nTheir table welcomes every guest\nShould forfeit they a memory.",
+          "The weavers sing, and braid their net\nTo bind the lost and keep the dead\nA tangled gift, a silken grave,\nSwim not where memory calls the wave.",
+          "Amidst the dark a flicker's gleam,\nA gentle voice, a waking dream.\nFollow soft and follow bright,\nAnd never, never see the light.",
+          "False currents pull where maps have lied,\nA hungry path, the shifting tide.\nOne moment west, one moment none,\nAnd when you turn, your home is gone.",
+          "The Molt-Sworn shed, their shells remain,\nHollow things with clicking frames.\nAn aura of them may abide\nBut nothing in them true resides",
+          "Drifters glow with absent thought,\nLong tendrils trace what time forgot.\nTo take your breath, to taste the past,\nAnd leave you sinking, thoughtless, glass.",
+          "The beggars bound deep whisper low,\nIn chains of tides they twist and flow.\nThey call for hands, they beg for keys,\nBound for cause, eternally,",
+          "Wells of black a gaping maw,\nTo them foolish prey they draw\nThey do not move, they do not wait,\nBut pull you down to share their fate.",
+          "The cold gods dream beyond all years,\nThey watch through waves, they dream your fears.\nThey see not flesh, they hear no cry,\nA inhuman sympathy belied",
+          "Light and shadow, each must stay,\nFar from where the still ones lay.\nFor what sleeps deep beneath the tide,\nKnows no master, spares no guide.",
+          "(Silence.)"
+        ]
+      },
+      "zones": [
+        {
+          "name": "Epipelagic Zone (0–200m) — The Surface Lords",
+          "description": "These fae interact with sailors, islands, and storms — still comprehensible, but capricious.",
+          "entities": [
+            {
+              "name": "The Drowned Kings",
+              "description": "Ghostly faerie rulers of lost ships who command floating graveyards of wrecks. See the ocean as their kingdom of the dead; their courts hold banquets of drowned sailors."
+            },
+            {
+              "name": "Wave Riders",
+              "description": "Horse-like fae that gallop across the surface of the water, sometimes carrying ships or luring them into unreachable faerie regios."
+            }
+          ]
+        },
+        {
+          "name": "Mesopelagic Zone (200–1000m) — The Sunken Courts",
+          "description": "Half-visible, bioluminescent, aware of the world above but bound to the twilight below.",
+          "entities": [
+            {
+              "name": "The Netweavers",
+              "description": "Living, sentient fishing nets that ensnare not just fish but souls and memories. Sailors who drown in them live on as whispering ghosts in their fibers."
+            },
+            {
+              "name": "The Flickerlights",
+              "description": "Predatory fae resembling dancing lights in the darkness. Trick divers into following them into deep trenches where they vanish forever."
+            },
+            {
+              "name": "The False Currents",
+              "description": "Shapeless fae that mimic trade winds and currents, leading ships off course into forgotten, unmapped waters."
+            }
+          ]
+        },
+        {
+          "name": "Bathypelagic Zone (1000–4000m) — The Abyssal Emperors",
+          "description": "No sunlight reaches here. Massive, ancient, slow-moving; their consciousness stretches over centuries.",
+          "entities": [
+            {
+              "name": "The Molt-Sworn",
+              "description": "Crab-like fae that continuously molt and regrow, leaving behind empty, animated husks of themselves. Trade skins and identities — some say magi who bargain with them can shed their age, for a price."
+            },
+            {
+              "name": "The Dream Drifters",
+              "description": "Jellyfish-like fae that weave dreams into their tendrils, consuming memories and thoughts instead of flesh. The deeper you go, the more likely you are to forget why you came."
+            },
+            {
+              "name": "The Leviathan-Bound",
+              "description": "Prisoner-gods of the deep, shackled by unknowable entities. Some escaped from Faerie, some from Hell — they'll promise anything to be freed."
+            }
+          ]
+        },
+        {
+          "name": "Abyssopelagic Zone (4000–6000m) — The Sleeping Ones",
+          "description": "Barely awake, existing in vast timeless slumber — but if disturbed, could shift entire oceans.",
+          "entities": [
+            {
+              "name": "The Black Wells",
+              "description": "Entire trenches that are actually immense fae-beings, their bodies forming undersea canyons and ridges. Those who swim too close hear voices calling them deeper."
+            },
+            {
+              "name": "The Cold Gods",
+              "description": "Massive, slow-moving creatures entirely wrapped in darkness, sensing only by vibration and thought. See through time rather than space, and might react to the magi's search for vis long before it happens."
+            }
+          ]
+        },
+        {
+          "name": "Hadal Zone (6000m+) — The Unfathomable",
+          "description": "Barely fae at all — concepts of hunger, pressure, and stillness given form.",
+          "entities": [
+            {
+              "name": "The Last Maw",
+              "description": "A being that does not move, yet its mouth is always open. Devours the shadows of those who pass; those who lose their shadow eventually cease to exist."
+            },
+            {
+              "name": "The Final Pact",
+              "description": "A faerie deeper than any known depth, which will grant any wish in exchange for something you don't yet know you have."
+            }
+          ]
+        }
+      ]
+    },
+    "criamonRiddles": {
+      "title": "Criamon Riddles & Answers",
+      "note": "A shallow and a deep answer for each of the 15 Hermetic Arts, in Criamon mystery-cult style — a reusable puzzle bank for Cilene of Criamon, or any other Criamon magus. Dagmar's own answers to four of these (Imaginem, Herbam, Vim, Auram) are on his character sheet, and don't always match the \"deep\" answer given here — that's intentional; every Criamon magus reasons their own way in.",
+      "entries": [
+        {
+          "art": "Creo",
+          "code": "Cr",
+          "label": "“I Create”",
+          "riddle": "From where does the sun rise when the world is shrouded in endless night?",
+          "shallow": "From the east, as it always has.",
+          "deep": "From within. Light is not given, but remembered."
+        },
+        {
+          "art": "Intellego",
+          "code": "In",
+          "label": "“I Perceive”",
+          "riddle": "If a silent man whispers a secret, who has heard it?",
+          "shallow": "No one, for he made no sound.",
+          "deep": "The silence itself holds the secret, for knowledge is not always spoken."
+        },
+        {
+          "art": "Muto",
+          "code": "Mu",
+          "label": "“I Transform”",
+          "riddle": "A serpent eats its tail, becoming itself again. Did it ever change?",
+          "shallow": "Yes, it changed as it consumed itself.",
+          "deep": "No, for it was always itself. Change is only the forgetting of what was already true."
+        },
+        {
+          "art": "Perdo",
+          "code": "Pe",
+          "label": "“I Destroy”",
+          "riddle": "When a shadow is swallowed by the night, where does it go?",
+          "shallow": "It vanishes, for there is no light to cast it.",
+          "deep": "It becomes the night, for absence is but another form of presence."
+        },
+        {
+          "art": "Rego",
+          "code": "Re",
+          "label": "“I Control”",
+          "riddle": "Who commands the river: the mountain that births it, the valley that holds it, or the sea that swallows it?",
+          "shallow": "The sea, for all rivers flow to it.",
+          "deep": "None and all. The river commands itself, moving by nature, yet shaped by all."
+        },
+        {
+          "art": "Animal",
+          "code": "An",
+          "label": "",
+          "riddle": "A bird trapped in a cage and a fish trapped in water — who is more free?",
+          "shallow": "The fish, for it is where it belongs.",
+          "deep": "Neither, for each is confined by the limits of their understanding."
+        },
+        {
+          "art": "Aquam",
+          "code": "Aq",
+          "label": "“Water”",
+          "riddle": "A drop of water in the ocean and the ocean in a drop. Which is greater?",
+          "shallow": "The ocean, for it is vast and mighty.",
+          "deep": "Neither, for the ocean is nothing but many drops."
+        },
+        {
+          "art": "Auram",
+          "code": "Au",
+          "label": "“Air”",
+          "riddle": "I built a house of wind, and it held my breath. Why did it collapse when I exhaled?",
+          "shallow": "Wind is nothing. It cannot be shaped nor hold anything.",
+          "deep": "The house was real, but I no longer believed in it. My breath gave it form, my doubt destroyed it."
+        },
+        {
+          "art": "Corpus",
+          "code": "Co",
+          "label": "“Body”",
+          "riddle": "My finger rotted, but I am still whole. Whose body is this?",
+          "shallow": "It is your body still. Parts may fail, but the self remains.",
+          "deep": "No part is mine, only borrowed. The body is a story the soul tells, and it forgets its lines."
+        },
+        {
+          "art": "Herbam",
+          "code": "He",
+          "label": "“Plant”",
+          "riddle": "A tree that stands for a hundred years and a flower that blooms for a day — which has lived longer?",
+          "shallow": "The tree, for it endures.",
+          "deep": "The flower, for it knew no waiting."
+        },
+        {
+          "art": "Ignem",
+          "code": "Ig",
+          "label": "“Fire”",
+          "riddle": "What is the shape of fire?",
+          "shallow": "It has no shape, for it moves as it pleases.",
+          "deep": "It is the shape of change, for it devours all yet leaves nothing behind."
+        },
+        {
+          "art": "Imaginem",
+          "code": "Im",
+          "label": "“Image”",
+          "riddle": "If I wear a mask and none see beneath it, do I still exist?",
+          "shallow": "Yes, for I am here beneath the mask.",
+          "deep": "No, for I am only what others perceive."
+        },
+        {
+          "art": "Mentem",
+          "code": "Me",
+          "label": "“Mind”",
+          "riddle": "A thought never spoken and a word never heard — do they have meaning?",
+          "shallow": "No, for meaning is given by those who receive it.",
+          "deep": "Yes, for meaning is not in the telling but in the knowing."
+        },
+        {
+          "art": "Terram",
+          "code": "Te",
+          "label": "“Earth”",
+          "riddle": "A stone rests unmoved for a thousand years. Was it patient, or merely forgotten?",
+          "shallow": "It was forgotten, for stone does not think or feel.",
+          "deep": "It was patient, for in stillness it remembered the shape of the world before motion."
+        },
+        {
+          "art": "Vim",
+          "code": "Vi",
+          "label": "“Power”",
+          "riddle": "What can bind the infinite?",
+          "shallow": "Nothing, for the infinite has no bounds.",
+          "deep": "Itself, for infinity is a circle, ever turning upon its own path."
+        }
+      ]
+    }
+  }
 }

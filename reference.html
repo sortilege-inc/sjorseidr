@@ -61,6 +61,46 @@ td.diag{color:var(--ink-soft);opacity:.5}
 tr:last-child td{border-bottom:none}
 
 footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);opacity:.75}
+
+/* top-level tabs */
+.reftabs{display:flex;gap:4px;margin-bottom:18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.reftab{font-family:'Cinzel',serif;font-size:12.5px;letter-spacing:.03em;padding:9px 16px;cursor:pointer;
+  color:var(--ink-soft);border-bottom:3px solid transparent;transition:color .12s,border-color .12s}
+.reftab:hover{color:var(--ink)}
+.reftab.active{color:var(--rust-bright);border-color:var(--rust-bright);font-weight:600}
+
+.timing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;margin:10px 0 14px}
+.timing-tile{background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.3);border-radius:8px;padding:8px 12px}
+.timing-tile .tl{font-size:11.5px;color:var(--ink-soft)}
+.timing-tile .tv{font-family:'Cinzel',serif;font-size:14px;color:var(--ink);margin-top:2px}
+.hazard-list{margin:6px 0 0;padding-left:20px}
+.hazard-list li{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin-bottom:4px}
+
+.goods-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-bottom:8px}
+.goods-region{background:rgba(244,235,213,.5);border:1px solid rgba(120,90,40,.3);border-radius:10px;padding:12px 15px}
+.goods-region h4{font-family:'Cinzel',serif;font-size:13px;color:var(--rust-bright);margin:0 0 8px}
+.goods-region .gcol-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--ink-soft);margin:8px 0 4px}
+.goods-region ul{margin:0;padding-left:18px}
+.goods-region li{font-size:13px;line-height:1.5;color:var(--ink-soft);margin-bottom:4px}
+.goods-region p{font-size:13px;line-height:1.5;color:var(--ink-soft);margin:0}
+
+.gaz-nav{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.gaz-btn{font-family:'Cinzel',serif;font-size:11.5px;cursor:pointer;border:1px solid rgba(120,90,40,.35);
+  background:rgba(244,235,213,.55);color:var(--ink-soft);padding:5px 12px;border-radius:14px}
+.gaz-btn:hover{background:rgba(244,235,213,.9)}
+.gaz-btn.on{background:linear-gradient(180deg,var(--teal-bright),var(--teal));color:#fff;border-color:var(--teal)}
+.gaz-place{margin-bottom:26px}
+.gaz-place-title{font-family:'Cinzel',serif;font-weight:600;font-size:17px;color:var(--ink)}
+.gaz-place-tag{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin:1px 0 10px}
+.gaz-section{margin-bottom:10px}
+.gaz-section-h{font-family:'Cinzel',serif;font-size:12px;color:var(--teal);margin-bottom:3px}
+.gaz-section p{font-size:13.5px;line-height:1.55;color:var(--ink-soft);margin:0}
+.gaz-npc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:10px}
+.gaz-npc{background:rgba(244,235,213,.5);border:1px solid rgba(120,90,40,.3);border-radius:8px;padding:10px 13px}
+.gaz-npc-name{font-family:'Cinzel',serif;font-weight:600;font-size:13px;color:var(--ink)}
+.gaz-npc-role{font-style:italic;font-size:11.5px;color:var(--ink-soft);margin:1px 0 5px}
+.gaz-npc-note{font-size:12.5px;line-height:1.5;color:var(--ink-soft)}
 </style>
 </head>
 <body>
@@ -71,6 +111,7 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
     <p class="subtitle">Miscellaneous GM reference tables that don't belong on any single page.</p>
   </header>
 
+  <div class="reftabs" id="tabs"></div>
   <div id="content"></div>
 
   <footer>Sourced from the campaign's Notion workspace.</footer>
@@ -78,13 +119,18 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
 
 <script>
 const $ = s=>document.querySelector(s);
+const $$ = s=>Array.from(document.querySelectorAll(s));
 const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+let DATA = null;
+let activeTab = 'travel';
+let activeGazPlace = 0;
 
 async function load(){
   try{
     const r = await fetch('./reference.json', {cache:'no-store'});
-    const d = await r.json();
-    render(d);
+    DATA = await r.json();
+    render();
   }catch(e){
     $('#content').innerHTML = `<div class="note-flag">Could not load reference.json — open via a local server, not file://.<br>${esc(e.message)}</div>`;
   }
@@ -99,20 +145,106 @@ function matrixTable(locations, matrix){
   return `<div class="tablewrap"><table>${head}${rows}</table></div>`;
 }
 
-function render(d){
-  const tt = d.travelTimes || {};
-  $('#content').innerHTML = `
+function renderTravel(){
+  const tt = DATA.travelTimes || {};
+  const bb = DATA.brugesToBordeaux || {};
+  const timing = (bb.timing||[]).map(t=>`<div class="timing-tile"><div class="tl">${esc(t.label)}</div><div class="tv">${esc(t.value)}</div></div>`).join('');
+  return `
     <div class="section">
       <div class="section-title">North Sea &amp; Baltic Travel Times</div>
       <p class="note-flag">${esc(tt.note || '')} Figures are in ${esc(tt.unit || 'days')} of sailing.</p>
-
       <div class="section-sub">North Sea &amp; Channel</div>
       ${matrixTable(tt.northSea.locations, tt.northSea.matrix)}
-
       <div class="section-sub">Baltic</div>
       ${matrixTable(tt.baltic.locations, tt.baltic.matrix)}
     </div>
+
+    <div class="section">
+      <div class="section-title">${esc(bb.title||'')}</div>
+      <p style="margin:0 0 4px"><em>Route:</em> ${esc(bb.route||'')}</p>
+      <p style="margin:0 0 10px;color:var(--ink-soft);font-size:13.5px">${esc(bb.distance||'')}</p>
+      <div class="timing-grid">${timing}</div>
+      <p class="note-flag">${esc(bb.note||'')}</p>
+      <div class="section-sub">Hazards</div>
+      <ul class="hazard-list">${(bb.hazards||[]).map(h=>`<li>${esc(h)}</li>`).join('')}</ul>
+    </div>
   `;
+}
+
+function renderTrade(){
+  const tg = DATA.tradeGoods || {};
+  const regions = (tg.regions||[]).map(r=>`
+    <div class="goods-region">
+      <h4>${esc(r.name)}</h4>
+      ${r.exports && r.exports.length ? `<div class="gcol-label">Exports</div><ul>${r.exports.map(e=>`<li>${esc(e)}</li>`).join('')}</ul>` : ''}
+      ${r.imports && r.imports.length ? `<div class="gcol-label">Imports</div><ul>${r.imports.map(i=>`<li>${esc(i)}</li>`).join('')}</ul>` : ''}
+      ${r.note ? `<p>${esc(r.note)}</p>` : ''}
+    </div>
+  `).join('');
+  const bank = tg.banking || {};
+  return `
+    <div class="section">
+      <div class="section-title">${esc(tg.title||'')}</div>
+      <p class="note-flag">${esc(tg.note||'')}</p>
+      <div class="goods-grid">${regions}</div>
+    </div>
+    <div class="section">
+      <div class="section-title">${esc(bank.title||'')}</div>
+      <p class="note-flag">${esc(bank.note||'')}</p>
+      <ul class="hazard-list">${(bank.points||[]).map(p=>`<li>${esc(p)}</li>`).join('')}</ul>
+    </div>
+  `;
+}
+
+function renderGazetteer(){
+  const gz = DATA.gazetteer || {};
+  const places = gz.places || [];
+  const nav = places.map((p,i)=>`<div class="gaz-btn ${activeGazPlace===i?'on':''}" data-i="${i}">${esc(p.name)}</div>`).join('');
+  const place = places[activeGazPlace];
+  const sections = (place.sections||[]).map(s=>`
+    <div class="gaz-section">
+      ${s.heading ? `<div class="gaz-section-h">${esc(s.heading)}</div>` : ''}
+      <p>${esc(s.text)}</p>
+    </div>
+  `).join('');
+  const npcs = (place.npcs||[]).length ? `<div class="gaz-npc-grid">${place.npcs.map(n=>`
+    <div class="gaz-npc">
+      <div class="gaz-npc-name">${esc(n.name)}</div>
+      <div class="gaz-npc-role">${esc(n.role)}</div>
+      <p class="gaz-npc-note">${esc(n.note)}</p>
+    </div>
+  `).join('')}</div>` : '';
+
+  return `
+    <div class="section">
+      <div class="section-title">${esc(gz.title||'')}</div>
+      <p class="note-flag">${esc(gz.note||'')}</p>
+      <div class="gaz-nav">${nav}</div>
+      <div class="gaz-place">
+        <div class="gaz-place-title">${esc(place.name)}</div>
+        <p class="gaz-place-tag">${esc(place.tag||'')}</p>
+        ${sections}
+        ${npcs}
+      </div>
+    </div>
+  `;
+}
+
+function render(){
+  const tabs = [
+    ['travel', 'Travel Times'],
+    ['trade', 'Trade & Banking'],
+    ['gazetteer', 'World Gazetteer'],
+  ];
+  $('#tabs').innerHTML = tabs.map(([k,label])=>`<div class="reftab ${activeTab===k?'active':''}" data-tab="${k}">${label}</div>`).join('');
+  $$('.reftab').forEach(el=>el.onclick=()=>{activeTab=el.dataset.tab; render();});
+
+  if(activeTab==='travel') $('#content').innerHTML = renderTravel();
+  else if(activeTab==='trade') $('#content').innerHTML = renderTrade();
+  else if(activeTab==='gazetteer'){
+    $('#content').innerHTML = renderGazetteer();
+    $$('.gaz-btn').forEach(el=>el.onclick=()=>{activeGazPlace=+el.dataset.i; render();});
+  }
 }
 
 load();

@@ -101,6 +101,45 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 
 .empty{text-align:center;color:var(--ink-soft);font-style:italic;padding:40px}
 footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);opacity:.75}
+
+/* GM reference tab */
+.reftabs{display:flex;gap:6px;margin-bottom:18px;flex-wrap:wrap}
+.reftab{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.03em;cursor:pointer;
+  border:1px solid rgba(120,90,40,.35);background:rgba(244,235,213,.55);color:var(--ink-soft);
+  padding:6px 14px;border-radius:14px;transition:all .12s}
+.reftab:hover{background:rgba(244,235,213,.9)}
+.reftab.on{background:linear-gradient(180deg,var(--teal-bright),var(--teal));color:#fff;border-color:var(--teal)}
+
+.roster-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.roster-card{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);border:1.5px solid rgba(120,90,40,.4);
+  border-radius:10px;padding:12px 15px}
+.roster-name{font-family:'Cinzel',serif;font-weight:600;font-size:14.5px;color:var(--ink)}
+.roster-title{font-style:italic;color:var(--ink-soft);font-size:12px;margin:1px 0 6px}
+.roster-note{font-size:13px;line-height:1.5;color:var(--ink-soft)}
+.roster-links{margin-top:8px;display:flex;gap:5px;flex-wrap:wrap}
+.roster-link{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.03em;padding:2px 8px;border-radius:9px;
+  background:rgba(44,107,102,.14);color:var(--teal);border:1px solid rgba(44,107,102,.35);cursor:pointer}
+
+.fae-poem{font-style:italic;color:var(--ink-soft);line-height:1.7;font-size:14px;white-space:pre-line;
+  background:rgba(244,235,213,.45);border-left:3px solid var(--purple);border-radius:0 8px 8px 0;
+  padding:14px 18px;margin-bottom:24px;columns:2;column-gap:32px}
+@media (max-width:720px){.fae-poem{columns:1}}
+.fae-zone{margin-bottom:20px}
+.fae-zone-title{font-family:'Cinzel',serif;font-weight:600;font-size:14px;color:var(--purple);margin-bottom:2px}
+.fae-zone-desc{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin:0 0 10px}
+.fae-entity{margin-bottom:8px;padding-left:14px;border-left:2px solid rgba(91,58,138,.3)}
+.fae-entity-name{font-weight:600;color:var(--ink);font-size:13.5px}
+.fae-entity-desc{font-size:13px;color:var(--ink-soft);line-height:1.5}
+
+.riddle-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.riddle-card{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);border:1.5px solid rgba(120,90,40,.4);
+  border-radius:10px;padding:14px 16px}
+.riddle-art{font-family:'Cinzel',serif;font-weight:600;font-size:14px;color:var(--rust-bright)}
+.riddle-label{font-style:italic;color:var(--ink-soft);font-size:12px;margin:0 0 8px}
+.riddle-q{font-style:italic;font-size:13.5px;color:var(--ink);margin:0 0 8px;line-height:1.45}
+.riddle-ans{font-size:12.5px;line-height:1.5;margin:0 0 4px}
+.riddle-ans b{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.03em;text-transform:uppercase;
+  color:var(--ink-soft);display:block;margin-bottom:1px}
 </style>
 </head>
 <body>
@@ -136,6 +175,7 @@ const TYPE_ICON = {Question:'❓', Thread:'🧵', Consequence:'⚖️'};
 let STATE = null;
 let activeType = 'all';
 let filter = {category:'all', status:'all'};
+let activeRefTab = 'roster';
 
 async function load(){
   try{
@@ -175,7 +215,12 @@ function renderTypeTabs(){
   const allTab = `<div class="typetab ${activeType==='all'?'active':''}" data-type="all">All <span class="n">(${STATE.items.length})</span></div>`;
   const tabs = TYPE_ORDER.map(t=>
     `<div class="typetab ${activeType===t?'active':''}" data-type="${t}">${TYPE_ICON[t]} ${t}s <span class="n">(${counts[t]})</span></div>`).join('');
-  $('#typetabs').innerHTML = allTab + tabs;
+  const refCount = (STATE.gmReference?.brugesRoster.entries.length||0)
+    + (STATE.gmReference?.seaFae.zones.reduce((a,z)=>a+z.entities.length,0)||0)
+    + (STATE.gmReference?.criamonRiddles.entries.length||0);
+  const refTab = STATE.gmReference
+    ? `<div class="typetab ${activeType==='reference'?'active':''}" data-type="reference">📚 GM Reference <span class="n">(${refCount})</span></div>` : '';
+  $('#typetabs').innerHTML = allTab + tabs + refTab;
   $$('.typetab').forEach(el=>el.onclick=()=>{activeType=el.dataset.type; filter.category='all'; render();});
 
   const descs = {
@@ -183,6 +228,7 @@ function renderTypeTabs(){
     Question: STATE.meta.types.Question,
     Thread: STATE.meta.types.Thread,
     Consequence: STATE.meta.types.Consequence,
+    reference: 'Prepared but unused GM material — a home-port NPC roster, a sea-fae bestiary, and a Criamon riddle bank. Reference, not resolution-tracked.',
   };
   $('#typeDesc').textContent = descs[activeType];
 }
@@ -228,8 +274,71 @@ function qCard(q){
   </div>`;
 }
 
+function rosterCard(e){
+  const links = (e.linksTo||[]).map(id=>`<span class="roster-link" data-jump="${esc(id)}">→ ${esc(id)}</span>`).join('');
+  return `<div class="roster-card">
+    <div class="roster-name">${esc(e.name)}</div>
+    <div class="roster-title">${esc(e.title)}</div>
+    <p class="roster-note">${esc(e.note)}</p>
+    ${links ? `<div class="roster-links">${links}</div>` : ''}
+  </div>`;
+}
+
+function renderReference(){
+  $('#filterbar').innerHTML = '';
+  const ref = STATE.gmReference;
+  if(!ref){ $('#qlist').innerHTML = `<div class="empty">No GM reference data loaded.</div>`; return; }
+
+  const tabs = [
+    ['roster', `🎭 Bruges Roster (${ref.brugesRoster.entries.length})`],
+    ['seaFae', `🌊 Sea Fae Bestiary`],
+    ['riddles', `🌀 Criamon Riddles (${ref.criamonRiddles.entries.length})`],
+  ];
+  const tabsHtml = tabs.map(([k,label])=>`<div class="reftab ${activeRefTab===k?'on':''}" data-ref="${k}">${label}</div>`).join('');
+
+  let body = '';
+  if(activeRefTab === 'roster'){
+    body = `<p class="type-desc" style="margin-top:0">${esc(ref.brugesRoster.note)}</p>
+      <div class="roster-grid">${ref.brugesRoster.entries.map(rosterCard).join('')}</div>`;
+  } else if(activeRefTab === 'seaFae'){
+    const poem = ref.seaFae.poem;
+    body = `<p class="type-desc" style="margin-top:0">${esc(ref.seaFae.note)}</p>
+      <div class="fae-poem"><em>— ${esc(poem.title)} —</em>\n\n${esc(poem.stanzas.join('\n\n'))}</div>
+      ${ref.seaFae.zones.map(z=>`
+        <div class="fae-zone">
+          <div class="fae-zone-title">${esc(z.name)}</div>
+          <p class="fae-zone-desc">${esc(z.description)}</p>
+          ${z.entities.map(en=>`<div class="fae-entity"><span class="fae-entity-name">${esc(en.name)}</span> — <span class="fae-entity-desc">${esc(en.description)}</span></div>`).join('')}
+        </div>
+      `).join('')}`;
+  } else if(activeRefTab === 'riddles'){
+    body = `<p class="type-desc" style="margin-top:0">${esc(ref.criamonRiddles.note)}</p>
+      <div class="riddle-grid">${ref.criamonRiddles.entries.map(r=>`
+        <div class="riddle-card">
+          <div class="riddle-art">${esc(r.art)} <span style="color:var(--ink-soft);font-weight:400">(${esc(r.code)})</span></div>
+          <p class="riddle-label">${esc(r.label)}</p>
+          <p class="riddle-q">“${esc(r.riddle)}”</p>
+          <p class="riddle-ans"><b>Shallow</b>${esc(r.shallow)}</p>
+          <p class="riddle-ans"><b>Deep</b>${esc(r.deep)}</p>
+        </div>
+      `).join('')}</div>`;
+  }
+
+  $('#qlist').innerHTML = `<div class="reftabs">${tabsHtml}</div>${body}`;
+  $$('.reftab').forEach(el=>el.onclick=()=>{activeRefTab=el.dataset.ref; render();});
+  $$('.roster-link').forEach(el=>el.onclick=()=>{
+    const id = el.dataset.jump;
+    const q = STATE.items.find(x=>x.id===id);
+    if(!q) return;
+    activeType = q.type; filter.category='all'; filter.status='all';
+    render();
+    requestAnimationFrame(()=>document.querySelector(`.qcard[data-id="${id}"]`)?.scrollIntoView({behavior:'smooth',block:'center'}));
+  });
+}
+
 function render(){
   renderTypeTabs();
+  if(activeType === 'reference'){ renderReference(); return; }
   renderFilterbar();
   let list = STATE.items.filter(q=>{
     if(activeType!=='all' && q.type!==activeType) return false;

@@ -236,6 +236,25 @@
     .glossary-list dd { margin-bottom: .3rem; }
   }
 
+  .opp-status{font-size:0.8rem;font-style:italic;padding:.4rem .8rem;border-radius:0 6px 6px 0;
+    border-left:3px solid var(--gold);background:var(--parchment-mid);color:var(--ink-light);margin:0 0 1.2rem}
+  .opp-group{margin-bottom:1.8rem}
+  .opp-group-title{font-family:'Cinzel',serif;font-size:1rem;color:var(--red);margin-bottom:.2rem}
+  .opp-group-desc{font-style:italic;color:var(--ink-light);font-size:.85rem;margin:0 0 .8rem}
+  .opp-card{background:var(--parchment-mid);border:1px solid var(--border-strong);border-radius:8px;
+    padding:.9rem 1.1rem;margin-bottom:.9rem}
+  .opp-name{font-family:'Cinzel',serif;font-weight:600;font-size:.95rem;color:var(--ink-mid)}
+  .opp-meta{font-size:.78rem;color:var(--ink-light);margin:.1rem 0 .5rem}
+  .opp-meta b{color:var(--ink-mid);font-weight:600}
+  .opp-quote{font-style:italic;font-size:.85rem;color:var(--ink-light);border-left:2px solid var(--gold-light);
+    padding-left:.7rem;margin:.4rem 0}
+  .opp-note{font-size:.85rem;line-height:1.5;color:var(--ink);margin:.3rem 0 0}
+  .opp-result{display:inline-block;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.03em;
+    text-transform:uppercase;padding:.15rem .5rem;border-radius:8px;margin-left:.4rem}
+  .opp-result.won{background:rgba(26,92,82,.15);color:var(--teal)}
+  .opp-result.lost{background:rgba(139,26,26,.12);color:var(--red)}
+  .opp-result.unresolved{background:rgba(160,120,48,.15);color:var(--gold)}
+
   /* Filter bar */
   .filter-bar {
     display: flex;
@@ -612,6 +631,7 @@
     <button onclick="showSection('luctationes')">Luctationes</button>
     <button onclick="showSection('all-vis')">All Vis (Table)</button>
     <button onclick="showSection('library')">Library</button>
+    <button onclick="showSection('opponents')">Notable Opponents</button>
   </nav>
 
   <!-- TROPAEA -->
@@ -1520,6 +1540,109 @@
       </div>
     </div>
 
+  </div>
+
+  <!-- NOTABLE OPPONENTS -->
+  <div id="opponents" class="section">
+    <div class="section-heading">Notable Opponents <span class="count">1223 Hermetic Tourney — GM prep, cross-checked against the actual bracket</span></div>
+    <p class="section-desc">Sjórseiðr's Certamen ended in the first round; Dimicatio and Hastiludium both carried them all the way to a semifinal/final that the GM's own bracket sheet never filled in (see the Storyteller page's open question on this). Opponents below are marked accordingly — this is prep material, not a claim that every round was played out in full.</p>
+
+    <div class="opp-group">
+      <div class="opp-group-title">Certamen — 25/15/8/8 points, House Flambeau's mental-conflict duel</div>
+      <p class="opp-group-desc">The PC's draw was brutal on paper (Fudarus → Confluensis → Bellum Iocari → Merces Aurea), but the actual bracket has Sjórseiðr losing round one — so only the first opponent was ever faced. The other three are preserved here as unused prep.</p>
+
+      <div class="opp-card">
+        <div class="opp-name">Myrrha of Fudarus <span class="opp-result lost">Round 1 — Sjórseiðr lost</span></div>
+        <div class="opp-meta"><b>House Tytalus</b> · Domus Magna, founded 798 · Mentem 9, Creo 5, Intellego 5, Rego 5 · Great Intelligence · ~19–21 base certamen total</div>
+        <p class="opp-quote">“Your parens did you a disservice, teaching you comfort before teaching you struggle. I will remedy that.”</p>
+        <p class="opp-note">Predatory calm, unsettling Piercing Gaze, barely speaks before a duel. Wincing and teeth-grinding betray her Painful Magic flaw with every spell. Fudarus was humiliated by Scarem Montem's dimicatio win, and Myrrha carries that shame — desperate to redeem her covenant. Picks Intellego or Rego as Technique to force the fight into her Mentem 9; will burn Fatigue via Life Boost and save a Confidence point for the critical exchange.</p>
+      </div>
+
+      <div class="opp-card">
+        <div class="opp-name">Proctor of Confluensis <span class="opp-result unresolved">Unused — Sjórseiðr never reached round 2</span></div>
+        <div class="opp-meta"><b>House Guernicus</b> · Intellego 15 (Affinity + Puissant), Mentem 6, Imaginem 6, Corpus 5 · Great Perception, Curse of Venus · ~24–27 base</div>
+        <p class="opp-quote">“The records of Confluensis go back four centuries. I have studied every certamen in our archives. I know how this ends.”</p>
+        <p class="opp-note">Treats certamen as a legal proceeding — recites rules with pedantic exactness. His Side Effect virtue means lying causes visible discomfort, so he can't bluff. Curse of Venus makes him socially awkward despite Hermetic Prestige. Wins on attrition with Intellego 15; his Forms (5–6) are the opening, if a challenger can force one.</p>
+      </div>
+
+      <div class="opp-card">
+        <div class="opp-name">Tacticus of Bellum Iocari <span class="opp-result unresolved">Unused — Sjórseiðr never reached the semifinal</span></div>
+        <div class="opp-meta"><b>House Tremere</b> · "War Games" specialists, founded 1185 · all Techniques 5, Ignem/Auram/Terram 9, Aquam 8 · Minor Magical Focus (Certamen) · ~26 base</div>
+        <p class="opp-quote">“Florum thought their centuries of experience mattered more than preparation. They were wrong. Now — shall we?”</p>
+        <p class="opp-note">Just upset Florum, one of the Five Great Lieges, and is riding the momentum — young, ambitious, and genuinely enjoying himself. His Minor Magical Focus adds his lower Art again to any elemental-Form total, which is devastating; his Mentem is only 1, the one clean opening.</p>
+      </div>
+
+      <div class="opp-card">
+        <div class="opp-name">Aurelian of Merces Aurea <span class="opp-result unresolved">Unused — the final Sjórseiðr never reached</span></div>
+        <div class="opp-meta"><b>House Verditius</b> · Lotharingian separatist leader, founded 1175 · Terram 15 (Affinity + Puissant), Creo 7, Muto 5, Rego 5 · Faerie Blood (Dwarf) · ~27–29 base</div>
+        <p class="opp-quote">“The Five Lieges have ruled by tradition, not merit. I am here to demonstrate the difference.”</p>
+        <p class="opp-note">Already crushed the other half of the bracket, decisively beating Cunfin in his side's final. Every win is propaganda for the separatist cause — his Dwarf flaw and Faerie Blood are visible and he doesn't care. Terram 15 makes him near-unbeatable on his own ground; outside it, Mentem and Imaginem are both 0.</p>
+      </div>
+    </div>
+
+    <div class="opp-group">
+      <div class="opp-group-title">Dimicatio — 23/12/6/6 points, House Flambeau's forceless-casting duel</div>
+      <p class="opp-group-desc">Sjórseiðr won three straight rounds here, reaching a semifinal against Nidi that the GM's bracket sheet leaves blank (see the Storyteller page). All four opponents below were live prep, not discarded brainstorm.</p>
+      <div class="opp-card">
+        <div class="opp-name">Exspectatio <span class="opp-result won">Round 1 — Sjórseiðr won</span></div>
+        <div class="opp-meta">Vassal of Fudarus, founded 1201, Brittany — Tytalus apprentice-level, still proving themselves to their lieges</div>
+        <p class="opp-quote">“Fudarus expects results. We will not disappoint them.” <em>[nervous swallow]</em></p>
+        <p class="opp-note">Likely champion Cadoc (young, overconfident) or Herve (a hastiludium specialist fighting to redeem an earlier decisive loss). The name means "anticipation" — upstarts waiting for their chance.</p>
+      </div>
+      <div class="opp-card">
+        <div class="opp-name">Cunfin <span class="opp-result won">Later round — Sjórseiðr won</span></div>
+        <div class="opp-meta">Vassal of Confluensis (Guernicus), founded 1192, Champagne &amp; Burgundy — methodical, disciplined</div>
+        <p class="opp-quote">“The law is merely the framework within which conflict is permitted. Shall we test the boundaries?”</p>
+        <p class="opp-note">Champion Reynard, a Tytalus magus serving a Guernicus vassal — notable enough on its own. Won their own sudden-death certamen tiebreaker against Exspectatio, suggesting quick thinking under pressure.</p>
+      </div>
+      <div class="opp-card">
+        <div class="opp-name">Turris Vigilans <span class="opp-result won">Later round — Sjórseiðr won</span></div>
+        <div class="opp-meta">"Watchtower," independent, founded 1170 — defensive specialists</div>
+        <p class="opp-quote">“We have watched the Tribunal for fifty years. We have seen every trick. Show us something new.”</p>
+        <p class="opp-note">Champion Vigilus (former Quaesitor) or Sentinus (Tremere ward specialist). Expect excellent fast-cast defenses from a covenant built around watching and waiting.</p>
+      </div>
+      <div class="opp-card">
+        <div class="opp-name">Nidi <span class="opp-result unresolved">Semifinal — result unresolved (q021)</span></div>
+        <div class="opp-meta">Vassal of Oleron</div>
+        <p class="opp-note">Oleron themselves were dominating the other half of this bracket via Berenguer de Tolosa (Flambeau, dimicatio master) — "beautiful, fluid southern French style." Nidi, as Oleron's own vassal, may have faced their liege in the semifinal on the other side of the draw. <em>Berenguer: "In Provence, we call this art. In Normandy, you call it combat. We shall see which interpretation prevails."</em></p>
+      </div>
+    </div>
+
+    <div class="opp-group">
+      <div class="opp-group-title">Hastiludium — 20/10/5/5 points, team event on mundane "mounts"</div>
+      <p class="opp-group-desc">Three magi per side, balanced on a peasant-village item (barrel, cauldron, pig — no longer than a broom, no wider than a beer barrel), using magic to propel and unseat. Touch ground, you're out. Sjórseiðr had a natural edge here as sailors with sea-legs, and won three straight before the same semifinal gap hits (q021).</p>
+      <div class="opp-card">
+        <div class="opp-name">Montverte (hosts) <span class="opp-result won">Round 1 — Sjórseiðr won</span></div>
+        <div class="opp-meta">Praeco Guillaume le Preux — hosting while their own Tremere vassal (Scarem Montem) publicly rebels</div>
+        <p class="opp-quote">“We have hosted this Tribunal with honor. Now we shall defend it with valor. The heirs of William the Conqueror do not yield the field.”</p>
+        <p class="opp-note">Montverte could not afford to lose another event, having already dropped a dimicatio tiebreaker to Semita Errabunda — desperate, possibly mistake-prone, but also drawing on a strong Norman mounted-combat tradition as hosts. See t032 for the unresolved alliance-offer thread this opponent seeds.</p>
+      </div>
+      <div class="opp-card">
+        <div class="opp-name">Arx Argentea <span class="opp-result won">Later round — Sjórseiðr won</span></div>
+        <div class="opp-meta">"Silver Tower," independent, founded 1188 — Verditius metal-crafting, Criamon moon/silver mysteries</div>
+        <p class="opp-note">Fielded Argentius (silver crafting) and Ferrus (metal specialist) alongside Lunara (Criamon). Expect metal manipulation — silver or iron mounts, exceptional Terram/metal magic on both offense and defense.</p>
+      </div>
+      <div class="opp-card">
+        <div class="opp-name">Eboris <span class="opp-result won">Later round — Sjórseiðr won</span></div>
+        <div class="opp-meta">"Ivory," Paris, founded 1204 — status unclear, fighting mad</div>
+        <p class="opp-note">Lost their own certamen match to Requies Aeterna on a penalty (Maurice's "creative interpretation" of seniority rules) and were demanding a formal hearing. Fulbert is furious. Expect extra aggression from a covenant that feels cheated.</p>
+      </div>
+      <div class="opp-card">
+        <div class="opp-name">Bellum Iocari / Lapis Crudus <span class="opp-result unresolved">Semifinal &amp; final — result unresolved (q021)</span></div>
+        <div class="opp-meta">Lapis Crudus won their side's final against Bellum Iocari — 160 years in a faerie regio, "antique techniques"</div>
+        <p class="opp-note">Champion Petronius (Merinita) uses pre-Schism War strategies that predate the current Peripheral Code — technically legal, deeply unsettling to face.</p>
+      </div>
+    </div>
+
+    <div class="opp-group">
+      <div class="opp-group-title">GM prep notes carried over from the tourney planning</div>
+      <ul style="margin:0 0 0 1.2rem;padding:0;font-size:.85rem;line-height:1.6;color:var(--ink-light)">
+        <li>Veto rules: the older magus picks Technique, the younger picks Form; each may veto one of the opponent's best Arts.</li>
+        <li>Dimicatio is forceless casting (Penetration 0) — first spell to reach the opponent's Parma wins. Fast-cast defense is at −10, and needs to match half the spell's level to block.</li>
+        <li>Half the crowd was rooting for Sjórseiðr as romantic underdogs; maritime magi have a reputation for pragmatism.</li>
+        <li>The Cabal of the Golden Coin — a mysterious team consistently placing 14th — may have approached the party with an offer to fix a contest for a vis bribe. Unconfirmed whether this was ever actually pitched at the table.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="footnote">

@@ -73,6 +73,8 @@ a.card::before{
   letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.85}
 
 footer{text-align:center;margin-top:56px;font-size:13px;color:var(--ink-soft);opacity:.75}
+.build-info{font-size:11.5px;margin-top:6px;font-family:'Cinzel',serif;letter-spacing:.02em}
+.build-info a{font-family:'EB Garamond',serif}
 footer a{color:var(--teal-bright)}
 </style>
 </head>
@@ -166,8 +168,22 @@ footer a{color:var(--teal-bright)}
 
   <footer>
     Compiled A.D. 1223 · <a href="https://github.com/sortilege-inc/sjorseidr">sortilege-inc/sjorseidr</a>
+    <div id="buildInfo" class="build-info"></div>
   </footer>
 
 </div>
+<script>
+fetch('./build_info.json', {cache:'no-store'})
+  .then(r => r.ok ? r.json() : null)
+  .then(d => {
+    if(!d) return;
+    const el = document.getElementById('buildInfo');
+    const date = new Date(d.updatedAt);
+    const dateStr = isNaN(date) ? d.updatedAt : date.toLocaleString(undefined, {dateStyle:'medium', timeStyle:'short'});
+    const url = d.commit ? `https://github.com/sortilege-inc/sjorseidr/commit/${d.commit}` : null;
+    el.innerHTML = `Last updated ${dateStr}` + (url ? ` · <a href="${url}">${d.commit}</a>` : '');
+  })
+  .catch(()=>{});
+</script>
 </body>
 </html>

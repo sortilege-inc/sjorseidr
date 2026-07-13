@@ -13,12 +13,12 @@ server-side code. Open [`index.html`](index.html) to get around.
 | [`sjorseidr_chronicle.html`](sjorseidr_chronicle.html) | `verified_events.json`, `proposed_events.json` | The covenant's full story timeline, most-recent-first, split into Verified (canon) and Proposed (drafted from a session transcript, awaiting GM review). Filterable by activity type (collapsed by default — 33+ types) and free text. |
 | [`normandy_tribunal_1223.html`](normandy_tribunal_1223.html) | inline `DATA` blob | Interactive map of the Normandy Tribunal's 24 covenants, toggling between covenant profiles and tournament standings. |
 | [`tribunal_workbook.html`](tribunal_workbook.html) | `tribunal_data.json` | Editable scoring workbook — vis sources, library prizes, tournament brackets/tally, and a "Prizes Claimed So Far" rollup. Edits autosave to `localStorage`; Save downloads an updated JSON. |
-| [`normandy_tribunal_reference.html`](normandy_tribunal_reference.html) | — | Static reference catalogue of the Tribunal's vis sources and library holdings (source for `tribunal_data.json`'s vis/library sections). |
-| [`open_questions.html`](open_questions.html) | `open_questions.json` | The Storyteller page — split into **Questions** (need a GM ruling), **Threads** (dangling narrative hooks), and **Consequences** (already happened, fallout pending). Editable resolution status, same autosave/Save pattern as the workbook. |
+| [`normandy_tribunal_reference.html`](normandy_tribunal_reference.html) | — | Static reference catalogue of the Tribunal's vis sources and library holdings (source for `tribunal_data.json`'s vis/library sections), plus a vis-category glossary (Seisin/Legacy/Tropaeum/Luctatio) and a Notable Opponents section for the 1223 Tourney, both pulled from Notion. |
+| [`open_questions.html`](open_questions.html) | `open_questions.json` | The Storyteller page — split into **Questions** (need a GM ruling), **Threads** (dangling narrative hooks), and **Consequences** (already happened, fallout pending), editable with the same autosave/Save pattern as the workbook. Also carries a **GM Reference** tab (Notion-sourced): a 41-entry Bruges NPC roster none of whom have been used in play, a sea-fae bestiary, and a Criamon riddle bank. |
 | [`ships.html`](ships.html) | `ships.json`, `magi.json`, `npcs.json`, `ship_details.json` | Fleet & crew roster — time-based crew snapshots plus an "All Ships" reference tab covering the full fleet history (including lost/retired hulls). Click a crew member for a sidebar card: the six PC magi (`magi.json`) and 32 grogs/companions/NPC magi (`npcs.json`) get a full Foundry-sourced stat sheet, five of them (Dagmar, Éogan, Willem, Heynric, Father Lachlan) with a full narrative biography pulled in from Notion; the 3 remaining names with no Foundry sheet (Hilda, Karl, Rody) get the lightweight note card from `ships.json`'s `characters{}`. Crew chips are color-coded by category (PC magus / NPC magus / companion / grog / other). The "All Ships" cards also carry each ship's hull dimensions, enchanted devices, and laboratory stats (`ship_details.json`), Foundry-sourced. |
 | [`covenant.html`](covenant.html) | `covenant.json` | Covenant sheet — founding year, tribunal, saga, aegis/regio, loyalty, yearly finances, covenant-wide virtues & flaws, and (from Notion) the full Covenant Charter and a founding note. Meta only; library/vis/full inhabitant census stay in the workbook and `ships.json`. |
 | [`hiberian.html`](hiberian.html) | `maps/*.jpeg` | Extracted reference data + regional maps for the Hibernian Tribunal (Connacht, Leinster, Meath, Munster, Ulster), relevant to the party's Ireland arc. |
-| [`reference.html`](reference.html) | `reference.json` | Miscellaneous GM tables that don't belong on any one page — currently just the North Sea/Baltic sailing-time matrix, pulled from Notion. |
+| [`reference.html`](reference.html) | `reference.json` | Miscellaneous GM tables pulled from Notion, in three tabs: North Sea/Baltic sailing times (+ the Bruges–Bordeaux route), trade goods & 1220s banking practices, and a World Gazetteer (Bergen, the Rhine-Tribunal duchies, English/French ports, Bruges' civic structure). |
 
 ## Data pipeline
 
@@ -270,10 +270,83 @@ likewise unconfirmed. Ka'wa'ill's Foundry sheet has `born: 1223` — the
 campaign's current year, which for a grown merman prince reads as an unset
 placeholder rather than a real birth year; left as-is, not fabricated a fix.
 
-**Not done yet**: the GM-only slice of the Notion export (root page, Foundry
-VTT Notes, Mythic Europe Notes, GM NPCs, Player Info + sub-pages — around 140
-pages) hasn't been classified or merged. Per GM direction it's all headed for
-`open_questions.json` eventually, not scattered across player-facing pages.
+### GM-only content merge (same day, second pass)
+
+The rest of the Notion export — root page, Foundry VTT Notes, Mythic Europe
+Notes, the 37-entry "GM NPCs" database, Player Info and its ~15 sub-pages —
+got the same extraction-then-classify treatment as the player-facing slice
+above. Per GM direction, all of it lives on `open_questions.html` now rather
+than scattered across player-facing pages — either as new Question/Thread/
+Consequence items, or (for content that's reference material rather than a
+question) a new **GM Reference** tab on that same page.
+
+Two research agents did the first read-through on the largest chunks
+(Player Info's 15 sub-pages, and Mythic Europe Notes) and reported back
+structured candidates rather than raw text, to keep the classification
+consistent without burning through the session's context reading ~140 files
+directly. Everything they flagged was cross-checked against the live site
+data before being written — this caught a few things worth calling out:
+
+- **The tourney bracket gap is real, and it's already on the site.**
+  `tribunal_data.json`'s own bracket data has the exact same blank cells
+  the GM's old Notion prep does — Sjórseiðr reached the semifinal/final of
+  Dimicatio and Hastiludium (after winning three straight rounds in each)
+  and the *first* round of Certamen (which they lost), but the later
+  results were never filled in on either side. Added as `q021`, and used
+  to fact-check the new Notable Opponents section on
+  `normandy_tribunal_reference.html` — each opponent there is now tagged
+  **won** / **lost** / **unresolved** against the actual bracket, not just
+  copied from GM prep as if every matchup happened.
+- **A named suspect for Valerian's disappearance surfaced mid-pass.** Sir
+  Odo van Aerschot, a Brabantine-loyalist knight, is explicitly noted in
+  the Mythic Europe Notes as "suspected to be behind several disappearances
+  in Bruges — including Valerian's." Added to the Bruges roster and folded
+  into thread `t030`, which already tracked several looser leads (a
+  dockhand's, a lantern-boy's account) pointing the same direction.
+- **Some prep was clearly never played and is marked as such.** The
+  Certamen bracket only ever reached Myrrha of Fudarus (round 1, lost) —
+  Proctor of Confluensis, Tacticus of Bellum Iocari, and Aurelian of
+  Merces Aurea were prepped for rounds the party never reached, and the
+  Notable Opponents section says so explicitly rather than implying they
+  were faced. Likewise, `Valerian_de_Castellane.md` (an early draft
+  portraying him as a vengeful fugitive antagonist) directly contradicts
+  his current status as a fully-statted PC magus and covenant member —
+  discarded rather than merged, since it's superseded by actual play.
+- **Two low-confidence Threads (`t032`, `t033`)** — a Montverte alliance
+  offer and a Merces Aurea separatist pitch, both from tourney GM prep —
+  are flagged in their own context as unconfirmed whether they were ever
+  actually raised at the table, rather than presented as settled fact.
+
+What landed where:
+- **`open_questions.json`** — 14 new Question/Thread/Consequence items
+  (`q021`–`q022`, `t027`–`t035`, `c023`–`c025`), plus a new `gmReference`
+  block: the 41-entry Bruges NPC roster (37 street-level locals + 4 noble
+  houses, cross-linked to the relevant open questions), a sea-fae bestiary
+  organized by ocean depth with its companion poem, and the 15-Art Criamon
+  riddle bank that Dagmar's own character-sheet riddle answers (from the
+  first Notion pass) draw four entries from.
+- **`reference.json`/`reference.html`** — gained two more tabs: Trade &
+  Banking (North Sea trade goods by region, 1220s credit/moneylending
+  practices) and a World Gazetteer (Bergen — where the *Adamant* was
+  built — the Rhine-Tribunal duchies bordering Normandy, English ports
+  led by a detailed Southampton with four named merchant families, French
+  ports led by Rouen, and Bruges' civic/legal structure). The original
+  travel-times tab also gained the Bruges↔Bordeaux ketch route.
+- **`normandy_tribunal_reference.html`** — new Notable Opponents section,
+  12 opponents across all three individual-and-team tourney events, each
+  fact-checked against the actual bracket as described above.
+- **Skipped outright**: `Ars_Magica_Foundry_VTT_Notes.md` (pure arm5e
+  system-tooling Q&A with the system's developer, zero campaign content)
+  and the stale `Valerian_de_Castellane.md` draft mentioned above.
+
+### Last-updated marker
+
+`index.html` shows a "Last updated" line in the footer, sourced from
+`build_info.json` (`{commit, updatedAt}`). Since a file can't describe the
+hash of the commit it's part of, this is regenerated as a small follow-up
+commit at the end of a work session, referencing whatever commit was just
+made — there's inherently one commit of lag, which is normal for this
+pattern without a CI step to do it automatically.
 
 ## Open threads on this archive itself
 
