@@ -34,6 +34,7 @@ body::before{
 .wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:32px 20px 80px;
   transition:margin-right .2s ease}
 .wrap.sidebar-open{margin-right:min(320px,90vw)}
+.wrap.sidebar-open.sidebar-wide{margin-right:min(600px,94vw)}
 a{color:var(--teal-bright)}
 
 header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
@@ -81,13 +82,15 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .ref-list{display:flex;flex-direction:column;gap:12px}
 
 /* sidebar */
-#sidebar{position:fixed;top:0;right:-340px;width:min(320px,90vw);height:100vh;z-index:50;
+#sidebar{position:fixed;top:0;right:0;width:min(320px,90vw);height:100vh;z-index:50;
   background:linear-gradient(180deg,var(--parch),var(--parch-deep));
   border-left:2px solid var(--line);box-shadow:-8px 0 24px var(--shadow);
-  transition:right .2s ease;overflow-y:auto;padding:20px}
-#sidebar.open{right:0}
+  transform:translateX(100%);transition:transform .2s ease,width .2s ease;
+  overflow-y:auto;padding:20px}
+#sidebar.open{transform:translateX(0)}
+#sidebar.wide{width:min(600px,94vw)}
 #sidebarClose{position:absolute;top:14px;right:14px;background:none;border:none;font-size:20px;
-  cursor:pointer;color:var(--ink-soft);line-height:1}
+  cursor:pointer;color:var(--ink-soft);line-height:1;z-index:2}
 #sidebarClose:hover{color:var(--rust)}
 .sb-name{font-family:'Cinzel',serif;font-weight:600;font-size:20px;color:var(--rust-bright);margin:26px 0 2px}
 .sb-role{font-style:italic;color:var(--ink-soft);font-size:14px;margin:0 0 2px}
@@ -97,6 +100,74 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
   text-align:center;color:var(--ink-soft);font-style:italic;font-size:13px}
 #overlay{position:fixed;inset:0;background:rgba(30,20,10,.25);z-index:40;display:none}
 #overlay.open{display:block}
+
+/* magus sheet */
+.sheet-header{display:flex;gap:14px;align-items:flex-start;margin:8px 0 14px}
+.sheet-portrait{width:76px;height:76px;border-radius:8px;object-fit:cover;flex:none;
+  border:1.5px solid rgba(120,90,40,.5);box-shadow:0 2px 6px var(--shadow)}
+.sheet-portrait.placeholder{display:flex;align-items:center;justify-content:center;
+  background:rgba(120,90,40,.12);font-size:26px;color:var(--ink-soft)}
+.sheet-name{font-family:'Cinzel',serif;font-weight:600;font-size:19px;color:var(--rust-bright);margin:0 0 2px}
+.sheet-sub{font-style:italic;color:var(--ink-soft);font-size:12.5px;line-height:1.4;margin:0}
+.sheet-meta{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 4px}
+.meta-chip{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.03em;text-transform:uppercase;
+  padding:2px 8px;border-radius:9px;background:rgba(120,90,40,.1);color:var(--ink-soft);
+  border:1px solid rgba(120,90,40,.3);white-space:nowrap}
+.sheet-source{font-size:11px;font-style:italic;color:var(--ink-soft);opacity:.75;margin:2px 0 16px}
+
+.sheet-section-title{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-soft);border-bottom:1px solid rgba(120,90,40,.35);margin:18px 0 8px;padding-bottom:3px}
+
+.char-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 6px}
+.char-stat{text-align:center;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.3);
+  border-radius:6px;padding:5px 2px}
+.char-stat .cs-label{display:block;font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.04em;color:var(--ink-soft)}
+.char-stat .cs-val{display:block;font-size:16px;font-weight:600;color:var(--ink)}
+
+.arts-row-label{font-size:10.5px;color:var(--ink-soft);font-style:italic;margin:8px 0 4px}
+.arts-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.art-cell{text-align:center;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.3);
+  border-radius:6px;padding:4px 2px}
+.art-cell .a-label{display:block;font-size:10px;color:var(--ink-soft)}
+.art-cell .a-val{display:block;font-size:14.5px;font-weight:600;color:var(--teal)}
+.art-cell.technique .a-val{color:var(--rust)}
+
+.vf-list{display:flex;flex-direction:column;gap:6px}
+.vf-item{font-size:12.5px;line-height:1.45;padding:6px 9px;border-radius:6px;background:rgba(244,235,213,.5);
+  border-left:3px solid var(--line)}
+.vf-item.virtue{border-left-color:var(--green)}
+.vf-item.flaw{border-left-color:var(--rust)}
+.vf-item .vf-name{font-weight:600;color:var(--ink)}
+.vf-item .vf-impact{font-size:10px;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-soft);
+  font-style:normal;margin-left:5px}
+.vf-item .vf-desc{display:block;color:var(--ink-soft);margin-top:2px}
+
+.ability-row{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;padding:3px 0;
+  border-bottom:1px dotted rgba(120,90,40,.25)}
+.ability-row .ab-name{color:var(--ink)}
+.ability-row .ab-spec{color:var(--ink-soft);font-style:italic;font-size:11.5px}
+.ability-row .ab-score{font-weight:600;color:var(--teal);flex:none}
+
+.spell-item{margin-bottom:9px;padding:7px 9px;background:rgba(244,235,213,.5);border-radius:6px;
+  border:1px solid rgba(120,90,40,.25)}
+.spell-item .sp-name{font-weight:600;font-size:13px;color:var(--ink)}
+.spell-item .sp-meta{font-size:11px;color:var(--ink-soft);margin:1px 0 3px}
+.spell-item .sp-desc{font-size:12px;color:var(--ink-soft);line-height:1.4}
+
+.trait-chips,.rep-chips{display:flex;flex-wrap:wrap;gap:5px}
+.trait-chip{font-size:11.5px;padding:2px 9px;border-radius:11px;background:rgba(91,58,138,.12);
+  color:var(--purple);border:1px solid rgba(91,58,138,.3)}
+
+.wound-warn{font-size:12.5px;padding:7px 10px;border-radius:6px;background:rgba(138,51,36,.12);
+  border:1px solid rgba(138,51,36,.35);color:var(--rust);margin-bottom:4px}
+
+.sheet-collapsible summary{cursor:pointer;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid rgba(120,90,40,.35);
+  margin:18px 0 8px;padding-bottom:3px;list-style:none}
+.sheet-collapsible summary::-webkit-details-marker{display:none}
+.sheet-collapsible summary::before{content:'▸ ';color:var(--gold)}
+.sheet-collapsible[open] summary::before{content:'▾ '}
+.sheet-empty{font-size:12px;font-style:italic;color:var(--ink-soft)}
 
 footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);opacity:.75}
 </style>
@@ -120,7 +191,7 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
   <div class="tabs" id="tabs"></div>
   <div id="content"></div>
 
-  <footer>Character sheets are a stub for now — click-through is wired up, the sheets themselves come later.</footer>
+  <footer>Full character sheets (pulled from Foundry) are wired up for the six magi. Everyone else still gets a quick-note card until fleshed out.</footer>
 </div>
 
 <script>
@@ -129,12 +200,34 @@ const $$ = s=>Array.from(document.querySelectorAll(s));
 const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 let DATA = null;
+let MAGI = null; // name -> full sheet, keyed by exact Foundry name
 let activeTab = null; // snapshot id, or 'all-ships'
+
+// ships.json spells some names slightly differently than the Foundry actor name
+// (e.g. a single-L typo). Map those known variants -> the Foundry name here.
+const MAGI_ALIASES = {
+  'Wilhelm Stienauer': 'Willhelm Stienauer',
+};
+
+function findMagus(name){
+  if(!MAGI) return null;
+  if(MAGI[name]) return MAGI[name];
+  const alias = MAGI_ALIASES[name];
+  if(alias && MAGI[alias]) return MAGI[alias];
+  return null;
+}
 
 async function load(){
   try{
-    const r = await fetch('./ships.json', {cache:'no-store'});
-    DATA = await r.json();
+    const [shipsRes, magiRes] = await Promise.all([
+      fetch('./ships.json', {cache:'no-store'}),
+      fetch('./magi.json', {cache:'no-store'}).catch(()=>null),
+    ]);
+    DATA = await shipsRes.json();
+    if(magiRes && magiRes.ok){
+      const magiJson = await magiRes.json();
+      MAGI = magiJson.magi || {};
+    }
     activeTab = (DATA.snapshots[0]||{}).id || 'all-ships';
     render();
   }catch(e){
@@ -214,15 +307,156 @@ function render(){
   $$('.chip').forEach(c=>c.onclick=()=>openSidebar(c.dataset.name));
 }
 
-function openSidebar(name){
-  const c = (DATA.characters||{})[name] || {};
-  $('#sidebarContent').innerHTML = `
-    <div class="sb-name">${esc(name)}</div>
-    <p class="sb-role">${esc(c.role||'Role unrecorded')}</p>
-    <p class="sb-affil">${esc(c.affiliation||'')}</p>
-    <p class="sb-note">${esc(c.note||'')}</p>
-    <div class="sb-stub">📜 Full character sheet — coming soon</div>
+const CHAR_LABELS = {int:'Int',per:'Per',str:'Str',sta:'Sta',pre:'Pre',com:'Com',dex:'Dex',qik:'Qik'};
+const CHAR_ORDER = ['int','per','str','sta','pre','com','dex','qik'];
+const TECH_ORDER = ['cr','in','mu','pe','re'];
+const FORM_ORDER = ['an','aq','au','co','he','ig','im','me','te','vi'];
+
+function signed(n){ n = n||0; return n>0 ? `+${n}` : `${n}`; }
+
+function charGridHtml(chars){
+  return `<div class="char-grid">${CHAR_ORDER.map(k=>`
+    <div class="char-stat"><span class="cs-label">${CHAR_LABELS[k]}</span><span class="cs-val">${signed(chars[k])}</span></div>
+  `).join('')}</div>`;
+}
+
+function artsGridHtml(arts){
+  const row = (codes, cls) => `<div class="arts-grid">${codes.map(code=>{
+    const a = arts[code];
+    return `<div class="art-cell ${cls}"><span class="a-label">${a?a.label:code}</span><span class="a-val">${a?a.score:0}</span></div>`;
+  }).join('')}</div>`;
+  return `
+    <div class="arts-row-label">Techniques</div>
+    ${row(TECH_ORDER,'technique')}
+    <div class="arts-row-label">Forms</div>
+    ${row(FORM_ORDER,'form')}
   `;
+}
+
+function vfListHtml(list, cls){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  return `<div class="vf-list">${list.map(v=>`
+    <div class="vf-item ${cls}">
+      <span class="vf-name">${esc(v.name)}</span>${v.impact?`<span class="vf-impact">${esc(v.impact)}</span>`:''}
+      ${v.description?`<span class="vf-desc">${esc(v.description)}</span>`:''}
+    </div>
+  `).join('')}</div>`;
+}
+
+function abilitiesHtml(list){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  return list.map(a=>`
+    <div class="ability-row">
+      <span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span>
+      <span class="ab-score">${a.score}</span>
+    </div>
+  `).join('');
+}
+
+const RDT = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
+
+function spellsHtml(list){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  return list.map(sp=>`
+    <div class="spell-item">
+      <div class="sp-name">${esc(sp.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:11.5px">(lvl ${sp.level})</span></div>
+      <div class="sp-meta">${esc(sp.technique)}${sp.form?'/'+esc(sp.form):''} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${sp.ritual?' · Ritual':''}</div>
+      ${sp.description?`<div class="sp-desc">${esc(sp.description)}</div>`:''}
+    </div>
+  `).join('');
+}
+
+function magusSheetHtml(m){
+  const portrait = m.portrait
+    ? `<img class="sheet-portrait" src="${esc(m.portrait)}" alt="${esc(m.name)}">`
+    : `<div class="sheet-portrait placeholder">🜛</div>`;
+  const sub = [m.house?`House ${m.house}`:'', m.parens?`parens ${m.parens}`:''].filter(Boolean).join(' · ');
+  const metaChips = [
+    m.age!=null?`Age ${m.age}`:'',
+    m.apparentAge!=null && m.apparentAge!==m.age?`(apparent ${m.apparentAge})`:'',
+    m.confidence?`Confidence ${m.confidence.score}`:'',
+    m.size!=null?`Size ${signed(m.size)}`:'',
+    m.decrepitude?`Decrepitude ${m.decrepitude}`:'',
+    m.warping?`Warping ${m.warping}`:'',
+  ].filter(Boolean).map(t=>`<span class="meta-chip">${esc(t)}</span>`).join('');
+
+  const wounds = (m.activeWounds && m.activeWounds.length)
+    ? m.activeWounds.map(w=>`<div class="wound-warn">⚕ ${esc(w.gravity)} wound${w.description?' — '+esc(w.description):''}</div>`).join('')
+    : '';
+
+  const extras = [];
+  if(m.sigil) extras.push(`<div><em>Sigil:</em> ${esc(m.sigil)}</div>`);
+  if(m.sanctum) extras.push(`<div><em>Sanctum:</em> ${esc(m.sanctum)}</div>`);
+  if(m.familiar) extras.push(`<div><em>Familiar:</em> ${esc(m.familiar)}</div>`);
+
+  return `
+    <div class="sheet-header">
+      ${portrait}
+      <div>
+        <div class="sheet-name">${esc(m.name)}</div>
+        <p class="sheet-sub">${esc(sub)}</p>
+      </div>
+    </div>
+    <div class="sheet-meta">${metaChips}</div>
+    ${wounds}
+    ${extras.length?`<p class="sb-note" style="font-size:12.5px;margin:8px 0">${extras.join('<br>')}</p>`:''}
+
+    <div class="sheet-section-title">Characteristics</div>
+    ${charGridHtml(m.characteristics||{})}
+
+    <div class="sheet-section-title">Arts</div>
+    ${artsGridHtml(m.arts||{})}
+
+    ${m.personalityTraits && m.personalityTraits.length ? `
+    <div class="sheet-section-title">Personality</div>
+    <div class="trait-chips">${m.personalityTraits.map(t=>`<span class="trait-chip">${esc(t)}</span>`).join('')}</div>
+    ` : ''}
+
+    <details class="sheet-collapsible" open>
+      <summary>Virtues (${(m.virtues||[]).length})</summary>
+      ${vfListHtml(m.virtues,'virtue')}
+    </details>
+    <details class="sheet-collapsible">
+      <summary>Flaws (${(m.flaws||[]).length})</summary>
+      ${vfListHtml(m.flaws,'flaw')}
+    </details>
+    <details class="sheet-collapsible">
+      <summary>Abilities (${(m.abilities||[]).length})</summary>
+      ${abilitiesHtml(m.abilities)}
+    </details>
+    <details class="sheet-collapsible">
+      <summary>Spells (${(m.spells||[]).length})</summary>
+      ${spellsHtml(m.spells)}
+    </details>
+    ${m.reputations && m.reputations.length ? `
+    <details class="sheet-collapsible">
+      <summary>Reputations (${m.reputations.length})</summary>
+      <div class="vf-list">${m.reputations.map(r=>`<div class="vf-item"><span class="vf-name">${esc(r.name)}</span>${r.description?`<span class="vf-desc">${esc(r.description)}</span>`:''}</div>`).join('')}</div>
+    </details>
+    ` : ''}
+
+    <p class="sheet-source">Pulled from the live Foundry sheet — treat as a snapshot, not a live view. Some scores may still reflect character-creation defaults rather than in-play advancement.</p>
+  `;
+}
+
+function openSidebar(name){
+  const magus = findMagus(name);
+  if(magus){
+    $('#sidebarContent').innerHTML = magusSheetHtml(magus);
+    $('#sidebar').classList.add('wide');
+    $('#wrap').classList.add('sidebar-wide');
+  } else {
+    const c = (DATA.characters||{})[name] || {};
+    $('#sidebarContent').innerHTML = `
+      <div class="sb-name">${esc(name)}</div>
+      <p class="sb-role">${esc(c.role||'Role unrecorded')}</p>
+      <p class="sb-affil">${esc(c.affiliation||'')}</p>
+      <p class="sb-note">${esc(c.note||'')}</p>
+      <div class="sb-stub">📜 Full character sheet — coming soon</div>
+    `;
+    $('#sidebar').classList.remove('wide');
+    $('#wrap').classList.remove('sidebar-wide');
+  }
   $('#sidebar').classList.add('open');
   $('#overlay').classList.add('open');
   $('#wrap').classList.add('sidebar-open');

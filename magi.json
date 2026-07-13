@@ -1,0 +1,2729 @@
+{
+  "meta": {
+    "title": "Magi Character Sheets",
+    "source": "Foundry VTT REST API (arm5e system), pulled 2026-07-13"
+  },
+  "magi": {
+    "Dagmar": {
+      "key": "dagmar",
+      "name": "Dagmar",
+      "portrait": "portraits/dagmar.png",
+      "house": "Criamon",
+      "parens": "Solving Epicurusson",
+      "sigil": "A fan of seven raven's feathers, quill pointed up.",
+      "born": 1198,
+      "age": 25,
+      "apparentAge": 26,
+      "characteristics": {
+        "int": 2,
+        "per": 3,
+        "str": 1,
+        "sta": 2,
+        "pre": 2,
+        "com": -3,
+        "dex": -2,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 2,
+        "points": 2
+      },
+      "decrepitude": 1,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 3,
+          "xp": 6
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 16,
+          "xp": 67
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 2,
+          "xp": 3
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 2,
+          "xp": 3
+        },
+        "re": {
+          "label": "Rego",
+          "score": 7,
+          "xp": 28
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 4,
+          "xp": 10
+        },
+        "au": {
+          "label": "Auram",
+          "score": 4,
+          "xp": 12
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 6,
+          "xp": 24
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 3,
+          "xp": 6
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 2,
+          "xp": 5
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 6,
+          "xp": 21
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 6,
+          "xp": 21
+        },
+        "te": {
+          "label": "Terram",
+          "score": 4,
+          "xp": 12
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 5,
+          "xp": 15
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a mag"
+        },
+        {
+          "name": "Affinity With Intellego",
+          "impact": "minor",
+          "description": "Your Advancement Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts."
+        },
+        {
+          "name": "The Enigma",
+          "impact": "minor",
+          "description": "You have been initiated into the Outer Mystery of The Enigma (see page @@), and thus are a member of House Criamon. You have a score of 1 in Enigmatic Wisdom. Note that all Criamon magi get this Virtue free at character creation."
+        },
+        {
+          "name": "Magical Memory",
+          "impact": "minor",
+          "description": "Your memory has been developed to remember magical rather than mundane things. You need not keep laboratory texts (see page @@) of your creations to get the benefit of a Lab Text when reproducing them. If you have created an effect by following another magus’s Lab Text once, you may get the same benefit in future without needing to have the text available."
+        },
+        {
+          "name": "Mastered Spells",
+          "impact": "minor",
+          "description": "You have fifty experience points to spend on mastering spells that you know. (See page @@ for rules on mastering spells.) You may take this Virtue if you also have Flawless Magic, to give you more experience points to spend on mastering your spells. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Minor Magical Focus (divination)",
+          "impact": "minor",
+          "description": "Your magic is particularly attuned to some narrow field, such as self-transformation, birds of prey, or healing. In general, the field should be slightly narrower than a single Technique and Form combination, although it may include restricted areas of several such combinations. Healing, for example, is a part of Creo Corpus, Creo Animal, and possibly Creo \n\nHerbam. You cannot be focused on a labo"
+        },
+        {
+          "name": "Puissant Intellego",
+          "impact": "minor",
+          "description": "You add 3 to the value of one Art whenever you use it. This means all totals in which the score of the Art is part of the total. It does not apply when learning, teaching, or writing about the Art. You may take this Virtue twice, for two different Arts. If a spell has requisites, include the bonus from Puissant Art with that Art when calculating which Art is higher. If the Puissant Art is higher, "
+        },
+        {
+          "name": "Premonitions",
+          "impact": "minor",
+          "description": "You intuitively sense whenever something is wrong, or is likely to go wrong soon. Choosing this Virtue confers the Ability Premonitions 1 (page @@)."
+        },
+        {
+          "name": "Hermetic Magus",
+          "impact": "free",
+          "description": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it."
+        },
+        {
+          "name": "Ghostly Warder",
+          "impact": "major",
+          "description": "A ghost watches over you. It might be a grandparent, a childhood friend, or anyone else who cares for you enough to stay around after death. The ghost is invisible and silent to all but you and those with Second Sight (see page @@). It can see and hear what is going on around you and makes an excellent spy, since it can leave your presence once per day for up to half an hour. However, death does n"
+        },
+        {
+          "name": "Intuition",
+          "impact": "minor",
+          "description": "You have a natural sensitivity that allows you to make the right decisions more often than luck can account for. Whenever you are given a choice in which luck plays a major role (such as deciding which of three unexplored paths to follow), you have a good chance of choosing correctly. The storyguide should secretly roll a simple die. On a 6+, your intuition kicks in and you make whatever might be "
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Study Requirement",
+          "impact": "major",
+          "description": "You are unable to study magic from books or vis alone. You must study in the presence of the appropriate Art. For example, you need to sit next to a brook or pond to study Aquam, or a large fire to study Ignem. Growing things are good for Creo, decaying ones good for Perdo. As your knowledge grows, you need to work with larger and larger quantities. See the Study Bonus Virtue on page @@ for a list"
+        },
+        {
+          "name": "Weak Enchanter",
+          "impact": "minor",
+          "description": "Your Gift is ill attuned to creating enchanted devices. Halve your Lab Total whenever you create or investigate an enchanted item. If you have a Deficiency that counts as part of the Lab Total, apply the Deficiency first and then halve the remaining total."
+        },
+        {
+          "name": "Weird Magic",
+          "impact": "minor",
+          "description": "Your control over magic is somewhat loose, perhaps due to Twilight effects or idiosyncratic training. Roll one extra botch die when you roll a zero on stressed spell casting rolls, apart from your other botch dice. Botches from this die should be strange or bizarre rather than dangerous, and if the Weird Magic botch occurs along with a regular botch, the results could be truly spectacular."
+        },
+        {
+          "name": "Visions",
+          "impact": "minor",
+          "description": "You often see images related to emotionally or magically laden events. A vision might be of the past, a possible future, or a distant occurrence, and is often symbolic or confusing. Visions usually come to you at quiet times or in places connected with a powerful emotional or magical event, such as the site of a patricide or diabolic sacrifice. Your visions may warn you of dangers to come, or get "
+        },
+        {
+          "name": "Favors",
+          "impact": "major",
+          "description": "You owe a boon to someone (or to a great many people), and may be called upon to return the favor at any time. The consequences of ignoring such a request can range from mild to deadly serious, at the storyguide’s discretion."
+        },
+        {
+          "name": "Overconfident (Minor)",
+          "impact": "minor",
+          "description": "You have a completely unshakable faith in your own abilities. You believe that you will always perform at, or slightly above, the peak of your abilities, and cannot imagine failure. If you actually botch, you come up with some rationalization as to what 'really' happened."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Native Language",
+          "speciality": "Old Norse",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Language: Latin",
+          "speciality": "Hermetic Usage",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Awareness",
+          "speciality": "Alertness / Eye for Details",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Ceremonial Magic",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Finesse",
+          "speciality": "Precision",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Regiones",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Theory",
+          "speciality": "Inventing Spells",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Language: English",
+          "speciality": "Sailing Terms",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Swim",
+          "speciality": "Long Distances",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Premonitions",
+          "speciality": "",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Scandinavian Lore",
+          "speciality": "Legends",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "North Sea Lore",
+          "speciality": "Geography",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Concentration",
+          "speciality": "Spell Concentration",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Lore, Covenant of the North Sea",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Profession: Sailor",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Survival",
+          "speciality": "Ocean",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Philosophiae",
+          "speciality": "Ceremonial Magic",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Theology - Christian",
+          "speciality": "Heresy",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Parma Magica",
+          "speciality": "Perdo",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Penetration",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Enigmatic Wisdom",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [
+        {
+          "name": "Clear Sight of the Naiad",
+          "technique": "Intellego",
+          "form": "Aquam",
+          "level": 1,
+          "range": "personal",
+          "duration": "sun",
+          "target": "sight",
+          "ritual": false,
+          "description": "You can see as clearly through water as through air, for a sun."
+        },
+        {
+          "name": "True Sight of the Air",
+          "technique": "Intellego",
+          "form": "Auram",
+          "level": 1,
+          "range": "personal",
+          "duration": "sun",
+          "target": "sight",
+          "ritual": false,
+          "description": "Lets you see clearly through all manner of obfuscation in the air nearby, including smoke, fog, and dust, even if the obfuscation is magical."
+        },
+        {
+          "name": "Aegis of the Hearth",
+          "technique": "Rego",
+          "form": "Vim",
+          "level": 1,
+          "range": "touch",
+          "duration": "year",
+          "target": "bound",
+          "ritual": true,
+          "description": "This ritual protects a covenant in the way a Parma Magica protects a magus.\n\nIf any spell is cast toward the Aegis (originating from outside it) by any magus who was not involved in the Aegis ritual, the Aegis resists the spell. Furthermore, spells that bring objects into the Aegis, including telepo"
+        },
+        {
+          "name": "Wizard’s Sidestep",
+          "technique": "Rego",
+          "form": "Imaginem",
+          "level": 2,
+          "range": "personal",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "Your image appears up to 1 pace from where you actually are, so attacks aimed there are likely to miss you. Whenever the image is successfully struck, it disappears and reappears in another spot. In combat, early attacks are aimed at the image, and so automatically miss you. Once the image has been "
+        },
+        {
+          "name": "Words of the Unbroken Silence",
+          "technique": "Creo",
+          "form": "Mentem",
+          "level": 3,
+          "range": "sight",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Lets you say two words directly to the mind of a target. The target can recognize your voice and knows that the message is of supernatural origin."
+        },
+        {
+          "name": "Tales of the Ashes",
+          "technique": "Intellego",
+          "form": "Ignem",
+          "level": 3,
+          "range": "touch",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "Lets you see what the ashes you touch originally were, and how and when the object was burned. The latter two are divined from markings and signs in the ashes."
+        },
+        {
+          "name": "Eyes of the Eagle",
+          "technique": "Intellego",
+          "form": "Imaginem",
+          "level": 3,
+          "range": "personal",
+          "duration": "diam",
+          "target": "sight",
+          "ritual": false,
+          "description": "You see distant things clearly. No matter how far away something is, you can make out details as if it were only a foot or so from you. Things do not all appear to be a foot away; you can simply make out details as well as if they were. You can still judge distance accurately; in fact, more accurate"
+        },
+        {
+          "name": "Piercing the Magical Veil",
+          "technique": "Intellego",
+          "form": "Vim",
+          "level": 3,
+          "range": "personal",
+          "duration": "conc",
+          "target": "sight",
+          "ritual": false,
+          "description": "This spell allows the caster to see through the boundaries of regiones, and therefore divine the path to the next level (more details about regiones are given on page 189). There are separate but related spells for Divine, Magical and Infernal regiones."
+        },
+        {
+          "name": "Unseen Porter",
+          "technique": "Rego",
+          "form": "Terram",
+          "level": 3,
+          "range": "voice",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "name": "Comfort of the Drenched Traveler",
+          "technique": "Perdo",
+          "form": "Aquam",
+          "level": 4,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Dries a person and his or her clothes."
+        },
+        {
+          "name": "Posing the Silent Question",
+          "technique": "Intellego",
+          "form": "Mentem",
+          "level": 15,
+          "range": "eye",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "You can ask one silent mental question of the target, then detect the answer. The truth of the answer is limited by the knowledge of the target. Questions to the effect of “What would you do if. . . ?” often receive inaccurate replies. You are likely to get what the target thinks he would do, not ne"
+        }
+      ],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "Tide of Memory's Laboratory (30 pts)",
+      "familiar": null,
+      "activeWounds": []
+    },
+    "Dustin Page": {
+      "key": "dustin",
+      "name": "Dustin Page",
+      "portrait": "portraits/dustin_page.webp",
+      "house": "Bonisagus",
+      "parens": "Mia Wright of Bonisagus",
+      "sigil": "The smell of salt in the wind. A circular glass lens.",
+      "born": 1201,
+      "age": 22,
+      "apparentAge": 22,
+      "characteristics": {
+        "int": 3,
+        "per": 2,
+        "str": -1,
+        "sta": 1,
+        "pre": -1,
+        "com": 0,
+        "dex": -1,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 7,
+          "xp": 33
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 5,
+          "xp": 15
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 5,
+          "xp": 15
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 5,
+          "xp": 15
+        },
+        "re": {
+          "label": "Rego",
+          "score": 5,
+          "xp": 20
+        },
+        "an": {
+          "label": "Animal",
+          "score": 5,
+          "xp": 15
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 5,
+          "xp": 15
+        },
+        "au": {
+          "label": "Auram",
+          "score": 5,
+          "xp": 15
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 5,
+          "xp": 15
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 5,
+          "xp": 17
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 5,
+          "xp": 15
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 5,
+          "xp": 15
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 5,
+          "xp": 16
+        },
+        "te": {
+          "label": "Terram",
+          "score": 5,
+          "xp": 19
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 5,
+          "xp": 15
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a mag"
+        },
+        {
+          "name": "Hermetic Magus",
+          "impact": "free",
+          "description": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it."
+        },
+        {
+          "name": "Inventive Genius",
+          "impact": "minor",
+          "description": "Invention comes naturally to you. \n\nYou get +3 to your Lab Total if you are not using a Laboratory Text or being taught. If you experiment, you get +6."
+        },
+        {
+          "name": "Flawless Magic",
+          "impact": "major",
+          "description": "You automatically master every spell that you learn. All your spells start with a score of 1 in the corresponding Spell Mastery Ability. You may choose a different special ability for every spell you have. Further, all your Advancement Totals for Spell Mastery Abilities are doubled."
+        },
+        {
+          "name": "Book Learner",
+          "impact": "minor",
+          "description": "You have a talent for comprehending the writings of others. When studying from books, treat them as if they were three Quality levels higher than they actually are."
+        },
+        {
+          "name": "Independent Study",
+          "impact": "minor",
+          "description": "The character develops new skills extremely quickly on his own. When he is studying through Practice, add two to the Source Quality, and add three to the Source Quality of his Adventure experience."
+        },
+        {
+          "name": "Cautious With Finesse",
+          "impact": "minor",
+          "description": "You are very careful with a specific Ability, and are less likely to fail spectacularly if you do fail when using it. You roll two fewer botch dice than normal whenever you are required to roll botch dice for that Ability. This may mean that you roll no botch dice. This Virtue may apply to any Ability, even one you cannot learn at character creation."
+        },
+        {
+          "name": "Puissant Magic Theory",
+          "impact": "free",
+          "description": "You are particularly adept with one Ability, and add 2 to its value whenever you use it. Note that you do not, in general, use an Ability when learning it, writing about it, or helping someone else to improve it. You may only take this Virtue once for a given Ability, but may take it more than once for different Abilities."
+        },
+        {
+          "name": "Puissant Finesse",
+          "impact": "minor",
+          "description": "You are particularly adept with one Ability, and add 2 to its value whenever you use it. Note that you do not, in general, use an Ability when learning it, writing about it, or helping someone else to improve it. You may only take this Virtue once for a given Ability, but may take it more than once for different Abilities."
+        },
+        {
+          "name": "Minor Magical Focus (Salt and Glass)",
+          "impact": "minor",
+          "description": "Your magic is particularly attuned to some narrow field, such as self-transformation, birds of prey, or healing. In general, the field should be slightly narrower than a single Technique and Form combination, although it may include restricted areas of several such combinations. Healing, for example, is a part of Creo Corpus, Creo Animal, and possibly Creo \n\nHerbam. You cannot be focused on a labo"
+        },
+        {
+          "name": "Cautious Sorcerer",
+          "impact": "minor",
+          "description": "You are very careful with magic, and are less likely to fail spectacularly if you do fail. You roll three fewer botch dice when casting spells (whether ritual, formulaic, or spontaneous), and when working in the laboratory. This Virtue may not reduce the number of botch dice rolled below one. However, its effects are applied before any other effects which reduce botch dice, such as Spell Mastery ("
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Twilight Prone",
+          "impact": "major",
+          "description": "You either enjoy or cannot help running excessive amounts of magic through you when you cast spells. You must roll to resist Twilight on a single magical botch, rather than on a double botch like most magi."
+        },
+        {
+          "name": "Weird Magic",
+          "impact": "minor",
+          "description": "Your control over magic is somewhat loose, perhaps due to Twilight effects or idiosyncratic training. Roll one extra botch die when you roll a zero on stressed spell casting rolls, apart from your other botch dice. Botches from this die should be strange or bizarre rather than dangerous, and if the Weird Magic botch occurs along with a regular botch, the results could be truly spectacular."
+        },
+        {
+          "name": "Driven (Major)",
+          "impact": "major",
+          "description": "You have some goal which you are determined to bring about. This has to be the sort of big goal that could shape an entire life, but if you do accomplish it you will immediately turn to a new project."
+        },
+        {
+          "name": "Supernatural Nuisance (Haunted)",
+          "impact": "major",
+          "description": "Supernatural entities of a certain kind interfere in your life in minor ways whenever you are around them. This differs from Plagued by Supernatural Entity in that the nuisances do not have any long-term plans. This could represent a ghost that haunts you, or general enmity from faeries towards you."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Language: (Native)",
+          "speciality": "Storytelling",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Teaching",
+          "speciality": "Apprentices",
+          "xp": 53,
+          "score": 4
+        },
+        {
+          "name": "Magic Theory*",
+          "speciality": "Inventing Spells / Dabbler",
+          "xp": 53,
+          "score": 4
+        },
+        {
+          "name": "Dead language (Latin)*",
+          "speciality": "",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Finesse",
+          "speciality": "Precision",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Awareness",
+          "speciality": "Alertness",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Swim",
+          "speciality": "Underwater Maneuvering",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Dodging",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Magi",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Provisions",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Concentration",
+          "speciality": "Lab Work",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Lab Work",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Politics",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Artes Liberales*",
+          "speciality": "Ritual Magic",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Philosophiae*",
+          "speciality": "Ritual Magic",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Great Weapon",
+          "speciality": "Staff",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Code of Hermes*",
+          "speciality": "Apprentices",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Parma Magica*",
+          "speciality": "Creo",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Stealth",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Survival",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Craft: Carpentry",
+          "speciality": "Specific Object: Ships",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Profession: Shipwright",
+          "speciality": "Cogs",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Profession: Scribe",
+          "speciality": "Scrolls",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Ride",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Civil & Canon Law*",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Common Law*",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Medicine*",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        }
+      ],
+      "spells": [
+        {
+          "name": "Sense of Magical Power",
+          "technique": "Intellego",
+          "form": "Vim",
+          "level": 1,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "This spell tells the caster whether he is currently in a magic aura. It does not give any further information. Other spells do the same for other kinds of aura."
+        },
+        {
+          "name": "Sense of Faerie Power",
+          "technique": "Intellego",
+          "form": "Vim",
+          "level": 1,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Caster knows if they are within a Faerie aura."
+        },
+        {
+          "name": "The Miner’s Keen Eye",
+          "technique": "Intellego",
+          "form": "Terram",
+          "level": 2,
+          "range": "personal",
+          "duration": "conc",
+          "target": "sight",
+          "ritual": false,
+          "description": "You can see any one type of mineral (gold, diamond, sand), specified at the time of casting, through up to 3 paces of intervening material. You have a good idea of how much is there and how pure it is, if appropriate."
+        },
+        {
+          "name": "Broom of the Winds",
+          "technique": "Creo",
+          "form": "Auram",
+          "level": 3,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Whips up violent, swirling winds around the target. The target must make a Size stress roll of 9+ to remain standing. If the target is braced or holding onto some support, he may also make a Strength stress roll of 9+. If both rolls fail, the target is knocked in a random direction. The target may b"
+        },
+        {
+          "name": "Whispering Winds",
+          "technique": "Intellego",
+          "form": "Auram",
+          "level": 3,
+          "range": "sight",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "The winds bear their tidings to your ears, allowing you to hear words spoken by any group of people within your line of sight, provided no solid barrier (including glass) intervenes. This spell is an adaptation of an effect known to Bjornaer the Founder, and fits poorly into the normal framework of "
+        },
+        {
+          "name": "Bind Wound",
+          "technique": "Creo",
+          "form": "Corpus",
+          "level": 3,
+          "range": "touch",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "This spell binds the target’s wounds, so that he can undertake any activity without the risk of worsening the wounds. He still suffers from the wound penalties, however, and cannot heal naturally while under the influence of this spell.\nTypically, you place your hands on the target and pass them ove"
+        },
+        {
+          "name": "Lamp without Flame",
+          "technique": "Creo",
+          "form": "Ignem",
+          "level": 4,
+          "range": "touch",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "This spell creates a steady light as bright as daylight on a cloudy day. The light has no apparent source, but illuminates an area about ten paces across, centered on a point indicated by the caster. This point may be a mobile item."
+        },
+        {
+          "name": "Wielding the Invisible Sling",
+          "technique": "Rego",
+          "form": "Terram",
+          "level": 4,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Hurls any nearby object that could normally be thrown by a person at any target with- in range. The object must not be held down or otherwise restrained. Damage depends on the object thrown, up to +5 for a fist-sized stone. Casting requisites of an appropriate Form for the target are required."
+        },
+        {
+          "name": "Comfort of the Drenched Traveler",
+          "technique": "Perdo",
+          "form": "Aquam",
+          "level": 4,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Dries a person and his or her clothes."
+        },
+        {
+          "name": "Break the Oncoming Wave",
+          "technique": "Rego",
+          "form": "Aquam",
+          "level": 5,
+          "range": "personal",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "Breaks all waves and torrents of water (including magical ones) just before they touch you. The water either crashes to the ground or flows around you in a truly impressive display.\n\nIn Ferramentum of Verditius's version of this spell, the water breaks precisely one inch from the target, leaving a v"
+        },
+        {
+          "name": "Pilum of Fire",
+          "technique": "Creo",
+          "form": "Ignem",
+          "level": 10,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "A 2-foot, thick, spear-shaped jet of fire flies from your palms, doing +15 damage to the individual it hits."
+        }
+      ],
+      "personalityTraits": [
+        "Driven",
+        "Adventurous",
+        "Lost in Thought"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": []
+    },
+    "Éogan Dobhartha": {
+      "key": "eogan",
+      "name": "Éogan Dobhartha",
+      "portrait": "portraits/eogan.png",
+      "house": "Ex Miscellanea",
+      "parens": "Fáelán Ultach (Deceased)",
+      "sigil": "A faint sound of splashing and children's laughter",
+      "born": 1199,
+      "age": 24,
+      "apparentAge": 24,
+      "characteristics": {
+        "int": 2,
+        "per": 1,
+        "str": 1,
+        "sta": 2,
+        "pre": -2,
+        "com": 0,
+        "dex": 1,
+        "qik": 1
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 2
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 5,
+          "xp": 15
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 5,
+          "xp": 15
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 5,
+          "xp": 15
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 5,
+          "xp": 16
+        },
+        "re": {
+          "label": "Rego",
+          "score": 5,
+          "xp": 15
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 17,
+          "xp": 73
+        },
+        "au": {
+          "label": "Auram",
+          "score": 4,
+          "xp": 11
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 4,
+          "xp": 13
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 2,
+          "xp": 3
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 2,
+          "xp": 3
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a mag"
+        },
+        {
+          "name": "Affinity With Aquam",
+          "impact": "minor",
+          "description": "Your Advancement Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts."
+        },
+        {
+          "name": "Puissant Aquam",
+          "impact": "minor",
+          "description": "You add 3 to the value of one Art whenever you use it. This means all totals in which the score of the Art is part of the total. It does not apply when learning, teaching, or writing about the Art. You may take this Virtue twice, for two different Arts. If a spell has requisites, include the bonus from Puissant Art with that Art when calculating which Art is higher. If the Puissant Art is higher, "
+        },
+        {
+          "name": "Personal Vis Source (Aquam)",
+          "impact": "minor",
+          "description": "You have exclusive access to a supply of raw vis. Determine the amount and type with the help of your troupe; the yield should be about one tenth as much as the player covenant expects to gather per year at the beginning of the saga. The yield of your source does not normally change over the course of time, even if the covenant uncovers new sources."
+        },
+        {
+          "name": "Inoffensive To Magical Creatures - Hermetic",
+          "impact": "minor",
+          "description": "This Virtue is associated with one of five classes of beings: animals, divine beings, faeries, demons, or magical creatures. These last four include characters associated with the Divine, Faerie, Infernal, or Magic realm, respectively, through Supernatural Virtues or Flaws, as well as beings with Might. \n\n The character’s Gift does not bother beings of this sort, although it still has the normal e"
+        },
+        {
+          "name": "Free Study",
+          "impact": "minor",
+          "description": "You are better at figuring things out for yourself than you are at poring over books. Add +3 to \n\nthe Source Quality when studying from raw vis."
+        },
+        {
+          "name": "Rapid Convalescence",
+          "impact": "minor",
+          "description": "Your body can heal quickly. You get a +3 bonus on all rolls to recover from wounds."
+        },
+        {
+          "name": "Familiarity with the Fae",
+          "impact": "minor",
+          "description": "You have a natural understanding of faerie ways, perhaps due to spending time among them. You get a +2 to all rolls involving social interaction with faeries. You also gain the effects of the Common Sense Virtue, but only when the situation pertains to faeries. You may purchase Faerie Lore at character generation, even if normally unable to take Arcane Abilities."
+        },
+        {
+          "name": "Study Bonus",
+          "impact": "free",
+          "description": "When given the opportunity to study an Art from books or raw vis in the presence of the Form or Technique, your surroundings give you new insights into your studies. Add two to die rolls to study from vis, or two to the Quality of any text you study from. Your current Art score determines the magnitude of the surroundings you require to get the bonus. See the table for some guidelines.\n\nStudy Bonu"
+        },
+        {
+          "name": "Greater Immunity - Poison",
+          "impact": "free",
+          "description": "You are completely immune to one hazard which is both common and potentially deadly. For example, you might be immune to fire or to iron (and only iron) weapons. You may not take immunity to aging — see the Unaging Minor Virtue (page @@) instead. This immunity applies to mundane and magical versions of the thing. If you are immune to fire, you are also immune to magically created fire.\n\nOne import"
+        },
+        {
+          "name": "Deft Form (Aquam)",
+          "impact": "minor",
+          "description": "You are particularly skilled with one Form. You suffer no penalty to the Casting Total casting spells in that Form when using non-standard voicings/gestures (see page @@), including using no voice or gestures because you are in a non-human form. Voice Range spells still have a Range based on how loudly you are speaking."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Study Requirement",
+          "impact": "free",
+          "description": "You are unable to study magic from books or vis alone. You must study in the presence of the appropriate Art. For example, you need to sit next to a brook or pond to study Aquam, or a large fire to study Ignem. Growing things are good for Creo, decaying ones good for Perdo. As your knowledge grows, you need to work with larger and larger quantities. See the Study Bonus Virtue on page @@ for a list"
+        },
+        {
+          "name": "Plagued By Supernatural Entity",
+          "impact": "major",
+          "description": "Some supernatural being interferes in your life on a fairly regular basis. It may even have your best interests at heart, but the result is that you get dragged into stories. Suitable examples would be a demon trying to corrupt you, an angel trying to save you, a faerie playing games with you, or a ghost continuing the agenda she had while alive."
+        },
+        {
+          "name": "Hedge Wizard",
+          "impact": "minor",
+          "description": "Because of your esoteric magic, other magi distrust you, and more importantly, grant you no respect. You start with a negative Reputation within the Order of Hermes at level 3 as a hedge wizard, even though you are a member of the Order."
+        },
+        {
+          "name": "Weak Parens",
+          "impact": "minor",
+          "description": "Your parens was less powerful or a worse teacher than normal. You gain 60 fewer experience points and 30 fewer spell levels from apprenticeship, for a total of 180 experience points and 90 levels of spells."
+        },
+        {
+          "name": "Weak Scholar",
+          "impact": "minor",
+          "description": "You don't understand laboratory guidance very well. You get a –6 penalty to Lab Totals when working from the Lab Texts of others, including when re-inventing spells."
+        },
+        {
+          "name": "Oversensitive - Minor (Being looked down upon)",
+          "impact": "minor",
+          "description": "Something that others find merely unpleasant you consider intolerable. Examples might include an oversensitivity to disrespect, to slovenliness, or to impiety. If you are the violent type, you may start fights with those who offend you."
+        },
+        {
+          "name": "Fettered Magic",
+          "impact": "minor",
+          "description": "All of your spells and the effects of any magic items you activate are Arcane Connections to you. You cannot take this with the Virtue Tethered Magic, as the Virtue already includes this effect."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Language: Gaelic",
+          "speciality": "Travel Jargon",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Dead language (Latin)*",
+          "speciality": "Incantation",
+          "xp": 53,
+          "score": 4
+        },
+        {
+          "name": "Magic Theory*",
+          "speciality": "Vis Extraction",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Ireland Lore",
+          "speciality": "Magical sites",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Swim",
+          "speciality": "Deep Diving",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Faerie Lore*",
+          "speciality": "Faux Pas",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Profession: Sailor",
+          "speciality": "Provisioning",
+          "xp": 7,
+          "score": 1
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Running",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Awareness",
+          "speciality": "Keeping Watch",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Inns",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Scuffle",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Concentration",
+          "speciality": "Prayer",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Peasants",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Survival",
+          "speciality": "Gathering Food",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Artes Liberales*",
+          "speciality": "Logic",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Code of Hermes*",
+          "speciality": "Gray Areas",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Magic Lore*",
+          "speciality": "Magical Beasts",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Parma Magica*",
+          "speciality": "Muto effects",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Language: (English)",
+          "speciality": "Sailor Jargon",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Teaching",
+          "speciality": "Hermetic Arts",
+          "xp": 2,
+          "score": 0
+        }
+      ],
+      "spells": [
+        {
+          "name": "Eyes of the Merfolk",
+          "technique": "Intellego",
+          "form": "Aquam",
+          "level": 1,
+          "range": "touch",
+          "duration": "sun",
+          "target": "sight",
+          "ritual": false,
+          "description": "(Clear Sight of the Naiad, but with Touch range and Sun duration)\n\n\n\nCan see clearly through water."
+        },
+        {
+          "name": "Cloak of the Duck’s Feathers",
+          "technique": "Rego",
+          "form": "Aquam",
+          "level": 1,
+          "range": "touch",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "Makes water run off one object or creature, protecting the target and the target’s apparel from dampness. The spell is broken if the target is submerged in water."
+        },
+        {
+          "name": "Call of the Rushing Waters",
+          "technique": "Intellego",
+          "form": "Aquam",
+          "level": 2,
+          "range": "arc",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "Allows you to find any natural body of water for which you have an Arcane Connection (for example, a vial of water from it). Once you cast the spell, you can hear the water while you concentrate. Following the sound eventually brings you to the water, but you must make simple Perception rolls agains"
+        },
+        {
+          "name": "Comfort of the Drenched Traveler",
+          "technique": "Perdo",
+          "form": "Aquam",
+          "level": 4,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Dries a person and his or her clothes."
+        },
+        {
+          "name": "Subtle Taste of Poison and Purity",
+          "technique": "Intellego",
+          "form": "Aquam",
+          "level": 4,
+          "range": "personal",
+          "duration": "conc",
+          "target": "taste",
+          "ritual": false,
+          "description": "You can taste all of the properties of any liquid or mixture of liquids. Unlike Touch of the Pearls, you can use this sense on any number of liquids during the duration of the spell, but you must taste the liquids in question."
+        },
+        {
+          "name": "Lungs of the Fish",
+          "technique": "Muto",
+          "form": "Aquam",
+          "level": 4,
+          "range": "touch",
+          "duration": "sun",
+          "target": "part",
+          "ritual": false,
+          "description": "Turns water into air as it enters your lungs, allowing you to breathe water as you do air. This spell puzzles Hermetic theoreticians, as it behaves like a dynamic container target despite not being a container target. All known attempts to create analogous effects have failed, even though analysis o"
+        },
+        {
+          "name": "Push of the Gentle Wave",
+          "technique": "Rego",
+          "form": "Aquam",
+          "level": 4,
+          "range": "voice",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "A low wave is formed to propel a small boat slowly through the water. When casting this spell, you commonly make a pushing gesture. This spell, and other similar ones, pick out a particular current in the body of water and make it behave as desired, and thus have Individual Targets.\n\nIn Silva of Mer"
+        },
+        {
+          "name": "Grip of Ice",
+          "technique": "Creo",
+          "form": "Aquam",
+          "level": 5,
+          "range": "touch",
+          "duration": "diam",
+          "target": "ind",
+          "ritual": false,
+          "description": "The magus creates, in one or both hands, a fist sized cylinder of water with a handle that matches his grip. This is then immediately placed against a surface and turned to ice. If the surface is sufficiently porous, or shaped in such a way that the ice can wrap around and hold itself in place, the "
+        },
+        {
+          "name": "Mighty Torrent of Water",
+          "technique": "Creo",
+          "form": "Aquam",
+          "level": 10,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "A 3-foot-diameter jet of water sprays from your outstretched arms towards your target. The target of this gusher of water takes +10 damage and must make a Strength + Size stress roll against an Ease Factor of 9 or be sent flying back.\n\nMarbaid of Flambeau's wizard's sigil is connected to his obsessi"
+        }
+      ],
+      "personalityTraits": [
+        "Calm",
+        "Determined",
+        "Solitary"
+      ],
+      "reputations": [
+        {
+          "name": "Hedge Wizard",
+          "description": "(Should be negative)"
+        }
+      ],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": []
+    },
+    "Valdemar Bjornsson": {
+      "key": "valdemar",
+      "name": "Valdemar Bjornsson",
+      "portrait": "portraits/valdemar.jpg",
+      "house": "Diedne",
+      "parens": "Deceased",
+      "sigil": "A flash of blue light.",
+      "born": 1198,
+      "age": 25,
+      "apparentAge": 26,
+      "characteristics": {
+        "int": 2,
+        "per": -3,
+        "str": 2,
+        "sta": 2,
+        "pre": 1,
+        "com": 0,
+        "dex": 2,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 4,
+        "points": 2
+      },
+      "decrepitude": 1,
+      "warping": 301,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 2,
+          "xp": 3
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 2,
+          "xp": 3
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 3,
+          "xp": 6
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 2,
+          "xp": 3
+        },
+        "re": {
+          "label": "Rego",
+          "score": 3,
+          "xp": 6
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 2,
+          "xp": 3
+        },
+        "au": {
+          "label": "Auram",
+          "score": 2,
+          "xp": 3
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 2,
+          "xp": 3
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 2,
+          "xp": 3
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 1,
+          "xp": 1
+        },
+        "te": {
+          "label": "Terram",
+          "score": 2,
+          "xp": 3
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 2,
+          "xp": 3
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a mag"
+        },
+        {
+          "name": "Diedne Magic",
+          "impact": "major",
+          "description": "Your magic lineage and traditions are from the druids and the vanquished former house of Diedne, making you especially skilled with Spontaneous magic. When you cast a spontaneous spell without expending Fatigue, you may choose to divide by five or by two. If you choose to divide by five, you need not roll a stress die, and cannot botch, just as normal. If you choose to divide by two, you must roll"
+        },
+        {
+          "name": "Hermetic Magus",
+          "impact": "free",
+          "description": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it."
+        },
+        {
+          "name": "Apt Student",
+          "impact": "minor",
+          "description": "You are particularly good at learning from others. \n\nWhen being taught or trained by someone else, add five to the Source Quality."
+        },
+        {
+          "name": "Common Sense",
+          "impact": "minor",
+          "description": "Whenever you are about to do something contrary to what is sensible in the game setting, common sense (the storyguide) alerts you to the error. This is an excellent Virtue for a beginning player, as it legitimizes any help the storyguide may give."
+        },
+        {
+          "name": "Faerie Blood",
+          "impact": "minor",
+          "description": "Somewhere in your ancestry there is a faerie, and this relation gives you an intuitive grasp of the motivations and personalities of those supernatural folk. Faeries are more comfortable around you than around other humans, and given time, may even forget the mortal blood in your veins.\n\n You are resistant to aging, and get –1 to all aging rolls.\n\n Type of Faerie Blood (pick one, or create a simil"
+        },
+        {
+          "name": "Inspirational",
+          "impact": "minor",
+          "description": "You are a stirring speaker or a heroic \n\nfigure, and can urge people to great efforts. You give targets a +3 bonus to rolls for appropriate Personality Traits."
+        },
+        {
+          "name": "Self-confident",
+          "impact": "minor",
+          "description": "You ha\n\nve firm confidence in your own abilities, and have a Confidence Score of two. You also start with five Confidence Points, rather than the usual three. (See page @@ for Confidence rules.)"
+        },
+        {
+          "name": "Unaging",
+          "impact": "minor",
+          "description": "You do not suffer the effects of age. In game terms, your aging points do not decrease your Characteristics, only building up to give you Decrepitude points. If a crisis is not potentially fatal, you suffer no ill-effects. You may die from terminal and potentially fatal crises, according to the normal rules. You are not enfeebled when you reach four Decrepitude points, but you die as normal when y"
+        },
+        {
+          "name": "Venus's Blessing",
+          "impact": "minor",
+          "description": "People are often attracted to you. You get +3 on Communication and Presence rolls with sexually compatible characters in appropriate situations. At times you can put this to good use. At other times it’s an annoyance."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Chaotic Magic",
+          "impact": "major",
+          "description": "Your magic is very wild. When you cast a spontaneous spell, you must specify a desired level of effect. If you fall short of or exceed that target by more than one level, the spell still works, but its effects are beyond your control—the storyguide decides the results. The level of effect includes any levels you assign to Penetration."
+        },
+        {
+          "name": "Difficult Longevity Ritual",
+          "impact": "major",
+          "description": "Something in your magical nature makes it difficult to create an effective Longevity Ritual for you. Anyone (including yourself) creating a Longevity Ritual for you must halve their Lab Total. You may create Longevity Rituals for others without penalty."
+        },
+        {
+          "name": "Magic Addiction",
+          "impact": "major",
+          "description": "You crave the rush of casting and holding power over magic. Whenever you cast a spell, you have a difficult time stopping yourself from casting again and again until you drop from exhaustion. Whenever you use a stress die in spellcasting, you must, whether or not the spell succeeds, make an Intelligence + Concentration stress roll, against an Ease Factor of half the level of the spell (or, if you "
+        },
+        {
+          "name": "Twilight Prone",
+          "impact": "major",
+          "description": "You either enjoy or cannot help running excessive amounts of magic through you when you cast spells. You must roll to resist Twilight on a single magical botch, rather than on a double botch like most magi."
+        },
+        {
+          "name": "Lycanthrope",
+          "impact": "major",
+          "description": "You have been cursed to change form into a dangerous predator (such as a wolf, lynx, or bear) on nights of the full moon (or similar, monthly, astrological events). No items or clothing transform between shapes, and it takes one full round for the full transformation to take effect. You are not immune to normal weapons, and the curse does not infect bite victims. The animal may be detected as a cu"
+        },
+        {
+          "name": "Dark Secret",
+          "impact": "major",
+          "description": "You are haunted by something that would lead to shame, rejection, and possibly revenge if discovered. Hints about the secret continually arise, and there might be others who know it and could betray you. This makes you avoid certain places, dislike certain people, or fear certain things."
+        },
+        {
+          "name": "Feud",
+          "impact": "major",
+          "description": "Your family is involved in a feud. The opposing family or families are roughly of equivalent strength to your family and its allies. You are liable to be ambushed or attacked by opposing clansmen, and your family expects you to join raids against your enemies."
+        },
+        {
+          "name": "Visions",
+          "impact": "minor",
+          "description": "You often see images related to emotionally or magically laden events. A vision might be of the past, a possible future, or a distant occurrence, and is often symbolic or confusing. Visions usually come to you at quiet times or in places connected with a powerful emotional or magical event, such as the site of a patricide or diabolic sacrifice. Your visions may warn you of dangers to come, or get "
+        },
+        {
+          "name": "Ambitious - Minor",
+          "impact": "minor",
+          "description": "You want to be the most successful or powerful person in the world in some respect. You will not be distracted into doing things that do not contribute to your ambition, and are very eager to do things that advance it."
+        },
+        {
+          "name": "Avaricious - Major",
+          "impact": "major",
+          "description": "You want money, lots of money. When you have it, you do not spend it, but hoard it so that you can count it. You can be avaricious about physical things other than money, such as books or raw vis. In this case, you do not use the things you hoard, nor do you allow others to use them."
+        },
+        {
+          "name": "Driven (Major)",
+          "impact": "major",
+          "description": "You have some goal which you are determined to bring about. This has to be the sort of big goal that could shape an entire life, but if you do accomplish it you will immediately turn to a new project."
+        },
+        {
+          "name": "Optimistic (Minor)",
+          "impact": "minor",
+          "description": "You are convinced that everything will turn out for the best. This is not overconfidence, as you accept that you might well fail. Even if you do, however, you are sure that circumstances will mean that everything works to your benefit."
+        },
+        {
+          "name": "Proud (Minor)",
+          "impact": "minor",
+          "description": "You believe that you are more important than just about everybody, and expect the appropriate respect. Magi may admit one or two equals, but do not believe that they have any superiors. Mundanes will admit social superiors, but still believe themselves to be fundamentally better than, say, the king."
+        },
+        {
+          "name": "Wrathful (Minor)",
+          "impact": "minor",
+          "description": "You are prone to anger over the smallest issues, and your rage when you are thwarted in something major is terrible to behold."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Language: Old Norse",
+          "speciality": "Runes",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Magic Theory",
+          "speciality": "House Diedne Methods",
+          "xp": 45,
+          "score": 3
+        },
+        {
+          "name": "Language: Irish Gaelic",
+          "speciality": "Bardic Tradition",
+          "xp": 39,
+          "score": 3
+        },
+        {
+          "name": "Charm",
+          "speciality": "Strong Personality",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Dead language (Latin)*",
+          "speciality": "Hermetic Usage",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Single Weapon",
+          "speciality": "Swords",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Thrown Weapon",
+          "speciality": "Throwing Axes",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Faerie Lore",
+          "speciality": "Fae Nobility",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Finesse",
+          "speciality": "Precision",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Viktir",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Penetration",
+          "speciality": "",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Selling Loot",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Grappling",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Concentration",
+          "speciality": "Focus while Casting",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Common Law",
+          "speciality": "Maritime Legalities",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Ride",
+          "speciality": "Jousting",
+          "xp": 11,
+          "score": 1
+        },
+        {
+          "name": "Fehu",
+          "speciality": "",
+          "xp": 10,
+          "score": 1
+        },
+        {
+          "name": "Ansuz",
+          "speciality": "",
+          "xp": 10,
+          "score": 1
+        },
+        {
+          "name": "Raido",
+          "speciality": "",
+          "xp": 10,
+          "score": 1
+        },
+        {
+          "name": "Hagalaz",
+          "speciality": "",
+          "xp": 10,
+          "score": 1
+        },
+        {
+          "name": "Tiwaz",
+          "speciality": "",
+          "xp": 6,
+          "score": 1
+        },
+        {
+          "name": "Berkanan",
+          "speciality": "",
+          "xp": 6,
+          "score": 1
+        },
+        {
+          "name": "Ehwaz",
+          "speciality": "",
+          "xp": 6,
+          "score": 1
+        },
+        {
+          "name": "Laguz",
+          "speciality": "",
+          "xp": 6,
+          "score": 1
+        },
+        {
+          "name": "Othila",
+          "speciality": "",
+          "xp": 6,
+          "score": 1
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Running",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Awareness",
+          "speciality": "Searching for Valuables",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Etiquette",
+          "speciality": "Warrior Culture",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "The Fair Sex",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Guile",
+          "speciality": "Well-Supported Deceptions",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Inspiration",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Survival",
+          "speciality": "Foraging by the Shore",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Swim",
+          "speciality": "Long Distance",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Astronomy",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Philosophiae*",
+          "speciality": "Natural Philosophy",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Code of Hermes",
+          "speciality": "Exceptions & Loopholes",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Dominion Lore",
+          "speciality": "Divine Messengers",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Parma Magica",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Language: English",
+          "speciality": "Sailor Jargon",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Uruz",
+          "speciality": "",
+          "xp": 3,
+          "score": 0
+        },
+        {
+          "name": "Algiz",
+          "speciality": "",
+          "xp": 3,
+          "score": 0
+        },
+        {
+          "name": "Gebo",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Jera",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Ingwaz",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        },
+        {
+          "name": "Dagaz",
+          "speciality": "",
+          "xp": 1,
+          "score": 0
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "Laboratory (10 pts)",
+      "familiar": null,
+      "activeWounds": []
+    },
+    "Willhelm Stienauer": {
+      "key": "wilhelm",
+      "name": "Willhelm Stienauer",
+      "portrait": null,
+      "house": "Bonisagus",
+      "parens": "Agustus Rivaldi",
+      "sigil": "Stub",
+      "born": 1197,
+      "age": 26,
+      "apparentAge": 26,
+      "characteristics": {
+        "int": 3,
+        "per": 1,
+        "str": 0,
+        "sta": 2,
+        "pre": -2,
+        "com": 2,
+        "dex": 0,
+        "qik": -2
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 2,
+          "xp": 3
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 2,
+          "xp": 3
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 3,
+          "xp": 6
+        },
+        "re": {
+          "label": "Rego",
+          "score": 17,
+          "xp": 78
+        },
+        "an": {
+          "label": "Animal",
+          "score": 2,
+          "xp": 3
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 3,
+          "xp": 6
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 2,
+          "xp": 3
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 1,
+          "xp": 1
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 16,
+          "xp": 66
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a mag"
+        },
+        {
+          "name": "Hermetic Magus",
+          "impact": "free",
+          "description": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it."
+        },
+        {
+          "name": "Affinity With Rego",
+          "impact": "minor",
+          "description": "Your Advancement Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts."
+        },
+        {
+          "name": "Affinity With Vim",
+          "impact": "minor",
+          "description": "Your Advancement Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts."
+        },
+        {
+          "name": "Inventive Genius",
+          "impact": "minor",
+          "description": "Invention comes naturally to you. \n\nYou get +3 to your Lab Total if you are not using a Laboratory Text or being taught. If you experiment, you get +6."
+        },
+        {
+          "name": "Minor Magical Focus",
+          "impact": "minor",
+          "description": "Your magic is particularly attuned to some narrow field, such as self-transformation, birds of prey, or healing. In general, the field should be slightly narrower than a single Technique and Form combination, although it may include restricted areas of several such combinations. Healing, for example, is a part of Creo Corpus, Creo Animal, and possibly Creo \n\nHerbam. You cannot be focused on a labo"
+        },
+        {
+          "name": "Puissant Rego",
+          "impact": "minor",
+          "description": "You add 3 to the value of one Art whenever you use it. This means all totals in which the score of the Art is part of the total. It does not apply when learning, teaching, or writing about the Art. You may take this Virtue twice, for two different Arts. If a spell has requisites, include the bonus from Puissant Art with that Art when calculating which Art is higher. If the Puissant Art is higher, "
+        },
+        {
+          "name": "Puissant Vim",
+          "impact": "minor",
+          "description": "You add 3 to the value of one Art whenever you use it. This means all totals in which the score of the Art is part of the total. It does not apply when learning, teaching, or writing about the Art. You may take this Virtue twice, for two different Arts. If a spell has requisites, include the bonus from Puissant Art with that Art when calculating which Art is higher. If the Puissant Art is higher, "
+        },
+        {
+          "name": "Luck",
+          "impact": "minor",
+          "description": "You perform well in situations where luck is more of a factor than skill or talent. You get +1 to +3 (storyguide’s discretion) on rolls in such situations, depending upon how much luck is involved. You do well at games of chance, but may be labeled a cheater if you play them too often."
+        },
+        {
+          "name": "Great Intelligence",
+          "impact": "minor",
+          "description": "You may raise any Characteristic that already has a score of at least +3 by one point, to no more than +5. Make sure you describe what it is about you that causes that increase (such as sheer bulk, a lean build, or extreme charisma). You may take this Virtue twice for the same Characteristic, and for more than one Characteristic."
+        },
+        {
+          "name": "Great Intelligence",
+          "impact": "minor",
+          "description": "You may raise any Characteristic that already has a score of at least +3 by one point, to no more than +5. Make sure you describe what it is about you that causes that increase (such as sheer bulk, a lean build, or extreme charisma). You may take this Virtue twice for the same Characteristic, and for more than one Characteristic."
+        },
+        {
+          "name": "Cautious With Magic Theory",
+          "impact": "minor",
+          "description": "You are very careful with a specific Ability, and are less likely to fail spectacularly if you do fail when using it. You roll two fewer botch dice than normal whenever you are required to roll botch dice for that Ability. This may mean that you roll no botch dice. This Virtue may apply to any Ability, even one you cannot learn at character creation."
+        },
+        {
+          "name": "Affinity With Magic Theory",
+          "impact": "minor",
+          "description": "All Advancement Totals for one Ability are increased by half, rounded up, as are any experience points you put in that Ability at character creation. You may only take this Virtue once for a given Ability, but may take it again for different Abilities. If you take this Virtue for an Ability, you may exceed the normal age-based cap during character generation (see page @@) by two points for that Ab"
+        },
+        {
+          "name": "Puissant Magic Theory",
+          "impact": "minor",
+          "description": "You are particularly adept with one Ability, and add 2 to its value whenever you use it. Note that you do not, in general, use an Ability when learning it, writing about it, or helping someone else to improve it. You may only take this Virtue once for a given Ability, but may take it more than once for different Abilities."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Chaotic Magic",
+          "impact": "major",
+          "description": "Your magic is very wild. When you cast a spontaneous spell, you must specify a desired level of effect. If you fall short of or exceed that target by more than one level, the spell still works, but its effects are beyond your control—the storyguide decides the results. The level of effect includes any levels you assign to Penetration."
+        },
+        {
+          "name": "Close Family Ties",
+          "impact": "minor",
+          "description": "Your family is one of the most important things in your life, and still supports and aids you whenever possible, even at personal risk. Family members do not hesitate to do you any favor that is within their power, and can call on their friends and neighbors to help you. It works both ways, however; your family will require help from you some day."
+        },
+        {
+          "name": "Optmistic (Major)",
+          "impact": "major",
+          "description": "You are convinced that everything will turn out for the best. This is not overconfidence, as you accept that you might well fail. Even if you do, however, you are sure that circumstances will mean that everything works to your benefit."
+        },
+        {
+          "name": "Humble",
+          "impact": "minor",
+          "description": "You are humble, always willing to believe that others are more skilled and better than you. You do not necessarily underestimate your own abilities, you just think others are better."
+        },
+        {
+          "name": "Motion Sickness",
+          "impact": "minor",
+          "description": "Riding a horse, in a cart, or sailing on a ship makes you violently ill. When not traveling on foot, you suffer double the fatigue loss on long journeys, with a minimum loss of two Fatigue levels. Violent jostling over a period of a few hours could conceivably lead to unconsciousness."
+        },
+        {
+          "name": "Small Frame",
+          "impact": "minor",
+          "description": "You are of a lighter-than-average build. Your Size is reduced to –1. This means that the severity of wounds you take increases in four point increments, rather than five point. (See page @@). You cannot take this Flaw and Giant Blood (page @@), Large (page @@), or Dwarf (page @@)."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Language: Middle Low German",
+          "speciality": "Cologne Dialect",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Magical Traditions",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Magic Theory",
+          "speciality": "Integrations",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Folk Magic Theory",
+          "speciality": "Integrations",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Latin",
+          "speciality": "",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Parma Magica",
+          "speciality": "Vim",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Cologne Lore",
+          "speciality": "",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Awareness",
+          "speciality": "",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Survival",
+          "speciality": "",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Code of Hermes",
+          "speciality": "Tribunal Procedures",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Finesse",
+          "speciality": "",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Penetration",
+          "speciality": "Vim",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "North Sea Lore",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Running",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Concentration",
+          "speciality": "Spell Concentration",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Rhine Tribunal Lore",
+          "speciality": "Politics",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Stealth",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Medicine",
+          "speciality": "Physician",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Philosophiae",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [
+        {
+          "name": "New Spell",
+          "technique": "Creo",
+          "form": "Animal",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "name": "Maintaining the Demanding Spell",
+          "technique": "Rego",
+          "form": "Vim",
+          "level": 20,
+          "range": "touch",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "You cast this spell on a spell that you have already cast and are maintaining through concentration. The spell that requires concentration is then automatically maintained for the duration of this spell, whether you concentrate or not. You cannot change the effects of the first spell without concent"
+        }
+      ],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": []
+    },
+    "Valerian de Castellane": {
+      "key": "valerian",
+      "name": "Valerian de Castellane",
+      "portrait": "portraits/valerian.png",
+      "house": "Guernicus",
+      "parens": "",
+      "sigil": "",
+      "born": 1178,
+      "age": 45,
+      "apparentAge": 38,
+      "characteristics": {
+        "int": 3,
+        "per": -2,
+        "str": -1,
+        "sta": 3,
+        "pre": -1,
+        "com": 2,
+        "dex": -2,
+        "qik": 2
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 10,
+          "xp": 55
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 5,
+          "xp": 15
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 5,
+          "xp": 15
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 5,
+          "xp": 15
+        },
+        "re": {
+          "label": "Rego",
+          "score": 15,
+          "xp": 78
+        },
+        "an": {
+          "label": "Animal",
+          "score": 5,
+          "xp": 15
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 5,
+          "xp": 15
+        },
+        "au": {
+          "label": "Auram",
+          "score": 5,
+          "xp": 15
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 10,
+          "xp": 55
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 5,
+          "xp": 15
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 5,
+          "xp": 15
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 5,
+          "xp": 15
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 7,
+          "xp": 28
+        },
+        "te": {
+          "label": "Terram",
+          "score": 12,
+          "xp": 78
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 15,
+          "xp": 120
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a mag"
+        },
+        {
+          "name": "Hermetic Prestige",
+          "impact": "minor",
+          "description": "Because of something in your background, other magi look up to you even if you haven’t earned their respect. Some envy you, and most will certainly expect more from you than from others. You gain a Reputation of level 4 within the Order."
+        },
+        {
+          "name": "Mastered Spells",
+          "impact": "minor",
+          "description": "You have fifty experience points to spend on mastering spells that you know. (See page @@ for rules on mastering spells.) You may take this Virtue if you also have Flawless Magic, to give you more experience points to spend on mastering your spells. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Puissant Rego",
+          "impact": "minor",
+          "description": "You add 3 to the value of one Art whenever you use it. This means all totals in which the score of the Art is part of the total. It does not apply when learning, teaching, or writing about the Art. You may take this Virtue twice, for two different Arts. If a spell has requisites, include the bonus from Puissant Art with that Art when calculating which Art is higher. If the Puissant Art is higher, "
+        },
+        {
+          "name": "Quiet Magic",
+          "impact": "minor",
+          "description": "You can cast spells using only a soft voice at no penalty, and at only a –5 penalty if you do not speak at all. You gain no benefits from using your voice normally but gain the normal benefit for using a booming voice. The range of Voice Range spells is determined normally, based on how loud your voice is.\n\n Use \"Silent Magic\" to not speak at all without penalty"
+        },
+        {
+          "name": "Skilled Parens",
+          "impact": "minor",
+          "description": "Your parens was more powerful, or a better teacher, than is common. You gain an additional 60 experience points and 30 spell levels during apprenticeship. This Virtue has no effect on your study after apprenticeship, but you still have a close relationship with a powerful magus."
+        },
+        {
+          "name": "Subtle Magic",
+          "impact": "minor",
+          "description": "You may cast spells without using gestures at no penalty. You gain no benefits from using normal gestures but gain the normal benefit for exaggerated gestures."
+        },
+        {
+          "name": "Magic Sensitivity",
+          "impact": "minor",
+          "description": "You are often able to identify a place or object as magical. However, your sensitivity makes you more susceptible to magical effects: subtract your Magic Sensitivity score from your Magic Resistance. Choosing this Virtue confers the Ability Magic Sensitivity 1 (page @@)."
+        },
+        {
+          "name": "Hermetic Magus",
+          "impact": "free",
+          "description": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it."
+        },
+        {
+          "name": "Improved Characteristics",
+          "impact": "minor",
+          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Long-winded",
+          "impact": "minor",
+          "description": "You can last longer when exerting yourself than \n\nmost, and gain +3 on all your Fatigue rolls. This bonus does not apply to casting spells."
+        },
+        {
+          "name": "Puissant Code of Hermes",
+          "impact": "minor",
+          "description": "You are particularly adept with one Ability, and add 2 to its value whenever you use it. Note that you do not, in general, use an Ability when learning it, writing about it, or helping someone else to improve it. You may only take this Virtue once for a given Ability, but may take it more than once for different Abilities."
+        },
+        {
+          "name": "Well-traveled",
+          "impact": "minor",
+          "description": "You have journeyed extensively in this part of the world and find it easy to get along with people throughout the area. You have fifty bonus experience points to spend on living languages, Area Lores, and Bargain, Carouse, Charm, Etiquette, Folk Ken, or Guile."
+        },
+        {
+          "name": "Fast Caster",
+          "impact": "minor",
+          "description": "Your magic takes less time to perform than that of other magi. You gain +3 to Initiative to cast spells in combat and +3 to rolls to determine fast casting speed."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Restriction",
+          "impact": "major",
+          "description": "You cannot cast spells at all under certain uncommon conditions. These might refer to your state, such as touching the earth directly or having no beard, or to the target, such as birds or glass, or to your location when you use the magic, such as on a small boat or in a storm. The Restriction also applies to effects generated by any enchanted items you create. Spells cast remain in effect even if"
+        },
+        {
+          "name": "Flawed Parma Magica (Ignem)",
+          "impact": "minor",
+          "description": "Your Parma Magica is defective and provides only half the normal Magic Resistance against a certain Form. You may purchase this Flaw more than once for different Forms."
+        },
+        {
+          "name": "Short-lived Magic",
+          "impact": "minor",
+          "description": "Your spells do not last as long as they should. Spells that should last a year, last a moon; those of a moon, only to the next sunrise or sundown; and those of a sun, merely Diameter. Diameter, Concentration, Ring, and Momentary spells are not affected."
+        },
+        {
+          "name": "Enemies",
+          "impact": "major",
+          "description": "Someone is causing trouble for you, such as a local baron or bishop, a band of outlaws, or a really nasty innkeeper. The enemy must be powerful enough to endanger you — this is best agreed on with the storyguide and the rest of the troupe."
+        },
+        {
+          "name": "Judged Unfairly",
+          "impact": "minor",
+          "description": "Somehow you come across the wrong way to people, and they universally distrust and underestimate you. You catch no one’s eye, impress no one, and can get no one to take you seriously. If you ever find an exceptional someone who sees you as you want to be seen, you will cling to that person. You cannot gain a positive Reputation in any community, and this Flaw is incompatible with any Virtue that g"
+        },
+        {
+          "name": "Infamous",
+          "impact": "minor",
+          "description": "People know you well and curse you in their prayers. You have a level 4 bad Reputation, specifying the horrible deeds that earned you such ill will."
+        },
+        {
+          "name": "Creative Block",
+          "impact": "minor",
+          "description": "You have problems creating new things in the lab. You take a –3 penalty to all Lab Totals unless you are using a Laboratory Text or being taught. If you experiment, roll twice as many dice on the experimentation table."
+        },
+        {
+          "name": "Oversensitive - Minor",
+          "impact": "minor",
+          "description": "Something that others find merely unpleasant you consider intolerable. Examples might include an oversensitivity to disrespect, to slovenliness, or to impiety. If you are the violent type, you may start fights with those who offend you."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Civil & Canon Law",
+          "speciality": "Holy Roman Empire",
+          "xp": 105,
+          "score": 6
+        },
+        {
+          "name": "Dead language: Latin",
+          "speciality": "Hermetic Usage",
+          "xp": 105,
+          "score": 6
+        },
+        {
+          "name": "Language: Frisian",
+          "speciality": "",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Magic Theory",
+          "speciality": "Vim",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Penetration",
+          "speciality": "Mentem",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Common Law*",
+          "speciality": "Exchequer Laws",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Parma Magica",
+          "speciality": "Protection from Terram",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Awareness",
+          "speciality": "Searching",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Concentration",
+          "speciality": "Spell Concentration",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Code of Hermes",
+          "speciality": "Political Intrigue",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Dominion Lore",
+          "speciality": "Angels",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Finesse",
+          "speciality": "Precision",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Frisia Lore",
+          "speciality": "Frisian History",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Clergy",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Rhetoric",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Philosophiae",
+          "speciality": "Natural Philosophy",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Theology - Christian",
+          "speciality": "Heresy",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Magical Traditions",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Charm",
+          "speciality": "Wit",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Guile",
+          "speciality": "Elaborate Lies",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Music",
+          "speciality": "Sing",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Ride",
+          "speciality": "Horse",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Swim",
+          "speciality": "Long Distances",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Faerie Lore",
+          "speciality": "Faerie Forests",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [
+        {
+          "name": "Demon’s Eternal Oblivion",
+          "technique": "Perdo",
+          "form": "Vim",
+          "level": 1,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Weakens and possibly destroys a demon. If the spell penetrates the demon’s Magic Resistance, the demon loses Might Score equal to the spell’s level."
+        },
+        {
+          "name": "Disenchant",
+          "technique": "Perdo",
+          "form": "Vim",
+          "level": 1,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": true,
+          "description": "You make a Hermetic magic item lose all its powers permanently if the level of this spell + a stress die (no botch) equals or exceeds the highest level of the enchantments in the item. The enchantment is utterly destroyed, as is all of the vis that was used in the magic item. The object left is in a"
+        },
+        {
+          "name": "Opening the Intangible Tunnel",
+          "technique": "Rego",
+          "form": "Vim",
+          "level": 1,
+          "range": "arc",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "You can open a magical channel from yourself to some target, allowing you to cast any spell with a range greater than Personal on that target. The tunnel does not, of itself, grant any sense impressions of the target — you must cast appropriate spells through it if you wish to see. Spells cast throu"
+        },
+        {
+          "name": "Watching Ward",
+          "technique": "Rego",
+          "form": "Vim",
+          "level": 1,
+          "range": "touch",
+          "duration": "other",
+          "target": "ind",
+          "ritual": true,
+          "description": "Watching Ward puts another spell on a given target on hold until that spell is triggered by a simple condition, which is determined when this ritual is cast. The target of the Watching Ward must be present for the entire casting ritual. When the conditions you specify come to pass, the suspended spe"
+        },
+        {
+          "name": "Wizard’s Sidestep",
+          "technique": "Rego",
+          "form": "Imaginem",
+          "level": 2,
+          "range": "personal",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "Your image appears up to 1 pace from where you actually are, so attacks aimed there are likely to miss you. Whenever the image is successfully struck, it disappears and reappears in another spot. In combat, early attacks are aimed at the image, and so automatically miss you. Once the image has been "
+        },
+        {
+          "name": "The Call to Slumber",
+          "technique": "Rego",
+          "form": "Mentem",
+          "level": 4,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "The target becomes sleepy and falls asleep within a few seconds."
+        },
+        {
+          "name": "Abrading Stones",
+          "technique": "Rego",
+          "form": "Terram",
+          "level": 4,
+          "range": "voice",
+          "duration": "diam",
+          "target": "part",
+          "ritual": false,
+          "description": "This spell lifts all loose rocks and pebbles in a 15-pace radius about the target, and grinds them against the victim. Damage is +5 per round."
+        },
+        {
+          "name": "Pilum of Fire",
+          "technique": "Creo",
+          "form": "Ignem",
+          "level": 10,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "A 2-foot, thick, spear-shaped jet of fire flies from your palms, doing +15 damage to the individual it hits."
+        },
+        {
+          "name": "Wizard’s Leap",
+          "technique": "Rego",
+          "form": "Corpus",
+          "level": 15,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "The caster instantly transports himself up to 50 paces in any direction, provided he can see his destination or has an Arcane Connection to it. His Talisman comes with him automatically but casting requisites are required to bring along any other clothing or equipment. This spell is very effective a"
+        },
+        {
+          "name": "Seven-League Stride",
+          "technique": "Rego",
+          "form": "Corpus",
+          "level": 30,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Transports you to any place within seven leagues either that you can see or that you have an Arcane Connection with. If you fail an Intelligence + Finesse stress roll of 9+, your arrival goes slightly awry. For instance, you might fall when you appear, or just be facing the wrong way. A botch means "
+        }
+      ],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "The Adamant's Laboratory (10 pts)",
+      "familiar": null,
+      "activeWounds": []
+    }
+  }
+}
