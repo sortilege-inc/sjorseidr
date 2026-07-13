@@ -146,6 +146,8 @@ function render(d){
     .map(([k,v])=>`<span class="expense-chip">${cap(k.replace(/([A-Z])/g,' $1'))}: ${v.amount}${v.notes?`<span class="exp-note">— ${esc(v.notes)}</span>`:''}</span>`)
     .join('');
 
+  const ports = (d.preferredPorts||[]).map(p=>`<span class="expense-chip">${esc(p)}</span>`).join('');
+
   $('#content').innerHTML = `
     <div class="section">
       <div class="section-title">Overview</div>
@@ -157,7 +159,23 @@ function render(d){
         ${metaTile('Saga Type', d.sagaType || '—')}
         ${metaTile('Storyguide', d.narrator || '—')}
       </div>
+      ${d.foundingNote ? `<p style="margin-top:16px">${esc(d.foundingNote)}</p>` : ''}
+      ${ports ? `<p style="margin:10px 0 4px;font-size:13px;color:var(--ink-soft)"><em>Preferred ports:</em></p><div class="expense-list">${ports}</div>` : ''}
     </div>
+
+    ${d.charter ? `
+    <div class="section">
+      <div class="section-title">Covenant Charter</div>
+      <p class="lead" style="color:var(--ink-soft)">${esc(d.charter.note)}</p>
+      <ol style="padding-left:22px;margin:0 0 18px">
+        ${(d.charter.clauses||[]).map(c=>`<li style="margin-bottom:8px">${esc(c)}</li>`).join('')}
+      </ol>
+      <p style="font-size:13px;color:var(--ink-faint);margin:0 0 8px">${esc(d.charter.amendmentsNote)}</p>
+      <ul style="padding-left:22px;margin:0">
+        ${(d.charter.amendments||[]).map(a=>`<li style="margin-bottom:8px;color:var(--ink-soft);font-size:15px">${esc(a)}</li>`).join('')}
+      </ul>
+    </div>
+    ` : ''}
 
     <div class="section">
       <div class="section-title">Aegis &amp; Regio</div>

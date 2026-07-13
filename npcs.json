@@ -251,7 +251,8 @@
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "shortDescription": "Originally worked on Tide of Memory; helped orient the new crew on The Scholar's Wake."
     },
     "Angus McPeterson": {
       "name": "Angus McPeterson",
@@ -2128,7 +2129,8 @@
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "biography": "Born Joseph Lachlan in Northumbria, Father Lachlan is an English Franciscan monk with an almost unnatural affinity for his calling. Caring nothing for status, wealth, or what tomorrow brings, he's spent the last decade in Ireland hoping to blaze a trail there for others of his order to follow. Over that time he ran into Éogan and his master more than once, and got to know the young apprentice. They crossed paths again in Dublin just as Éogan was preparing to leave — and feeling it was time for him to move on too, Lachlan offered his services to the boy and the covenant he was joining. Éogan has \"hired\" the Father hoping he can serve as translator and tutor, since he doesn't want the other magi to know how poor his Latin is; in return, Father Lachlan asks only for many adventures, many souls saved, and that Éogan turn a bit of water into wine every now and again.\n\nA balding, clean-shaven man in a friar's robe, black-haired (greying) and brown-eyed, somewhat portly with rounded features. He likes to laugh and loves to tell a story, biblical or otherwise, and has a way of talking that puts people at ease. Fond of a glass of wine.\n\nTrue Faith: at a trying time as a young man, Father Lachlan found strength in the Gospel, particularly Matthew 6:25–34. Reasoning that if he'd had the courage to face battle, he should have the courage to face all the fears that drive men to fight so senselessly — weakness, starvation, ridicule — he found in that the strength to embrace the Mendicant life: living off the charity of others, and giving back what he can in turn.\n\nOn violence: the Father served with a mercenary company as a young man, an experience that led him to renounce violence in every form. He'll go to considerable lengths to solve a problem without resorting to it. If attacked, he'll defend himself, but won't strike back at his attacker; if he ever takes up arms again, it will only be to defend something he holds dear. He wouldn't be opposed to teaching others how to fight, if he trusted they wouldn't abuse the knowledge.\n\nOn doctrine: Father Lachlan draws his inspiration directly from the Gospels — as read in the Biblia Vulgata, since he knows no Greek — and cares little for authoritative interpretation, even when he takes the time to understand it. His embellished, creative sermons sometimes draw the ire of Church officials, but the people love them."
     },
     "Galan": {
       "name": "Galan",
@@ -3550,7 +3552,8 @@
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "biography": "Heynric was born to a middle-of-the-road merchant family in Dorestad. He and his brothers were groomed to take over the family business and given an excellent education — but as the eighth of thirteen siblings, his place in the family hierarchy was low, and his opportunities limited. Frustrated, he went looking for a venture of his own, and learned of the newly established covenant of the North Sea.\n\nHeynric reasoned that if he made himself the covenant's primary merchant, he could finally make a name for himself. His family didn't oppose the venture outright, but they weren't willing to invest heavily in it either. He secured passage on one of the covenant's ships and has worked since to establish himself — though he's finding that magi are notoriously difficult clients."
     },
     "Hob": {
       "name": "Hob",
@@ -3990,7 +3993,8 @@
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "shortDescription": "Pickpocket while on shore leave."
     },
     "Ka'wa'ill": {
       "name": "Ka'wa'ill",
@@ -4347,7 +4351,8 @@
           "gravity": "light",
           "description": ""
         }
-      ]
+      ],
+      "shortDescription": "The merman prince. Magical being, not fae."
     },
     "Kor Ex Flambeau": {
       "name": "Kor Ex Flambeau",
@@ -4785,7 +4790,9 @@
       "reputations": [],
       "sanctum": "The Maelstrom's Maw's Laboratory (30 pts)",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "originallyFrom": "France",
+      "playedBy": "David"
     },
     "Leofwin": {
       "name": "Leofwin",
@@ -5239,7 +5246,7 @@
       "foundryName": "Marina",
       "charType": "magus",
       "portrait": null,
-      "house": "mta",
+      "house": "Merinita",
       "parens": "Name withheld as a precaution",
       "sigil": "The smell of fresh bread",
       "born": 1195,
@@ -5537,7 +5544,8 @@
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "shortDescription": "Arcadia: Raised by faeries, cook. Currently on hiatus."
     },
     "Nequam of Tytalus": {
       "name": "Nequam of Tytalus",
@@ -5944,7 +5952,10 @@
       "reputations": [],
       "sanctum": "The Maelstrom's Maw's Laboratory (30 pts)",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "originallyFrom": "England?",
+      "playedBy": "Pete",
+      "shortDescription": "Elemental magic focus."
     },
     "Pieter van Dijk": {
       "name": "Pieter van Dijk",
@@ -7146,7 +7157,8 @@
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "shortDescription": "The knight."
     },
     "Runi the Moody": {
       "name": "Runi the Moody",
@@ -8200,7 +8212,8 @@
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "biography": "A Flemish boatswain with two decades at sea, Willem is a hard-bitten sailor who has seen it all. Serving as crew chief, logistics officer, and the fleet's most reliable voice of reason, he's responsible for keeping the crew in line and making sure the ship doesn't sink. He respects magic well enough, but prefers a solid rope and a sharp knife to solve most problems. Blunt, pragmatic, and grumpy — but deeply loyal once respect is earned."
     }
   }
 }

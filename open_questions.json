@@ -130,7 +130,6 @@
       "status": "Open",
       "resolution": ""
     },
-
     {
       "id": "t002",
       "type": "Thread",
@@ -208,7 +207,6 @@
       "status": "Open",
       "resolution": ""
     },
-
     {
       "id": "c012",
       "type": "Consequence",
@@ -275,7 +273,6 @@
       "status": "Open",
       "resolution": ""
     },
-
     {
       "id": "t019",
       "type": "Thread",
@@ -309,7 +306,6 @@
       "status": "Open",
       "resolution": ""
     },
-
     {
       "id": "q017",
       "type": "Question",
@@ -321,7 +317,6 @@
       "status": "Open",
       "resolution": ""
     },
-
     {
       "id": "q018",
       "type": "Question",
@@ -355,7 +350,6 @@
       "status": "Open",
       "resolution": ""
     },
-
     {
       "id": "t022",
       "type": "Thread",
@@ -397,6 +391,17 @@
       "context": "Dagmar's spring 1224 coastal survey turned up sea caves under a low-profile regio near Carnac (apparently unnoticed by Carnac itself), on the strength of a 52 Eyes of the Eagle roll. He opted to row in solo with grogs rather than involve Carnac or the wider covenant. The GM explicitly flagged this as something to develop further before the next session — nothing inside has been described yet.",
       "raised_in": "Session 8 (2026-07-11)",
       "raised_event": "A hidden regio near Carnac",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t026",
+      "type": "Thread",
+      "category": "Plot",
+      "title": "Who is “V.,” and did they ever reach the covenant?",
+      "context": "An unsigned letter to Solving Epicurusson, found in the GM's prep notes but never surfaced at the table or reflected in the chronicle. Addressed by courier (Mercere or trusted equivalent), it references a prior vis dispute off Saint-Valery touching the holdings of “a Tytalan recluse,” and a contact in Leuven who once gave Solving access to the Duke's private seals and warned him when Rhine Quaesitors began asking questions. The writer says their title has since been revoked and their name is now a cautionary tale in Tribunal chambers — the Rhine has become untenable, and they ask whether Solving's offer of “a covenant in motion, unanchored and burdened less by the weight of Tribunal demands” still stands. They sign only “—V.” and say they'll wait within sight of Saint Jacob's bell tower in Bruges, near the fish-market stairs, for three more cycles of the moon. Given Solving's own disappearance in Bruges in 1220, the timing may or may not be a coincidence — unclear whether this was ever meant to be picked up, or whether V. and Solving's vanishing are connected at all.",
+      "raised_in": "GM's Notion prep notes (undated)",
+      "raised_event": "",
       "status": "Open",
       "resolution": ""
     }

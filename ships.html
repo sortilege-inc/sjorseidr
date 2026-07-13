@@ -156,6 +156,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
   background:rgba(120,90,40,.12);font-size:26px;color:var(--ink-soft)}
 .sheet-name{font-family:'Cinzel',serif;font-weight:600;font-size:19px;color:var(--rust-bright);margin:0 0 2px}
 .sheet-sub{font-style:italic;color:var(--ink-soft);font-size:12.5px;line-height:1.4;margin:0}
+.sheet-tagline{font-size:12.5px;color:var(--ink);line-height:1.4;margin:4px 0 0}
 .sheet-meta{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 4px}
 .meta-chip{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.03em;text-transform:uppercase;
   padding:2px 8px;border-radius:9px;background:rgba(120,90,40,.1);color:var(--ink-soft);
@@ -215,6 +216,9 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .sheet-collapsible summary::before{content:'▸ ';color:var(--gold)}
 .sheet-collapsible[open] summary::before{content:'▾ '}
 .sheet-empty{font-size:12px;font-style:italic;color:var(--ink-soft)}
+.sheet-bio{font-size:13.5px;line-height:1.6;color:var(--ink)}
+.sheet-bio p{margin:0 0 10px}
+.sheet-bio p:last-child{margin-bottom:0}
 
 footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);opacity:.75}
 </style>
@@ -539,6 +543,7 @@ function magusSheetHtml(m){
   const metaChips = [
     m.age!=null?`Age ${m.age}`:'',
     m.apparentAge!=null && m.apparentAge!==m.age?`(apparent ${m.apparentAge})`:'',
+    m.born!=null?`Born ${m.born}`:'',
     m.confidence?`Confidence ${m.confidence.score}`:'',
     m.size!=null?`Size ${signed(m.size)}`:'',
     m.decrepitude?`Decrepitude ${m.decrepitude}`:'',
@@ -552,6 +557,8 @@ function magusSheetHtml(m){
   const extras = [];
   if(m.sigil) extras.push(`<div><em>Sigil:</em> ${esc(m.sigil)}</div>`);
   if(m.sanctum) extras.push(`<div><em>Sanctum:</em> ${esc(m.sanctum)}</div>`);
+  if(m.originallyFrom) extras.push(`<div><em>Originally from:</em> ${esc(m.originallyFrom)}</div>`);
+  if(m.playedBy) extras.push(`<div><em>Played by:</em> ${esc(m.playedBy)}</div>`);
   if(m.familiar) extras.push(`<div><em>Familiar:</em> ${esc(m.familiar)}</div>`);
 
   return `
@@ -560,11 +567,19 @@ function magusSheetHtml(m){
       <div>
         <div class="sheet-name">${esc(m.name)}</div>
         <p class="sheet-sub">${esc(sub)}</p>
+        ${m.shortDescription ? `<p class="sheet-tagline">${esc(m.shortDescription)}</p>` : ''}
       </div>
     </div>
     <div class="sheet-meta">${metaChips}</div>
     ${wounds}
     ${extras.length?`<p class="sb-note" style="font-size:12.5px;margin:8px 0">${extras.join('<br>')}</p>`:''}
+
+    ${m.biography ? `
+    <details class="sheet-collapsible" open>
+      <summary>Biography</summary>
+      <div class="sheet-bio">${m.biography.split('\n\n').map(p=>`<p>${esc(p)}</p>`).join('')}</div>
+    </details>
+    ` : ''}
 
     <div class="sheet-section-title">Characteristics</div>
     ${charGridHtml(m.characteristics||{})}

@@ -1,0 +1,34 @@
+{
+  "meta": {
+    "title": "Reference",
+    "source": "Notion campaign wiki, pulled 2026-07-13",
+    "note": "GM reference tables transcribed from the campaign's Notion workspace, not otherwise on the site."
+  },
+  "travelTimes": {
+    "unit": "days",
+    "note": "Sailing times between major North Sea and Baltic ports, as tracked by the GM. The source table has a handful of asymmetric entries (e.g. Bruges→London reads 4 days, London→Bruges reads 3) and a couple of blank-looking cells (Skagarek Junction→Bruges) — transcribed as-is rather than smoothed over.",
+    "northSea": {
+      "locations": ["Bruges", "Dublin", "Edinburgh (Leith)", "Hamburg", "London", "Paris", "Brittany Junction", "Skagarek Junction"],
+      "matrix": [
+        [0, 11, 8, 7, 4, 32, 8, 11],
+        [11, 0, 12, 17, 12, 36, 7, 9],
+        [8, 12, 0, 9, 9, 38, 13, 9],
+        [7, 17, 9, 0, 9, 38, 10, 7],
+        [3, 11, 8, 9, 0, 32, 5, 17],
+        [27, 31, 33, 33, 5, 0, 35, 34],
+        [7, 5, 13, 10, 7, 40, 0, 16],
+        [0, 7, 9, 7, 12, 20, 16, 0]
+      ]
+    },
+    "baltic": {
+      "locations": ["Danzig", "Lubeck", "Reval", "Riga", "Skagarek Junction"],
+      "matrix": [
+        [0, 6, 8, 6, 8],
+        [6, 0, 12, 10, 5],
+        [8, 12, 0, 6, 13],
+        [6, 10, 6, 0, 12],
+        [8, 5, 13, 12, 0]
+      ]
+    }
+  }
+}

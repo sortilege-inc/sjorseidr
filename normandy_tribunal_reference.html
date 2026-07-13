@@ -189,6 +189,53 @@
     line-height: 1.6;
   }
 
+  .glossary-box {
+    background: var(--parchment-mid);
+    border: 1px solid var(--border-strong);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 6px 6px 0;
+    padding: 1rem 1.3rem;
+    margin: 0 0 1.5rem;
+  }
+  .glossary-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: .5rem;
+  }
+  .glossary-desc {
+    font-style: italic;
+    color: var(--ink-light);
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0 0 .6rem;
+  }
+  .glossary-list {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: .35rem 1rem;
+    margin: 0;
+  }
+  .glossary-list dt {
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    color: var(--ink-mid);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .glossary-list dd {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    color: var(--ink);
+  }
+  @media (max-width: 640px) {
+    .glossary-list { grid-template-columns: 1fr; }
+    .glossary-list dd { margin-bottom: .3rem; }
+  }
+
   /* Filter bar */
   .filter-bar {
     display: flex;
@@ -547,6 +594,18 @@
     <div class="tribunal-subtitle">Liber Virium et Bibliothecae</div>
     <div class="tribunal-date">A compendium of vis sources and books held in common — Anno Domini 1220</div>
   </header>
+
+  <div class="glossary-box">
+    <div class="glossary-title">How vis sources are classified</div>
+    <p class="glossary-desc">Not every source on this page belongs to the Tribunal — a covenant's own <b>Seisins</b> and <b>Legacies</b> aren't listed here at all. Only the shared, Tribunal-owned categories below are.</p>
+    <dl class="glossary-list">
+      <dt>Seisin</dt><dd>A vis source a covenant can walk to, retrieve, and return home with within a day — theirs by right, no Tourney involved.</dd>
+      <dt>Legacy</dt><dd>A source that doesn't qualify as a seisin but which the Tribunal has grandfathered in to a covenant anyway. Newly discovered sources count as legacies until the next Tribunal, when the status is either renewed or the source becomes a tropaeum.</dd>
+      <dt>Tropaeum</dt><dd>Tribunal common property, requiring minimal effort to harvest, distributed on seven-year leases through the Hermetic Tourney. The leaseholder has exclusive rights for the term.</dd>
+      <dt>Luctatio</dt><dd>Tribunal common property that anyone may attempt — no lease, no prior claim, effort or danger required. Having harvested it before grants no privilege on future attempts.</dd>
+    </dl>
+    <p class="glossary-desc" style="margin:.6rem 0 0">Tourney winners may also take volumes from the Tribunal library; those volumes, and any copies made of them, remain Tribunal property. Raiding another covenant's <em>non-magical</em> goods is, per Normandy custom, technically legal.</p>
+  </div>
 
   <nav>
     <button class="active" onclick="showSection('tropaea')">Tropaea</button>

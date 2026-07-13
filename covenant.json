@@ -159,5 +159,32 @@
       "impact": "minor",
       "description": "The covenant is young, with few resources. It has the Minor variant of the Poverty Hook and starts with a single Lesser Income Source, providing 40 Mythic Pounds per year. The magi may need to resolve that early on as the covenant currently runs a deficit."
     }
-  ]
+  ],
+  "foundingNote": "Solving Epicurusson formed Sjórseidr with three other magi in 1209, shortly after that year's tribunal, funding a voyage to search for a great vis source he had envisioned in the North Sea. The search took longer than anticipated; over time the original three magi left for more stable covenants, and Solving found himself continually replacing members while training his apprentice, Dagmar, and trying to narrow the search. It was in Bruges, in 1220, that Solving disappeared.",
+  "preferredPorts": [
+    "Boulogne",
+    "Bruges",
+    "Dublin"
+  ],
+  "charter": {
+    "note": "The charter of the Northern Seas is quite light on the kind of detail that other magi might expect. There are no degrees of membership. Here is a description of the principal clauses:",
+    "clauses": [
+      "Membership is by accord with the existing members.",
+      "A magus accepted by the Northern Seas shares his resources with the covenant and in return is given his share of the covenant’s resources.",
+      "Each magus is sworn to provide hospitality to his brothers and sisters in the covenant.",
+      "Each magus is master of their own vessel.",
+      "Each magus has a single vote at council, and the elder magus holds the casting vote.",
+      "Each magus is sworn to the covenant for no less than a decade, after which he may leave with his rightful share of the spoils.",
+      "A magus who stays with the covenant for twenty years may take his ship and his crew, on condition that he funds a replacement.",
+      "A magus who stays with the covenant for thirty years may take his ship and crew with no obligation to the covenant.",
+      "A magus who stays with the covenant for forty years may claim a shipping route or region of the sea to call his own, shall be accorded the respect due to a fully-recognized covenant, and may charter others to himself."
+    ],
+    "amendmentsNote": "Discussion / proposed amendments (Spring 1220):",
+    "amendments": [
+      "Solving may hold the elder magus status “in absentia.” Another means of breaking ties may be deemed necessary — perhaps a rotating “tiebreaker” role?",
+      "Each member should commit a season toward the covenant’s goals.",
+      "There should be an annual (?) meeting, its location agreed upon each year.",
+      "Humanitarian clause (via Éogan): grogs must be paid fair wages and have the right to leave to find other employment. They cannot be sold into slavery or have their lives sacrificed in any premeditated or intentional way. Any slaves purchased must immediately be freed, and henceforth paid fair wages."
+    ]
+  }
 }

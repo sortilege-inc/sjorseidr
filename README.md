@@ -15,9 +15,10 @@ server-side code. Open [`index.html`](index.html) to get around.
 | [`tribunal_workbook.html`](tribunal_workbook.html) | `tribunal_data.json` | Editable scoring workbook — vis sources, library prizes, tournament brackets/tally, and a "Prizes Claimed So Far" rollup. Edits autosave to `localStorage`; Save downloads an updated JSON. |
 | [`normandy_tribunal_reference.html`](normandy_tribunal_reference.html) | — | Static reference catalogue of the Tribunal's vis sources and library holdings (source for `tribunal_data.json`'s vis/library sections). |
 | [`open_questions.html`](open_questions.html) | `open_questions.json` | The Storyteller page — split into **Questions** (need a GM ruling), **Threads** (dangling narrative hooks), and **Consequences** (already happened, fallout pending). Editable resolution status, same autosave/Save pattern as the workbook. |
-| [`ships.html`](ships.html) | `ships.json`, `magi.json`, `npcs.json`, `ship_details.json` | Fleet & crew roster — time-based crew snapshots plus an "All Ships" reference tab covering the full fleet history (including lost/retired hulls). Click a crew member for a sidebar card: the six PC magi (`magi.json`) and 32 grogs/companions/NPC magi (`npcs.json`) get a full Foundry-sourced stat sheet; the 3 remaining names with no Foundry sheet (Hilda, Karl, Rody) get the lightweight note card from `ships.json`'s `characters{}`. Crew chips are color-coded by category (PC magus / NPC magus / companion / grog / other). The "All Ships" cards also carry each ship's hull dimensions, enchanted devices, and laboratory stats (`ship_details.json`), Foundry-sourced. |
-| [`covenant.html`](covenant.html) | `covenant.json` | Covenant sheet — founding year, tribunal, saga, aegis/regio, loyalty, yearly finances, and covenant-wide virtues & flaws. Meta only; library/vis/full inhabitant census stay in the workbook and `ships.json`. |
+| [`ships.html`](ships.html) | `ships.json`, `magi.json`, `npcs.json`, `ship_details.json` | Fleet & crew roster — time-based crew snapshots plus an "All Ships" reference tab covering the full fleet history (including lost/retired hulls). Click a crew member for a sidebar card: the six PC magi (`magi.json`) and 32 grogs/companions/NPC magi (`npcs.json`) get a full Foundry-sourced stat sheet, five of them (Dagmar, Éogan, Willem, Heynric, Father Lachlan) with a full narrative biography pulled in from Notion; the 3 remaining names with no Foundry sheet (Hilda, Karl, Rody) get the lightweight note card from `ships.json`'s `characters{}`. Crew chips are color-coded by category (PC magus / NPC magus / companion / grog / other). The "All Ships" cards also carry each ship's hull dimensions, enchanted devices, and laboratory stats (`ship_details.json`), Foundry-sourced. |
+| [`covenant.html`](covenant.html) | `covenant.json` | Covenant sheet — founding year, tribunal, saga, aegis/regio, loyalty, yearly finances, covenant-wide virtues & flaws, and (from Notion) the full Covenant Charter and a founding note. Meta only; library/vis/full inhabitant census stay in the workbook and `ships.json`. |
 | [`hiberian.html`](hiberian.html) | `maps/*.jpeg` | Extracted reference data + regional maps for the Hibernian Tribunal (Connacht, Leinster, Meath, Munster, Ulster), relevant to the party's Ireland arc. |
+| [`reference.html`](reference.html) | `reference.json` | Miscellaneous GM tables that don't belong on any one page — currently just the North Sea/Baltic sailing-time matrix, pulled from Notion. |
 
 ## Data pipeline
 
@@ -199,6 +200,80 @@ curl -s "https://foundryrestapi.com/get?clientId=<clientId>&uuid=Actor.<id>" \
 `clientId` comes from `/clients` and changes if the world's relay connection
 resets, so always re-check `/clients` at the start of a session rather than
 assuming a cached one is still valid.
+
+## Notion merge (2026-07-13)
+
+The campaign also has a Notion workspace (`sortilege.notion.site`) that predates
+the Foundry migration and was the *original* source for a lot of the fleet/
+covenant flavor text already in this repo. It's no longer current — this repo
+is — but it wasn't complete either, so a one-time extraction + classification
++ selective merge pass was run against it.
+
+**Extraction**: a recursive crawler (not checked in — one-off script, same
+rationale as the session tooling above) walked the whole page tree under a
+given root page via the [Notion API](https://api.notion.com/v1) — `GET
+/blocks/{id}/children` recursively for page content, `POST
+/databases/{id}/query` for any nested database, downloading every image block
+before its signed S3 URL expired (~1hr). Output went to a `notion_export/`
+folder *outside* this repo (sibling to `sjorseidr/`, not checked in) as one
+Markdown file per page. 197 pages came out of that pull. One wrinkle: a few
+"database rows" turned out to be full nested databases themselves (Foundry-style,
+not simple pages) — `GET /pages/{id}` 400s on those with `"is a database, not a
+page"`; the crawler retries as `GET /databases/{id}` when it sees that.
+
+**Scope**: per GM direction, only content nested under the "Salve Sodales:
+Sjórseiðr Campaign Wiki" child database counts as player-facing and is
+eligible to merge into this site. Everything outside that (the root page's own
+huge GM-planning toggle, "Ars Magica Foundry VTT Notes", "Mythic Europe Notes
+(not-player-facing)", "GM NPCs (not-player-facing)", "Player Info" and its
+~15 sub-pages) is GM-only — not merged this pass, and ultimately destined for
+`open_questions.json` rather than any player-facing page. A "Covenants"
+database nested *inside* the Wiki turned out to be reused cross-campaign GM
+reference (covenants with no Sjórseiðr connection, e.g. Horsingas in Loch
+Leglean) and was treated as GM-only too, as was a generic "Tribunals" list.
+
+**What actually merged**:
+- `magi.json` — added `biography` to Dagmar (the actual in-fiction origin of
+  his Ghostly Warder flaw, plus his answers to the Criamon riddles) and Éogan
+  Dobhartha (full childhood, the Treaty of Cnoc Maol Réidh, his parens, the
+  Well Dreams that are the source of his personal vis).
+- `npcs.json` — added `biography` to Willem "Sour" Jensen, Heynric the
+  Merchant, and Father Lachlan (birth name, physical description, personal
+  beliefs); added `shortDescription`/`originallyFrom`/`playedBy` to several
+  others (Ka'wa'ill is explicitly "the merman prince"; Marina's house is now
+  confirmed **Merinita**, resolving the unmapped Foundry house code `mta`
+  from last pass). `ships.html`'s sheet renderer now shows all of these, plus
+  `born` (was already in the data from Foundry but never actually rendered
+  anywhere — fixed while adding the new fields).
+- `covenant.json`/`covenant.html` — added the full Covenant Charter (membership,
+  hospitality, voting, the 10/20/30/40-year tenure ladder, Spring 1220
+  proposed amendments) and a founding note + preferred-ports list.
+- `reference.json`/`reference.html` — new page, North Sea/Baltic sailing-time
+  matrix between 13 ports. The source table has some internal asymmetry
+  (Bruges→London reads 4 days, London→Bruges reads 3) and a couple of
+  apparent gaps — transcribed as-is rather than smoothed over.
+- `normandy_tribunal_reference.html` — added a glossary box defining Seisin/
+  Legacy/Tropaeum/Luctatio, terms `tribunal_workbook.html` already uses
+  throughout without ever explaining.
+- `open_questions.json` — added thread `t026`, an unsigned letter to Solving
+  from someone signing only "V.," found in GM notes but never reflected in
+  the chronicle or picked up at the table.
+
+**Judgment calls made along the way**: Stijntje Kuiper's Foundry `charType`
+of `magus` looked like the same kind of error as the Dietrich case last
+round, but the GM confirmed it's correct as-is — she's Gifted and
+apprenticed, which counts as a magus mechanically even before her Gauntlet;
+no data changed. Two names from the classification pass are still open:
+**Giden**'s Foundry `charType` (`companion`) was never independently
+verified the way Marina/Garrat Coffin/Dietrich were, and **Rán**'s status is
+likewise unconfirmed. Ka'wa'ill's Foundry sheet has `born: 1223` — the
+campaign's current year, which for a grown merman prince reads as an unset
+placeholder rather than a real birth year; left as-is, not fabricated a fix.
+
+**Not done yet**: the GM-only slice of the Notion export (root page, Foundry
+VTT Notes, Mythic Europe Notes, GM NPCs, Player Info + sub-pages — around 140
+pages) hasn't been classified or merged. Per GM direction it's all headed for
+`open_questions.json` eventually, not scattered across player-facing pages.
 
 ## Open threads on this archive itself
 
