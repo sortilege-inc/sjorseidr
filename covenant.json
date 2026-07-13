@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "title": "Covenant Sheet — Sjórseiðr",
+    "source": "Foundry VTT REST API (arm5e system), pulled 2026-07-13",
+    "note": "Meta/summary fields only — library, vis sources, and full inhabitant census are tracked elsewhere (tribunal_workbook.html, ships.json) and intentionally left out of this pull."
+  },
+  "name": "Sjórseiðr",
+  "foundationYear": 1209,
+  "season": "winter",
+  "tribunal": "Normandy",
+  "saga": "The Vis of the Sea-Dragon",
+  "sagaType": "Pulsed/Medium",
+  "narrator": "Jordan",
+  "aegis": {
+    "level": 0,
+    "penetration": 0
+  },
+  "regioLevels": 0,
+  "loyalty": {
+    "points": {
+      "modifier": 0,
+      "prevailing": -3
+    },
+    "modifiers": {
+      "equipment": "inexpensive",
+      "wages": "normal",
+      "familiarity": 0,
+      "events": 0
+    }
+  },
+  "finances": {
+    "wealth": 0,
+    "totalIncome": 319,
+    "baseExpenditure": 194,
+    "costSavings": 0,
+    "totalExpenditure": 194,
+    "inhabitantsPoints": 137,
+    "laboratoriesPoints": 255,
+    "weaponsPoints": 110,
+    "averageEquipMaintenance": 5
+  },
+  "yearlyExpenses": {
+    "buildings": {
+      "amount": 14,
+      "notes": ""
+    },
+    "consumables": {
+      "amount": 28,
+      "notes": ""
+    },
+    "laboratories": {
+      "amount": 26,
+      "notes": ""
+    },
+    "provisions": {
+      "amount": 69,
+      "notes": ""
+    },
+    "wages": {
+      "amount": 28,
+      "notes": ""
+    },
+    "weapons": {
+      "amount": 1,
+      "notes": ""
+    },
+    "writingMaterials": {
+      "amount": 8,
+      "notes": ""
+    },
+    "tithes": {
+      "amount": 0,
+      "notes": ""
+    },
+    "inflation": {
+      "amount": 0,
+      "notes": ""
+    },
+    "sundry": {
+      "amount": 20,
+      "notes": "New crew for the Veðrdreki"
+    }
+  },
+  "virtues": [
+    {
+      "name": "Mystical Allies (Merfolk)",
+      "impact": "major",
+      "description": "Merfolk are more than just stories that old sailors tell for the price of an ale. They have their kingdoms beneath the sea, they have their princes and their rogues, and so long as the covenant of the Northern Seas treats them well, they make potent allies ."
+    },
+    {
+      "name": "Criminals",
+      "impact": "minor",
+      "description": "Whether on land or on sea, the covenant can call upon men willing to risk punishment under law on the covenant’s behalf."
+    },
+    {
+      "name": "Difficult Access",
+      "impact": "minor",
+      "description": "Knowing where the covenant is going to be makes for a good start, but those intent on visiting must have means to travel to the ships on the open seas."
+    },
+    {
+      "name": "Famous Resident: Solving Epicurusson",
+      "impact": "minor",
+      "description": ""
+    },
+    {
+      "name": "Healthy Feature",
+      "impact": "minor",
+      "description": "The open seas and the clean air, free from corruption, are excellent for the humors. At the expense of weathering storms and wintering in safe harbors, the magi and covenfolk are generally fitter and healthier than their landlocked counterparts."
+    },
+    {
+      "name": "Informants",
+      "impact": "minor",
+      "description": "The misfits of the Northern Seas may be the black sheep of their former covenants, but they still have their contacts. Some of the younger magi grew up alongside others still learning their Arts who are eager for stories of the high seas. This means the covenant receives word of the interests of important magi and covenants, which may help the covenant in trade."
+    },
+    {
+      "name": "Local Ally",
+      "impact": "free",
+      "description": "A prominent tax collector at Bruges, nominally the covenant’s home port, is a strong ally to the covenant. He is a member of the town’s Jewish community and owes much to the covenant’s elder magi for help and protection they afforded him and his family some years ago."
+    },
+    {
+      "name": "Ungoverned",
+      "impact": "minor",
+      "description": "No ruler can truly lay claim to the seas, although the trade alliances and mercantile families probably try. As a result, the magi of the Northern Seas govern themselves and, ports and harbors aside, can afford to be a law unto themselves ."
+    },
+    {
+      "name": "Sailors",
+      "impact": "free",
+      "description": "The covenfolk are virtually all sailors."
+    }
+  ],
+  "flaws": [
+    {
+      "name": "Missing Aura",
+      "impact": "major",
+      "description": "A covenant at sea cannot expect to sail within a magical aura all year. There are auras out there, but they are small and widely distributed. As a result, the covenant has a base magical aura of zero."
+    },
+    {
+      "name": "Tribunal Border",
+      "impact": "major",
+      "description": "While nominally in the Normandy Tribunal, the independent covenant of the Northern Seas sails the borderlands between multiple Tribunals. The covenant’s connection to Normandy is tenuous at best and its magi enjoy a freedom not often granted to others. As the covenant proves the sea’s worth, multiple Tribunals may try to tempt them into membership. However, when those approaches are rebuffed, proud Tribunals may decide to take action against the upstart covenant."
+    },
+    {
+      "name": "Erratically Mobile",
+      "impact": "minor",
+      "description": "Not only do the ships of the Northern Seas sail where they will, but they may not always sail together. This means that finding the covenant and/or specific members can be dif- ficult. The covenant does have allies on dry land, but their visits may not be regular."
+    },
+    {
+      "name": "Gender Imbalance",
+      "impact": "minor",
+      "description": "Many sailors agree that a ship is no place for a woman. As a result, and despite the covenant playing home to a female captain, the ships’ crews are overwhelmingly male. Others may view the covenant as somewhat aggressive and there is little chance for family life within the covenant."
+    },
+    {
+      "name": "Possession Victim",
+      "impact": "free",
+      "description": "As the covenant lacks an Aegis, the ships rely on relics or on Hermetic spells to protect the ship and crew from the infernal. Despite this, there is an infernal presence on board one of the ships and the demon is playing the long game of influencing the crew and the magus to sin and damnation. One or more of the crew are possessed by a demon. The magi may suspect that something infernal may be trying to influence their crew but do not know of the possession directly."
+    },
+    {
+      "name": "Poverty",
+      "impact": "minor",
+      "description": "The covenant is young, with few resources. It has the Minor variant of the Poverty Hook and starts with a single Lesser Income Source, providing 40 Mythic Pounds per year. The magi may need to resolve that early on as the covenant currently runs a deficit."
+    }
+  ]
+}

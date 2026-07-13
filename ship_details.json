@@ -1,0 +1,296 @@
+{
+  "meta": {
+    "title": "Ship Details — hulls, enchanted devices, laboratories",
+    "source": "Foundry VTT REST API (arm5e system), pulled 2026-07-13",
+    "fleetNote": "Regardless of type or quality, each ship in the flotilla has a capacity of around 125 tonnes and a crew of 13 including the captain. None of the ships have so far been enchanted or opened for enchantment by a Hermetic shipwright; each can be affected by the standard Hermetic Structure Target. Ships run approximately 75 ft long, 25 ft in the beam, and just over 12 ft keel to deck, with a cargo hold and single deck — the magus’ laboratory typically occupies the rear of the cargo hold."
+  },
+  "ships": {
+    "tide-of-memory": {
+      "hull": "Tide of Memory (Cog)",
+      "dimensions": "75 ft long, 25 ft in the beam, 12 ft keel to deck.",
+      "description": "A mysterious cog of lost paths and unanswered questions. Sometimes, it is seen docked in multiple ports at once, and those who board alone claim to hear conversations from the past drifting through the timbers. With Solving’s disappearance, the ship feels adrift in more ways than one, and none dare to say how long it will remain in this world.",
+      "inhabitants": "Solving Epicurusson & Apprentice",
+      "currentOwner": "Dagmar",
+      "formerOwner": "Solving Epicurusson (vanished into Twilight, 1220)",
+      "laboratory": {
+        "name": "Tide of Memory's Laboratory (30 pts)",
+        "owner": "Dagmar",
+        "size": 0,
+        "generalQuality": 1,
+        "safety": 1,
+        "health": 0,
+        "refinement": 2,
+        "upkeep": 3,
+        "warping": 0,
+        "aesthetics": 2,
+        "specialties": "Experimentation +2\n\nLongevity Rituals +1\n\nIntellego +1\n\nAnimal +1",
+        "features": "Map"
+      },
+      "enchantedDevices": [
+        {
+          "name": "Bell of Summoning",
+          "quantity": 1,
+          "description": "Commissioned from a Verditius working out of Verdi, when rung this bell sounds throughout all six ships of the fleet, using up six of its 12 uses. This allows the bell to be rung twice with effect.\n\nThe bell is usually rung twice in succession, once to alert the magi and again to give them chance to locate the direction of the magic using their Magical Astrolabes, described below",
+          "effects": [
+            {
+              "name": "Bell of Summoning",
+              "technique": "Creo",
+              "form": "Imaginem",
+              "level": 1,
+              "range": "arc",
+              "duration": "diam",
+              "target": "ind",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "name": "The Magical Astrolabe",
+          "quantity": 5,
+          "description": "When used against an active magical effect, the astrolabe allows the user to determine the horizontal and vertical directions of the magic’s origins. It cannot provide distance information.\n\nThe device is used to locate the source of the sound of the Bell of Summoning. When used in conjunction with charts, this provides a confident view on where the bell is.\n\nEach ship in the fleet is issued with one of these devices.",
+          "effects": [
+            {
+              "name": "The Magical Astrolabe",
+              "technique": "Intellego",
+              "form": "Vim",
+              "level": 10,
+              "range": "touch",
+              "duration": "moment",
+              "target": "ind",
+              "description": ""
+            }
+          ]
+        },
+        {
+          "name": "The Master's Chart",
+          "quantity": 1,
+          "description": "Solving possesses an arcane connection to each ship in the fleet in the form of a carved miniature made from the wood of their frames. When these are individually placed onto this enchanted map, which is the triggering mechanism, the miniatures sail to their appropriate locations.\n\nDustin has a copy of the laboratory text for this device, which was commissioned from a magus of Verdi in the Roman Tribunal.\n\nThe chart has two effects. The first finds the fleet through individual arcane connections to the vessels placed upon the chart. The second uses the information provided by the first to move these wooden tokens to their appropriate place on the chart.\n\nThe large chart of wood and parchment has been opened with eight pawns of vis and the two enchantments currently use four of those pawns.",
+          "effects": [
+            {
+              "name": "Finding the Fleet",
+              "technique": "Intellego",
+              "form": "Herbam",
+              "level": 2,
+              "range": "arc",
+              "duration": "moment",
+              "target": "ind",
+              "description": "Provides information on the location of a target ship given an arcane connection to it."
+            },
+            {
+              "name": "Mark the Fleet",
+              "technique": "Rego",
+              "form": "Herbam",
+              "level": 3,
+              "range": "touch",
+              "duration": "moment",
+              "target": "ind",
+              "description": "Moves the token placed upon the chart to the location indicated by the Finding the Fleet effect"
+            }
+          ]
+        }
+      ]
+    },
+    "brineborn": {
+      "hull": "The Brineborn (Hulk)",
+      "dimensions": "75 ft long, 25 ft in the beam, 12 ft keel to deck.",
+      "description": "An English hulk that seems more water than wood, its hull damp even in full sun. It never fully resists the ocean, instead moving with the waves like a living thing. Some claim it was once a drowned vessel, raised by magic, and that it still remembers the seabed. When anchored, the ship sways as though still at sea, unsettling those unaccustomed to its nature.",
+      "inhabitants": "Eogan Gruamdha",
+      "laboratory": {
+        "name": "The Brineborn's Laboratory (10 pts)",
+        "owner": "Éogan Dobhartha - Aquam magus",
+        "size": 0,
+        "generalQuality": -1,
+        "safety": -1,
+        "health": 0,
+        "refinement": 0,
+        "upkeep": 0,
+        "warping": 0,
+        "aesthetics": -1,
+        "specialties": "Experimentation +2",
+        "features": ""
+      },
+      "enchantedDevices": [
+        {
+          "name": "The Magical Astrolabe",
+          "quantity": 5,
+          "description": "When used against an active magical effect, the astrolabe allows the user to determine the horizontal and vertical directions of the magic’s origins. It cannot provide distance information.\n\nThe device is used to locate the source of the sound of the Bell of Summoning. When used in conjunction with charts, this provides a confident view on where the bell is.\n\nEach ship in the fleet is issued with one of these devices.",
+          "effects": [
+            {
+              "name": "The Magical Astrolabe",
+              "technique": "Intellego",
+              "form": "Vim",
+              "level": 10,
+              "range": "touch",
+              "duration": "moment",
+              "target": "ind",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    "scholars-wake": {
+      "hull": "The Scholar's Wake (Cog)",
+      "dimensions": "75 ft long, 25 ft in the beam, 12 ft keel to deck.",
+      "description": "A Flemish cog with a broad deck and reinforced cabins, designed for research and magical experiments at sea. It carries an extensive collection of arcane instruments, and its hold is filled with alembics, scrolls, and preserved specimens. The crew has standing orders never to open certain doors, as some sections of the ship’s hold contain unstable magical phenomena.",
+      "inhabitants": "Dustin Page",
+      "laboratory": {
+        "name": "The Scholar's Wake's Laboratory (10 pts)",
+        "owner": "Stijntje Kuiper",
+        "size": 0,
+        "generalQuality": -1,
+        "safety": -1,
+        "health": 0,
+        "refinement": 0,
+        "upkeep": 0,
+        "warping": 0,
+        "aesthetics": -1,
+        "specialties": "Experimentation +2",
+        "features": ""
+      },
+      "enchantedDevices": [
+        {
+          "name": "The Magical Astrolabe",
+          "quantity": 5,
+          "description": "When used against an active magical effect, the astrolabe allows the user to determine the horizontal and vertical directions of the magic’s origins. It cannot provide distance information.\n\nThe device is used to locate the source of the sound of the Bell of Summoning. When used in conjunction with charts, this provides a confident view on where the bell is.\n\nEach ship in the fleet is issued with one of these devices.",
+          "effects": [
+            {
+              "name": "The Magical Astrolabe",
+              "technique": "Intellego",
+              "form": "Vim",
+              "level": 10,
+              "range": "touch",
+              "duration": "moment",
+              "target": "ind",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    "storm-dragon": {
+      "hull": "Veðrdreki (Storm Dragon)",
+      "dimensions": "75 ft long, 25 ft in the beam, 12 ft keel to deck.",
+      "description": "A Nordic drakkar.",
+      "inhabitants": "",
+      "laboratory": {
+        "name": "Veðrdreki Laboratory (10 pts)",
+        "owner": "Valdemar Bjornsson",
+        "size": 0,
+        "generalQuality": -1,
+        "safety": -1,
+        "health": 0,
+        "refinement": 0,
+        "upkeep": 0,
+        "warping": 0,
+        "aesthetics": -1,
+        "specialties": "Experimentation +2",
+        "features": ""
+      },
+      "enchantedDevices": []
+    },
+    "the-gloaming": {
+      "hull": "The Gloaming (Ketch)",
+      "dimensions": "75 ft long, 25 ft in the beam, 12 ft keel to deck.",
+      "description": "A Breton ketch that thrives in twilight, its sails shimmering with strange, near-invisible patterns that shift in the half-light. When night falls, the ship sometimes drifts beyond the reach of reality, its position uncertain until dawn. Faeries recognize it not as a threat, but as an enigma—it never arrives unannounced, yet no one ever sees it coming.",
+      "inhabitants": "Cy's Magus",
+      "laboratory": {
+        "name": "The Gloaming's Laboratory (10 pts)",
+        "owner": "",
+        "size": 0,
+        "generalQuality": -1,
+        "safety": -1,
+        "health": 0,
+        "refinement": 0,
+        "upkeep": 0,
+        "warping": 0,
+        "aesthetics": -1,
+        "specialties": "Experimentation +2",
+        "features": ""
+      },
+      "enchantedDevices": [
+        {
+          "name": "The Magical Astrolabe",
+          "quantity": 5,
+          "description": "When used against an active magical effect, the astrolabe allows the user to determine the horizontal and vertical directions of the magic’s origins. It cannot provide distance information.\n\nThe device is used to locate the source of the sound of the Bell of Summoning. When used in conjunction with charts, this provides a confident view on where the bell is.\n\nEach ship in the fleet is issued with one of these devices.",
+          "effects": [
+            {
+              "name": "The Magical Astrolabe",
+              "technique": "Intellego",
+              "form": "Vim",
+              "level": 10,
+              "range": "touch",
+              "duration": "moment",
+              "target": "ind",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    "maelstroms-maw": {
+      "hull": "The Maelstrom's Maw (Buss)",
+      "dimensions": "75 ft long, 25 ft in the beam, 12 ft keel to deck.",
+      "description": "A Nordic buss that seems defiant even in calm waters, always leaning slightly into the wind as though eager to challenge the storm. Its figurehead—a snarling beast of uncertain origin—has eyes that glow faintly when tempests rise. The ship’s crew swears that, in the worst of gales, they hear a voice calling commands that none of them spoke.",
+      "inhabitants": "Kor ex Flambeau",
+      "currentOwner": "Kor Ex Flambeau",
+      "formerOwner": "Nequam of Tytalus (handed off, Summer 1220)",
+      "covenantStatus": "absent — missing; not providing mechanical costs/benefits to the covenant",
+      "laboratory": {
+        "name": "The Maelstrom's Maw's Laboratory (30 pts)",
+        "owner": "Kor Ex Flambeau",
+        "size": 0,
+        "generalQuality": -1,
+        "safety": 0,
+        "health": 0,
+        "refinement": 1,
+        "upkeep": 1,
+        "warping": 0,
+        "aesthetics": 1,
+        "specialties": "Experimentation +2\n\nAnimal +1\n\nAquam +3",
+        "features": ""
+      },
+      "enchantedDevices": [
+        {
+          "name": "The Magical Astrolabe",
+          "quantity": 5,
+          "description": "When used against an active magical effect, the astrolabe allows the user to determine the horizontal and vertical directions of the magic’s origins. It cannot provide distance information.\n\nThe device is used to locate the source of the sound of the Bell of Summoning. When used in conjunction with charts, this provides a confident view on where the bell is.\n\nEach ship in the fleet is issued with one of these devices.",
+          "effects": [
+            {
+              "name": "The Magical Astrolabe",
+              "technique": "Intellego",
+              "form": "Vim",
+              "level": 10,
+              "range": "touch",
+              "duration": "moment",
+              "target": "ind",
+              "description": ""
+            }
+          ]
+        }
+      ]
+    },
+    "adamant": {
+      "note": "No covenant possessionsCovenant record in Foundry — personally owned by Valerian, not covenant property.",
+      "laboratory": {
+        "name": "The Adamant's Laboratory (10 pts)",
+        "owner": "Valerian de Castellane",
+        "size": 0,
+        "generalQuality": -1,
+        "safety": -1,
+        "health": 0,
+        "refinement": 0,
+        "upkeep": 0,
+        "warping": 0,
+        "aesthetics": -1,
+        "specialties": "Experimentation +2",
+        "features": ""
+      },
+      "enchantedDevices": []
+    },
+    "hound-of-cassel": {
+      "note": "No covenant possessionsCovenant record or laboratory in Foundry — not (yet) covenant property.",
+      "enchantedDevices": []
+    }
+  }
+}
