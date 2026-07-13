@@ -5,6 +5,10 @@ A data-driven set of static pages chronicling the Ars Magica campaign of
 here is plain HTML/CSS/JS reading from local JSON — no build step, no
 server-side code. Open [`index.html`](index.html) to get around.
 
+**Picking this up in a new session?** See "Next up" at the end of the
+[Notion merge](#notion-merge-2026-07-13) section below before doing anything
+else — there's a specific, already-scoped task waiting there.
+
 ## Pages
 
 | Page | Data file(s) | What it's for |
@@ -347,6 +351,52 @@ hash of the commit it's part of, this is regenerated as a small follow-up
 commit at the end of a work session, referencing whatever commit was just
 made — there's inherently one commit of lag, which is normal for this
 pattern without a CI step to do it automatically.
+
+### Next up: canon-vs-Notion contradiction review
+
+Both Notion merge passes above were scoped around *absence* — pulling in
+content that wasn't on the site anywhere. What they did **not** do is an
+exhaustive line-by-line diff of every fact that appears in *both* places.
+A handful of contradictions surfaced anyway, opportunistically, along the
+way (see the bullet list below) — but the full sweep hasn't happened.
+
+**The plan, next session:** work back through the Notion export looking for
+places where a specific, checkable fact (a name, a date, a number, who owns
+what, who's related to whom, what happened to someone) disagrees with what's
+already committed to this repo as canon. For each one found, ask the GM
+directly rather than guessing which side is right — the pattern that worked
+well throughout both merge passes (Foundry vs. `ships.json` on Dietrich/
+Marina/Garrat Coffin/Maelstrom's Maw, all resolved by asking, not assuming)
+is the model to keep using. Once answered, update whichever file is wrong.
+
+**Where to find things:**
+- Raw Notion export: `/home/hewhocutsdown/Working/Ars Magica/2026 Ars Magica/notion_export/`
+  — 125 Markdown files, **outside this repo**, not checked in. If it's gone,
+  it'll need re-pulling from the Notion API (see the Notion API section
+  above for the mechanics — the integration token isn't stored anywhere and
+  will need to be handed over again).
+- Site canon to check it against: `ships.json`, `npcs.json`, `magi.json`,
+  `covenant.json`, `ship_details.json`, `tribunal_data.json`,
+  `verified_events.json`, `open_questions.json`.
+
+**Already resolved this way, don't re-ask:** Dietrich and Marina's true
+character type, Garrat Coffin's true character type, the Maelstrom's Maw's
+hull type and current/former owner, Stijntje Kuiper's magus status (turned
+out not to be a contradiction at all).
+
+**Flagged but not yet asked — good candidates to open with:**
+- Giden's Foundry `charType` (`companion`) was never independently
+  confirmed the way the others were.
+- Rán's status/charType is likewise unconfirmed.
+- Southampton's regency-council cast in the Mythic Europe gazetteer names
+  William Marshal as active regent — he died in 1219, so this is either a
+  simple dating error in the GM's notes or deliberately frozen at an
+  earlier point; worth confirming which before anyone treats it as current.
+- Boulogne-sur-Mer's gazetteer entry claims it was "the covenant's winter
+  port... likely the most frequent destination," which the chronicle
+  contradicts directly (the party settled on Bruges) — already marked
+  superseded in `reference.json`, but worth a GM sanity check in case it's
+  the *chronicle* that's wrong instead.
 
 ## Open threads on this archive itself
 
