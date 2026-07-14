@@ -254,6 +254,8 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .rd-breakdown{font-size:11.5px;color:var(--ink-soft);margin-top:7px;line-height:1.5;font-family:'EB Garamond',serif}
 .rd-breakdown .rd-die{color:var(--gold);font-weight:600}
 .rd-botchflag{color:var(--rust);font-weight:600}
+.rd-flags{margin-top:11px;padding:9px 11px;border-radius:8px;background:rgba(138,51,36,.1);
+  border:1px solid rgba(138,51,36,.3);color:var(--rust);font-size:11.5px;line-height:1.55}
 
 .trait-chips,.rep-chips{display:flex;flex-wrap:wrap;gap:5px}
 .trait-chip{font-size:11.5px;padding:2px 9px;border-radius:11px;background:rgba(91,58,138,.12);
@@ -764,21 +766,75 @@ function defaultCharFor(name){
   return 'int';
 }
 
-// Parametric virtues we can value automatically. Everything else is a manual toggle.
-function puissantFor(sheet, targetLabel){
-  const t = targetLabel.toLowerCase();
-  return (sheet.virtues||[]).some(v=>{
-    const m = /puissant\s+(.+)/i.exec(v.name||'');
-    return m && m[1].replace(/\*$/,'').trim().toLowerCase() === t;
+/* ── Auto-applied modifier library ───────────────────────
+   Mechanics verified against armdef-0.4-virtues / -flaws:
+   • Puissant Art = +3, Puissant Ability = +2
+   • Cautious with (Ability) = −2 botch dice; Cautious Sorcerer = −3 botch dice (casting)
+   • Deficient Technique/Form = that Art's contribution to the casting total is halved
+   • Afflicted Tongue = −2 Casting Score (verbal) + 1 extra botch die                    */
+const ART_NAMES = new Set(Object.keys(ART_CODE).map(s=>s.toLowerCase()));
+
+function parsePuissant(vname){
+  const m = /^\s*puissant\b\s*(?:ability\b\s*)?(.+?)\s*$/i.exec(vname||'');
+  if(!m) return null;
+  const target = m[1].replace(/[()*]/g,'').trim();
+  return { target, isArt: ART_NAMES.has(target.toLowerCase()) };
+}
+// Puissant Art → +3; Puissant Ability → +2.
+function puissantArtBonus(sheet, artLabel){
+  const t = artLabel.toLowerCase();
+  return (sheet.virtues||[]).some(v=>{ const p=parsePuissant(v.name); return p && p.isArt && p.target.toLowerCase()===t; }) ? 3 : 0;
+}
+function puissantAbilityBonus(sheet, abName){
+  const t = abName.toLowerCase();
+  return (sheet.virtues||[]).some(v=>{ const p=parsePuissant(v.name); return p && !p.isArt && p.target.toLowerCase()===t; }) ? 2 : 0;
+}
+// Cautious with (Ability): 2 fewer botch dice for that Ability.
+function cautiousAbility(sheet, abName){
+  const t = abName.toLowerCase();
+  return (sheet.virtues||[]).some(v=>{ const m=/^cautious with\b\s*(.+?)\s*$/i.exec(v.name||''); return m && m[1].replace(/[()*]/g,'').trim().toLowerCase()===t; });
+}
+function hasVirtue(sheet, re){ return (sheet.virtues||[]).some(v=>re.test(v.name||'')); }
+function hasFlaw(sheet, re){ return (sheet.flaws||[]).some(v=>re.test(v.name||'')); }
+function flawNamed(sheet, re){ const f=(sheet.flaws||[]).find(v=>re.test(v.name||'')); return f?f.name:null; }
+// Deficient Technique/Form (Art): that Art's contribution to the casting total is halved.
+// Tolerant match on the first four letters (sheet data spells one "Imagonem" for Imaginem).
+function deficientArt(sheet, artLabel){
+  const key = artLabel.toLowerCase().slice(0,4);
+  return (sheet.flaws||[]).some(v=>{
+    const m = /^deficient (?:technique|form)\b\s*[-(:]*\s*(.+?)\s*[)]*$/i.exec(v.name||'');
+    return m && m[1].replace(/[()*]/g,'').trim().toLowerCase().slice(0,4)===key;
   });
 }
-function focusVirtues(sheet){
-  return (sheet.virtues||[]).filter(v=>/magical focus/i.test(v.name||''));
-}
+function focusVirtues(sheet){ return (sheet.virtues||[]).filter(v=>/magical focus/i.test(v.name||'')); }
 function abilityScore(sheet, name){
   const a = (sheet.abilities||[]).find(x=>x.name.toLowerCase()===name.toLowerCase());
   return a ? a.score : 0;
 }
+
+// Situational modifiers: ticking the toggle applies this value (with a "when" hint)
+// instead of the generic ±1. Values verified against the rules text.
+const SITUATIONAL = [
+  [/^venus'?s? blessing/i,        {value:3,  hint:'Com/Pre with compatible characters'}],
+  [/^disfigured/i,                {value:-3, hint:'Presence for looks / respect'}],
+  [/^missing eye/i,               {value:-3, hint:'spell targeting / missile attack'}],
+  [/^missing ear/i,               {value:-3, hint:'hearing-based rolls'}],
+  [/^perfect balance/i,           {value:6,  hint:'avoid falling / tripping'}],
+  [/^light touch/i,               {value:1,  hint:'subtle manipulation (also −1 botch)'}],
+  [/^slow reflexes/i,             {value:-3, hint:'Initiative'}],
+  [/^poor concentration/i,        {value:-3, hint:'Concentration rolls'}],
+  [/^obese/i,                     {value:-1, hint:'moving quickly/gracefully (−3 Fatigue)'}],
+  [/^afflicted tongue/i,          {value:-2, hint:'voice rolls'}],
+  [/^strong.?willed/i,            {value:3,  hint:'resist / Concentration vs distraction'}],
+  [/^social contacts/i,           {value:3,  hint:'info/help from that circle'}],
+  [/^gossip/i,                    {value:3,  hint:'local news about people'}],
+  [/^piercing gaze/i,             {value:3,  hint:'Intimidation'}],
+  [/^inspirational/i,             {value:3,  hint:"a target's Personality Trait roll"}],
+  [/^great communication/i,       {value:0,  hint:'already in your Communication score'}],
+];
+function situational(name){ for(const [re,info] of SITUATIONAL){ if(re.test(name)) return info; } return null; }
+// Baked into a Characteristic score, or handled automatically elsewhere — hide from toggles.
+const TOGGLE_HIDE = /^(the gift|hermetic magus|improved characteristics|great (intelligence|perception|strength|stamina|presence|communication|dexterity|quickness)|poor (communication|perception|strength|stamina|intelligence|presence|dexterity|quickness))/i;
 
 function openRollModal(){ $('#rollModal').classList.add('open'); }
 function closeRollModal(){ $('#rollModal').classList.remove('open'); }
@@ -787,12 +843,46 @@ function charOptions(sel){
   return CHAR_ORDER.map(k=>`<option value="${k}" ${k===sel?'selected':''}>${CHAR_FULL[k]} (${signed((CURRENT_SHEET.characteristics||{})[k])})</option>`).join('');
 }
 
+// Names auto-handled for a given roll context → hidden from the manual toggle list.
+function autoHandledNames(sheet, ctx){
+  const names = new Set();
+  (sheet.virtues||[]).forEach(v=>{
+    const p = parsePuissant(v.name);
+    if(ctx.kind==='ability' && p && !p.isArt && p.target.toLowerCase()===ctx.ability.toLowerCase()) names.add(v.name);
+    if(ctx.kind==='casting' && p && p.isArt && (p.target.toLowerCase()===ctx.technique.toLowerCase()||p.target.toLowerCase()===ctx.form.toLowerCase())) names.add(v.name);
+    if(ctx.kind==='ability' && /^cautious with\b/i.test(v.name)){ const m=/^cautious with\b\s*(.+?)\s*$/i.exec(v.name); if(m && m[1].replace(/[()*]/g,'').trim().toLowerCase()===ctx.ability.toLowerCase()) names.add(v.name); }
+    if(ctx.kind==='casting' && /^cautious sorcerer/i.test(v.name)) names.add(v.name);
+    if(ctx.kind==='casting' && /magical focus/i.test(v.name)) names.add(v.name);
+  });
+  (sheet.flaws||[]).forEach(v=>{
+    if(ctx.kind==='casting' && /^deficient (technique|form)/i.test(v.name)){
+      const m=/^deficient (?:technique|form)\b\s*[-(:]*\s*(.+?)\s*[)]*$/i.exec(v.name);
+      if(m){ const k=m[1].replace(/[()*]/g,'').trim().toLowerCase().slice(0,4); if(k===ctx.technique.toLowerCase().slice(0,4)||k===ctx.form.toLowerCase().slice(0,4)) names.add(v.name); }
+    }
+    if(ctx.kind==='casting' && /^afflicted tongue/i.test(v.name)) names.add(v.name);
+  });
+  return names;
+}
+
+// Informational casting reminders (no arithmetic).
+function castingFlags(sheet){
+  const out=[];
+  const nc=flawNamed(sheet,/^necessary condition/i); if(nc) out.push(nc+': you must perform the action while casting, or the spell fails entirely.');
+  if(hasFlaw(sheet,/^painful magic/i)) out.push('Painful Magic: 1 Fatigue level of pain per spell cast (cumulative action penalty).');
+  if(hasFlaw(sheet,/^chaotic magic/i)) out.push('Chaotic Magic: your spontaneous magic is unpredictable.');
+  if(hasFlaw(sheet,/^short-lived magic/i)) out.push('Short-lived Magic: your spell durations are shorter than normal.');
+  const r=flawNamed(sheet,/^restriction/i); if(r) out.push(r+': cannot cast while the restriction applies.');
+  const fp=flawNamed(sheet,/^flawed parma/i); if(fp) out.push(fp+' — affects Magic Resistance, not this casting total.');
+  return out;
+}
+
 // ── Ability roll dialog ─────────────────────────────────
 function abilityDialog(ab){
   const sheet = CURRENT_SHEET;
   const defChar = defaultCharFor(ab.name);
-  const puiss = puissantFor(sheet, ab.name);
-  const specLabel = ab.speciality ? `Specialty applies (+1) — ${esc(ab.speciality)}` : '';
+  const puiss = puissantAbilityBonus(sheet, ab.name);   // 0 or 2
+  const cautious = cautiousAbility(sheet, ab.name);
+  const baseBotch = Math.max(0, 1 - (cautious?2:0));
   $('#rollDialog').innerHTML = `
     <button class="rd-close" onclick="closeRollModal()">✕</button>
     <h3>${esc(ab.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:13px">score ${ab.score}</span></h3>
@@ -802,12 +892,13 @@ function abilityDialog(ab){
       <label>Characteristic</label>
       <select id="rdChar">${charOptions(defChar)}</select>
     </div>
-    <div class="rd-row"><label>Ability score</label><span class="rd-val" style="color:var(--teal);font-weight:600">${ab.score}</span></div>
-    ${ab.speciality ? `<label class="rd-check on"><input type="checkbox" id="rdSpec"><span>${specLabel}</span></label>` : ''}
+    <div class="rd-row"><label>Ability score</label><span class="rd-val" style="color:var(--teal);font-weight:600">${signed(ab.score)}</span></div>
+    ${ab.speciality ? `<label class="rd-check on"><input type="checkbox" id="rdSpec"><span>Specialty (+1) — ${esc(ab.speciality)}</span></label>` : ''}
     ${puiss ? `<label class="rd-check on"><input type="checkbox" id="rdPuiss" checked><span>Puissant ${esc(ab.name)} <span class="rd-val">+2</span></span></label>` : ''}
-    ${vfToggles(sheet)}
+    ${cautious ? `<div class="rd-row"><label>Cautious with ${esc(ab.name)}</label><span class="rd-hint">−2 botch dice (auto)</span></div>` : ''}
+    ${vfToggles(sheet, {kind:'ability', ability:ab.name})}
     <div class="rd-row"><label>Other modifier</label><input type="number" id="rdMod" value="0" step="1"></div>
-    <div class="rd-row"><label>Botch dice <span class="rd-hint">(stress only)</span></label><input type="number" id="rdBotch" value="1" min="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice <span class="rd-hint">(stress only)</span></label><input type="number" id="rdBotch" value="${baseBotch}" min="0" step="1"></div>
 
     <div class="rd-buttons">
       <button class="rd-btn" onclick="doAbilityRoll(true)">🎲 Roll Stress</button>
@@ -818,19 +909,24 @@ function abilityDialog(ab){
   openRollModal();
 }
 
-function vfToggles(sheet){
-  // Optional per-roll virtue/flaw checkboxes with a user-set value each.
+function vfToggles(sheet, ctx){
+  // Optional per-roll virtue/flaw checkboxes; known ones pre-valued with a "when" hint.
+  const hide = autoHandledNames(sheet, ctx);
   const items = [...(sheet.virtues||[]).map(v=>({name:v.name,kind:'virtue'})),
                  ...(sheet.flaws||[]).map(v=>({name:v.name,kind:'flaw'}))]
-    .filter(v=>!/^the gift$|^hermetic magus$/i.test(v.name));
+    .filter(v=>!TOGGLE_HIDE.test(v.name) && !hide.has(v.name));
   if(!items.length) return '';
-  const rows = items.map((v,i)=>`
-    <label class="rd-check">
-      <input type="checkbox" class="rdVF" data-i="${i}">
-      <span>${esc(v.name)}</span>
-      <input type="number" class="rdVFval" data-i="${i}" value="${v.kind==='flaw'?-1:1}" step="1" style="width:52px" disabled>
-    </label>`).join('');
-  return `<hr class="rd-divider"><div class="rd-section-label">Optional virtues / flaws (set a value)</div>${rows}`;
+  const rows = items.map((v,i)=>{
+    const s = situational(v.name);
+    const val = s ? s.value : (v.kind==='flaw'?-1:1);
+    const hint = s ? ` <span class="rd-hint">${esc(s.hint)}</span>` : '';
+    return `<label class="rd-check">
+      <input type="checkbox" class="rdVF" data-i="${i}" data-name="${esc(v.name)}">
+      <span>${esc(v.name)}${hint}</span>
+      <input type="number" class="rdVFval" data-i="${i}" value="${val}" step="1" style="width:52px" disabled>
+    </label>`;
+  }).join('');
+  return `<hr class="rd-divider"><div class="rd-section-label">Optional virtues / flaws (tick to apply)</div>${rows}`;
 }
 
 function collectVF(){
@@ -840,7 +936,7 @@ function collectVF(){
       const val = document.querySelector(`.rdVFval[data-i="${cb.dataset.i}"]`);
       const n = parseInt(val.value,10)||0;
       sum += n;
-      parts.push(`${cb.parentElement.querySelector('span').textContent} ${signed(n)}`);
+      parts.push(`${cb.dataset.name} ${signed(n)}`);
     }
   });
   return {sum, parts};
@@ -879,16 +975,31 @@ function doAbilityRoll(stress){
 }
 
 // ── Spell casting dialog ────────────────────────────────
+function castingArts(sheet, sp){
+  const arts = sheet.arts||{};
+  const rawTech = (arts[ART_CODE[sp.technique]]||{}).score||0;
+  const rawForm = (arts[ART_CODE[sp.form]]||{}).score||0;
+  const defT = deficientArt(sheet, sp.technique);
+  const defF = deficientArt(sheet, sp.form);
+  return {
+    rawTech, rawForm, defT, defF,
+    techScore: defT ? Math.floor(rawTech/2) : rawTech,
+    formScore: defF ? Math.floor(rawForm/2) : rawForm
+  };
+}
+
 function spellDialog(sp){
   const sheet = CURRENT_SHEET;
-  const arts = sheet.arts||{};
-  const techScore = (arts[ART_CODE[sp.technique]]||{}).score||0;
-  const formScore = (arts[ART_CODE[sp.form]]||{}).score||0;
+  const a = castingArts(sheet, sp);
   const sta = (sheet.characteristics||{}).sta||0;
-  const puissT = puissantFor(sheet, sp.technique);
-  const puissF = puissantFor(sheet, sp.form);
+  const puissT = puissantArtBonus(sheet, sp.technique);   // 0 or 3
+  const puissF = puissantArtBonus(sheet, sp.form);
   const foci = focusVirtues(sheet);
   const ritual = !!sp.ritual;
+  const cautiousSorc = hasVirtue(sheet, /^cautious sorcerer/i);
+  const afflicted = flawNamed(sheet, /^afflicted tongue/i);
+  const baseBotch = Math.max(0, 1 - (cautiousSorc?3:0) + (afflicted?1:0));
+  const flags = castingFlags(sheet);
 
   $('#rollDialog').innerHTML = `
     <button class="rd-close" onclick="closeRollModal()">✕</button>
@@ -896,18 +1007,21 @@ function spellDialog(sp){
     <p class="rd-sub">${esc(sp.technique)}/${esc(sp.form)} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${ritual?' · Ritual':''}</p>
 
     <div class="rd-section-label">Casting score</div>
-    <div class="rd-row"><label>${esc(sp.technique)} (Technique)</label><span class="rd-val">${signed(techScore)}</span></div>
-    <div class="rd-row"><label>${esc(sp.form)} (Form)</label><span class="rd-val">${signed(formScore)}</span></div>
+    <div class="rd-row"><label>${esc(sp.technique)} (Technique)${a.defT?' <span class="rd-hint">deficient</span>':''}</label><span class="rd-val">${signed(a.techScore)}${a.defT?` <span class="rd-hint">(halved from ${signed(a.rawTech)})</span>`:''}</span></div>
+    <div class="rd-row"><label>${esc(sp.form)} (Form)${a.defF?' <span class="rd-hint">deficient</span>':''}</label><span class="rd-val">${signed(a.formScore)}${a.defF?` <span class="rd-hint">(halved from ${signed(a.rawForm)})</span>`:''}</span></div>
     <div class="rd-row"><label>Stamina</label><span class="rd-val">${signed(sta)}</span></div>
-    ${puissT?`<label class="rd-check on"><input type="checkbox" id="rdPuT" checked><span>Puissant ${esc(sp.technique)} <span class="rd-val">+2</span></span></label>`:''}
-    ${puissF?`<label class="rd-check on"><input type="checkbox" id="rdPuF" checked><span>Puissant ${esc(sp.form)} <span class="rd-val">+2</span></span></label>`:''}
-    ${foci.map((f,i)=>`<label class="rd-check"><input type="checkbox" class="rdFocus" data-i="${i}"><span>${esc(f.name)} — doubles the weaker Art <span class="rd-val">+${Math.min(techScore,formScore)}</span></span></label>`).join('')}
+    ${puissT?`<label class="rd-check on"><input type="checkbox" id="rdPuT" checked><span>Puissant ${esc(sp.technique)} <span class="rd-val">+3</span></span></label>`:''}
+    ${puissF?`<label class="rd-check on"><input type="checkbox" id="rdPuF" checked><span>Puissant ${esc(sp.form)} <span class="rd-val">+3</span></span></label>`:''}
+    ${foci.map((f,i)=>`<label class="rd-check"><input type="checkbox" class="rdFocus" data-i="${i}"><span>${esc(f.name)} — doubles the weaker Art <span class="rd-val">+${Math.min(a.techScore,a.formScore)}</span></span></label>`).join('')}
+    ${afflicted?`<div class="rd-row"><label>${esc(afflicted)} <span class="rd-hint">(verbal casting)</span></label><span class="rd-val">−2</span></div>`:''}
     <div class="rd-row"><label>Encumbrance</label><input type="number" id="rdEnc" value="0" min="0" step="1"></div>
     <div class="rd-row"><label>Aura modifier</label><input type="number" id="rdAura" value="0" step="1"></div>
     ${ritual?`<div class="rd-row"><label>Artes Liberales <span class="rd-hint">(ritual)</span></label><span class="rd-val">${signed(abilityScore(sheet,'Artes Liberales'))}</span></div>
     <div class="rd-row"><label>Philosophiae <span class="rd-hint">(ritual)</span></label><span class="rd-val">${signed(abilityScore(sheet,'Philosophiae'))}</span></div>`:''}
+    ${cautiousSorc?`<div class="rd-row"><label>Cautious Sorcerer</label><span class="rd-hint">−3 botch dice (auto)</span></div>`:''}
     <div class="rd-row"><label>Other modifier</label><input type="number" id="rdMod" value="0" step="1"></div>
-    <div class="rd-row"><label>Botch dice</label><input type="number" id="rdBotch" value="1" min="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice</label><input type="number" id="rdBotch" value="${baseBotch}" min="0" step="1"></div>
+    ${flags.length?`<div class="rd-flags">${flags.map(f=>`⚠ ${esc(f)}`).join('<br>')}</div>`:''}
 
     <div class="rd-buttons">
       ${ritual
@@ -923,22 +1037,21 @@ function spellDialog(sp){
 function doSpellCast(mode){
   const sheet = CURRENT_SHEET;
   const sp = ROLL_CTX.sp;
-  const arts = sheet.arts||{};
-  const techScore = (arts[ART_CODE[sp.technique]]||{}).score||0;
-  const formScore = (arts[ART_CODE[sp.form]]||{}).score||0;
+  const a = castingArts(sheet, sp);
   const sta = (sheet.characteristics||{}).sta||0;
   const enc = parseInt($('#rdEnc').value,10)||0;
   const aura = parseInt($('#rdAura').value,10)||0;
   const mod = parseInt($('#rdMod').value,10)||0;
-  const puT = $('#rdPuT') && $('#rdPuT').checked ? 2 : 0;
-  const puF = $('#rdPuF') && $('#rdPuF').checked ? 2 : 0;
+  const puT = $('#rdPuT') && $('#rdPuT').checked ? 3 : 0;
+  const puF = $('#rdPuF') && $('#rdPuF').checked ? 3 : 0;
   let focus = 0;
-  $$('.rdFocus').forEach(cb=>{ if(cb.checked) focus += Math.min(techScore,formScore); });
+  $$('.rdFocus').forEach(cb=>{ if(cb.checked) focus += Math.min(a.techScore,a.formScore); });
+  const afflicted = hasFlaw(sheet, /^afflicted tongue/i) ? -2 : 0;
   const ritual = mode==='ritual';
   const al = ritual ? abilityScore(sheet,'Artes Liberales') : 0;
   const ph = ritual ? abilityScore(sheet,'Philosophiae') : 0;
 
-  const score = techScore + formScore + sta - enc + aura + puT + puF + focus + al + ph + mod;
+  const score = a.techScore + a.formScore + sta - enc + aura + puT + puF + focus + afflicted + al + ph + mod;
   const die = (mode==='simple') ? rollSimple() : rollStress(parseInt($('#rdBotch').value,10)||0);
   const botched = !!die.botch;
   const total = botched ? 0 : score + die.value;
@@ -958,9 +1071,9 @@ function doSpellCast(mode){
   }
 
   const parts = [
-    `${sp.technique} ${signed(techScore)}`, `${sp.form} ${signed(formScore)}`, `Sta ${signed(sta)}`,
+    `${sp.technique} ${signed(a.techScore)}${a.defT?' (halved)':''}`, `${sp.form} ${signed(a.formScore)}${a.defF?' (halved)':''}`, `Sta ${signed(sta)}`,
     enc?`Enc ${signed(-enc)}`:'', aura?`aura ${signed(aura)}`:'',
-    puT?`Puissant +2`:'', puF?`Puissant +2`:'', focus?`focus +${focus}`:'',
+    puT?`Puissant +3`:'', puF?`Puissant +3`:'', focus?`focus +${focus}`:'', afflicted?`Afflicted Tongue −2`:'',
     ritual?`Artes Lib ${signed(al)}`:'', ritual?`Philo ${signed(ph)}`:'',
     mod?`other ${signed(mod)}`:'',
     `<span class="rd-die">${die.detail}</span>`
