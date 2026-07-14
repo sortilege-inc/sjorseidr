@@ -1,0 +1,85 @@
+BASE "ARMDef_Core_Laboratory" {
+    NAME "Ars Magica Definitive Edition - Laboratory (core stub)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+
+    # Base types for the chapter VIII Laboratory content
+    # (armdef-0.4-laboratory.ttrpg). A laboratory is a personalizable entity
+    # with eight Characteristics, Specializations, and its own Virtues/Flaws
+    # (Structure/Outfittings/Supernatural x Major/Minor/Free). Shape and
+    # Material entries carry the enchantment bonus list; their table is
+    # parsed deterministically from the source (scrambled rows are marked
+    # FIAT pending human review).
+
+    #tkAcHrN5TUjI8v5f2bOaLGQj ^"Laboratory" DEF {
+        PROPERTIES {
+            ^"Size" INTEGER
+            ^"Refinement" INTEGER
+            ^"General Quality" INTEGER
+            ^"Upkeep" INTEGER
+            ^"Safety" INTEGER
+            ^"Warping" INTEGER
+            ^"Health" INTEGER
+            ^"Aesthetics" INTEGER
+            # as-printed entries, resolvable by name against the Laboratory
+            # Virtue/Flaw and Feature DEFs
+            ^"Virtues" LIST OF STRING
+            ^"Flaws" LIST OF STRING
+            ^"Features" LIST OF STRING
+            ^"Specializations" LIST OF STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "Most magi need a laboratory to do their magical work, whether that is inventing new spells, enchanting magic items, or studying vis. The Laboratory chapter covers the things magi can do in their laboratories, the rules for personalizing a laboratory, and the ways a laboratory's qualities help or hinder that work."
+    }
+
+    #tdU9fWu0umjjKOg8i8JPY8aw ^"Laboratory Characteristic" DEF {
+        APPLIES TO [^"Laboratory"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tRawtLF0Jqj2WQDhjpOWd2hq ^"Laboratory Virtue" DEF {
+        APPLIES TO [^"Laboratory"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Major", "Minor", "Free"] REQUIRED
+            ^"Category" ENUM ["Structure", "Outfittings", "Supernatural"] REQUIRED
+            ^"Modifiers" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tlMBbzhtlHSbThf38A5xinnb ^"Laboratory Flaw" DEF {
+        APPLIES TO [^"Laboratory"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Major", "Minor", "Free"] REQUIRED
+            ^"Category" ENUM ["Structure", "Outfittings", "Supernatural"] REQUIRED
+            ^"Modifiers" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tGVDcYd8KO1oAqNi0UHMWr1e ^"Laboratory Feature" DEF {
+        APPLIES TO [^"Laboratory"]
+        PROPERTIES {
+            ^"Specializations" LIST OF STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #ti8RBOeBJSSiNgYGYFP1zy46 ^"Effect Modification" DEF {
+        APPLIES TO [^"Formulaic Spell"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #taJNAWU1upIafZxz0TGky60X ^"Shape and Material" DEF {
+        APPLIES TO [^"Laboratory"]
+        PROPERTIES {
+            ^"Bonuses" LIST OF STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

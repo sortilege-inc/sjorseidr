@@ -1,0 +1,771 @@
+EXTENSION "ARMDef_Spells_Herbam" {
+    NAME "Ars Magica Definitive Edition - Herbam Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tWf2uKj8iZvZVOv7gUcQUp0u ^"Conjure the Sturdy Vine" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Grows 10 paces of vine from a moderate quantity of wood, or from fertile soil. The vine is extremely strong and pliable, suitable for use as rope."
+    }
+
+    #tSCIj21c9nqpyAPOelPwaGTi ^"Trap of the Entwining Vines" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "Causes strong, woody vines to grow rapidly from fertile earth. The vines cover a circle 2 paces across and reach 6 feet high. Anything caught within them is immobilized. To avoid the vines, the target must make a Quickness – Encumbrance stress roll against an Ease Factor of 9. To break out requires a Strength stress roll against an Ease Factor of 12 (allowed once a round). Someone not trapped can cut a trapped person free in two rounds, assuming proper tools. The vines weaken and wither to dust at sunrise or sunset."
+    }
+
+    #tFaj4GNJiqXBhVzJliH7OGmc ^"Bridge of Wood" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "Creates a bridge made from living leaves, vines, and wood. The bridge can reach up to 20 paces, and is five paces wide. It is sturdy enough to support creatures of up to Size +4."
+    }
+
+    #tixmqrhieEfPAGQZMwBflmuy ^"Wall of Thorns" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +2 "Group"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Within seconds, this spell creates a straight wall of woody, thorny bushes up to 20 paces long, 1 pace thick, and 4 paces high. The thorns, which are unnaturally resilient, have a +15 Soak, are cut by edged weapons only, and cutting through requires inflicting a Heavy Wound. Bodily forcing one's way through the wall requires a Strength stress roll against an Ease Factor of 9 and does +15 damage whether the attempt succeeds or fails. If the roll botches, an additional 5 points of damage are suffered. The wall grows out of existing bushes or fertile soil. A Dexterity + Athletics stress roll against an Ease Factor of 9 allows a character to scale the wall, but the character takes +10 damage in the process."
+    }
+
+    #t00jqIBqoAloXCQIgb7MfxCW ^"Wall of Living Wood" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "A straight wall of living oak is created, growing quickly from nearby trees, other plant growth, or fertile earth. The wall is 20 paces long, 1 pace thick, and 5 paces high. It can be scaled with a Dexterity + Athletics stress roll against an Ease Factor of 9."
+    }
+
+    #tFjx6eY9QSEwhrB49LfbKL69 ^"The Bountiful Feast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Special"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Year"
+            +4 "Special (equivalent to Boundary)"
+            +1 "Size"
+            }
+            NOTES ["for a total of +4 Size, including the +3 from the guideline, so that the area affected is up to about 6 miles across"]
+        }
+        DESCRIPTION "This ritual, which must be cast at noon on the day after the winter solstice, attempts to ensure that all crops that grow within its target will be healthy and fruitful. The spell protects against non-magical blight and other diseases. It can't control the weather or prevent others from harming crops, but it does cause crops to be healthier, larger, and tastier than they otherwise would be. The target of this spell is the fields owned by those present at the ritual. The spell must be cast within the region affected by the spell, although that region need not be contiguous. Although food plants are affected most by this ritual, all plants are made healthier to some degree."
+    }
+
+    #tQLvVGQEYapmqKA231Gcg33O ^"Probe Nature's Hidden Lore" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 4 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Tells you what kind of plant you are touching. You also get an image of it in its natural habitat. Works with plant products as well as with plants themselves."
+    }
+
+    #t1VylxJWQSBPubxjyuMPaRYb ^"Hunt for the Wild Herb" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Smell"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Conc"
+            +2 "Smell"
+            }
+        }
+        DESCRIPTION "When you cast this spell, you can smell one sort of plant, and follow the scent, as long as you continue to concentrate. You must have a sample of the type of plant you are looking for. A Perception stress roll against an Ease Factor of 6 is needed to follow the scent. If there is no plant of the relevant type fairly close by (close enough to smell), you smell nothing, although the spell still works."
+    }
+
+    #tMtM0yBtTlNNHGyN8IxkRcWJ ^"Intuition of the Forest" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "You engage in a type of communion with the woods that you are in, giving you an intuitive sense of how to get along in the forest, and how to get the most out of the forest without causing it harm. You get a +3 to all nature-oriented rolls (not including spells) when in a forest or similar area. Causing significant harm to the forest cancels this spell."
+    }
+
+    #tBipOy6QqvCf0RHsUjLAdM9E ^"Shriek of the Impending Shafts" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Hearing"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Sun"
+            +3 "Hearing"
+            }
+        }
+        DESCRIPTION "Lets you know where anything wooden will be in the immediate future by a shriek that sounds in the air in advance of the wood's coming. A piece of wood that is controlled may change course, so the spell is sometimes wrong. You get a +9 bonus on Defense scores against wooden weapons (provided that you have the freedom to dodge), and you can automatically dodge wooden missiles fired from more than ten paces away. The shriek is only audible to you, and it cannot be simulated by people making noises."
+    }
+
+    #teKq9mCGg1ZNlPjjCdNCVl5K ^"Converse with Plant and Tree" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "You can speak with a plant for one conversation. The level of conversation depends on the type of plants; longer-lived and more noble plants have more to say. A single question and response takes ten to thirty minutes, with slower-growing plants speaking more slowly. Typically, plants can talk about the soil and about other plants around them, but have limited awareness of more momentary events, such as the passing of animals or people, unless that passing has a direct bearing on the plant (for example, a person cut its trunk). News can spread quickly through a forest when it has to, called from tree to tree on the wind. Bystanders cannot understand your conversation."
+    }
+
+    #txXSgBCuEsZ7TftHMa3E13Un ^"Pass the Unyielding Portal" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Diameter"
+            }
+        }
+        DESCRIPTION "Makes the wood of a door pliable, allowing the magus to bend it open regardless of most locks or bars."
+    }
+
+    #tjvsnXFJB0ep67d1NnFiwSFL ^"Transformation of the Thorny Staff" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Causes a length of wood (up to 6 feet in length) to grow thick, sharp thorns at whatever spots you touch. If the spell is cast on a staff, the thorns add +4 to the damage done by the staff."
+    }
+
+    #tb7MDxXft1KNBxDQo27W8KyM ^"Piercing Shaft of Wood" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Rego"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Rego"
+            }
+        }
+        DESCRIPTION "Turns a piece of wood into a sleek, barbed, strong shaft that flies through the air at a target. Damage depends on the size of the item from which the shaft is formed: staff (upper size limit) +10, 2-foot branch +8, wand +5. This spell cannot miss, but it is resisted."
+    }
+
+    #tJIW51nuK9pf1Mm55Ml9xqJG ^"Rope of Bronze" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Terram"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+            NOTES ["no cost for requisite"]
+        }
+        DESCRIPTION "Turns a piece of rope (made from plant material) into refined, superior bronze, which does not break under normal circumstances."
+    }
+
+    #tkX10yn5VaKnP2Cbg5yduo2v ^"Thaumaturgical Transformation of Plants to Iron" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Terram"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "size"
+            }
+            NOTES ["no cost for requisite"]
+        }
+        DESCRIPTION "Makes any plant, dead or alive, as hard as iron. Affects any amount of continuous plant material up to the size of a small tree. Sharp-edged plants can become deadly when they are made this hard."
+    }
+
+    #tpCoCF4czLBz053MmUyolzst ^"Stir the Slumbering Tree" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Mentem"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "Raises any tree into a state of consciousness resembling that of a human. Such a tree can see and hear what is going on around it, and at a normal human level of perception. Such a tree may share some mental attributes or personality traits with the caster. The tree can rearrange its branches over the course of several hours, though too slowly for people to observe the movement from second to second. Most trees in magical areas are already awake."
+    }
+
+    #tNkeBpSVCYuOoYzp1u54x9VK ^"Curse of the Haunted Forest" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 60 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Group"
+            ^"Requisite" STRING "Perdo"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Year"
+            +2 "Group"
+            +5 "size"
+            }
+        }
+        DESCRIPTION "Turns a previously normal small forest into a haunted and dangerous place. The trees become gnarled and hideous, and the imaginative can see menacing faces in them. The trees also become conscious and cruel; capable of sight, hearing, and limited movement. While they cannot uproot themselves, they can move their branches about, and can reach the ground in an hour or two. Only ill-tempered animals, such as boars and crows, live in these woods, and nothing in them is edible. The only knowledge of what might happen should this ritual be attempted in a faerie forest comes from ancient and disputed legends of the Order of Hermes."
+    }
+
+    #tBTZUd2MfAXGr7XEMUSpO70Y ^"Curse of the Rotted Wood" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Causes a non-living wooden object to rot and fall apart. Objects up to the size of a single door can be affected, but things that size take up to two rounds to decay. Usually, large chunks of wood start falling off the target, and slowly crumble to smaller and smaller pieces, until only dust is left. Ferramentum of Verditius's version of this spell is very orderly as per his wizard's sigil. The decay of the object starts from the top and continues to the bottom, leaving only dust as it goes."
+    }
+
+    #tmvN1pZsx3lqoXNaTEDA8L8m ^"Wizard's Autumn" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Group"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "All the deciduous leaves (that is, those that normally fall in autumn) on the target plants turn brown and then fall to the ground. The full process takes a minute. This spell can affect a small grove of trees. The trees do not bud again until the next spring."
+    }
+
+    #tbB0JsReT2arSGnteGnq0rMX ^"Plant's Withering Bane" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Withers and destroys one living plant, up to and including a plant the size of a small tree."
+    }
+
+    #tUeJ498wgpYzzhtao4GMaAKi ^"The Great Rot" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Group"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Rots and destroys a large amount of dead wood, up to the amount found in a wooden house or small inn. Wooden structures creak and groan mightily for about a minute before collapsing."
+    }
+
+    #tttBjwNucGbTtHP8bvsIykay ^"Treading the Ashen Path" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Group"
+            +3 "size"
+            +1 "special effect"
+            }
+            NOTES ["the spell effectively keeps being cast while the caster walks seven miles"]
+        }
+        DESCRIPTION "As you walk through a forest after casting this spell, all the plant material 10 paces in front of you and 5 paces to either side withers and dies. Trees are reduced to bare trunks, while their leaves and all smaller plants turn to ash. You can walk for 7 miles with each casting of this spell. Use of this spell in faerie woods is not recommended. This spell was originally invented by a magus of House Flambeau, and he was awarded a prize for it by his primus."
+    }
+
+    #t6sG1FpmiduZLBx4NXnQdKoM ^"Ward Against Faeries of the Wood" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 0
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "Like Ward Against Faeries of the Waters (ReAq Gen), but for faeries of the wood. At some angles, at night, the ring appears to be a green-hued dome."
+    }
+
+    #tHuBxMN2LkDjo1FnmrS0hXCk ^"Dance of the Staves" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Causes a pole, staff, haft, or any other long, thin, non-living wooden object to bend and lash about wildly for a few seconds and then stop suddenly. A whirling staff strikes its holder and does +4 Damage, with a possible bonus if the weapon at the head of the pole hits the person."
+    }
+
+    #tRxsWndFveKGBeYLy1dvShbH ^"Repel the Wooden Shafts" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Deflects a single blow of any weapon made of wood, up to the size of a two-handed club. The attack automatically misses, but the attacker still rolls to see if he or she botches (with two extra botch rolls for melee weapons). If you ordinarily carry a wooden staff, it must be tossed aside for the casting."
+    }
+
+    #tOaG8HxqnQM3hxHvZtWUP55E ^"Strike of the Angered Branch" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +1 "Part"
+            }
+        }
+        DESCRIPTION "Causes a large tree branch to swing at a target. The branch's Attack score is equal to your Perception + Finesse. Damage is +10. You may strike repeatedly with the branch, striking once per round for as long as the spell lasts."
+    }
+
+    #tMu5kt7Puiy6GMQZcsAmcOYx ^"Tangle of Wood and Thorns" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +1 "Muto requisite"
+            }
+        }
+        DESCRIPTION "Takes a length of wood that you designate and hurls it at a target (a Targeting roll is required). The wood wraps around and immobilizes the target (assuming that there is enough wood), who must make a Strength stress roll against an Ease Factor of 9 to break free (one attempt per round). If the victim ever botches, he cannot escape without outside help. If the length of wood has thorns, it does +6 damage when it hits, and again each time the target tries to break free, whether successful or not. When the caster stops concentrating, the target can escape on a Strength roll against an Ease Factor of 6."
+    }
+
+    #tUFl8DQv1Sp5thtjQf5c141a ^"Coils of the Entangling Plants" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "Animates all the grass and small plants within a field delineated from side to side by your outstretched arms and in front by no more than 15 paces of distance. The plants grab and wrap themselves around the people nearest to them (Strength stress roll of 9+ to break free, rolled once per minute). If a roll to break free ever botches, the victim cannot escape on his or her own. With a Concentration roll of 6+, you can release one individual a round."
+    }
+
+    #t7dMV2CR4KAcWZYhchQR5Lr3 ^"Lord of the Trees" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "Causes a tree to move its branches and bend its trunk in any way you mentally direct. A large tree striking with branches has Initiative +5, Attack +7, and Damage +10. Normal weapons are practically useless against large trees."
+    }
+
+    #tCcdorWwotKcO34OKRco0II3 ^"The Treacherous Spear" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Diam"
+            }
+        }
+        DESCRIPTION "This spell animates a wooden or wooden-hafted melee weapon in someone else's hand, and makes that weapon attack its holder until the wielder is dead or the weapon is destroyed. When the spell is cast, the weapon tries to break its wielder's hold (Quickness – Encumbrance stress roll against an Ease Factor of 9 to hang on). On subsequent rounds, the wielder hangs on by making Strength stress rolls against an Ease Factor of 6, allowed once per round. If a roll to hold on ever botches, the wielder loses control of the weapon and is hit by it automatically (see below). While still in its wielder's grip, the weapon does not strike him or her, but does not strike on the wielder's behalf either. Once the weapon breaks free or is released, it attacks its wielder, using his Attack and Damage scores. The former wielder may fight the rebellious weapon. The weapon uses its defense rating as its Defense total. It has no Soak, and is 'killed' after it takes a wound depending on its size. One-handed weapons must take a Medium Wound, while two-handed weapons must take a Heavy Wound. The damage of thrusting and missile weapons is halved when attacking the renegade weapon."
+    }
+
+    #t7z5hVyqBGTJdIaQDSRX2rlc ^"Twist the Living Tree" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "You make a living tree bend into unusual positions. Depending on your needs, you can make a cage, a shelter, or a wall. Even the leaves can be commanded, maybe to form a solid roof that sheds rain. Takes one to ten minutes to complete (depending on the complexity of the new shape), during which time you must maintain concentration."
+    }
+
+    #tsPcijCzbDS3GghA0uLaUXia ^"Ward Against Wood" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "The caster is protected from non-enchanted wood, so that none of it can contact his body. If he is walking on a wooden surface, he is actually suspended very slightly above it."
+    }
+
+    #tehbrkOEKB2GS7Hhcb2zXziI ^"Freeing the Striding Tree" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "Like Lord of the Trees, above, but the tree can walk half as fast as a human can. If you botch a Concentration roll to maintain control, the tree attacks you, having been awakened and disturbed by this spell."
+    }
+
+    #tWkAem6SWdTVOYRGusJxBFRm ^"Calling the Council of the Trees" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Herbam" FIXED
+            ^"Level" INTEGER 45 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Boundary"
+            ^"Requisite" STRING "Intellego"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +3 "Moon"
+            +4 "Bound"
+            }
+            NOTES ["no cost for Intellego effect"]
+        }
+        DESCRIPTION "You call all magical and potentially mobile trees within the woodland where you cast the ritual to the site of the ritual. The trees are compelled to come, and will likely be interested in whoever has called them. The attitude of the trees depends on the forest and the nature of the one who called. Once gathered, the trees hold meetings, summon ancient powers, and discuss the problems facing their kind. You may speak, and understand what the trees are discussing. The results of the conference may not be entirely in your favor. The trees remain animated for a month and may seek to return home before the end of that period."
+    }
+}

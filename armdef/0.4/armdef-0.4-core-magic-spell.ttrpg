@@ -1,0 +1,72 @@
+BASE "ARMDef_Core_Magic_Spell" {
+    NAME "Ars Magica Definitive Edition - Formulaic Spell (core stub)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+
+    # Minimal base type for Hermetic formulaic spells, so per-Form spell
+    # buckets (e.g. armdef-0.4-spells-ignem.ttrpg) have a shared type to
+    # EXTEND. Individual spells set concrete inline values and do not
+    # restate these constraints (Definitions vs. Instances, spec S5).
+    #
+    # General-level spells (ruling 2026-07-14): the Level INTEGER MIN 1
+    # constraint holds for ALL spells — a general-level ("Gen") spell is
+    # still invented/learned at some level >= 1. Book entries with no fixed
+    # level omit ^"Level", set ^"General Level" BOOLEAN true, and their
+    # rule text MUST detail how the level is chosen/modified and under what
+    # conditions (directly, in magnitudes, or by explicit cross-reference
+    # to a spell whose text does). Verified for all 33 such entries.
+
+    #tM30boZOkiiaD5LRZZQQ1ymk ^"Formulaic Spell" DEF {
+        APPLIES TO [^"Magus"]
+
+        PROPERTIES {
+            ^"Technique" ENUM ["Creo", "Intellego", "Muto", "Perdo", "Rego"] REQUIRED
+            ^"Form" ENUM ["Animal", "Aquam", "Auram", "Corpus", "Herbam", "Ignem", "Imaginem", "Mentem", "Terram", "Vim"] REQUIRED
+            ^"Level" INTEGER MIN 1
+            ^"General Level" BOOLEAN DEFAULT false
+            ^"Range" STRING REQUIRED
+            ^"Duration" STRING REQUIRED
+            ^"Target" STRING REQUIRED
+            ^"Requisite" STRING
+            ^"Ritual" BOOLEAN DEFAULT false
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    # Base types for the chapter VII Hermetic Magic content
+    # (armdef-0.4-hermetic-magic.ttrpg): the fifteen Arts, the Limits of
+    # Magic, and the mastered-spell special abilities.
+
+    #tRgVo1ja4K0oM5BwXFMt8dFK ^"Hermetic Technique" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Abbreviation" STRING REQUIRED
+            ^"Translation" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tUEdmiz0IADMNt9MPAbcgRyn ^"Hermetic Form" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Abbreviation" STRING REQUIRED
+            ^"Translation" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #t3vdWl9TWhxG4S0waItLmRoZ ^"Limit of Magic" DEF {
+        APPLIES TO [^"Formulaic Spell"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tiDWDjMUHSOKAO2CeCPlgNU7 ^"Spell Mastery Ability" DEF {
+        APPLIES TO [^"Magus"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

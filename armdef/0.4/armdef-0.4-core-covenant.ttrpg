@@ -1,0 +1,98 @@
+BASE "ARMDef_Core_Covenant" {
+    NAME "Ars Magica Definitive Edition - Covenant (core stub)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+
+    # Base types for the chapter VI Covenants content
+    # (armdef-0.4-covenants.ttrpg). The covenant is an ACTOR: "the single most
+    # important character in most Ars Magica sagas". Hook/Boon entries are
+    # Flaw/Virtue-shaped enumerables; printed names recur across kinds and
+    # magnitudes, so instances carry disambiguated names ("Monster (Minor
+    # Hook)") with the magnitude as a property.
+
+    #tqPOcmupI8sEPkY2NKMNZUVO ACTOR "Covenant" DEF {
+        PROPERTIES {
+            ^"Season" STRING
+            ^"Aura" INTEGER
+            ^"Build Points" INTEGER
+            # as-printed composition entries, resolvable by name against the
+            # Hook/Boon DEFs ("Aura (Minor) x2", "Contested Resource (Minor) (x3)")
+            ^"Hooks" LIST OF STRING
+            ^"Boons" LIST OF STRING
+            ^"Library" STRING
+            ^"Lab Texts" STRING
+            ^"Casting Tablets" STRING
+            ^"Vis" STRING
+            ^"Enchanted Items" STRING
+            ^"Income Sources" LIST OF STRING
+            ^"Prevailing Loyalty" INTEGER
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "The covenant is the single most important character in most ARS MAGICA sagas, because it is the character that all the players contribute to. It is their home, a secure base, and the place where they study, improve, and create magical wonders. Thus, coming up with a concept for the covenant is very important, as it will have a strong influence on the feel of the saga. A saga based on a covenant located in a hidden regio in the heart of Constantinople will be very different from one based in a covenant occupying a large castle on an island off the coast of Scotland, and different again from one based in a covenant in a magical glade in the heart of a haunted forest in Brittany.\nAlthough the covenant concept has an influence, it isn't all-defining. Many stories will, after all, take the magi away from their covenant, and if the troupe decides that it likes a particular sort of story, most of the stories may take place away from home. Covenants can even be moved, a proposition that will create a lot of stories in itself. This means that you should choose a concept you like when you start out, without worrying that you will be stuck with it forever."
+    }
+
+    #tQFcOosEBZ5B5Ze4p4Y1j7ly ^"Covenant Season" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+        DESCRIPTION "The Order of Hermes traditionally classifies covenants into four seasons: Spring, Summer, Autumn, and Winter. These informal labels refer to the different stages of a covenant's life, and most magi agree on them most of the time. They are also an important part of the covenant concept, because a lot of features depend on the season."
+    }
+
+    #tVLjZ6kwgeYw5FGnoxtkf0cd ^"Covenant Situation" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Hooks" LIST OF STRING
+            ^"Boons" LIST OF STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tPhoL2rnJvbItWypGngx8n2N ^"Hook" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major"] REQUIRED
+            ^"Requires" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #te6NaMwV2LTJOs2GI64z5WYp ^"Boon" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Magnitude" ENUM ["Minor", "Major"] REQUIRED
+            ^"Requires" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tn3dUiMl5WpRgkTC1cQYvMqc ^"Income Source" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tXH2Cc7nMvHnFhk1AvC8luch ^"Covenfolk Category" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #tqm5spSP4ZxVcYy65BPOyVCP ^"Expenditure Category" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Table" LIST OF STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+
+    #t8XCVIcYP0fTZE4WdgSGa3SO ^"Covenfolk Organization" DEF {
+        APPLIES TO [^"Covenant"]
+        PROPERTIES {
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

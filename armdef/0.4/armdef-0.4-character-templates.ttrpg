@@ -1,0 +1,1671 @@
+EXTENSION "ARMDef_Character_Templates" {
+    NAME "Ars Magica Definitive Edition - Character Templates"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+    #tXCauTdW6hZs9x4tg2H4Mr1J TEMPLATE "The Berserker" DEF {
+        EXTENDS ^"Grog"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 1
+            ^"Age" INTEGER 15
+            ^"Apparent Age" INTEGER 15
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Virtues" LIST ["Covenfolk", "Berserk", "Large"]
+            ^"Flaws" LIST ["Short Attention Span", "Wrathful (Minor)"]
+            ^"Soak" INTEGER 9 NOTE "Stamina, full metal scale armor"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
+            ^"Equipment" LIST ["Pole Axe", "Full metal scale armor", "pack containing gear to care for weapons and armor and establish camps when traveling."]
+            ^"Encumbrance" STRING "0 (3)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Angry" +3
+            "Brave" +3
+            "Loyal" +1
+        }
+        COMBAT {
+            "Pole Axe" INIT 2 ATTACK 13 DEFENSE 7 DAMAGE 14
+            "Kick" INIT 0 ATTACK 6 DEFENSE 4 DAMAGE 6
+        }
+        ABILITIES {
+            "Area Lore" SCORE 1 SPECIALTY "streams"
+            "Athletics" SCORE 2 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "attackers"
+            "Brawl" SCORE 3 SPECIALTY "kicking"
+            "Guile" SCORE 1 SPECIALTY "apologizing"
+            "Great Weapons" SCORE 5 SPECIALTY "pole axe"
+            "Native Language" SCORE 5 SPECIALTY "insults"
+            "Single Weapon" SCORE 1 SPECIALTY "heater shield"
+            "Survival" SCORE 3 SPECIALTY "hills"
+        }
+        CHOICES {
+            "The Berserker's Large Virtue could be swapped out for an Affinity or Puissant Ability with Great Weapons. In addition he could have another Flaw, and take one of those Virtues to balance it. Other than that, he is young, so most of his Abilities are dictated by the concept. The Abilities at 1 or 2 can be swapped around, though."
+        }
+    }
+
+    #tkmJS94XLXXsCtqV566FZ7oU TEMPLATE "The Grizzled Veteran" DEF {
+        EXTENDS ^"Grog"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 1 AGING_POINTS 1
+                ^"Dexterity" INTEGER 2 AGING_POINTS 2
+                ^"Quickness" INTEGER 2 AGING_POINTS 2
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 45
+            ^"Apparent Age" INTEGER 45
+            ^"Decrepitude" INTEGER 1
+            ^"Decrepitude Points" INTEGER 2
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Virtues" LIST ["Covenfolk", "Warrior"]
+            ^"Flaws" LIST ["Weakness (talking back to magi)"]
+            ^"Soak" INTEGER 8 NOTE "full metal scale armor"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" LIST ["Axe", "Heater Shield", "Full Metal Scale Armor", "pack containing gear to care for weapons and armor and establish camps when traveling."]
+            ^"Encumbrance" STRING "4 (4)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Cheeky" +2
+            "Brave" +1
+        }
+        COMBAT {
+            "Axe & Heater Shield" INIT -1 ATTACK 15 DEFENSE 14 DAMAGE 6
+            "Kick" INIT -3 ATTACK 6 DEFENSE 5 DAMAGE 3
+        }
+        ABILITIES {
+            "Area A Lore" SCORE 4 SPECIALTY "monsters"
+            "Area B Lore" SCORE 2 SPECIALTY "monsters"
+            "Awareness" SCORE 5 SPECIALTY "in combat"
+            "Bows" SCORE 5 SPECIALTY "longbow"
+            "Brawl" SCORE 3 SPECIALTY "kicking"
+            "Carouse" SCORE 3 SPECIALTY "with fighting friends"
+            "Folk Ken" SCORE 1 SPECIALTY "magi"
+            "Great Weapon" SCORE 5 SPECIALTY "pole axe"
+            "Guile" SCORE 2 SPECIALTY "getting extra rations"
+            "Leadership" SCORE 3 SPECIALTY "in combat"
+            "Living Language" SCORE 5 SPECIALTY "military talk"
+            "Order of Hermes Lore" SCORE 3 SPECIALTY "grogs"
+            "Single Weapon" SCORE 8 SPECIALTY "heater shield"
+            "Stealth" SCORE 3 SPECIALTY "when armored"
+            "Survival" SCORE 1 SPECIALTY "when in a group"
+            "Thrown Weapon" SCORE 4 SPECIALTY "knife"
+        }
+        CHOICES {
+            "The Grizzled Veteran has been around the covenant for years, but has never reached a formal position of leadership, because he has a tendency to talk back to the magi. On the other hand, he makes a good informal leader of the grogs. Age hasn't really slowed him down yet, but it is about to, and the years have already reduced his Presence and Communication to –1 each."
+            "He could take another two Flaws and a corresponding number of Virtues if desired, and his Ability scores can be moved around. The high set should probably be kept in combat, but he could specialize in a different sort of combat (you would have to recalculate Combat Totals), and the secondary abilities can be moved around at will."
+        }
+    }
+
+    #tXzK6OctGA7azAIj3Us9ZHKz TEMPLATE "The Hunter" DEF {
+        EXTENDS ^"Grog"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 20
+            ^"Apparent Age" INTEGER 20
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Virtues" LIST ["Covenfolk", "Warrior"]
+            ^"Flaws" LIST ["Pessimistic"]
+            ^"Soak" INTEGER 3 NOTE "partial leather armor, Stamina"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" LIST ["Partial heavy leather", "short bow", "arrows", "survival kit."]
+            ^"Encumbrance" STRING "2 (2)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Loyal" +1
+            "Pessimistic" +3
+        }
+        COMBAT {
+            "Short Bow" INIT -1 ATTACK 9 DEFENSE 6 DAMAGE 6
+        }
+        ABILITIES {
+            "Area Lore" SCORE 4 SPECIALTY "game trails"
+            "Athletics" SCORE 1 SPECIALTY "climbing"
+            "Awareness" SCORE 5 SPECIALTY "woodlands"
+            "Bows" SCORE 4 SPECIALTY "shooting from cover"
+            "Hunt" SCORE 5 SPECIALTY "deer"
+            "Native Language" SCORE 5 SPECIALTY "talking about forests"
+            "Stealth" SCORE 2 SPECIALTY "hunting"
+            "Survival" SCORE 4 SPECIALTY "woodlands"
+        }
+        CHOICES {
+            "The hunter is extremely useful in the wilderness, and can guide the party as well as take part in missile combat. He can also help to support the covenant by bringing in food. He doesn't work well in social situations, though. Note that the character's Bows score uses the bonus XP from Warrior, and thus cannot go below 4, but otherwise the values of his Abilities, apart from his Native Language, can be swapped freely."
+        }
+    }
+
+    #tk0qAZFOO0ApcwILfg3ERTbu TEMPLATE "The Specialist" DEF {
+        EXTENDS ^"Grog"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 19
+            ^"Apparent Age" INTEGER 19
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Virtues" LIST ["Covenfolk", "Affinity with Single Weapon", "Puissant Ability (Single Weapon)", "Warrior"]
+            ^"Flaws" LIST ["Afflicted Tongue (stammer)", "Obsessed (improving Single Weapon ability)", "Poor Communication"]
+            ^"Soak" INTEGER 9 NOTE "full metal scale armor"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" LIST ["Axe", "Heater Shield", "Full metal scale armor", "pack containing gear to care for weapons and armor and establish camps when traveling."]
+            ^"Encumbrance" STRING "2 (4)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Loyal" +2
+            "Quiet" +1
+        }
+        COMBAT {
+            "Axe & Heater Shield" INIT 1 ATTACK 17 DEFENSE 15 DAMAGE 8
+            "Fist" INIT 0 ATTACK 8 DEFENSE 7 DAMAGE 2
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "warriors"
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Awareness" SCORE 4 SPECIALTY "in combat"
+            "Bargain" SCORE 2 SPECIALTY "weapons"
+            "Bows" SCORE 1 SPECIALTY "short bow"
+            "Brawl" SCORE 5 SPECIALTY "dodging"
+            "Carouse" SCORE 1 SPECIALTY "drinking"
+            "Living Language" SCORE 5 SPECIALTY "talking about fighting"
+            "Single Weapon" SCORE 7 SPECIALTY "Heater Shield"
+        }
+        CHOICES {
+            "The Specialist can easily focus on a different Ability, although you might want to swap the Characteristics around as well if he does, and probably change Warrior for one of the other experience-point-granting Virtues, such as Educated or Well-Traveled. You can change Personality Traits freely, and assign the Ability scores to other Abilities. Similarly, the Flaws can be changed without changing the central concept of the character."
+        }
+    }
+
+    #tUpjyKZigfcCatJyGSqsNmJc TEMPLATE "The Standard Soldier" DEF {
+        EXTENDS ^"Grog"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Virtues" LIST ["Covenfolk", "Warrior"]
+            ^"Flaws" LIST ["Weakness"]
+            ^"Soak" INTEGER 8 NOTE "full metal scale armor"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" LIST ["Axe", "Heater Shield", "Full metal scale armor", "pack containing gear to care for weapons and armor and establish camps when traveling"]
+            ^"Encumbrance" STRING "3 (4)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Loyal" +2
+            "Garrulous" +1
+        }
+        COMBAT {
+            "Axe & Heater Shield" INIT 0 ATTACK 12 DEFENSE 11 DAMAGE 7
+            "Fist" INIT -1 ATTACK 7 DEFENSE 7 DAMAGE 1
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "taverns"
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "in combat"
+            "Bows" SCORE 4 SPECIALTY "short bow"
+            "Brawl" SCORE 4 SPECIALTY "punching"
+            "Carouse" SCORE 3 SPECIALTY "drinking"
+            "Charm" SCORE 2 SPECIALTY "opposite sex"
+            "Etiquette" SCORE 2 SPECIALTY "magi"
+            "Great Weapon" SCORE 4 SPECIALTY "pole axe"
+            "Guile" SCORE 2 SPECIALTY "avoiding duties"
+            "Native Language" SCORE 5 SPECIALTY "rude words"
+            "Single Weapon" SCORE 5 SPECIALTY "heater shield"
+            "Survival" SCORE 1 SPECIALTY "for a short period"
+        }
+        CHOICES {
+            "The standard soldier's Weakness can be chosen freely, and he makes a good base for creating a slightly non-standard grog, by adding Virtues and Flaws and rearranging his Abilities."
+        }
+    }
+
+    #tT4o2G3t6tS2chQb0IlgzlPN TEMPLATE "The Tough Guy" DEF {
+        EXTENDS ^"Grog"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 1
+            ^"Age" INTEGER 19
+            ^"Apparent Age" INTEGER 19
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Virtues" LIST ["Covenfolk", "Large", "Tough", "Warrior"]
+            ^"Flaws" LIST ["No Sense of Direction", "Overconfident (thinks he can't really be hurt)", "Weakness (drinking)"]
+            ^"Soak" INTEGER 13 NOTE "full metal scale armor + Tough"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24)"
+            ^"Equipment" LIST ["Axe", "Heater Shield", "Full metal scale armor", "pack containing gear to care for weapons and armor and establish camps when traveling"]
+            ^"Encumbrance" STRING "3 (4)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Loyal" +2
+            "Overconfident" +3
+        }
+        COMBAT {
+            "Axe & Heater Shield" INIT -1 ATTACK 10 DEFENSE 10 DAMAGE 7
+            "Fist" INIT -2 ATTACK 3 DEFENSE 4 DAMAGE 1
+        }
+        ABILITIES {
+            "Area Lore" SCORE 2 SPECIALTY "brewers"
+            "Athletics" SCORE 1 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "in combat"
+            "Bows" SCORE 1 SPECIALTY "shortbow"
+            "Brawl" SCORE 3 SPECIALTY "grappling"
+            "Carouse" SCORE 4 SPECIALTY "drinking"
+            "Charm" SCORE 3 SPECIALTY "when drunk"
+            "Folk Ken" SCORE 1 SPECIALTY "magi"
+            "Great Weapon" SCORE 3 SPECIALTY "pole axe"
+            "Guile" SCORE 1 SPECIALTY "lying to magi"
+            "Living Language" SCORE 5 SPECIALTY "talking about fighting"
+            "Music" SCORE 1 SPECIALTY "drinking songs"
+            "Single Weapon" SCORE 5 SPECIALTY "heater shield"
+            "Survival" SCORE 1 SPECIALTY "on rivers"
+            "Thrown Weapon" SCORE 2 SPECIALTY "axe"
+        }
+        CHOICES {
+            "The Tough Guy works well as a defender for a magus, because he can take a lot of punishment before dropping and making the magus vulnerable. The Virtues depend on the concept, but the Flaws can be changed freely, and his combat Ability scores can be swapped freely between the combat Abilities he has."
+        }
+    }
+
+    #tlOGmpCxLK7nU9oXbONDwWR8 TEMPLATE "The Female Scholar" DEF {
+        EXTENDS ^"Companion"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 5
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER -1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 20
+            ^"Apparent Age" INTEGER 20
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Virtues" LIST ["Clerk", "Apt Student", "Book Learner", "Good Teacher", "Great Intelligence (x2)", "Improved Characteristics"]
+            ^"Flaws" LIST ["Black Sheep", "Driven (Major) (prove herself a greater scholar than any man)", "Social Handicap (outspoken advocate of the abilities of women)"]
+            ^"Soak" INTEGER -1 NOTE "Stamina"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" LIST ["Clothes", "a slate or wax tablet for writing on"]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Scholarly" +3
+            "Independent" +1
+            "Trusting" -2
+        }
+        REPUTATIONS {
+            "Selfish shrew" SCORE 2 TYPE "Local"
+        }
+        COMBAT {
+            "Dodging" INIT 1 DEFENSE 1
+        }
+        ABILITIES {
+            "Arabic" SCORE 1 SPECIALTY "medical terms"
+            "Area Lore" SCORE 2 SPECIALTY "nunneries"
+            "Artes Liberales" SCORE 3 SPECIALTY "rhetoric"
+            "Charm" SCORE 2 SPECIALTY "scholars"
+            "Church Lore" SCORE 2 SPECIALTY "scholars"
+            "Civil and Canon Law" SCORE 1 SPECIALTY "rights of women"
+            "Folk Ken" SCORE 2 SPECIALTY "scholars"
+            "Guile" SCORE 2 SPECIALTY "lying to authority figures"
+            "Latin" SCORE 5 SPECIALTY "academic debate"
+            "Living Language" SCORE 5 SPECIALTY "debate"
+            "Medicine" SCORE 1 SPECIALTY "women's illnesses"
+            "Philosophiae" SCORE 3 SPECIALTY "moral philosophy"
+            "Teaching" SCORE 3 SPECIALTY "Artes Liberales"
+            "Theology" SCORE 2 SPECIALTY "status of women"
+        }
+        CHOICES {
+            "Her current Virtues are very focused on scholarship, so changing one or two for Virtues that emphasize a different aspect of her life would be fine. Similarly, the emphasis of her studies could be moved to a different subject, as long as she still has a score of at least one in Artes Liberales, so that she is literate."
+        }
+        DESCRIPTION "The female scholar has estranged herself from her family by refusing to marry a suitable man, and instead pursuing her bizarre interest in academia. She has probably come to the covenant because it is the only place where she can study freely, and she wants access to the covenant library if she doesn't already have it."
+    }
+
+    #teXvhnbRgXdqpUuKDsoFus9v TEMPLATE "The Knight" DEF {
+        EXTENDS ^"Companion"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 1
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Virtues" LIST ["Knight", "Wealthy", "Improved Characteristics", "Puissant Single Weapon", "Relic"]
+            ^"Flaws" LIST ["Oath of Fealty", "Proud (Major)", "Overconfident (Minor)"]
+            ^"Soak" INTEGER 10 NOTE "chain mail, Stamina"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" LIST ["Full chain mail", "long sword", "heater shield", "great sword"]
+            ^"Encumbrance" STRING "2 (3)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Overconfident" +3
+            "Proud" +6
+        }
+        COMBAT {
+            "Long sword and heater shield (mounted)" INIT 2 ATTACK 17 DEFENSE 17 DAMAGE 7
+            "Long sword and heater shield (on foot)" INIT 2 ATTACK 14 DEFENSE 14 DAMAGE 7
+            "Great sword (mounted)" INIT 2 ATTACK 16 DEFENSE 13 DAMAGE 10
+            "Great sword (on foot)" INIT 2 ATTACK 13 DEFENSE 10 DAMAGE 10
+            "Fist" INIT 0 ATTACK 5 DEFENSE 5 DAMAGE 1
+        }
+        ABILITIES {
+            "Animal Handling" SCORE 2 SPECIALTY "falconry"
+            "Area Lore" SCORE 3 SPECIALTY "nobles"
+            "Athletics" SCORE 2 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "battle"
+            "Brawl" SCORE 2 SPECIALTY "punching"
+            "Chirurgy" SCORE 1 SPECIALTY "sword wounds"
+            "Etiquette" SCORE 3 SPECIALTY "noble"
+            "Great Weapon" SCORE 5 SPECIALTY "great sword"
+            "Hunt" SCORE 2 SPECIALTY "deer"
+            "Intrigue" SCORE 1 SPECIALTY "noble courts"
+            "Leadership" SCORE 4 SPECIALTY "soldiers"
+            "Music" SCORE 1 SPECIALTY "singing"
+            "Native Language" SCORE 5 SPECIALTY "giving orders"
+            "Ride" SCORE 5 SPECIALTY "in combat"
+            "Single Weapon" SCORE 5 SPECIALTY "heater shield"
+            "Survival" SCORE 1 SPECIALTY "forests"
+        }
+        CHOICES {
+            "The Knight's Wealthy Virtue gives him a lot of experience points, and so cannot be changed without effectively recreating the character from scratch. Oath of Fealty can be swapped for True Love and still be appropriate. In fact, both are so appropriate to a knight that the troupe may allow you to take both, as the character can still take three more points of Flaws. Note that the character regards himself as superior to just about anyone, unless you change the Major Personality Flaw, and doesn't have the Abilities to interact well with equals."
+        }
+    }
+
+    #t5AXrq2oM0eqL1TrxSbJaCdw TEMPLATE "The Priest" DEF {
+        EXTENDS ^"Companion"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 33
+            ^"Apparent Age" INTEGER 33
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Virtues" LIST ["Priest", "Inspirational", "Lesser Immunity (lightning)", "Relic", "Sense Holiness and Unholiness", "Social Contacts (minor clergy)", "Student of the Divine", "Well-Traveled", "Plagued by Angel"]
+            ^"Flaws" LIST ["Compassionate (Major)", "Clumsy", "Vow of Celibacy"]
+            ^"Soak" INTEGER 0 NOTE "Stamina"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" LIST ["Priest's clothes", "a missal"]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Compassionate" +3
+            "Pious" +3
+            "Loyal" +2
+        }
+        COMBAT {
+            "Dodging" INIT 0 DEFENSE 2
+        }
+        ABILITIES {
+            "Area Lore" SCORE 5 SPECIALTY "churches"
+            "Artes Liberales" SCORE 2 SPECIALTY "rhetoric"
+            "Brawl" SCORE 1 SPECIALTY "dodging"
+            "Charm" SCORE 5 SPECIALTY "parishioners"
+            "Church Lore" SCORE 3 SPECIALTY "local diocese"
+            "Civil and Canon Law" SCORE 1 SPECIALTY "regulations for the clergy"
+            "Dominion Lore" SCORE 5 SPECIALTY "angels"
+            "Etiquette" SCORE 3 SPECIALTY "Church"
+            "Folk Ken" SCORE 6 SPECIALTY "people he knows very well"
+            "Intrigue" SCORE 1 SPECIALTY "parishes"
+            "Latin" SCORE 4 SPECIALTY "the Bible"
+            "Leadership" SCORE 3 SPECIALTY "preaching"
+            "Living Language" SCORE 5 SPECIALTY "preaching"
+            "Sense Holiness and Unholiness" SCORE 4 SPECIALTY "angels"
+            "Theology" SCORE 2 SPECIALTY "angelology"
+        }
+        CHOICES {
+            "The Priest could take another two Minor Flaws and corresponding Virtues, if desired. He may be unaware of his immunity, or being struck by lightning and remaining completely unharmed may have been a central event in his past. If it happened, it should be. The nature of his Lesser Immunity can easily be changed, and even boosted to a Greater Immunity if you take two more Minor Flaws."
+        }
+    }
+
+    #tGs3EuKzDJPXvpG912C4EZkE TEMPLATE "The Rogue" DEF {
+        EXTENDS ^"Companion"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 4
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 20
+            ^"Apparent Age" INTEGER 20
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Virtues" LIST ["Wanderer", "Great Dexterity", "Great Quickness", "Improved Characteristics (x2)", "Light Touch", "Perfect Balance", "Puissant Legerdemain", "Puissant Stealth"]
+            ^"Flaws" LIST ["Avaricious (Major)", "Dark Secret", "Compulsion", "Night Terrors"]
+            ^"Soak" INTEGER 0 NOTE "Stamina"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" LIST ["Clothes", "secret stash of money that he never spends"]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Avaricious" +6
+            "Daring" +2
+            "Sociable" +2
+        }
+        COMBAT {
+            "Fist" INIT 4 ATTACK 7 DEFENSE 7 DAMAGE -1
+        }
+        ABILITIES {
+            "Area Lore" SCORE 1 SPECIALTY "rich people's homes"
+            "Athletics" SCORE 3 SPECIALTY "climbing"
+            "Awareness" SCORE 3 SPECIALTY "noticing whether he is observed"
+            "Brawl" SCORE 3 SPECIALTY "getting away"
+            "Charm" SCORE 2 SPECIALTY "people who think he's exciting"
+            "Folk Ken" SCORE 1 SPECIALTY "people in authority"
+            "Guile" SCORE 1 SPECIALTY "when caught red-handed"
+            "Legerdemain" SCORE 7 SPECIALTY "picking pockets"
+            "Native Language" SCORE 5 SPECIALTY "being polite"
+            "Stealth" SCORE 7 SPECIALTY "being quiet"
+        }
+        CHOICES {
+            "The Rogue's Dark Secret can be almost anything, but is most likely to be a particularly vile crime that he committed in the past, and now, probably, feels guilty about. The compulsion should be to commit some sort of minor criminal act, such as thievery, or to take risks to prove he can. This character is fundamentally fast and stealthy, although he can turn on the charm to a certain extent. By moving the numbers in Characteristics and Abilities, you can turn him into a charmer with some ability in stealth. Don't forget to change the Great Characteristic and Puissant Ability Virtues if you do this."
+        }
+    }
+
+    #tqLOCcXTpo0rUkcrEClDqLZO TEMPLATE "The Witch" DEF {
+        EXTENDS ^"Companion"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 30
+            ^"Apparent Age" INTEGER 30
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Virtues" LIST ["Wise One", "Educated", "Improved Characteristics", "Premonitions", "Second Sight", "Student of Magic", "Wilderness Sense"]
+            ^"Flaws" LIST ["Compassionate (Major)", "Enemies", "Nocturnal"]
+            ^"Soak" INTEGER 0 NOTE "Stamina"
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Equipment" LIST ["Old but sturdy clothes"]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Compassionate" +3
+            "Sociable" -1
+            "Trusting" -2
+        }
+        COMBAT {
+            "Dodging" INIT 0 DEFENSE 0
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "medicinal herbs"
+            "Artes Liberales" SCORE 1 SPECIALTY "astronomy"
+            "Athletics" SCORE 1 SPECIALTY "climbing"
+            "Awareness" SCORE 1 SPECIALTY "animals"
+            "Charm" SCORE 3 SPECIALTY "peasants"
+            "Chirurgy" SCORE 4 SPECIALTY "farm accidents"
+            "Divine Lore" SCORE 1 SPECIALTY "relics"
+            "Faerie Lore" SCORE 2 SPECIALTY "curses"
+            "Folk Ken" SCORE 3 SPECIALTY "peasants"
+            "Guile" SCORE 3 SPECIALTY "clergy"
+            "Infernal Lore" SCORE 1 SPECIALTY "diabolists"
+            "Latin" SCORE 4 SPECIALTY "medical terms"
+            "Magic Lore" SCORE 5 SPECIALTY "regiones"
+            "Medicine" SCORE 5 SPECIALTY "accidental poisonings"
+            "Native Language" SCORE 5 SPECIALTY "choosing words carefully"
+            "Premonitions" SCORE 3 SPECIALTY "threats to others"
+            "Second Sight" SCORE 3 SPECIALTY "ghosts"
+            "Survival" SCORE 3 SPECIALTY "near farmland"
+            "Wilderness Sense" SCORE 3 SPECIALTY "weather"
+        }
+        CHOICES {
+            "The Witch's magical powers are far, far weaker than a Hermetic magus's, but she doesn't have The Gift. She's an excellent healer, and people might not believe that her healing abilities are purely mundane. Intolerant clergy make good enemies, as do magical or faerie beings she has annoyed, although in that case you might want to change the Flaw to Plagued by Supernatural Entity or Supernatural Nuisance. She can take another Major Flaw, or three more Minor ones, along with corresponding Virtues."
+        }
+    }
+
+    #tbf2vEu3oJe6he5uB2EKmixi TEMPLATE "Bjornaer" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 0
+                ^"Intellego" INTEGER 1
+                ^"Muto" INTEGER 10
+                ^"Perdo" INTEGER 3
+                ^"Rego" INTEGER 1
+                ^"Animal" INTEGER 8
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 0
+                ^"Corpus" INTEGER 8
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 0
+                ^"Mentem" INTEGER 0
+                ^"Terram" INTEGER 0
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Ways of the Forest", "Heartbeast*", "Inoffensive to Animals", "Quiet Magic (x2)", "Subtle Magic"]
+            ^"Flaws" LIST ["Blatant Gift", "Tormenting Master", "Deficient Form (Ignem)"]
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes"]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +2
+            "Status-seeking" +2
+            "Obedient" +1
+        }
+        COMBAT {
+            "Dodging" INIT 1 DEFENSE 4
+        }
+        ABILITIES {
+            "Area Lore" SCORE 1 SPECIALTY "forests"
+            "Artes Liberales" SCORE 1 SPECIALTY "grammar"
+            "Athletics" SCORE 2 SPECIALTY "endurance"
+            "Awareness" SCORE 2 SPECIALTY "people"
+            "Brawl" SCORE 2 SPECIALTY "dodge"
+            "Finesse" SCORE 1 SPECIALTY "targeting"
+            "Folk Ken" SCORE 1 SPECIALTY "hunters"
+            "Guile" SCORE 1 SPECIALTY "pretending to know less than you do"
+            "Heartbeast" SCORE 2 SPECIALTY "changing into a wolf"
+            "Hunt" SCORE 2 SPECIALTY "small animals"
+            "Latin" SCORE 4 SPECIALTY "Hermetic terms"
+            "Living Language" SCORE 5 SPECIALTY "talking about the wilderness"
+            "Magic Theory" SCORE 3 SPECIALTY "Animal"
+            "Parma Magica" SCORE 1 SPECIALTY "Animal"
+            "Penetration" SCORE 1 SPECIALTY "Muto"
+            "Order of Hermes Lore" SCORE 1 SPECIALTY "Bjornaer"
+            "Second Area Lore" SCORE 1 SPECIALTY "forests"
+            "Survival" SCORE 3 SPECIALTY "forests"
+        }
+        SPELLS_KNOWN {
+            ^"Transformation of the Ravenous Beast to the Torpid Toad" TECHNIQUE "Muto" FORM "Animal" LEVEL 25 CASTING_TOTAL 19
+            ^"Agony of the Beast" TECHNIQUE "Perdo" FORM "Animal" LEVEL 15 CASTING_TOTAL 12
+            ^"Circle of Beast Warding" TECHNIQUE "Rego" FORM "Animal" LEVEL 5 CASTING_TOTAL 10
+            ^"Viper's Gaze" TECHNIQUE "Rego" FORM "Animal" LEVEL 15 CASTING_TOTAL 10
+            ^"Eyes of the Cat" TECHNIQUE "Muto" FORM "Corpus" REQUISITE "An" LEVEL 5 CASTING_TOTAL 19
+            ^"Gift of the Bear's Fortitude" TECHNIQUE "Muto" FORM "Corpus" LEVEL 25 CASTING_TOTAL 19
+            ^"The Wound that Weeps" TECHNIQUE "Perdo" FORM "Corpus" LEVEL 15 CASTING_TOTAL 12
+            ^"Lifting the Dangling Puppet" TECHNIQUE "Rego" FORM "Corpus" LEVEL 15 CASTING_TOTAL 10
+        }
+        CHOICES {
+            "The Bjornaer is much more comfortable with animals than with people, and may think of him or herself as just as much animal as human. The combination of Blatant Gift and Inoffensive to Animals means that she gets along better with animals than with people. Ways of the Forest should be changed to a terrain appropriate to the actual heartbeast; a wolf is assumed for the example. Both Major Flaws can be changed freely, and while Deficient Form (Ignem) is very common in House Bjornaer, there is no particular reason for your character to have it. Note that Quiet and Subtle Magic allow the magus to cast in his heartbeast form without any penalty."
+        }
+    }
+
+    #tUnZgttBQe4Bptnpb965GVX9 TEMPLATE "Bonisagus" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 5
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 12
+                ^"Intellego" INTEGER 0
+                ^"Muto" INTEGER 0
+                ^"Perdo" INTEGER 0
+                ^"Rego" INTEGER 3
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 12
+                ^"Corpus" INTEGER 4
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 0
+                ^"Mentem" INTEGER 0
+                ^"Terram" INTEGER 0
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Affinity with Auram", "Affinity with Creo", "Book Learner", "Free Study", "Great Intelligence (x2)", "Inventive Genius", "Puissant Magic Theory*", "Secondary Insight"]
+            ^"Flaws" LIST ["Favors", "Painful Magic", "Driven (Minor)", "Weak Enchanter"]
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes."]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" -1
+            "Driven" +3
+            "Studious" +2
+        }
+        COMBAT {
+            "Dodging" INIT 0 DEFENSE 0
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "logic"
+            "Awareness" SCORE 2 SPECIALTY "when working"
+            "Charm" SCORE 2 SPECIALTY "equals"
+            "Concentration" SCORE 3 SPECIALTY "spell casting"
+            "Folk Ken" SCORE 2 SPECIALTY "magi"
+            "Latin" SCORE 4 SPECIALTY "Hermetic technical terms"
+            "Magic Lore" SCORE 1 SPECIALTY "nonHermetic magic"
+            "Magic Theory" SCORE 4 SPECIALTY "Creo"
+            "Native Language" SCORE 5 SPECIALTY "educated talk"
+            "Order of Hermes Lore" SCORE 2 SPECIALTY "great discoveries"
+            "Parma Magica" SCORE 1 SPECIALTY "Mentem"
+            "Penetration" SCORE 1 SPECIALTY "Auram"
+            "Teaching" SCORE 3 SPECIALTY "Hermetic Arts"
+        }
+        SPELLS_KNOWN {
+            ^"Charge of the Angry Winds" TECHNIQUE "Creo" FORM "Auram" LEVEL 15 CASTING_TOTAL 24
+            ^"Clouds of Rain and Thunder" TECHNIQUE "Creo" FORM "Auram" LEVEL 25 CASTING_TOTAL 24
+            ^"Clouds of Summer Snow" TECHNIQUE "Creo" FORM "Auram" LEVEL 25 CASTING_TOTAL 24
+            ^"The Incantation of Lightning" TECHNIQUE "Creo" FORM "Auram" LEVEL 35 CASTING_TOTAL 24
+            ^"Purification of the Festering Wounds" TECHNIQUE "Creo" FORM "Corpus" LEVEL 20 CASTING_TOTAL 16
+        }
+        CHOICES {
+            "The Bonisagus is most likely Driven to make some great discovery in magic. He or she is a so-called 'lab rat', a magus happier in his laboratory than in the outside world. However, the favors he owes and his drive to discover are likely to push him out. Similarly, enchanted items are very useful to him, but he is bad at making them for himself. That also tends to drive him into stories. This concept is built around the Virtues and the Driven Flaw; the other Flaws can be changed easily. He can also take two additional Minor Flaws, or make Driven Major, and take two additional Minor Virtues to balance them. Similarly, the Arts in which the character has an Affinity can be changed, but that also requires changing the spells he knows."
+        }
+    }
+
+    #tLCD6Kmvc4vRROU9bHh2p3YN TEMPLATE "Criamon" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 4
+                ^"Intellego" INTEGER 6
+                ^"Muto" INTEGER 4
+                ^"Perdo" INTEGER 4
+                ^"Rego" INTEGER 4
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 0
+                ^"Corpus" INTEGER 0
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 2
+                ^"Mentem" INTEGER 1
+                ^"Terram" INTEGER 0
+                ^"Vim" INTEGER 10
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Flexible Formulaic Magic", "The Enigma*", "Magic Sensitivity", "Puissant Enigmatic Wisdom", "Side Effect", "Study Bonus"]
+            ^"Flaws" LIST ["Magic Addiction", "Twilight Prone", "Incomprehensible"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None (yet)"
+            ^"Equipment" LIST ["Wizardly robes."]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Enthusiastic" +3
+            "Friendly" +2
+            "Practical" -3
+        }
+        COMBAT {
+            "Dodging" INIT 1 DEFENSE 1
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "rhetoric"
+            "Charm" SCORE 5 SPECIALTY "educated people"
+            "Concentration" SCORE 3 SPECIALTY "spell casting"
+            "Enigmatic Wisdom" SCORE 3 SPECIALTY "riddles"
+            "Folk Ken" SCORE 1 SPECIALTY "educated people"
+            "Latin" SCORE 4 SPECIALTY "Enigmatic terms"
+            "Magic Sensitivity" SCORE 2 SPECIALTY "auras"
+            "Magic Theory" SCORE 3 SPECIALTY "Vim"
+            "Native Language" SCORE 5 SPECIALTY "long words"
+            "Order of Hermes Lore" SCORE 1 SPECIALTY "mysteries"
+            "Parma Magica" SCORE 1 SPECIALTY "Mentem"
+        }
+        SPELLS_KNOWN {
+            ^"Phantom of the Talking Head" TECHNIQUE "Creo" FORM "Imaginem" LEVEL 10 CASTING_TOTAL 8
+            ^"Aura of Ennobled Presence" TECHNIQUE "Muto" FORM "Imaginem" LEVEL 10 CASTING_TOTAL 8
+            ^"Piercing the Faerie Veil" TECHNIQUE "Intellego" FORM "Vim" LEVEL 20 CASTING_TOTAL 18
+            ^"Piercing the Magical Veil" TECHNIQUE "Intellego" FORM "Vim" LEVEL 20 CASTING_TOTAL 18
+            ^"Unraveling the Fabric of Imaginem" TECHNIQUE "Perdo" FORM "Vim" LEVEL 20 CASTING_TOTAL 16
+            ^"Wind of Mundane Silence" TECHNIQUE "Perdo" FORM "Vim" LEVEL 20 CASTING_TOTAL 16
+            ^"Circular Ward Against Demons" TECHNIQUE "Rego" FORM "Vim" LEVEL 20 CASTING_TOTAL 16
+        }
+        CHOICES {
+            "The Criamon does not have her maximum allowance of Flaws, so could take an additional Major Flaw or three Minor Flaws, with corresponding Virtues, if desired. Her Charm and Folk Ken scores could be moved into other Abilities available in the first five years of life (see the Detailed Character Creation rules, page 43), possibly also moving her good Presence score as well."
+        }
+    }
+
+    #tjy0SS5CHKdh5LFYemvIPIjA TEMPLATE "Ex Miscellanea" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER -2
+            }
+            ^"Size" INTEGER 2
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 8
+                ^"Intellego" INTEGER 0
+                ^"Muto" INTEGER 4
+                ^"Perdo" INTEGER 3
+                ^"Rego" INTEGER 5
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 0
+                ^"Corpus" INTEGER 1
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 0
+                ^"Mentem" INTEGER 0
+                ^"Terram" INTEGER 12
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Giant Blood*", "Major Magical Focus (stone)", "Affinity with Terram*", "Enduring Magic", "Improved Characteristics", "Puissant Terram", "Tough"]
+            ^"Flaws" LIST ["Generous (Major)", "Necessary Condition (touching stone)*", "Plagued by Supernatural Entity", "Deficient Auram"]
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes."]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Generous" +6
+            "Patient" +3
+            "Trusting" +2
+            "Vengeful" +2
+        }
+        COMBAT {
+            "Dodging" INIT -2 DEFENSE 1
+            "Grappling" INIT -2 ATTACK 2 DEFENSE 2
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "mountain trails"
+            "Artes Liberales" SCORE 1 SPECIALTY "astronomy"
+            "Brawl" SCORE 3 SPECIALTY "grappling"
+            "Concentration" SCORE 3 SPECIALTY "spellcasting"
+            "Finesse" SCORE 2 SPECIALTY "Terram"
+            "Latin" SCORE 4 SPECIALTY "Hermetic usage"
+            "Magic Theory" SCORE 3 SPECIALTY "Terram"
+            "Native Language" SCORE 5 SPECIALTY "being polite"
+            "Parma Magica" SCORE 1 SPECIALTY "Ignem"
+            "Penetration" SCORE 2 SPECIALTY "Terram"
+            "Survival" SCORE 3 SPECIALTY "mountains"
+        }
+        SPELLS_KNOWN {
+            ^"Wall of Protecting Stone" TECHNIQUE "Creo" FORM "Terram" LEVEL 25 CASTING_TOTAL 35
+            ^"The Crystal Dart" TECHNIQUE "Muto" FORM "Terram" REQUISITE "Re" LEVEL 10 CASTING_TOTAL 27
+            ^"Rock of Viscid Clay" TECHNIQUE "Muto" FORM "Terram" LEVEL 15 CASTING_TOTAL 27
+            ^"Earth that Breaks No More" TECHNIQUE "Muto" FORM "Terram" LEVEL 20 CASTING_TOTAL 27
+            ^"Obliteration of the Metallic Barrier" TECHNIQUE "Perdo" FORM "Terram" REQUISITE "Re" LEVEL 20 CASTING_TOTAL 22
+            ^"The Earth's Carbuncle" TECHNIQUE "Rego" FORM "Terram" REQUISITE "Mu" LEVEL 15 CASTING_TOTAL 27
+            ^"Hands of the Grasping Earth" TECHNIQUE "Rego" FORM "Terram" REQUISITE "Mu" LEVEL 15 CASTING_TOTAL 23
+        }
+        CHOICES {
+            "This Ex Miscellanea tradition grants the Virtues Giant Blood and Affinity with Terram, and the Flaw Necessary Condition: Touching Stone. The stone in question can be a piece of stone worn on a belt, for example, but it must be at least the size of the magus's hand (the magus has big hands). The magus doesn't have his full allowance of Flaws, so you can take another Major Flaw, or three more Minor, and corresponding Virtues."
+        }
+    }
+
+    #tKAiSIWkp2e4QGISpuggMCgP TEMPLATE "Flambeau" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 12
+                ^"Intellego" INTEGER 0
+                ^"Muto" INTEGER 0
+                ^"Perdo" INTEGER 4
+                ^"Rego" INTEGER 5
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 0
+                ^"Corpus" INTEGER 0
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 12
+                ^"Imaginem" INTEGER 0
+                ^"Mentem" INTEGER 0
+                ^"Terram" INTEGER 1
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Greater Immunity (Fire)", "Major Magical Focus (Flames)", "Affinity with Creo", "Affinity with Ignem", "Life Boost", "Puissant Ignem*"]
+            ^"Flaws" LIST ["Enemies", "Necessary Condition (must clap his hands)", "Wrathful (Major)"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes, smelling slightly of smoke."]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Wrathful" +6
+            "Thoughtful" -2
+        }
+        COMBAT {
+            "Dodging" INIT 1 DEFENSE 4
+        }
+        ABILITIES {
+            "Area Lore" SCORE 2 SPECIALTY "hiding places"
+            "Artes Liberales" SCORE 1 SPECIALTY "logic"
+            "Athletics" SCORE 2 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "in combat"
+            "Brawl" SCORE 2 SPECIALTY "dodging"
+            "Folk Ken" SCORE 1 SPECIALTY "people in authority over him"
+            "Guile" SCORE 3 SPECIALTY "claiming not to have done something"
+            "Hermes Lore" SCORE 1 SPECIALTY "House Flambeau"
+            "Latin" SCORE 4 SPECIALTY "insults"
+            "Living Language" SCORE 5 SPECIALTY "insults"
+            "Magic Theory" SCORE 3 SPECIALTY "Ignem"
+            "Parma Magica" SCORE 1 SPECIALTY "Mentem"
+            "Penetration" SCORE 2 SPECIALTY "Ignem"
+            "Stealth" SCORE 1 SPECIALTY "entering buildings or rooms"
+            "Survival" SCORE 1 SPECIALTY "woods"
+        }
+        SPELLS_KNOWN {
+            ^"Palm of Flame" TECHNIQUE "Creo" FORM "Ignem" LEVEL 5 CASTING_TOTAL 41
+            ^"Pilum of Fire" TECHNIQUE "Creo" FORM "Ignem" LEVEL 20 CASTING_TOTAL 41
+            ^"Arc of Fiery Ribbons" TECHNIQUE "Creo" FORM "Ignem" LEVEL 25 CASTING_TOTAL 41
+            ^"Ball of Abysmal Flame" TECHNIQUE "Creo" FORM "Ignem" LEVEL 35 CASTING_TOTAL 41
+            ^"Circle of Encompassing Flame" TECHNIQUE "Creo" FORM "Ignem" LEVEL 35 CASTING_TOTAL 41
+        }
+        CHOICES {
+            "The Flambeau is very much a one-trick pony. He can throw fire at opponents extremely effectively. His focused Arts and Magical Focus mean that he has some Penetration even for powerful spells. However, he is much weaker if he tries to do anything else. Wrathful and Enemies can be swapped out for other Flaws with no trouble, to break the stereotype a bit, as can his Greater Immunity. He can take another Minor Flaw, and balancing Minor Virtue."
+        }
+    }
+
+    #t5TuAyvDOUDkFfg672OAAKVl TEMPLATE "Guernicus" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 4
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 0
+                ^"Intellego" INTEGER 12
+                ^"Muto" INTEGER 0
+                ^"Perdo" INTEGER 2
+                ^"Rego" INTEGER 0
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 0
+                ^"Corpus" INTEGER 5
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 6
+                ^"Mentem" INTEGER 6
+                ^"Terram" INTEGER 0
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Affinity with Intellego", "Clear Thinker", "Great Perception", "Hermetic Prestige*", "Improved Characteristics", "Puissant Intellego", "Side Effect (lying is hard)"]
+            ^"Flaws" LIST ["Curse of Venus", "Restriction (no magic for Sun duration after lying)"]
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes"]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Honest" +3
+            "Fair" +2
+            "Nervous around the opposite sex" +2
+        }
+        REPUTATIONS {
+            "Quaesitor" SCORE 3 TYPE "Hermetic"
+        }
+        COMBAT {
+            "Dodging" INIT 0 DEFENSE 2
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "logic"
+            "Awareness" SCORE 3 SPECIALTY "clues"
+            "Brawl" SCORE 1 SPECIALTY "dodging"
+            "Charm" SCORE 2 SPECIALTY "people you suspect"
+            "Code of Hermes" SCORE 3 SPECIALTY "the local Tribunal"
+            "Concentration" SCORE 1 SPECIALTY "observing people or places"
+            "Folk Ken" SCORE 4 SPECIALTY "liars"
+            "Guile" SCORE 2 SPECIALTY "concealing investigations"
+            "Latin" SCORE 4 SPECIALTY "Hermetic terms"
+            "Magic Theory" SCORE 3 SPECIALTY "Intellego"
+            "Native Language" SCORE 5 SPECIALTY "questions"
+            "Order of Hermes Lore" SCORE 1 SPECIALTY "legal cases"
+            "Parma Magica" SCORE 1 SPECIALTY "Mentem"
+        }
+        SPELLS_KNOWN {
+            ^"Physician's Eye" TECHNIQUE "Intellego" FORM "Corpus" LEVEL 5 CASTING_TOTAL 20
+            ^"Eyes of the Eagle" TECHNIQUE "Intellego" FORM "Imaginem" LEVEL 25 CASTING_TOTAL 21
+            ^"Summoning the Distant Image" TECHNIQUE "Intellego" FORM "Imaginem" LEVEL 25 CASTING_TOTAL 21
+            ^"Invisibility of the Standing Wizard" TECHNIQUE "Perdo" FORM "Imaginem" LEVEL 15 CASTING_TOTAL 8
+            ^"Frosty Breath of the Spoken Lie" TECHNIQUE "Intellego" FORM "Mentem" LEVEL 20 CASTING_TOTAL 21
+            ^"Peering Into the Mortal Mind" TECHNIQUE "Intellego" FORM "Mentem" LEVEL 30 CASTING_TOTAL 21
+        }
+        CHOICES {
+            "If the Guernicus lies (says something she believes to be untrue as if it were true), she cannot use any magic until the sun next rises or sets. Anyone who wants to tell a lie in her presence soon after she casts a spell (within two minutes or so) must make a relevant Personality Trait check against an Ease Factor equal to the magnitude of the spell cast. If the check fails, he cannot bring himself to lie, although he can remain silent. The Guernicus could take four more points of Flaws, and corresponding Virtues."
+        }
+    }
+
+    #tDESjSlXKRu3XXB53UjgsCtD TEMPLATE "Jerbiton" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 6
+                ^"Intellego" INTEGER 1
+                ^"Muto" INTEGER 6
+                ^"Perdo" INTEGER 1
+                ^"Rego" INTEGER 6
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 0
+                ^"Corpus" INTEGER 5
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 10
+                ^"Mentem" INTEGER 0
+                ^"Terram" INTEGER 0
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Gentle Gift", "Free Expression", "Improved Characteristics", "Privileged Upbringing", "Puissant Music*", "Venus's Blessing"]
+            ^"Flaws" LIST ["Deficient Technique (Perdo)", "Necessary Condition (singing)", "Susceptibility to Infernal Power"]
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes"]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Friendly" +3
+            "Brave" +2
+            "Studious" +1
+        }
+        COMBAT {
+            "Dodging" INIT 0 DEFENSE 0
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "music"
+            "Carouse" SCORE 2 SPECIALTY "maintaining dignity"
+            "Charm" SCORE 3 SPECIALTY "the opposite sex"
+            "Code of Hermes" SCORE 1 SPECIALTY "dealing with mundanes"
+            "Etiquette" SCORE 2 SPECIALTY "nobility"
+            "Folk Ken" SCORE 2 SPECIALTY "nobles"
+            "Guile" SCORE 2 SPECIALTY "fast excuses"
+            "Latin" SCORE 5 SPECIALTY "musical terms"
+            "Magic Theory" SCORE 3 SPECIALTY "Imaginem"
+            "Music" SCORE 4 SPECIALTY "singing"
+            "Native Language" SCORE 5 SPECIALTY "noble style"
+            "Order of Hermes Lore" SCORE 2 SPECIALTY "Jerbiton"
+            "Parma Magica" SCORE 1 SPECIALTY "Mentem"
+        }
+        SPELLS_KNOWN {
+            ^"Phantasm of the Talking Head" TECHNIQUE "Creo" FORM "Imaginem" LEVEL 10 CASTING_TOTAL 16
+            ^"Phantasm of the Human Form" TECHNIQUE "Creo" FORM "Imaginem" LEVEL 25 CASTING_TOTAL 16
+            ^"Discern Own Illusions" TECHNIQUE "Intellego" FORM "Imaginem" LEVEL 15 CASTING_TOTAL 11
+            ^"Taste of the Spices and Herbs" TECHNIQUE "Muto" FORM "Imaginem" LEVEL 5 CASTING_TOTAL 16
+            ^"Aura of Ennobled Presence" TECHNIQUE "Muto" FORM "Imaginem" LEVEL 10 CASTING_TOTAL 16
+            ^"Notes of a Delightful Sound" TECHNIQUE "Muto" FORM "Imaginem" LEVEL 10 CASTING_TOTAL 16
+            ^"Disguise of the Transformed Image" TECHNIQUE "Muto" FORM "Imaginem" LEVEL 15 CASTING_TOTAL 16
+            ^"Illusion of Cool Flames" TECHNIQUE "Perdo" FORM "Imaginem" LEVEL 10 CASTING_TOTAL 6
+            ^"Illusion of the Shifted Image" TECHNIQUE "Rego" FORM "Imaginem" LEVEL 10 CASTING_TOTAL 16
+            ^"Wizard's Sidestep" TECHNIQUE "Rego" FORM "Imaginem" LEVEL 10 CASTING_TOTAL 16
+        }
+        CHOICES {
+            "The Jerbiton took Puissant Music as his free House-related Virtue. He is designed as a social creature who sees himself as an artist in music and magic. He can take up to three points more of Flaws, with the corresponding Virtues. Note that he has the Gentle Gift, and thus can interact with mundanes without any penalty."
+        }
+    }
+
+    #tYS7fl9i7zvzKNWqppDxI3Mc TEMPLATE "Mercere" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 6
+                ^"Intellego" INTEGER 4
+                ^"Muto" INTEGER 4
+                ^"Perdo" INTEGER 3
+                ^"Rego" INTEGER 5
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 12
+                ^"Corpus" INTEGER 2
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 0
+                ^"Mentem" INTEGER 2
+                ^"Terram" INTEGER 0
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Major Magical Focus (Weather)", "Affinity with Auram", "Cyclic Magic (Positive) — Day", "Puissant Auram", "Puissant Creo*", "Special Circumstances (during a storm)"]
+            ^"Flaws" LIST ["Ambitious (Major)", "Difficult Longevity Ritual", "Cyclic Magic (Negative) — Night"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes"]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Ambitious" +6
+            "Wanderer" +3
+            "Brave" +2
+        }
+        COMBAT {
+            "Dodging" INIT 1 DEFENSE 1
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "routes between settlements"
+            "Artes Liberales" SCORE 1 SPECIALTY "astronomy"
+            "Athletics" SCORE 1 SPECIALTY "hiking"
+            "Awareness" SCORE 1 SPECIALTY "weather signs"
+            "Hunt" SCORE 2 SPECIALTY "small game"
+            "Latin" SCORE 4 SPECIALTY "Hermetic terms"
+            "Magic Theory" SCORE 3 SPECIALTY "Auram"
+            "Native Language" SCORE 5 SPECIALTY "talking to travelers"
+            "Parma Magica" SCORE 1 SPECIALTY "Ignem"
+            "Penetration" SCORE 2 SPECIALTY "Auram"
+            "Stealth" SCORE 3 SPECIALTY "in woodland"
+            "Survival" SCORE 4 SPECIALTY "in bad weather"
+        }
+        SPELLS_KNOWN {
+            ^"Jupiter's Resounding Blow" TECHNIQUE "Creo" FORM "Auram" LEVEL 10 CASTING_TOTAL 26
+            ^"Clouds of Rain and Thunder" TECHNIQUE "Creo" FORM "Auram" LEVEL 25 CASTING_TOTAL 35
+            ^"Clouds of Summer Snow" TECHNIQUE "Creo" FORM "Auram" LEVEL 25 CASTING_TOTAL 35
+            ^"Pull of the Skybound Winds" TECHNIQUE "Creo" FORM "Auram" LEVEL 30 CASTING_TOTAL 26
+            ^"Wings of the Soaring Wind" TECHNIQUE "Creo" FORM "Auram" REQUISITE "Re" LEVEL 30 CASTING_TOTAL 27
+        }
+        CHOICES {
+            "The Mercere can take another three points of Flaws and as many points of Virtues. He is quite capable of traveling alone, and probably prefers to do so. By moving scores from Hunt and Stealth into social Abilities such as Charm, he can be made more likely to travel with a group."
+        }
+    }
+
+    #tEwNDOBGrd8uZXZQ1NSpkeWQ TEMPLATE "Merinita" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER -1
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 5
+                ^"Intellego" INTEGER 1
+                ^"Muto" INTEGER 5
+                ^"Perdo" INTEGER 2
+                ^"Rego" INTEGER 5
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 0
+                ^"Corpus" INTEGER 1
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 10
+                ^"Mentem" INTEGER 5
+                ^"Terram" INTEGER 0
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Strong Faerie Blood (Undine)", "Deft Imaginem", "Faerie Magic*", "Free Study", "Puissant Imaginem", "Student of Faerie"]
+            ^"Flaws" LIST ["Chaotic Magic", "Plagued by Faerie", "Faerie Upbringing"]
+            ^"Soak" INTEGER -1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes"]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Mercurial" +3
+            "Honest" -2
+            "Reliable" -3
+        }
+        COMBAT {
+            "Dodging" INIT -1 DEFENSE -1
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "rhetoric"
+            "Charm" SCORE 2 SPECIALTY "gaining trust"
+            "Faerie Lore" SCORE 3 SPECIALTY "water fay"
+            "Faerie Magic" SCORE 1 SPECIALTY "illusions"
+            "Folk Ken" SCORE 2 SPECIALTY "what people will believe"
+            "Guile" SCORE 5 SPECIALTY "sustained lies"
+            "Latin" SCORE 4 SPECIALTY "Hermetic terms"
+            "Magic Theory" SCORE 3 SPECIALTY "Imaginem"
+            "Native Language" SCORE 5 SPECIALTY "faeries"
+            "Penetration" SCORE 2 SPECIALTY "Mentem"
+            "Parma Magica" SCORE 1 SPECIALTY "Mentem"
+        }
+        SPELLS_KNOWN {
+            ^"Phantasmal Animal" TECHNIQUE "Creo" FORM "Imaginem" LEVEL 20 CASTING_TOTAL 17
+            ^"Phantasm of the Human Form" TECHNIQUE "Creo" FORM "Imaginem" LEVEL 25 CASTING_TOTAL 17
+            ^"Image Phantom" TECHNIQUE "Muto" FORM "Imaginem" LEVEL 20 CASTING_TOTAL 17
+            ^"Veil of Invisibility" TECHNIQUE "Perdo" FORM "Imaginem" LEVEL 20 CASTING_TOTAL 14
+            ^"Wizard's Sidestep" TECHNIQUE "Rego" FORM "Imaginem" LEVEL 10 CASTING_TOTAL 17
+            ^"Panic of the Trembling Heart" TECHNIQUE "Creo" FORM "Mentem" LEVEL 15 CASTING_TOTAL 9
+            ^"The Call to Slumber" TECHNIQUE "Rego" FORM "Mentem" LEVEL 10 CASTING_TOTAL 9
+        }
+        CHOICES {
+            "The Merinita can take another three points of Flaws and as many Virtues. The type of Strong Faerie Blood can also be changed easily. They might look younger than 25, due to the influence of Strong Faerie Blood, but need not."
+        }
+    }
+
+    #tPGh9l281uysJNSXTff0W8iX TEMPLATE "Tremere" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 5
+                ^"Intellego" INTEGER 5
+                ^"Muto" INTEGER 5
+                ^"Perdo" INTEGER 5
+                ^"Rego" INTEGER 5
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 8
+                ^"Auram" INTEGER 9
+                ^"Corpus" INTEGER 0
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 9
+                ^"Imaginem" INTEGER 0
+                ^"Mentem" INTEGER 1
+                ^"Terram" INTEGER 9
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Elemental Magic", "Book Learner", "Cautious Sorcerer", "Latent Magical Ability", "Minor Magical Focus (certamen)*", "Skilled Parens"]
+            ^"Flaws" LIST ["Ambitious (Major)", "Weak Magic Resistance", "Susceptibility to Divine Power"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes."]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Ambitious" +6
+            "Authoritarian" +3
+            "Respectful" +3
+            "Brave" +2
+        }
+        COMBAT {
+            "Dodging" INIT 1 DEFENSE 1
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "arithmetic"
+            "Charm" SCORE 2 SPECIALTY "magi"
+            "Code of Hermes" SCORE 1 SPECIALTY "certamen law"
+            "Etiquette" SCORE 2 SPECIALTY "Hermetic"
+            "Finesse" SCORE 2 SPECIALTY "Terram"
+            "Folk Ken" SCORE 3 SPECIALTY "magi"
+            "Guile" SCORE 2 SPECIALTY "lying to underlings"
+            "Intrigue" SCORE 2 SPECIALTY "Hermetic politics"
+            "Latin" SCORE 4 SPECIALTY "Hermetic terms"
+            "Leadership" SCORE 3 SPECIALTY "running institutions"
+            "Magic Theory" SCORE 3 SPECIALTY "Creo"
+            "Native Language" SCORE 5 SPECIALTY "giving orders"
+            "Order of Hermes Lore" SCORE 2 SPECIALTY "Tremere"
+            "Parma Magica" SCORE 1 SPECIALTY "Mentem"
+            "Penetration" SCORE 3 SPECIALTY "Ignem"
+        }
+        SPELLS_KNOWN {
+            ^"Circling Winds of Protection" TECHNIQUE "Creo" FORM "Auram" REQUISITE "Re" LEVEL 20 CASTING_TOTAL 16
+            ^"Rain of Stones" TECHNIQUE "Muto" FORM "Auram" REQUISITE "Te" LEVEL 20 CASTING_TOTAL 16
+            ^"Pilum of Fire" TECHNIQUE "Creo" FORM "Ignem" LEVEL 20 CASTING_TOTAL 16
+            ^"Soothe the Raging Flames" TECHNIQUE "Perdo" FORM "Ignem" LEVEL 20 CASTING_TOTAL 16
+            ^"Seal the Earth" TECHNIQUE "Creo" FORM "Terram" LEVEL 15 CASTING_TOTAL 16
+            ^"The Miner's Keen Eye" TECHNIQUE "Intellego" FORM "Terram" LEVEL 20 CASTING_TOTAL 16
+            ^"Earth that Breaks No More" TECHNIQUE "Muto" FORM "Terram" LEVEL 20 CASTING_TOTAL 16
+            ^"Pit of the Gaping Earth" TECHNIQUE "Perdo" FORM "Terram" LEVEL 15 CASTING_TOTAL 16
+        }
+        CHOICES {
+            "The Tremere can take three more points of Flaws, and a similar number of Virtues. At the moment, he is a social and political creature, but the score in one of those Abilities could be moved into a Martial Ability to make him more of a fighter. Elemental Magic makes it difficult to move Art scores around. Initially, he was assigned scores of Aq 3, Au 6, Ig 6, and Te 6."
+            "Aquam received an additional 33 experience points (from Auram, Ignem and Terram), for a final total of 39 and a score of 8 (3), and each of the other Arts received an additional 25 experience points, for a final total of 46 and a score of 9 (1)."
+        }
+    }
+
+    #tR3k3XGKIhs1Q8yjghV2oUZ9 TEMPLATE "Tytalus" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Size" INTEGER 0
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 2
+            ^"Confidence Points" INTEGER 5
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 5
+                ^"Intellego" INTEGER 5
+                ^"Muto" INTEGER 0
+                ^"Perdo" INTEGER 0
+                ^"Rego" INTEGER 5
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 0
+                ^"Corpus" INTEGER 0
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 0
+                ^"Mentem" INTEGER 9
+                ^"Terram" INTEGER 0
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Life-Linked Spontaneous Magic", "Great Intelligence", "Improved Characteristics", "Life Boost", "Piercing Gaze", "Self-Confident*"]
+            ^"Flaws" LIST ["Painful Magic", "Tormenting Master", "Weak Parens"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes."]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Argumentative" +3
+            "Brave" +2
+            "Trusting" -2
+        }
+        COMBAT {
+            "Dodging" INIT 1 DEFENSE 4
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "logic"
+            "Awareness" SCORE 2 SPECIALTY "ambushes"
+            "Bargain" SCORE 2 SPECIALTY "luxuries"
+            "Brawl" SCORE 3 SPECIALTY "grappling"
+            "Concentration" SCORE 2 SPECIALTY "spellcasting"
+            "Guile" SCORE 2 SPECIALTY "spur of the moment"
+            "Intrigue" SCORE 2 SPECIALTY "conspiracies"
+            "Latin" SCORE 4 SPECIALTY "Hermetic terms"
+            "Leadership" SCORE 2 SPECIALTY "long-time followers"
+            "Magic Theory" SCORE 3 SPECIALTY "Mentem"
+            "Native Language" SCORE 5 SPECIALTY "arguing"
+            "Parma Magica" SCORE 1 SPECIALTY "Mentem"
+        }
+        SPELLS_KNOWN {
+            ^"Pains of the Perpetual Worry" TECHNIQUE "Creo" FORM "Mentem" LEVEL 20 CASTING_TOTAL 16
+            ^"Posing the Silent Question" TECHNIQUE "Intellego" FORM "Mentem" LEVEL 20 CASTING_TOTAL 16
+            ^"Trust of Childlike Faith" TECHNIQUE "Perdo" FORM "Mentem" LEVEL 10 CASTING_TOTAL 11
+            ^"Aura of Rightful Authority" TECHNIQUE "Rego" FORM "Mentem" LEVEL 20 CASTING_TOTAL 16
+            ^"Scent of Peaceful Slumber" TECHNIQUE "Rego" FORM "Mentem" LEVEL 20 CASTING_TOTAL 16
+        }
+        CHOICES {
+            "The Tytalus can take up to three more points of Flaws, and a similar number of Virtues."
+        }
+    }
+
+    #tDRPXtJ1POCRXz4452Wy5iDE TEMPLATE "Verditius" DEF {
+        EXTENDS ^"Magus"
+        PROPERTIES {
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -3
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Size" INTEGER -2
+            ^"Age" INTEGER 25
+            ^"Apparent Age" INTEGER 25
+            ^"Decrepitude" INTEGER 0
+            ^"Warping Score" INTEGER 0
+            ^"Warping Points" INTEGER 0
+            ^"Confidence Score" INTEGER 1
+            ^"Confidence Points" INTEGER 3
+            ^"Hermetic Arts" DEF {
+                ^"Creo" INTEGER 7
+                ^"Intellego" INTEGER 3
+                ^"Muto" INTEGER 5
+                ^"Perdo" INTEGER 3
+                ^"Rego" INTEGER 5
+                ^"Animal" INTEGER 0
+                ^"Aquam" INTEGER 0
+                ^"Auram" INTEGER 0
+                ^"Corpus" INTEGER 0
+                ^"Herbam" INTEGER 0
+                ^"Ignem" INTEGER 0
+                ^"Imaginem" INTEGER 0
+                ^"Mentem" INTEGER 0
+                ^"Terram" INTEGER 12
+                ^"Vim" INTEGER 0
+            }
+            ^"Virtues" LIST ["The Gift", "Hermetic Magus", "Affinity with Craft (metalsmith)", "Affinity with Craft (stonemason)", "Affinity with Terram", "Faerie Blood (Dwarf)", "Puissant Craft (metalsmith)", "Puissant Craft (stonemason)", "Puissant Terram", "Verditius Magic*"]
+            ^"Flaws" LIST ["Dwarf", "Weak Spontaneous Magic", "Difficult Spontaneous Magic"]
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12)"
+            ^"Twilight Scars" STRING "None"
+            ^"Equipment" LIST ["Wizardly robes."]
+            ^"Encumbrance" STRING "0 (0)"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Disciplined" +3
+            "Perfectionist" +3
+            "Spontaneous" -2
+        }
+        COMBAT {
+            "Dodging" INIT 0 DEFENSE 0
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 1 SPECIALTY "geometry"
+            "Awareness" SCORE 3 SPECIALTY "flaws in stone and metal work"
+            "Athletics" SCORE 2 SPECIALTY "endurance"
+            "Craft (metalsmith)" SCORE 5 SPECIALTY "iron"
+            "Craft (stonemason)" SCORE 4 SPECIALTY "decorations"
+            "Faerie Lore" SCORE 2 SPECIALTY "dwarfs"
+            "Latin" SCORE 4 SPECIALTY "Hermetic terms"
+            "Magic Theory" SCORE 3 SPECIALTY "Terram"
+            "Native Language" SCORE 5 SPECIALTY "talking about metal and stone"
+            "Parma Magica" SCORE 1 SPECIALTY "Terram"
+            "Philosophiae" SCORE 1 SPECIALTY "natural philosophy"
+        }
+        SPELLS_KNOWN {
+            ^"Seal the Earth" TECHNIQUE "Creo" FORM "Terram" LEVEL 15 CASTING_TOTAL 23
+            ^"Touch of Midas" TECHNIQUE "Creo" FORM "Terram" LEVEL 20 CASTING_TOTAL 25
+            ^"Wall of Protecting Stone" TECHNIQUE "Creo" FORM "Terram" LEVEL 25 CASTING_TOTAL 23
+            ^"The Crystal Dart" TECHNIQUE "Muto" FORM "Terram" REQUISITE "Re" LEVEL 10 CASTING_TOTAL 21
+            ^"Edge of the Razor" TECHNIQUE "Muto" FORM "Terram" LEVEL 20 CASTING_TOTAL 21
+            ^"Pit of the Gaping Earth" TECHNIQUE "Perdo" FORM "Terram" LEVEL 15 CASTING_TOTAL 19
+            ^"Hands of the Grasping Earth" TECHNIQUE "Rego" FORM "Terram" REQUISITE "Mu" LEVEL 15 CASTING_TOTAL 21
+        }
+        CHOICES {
+            "The Verditius can take another three Minor Flaws, or one Major, and balancing Virtues. In addition, her Craft Abilities can be changed for different crafts without changing the concept much. Finally, not everyone descended from dwarfs is as small as they are, so that Flaw could be swapped for others without affecting the character on a fundamental level."
+        }
+    }
+}

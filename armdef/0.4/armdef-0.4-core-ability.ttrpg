@@ -1,0 +1,24 @@
+BASE "ARMDef_Core_Ability" {
+    NAME "Ars Magica Definitive Edition - Ability (core stub)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+
+    # Minimal base type for Abilities, so the ability bucket
+    # (armdef-0.4-abilities.ttrpg) has a shared type to EXTEND. Individual
+    # abilities set concrete inline values and do not restate these
+    # constraints (Definitions vs. Instances, spec S5).
+
+    #tLzvYKtdVMBerES3oaOuTyEy ^"Ability" DEF {
+        APPLIES TO [^"Entity"]
+
+        PROPERTIES {
+            ^"Ability Type" ENUM ["General", "Academic", "Arcane", "Martial", "Supernatural"] REQUIRED
+            # The Ability List's asterisk: with no score the ability cannot be
+            # used at all (unmarked abilities work at 0 with 3 extra botch dice).
+            ^"Cannot Use Untrained" BOOLEAN DEFAULT false
+            ^"Specialties" LIST OF STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

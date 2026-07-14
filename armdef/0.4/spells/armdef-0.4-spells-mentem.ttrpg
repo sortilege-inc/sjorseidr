@@ -1,0 +1,846 @@
+EXTENSION "ARMDef_Spells_Mentem" {
+    NAME "Ars Magica Definitive Edition - Mentem Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tp9fqyv4wPmrsgZMXgpIhRTp ^"Words of the Unbroken Silence" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +3 "Sight"
+            }
+        }
+        DESCRIPTION "Lets you say two words directly to the mind of a target. The target can recognize your voice and knows that the message is of supernatural origin."
+    }
+
+    #t1ClccnMh34OKjt2gDH5I5iY ^"Panic of the Trembling Heart" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Creates an overpowering fear in one person of a specific object, person, or place."
+    }
+
+    #tGFZKSF7EEr2LfjiAmyB2Hoo ^"Rising Ire" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Makes the target furious at someone or something of your choice. A stress roll against an Ease Factor of 9 using an appropriate Personality Trait (like Calm) can hold the anger in check, but it is felt strongly regardless of the roll."
+    }
+
+    #tFlsTuBerIIy7jJvk1djsMOY ^"Memory of the Distant Dream" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Inserts a full and complete memory into a person's mind. If the target gives the memory some thought and concentration, and makes an Intelligence roll against an Ease Factor of 9, the memory is revealed as false. When the duration expires, the memory vanishes, although the subject may remember remembering it."
+    }
+
+    #t5RxZu4daCdNTZr0IeQmfrrI ^"Pains of the Perpetual Worry" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Eye"
+            +3 "Moon"
+            }
+        }
+        DESCRIPTION "Gives someone a nagging, taunting, painful emotion — a recurrent sense of anxiety, a fear of something he or she does not know, a fear of everything, and a fear of nothing. To have this spell cast on you is truly a curse."
+    }
+
+    #t6DxzAK1h3ayGFtbz8PdOXs2 ^"Weight of a Thousand Hells" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Eye"
+            +3 "Moon"
+            +1 "complex effect"
+            }
+        }
+        DESCRIPTION "Causes the victim to feel the despair, anguish, pain, and sorrow of a thousand sinners in Hell. This is a horrible spell, for the victim loses almost all motivation and earthly cares. All he can feel is his own pain – endless, inexorable, and searing. Appropriate Personality Trait rolls suffer a harmful adjustment of –5, and the target suffers –2 on any rolls that require thought or concentration. The target has a strong tendency to do nothing but brood."
+    }
+
+    #tgob5M7VOfVCYvAYQjIdS6EF ^"Gift of Reason" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 30
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Permanently increases the target's Intelligence by 1 point, to no higher than 0."
+    }
+
+    #tDTVvI6mcaxb13h1C4QPiGos ^"Sight of the Transparent Motive" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Eye"
+            }
+        }
+        DESCRIPTION "Detects the general motive most powerfully influencing the target at the moment. General motives are such things as fear, anger, and greed, not specific things like the desire to look good before one's superiors."
+    }
+
+    #t7eJ4eShM1E2nzp57Ubpqsji ^"Perception of the Conflicting Motives" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Eye"
+            }
+        }
+        DESCRIPTION "You can detect the conflicting motives behind one target's actions. Thus you might learn that a guard feels conflict between fear and duty. This spell is often used before application of a Muto or Rego spell, since it is usually easier to change a target's emotions after you've sensed them than it is to create emotions."
+    }
+
+    #tkrUyP1YxIqWbkpSsXxd2DEH ^"Frosty Breath of the Spoken Lie" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Eye"
+            +1 "Conc"
+            }
+            NOTES ["mist is a purely cosmetic effect and thus is free"]
+        }
+        DESCRIPTION "For as long as you maintain this spell, the target exhales a misty breath with each spoken lie. Small bits of ice form on the person's lips if the lie is particularly severe. In winter, when breath is visible anyway, lies produce a greater than normal amount of mist (the mist actually billows out). A target who makes a Communication + Guile stress roll against an Ease Factor of 15 can determine whether any given statement will be taken by the spell as a lie. The spell can be defeated through extensive and judicious application of Creo Auram and Perdo Auram spells, and a demon is able to manipulate it in any way it wishes, as demons are the embodiment of deception and are never caught in a lie if they do not wish to be. House Guernicus brought the Order this spell, and it is a very poor Quaesitor who is without it."
+    }
+
+    #tbXnHnAHj9KbDClxTzScCUro ^"Posing the Silent Question" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Eye"
+            }
+        }
+        DESCRIPTION "You can ask one silent mental question of the target, then detect the answer. The truth of the answer is limited by the knowledge of the target. Questions to the effect of \"What would you do if …?\" often receive inaccurate replies. You are likely to get what the target thinks he would do, not necessarily what he would really do. The target of this spell does not notice the questioning unless he or she resists the spell, in which case they notice the attempt."
+    }
+
+    #tmRY3TMyY7DqhDWTVyMZ6yxX ^"Thoughts Within Babble" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Hearing"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Conc"
+            +3 "Hearing"
+            }
+        }
+        DESCRIPTION "You can understand the speech of those within the target area. Perception or Communication stress rolls are needed for difficult exchanges. You also understand people who misuse a language that you do speak; you know what they meant to say, as well as hearing what they actually said."
+    }
+
+    #tymwK7iiHdD9HhX1IhcQpfHS ^"Peering into the Mortal Mind" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +1 "Eye"
+            }
+        }
+        DESCRIPTION "You can thoroughly probe and understand the contents of the mind of the target, including his or her immediate and long-term motives, personal strengths and weaknesses, and other pertinent information."
+    }
+
+    #tVOJsRsNRHBy6eNymiHqQsZb ^"Recollection of Memories Never Quite Lived" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 4 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Changes the target's memory of a detail into a similar, though different, memory. The target is no more sure of this manufactured memory than of the authentic one, so he may discover strange fabrications to be false."
+    }
+
+    #tLFjQYNAObNU3P7YAfzvajlC ^"Mind of the Beast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Animal"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "You turn the mind of the target into that of an animal of your choice. The victim acts and thinks like that animal as much as possible; a person who thinks he is a bird will try to fly, but will not be able to. This can be dangerous for the target."
+    }
+
+    #tdEEfz3gLJCK6svzfuoVfwyJ ^"Past of Another" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Eye"
+            +4 "Year"
+            }
+        }
+        DESCRIPTION "The target's memories are completely rewritten, and he is unable to remember his actual life until the effect is dispelled or expires."
+    }
+
+    #tFBXY7h8lxUiGG7a37FqYfln ^"Inmost Companion" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Animal"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "The target's mind is made physical as a bird. This bird normally stays close to the target's body, but need not. If the target has Magic Resistance, it protects both his body and mind, as normal. No matter how far it travels, the target's mind controls his body, as well as the bird's, as normal. In particular, it can see through both sets of sense organs. If the bird is killed, the target also dies, as his mind has been killed."
+    }
+
+    #t5IViFXxAlKVVUWShCCdBNXf ^"Vision of the Haunting Spirits" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Requisite" STRING "Imaginem"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "All spirits within the target area become visible, although they might remain unseen if hiding behind something. This includes the spirits of living people, which appear as the person normally does. If the person is invisible or otherwise changed from his normal shape, his normal appearance is superimposed on his current appearance."
+    }
+
+    #tvWN0EMo9A2qtR2G8LA39wVJ ^"Lay to Rest the Haunting Spirit" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["(Base effect)"]
+        }
+        DESCRIPTION "If your spell Penetrates the resistance of a ghost or similar spirit, it loses a number of points from its Might equal to the level of this spell. If this reduces the spirit's Might to zero, it vanishes, apparently destroyed. Philosophers concur that the spirit goes to the afterlife, or is perhaps weakened to helplessness, but is not actually destroyed. Souls, after all, are immortal."
+    }
+
+    #tCwRPGoTlWrImvFZC0hgDL6v ^"Tip of the Tongue" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Eye"
+            +1 "Diam"
+            }
+        }
+        DESCRIPTION "Causes the target to forget one word of your choosing. The target cannot remember that word for the spell's duration, but afterwards he can come up with the word without assistance by making an Intelligence + Concentration stress roll against an Ease Factor of 9. If the target fails he may try again, but each additional roll adds +1 to the difficulty."
+    }
+
+    #tmr0NevyNdIHIsdLUtZGa8ti ^"Trust of Childlike Faith" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Eye"
+            +1 "Diam"
+            }
+        }
+        DESCRIPTION "The target loses judgment and believes almost any passable lie for the duration of the spell. An Intelligence stress roll against an Ease Factor of 6 is allowed to resist. Truly incredible lies allow easier resistance rolls."
+    }
+
+    #tSV8VgBROOzpbD8X94tKxsb7 ^"Calm the Motion of the Heart" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Removes one emotion from the target until it appears again naturally. An angry person stops being angry, and a curious one stops being inquisitive. Many a magus finds this spell useful for keeping his apprentice's nose out of his immediate business."
+    }
+
+    #tkkfA0XxTo2ki50Wlm5HZLKD ^"Enchantment of Detachment" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Calms and greatly lowers the intensity of the target's current emotions."
+    }
+
+    #t6PzQ7CQ88Wlli3aoUJ64lBa ^"Loss of but a Moment's Memory" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Eye"
+            }
+        }
+        DESCRIPTION "Removes up to five continuous minutes from a target's memory, leaving a blank. You target the loss of memory to a specific event or time. With an Intelligence stress roll against an Ease Factor of 9, the target realizes that memories of a certain period are missing. This Ease Factor can change, depending on how important the missing memory is and what sort of circumstances surrounded the event. Careful introspection over a period of time can allow reconstruction of much of the memory, but some details are lost forever."
+    }
+
+    #t7QIuNs9olkAMkkRTpmehbWO ^"Blessing of Childlike Bliss" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Reduces an adult mind to a child's level. The target solves problems, reasons, and expresses emotions as would a three-year-old. Magi affected cannot cast spells. At first, anyway, the target is likely to be happy at having lost a world of cares and troubles that are no longer imaginable."
+    }
+
+    #tHldAy6GhPfDwoSGJoZGR1dI ^"Passion's Lost Feeling" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Eye"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "The target is unable to feel any sort of emotion and acts listlessly, without motivation or cares."
+    }
+
+    #tSJY1QlzhrzxnVbBSAiZOo6R ^"Black Whisper" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +3 "Moon"
+            +1 "for not needing to gesture"
+            }
+        }
+        DESCRIPTION "You whisper a magic sentence in the target's ear. It takes several seconds to speak the sentence, so an unwilling, able-bodied target can stop you. If you speak the whole sentence, the target must make a Stamina stress roll against an Ease Factor of 15 or go completely insane. You need not use your hands for this spell, but you must be able to speak."
+    }
+
+    #ty2G3wWZUjQNt30hKSLt87Am ^"Poisoning the Will" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 65 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +3 "Moon"
+            +4 "Bound"
+            +5 "size"
+            }
+        }
+        DESCRIPTION "You curse a place, be it a valley, town, city, or covenant. The curse gradually saps the will and vitality from the people there. They become less energetic, and slowly stop caring about the place, what happens there, other people, and finally themselves. Colors seem more drab and the days longer, and there is an all-pervading sense of boredom and lassitude. Strong-willed individuals and those with strong Personality Traits are less affected, but still suffer to an extent. All Personality Trait rolls while in the area suffer a –3 modifier. This spell affects only those who are within the cursed area, including visitors to it. Those who leave the area are overwhelmed by the return of their vigor and sense of purpose."
+    }
+
+    #tinum1IhVvxNt0QPwkp7E8ao ^"Ring of Warding Against Spirits" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["(Base effect)"]
+        }
+        DESCRIPTION "Only ghosts and spirits with current Magic Might higher than the spell's level can enter the ring you create. At certain angles, the ring may be seen as an orange-hued dome. This spell does not affect ghosts or spirits associated with the other realms."
+    }
+
+    #t6lAOKLDkEr5YBQPDUlXu6gr ^"The Call to Slumber" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "The target becomes sleepy and falls asleep within a few seconds."
+    }
+
+    #t8PZVU0D5n6RQF6ptaOEhjNy ^"Snap of Awakening" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "When you snap your fingers you instantly awaken the target from sleep to alert consciousness. Does not work on someone unconscious from Fatigue-level loss, wounds, or magic."
+    }
+
+    #tu5KXTrC8pVaaVG7CAQy1WHK ^"Confusion of the Numbed Will" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Confuses a person, who must make an Intelligence stress roll to take any direct action. A roll of 12+ ends the spell, while a roll of 9+ lets the character take the intended action, but the spell remains in effect. Any lower roll means the character is confused and takes some other type of action. When it is imperative for the victim to take an action, the storyguide should allow an appropriate modifier to the roll. While under this spell, a character always strikes last in combat and gets at least a –1 on all attacking and defending rolls."
+    }
+
+    #tv3hFwtXrL09EBQRttHHKSUP ^"Aura of Rightful Authority" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "The target of the spell is strongly inclined to obey you, as if you were his natural superior."
+    }
+
+    #tTbQSzzSPM6xA2qd5nsEw1Zc ^"Coerce the Spirits of the Night" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Makes a ghost obey you as long as you can coerce it with threats, such as a threat to defile its grave or to banish it to Hell. The more lurid and dramatic the threat, the more cooperative the ghost is. If the spell penetrates the ghost's Magic Resistance, roll Communication + Leadership to see how effective your threats are. The storyguide should always give a bonus or penalty that depends on the potency of the threat, and any roll other than a botch will compel at least minimal obedience."
+    }
+
+    #t4QjwdxnaK1PaUCSTcd9cgnL ^"Scent of Peaceful Slumber" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "Everyone in the room falls asleep over a few seconds, with the smell of lilacs in their nostrils."
+    }
+
+    #tW58DbrN0YGxUhC3KNNwgOsU ^"Visions of the Infernal Terrors" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Causes everything the target sees to look and sound terrifying. The world looks basically the same, save that everything is hideously transformed somehow. The target must roll a stress die, adding his Stamina and adding or subtracting an appropriate Personality Trait to see what the effects are. The nature of the Personality Trait used determines how it affects the Stamina roll. A Trait like Brave makes you resistant to fear, while one like Cowardly reduces the result of your roll."
+    }
+
+    #tiwjlAnT3gTcA0meU1eoI2lM ^"Enslave the Mortal Mind" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +1 "Eye"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Enables you to completely control the loyalty, emotions, desires, interests, and activities of any person. People revert to normal when the spell ends, and may be extremely angry with the magus."
+    }
+
+    #tC7FJMvvqOlbUcqGJww1zm8b ^"Incantation of Summoning the Dead" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +4 "Arc"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Calls up a person's ghost. You must be on the spot where the person died, or must have the corpse (either of these constitutes an Arcane Connection). Alternatively, you can summon any ghost that haunts the area you are in, if you know the ghost's full name, according to the Law of Names. Those buried by Church ceremony and those have who gone straight to heaven (that is, saints and crusaders, as opposed to the normal folk who must wait for a time before going on) are not available for summoning. This spell is a ritual because it can summon those who are beyond the mortal world, as long as they are not in heaven. If the ghost has Magic Resistance, you must penetrate that resistance in order to summon it."
+    }
+
+    #t7xGfVnGhAbwcvofEsR4C8x6 ^"The Shrouded Glen" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Year"
+            +4 "Bound"
+            }
+        }
+        DESCRIPTION "Enchants the Boundary in which the ritual is cast so that anyone moving through it is subtly diverted, effectively keeping some place within it from being discovered accidentally. Anyone not actively searching for the hidden place never finds it. Those actively searching can find the place by making a Perception stress roll against an Ease Factor of 12 (allowed once per day). If the surrounding terrain is more difficult to search than the average forest, the Ease Factor increases. Likewise, the Ease Factor drops if the terrain is more open than a forest, and completely open terrain is unsuitable for this spell. Once a searcher spots the hidden place, the spell does not prevent approach. Those who are present for the ritual are unaffected by the spell. This spell mimics the properties of many faerie forests."
+    }
+
+    #t3SlA9DGLrMDssSZNHCoBasQ ^"Exchange of the Two Minds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Mentem" FIXED
+            ^"Level" INTEGER 55 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Group"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Year"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "This spell switches the minds (but not the souls) of two creatures. A new body greatly confuses those who are unprepared for the shock, and even those who are ready take a day to adjust completely. Magi who transport their own minds into younger, healthier bodies usually find that having a strong body entails having powerful passions that interfere with the clear thinking needed to pursue the magical Arts. Both people involved must make a Stamina stress roll against an Ease Factor of 3, rolled before the switch is made, to survive the transfer. If only one person fails the roll, that person dies and the spell fails. The other target is unaffected."
+    }
+}

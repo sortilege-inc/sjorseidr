@@ -1,0 +1,707 @@
+EXTENSION "ARMDef_Spells_Auram" {
+    NAME "Ars Magica Definitive Edition - Auram Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tZEnGonYqiW38mOgAYzrKSsN ^"Air's Ghostly Form" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Diam"
+            +1 "unnatural (the spell can be cast indoors)"
+            }
+        }
+        DESCRIPTION "A thick fog forms around the magus, extending outwards for several paces. A breeze can push the fog around. The fog dissipates at its natural rate, and may be too thin to restrict sight within a minute."
+    }
+
+    #tBRoz658Mid5VYfrCoZQMmlN ^"Chamber of Spring Breezes" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "unnatural"
+            }
+        }
+        DESCRIPTION "Creates a breeze of fresh air that continually moves throughout a room, keeping the air continuously breathable even if the room is airtight. Rose of Jerbiton's version of this spell always causes the air to smell of roses. The breeze can be created outdoors, but there it has little effect."
+    }
+
+    #tAR8xrf8Ib0nybyG5FRy6Hnc ^"Jupiter's Resounding Blow" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "unnatural (the spell functions indoors)"
+            }
+        }
+        DESCRIPTION "Creates a thunderclap; anyone directly underneath must make a Stamina stress roll against an Ease Factor of 9 or be deafened. If deafened, the target gets another Stamina simple roll each minute against the same Ease Factor and recovers on a success. If the first roll botches, the victim is rendered deaf for a month."
+    }
+
+    #t87RRwFk9a8YOSPgl9QYTzgB ^"Stench of the Twenty Corpses" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Diam"
+            }
+        }
+        DESCRIPTION "Creates a horrible stench of rotting corpses. All those within fifty paces of the target point must make Stamina stress rolls against an Ease Factor of 6 or act with a –3 penalty on all rolls. Anyone who botches the roll vomits and is incapacitated for (10 – Stamina) rounds."
+    }
+
+    #tuz5HmmwyfKQ7MnYOzwSUBxg ^"Wreaths of Foul Smoke" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Diam"
+            }
+        }
+        DESCRIPTION "Thick, yellow, sulfurous smoke rises up from the spot you designate, spreading and thinning naturally, but thick enough to block sight in a radius of about five paces around the point of origin. For each round anyone breathes the smoke, a Stamina stress roll against an Ease Factor of 3 must be made or a Fatigue level is lost. Once a character is Unconscious, further failed rolls result in the character taking a Light Wound each time. The area where the spell is cast will be damaged: small plants wilt and die, and tree growth is stunted. A faint stench of sulfur clings for days to anything exposed to the smoke."
+    }
+
+    #tIZiWK6STJYrkvEa56z0X0dB ^"Broom of the Winds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "unnatural"
+            }
+        }
+        DESCRIPTION "Whips up violent, swirling winds around the target. The target must make a Size stress roll against an Ease Factor of 9 to remain standing. If the target is braced or holding onto some support, he may also make a Strength stress roll against an Ease Factor of 9. If both rolls fail, the target is knocked in a random direction. The target may be damaged, depending on whether he strikes anything."
+    }
+
+    #teVc69pz8SxIwqSfYVZUHB0N ^"Charge of the Angry Winds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +1 "unnatural"
+            }
+        }
+        DESCRIPTION "A wall of wind roars away from you, starting up to 10 paces away and continuing until it dissipates naturally. The wind is confined by any existing barriers, but if unconfined it can be up to a hundred paces wide. All within the area must make a Dexterity + Size stress roll against an Ease Factor of 9 or fall down and be blown along by the winds. The rolls must be made at the start of the gale and each subsequent round that the wind is maintained. You must concentrate on the gale. Missile fire into or out of the gale is futile, and marching against the gale requires a Strength + Size stress roll against an Ease Factor of 15. Failure in this attempt mandates another Dexterity + Size stress roll against an Ease Factor of 12 to keep from falling."
+    }
+
+    #tamv85w8z4zAecuks0T6m9Ln ^"Circling Winds of Protection" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Rego"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            +2 "unnatural"
+            +1 "Rego effect"
+            }
+        }
+        DESCRIPTION "Surrounds you with winds that circle at great speed. Since the wind picks up dust and other small, loose objects, you may be obscured. Anyone standing near enough to attack you with a hand weapon must make a Size stress roll against an Ease Factor of 9 at the beginning of each round or be blown back. Melee Attack rolls against you are at –3, and missile or thrown attacks are at –9."
+    }
+
+    #t37qTZCMsGa1eARIoq1DwPpL ^"Clouds of Rain and Thunder" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +3 "Sight"
+            +1 "Conc"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "Creates a small but severe rainstorm, including lightning and winds. The storm gathers and breaks in a few seconds as the caster concentrates, and dissipates with similar speed when he stops doing so. Note that reducing the Range for this spell makes the storm increasingly unnatural, so versions of this spell with lower Range still have the same level."
+    }
+
+    #tgo0OvCFHtx1nus4T8GLAK92 ^"Clouds of Summer Snow" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +3 "Sight"
+            +1 "Conc"
+            +2 "Group"
+            +1 "Size"
+            }
+        }
+        DESCRIPTION "Creates clouds that drop snow over an area about half a mile across. The clouds gather over a few seconds at the beginning of the spell, and dissipate over the same sort of time when the caster stops concentrating. The spell does not affect temperature."
+    }
+
+    #tZbsrESQVJ9gQQJ4Y9pS83L3 ^"Pull of the Skybound Winds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +2 "unnatural"
+            }
+        }
+        DESCRIPTION "Makes winds rise upward, pulling one object, creature, or person up to 50 feet into the sky before letting that target drop. Even a small building can be torn from its foundation, though such a building can be no larger than 20 feet to a side, and cannot be built out of a material heavier than stout wood. Uprooted objects fall randomly, unless you make a Finesse stress roll against an Ease Factor of 12 to choose where the objects will fall."
+    }
+
+    #tK3Nqb95Ay6NaB0mMC8QrOgd ^"Wings of the Soaring Wind" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Rego"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            +2 "highly unnatural"
+            +1 "Rego requisite"
+            }
+        }
+        DESCRIPTION "Generates a massive gust of air around you that supports and pushes you along through the air at speeds up to 40 miles per hour. Hovering in place is difficult, and requires a Finesse roll against an Ease Factor of 9 per round. It is dangerous for extended travel, because if you lose concentration, you are likely to sustain serious injuries (+15 damage, on average, although it may be more if the magus was very high up)."
+    }
+
+    #tyBch2SRJI8DBAkiBccbM6Mh ^"The Incantation of Lightning" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +4 "unnatural"
+            }
+        }
+        DESCRIPTION "A lightning bolt shoots forth from your outstretched hand in the direction you are pointing, doing +30 damage to a single target it hits. There must be nothing between you and the target. Those near the target must make Size stress rolls against an Ease Factor of 6 to remain standing."
+    }
+
+    #tFe8JflfOz932ND3GiULZS8j ^"Breath of the Open Sky" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            +4 "size"
+            +1 "unnatural"
+            }
+            NOTES ["ritual because of spectacular effect"]
+        }
+        DESCRIPTION "You can call up a wind capable of devastating the countryside. You must stand under the open sky to cast this spell. While you cast the spell, a breeze picks up, blowing from you in the direction you are facing. When the ritual is completed, the wind strengthens to a gale roaring over the visible countryside and beyond, strong enough to topple wooden structures and knock down trees. The wind does not weaken while it is within your sight, but loses its force naturally where you cannot see it. If you turn away from your original facing for more than a few seconds, you have to make a Concentration roll against an Ease Factor of 12 to maintain the spell. If you turn away for a minute or more, the spell ends. The air behind you is still."
+    }
+
+    #tC4KfDPuBDfooesjPobCtH7r ^"Wrath of Whirling Winds and Water" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 65 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +3 "Sight"
+            +2 "Sun"
+            +2 "Group"
+            +5 "size"
+            }
+        }
+        DESCRIPTION "This spell creates an immense storm, 40 or more miles wide, of hurricane intensity. The storm builds up while you cast the ritual, and dissipates in a few seconds when the spell's duration ends. The gale-force winds and lashing waves cause immense damage along shorelines, and the winds, rain, and lightning cause extensive damage inland as well. Visibility is reduced to a few paces, missile fire is futile, and travel is nearly suicidal. Weak structures are blown over, and all but the most seaworthy ships are certain to founder unless they can be beached before the storm reaches full intensity. The storm is not under the caster's control, and moves normally."
+    }
+
+    #tpvghH6ZHDItZR2ypBsr1j5i ^"Sailor's Foretaste of the Morrow" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "You know precisely what tomorrow's weather will be, and you gain a general impression about the weather for the week ahead. This intuition only applies to the place where you cast the spell, and is based on extrapolating current conditions, so it is occasionally wrong (precise, but inaccurate). Still, it would take something like an interfering magical being, or a volcanic eruption, to throw the prediction off."
+    }
+
+    #tQjedZoUU3UuvDagKWtuBbk5 ^"True Sight of the Air" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +2 "Sun"
+            +4 "Vision"
+            }
+        }
+        DESCRIPTION "Lets you see clearly through all manner of obfuscation in the air nearby, including smoke, fog, and dust, even if the obfuscation is magical."
+    }
+
+    #tScSzu7K91gX4s19cBxFIMmg ^"Whispering Winds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 0
+            NOTES ["Unique spell"]
+        }
+        DESCRIPTION "The winds bear their tidings to your ears, allowing you to hear words spoken by any group of people within your line of sight, provided no solid barrier (including glass) intervenes. This spell is an adaptation of an effect known to Bjornaer the Founder, and fits poorly into the normal framework of Hermetic magic."
+    }
+
+    #tYFSoycxYr6b4EOguQa7pQXG ^"Eyes of the Bat" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Hearing"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Sun"
+            +3 "Hearing"
+            }
+        }
+        DESCRIPTION "You can move about confidently in complete darkness by sensing air and its boundaries (for example, where solid objects are). You 'hear' the boundaries of the air, so it does not permit fine discriminations. On the other hand, you can 'hear' boundaries behind you."
+    }
+
+    #tH5yHlq1OGEN94xH7Xad0XUz ^"Rain of Stones" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Terram"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Turns rain into stones as it falls, causing +0 damage every two rounds (they're small stones), and maybe less if the rain is very light. People under cover are not affected. The stones revert to water when the spell expires. If it stops raining before the spell ends, no more rain is transformed, even if a different rain storm starts."
+    }
+
+    #tlWee0rCsBVPUgoZDaU2C1Ut ^"Talons of the Winds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Rego"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Diam"
+            +1 "Rego requisite (additional effect: protect the caster)"
+            }
+        }
+        DESCRIPTION "Transforms a wind into an abrasive medium that tears and claws at everything in its path. Soft materials like leaves and cloth are shredded, and people take +4 damage from innumerable bloody cuts and abrasions. This spell cannot be cast if there is not a breeze of some sort blowing, thus making it difficult to use effectively indoors. The caster is not affected by the spell, even if the wind is blowing directly at him. In Ossium of Bjornaer's version of this spell a strange keening can be heard in the air as it cuts through targets. Ossium's wizard's sigil manifests by making many of his spells eerie or frightening."
+    }
+
+    #t9NM4vXlZy6cCTfN3xyBsLrX ^"Infernal Smoke of Death" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Turns normal smoke from a fire into a thick, corrosive cloud. Anyone immersed in the cloud of smoke takes +25 corrosion damage, against which armor provides only half its normal Protection value. Soft materials like cloth, fur, paper, and leather are charred and ruined by exposure to the noxious vapor. While you concentrate, any new smoke becomes corrosive. The smoke is heavier than air, so rolls along the ground, pooling in low spots. The damage represents normal exposure to the vapor, and may be modified if characters spend unusually short or long times within it."
+    }
+
+    #tGyEa8ZfRvziwBTpIrITGD52 ^"Fog of Confusion" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 45 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Imaginem"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Year"
+            +4 "Size"
+            +1 "Imaginem requisite"
+            +1 "Rego requisite"
+            }
+        }
+        DESCRIPTION "Turns a bank of fog up to six miles across into a silvery mist too thick to see through. Random screams, thumps, hisses, and other noises harass and confuse anyone within the fog, perhaps even leading them into danger. People have extreme difficulty navigating through the fog, especially through unknown territory. No more than seven people, who must be present at the ritual, can see normally through the fog. The fog does not dissipate until the spell expires."
+    }
+
+    #tx61DgMBHymAbDqmFUvCs64m ^"Rain of Oil" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 50 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Aquam"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +3 "Sight"
+            +2 "Sun"
+            +5 "size"
+            }
+        }
+        DESCRIPTION "Turns rain into droplets of oil. Within the spell's duration, the rain of oil continues as long as the storm does, drenching the landscape with flammable liquid. The oil will evaporate at a natural rate after the rain ceases. A Creo Ignem spell can ignite the storm so that the oil burns as it falls, but this requires a Group target large enough to catch all the raindrops. Lighting the oil after it has landed is much easier."
+    }
+
+    #tf1FMQVL0XimuEfFnNA3ZhiT ^"Room of Stale Air" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "Makes the air in a room stuffy and uncomfortable. Any creatures that breathe air suffer a –3 penalty on all rolls involving physical exertion. In addition, for each round of exertion a character must make a simple Stamina roll against an Ease Factor of 6 or lose a Fatigue level. This may cause panic in some creatures or people. The speed at which the air refreshes itself depends on how well ventilated the room is."
+    }
+
+    #tqZHEDkhGfBvTpLUv0OFbbfa ^"Quiet the Raging Winds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "Stops all wind from blowing, leaving only calm air. This spell is not powerful enough to affect winds caused by Ritual magic, and only affects winds blowing on the caster when it is cast. Under normal circumstances, the winds will not pick up again for at least an hour or so."
+    }
+
+    #tPO3XDUF58efuRn40s2zxdCF ^"The Cloudless Sky Returned" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 45 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +3 "Sight"
+            +2 "Group"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "This spell clears the sky within your vision of any clouds or other meteorological activity short of a hurricane or tornado, either naturally occurring or caused by magic. The clouds take a few seconds to clear, during which time you must concentrate on them. This spell only affects meteorological activity in progress at the moment of casting, and is not powerful enough to dispel a weather condition caused by Ritual magic. In Ferramentum's version of this spell, the clouds clear from the sky in an orderly manner, as if they were soldiers marching on parade."
+    }
+
+    #te7KDU9EqZOLGPlPQhcpR66h ^"Ward Against Faeries of the Air" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 0
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "As Ward Against Faeries of the Water (ReAq Gen), but for faeries of the air. The faerie cannot directly or indirectly break the magic circle, nor can they use ranged attacks or magic to affect those within it. From some angles at night, the ring may be seen as a violet-hued dome."
+    }
+
+    #tVWHTduLPfMD83PDBvXMMqwu ^"Wind at the Back" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Special"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Special (based on Concentration)"
+            }
+        }
+        DESCRIPTION "An existing breeze follows you until you stop traveling for more than ten minutes. It causes phenomena you pass through (fog, haze) to follow you."
+    }
+
+    #tsDGBX0ua282sFBvS6BgBDpl ^"Ward Against Rain" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "No rain falls on the caster, no matter how bad the weather."
+    }
+
+    #tt4GmCczfjsAleKqzhHXS2dY ^"Clouds of Thunderous Might" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +3 "Sight"
+            +1 "Conc"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "Gathers pre-existing clouds and winds into a small storm. The storm gathers at a normal speed, but is under the caster's control as long as he can see it. The caster may use the control granted by this spell to dissipate small storms as well. If the caster does not dissipate the storm before stopping concentrating, the storm continues as normal."
+    }
+
+    #tSYR4OL05YgEREreI6a3MhFo ^"Gathering of the Stormy Might" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Auram" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +3 "Sight"
+            +1 "Conc"
+            +2 "Group"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "As for Clouds of Thunderous Might, but the storm is larger, possibly covering the entire visible sky. Again, it is under the caster's control."
+    }
+}

@@ -1,0 +1,622 @@
+EXTENSION "ARMDef_Spells_Vim" {
+    NAME "Ars Magica Definitive Edition - Vim Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tAZuaC8KATD7uPKLTVcCzdYE ^"Restore the Faded Threads" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Dia"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "Once a spell trace has been found or suspected, this spell is used to make it examinable. This spell temporarily restores spell traces to a fresh state (as if they had just expired). The spell will restore spell traces of negative magnitude up to the magnitude of this spell –3. The trace must still be existent to be affected (magnitude –9 or greater). Versions of this spell also exist for all standard Targets. Diameter duration is normally long enough to conduct Intellego Vim investigations of the spell traces."
+    }
+
+    #tEkACsFPCnS2WzWae9XABwfH ^"Shell of False Determinations" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "Creates a \"shell\" of magic on an item, helping to shield it from investigation by other magi. All attempts to investigate the magic item give false information about its powers unless half of the level of the shell is exceeded by the magus's Investigation roll."
+    }
+
+    #t5Zst45xmo9lB0kL0BPG0wvv ^"Shell of Opaque Mysteries" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "This spell is similar to Shell of False Determinations (above), but it causes all attempts to investigate the magic item to utterly fail, unless the level of the ritual is exceeded by the magus's Investigation roll. Once a magus determines the presence of a particular shell (that is, by overcoming it), it has no more power against him or her."
+    }
+
+    #tHysWhM2fZUxE8HbS9AQcmhi ^"The Phantom Gift" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "The target of the spell becomes tainted with magic as most magi are. Beasts and people react to the target as though he were a magus. Those who normally associate with the victim do not become hostile, but do give him or her a wider berth. The spell has no effect on those who already have The Gift, including those blessed with the Gentle Gift."
+    }
+
+    #tgXo3bN4uf61GkTPg2fJEecR ^"The Enigma's Gift" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "The target of the spell gains four Warping Points (plus the normal one for being affected by a powerful supernatural effect, in most cases) and, if a Hermetic magus, must check to see whether he enters Twilight in the normal way. Although the burst of magic that causes the Warping lasts but a moment, the resulting Warping is permanent."
+    }
+
+    #t1HHcVLIkTRX3WOT1Z65QAwU ^"The Invisible Eye Revealed" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Touch"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "The caster can feel any magical means currently being used to spy on him. The representation varies in a way that depends on the spell, but it often feels like something touching the magus's back. For example, a magus being spied upon with Enchantment of the Scrying Pool might feel wet fingers, while a magus who is being tracked by The Inexorable Search might feel a finger running over his skin. This spell detects the use of Intellego spells of up to double the level of this spell. A special spell is required because most Intellego spells are designed to be subtle, and they are more subtle at higher levels."
+    }
+
+    #tpM7Mlns0jkJj7oO62SrjzVM ^"Sense of Magical Power" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 2 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "This spell tells the caster whether he is currently in a Magic aura. It does not give any further information. Other spells do the same for other kinds of aura."
+    }
+
+    #t1AWYBBH1GrRfXhusc3wdUIu ^"Scales of the Magical Weight" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "When casting this spell, you typically hold your hands straight out from your body, place a known amount of Vim vis in your left hand (usually one pawn), and then place an unknown amount of vis in your right hand. After casting the spell, you may sense how heavy the unknown vis is in relation to the known, determining the number of pawns present. If you cast the spell without anything to measure the unknown vis against, you only have a very general idea of how valuable it is. The spell cannot be used to determine the amount of raw vis invested in an enchanted item."
+    }
+
+    #t7T9gCKlGLGBMdivPEDzg8dB ^"Sense the Nature of Vis" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "You can tell what Art a supply of raw vis is connected to. To you, the vis appears to glow with an aura that is appropriate to the Technique or Form that the vis is associated with. Creo is white, Intellego gold, Muto constantly fluctuating, Perdo black, Rego purple, Animal brown, Aquam blue, Auram violet, Corpus dark red, Herbam green, Imaginem pearly blue, Ignem bright red, Mentem orange, Terram dark brown, and Vim silver. Some of the colors are very similar, but are easy to distinguish if the item is held steadily and studied for a few seconds."
+    }
+
+    #tpkke9kRpIR9VPhlzWWtbdOL ^"Piercing the Faerie Veil" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Conc"
+            +4 "Vision"
+            }
+        }
+        DESCRIPTION "This spell allows the caster to see through the boundaries of Faerie regiones, and therefore divine the path to the next level (more details about regiones are given on page 420). There are separate but related spells for Divine, Magical and Infernal regiones."
+    }
+
+    #t8wPOovdWH0fmcFtTXeyxFe6 ^"Sense of the Lingering Magic" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Hearing"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Conc"
+            +3 "Hearing"
+            }
+        }
+        DESCRIPTION "This spell can detect the presence of many magical residues, even from weak spells, as well as giving the presence and power of active spells. It does not grant any information apart from the power, however. The residue must be of at least zero magnitude."
+    }
+
+    #tXCJjsnn0j5FHe1joVtAfk0f ^"Sight of the Active Magics" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Conc"
+            +4 "Vision"
+            +2 "Techniques and Forms"
+            }
+        }
+        DESCRIPTION "You can see spells as \"auras\" around things and people. The color of the aura indicates the Form of the spell working on a subject, the color matching the appropriate one described in Sense the Nature of Vis (page 367). The Technique of a spell working on the subject is recognized by the aura's shape, not color. Creo and Rego are both very orderly auras. Muto is constantly shifting, and Intellego usually is as well, but more slowly. A Perdo aura is usually in fragments. Thus, a magus with both Endurance of the Berserkers and The Invisible Eye Revealed upon him has a very controlled, orderly aura of deep red around his or her entire body, and the magus's eyes are surrounded with slowly shifting auras of a silvery hue. You should be warned: Imaginem or Vim spells may be used to disguise auras. Also note that this spell will detect the residues of some spells."
+    }
+
+    #tR2rattQChTkCTKACtQsQRnZ ^"Mirror of Opposition (Form)" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +2 "Voice"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "Cast on another spell while the other spell is being cast, this causes the targeted spell to have the exact opposite of its normal effects. This effect works on spells up to half the (level – 5) of the Mirror of Opposition spell. The effects of the inversion are up to the storyguide to determine, but the target of the inverted spell usually remains the same as that of the original spell. The inverted spell cannot overcome any limitations of Hermetic magic. For example, if a Momentary Perdo Corpus spell is cast, the inversion is probably a Creo Corpus spell of Sun duration. There are ten versions of this spell, each affecting spells of one of the Hermetic forms."
+    }
+
+    #tITPSzsd6OkAmJP08h7Gvy9e ^"Shroud Magic" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "This spell allows a magus to suppress or alter the sigil in a spell that is currently being cast. The spell to be shrouded can be up to double the Shroud's level, and Shroud Magic has the same sigil (or lack of) as that given to the shrouded spell."
+    }
+
+    #t1XYSBSBs36i8gwj0APPrYea ^"The Sorcerer's Fork" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "This spell splits another spell (whose level must be less than or equal to the level of this spell) into two or more identical spells of reduced power, which may be cast against two or more separate targets. Each resulting spell has the same Range and Target (target category, that is — the actual target may be different) as the original spell, but the power of the effect is divided by the number of resulting split spells. The precise effect is at storyguide discretion. One casting die is rolled, and the Penetration total is split between the spells. The Sorcerer's Fork must be equal to or greater than the level of the spell that is to be split. The split spell has a targeting penalty as for multiple casting (see page 225). If the casting magus is not cooperating, all the split spells will strike the original target."
+    }
+
+    #tLbtQoPruGmfMhL0kLBOYw46 ^"Wizard's Boost (Form)" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "You cast this spell as another spell of a level less than or equal to this one is cast. The effect of the other spell increases 5 levels in power, but not past the level of the Wizard's Boost. The effects of the extra 5 levels of power are for the storyguide to determine. A Wizard's Boost may never affect a single spell more than once. There are ten versions of this spell, one for each Hermetic Form."
+    }
+
+    #tsGCnDgTle2t2xuzL0SLxodV ^"Wizard's Communion" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "This spell lets magi combine their power to cast spells. The group of magi work together to cast a specified spell through the unified power of the Communion. Only one extra magus may join the Communion for each 5 levels of the specified spell being cast. One of the magi in the group must also know the specified spell, or cast it from a Casting Tablet (page 263). Only one magus in the group needs to cast the spell. The magus who casts the Wizard's Communion need not be the one who casts the main spell, and normally it is better for them to be different. More than one magus in the group may cast this spell. In this case, add the total levels of successfully cast Wizard's Communion to get the effective level of the Wizard's Communion for this casting. This combined total must be at least twice the level of the specified spell being cast. One magus must roll for success as if casting the specified spell himself. However, the target number for the spellcasting roll is the spell's level divided by the number of magi participating in the Communion. So if five magi participate to cast a 50th level spell, the caster would have to successfully cast a 10th level spell — with all the relevant requisites, of course. This method of casting adds one botch die per magus participating. If the spell botches, all participants gain Warping Points and must check for Twilight if they gain two or more. Communion is a remnant of Mercurian rituals, so it does not perfectly fit into the guidelines of Hermetic theory."
+    }
+
+    #tuETbKFmh5r4XKX73qxaMrmF ^"Wizard's Reach (Form)" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +2 "Voice"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "The range of the targeted spell increases by one category. You may not affect a single spell more than once with this spell, and the targeted spell must be at least one magnitude lower in level than this spell. There are ten versions of Wizard's Reach, one for each Form."
+    }
+
+    #t47JmXyt4N0pd9yg7W2qGnfi ^"Wizard's Vigil" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        DESCRIPTION "This spell functions as Wizard's Communion, except that the longer duration allows it to be used with Ritual spells. For the purposes of its effect, treat it as a Wizard's Communion of two magnitudes lower."
+    }
+
+    #teoZQUckhEJln6mnQGmCUhMx ^"Demon's Eternal Oblivion" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +2 "Voice"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "Weakens and possibly destroys a creature with Infernal Might. If the spell penetrates the creature's Magic Resistance, the creature loses Might Score equal to the spell's level."
+    }
+
+    #tB6WfsE0PKLWvpDwC98r0WlT ^"Disenchant" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "You make a Hermetic magic item lose all its powers permanently if the level of this spell + a stress die (no botch) equals or exceeds the highest level of the enchantments in the item. The enchantment is utterly destroyed, as is all of the vis that was used in the magic item. The object left is in all ways a mundane item, but could be invested with enchantments again at a later time."
+    }
+
+    #tPBHW8Bcpni4Z6cmGS5DnlAy ^"Masking the Odor of Magic" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "Prevents the detection of a magic spell, or of a magic power in an item or being, by InVi magic, unless the level of the InVi spell exceeds twice the level of this spell – 5 (for example, exceeds 20 for a level 15 version)."
+    }
+
+    #t0sXx2Ch5VOYd2fszAo5DH1V ^"Unravelling the Fabric of (Form)" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +2 "Voice"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "This spell will cancel the effects of any one spell of a specified Form whose level is less than or equal to (spell level + 10 + stress die (no botch)). There are 10 variants that cover each Hermetic Form, and a number of much rarer variants for different kinds of nonHermetic magic."
+    }
+
+    #toYkdnjDfZmgmtziKkPWjxUT ^"Wind of Mundane Silence" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Room"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "You raise a metaphorical \"breeze\" that blows the magic away from an area, canceling the effects of any spell there. You can cancel the effects of any spell if, with this spell, you can double the level of the spell on a stress die + the level of your spell. The spell must Penetrate to affect effects on a creature with Magic Resistance, including Parma Magica. If the spell penetrates, and its level + the stress die is double Parma Magica x 5, then this spell dispels the Parma Magica. Wind of Mundane Silence does not affect spells of Momentary duration. Magical things near the area of the Wind wave slightly from the \"breeze.\""
+    }
+
+    #t6DLFCGCrN6jJOgR6PtAYzhW ^"Aegis of the Hearth" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        DESCRIPTION "This ritual protects a covenant in a way similar to the way in which a Parma Magica protects a magus. It provides very strong protection against supernatural effects and creatures that originate from outside the boundary of the Aegis, and much weaker and less consistent protection against supernatural effects originating within the Aegis. The ritual also allows certain individuals to be excluded from the effects of the Aegis, so that it does not hinder their supernatural powers at all. No foreign supernatural creature with Might, of any type, can cross the boundary of the Aegis unless its Might exceeds the level of the Aegis. The Aegis of the Hearth must Penetrate the creature's Magic Resistance in order to have this effect. Any foreign supernatural effect that originates from outside the Aegis and would affect anything inside the Aegis must Penetrate a Magic Resistance equal to the level of the Aegis of the Hearth to take effect. Any foreign supernatural effect originating within the boundary of the Aegis must subtract half the level of the Aegis from any Casting Total or equivalent. Anyone who participated in the ritual to cast the Aegis is a native of that Aegis. Aegis of the Hearth was created by Notatus, the first Primus of House Bonisagus. It was a Major Breakthrough, incorporating Mercurian rituals as well as Hermetic theory, and as a result, the spell is more powerful than it ought to be, and has no Perdo requisite."
+    }
+
+    #t9t3nL9a8Dfy2RhrkuJpiLMj ^"Circular Ward Against Demons" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["Base spell"]
+        }
+        DESCRIPTION "All creatures with Infernal Might equal to or less than or equal to the level of the spell are unable to enter the circle or harm those within it. If you cast the spell again, the stronger ring dispels the weaker, regardless of the order of casting. Some magi cast this spell before going to sleep at night. At night, from certain angles, the ring may be seen as a silver-hued dome."
+    }
+
+    #tfXqAj53HojGoW34GyMrxdij ^"Maintaining the Demanding Spell" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Diam"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "You cast this spell on a spell that you have already cast and are maintaining through concentration. The spell that requires concentration is then automatically maintained for the duration of this spell, whether you concentrate or not. You cannot change the effects of the first spell without concentrating on it again. For instance, you can use The Unseen Arm (ReTe 5) to hold an object in the air without concentrating, but to move the object still requires concentration. A Stamina + Concentration stress roll against an Ease Factor of 6 must be made in order to cast this spell while keeping the first one going (a lower roll than normal because this is what the spell is designed for). This spell only works on spells of equal or lower level."
+    }
+
+    #tBuIT7MNZo0hs4bWPxejQsKe ^"Opening the Intangible Tunnel" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +4 "Arc"
+            +1 "Conc"
+            }
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "You can open a magical channel from yourself to some target, allowing you to cast any spell with a range greater than Personal on that target. The tunnel does not, of itself, grant any sense impressions of the target — you must cast appropriate spells through it if you wish to see. Spells cast through the tunnel cannot be of higher level than that of this spell. You must make standard Concentration rolls to maintain concentration on the Opening spell as you cast other spells. A magus who magically recognizes the tunnel (through The Invisible Eye Revealed or a similar spell) may cast spells through the tunnel back at you, and he need not concentrate on keeping the tunnel open. If this magus is the target of the tunneling spell, he is considered to be touching you. Otherwise, his effective range to you is his range to the target of the tunneling spell. If the target of the spell has Magic Resistance, you must Penetrate that resistance to open the tunnel. Spells cast through the tunnel must also Penetrate Magic Resistance normally."
+    }
+
+    #tXaMTL8Yi3RtMHBi3SFPg8CC ^"Suppressing the Wizard's Handiwork" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            }
+            NOTES ["Base"]
+        }
+        DESCRIPTION "Cancels one spell that you have cast, but only as long as you concentrate. When concentration is broken the effects of the spell return. The level of the spell to be suppressed must be less than or equal to the level of this spell. The effects of the spell being suppressed take about one round to fade out, and then another round to return after concentration is broken. The spell to be affected must be active to be suppressed — in particular, it may not be of Momentary duration. Common uses of this spell include providing access to some place normally blocked by magic, and avoiding traps. This spell is designed to be held while you do something else, so the magus gets a +3 bonus to all Concentration rolls."
+    }
+
+    #tRuhkSxnq4K6B7l8LBdDFdqW ^"Watching Ward" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Special"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Touch"
+            }
+            NOTES ["Base effect", "Duration is non-standard"]
+        }
+        DESCRIPTION "Watching Ward puts another spell on a given target on hold until that spell is triggered by a simple condition, which is determined when this ritual is cast. The target of the Watching Ward must be present for the entire casting ritual. When the conditions you specify come to pass, the suspended spell takes effect. Only one Watching Ward can be placed on any one person or object. The level of the Watching Ward must at least equal the level of the spell held in suspension. You can put multiple spells in the Ward, provided that its level at least equals the sum of the levels of the contained spells. If Intellego spells are included in a Watching Ward, they may be used to trigger the other spells. If someone tries to dispel the Watching Ward and fails, the suspended spell is cast. The Ritual nature of this spell supports the potentially indefinite duration. The Watching Ward is dispelled when it releases its spell. A version of this spell with target Room, known as Waiting Spell, is also well known in the Order. It can contain spells up to the level of the Waiting Spell – 10, and is also a Ritual."
+    }
+
+    #tIOBTSw0zVNdleEX4pW6V7qj ^"Gather the Essence of the Beast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Vim" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Concentrates the raw vis in a corpse into one part of that corpse, which can then be removed. This spell lets you gather all the raw vis you find without lugging around entire corpses of beasts. Note that the vis in many magical creatures is already concentrated in this manner in some specific organ, though this spell will allow you to relocate that vis if you wish."
+    }
+}

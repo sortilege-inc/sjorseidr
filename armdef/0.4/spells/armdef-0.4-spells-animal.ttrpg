@@ -1,0 +1,642 @@
+EXTENSION "ARMDef_Spells_Animal" {
+    NAME "Ars Magica Definitive Edition - Animal Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tOpzPCni3aAhzTYu7IkJIYIN ^"Soothe Pains of the Beast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "This spell looks much like a ritualistic \"laying on of hands\" seen in many churches. You kneel and press your hands to the wound while reciting a quiet incantation. The spell cures one Light Wound suffered by the animal. Asaron of Flambeau believes his mission in life is to repopulate the world so there will be more to kill, and thus spends seasons healing animals and people throughout Europe. In his version of this spell, a black patch in the shape of a tongue of fire is left where the wound was. A symbolic flame is seen in almost all of Asaron's spells, making it his wizard's sigil."
+    }
+
+    #tWmUsZ7qanuekH6NNSlPI5XI ^"True Rest of the Injured Brute" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +3 "Moon"
+            }
+        }
+        DESCRIPTION "The injured target gets a +9 bonus to all Recovery rolls made while the spell is in effect."
+    }
+
+    #t1rD46pROWGZzAWl7mFShlPT ^"Weaver's Trap of Webs" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +2 "Group"
+            }
+            NOTES ["total mass of the spiderwebs is still less than ten basic Individuals, so no size adjustment"]
+        }
+        DESCRIPTION "In casting this spell, you point and from the indicated initial location, a huge net of spider webs grows, filling an area 5 paces by 5 paces by 6 feet high. With supports, the webs can hang vertically, forming a wall; otherwise they act like a net. When the webs are through growing after a few seconds, they are as thick as string and as strong as iron. Everyone caught in the area of the webs is immobilized. Getting free requires a Strength stress roll of 12+, or someone who is not trapped may use an edged weapon to free a victim, which takes three rounds. Contrary to widespread rumor, fire is ineffective against these webs. Webs may continue to trap victims in the future, as long as the spell lasts and they aren't completely hacked apart."
+    }
+
+    #thgbKYFeJ3MhCvTyjdqE60RE ^"The Wizard's Mount" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Creates a horse, which is normal in every way except that it is not disturbed by The Gift."
+    }
+
+    #tFuF80DnVlmHR4L8LBx9iJph ^"Curse of the Ravenous Swarm" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 50 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Group"
+            ^"Requisite" STRING "Rego"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +3 "Moon"
+            +2 "Group"
+            +2 "size"
+            +1 "extra effect from requisite"
+            }
+            NOTES ["for a swarm weighing as much as one thousand pigs", "ritual because it has a really major effect"]
+        }
+        DESCRIPTION "Calls a swarm of locusts or other destructive insects upon an area, which destroys wild plant life and fields. When the spell's duration ends, all the insects disappear, leaving nothing but the damage. The Rego requisite ensures that the insects only devastate the area desired by the caster."
+    }
+
+    #t2LuwmULxbWEfQuUQdXiAKtX ^"Image of the Beast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +4 "Arcane Connection"
+            }
+        }
+        DESCRIPTION "Gives you a hazy mental image of an animal you have an Arcane Connection to. Wounds caused by an animal are an Arcane Connection to that animal with a lifetime of a few hours. This spell can thus be used to find out what was responsible for an attack. All spells cast by Chavin of Tytalus can be recognized because they promote or advocate war or violence. In his version of this spell, the claws and teeth of the beast appear more dangerous."
+    }
+
+    #tXfFl0GKeNa64ld1Vl8KFALC ^"Shiver of the Lycanthrope" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Touch"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Concentration"
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "You feel a sudden shiver if you are touching a person or beast that is actually a lycanthrope. Variants of this spell detect other types of shapechanger, but not Bjornaer with Heartbeasts."
+    }
+
+    #tFc3qvvGvUe0xkRhHhu0fEvT ^"Opening the Tome of the Animal's Mind" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Concentration"
+            }
+        }
+        DESCRIPTION "You touch the head of the animal in question and read its memories of the past day. The further the animal is from human, the harder it is to read its memories accurately. If you simply scan the beast's memories, not looking for anything special, you get the memories the beast thinks are most important. If you are trying to get a specific fact, you need a Perception + Finesse stress roll against an Ease Factor of 6, or 12 if the fact is obscure. Since normal animals are sensitive to magic, they resist your touch and try to shy away from you both when the spell is cast and while the spell continues to function. This can be quite a problem with larger animals."
+    }
+
+    #tOOBw4DFDhAR0OVsFW2lzyPd ^"Hunter's Sense" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Hearing"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Sun"
+            +3 "Hearing"
+            +1 "for shape and primary motivation"
+            }
+        }
+        DESCRIPTION "You sense the shapes and primary motivations of all animals above a certain size that you can hear, or could hear if they were making a noise. You decide the size threshold when you cast the spell, such as \"all animals larger than a fox.\" The 'noise' of an animal's shape is louder the larger it is, while the 'noise' of its motivations increases depending on how intense the motivation is. A rabbit fleeing from a fox would sound fearful, very loudly. The fox's motivation might be fairly quiet, especially if recent hunting had been good."
+    }
+
+    #tfhZNWHrVnNXIIHVBxKo2JFF ^"Beast of Outlandish Size" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Changes the Size of an animal by +1. This change modifies Strength by +2, the range for each wound level increases by one, and Quickness falls by one. The new beast is of huge size, and looks much more impressive than its former self. Townspeople may run in fear of it, and there is little doubt among them that it is a creature of magic."
+    }
+
+    #tdaODo0ADGXuiPSsFnYhpqFP ^"Doublet of Impenetrable Silk" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Change an item made of animal material — silk, wool, or leather — so it cannot be cut or penetrated by weapons. A simple cloth doublet becomes the equivalent of armor with no Load and a +3 Soak bonus. Armor made of quilted material or any kind of leather improves its Protection by an additional +3. The magic does not make the armor better at absorbing shock, so this +3 bonus is the limit that can be bestowed without changing the material into something completely different. At the storyguide's option, the bonus given by this spell may not apply against strictly blunt weapons like clubs and staves."
+    }
+
+    #tmAED2gm5YBMFvTb92ynXucQ ^"Growth of the Creeping Things" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Causes an insect, mouse, toad, or other small (Size –8 or smaller) creature to grow to four times its normal size. If it was venomous before, it is even more venomous now. Semi-venomous creatures, like most spiders, have poison with an Ease Factor of 6 that does a Light Wound."
+    }
+
+    #tbiCAzWVrm3CjtFuVHOx94nO ^"Beast of Minuscule Proportions" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Reduces the size of an animal by 2. This modifies Strength by –4, reduces the range for each wound type by two points, and increases Quickness by +2. The beast appears to be the runt of its litter."
+    }
+
+    #tfiYCuLOwbY17qkNyD1GacSA ^"The Beast Remade" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Corpus"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+            NOTES ["no addition for requisite"]
+        }
+        DESCRIPTION "Gives one land beast a human form, though its intellect remains the same. Some feature of the animal is retained in the human form. A former dog might have an exceptionally hairy human body, and a former cat might let loose an occasional \"meow.\" Once transformed, the beast is disoriented for a while before it becomes used to its new body."
+    }
+
+    #taoBXvKdT0djGJp2YoA4pFRz ^"Transformation of the Ravenous Beast to the Torpid Toad" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Turns any animal into a toad. A newly created toad will hold a certain terror for peasants and serfs, because many believe toads exude a poisonous substance from their skin."
+    }
+
+    #t7CwBtXKLsG1skxg21lGnszE ^"Steed of Vengeance" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Turns a horse into a ferocious magical mount. Its coat becomes a deep black and its eyes a fiery red, its teeth transform into fangs, its hooves become razor-sharp, and it occasionally breathes steam from its mouth — the horse seems a creature from Hell itself. All its Attack rolls get a +5 bonus. The horse tolerates a magus rider. When the spell wears off, the horse must make a Stamina stress roll against an Ease Factor of 9 or die from shock."
+    }
+
+    #tJ0RHi03F0dHw1SSh9eh7nDD ^"Decay Fur and Hide" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Destroys an object made of animal fur or hide, including wool and leather. Marius of Tremere's version of this spell has the target disappear in an impressive puff of smoke."
+    }
+
+    #tuuoLZMHztbBQMA1kA5uAA9X ^"Agony of the Beast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Concentration"
+            }
+        }
+        DESCRIPTION "After you point at the beast and cast this spell, it begins lashing wildly about, upsetting any nearby objects, and howling in great pain. In order to do anything else, the beast must make a Stamina + Size stress roll against an Ease Factor of 9 each round."
+    }
+
+    #tnMVysLskB8b44FcqJ8WY3Sr ^"Blunt the Viper's Fangs" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Blunt the claws, teeth, talons, or other natural weapons of a beast. Only sharp weapons may be affected: this spell does not affect a weapon such as a horse's hoof or a giant snake's coils. The blunted weapon has its total damage (including Attack Advantage) reduced to half (round up). The beast may recover from the effect as if it were a Light Wound. The spell may affect animals of size up to +4."
+    }
+
+    #tl833Z26zyZnHDOLiSgllesX ^"The Falcon's Hood" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Destroys an animal's vision. The blindness heals as if it is a Medium Wound. The title refers to the hood used to cover a falcon's eyes when it is not hunting. When cast by Asaron of Flambeau, this spell causes the animals it targets to bear a faint silhouette of a flame in their eyes."
+    }
+
+    #tvky4Bt2aM4jeKjY33nRszqP ^"Cripple the Howling Wolf" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "When casting this spell, you commonly make an abrupt snapping motion with your hands. One of the target's legs breaks cleanly. The animal cannot walk on that leg, but the damage heals as a Medium Wound. Note that the target need not be a wolf, and that you cannot choose which leg."
+    }
+
+    #tPrzppYVMsmNzAgRAD8od1ZT ^"Ward Against the Beasts of Legend" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["As ward guideline"]
+        }
+        DESCRIPTION "No magical beast whose Magic Might is equal to or less than the level can affect anyone within the Circle or, if it is within the Circle, affect those outside. When a magus is making this and most other wards, a common gesture employed is the Fig Sign. The magus balls his or her right hand into a fist, placing the thumb between the index and middle fingers. A magus traveling to Italy should be warned that this sign is a deadly insult in that country."
+    }
+
+    #tuThORR4BCxspfx5wpy2HAnk ^"Disguise of the Putrid Aroma" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Concentration"
+            }
+        }
+        DESCRIPTION "The target takes no interest in you as long as you continue to concentrate, and do not threaten it. A carnivore treats you as if you were simply something it does not eat. It retains normal interest, however, in anyone else nearby."
+    }
+
+    #teOymSVnyvh2W4z24T5vszHu ^"Circle of Beast Warding" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Ring"
+            }
+        }
+        DESCRIPTION "The caster inscribes a circle that no normal beast will cross."
+    }
+
+    #tdWY6jRDOgJOz7UyqoG9RMOB ^"Soothe the Ferocious Bear" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Calms an animal until it is threatened or aroused again. You must speak soothingly or musically to it, and something as simple as approaching it may arouse it again."
+    }
+
+    #tEXF0NmlcgaldsCjdbjX3NAb ^"Panic of the Elephant's Mouse" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Eye"
+            +1 "Concentration"
+            }
+        }
+        DESCRIPTION "Makes an animal afraid of the target by preying upon its instinctive fears, causing it to attempt escape by the quickest, most feasible means possible. The animal may make a Size stress roll against an Ease Factor of 9 to resist. (The title refers to the elephant's legendary fear of mice, but note that this spell cannot actually affect elephants, as they are too large.)"
+    }
+
+    #ti3HiABpzhbhj8kKYdnaRZ33 ^"Viper's Gaze" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Eye"
+            +1 "Concentration"
+            }
+        }
+        DESCRIPTION "Holds an animal rigid as long as you maintain eye contact with it and concentrate on it."
+    }
+
+    #t6pIWmnWVVGIWkX3WEzCwJT1 ^"The Gentle Beast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Eye"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Eye"
+            +1 "Concentration"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Calms an animal, making it nearly fearless. It does not resist being ridden, shaved, or whatever else you can think of. If the animal enters combat, is extremely frightened, or incurs any kind of wound, the spell ends. The animal must be Size +4 or less."
+    }
+
+    #tc7Mc6CbfMCl3E4NQcKB5E9T ^"Mastering the Unruly Beast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Concentration"
+            }
+        }
+        DESCRIPTION "You can make an animal perform any act it is capable of. You can only issue new commands while touching the animal, but the animal will carry them out without requiring constant contact. Further, the animal will allow you to touch it throughout the duration of the spell. It is difficult to maintain control of particularly stubborn or fierce animals, such as mules or boars — creatures with appropriate Personality Traits may roll against an Ease Factor of 12 each round. When Chavin of Tytalus casts this spell, the creature acts surly and unfriendly while going about its tasks, even when Chavin doesn't specifically tell it to act that way."
+    }
+
+    #toiDogLehsyUDkNdARDq8lpD ^"Commanding the Harnessed Beast" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Animal" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "You implant a complicated command into an animal, which it carries out to the best of its abilities. The command must involve completing a certain task, such as finding a certain person. Vague orders, like \"protect me,\" do not work. If the animal does not complete the task before the end of the spell approaches, it becomes desperately ferocious, especially at night."
+    }
+}

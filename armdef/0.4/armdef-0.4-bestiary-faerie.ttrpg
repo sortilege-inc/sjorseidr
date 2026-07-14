@@ -1,0 +1,762 @@
+EXTENSION "ARMDef_Bestiary_Faerie" {
+    NAME "Ars Magica Definitive Edition - Creatures of Faerie"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+    DEPENDS_ON "ARMDef_Core_Creature"
+
+    #tGhAXDdkHSm25IhWlv6Oj9UG ^"Faerie Hounds" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 5
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER 1
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Faerie Sight", "Improved Characteristics", "Sharp Ears", "Large", "Incognizant", "Reckless", "Traditional Wards (varies)"]
+            ^"Soak" INTEGER 2
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–24), Dead (25+)"
+            ^"Vis" STRING "1 pawn Animal, dog corpse"
+            ^"Appearance" STRING "Faerie hounds are usually of chunky, hunting breeds. Many have shining eyes, and almost all have black, white or green fur. These statistics also suit the hunting hounds of the courtly fae. This type of faerie hound often has a white coat, red ears and blue eyes."
+            ^"Source" STRING "Bestiary"
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Reckless" +3
+            "Brave" +2
+        }
+        COMBAT {
+            "Bite (small teeth)" INIT 2 ATTACK 10 DEFENSE 9 DAMAGE 1
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "distance running"
+            "Awareness" SCORE 6 SPECIALTY "keeping watch"
+            "Brawl" SCORE 5 SPECIALTY "bite"
+            "Hunt" SCORE 6 SPECIALTY "track by scent"
+        }
+        POWERS {
+            ^"Damaging Effect" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Varies"
+                }
+                DESCRIPTION "Causes all of the faerie's weapons, which are part of its glamor, to take on a more deadly aspect for two minutes. The danger of the aspect varies according to the motif usual for the faerie, but always increases the weapon's Damage by +5."
+            }
+            ^"Enthralling Sound" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Used to cause terror and panic with its howl. This power also increases the intensity of an emotion that already exists. A stress roll with an appropriate Personality trait against an Ease Factor of 9 allows a victim to overcome this power's effect."
+            }
+            ^"Enthrallment" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Allows the faerie to take complete control of a single human's mind for a day, by making eye contact."
+            }
+            ^"Fearful Flaming Eyes" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–2"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Completely paralyzes a human who makes eye contact with the faerie."
+            }
+            ^"Hound" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Allows the faerie to know the direction and distance to its human quarry."
+            }
+            ^"Flight" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant +2"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The character is capable of flight. The character may use the Athletics skill to simulate difficult maneuvers, but may not engage in combat while flying incredibly swiftly. The faerie may not fly when heavily encumbered, or with a passenger of its Size or more, unless assisted by another faerie that shares the load."
+            }
+        }
+        DESCRIPTION "The powers listed are commonly found in Faerie Hounds, but it is rare for a single hound to have more than two of them. In some cases faerie hounds have the Power Damaging Effect, which adds +5 to the damage score of their bite. This is usually visually obvious, for example their spittle ignites tiny flames on the ground, or their breath puffs like smoke because their teeth freeze like ice. In part of France, this role is filled by a terrifying goat. Aufhocker, found in German-speaking areas, acts as a kelpie, and uses a power to cling to foes while goring them so that his weight adds 6 to their combat Load. Kludie, from Belgium, is the most powerful variant of this beast. It can take monstrously-large versions of the forms of dog, cat, bat, horse or frog. It walks on its back legs, with a dancing movement as it sprints toward its victim. It is preceded by supernatural blue flames. Kludie knows the trick of bouncing on the back of his quarry and using a power to drag his prey down. He also does the kelpie trick, dunking or drowning those who mount him in horse form. Huge faerie dogs haunt the roads of much of Mythic Europe. They terrify, and sometimes kill, travelers. Some can run rapidly, and others run upon their hindlimbs when chasing humans, to have their teeth closer to the victim's throat."
+    }
+
+    #trHHWmKTfE8lSoQk2182uUEV ^"Faerie Knight" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 1
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" LIST ["Faerie Sight", "Faerie Speech", "Large", "Narrowly Cognizant", "Observant", "Sovereign Ward (varies)", "Vow (Chivalrous conduct)", "Oath of Fealty", "Overconfident"]
+            ^"Soak" INTEGER 9
+            ^"Wound Penalties" STRING "–1 (1–6), –3 (7–12), –5 (13–18), Incapacitated (19–25), Dead (26+)"
+            ^"Vis" STRING "2 pawns, often rusty pieces of armor that the knight has poured its glamour into."
+            ^"Appearance" STRING "A knight clad in silver leaves of metal, astride a fine horse. These knights often display the motif of their court on their surcoat, shield and pavilion."
+            ^"Source" STRING "Bestiary"
+        }
+        PERSONALITY_TRAITS {
+            "Arrogant" +3
+            "Courteous" +3
+        }
+        COMBAT {
+            "Brawl (gauntlet)" INIT 1 ATTACK 6 DEFENSE 6 DAMAGE 5
+            "Long Sword and Heater Shield" INIT 3 ATTACK 10 DEFENSE 9 DAMAGE 9
+            "Mace and Heater shield" INIT 2 ATTACK 9 DEFENSE 8 DAMAGE 11
+            "Lance and Heater Shield (mounted)" INIT 3 ATTACK 10 DEFENSE 8 DAMAGE 8
+        }
+        ABILITIES {
+            "Awareness" SCORE 1 SPECIALTY "enemies"
+            "Brawl" SCORE 3 SPECIALTY "knights"
+            "Carouse" SCORE 3 SPECIALTY "feasts"
+            "Charm" SCORE 1 SPECIALTY "ladies"
+            "Etiquette" SCORE 3 SPECIALTY "chivalrous combat"
+            "Faerie Speech" SCORE 5 SPECIALTY "boasting"
+            "Hunt" SCORE 2 SPECIALTY "humans"
+            "Leadership" SCORE 2 SPECIALTY "guards"
+            "Ride" SCORE 3 SPECIALTY "horses"
+            "Single Weapon" SCORE 4 SPECIALTY "varies"
+        }
+        POWERS {
+            ^"Damaging Effect" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–4"
+                    ^"Form" STRING "as per motif of court"
+                }
+                DESCRIPTION "Causes all of the faerie's weapons, which are part of its glamor, to take on a more deadly aspect for two minutes. The danger of the aspect varies according to the motif usual for the faerie, but always increases the weapon's Damage by +5."
+            }
+            ^"Flight" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The character is capable of flight. The character may use the Athletics skill to simulate difficult maneuvers, but may not engage in combat while flying incredibly swiftly. The faerie may not fly when heavily encumbered, or with a passenger of its Size or more, unless assisted by another faerie that shares the load."
+            }
+            ^"Shift Human Shapes" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Allows the knight, who is usually armored to demonstrate his role, to remove the armor simply by thinking about it."
+            }
+        }
+        DESCRIPTION "Many knights have far higher scores than their listed Pretenses. These statistics are correct for faeries that plan to improve their Pretenses by losing to a character, then mirroring his experience gain for the season. The knight has a faerie horse constructed of the knight's own glamour, so it flies when the knight does, and shares the knight's Magic Resistance. These faeries are often encountered outside courts, on lonely roads, and guarding bridges. They seek out defeat by humans as a way of gaining additional combat Pretenses. They are never seen with their armor off, so they may be a role that other faeries take on when they wish to enjoy some blood sport. Faerie Knights are more bound to the rules of chivalry than real knights, and so they do not use the Damaging Effect Power on their weapons against worthy foes."
+    }
+
+    #trnFXh46anmtTBgqZKXp3xRw ^"Południca" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Auram"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" LIST ["Faerie Sight", "Faerie Speech", "Incognizant", "Sovereign Ward (running water)", "Traditional Wards (questions)"]
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "2 pawns (scythe, Ignem)"
+            ^"Appearance" STRING "This faerie may appear as a beautiful maiden, a crone or an adolescent girl. She wears a white dress and carries a scythe or shears. She may travel as a dust devil, and is used as a nursery terror, to frighten children so that they do not harm crops."
+            ^"Source" STRING "Bestiary"
+        }
+        PERSONALITY_TRAITS {
+            "Curious" +3
+        }
+        COMBAT {
+            "Scythe" INIT 1 ATTACK 6 DEFENSE 4 DAMAGE 5
+        }
+        ABILITIES {
+            "Awareness" SCORE 3 SPECIALTY "laziness"
+            "Charm" SCORE 2 SPECIALTY "rural people"
+            "Faerie Speech" SCORE 5 SPECIALTY "rural people"
+            "Local Farms Lore" SCORE 6 SPECIALTY "stewardship"
+            "Profession: Farmer" SCORE 6 SPECIALTY "stewardship"
+            "Single Weapon" SCORE 3 SPECIALTY "rural people"
+        }
+        POWERS {
+            ^"Cause Fatigue" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Causes the loss of a long-term fatigue level via heatstroke."
+            }
+            ^"Shift Human Shapes" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "(beautiful to hideous within a range of +3/–3 Presence)"
+            }
+            ^"Transform Into Whirlwind" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION ""
+            }
+        }
+        DESCRIPTION "Południca usually appears around noon on hot days, and asks farmhands difficult questions, or engages them in conversation. If the farmhand tries to change the topic of their conversation, or cannot answer one of the faerie's questions, she gives him heatstroke. If particularly annoyed at this farmhand she might instead drive him insane, or cause his death from hyperthermia. Południca are unable to spend Might points during the winter."
+    }
+
+    #t9swDckj1ALQonA6ZZ3G3pKc ^"Mateos, the Faerie Butler" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Herbam"
+            ^"Size" INTEGER -2
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -3
+            }
+            ^"Virtues and Flaws" LIST ["Narrowly Cognizant"]
+            ^"Reputations" LIST ["None"]
+            ^"Soak" INTEGER 2
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12)"
+            ^"Vis" STRING "1 pawn of Herbam in each hand."
+            ^"Appearance" STRING "Mateos is the size of a child, with a large pot belly, full beard sprinkled with gray, and a slightly grubby apron. He is always smiling, and offers just about everyone he meets a drink from his barrel."
+            ^"Source" STRING "Bestiary"
+        }
+        PERSONALITY_TRAITS {
+            "Convivial" +3
+            "Generous" +2
+            "Careful" -2
+        }
+        COMBAT {
+            "Club" INIT -2 ATTACK 4 DEFENSE 0 DAMAGE 1
+        }
+        ABILITIES {
+            "Carouse" SCORE 9 SPECIALTY "drinking"
+            "Charm" SCORE 4 SPECIALTY "drunk people"
+            "Etiquette" SCORE 2 SPECIALTY "parties"
+            "Faerie Lore" SCORE 3 SPECIALTY "drinks"
+            "Folk Ken" SCORE 3 SPECIALTY "drunk people"
+            "Guile" SCORE 9 SPECIALTY "convincing people to drink more"
+            "Living Language" SCORE 5 SPECIALTY "metaphors for drinking and getting drunk"
+            "Music" SCORE 1 SPECIALTY "drinking songs"
+            "Single Weapon" SCORE 1 SPECIALTY "club"
+        }
+        POWERS {
+            ^"Heady Brew" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Any drink served by Mateos is three times as intoxicating as normal. Drinks that were non-alcoholic to start with become as alcoholic as ale. This does not change the taste of the drink. The extra intoxication is a magical effect, with Penetration 10, and can be resisted."
+            }
+            ^"Unending Drinks" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "For as long as he is serving a particular person, the drink in Mateos's barrel does not run out, even if he serves other people as well. If the chosen person (who is not the target of the power, and thus cannot resist) leaves, passes out, or stops drinking for any other reason, the contents of the barrel start to run out."
+            }
+        }
+        DESCRIPTION "Mateos lives for parties, particularly parties with lots of drunkenness and stupid behavior. If he arrives somewhere where there isn't a party, he tries to start one. With his faerie ale (or wine, or cider), it doesn't usually take him very long. Once people start getting drunk, he tries to convince them to do ridiculous and embarrassing things. He does not usually encourage people to do things that could kill them, however. The parties normally finish with everyone but Mateos passed out on the floor. The Gift makes Mateos feel that the Gifted individual is a killjoy opposed to parties, and someone to be hurried out of the way as soon as possible."
+    }
+
+    #te7Myi83kBys4MCWxB3PuJEW ^"Jumayl, A Jinni Guide" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Vim"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Virtues and Flaws" LIST ["Jinni", "Faerie Speech", "Highly Cognizant", "Improved Characteristics", "Second Sight", "Skinchanger", "Warrior", "Well-Traveled", "Wilderness Sense", "Greater Malediction (keep any bargain made)", "Carefree", "Dutybound (Bedouin honor code)", "Traditional Ward (Bismillah Invocation)", "Vulnerable to Folk Tradition"]
+            ^"Reputations" LIST ["Skilled Caravan guard 2 (Mythic Middle East)"]
+            ^"Soak" INTEGER 3
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "3 pawns of Vim vis, camel's tooth"
+            ^"Appearance" STRING "Jumayl (\"little camel\") is a comely, lithe man of uncertain oriental appearance, alabaster skin and white hair. One eye is iridescent green, the other ocean blue. He favors swirling robes dyed a deep blue color over light leather armor, highlighted by gold jewelry."
+            ^"Source" STRING "Bestiary"
+        }
+        PERSONALITY_TRAITS {
+            "Impulsive" +3
+            "Cheerful" +3
+            "Impious" -1
+        }
+        COMBAT {
+            "Long Sword" INIT 5 ATTACK 14 DEFENSE 9 DAMAGE 8
+        }
+        ABILITIES {
+            "Animal Handling" SCORE 3 SPECIALTY "camels"
+            "Athletics" SCORE 3 SPECIALTY "running"
+            "Mythic Middle East Lore" SCORE 4 SPECIALTY "trade routes"
+            "Awareness" SCORE 3 SPECIALTY "alertness"
+            "Brawl" SCORE 3 SPECIALTY "dagger"
+            "Bows" SCORE 5 SPECIALTY "short bow"
+            "Carouse" SCORE 2 SPECIALTY "power drinking"
+            "Faerie Speech" SCORE 5
+            "al-Mushaqqar Lore" SCORE 2 SPECIALTY "drinking establishments"
+            "Faerie Lore" SCORE 3 SPECIALTY "jinn"
+            "Folk Ken" SCORE 4 SPECIALTY "mercenaries"
+            "Leadership" SCORE 4 SPECIALTY "battle"
+            "Ride" SCORE 3 SPECIALTY "camels"
+            "Second Sight" SCORE 3 SPECIALTY "jinn"
+            "Single Weapon" SCORE 7 SPECIALTY "long sword"
+            "Survival" SCORE 2 SPECIALTY "deserts"
+            "Theology: Islam" SCORE 1 SPECIALTY "jinn"
+            "Wilderness Sense" SCORE 3 SPECIALTY "find water"
+        }
+        POWERS {
+            ^"Cuirass of the Zephyr" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "As Circling Winds of Protection with Duration of Recitation / Qira’a (as long as Jumayl keeps reciting verses of the Qur'an — equivalent to Concentration)."
+            }
+            ^"Blinding Light of the Pious" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "As Flash of the Scarlet Flames."
+            }
+            ^"Tay al-Ard (Travel)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Corpus"
+                    ^"Range" STRING "Touch"
+                    ^"Target" STRING "Group"
+                }
+                DESCRIPTION "This power instantly transports Jumayl and 2 individuals he holds hands with from one location to another that he has visited before or has an Arcane Connection to, regardless of distance. As Leap of Homecoming."
+            }
+        }
+        DESCRIPTION "This jinni, one of the jann, is a mercenary guide, forced to wander from caravanserai to caravanserai along the trade routes of the Levant, Arabia, Persia, Transoxiana, and beyond for a crime his brother committed. An excellent swordsman and skilled outdoorsman, he is well known among the Muslim merchants and even Levantine Redcaps for his easy-going nature and bravado in defending caravans from raiders and brigands. Like most Faerie jinn, he can change into an animal form — in his case, a white wild Bactrian camel using his Skinchanger Virtue. Although immune to Fatigue like other faeries, Jumayl is unusually susceptible to the effects of mundane alcohol — a weakness that helps him to play his role within stories along the caravan routes. Unlike most faeries, his Might points, once spent, can only recover if he gets a full night's rest and eats a meal in the company of fellow travelers. This must be done within a human community, eating travel rations or caravanserai meals, drinking beverages fermented by humans and listening to humans sing or tell tales about their travels. For every eight hours the character rests, he recovers a number of Might Points equal to the prevailing Aura as modified by the Realm Interaction Table, or 1, whichever is greater. He does not actually need to eat or drink however. Jumayl knows enough about wizards to avoid leaving Arcane Connections carelessly and keeps his True Name a close secret."
+    }
+
+    #tiemnHzZqqUz3hN0aFhupkis ^"Tarlan the Wolf" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER -1
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 5
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Virtues and Flaws" LIST ["Incognizant"]
+            ^"Reputations" LIST ["Soul-eating demon (local) 1"]
+            ^"Soak" INTEGER 7
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16)"
+            ^"Vis" STRING "2 pawns of Intellego in his nose, 1 pawn of Intellego in each ear."
+            ^"Appearance" STRING "A large, deep black wolf with eyes that glint even when there seems to be no light around. He moves silently and can stay hidden unless he really wants his quarry to see him."
+            ^"Source" STRING "Bestiary"
+        }
+        PERSONALITY_TRAITS {
+            "Relentless" +3
+            "Cheerful" -3
+        }
+        COMBAT {
+            "Bite" INIT 9 ATTACK 10 DEFENSE 10 DAMAGE 6
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 6 SPECIALTY "hunting tracks"
+            "Athletics" SCORE 5 SPECIALTY "running"
+            "Awareness" SCORE 8 SPECIALTY "spotting quarry"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "Hunt" SCORE 10 SPECIALTY "human beings"
+            "Living Language" SCORE 2 SPECIALTY "threats"
+            "Stealth" SCORE 9 SPECIALTY "hunting"
+            "Survival" SCORE 7 SPECIALTY "forests"
+        }
+        POWERS {
+            ^"Marked Quarry" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Tarlan can pick a single human being whom he can see and who can see him, and mark him as quarry for the hunt. This inspires the victim with a strong fear of Tarlan, requiring a Brave roll against an Ease Factor of 9 to overcome, and specifically makes him likely to run."
+            }
+            ^"Prey's Vigor" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+8"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "By breathing on a tired person (anyone who has lost Fatigue levels), Tarlan can restore them to full vigor (i.e. all Fatigue levels are regained). However, the target also ages one year. This power can only be used if the target is close enough to actually feel the wolf's breath on his skin, and only works on adults."
+            }
+            ^"Silent Running" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Tarlan makes no noise unless he deliberately decides to."
+            }
+        }
+        DESCRIPTION "Tarlan exists to hunt people. He picks individuals who are in the wilderness by themselves, marks them as quarry, and then harries them to exhaustion. Once they can run no further, he bursts out of cover, and, somehow, the victims regain their vigor at that moment, finding that they can run away once more. The wolf can keep the hunt up indefinitely, but normally he times a final attack, on an exhausted victim, to happen just before dawn. If the quarry is particularly resourceful, he might keep the hunt up longer. Tarlan does not always kill his victims, leaving some alive to tell the tale of their ordeal. He likes the idea that people are scared of him even before he uses his power. Indeed, he has occasionally not needed to use Marked Quarry at all. The wolf does have one weakness. He cannot enter holy ground, so a victim who can run into a church or graveyard is safe. Tarlan knows this, and tries to herd his victims away from such places. In addition, because Prey's Vigor cannot affect children, Tarlan never hunts them. In fact, he's come to feel somewhat protective of them, on the grounds that, if he can't hunt them, no-one else is going to. Finally, The Gift inspires respect in the faerie. He never hunts Gifted individuals, and might even be happy to work with one who let him hunt people."
+    }
+
+    #tu5DGr58RjGXtAzcLRfq3GZm ^"Valkyrie" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" LIST ["Faerie Sight", "Faerie Speech", "Incognizant", "Visions"]
+            ^"Soak" INTEGER 9
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Vis" STRING "4 Corpus, a dead vulture"
+            ^"Appearance" STRING "Shield maidens or crones that ride wolves above battlefields, and select the worthy dead. They have excellent equipment and extraordinary training."
+            ^"Source" STRING "Bestiary"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +5
+            "Judgmental" +3
+        }
+        COMBAT {
+            "Axe and Round Shield (unmounted)" INIT 2 ATTACK 16 DEFENSE 12 DAMAGE 6
+            "Axe and Round Shield (mounted)" INIT 2 ATTACK 19 DEFENSE 15 DAMAGE 6
+        }
+        ABILITIES {
+            "Awareness" SCORE 9 SPECIALTY "battlefields"
+            "Brawl" SCORE 9 SPECIALTY "einherjar"
+            "Ride" SCORE 5 SPECIALTY "wolf"
+            "Single Weapon" SCORE 9 SPECIALTY "giants"
+        }
+        POWERS {
+            ^"Fly" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "usually Corpus but sometimes Animal"
+                }
+                DESCRIPTION "The character is capable of flight. The character may use the Athletics skill to simulate difficult maneuvers, but may not engage in combat while flying incredibly swiftly. The faerie may not fly when heavily encumbered, or with a passenger of its Size or more, unless assisted by another faerie that shares the load."
+            }
+        }
+        DESCRIPTION "Valkyries know where and when worthy men are likely to die. They carry arms and armor, ride a wolf mount, and carry vast quantities of wine."
+    }
+
+    #to2AWmPum9rpxaQu5RRLsQZN ^"Wolf Mount" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Size" INTEGER 3
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER -4
+            }
+            ^"Virtues and Flaws" LIST ["Faerie Sight", "Ferocity (when hungry)", "Sharp Ears"]
+            ^"Soak" INTEGER 7
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (8–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Vis" STRING "None: the wolf is an extension of the valkyrie."
+            ^"Appearance" STRING "A wolf the size of a horse, with saddle and harness. Its thick fur gives it a Protection of 1 and it wears leather covers which act as partial barding."
+            ^"Source" STRING "Bestiary"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Cowardly" +3
+        }
+        COMBAT {
+            "Teeth" INIT -2 ATTACK 12 DEFENSE 6 DAMAGE 3
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "distance running"
+            "Awareness" SCORE 3 SPECIALTY "smell"
+            "Brawl" SCORE 5 SPECIALTY "teeth"
+            "Hunt" SCORE 4 SPECIALTY "track by smell"
+            "Survival" SCORE 3 SPECIALTY "winter"
+        }
+        DESCRIPTION "The wolf is made of the glamour of the Valkyrie and shares her Might pool. When the valkyrie uses Fly the wolf, as part of her glamour, flies too. The valkyrie can carry a passenger with the aid of her wolf. These minor goddesses of the Norse pantheon are no longer worshiped in Mythic Europe, but have been encountered by magi in Elysium, and in their ancient places of power in Scandinavia. Their name means \"Chooser of the Slain\", because they are believed to choose who lives and dies during battle, and which spirits are worthy of transformation into einherjar, spiritual warriors awaiting Ragnarok. They also act as serving maids in Valhalla. Many have names that evoke the tumult of battle. They ride through the sky, invisibly, on wolves."
+    }
+
+    #t9SvidKIqLJ0RCEJBC4dd9J9 ^"Great Lezi" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 40
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Herbam"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" LIST ["3 x Great Characteristic", "Faerie Sight", "Faerie Speech", "Highly Cognizant", "5 x Improved Characteristics", "Sovereign Ward (may not leave forest)"]
+            ^"Soak" INTEGER 15
+            ^"Wound Penalties" STRING "See chart."
+            ^"Vis" STRING "8 pawns, External vis, club"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Loves Forest" +5
+        }
+        COMBAT {
+            "2 x Brawl (club)" INIT 1 ATTACK 8 DEFENSE 7 DAMAGE 9
+        }
+        ABILITIES {
+            "Animal Handling" SCORE 9 SPECIALTY "woodland creatures"
+            "Athletics" SCORE 3 SPECIALTY "striding"
+            "Awareness" SCORE 9 SPECIALTY "damage to forest"
+            "Bargain" SCORE 3 SPECIALTY "from position of strength"
+            "Brawl" SCORE 6 SPECIALTY "human interlopers"
+            "Carouse" SCORE 3 SPECIALTY "wine"
+            "Charm" SCORE 2 SPECIALTY "forest folk"
+            "Faerie Speech" SCORE 5
+            "Folk Ken" SCORE 3 SPECIALTY "forest folk"
+            "Forest Lore" SCORE 9 SPECIALTY "locations"
+            "Guile" SCORE 2 SPECIALTY "about woodland dangers"
+            "Leadership" SCORE 9 SPECIALTY "woodland creatures"
+            "Swim" SCORE 3 SPECIALTY "streams"
+        }
+        POWERS {
+            ^"Extended Glamour" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Grants awareness of everything that happens within the bounds of the forest. In essence, the faerie is coterminous with the forest, so it is present simultaneously everywhere within its boundaries."
+            }
+            ^"Focus Power (Manifestation)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "-5"
+                    ^"Form" STRING "Animal or Herbam"
+                }
+                DESCRIPTION "Manifests the faerie's consciousness amongst animal and plant life its glamor touches, temporarily controlling their actions. This power allows the lezi to simulate any Creo Animal, Rego Animal, Creo Herbam or Rego Herbam effect with a value of 25 spell levels or less, targeted at the animals within its glamor and suiting its motif."
+            }
+            ^"Focus Power (Woodland Change)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "-5"
+                    ^"Form" STRING "Animal or Herbam"
+                }
+                DESCRIPTION "Muto and Intellego effects only in Herbam and Animal."
+            }
+            ^"Focus Power (Size Reduction)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "-5"
+                    ^"Form" STRING "Corpus or Animal"
+                }
+                DESCRIPTION "Greater Lezi are considered to naturally be Size +7, and use powers to live at a smaller Size."
+            }
+            ^"Transform Into Animal" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "-3"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Transforms the character into a land animal. Faeries retain the power of speech in animal form."
+            }
+            ^"Transform Into Bird or Fish" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "-3"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Transforms the character into a specified bird or fish. Faeries retain the power of speech in animal form."
+            }
+            ^"Transform into Human" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "varies"
+                    ^"Initiative" STRING "n/a"
+                }
+                DESCRIPTION "This power costs the Lezi whatever it cost to transform away from the human shape."
+            }
+            ^"Transform Into Object (Plant)" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "-4"
+                    ^"Form" STRING "Herbam"
+                }
+                DESCRIPTION "In plant form, the lezi is capable of speech and limited movement."
+            }
+        }
+        DESCRIPTION "The lezi's arms are made of solid wood, and do damage like a club. They are wielded with the Brawl Pretense, even if the lezi generates clubs to use in battle. Its combat values vary with Size (base values shown are for Size 0). Lezi are extraordinary in that they can change into any animal or plant from their woodland: they do not specify alternative forms as other creatures do. A Lezi may change size in increments of fractions of an inch, if it wishes. Size varies from –10 to +7. For every +1 Size, add +2 Strength and subtract 1 Quickness. For every –1 in Size, subtract 2 Strength and add +1 Quickness. Some Lezis, particularly those with backward feet, are unable to harm humans who have turned all of their clothes backwards. It can fabricate an endless variety of material from the woodland. The Forest Lord is found in Slavic lands. He usually appears as a tall, pale, bearded man with emerald eyes, but can take the shape of any plant or animal. He may change his size from that of a blade of grass to that of a tall tree. Many lezi have feet that face backward, and many are faunlike. Great Lezi command woodland animals, particularly wolves. The term \"great\" is used to compare this creature to the more common lezi, which is a form of faun."
+    }
+
+    #t8mN0td47adocQnElig6Gtjb ^"Lord Marsyne" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 50
+            ^"Might Realm" STRING "Faerie" FIXED
+            ^"Form" STRING "Aquam"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 4
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" LIST ["Great Characteristics", "Improved Characteristics x 2", "Narrowly Cognizant"]
+            ^"Reputations" LIST ["Grants eternal youth 2 (local)"]
+            ^"Soak" INTEGER 25
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "10 Aquam, in his blood."
+            ^"Appearance" STRING "Tall, well-built, and handsome, with white skin, pale blond hair, and eyes the clear gray of sea ice. He wears fine clothes in white and blue, and a crown of diamonds rests on his brow. He almost looks like a human being, but the authority in his voice belies that, as does the fact that literal ice water runs in his veins; when he bleeds, there are small crystals of ice in the water that flows out."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +3
+            "Just" +1
+            "Forgiving" -3
+        }
+        COMBAT {
+            "Dodge" INIT 0 DEFENSE 0
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 5 SPECIALTY "nobility"
+            "Awareness" SCORE 3 SPECIALTY "in his castle"
+            "Charm" SCORE 8 SPECIALTY "human women"
+            "Etiquette" SCORE 10 SPECIALTY "courtly"
+            "Faerie Lore" SCORE 6 SPECIALTY "cold faeries"
+            "Folk Ken" SCORE 5 SPECIALTY "people making requests"
+            "Guile" SCORE 5 SPECIALTY "pretending to grant requests"
+            "Intrigue" SCORE 4 SPECIALTY "court politics"
+            "Leadership" SCORE 7 SPECIALTY "servants"
+            "Language (All)" SCORE 5 SPECIALTY "commands"
+            "Magic Lore" SCORE 2 SPECIALTY "Hermetic magic"
+            "Order of Hermes Lore" SCORE 1 SPECIALTY "Merinita"
+        }
+        POWERS {
+            ^"Commanding Presence" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Anyone who can see Marsyne becomes awed by him, and gains a Personality Trait of Respectful to Lord Marsyne +3. Even magi must roll this Trait, if they fail to resist the spell. Disagreeing with him is Ease Factor 6, outright contradiction is Ease Factor 9, and attacking is Ease Factor 15. This power does not force obedience to the faerie's commands, but it does force you to be subtle about refusing."
+            }
+            ^"Entomb" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "-10"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "A single human target is entombed in ice. The effect is Mentem because it also suspends the target's awareness, so that he or she does not need to eat, drink, or breathe, and does not think, dream, or remember while in the ice. Marsyne can break the effect at will, or it can be dispelled. If it is broken, the person returns to awareness without, immediately, realizing that they were unconscious. People do, normally, age while entombed, and can die of old age."
+            }
+            ^"Gift of Youth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "-10"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power targets a single woman, who stops aging. As long as she remains in Marsyne's castle, she does not age at all. If she leaves, she has the benefit of the Unaging Minor Virtue, so she might not realize that she is aging again. Once aging has restarted, it does not stop if the woman returns to the castle. The power only works on human women, and Marsyne normally only uses it on his wives."
+            }
+            ^"Inner Warmth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The recipient of this gift is unaffected by mundane cold until she (or he) enters an aura aligned with a realm other than Faerie. (Simply leaving a Faerie aura for an area with no aura doesn't end it, but entering a Magic, Infernal, or Divine aura does.) The gift provides no protection against magical cold."
+            }
+            ^"Lord of Ice" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or more points"
+                    ^"Initiative" STRING "+8"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "Marsyne can create any effect he wants involving ice, including effects that would require a Hermetic ritual. For every point he spends, up to a maximum of 5, the effect has three Hermetic magnitudes of power. Thus, if he spends 5 points, he can create a 15th magnitude effect."
+            }
+            ^"Lord of the Castle" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+15"
+                    ^"Form" STRING "Mentem or Corpus"
+                }
+                DESCRIPTION "Marsyne can command any one of his servants to do anything, and the command is irresistible. He can also take control of the servant's body, and move it like a puppet, or even make it fly through the air. The only limits are that he can only target one servant at once, and can only target beings who have voluntarily agreed to serve him. Most are faeries, but his wives also qualify."
+            }
+        }
+        DESCRIPTION "His Soak is increased by 5 against iron or steel weapons. He can conjure anything he wants, although particularly elaborate items gained particularly quickly will be faerie glamor rather than real. Lord Marsyne is the ruler of a faerie domain in the far north or in a range of high mountains. His home is a castle of fantastic beauty, made entirely of ice, and he has an extensive faerie retinue. Marsyne and his faeries act out an elaborate charade of the routines and festivals of mundane noble life, hunting strange creatures, holding tournaments, and even passing judgment on criminals within the court. Most of the time, the court has little direct contact with humans. However, Lord Marsyne always has a human wife, and every so often he needs to find a new one. He always chooses a beautiful, young woman, and looks for some spark of creativity, independence, and spirit. He is quite taken by The Gift, and any beautiful, young Gifted woman in the area he is searching is very likely to be wooed. The wooing is utterly sincere, as the wife must return of her own free will. Marsyne's wife plays an important role in the politics of the court, having her own set of faerie ladies-in-waiting and servants, and presiding over many of the tournaments. She also plays an important mystical role, as her presence and creativity allow the faeries to do new things. One thing she is not, is a physical wife to Lord Marsyne. As long as the wife follows the rules of the court, everything is fine. Marsyne makes her unaging, and protects her from the cold. If she breaks the rules, however, Marsyne judges her, entombs her in ice, and seeks out a new wife. He has many entombed wives, as some of the rules are along the lines of the classic \"Do not go into this room. Here is the key.\" It is also possible for a wife to win her freedom, either through a successful challenge by an external champion, or through her own wits. Lord Marsyne remains fond of any wife who wins her freedom fairly, because that is part of the rules, but any who simply flee are brought back and entombed in the ice."
+    }
+}

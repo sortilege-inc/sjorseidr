@@ -1,0 +1,822 @@
+EXTENSION "ARMDef_Bestiary_Infernal" {
+    NAME "Ars Magica Definitive Edition - Infernal Creatures"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+    DEPENDS_ON "ARMDef_Core_Creature"
+
+    #t1lHXxUCDhdHlma3HSVk6mlv ^"Baal-Peor, Lord of Filth" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 30
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -5
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" LIST ["Oversensitive (coitus)", "Obese", "Weakness: Running water"]
+            ^"Reputations" LIST ["Treasurer of Hell 6 (Infernal)", "Demon of Filth 5 (Infernal)"]
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Vis" STRING "6 pawns of Perdo, in tongue"
+            ^"Appearance" STRING "Baal-Peor appears as an immensely fat naked man, with rolls of flab cascading down his body. He is completely hairless, and has a repulsive, snake–like tongue. He wears a serpent wrapped around his girth like a belt, and its head is usually draped over his shoulder."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +6
+            "Hungry" +3
+            "Shame" -3
+        }
+        COMBAT {
+            "Noxious Vomit" INIT 9 ATTACK 12 DAMAGE 12
+            "Claws" INIT 4 ATTACK 5 DEFENSE 6 DAMAGE 6
+        }
+        ABILITIES {
+            "Artes Liberales" SCORE 4 SPECIALTY "arithmetic"
+            "Brawl" SCORE 4 SPECIALTY "claws"
+            "Civil and Canon Law" SCORE 4 SPECIALTY "trade"
+            "Folk Ken" SCORE 6 SPECIALTY "fornication"
+            "Infernal Lore" SCORE 5 SPECIALTY "wealth"
+            "Intrigue" SCORE 7 SPECIALTY "envy"
+            "Medicine" SCORE 4 SPECIALTY "poisons"
+            "Profession: Merchant" SCORE 7 SPECIALTY "unfair deals"
+        }
+        POWERS {
+            ^"Form of Woman" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Baal-Peor can take the form of a woman, although he cannot use this power to mimic a specific woman. He always chooses a form which will be considered beautiful by the target audience of his schemes."
+            }
+            ^"Noxious Vomit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+9"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "This power allows Baal-Peor to spray vast amounts of vomit (or, facing the other way, even less pleasant substances) through an area. His vomit is an expression of his spiritual vileness, and does the damage indicated in his combat statistic through corrosion, except to characters with True Faith, whom it cannot touch. The target must make a Strength + Size stress roll against an Ease Factor of 9 or be sent flying backwards. Anyone successfully struck by this vileness continues to suffer +3 damage in each round until it is washed off. This damage does not stack for multiple successful attacks."
+            }
+            ^"Swallow Assault" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Baal-Peor may avoid injury from mundane objects by opening his maw so wide that the attack slides harmlessly down his throat."
+            }
+            ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION ""
+            }
+            ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Shamelessness, Gluttony"
+            }
+            ^"Shroud the Stench of the Pit" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "This power may be used in two manners, both of which affect the expression of other supernatural powers. A demon can conceal the Infernal nature of any other supernatural power, making it appear to be magical or faerie instead. This power is used on an overt expression of power, to prevent spells from recognizing it as infernal in origin. Secondly, it may be used on more subtle powers to remove all stench of the supernatural, making them appear wholly mundane. This power costs Might points equal to the original cost of the power being concealed, or Might points equal to the magnitude of the Infernal effect if it does not cost might to use. This power lasts for as long as the power it is masking."
+            }
+            ^"The Wealth of Nations" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The demon can summon riches; each use of this power can create wealth equivalent to up to pound of gold for every point of Infernal Might possessed by the demon. This wealth can be of any form — gold, gems, rich tapestries, ivory, etc. — but it is always has intrinsic value, rather than being valuable because of its utility (a roomful of grain, for example). This wealth is not created, it is instead summoned from somewhere else, chosen by the demon, usually for the greatest effect. This might be a royal treasury on the other side of Europe or the purse of the man standing next to you."
+            }
+            ^"His Master's Voice" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The demon can summon other demons or corrupt beasts to its current location. This costs one Might point for every point of Infernal Might of the being summoned, so is used sparingly. The demon has no control over the demon he has summoned."
+            }
+        }
+        DESCRIPTION "Claws are coated in excrement. Unless injuries are cleaned carefully, they will fester and never heal. A roll on the Recovery Table that results in an Improvement indicates stability, while a Stable result indicates that the wound worsens. Once the infection has set in, only Divine aid in healing cleanses the wounds. Baal-Peor (or Belphegor) is a demon of wealth. He creates discord by moving mortal riches in disruptive ways (using the Wealth of Nations power). He gives money to the vulnerable, so that the strong are tempted to take it. He gives the possessions of the powerful to others. This tempts the recipients to keep their stolen treasures, and rouses the powerful to recover them by force. Baal-Peor was worshipped, in ancient times, less as a wealth-god than as an embodiment of the desire to consume everything and transform it into vileness. His title, \"Lord of the Openings\" describes him: an unfillable mouth leading to a ceaseless defecation. Priests and pilgrims used the space before his statue as a latrine, as a form of worship. Baal-Peor, it is said, was sent by his masters to seek the truth of rumors that humans lived in marital bliss. He tried to live as a woman, but was so disgusted by marital relations that he fled back to Hell."
+    }
+
+    #tiUiEW4gJ2U3oDA7pYWMqwXn ^"Bartholomew" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 50
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Mentem"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 5
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Virtues and Flaws" LIST ["Weakness: Ordering"]
+            ^"Reputations" LIST ["Excellent adviser on money matters 5 (local)"]
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "10 pawns of Mentem vis, one in each of his fingers. Infernally tainted."
+            ^"Appearance" STRING "Bartholomew appears as an older, but still vigorous, merchant. He is plump, but not fat, and while he never appears positively cheerful, he also never seems angry, or impatient, at least not with other merchants. His clothes are of excellent quality and taste."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Slothful" +3
+            "Gregarious" +2
+            "Retiring" -2
+        }
+        COMBAT {
+            "Fist" INIT -1 ATTACK -1 DEFENSE -1 DAMAGE -1
+        }
+        ABILITIES {
+            "[Area] Lore (area where he lives)" SCORE 6 SPECIALTY "trade routes"
+            "[Area] Lore (larger area including it)" SCORE 6 SPECIALTY "trade routes"
+            "[Area] Lore (whole of Europe)" SCORE 6 SPECIALTY "trade routes"
+            "Artes Liberales" SCORE 2 SPECIALTY "arithmetic"
+            "Bargain" SCORE 10 SPECIALTY "trade goods"
+            "Charm" SCORE 5 SPECIALTY "merchants"
+            "Etiquette" SCORE 4 SPECIALTY "merchants"
+            "Folk Ken" SCORE 8 SPECIALTY "merchants"
+            "Guile" SCORE 10 SPECIALTY "trading"
+            "Intrigue" SCORE 5 SPECIALTY "market politics"
+            "Language" SCORE 6 SPECIALTY "trade talk"
+            "Latin" SCORE 6 SPECIALTY "ecclesiastical"
+            "Profession (merchant)" SCORE 10 SPECIALTY "cloth"
+        }
+        POWERS {
+            ^"Merchant's Blessing" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The recipient of this blessing seems trustworthy to most people, and gets a +3 bonus on all social rolls to do with trading. People react to him as if he has an excellent reputation for honesty, fair dealing, and getting high quality goods cheaply. The blessing lasts for a week, unless Bartholomew chooses to renew it."
+            }
+            ^"Merchant's Curse" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "The inverse of Merchant's Blessing, this curse makes people treat the victim as if he had a strong reputation for dishonesty, cheating and reneging on deals, and selling shoddy goods at inflated prices. He also has a –3 penalty to all social rolls to do with trading. The curse lasts for a week, unless Bartholomew chooses to renew it."
+            }
+            ^"Merchant's Knowledge" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "automatic"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Bartholomew knows what someone in receipt of his curses or blessings is doing with their business."
+            }
+            ^"Project Blessing" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Bartholomew can bless a particular commercial venture, so that chance favors it whenever possible. This results in a very successful trading venture. The blessing only lasts for one day, which isn't normally long enough to have an effect, but Bartholomew can renew the blessing every day, if he so chooses."
+            }
+            ^"Project Curse" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The inverse of Project Blessing, this effect makes everything that could go wrong, go wrong. It takes at most a month to drive someone to bankruptcy through this power. As for the blessing, the curse only lasts for one day at a time."
+            }
+            ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION ""
+            }
+            ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Avarice"
+            }
+        }
+        DESCRIPTION "Equipment: Fine clothes, a nice house, trade goods. Bartholomew is a well-established and moderately successful merchant in a trading city. He is known for being lazy, but still making an extremely comfortable living from his trade. He also willingly gives advice to other merchants, and they have noticed that following his advice makes them rich, while disregarding it makes them poor. Most people in the city also think that Bartholomew attends church regularly. In fact, being a demon, he has never set foot inside a consecrated building. He has, on the other hand, made substantial donations to the Church, and those donations are well known. The advice he gives is good business advice in itself, but he normally backs it up with his blessings, at least for a while. If his advice is ignored, he uses his curses to make sure that people suffer. The demonic features of his advice are very, very subtle. Merchants following them often find that they need to work on Sundays, although Bartholomew does not explicitly suggest that, and that they are often away from home on religious holidays, and thus unable to attend their local church. Further, he gives advice about charity, suggesting that the merchant give money away to reinforce his social standing. He also gives extensive advice on how to calculate how much to give, so that it doesn't cause the merchant financial problems. This has the effect of making the merchant feel that he is doing a lot of good by giving alms, while removing any actual virtue it has. Anyone following Bartholomew's advice gives only for their own glory, and thus earns no merit. They are sinners, but they don't realize that they are, and thus they do not see the need to repent and reform. Bartholomew's strategy is subtle, but it wins many souls for Hell."
+    }
+
+    #tWYzJExHaChrJmx3szdP3Jrd ^"Bomburkhan" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 5
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Vim"
+            ^"Size" INTEGER -9
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -9
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 6
+                ^"Quickness" INTEGER 7
+            }
+            ^"Virtues and Flaws" LIST ["Weak-Willed", "Short Attention Span", "Weakness: Vulnerability (salt)"]
+            ^"Reputations" LIST ["None"]
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4)"
+            ^"Vis" STRING "1 pawn of Vim, in wings"
+            ^"Appearance" STRING "Bomburkhan appears as a jet-black bat, no bigger than a person's hand, but with a pinched and twisted human face protruding from the black fur."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Resentment of Being Controlled" +5
+            "Selfish" +5
+            "Brave" -6
+        }
+        COMBAT {
+            "Dodge" INIT 7 DEFENSE 14
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "flying"
+            "Brawl" SCORE 6 SPECIALTY "dodge"
+            "Guile" SCORE 6 SPECIALTY "boasts"
+        }
+        POWERS {
+            ^"Make a Liar of the Boastful" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "If this imp hears a boast and expends all of his Might points, he can immediately grant someone nearby an Ability or Power which will contradict that boast, and cause them to use it immediately. Thus if someone proclaims that she is the most beautiful woman in France, Bomburkhan can immediately make someone more beautiful than the boaster. This power must penetrate Magic Resistance to grant the Ability or power to the person, and that talent lasts for 1–10 rounds only (roll a simple die). A physical change, such as the example given above, lasts until the boaster and the target can no longer see each other."
+            }
+            ^"Insignificance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "No Magic, Infernal or Faerie power can force Bomburkhan to use any of his powers."
+            }
+            ^"Misfortune" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "As an agent of misfortune, the presence of the demon causes the worst luck. In games of sheer chance, the odds always favor the opponent of the imp's target. In other matters where luck is more of a factor than judgement or skill, the target receives a penalty of –2 to any rolls. This misfortune lasts until the demon grows bored or is driven off."
+            }
+            ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION ""
+            }
+            ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Boastful"
+            }
+        }
+        DESCRIPTION "Bomburkhan was released from Hell after the false bravado of a Crusader led to the capture of Jerusalem. Since then he has taken great delight in puncturing the over-inflated egos of the prideful. This demon has an ability that could be exceedingly powerful, depending upon the magnitude of a speaker's self-importance. For example, should a magus declaim \"no-one can breach my Parma Magica!\", a nearby grog might suddenly hurl a Pilum of Fire which slices straight through it! Fortunately for all concerned, this power uses all of Bomburkhan's Might pool, and he grows bored very easily, wandering off once his mischief is done."
+    }
+
+    #tqjxRww24f6pKaCJzWV1hzkX ^"Bordelon, a Personal Tormentor" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Virtues and Flaws" LIST ["Piercing Gaze", "Puissant Leadership", "Weakness: Protected Group (red–haired women)"]
+            ^"Reputations" LIST ["None"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "3 pawns of Mentem, in hair."
+            ^"Appearance" STRING "Bordelon appears as a stern–faced old woman, with hair tied back in such a tight bun that it distorts her face. Her small horns are hidden within this hair. Her skin is mottled with liver–spots, and she wears an austere gown which covers her cloven hooves and forked tail. She affects the demeanor of a stern governess. She carries a switch of willow bound with leather, which she wields with expert ability to inflict the most pain."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Cruel" +6
+            "Stern" +5
+            "Implacable" +3
+        }
+        COMBAT {
+            "Switch" INIT 6 ATTACK 11 DEFENSE 10 DAMAGE 4
+        }
+        ABILITIES {
+            "Leadership" SCORE 6 SPECIALTY "children"
+            "Single Weapon" SCORE 5 SPECIALTY "switch"
+        }
+        POWERS {
+            ^"Crushing the Will" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "This power saps the will and vitality of its target, leaving him listless, less energetic and withdrawn. All Personality Trait rolls suffer a –3 modifier, and the target may not spend Confidence points to increase other rolls. Each use of this power lasts until the victim has slept for at least 6 hours."
+            }
+            ^"Chastise the Disobedient" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Every strike of Bordelon's switch inflicts a fearsome sting. Double the wound penalties inflicted by the weapon, although these extra penalties vanish after an hour. Wound penalties caused by any actual wounds she inflicts are healed as normal."
+            }
+            ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION ""
+            }
+            ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Shame"
+            }
+            ^"Betrayal of the Heart" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Bordelon can see into the hearts of mankind and draw forth the most secret thoughts — people's fears and sins. Each use of this power reveals to the demon one fact about the target to which he would never admit. Truly holy people may be immune to this power, if they have no secrets, no matter how petty."
+            }
+            ^"Whispers Behind the Back" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                    ^"Spell Equivalent" STRING "Pains of the Perpetual Worry"
+                }
+                DESCRIPTION "Exactly as the spell Pains of the Perpetual Worry, this power gives the victim a nagging, taunting, painful emotion linked to their secret sins. It is a recurrent sense of anxiety that their secret will be uncovered, and a suspicion that everyone already knows it and is taking about the target behind his back. This power lasts for a month."
+            }
+        }
+        DESCRIPTION "Bordelon believes that meekness is a virtue, and that those who strive to better themselves are victims of pride. Her goal is to crush all ambition and prevent those whom she watches from committing the very sin of Satan himself. Bordelon chooses a child early on in his life, and becomes his personal tormentor (granting the Story Flaw Plagued by a Demon). The child soon learns that the demon's periodic appearances are more frequent whenever he tries to distinguish himself from his peers, so her victims tend to become withdrawn, unambitious and meek. Whenever her victim acts in a way that would grant a Confidence point due to increased selfworth, he can expect a visit from Bordelon to punish the presumption."
+    }
+
+    #tu0sr743Wg3FDZADIqGz0Ftz ^"The Buran of Yenghissar" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 25
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Auram"
+            ^"Size" INTEGER 4
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -5
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER -2
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 6
+            }
+            ^"Virtues and Flaws" LIST ["Jinni", "Berserk", "Strong-Willed", "Wilderness Sense", "Fury (Major) (when summoned)", "Greater Malediction (bound by bargains)", "Mute", "Weakness: Protected Group (individuals that invoke the Bismillah invocation)"]
+            ^"Reputations" LIST ["Scourge of Yenghissar 2 (local)"]
+            ^"Wound Penalties" STRING "Not applicable, the buran is an insubstantial spirit"
+            ^"Vis" STRING "5 pawns of Auram vis prava, left behind as black sand when dispersed."
+            ^"Appearance" STRING "Usually manifests as a giant shapeless vortex of raging black sand using its Auram powers. To those with Second Sight, a giant humanoid shadow can be discerned within the sandstorm."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Untameable" +5
+        }
+        ABILITIES {
+            "Arabic" SCORE 5 SPECIALTY "understanding"
+            "Folk Ken" SCORE 3 SPECIALTY "travelers"
+            "Theology: Islam" SCORE 3 SPECIALTY "jinn"
+            "Survival" SCORE 5 SPECIALTY "desert"
+            "Taklamakan Lore" SCORE 5 SPECIALTY "legends"
+            "Wilderness Sense" SCORE 2 SPECIALTY "weather"
+        }
+        POWERS {
+            ^"Delusion of the Desert" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or 5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "This evil spirit can create illusions of a lost traveler's companions or a welcoming oasis, only to launch itself in fury at an unsuspecting victim. Alternatively it can create images of itself as a humanoid sandstorm with glowing fiery eyes in order to terrify its victims prior to their deaths. A minor illusion which affects an Individual amount of material (such as the demon itself) costs one point; a larger illusion which fills a room costs five points. These visions always have a flaw, however (they smell wrong, can only be seen by one target, etc.)."
+            }
+            ^"Elemental Control of Wind" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "The buran has control over the winds of nature, which it uses to wreak destruction on the desert fringes. It may create any Creo, Muto, or Rego effect appropriate to Auram, at a cost of 1 Might Point per magnitude of effect. The demon cannot create any effect with a level greater than its Infernal Might, nor duplicate Ritual effects."
+            }
+            ^"Recalcitrance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Any attempt to control (but not destroy) the buran with any form of Supernatural Power (magical, Divine, or otherwise) treats the demon's Might as if it were 150% its actual Might, or otherwise has its Ease Factor increased by 50%. For example, a Circular Ward Against Demons of 38th level is needed to stop this demon."
+            }
+        }
+        DESCRIPTION "Not applicable, the buran is an insubstantial spirit, with no Combat, Soak, or Wound Penalties, unable to affect the physical world except through its magic. Arabic represents level of understanding as the spirit is Mute. This wild desert storm spirit, or buran, once plagued the small village of Yenghissar along the route to Khashgar, bringing devastation to the crops and herd animals every seven years. It is now bound by an Infernally-aligned sahir using the Goetic Art of Binding. A speechless, destructive force of fury incarnate, it rages to be released and constantly strives to create elemental havoc around the thoughtless sahir who has trapped it within his ancestral sword. Unlike many other corrupt jinn, the buran lacks the Coagulation and Obsession powers common to most demons and is an insubstantial spirit. It is an example of an Infernal storm spirit likely to be found in the Taklamakan Desert. Many travelers' tales tell of companions fallen behind who are tempted off the track by the illusions created by these demons."
+    }
+
+    #tkhtcgGmoWOVCvDajTTnMk9f ^"Fimus, Warrior Demon" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Terram"
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -4
+            }
+            ^"Virtues and Flaws" LIST ["Puissant Great Weapon", "Poor Eyesight", "Simple-Minded", "Weakness: Abhorrent Material (Cinnamon)"]
+            ^"Reputations" LIST ["Champion of Hell 1 (Infernal)"]
+            ^"Soak" INTEGER 15
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28)"
+            ^"Vis" STRING "2 pawns of Terram, in eye."
+            ^"Appearance" STRING "Fimus appears as an immense man apparently put together out of boulders. He has but one eye, in the center of his forehead. He carries an immense cudgel made out of a stalagmite."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Untamable" +5
+            "Intimidating" +3
+        }
+        COMBAT {
+            "Cudgel" INIT -3 ATTACK 13 DEFENSE 6 DAMAGE 11
+            "Fist" INIT -4 ATTACK 6 DEFENSE 2 DAMAGE 4
+            "Death's Vengeance" INIT 10 ATTACK 12 DAMAGE 15
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "pursuit"
+            "Awareness" SCORE 4 SPECIALTY "foes"
+            "Brawl" SCORE 5 SPECIALTY "fist"
+            "Great Weapon" SCORE 6 SPECIALTY "cudgel"
+        }
+        POWERS {
+            ^"Elemental Control of Earth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Fimus has control over earth, which he uses to wreak destruction in the world. He may create any Creo, Muto or Rego effect appropriate to Terram, at a cost of 1 might point per magnitude of effect. The demon cannot create any effect with a level greater than his Infernal Might, nor duplicate Ritual effects. He prefers effects such as Wielding the Invisible Sling and Rusted Decay of Ten-Score Years."
+            }
+            ^"Born of Rock" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The body of this demon is made from solid rock. This makes it exceedingly heavy and almost impossible to harm with mundane means."
+            }
+            ^"Death's Vengeance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Upon death, this demon's body explodes, sending shards of debris up to 20 paces in all directions. Treat this as a physical attack against all within range that can be dodged but not otherwise defended against."
+            }
+            ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION ""
+            }
+            ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Cowardice"
+            }
+            ^"Recalcitrance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Any attempt to control (but not destroy) the demon with any form of supernatural power (Magical, Divine or otherwise) treats the demon's Might as if it were one and a half times its actual Might, or otherwise has its Ease Factor increased by 50%. For example, a Circular Ward Against Demons of 30th level is needed to stop Fimus."
+            }
+        }
+        DESCRIPTION "Fimus is but one of many brother-demons (all with the same name); their mother produces more every time she evacuates her bowels. He and his brothers are popular foot-soldiers and shocktroops used by other demons, because they are effective warriors, and too stupid to effectively entertain rebellious thoughts. Each of the brothers has a different Abhorrent Material, depending upon what their mother had been eating prior to their birth."
+    }
+
+    #tsbEcAtsnTGAWfFHV8UamTqr ^"Michael" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" LIST ["Abhorrent Material (salt)"]
+            ^"Soak" INTEGER 0
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "2 pawns of Muto in his heart (Infernally tainted)"
+            ^"Appearance" STRING "Michael appears as he needs to for his latest role. As a demon, he doesn't need, nor does he have, a 'natural' form."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Cruel" +3
+            "Wrathful" +3
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "running away"
+            "Awareness" SCORE 4 SPECIALTY "victims"
+            "Craft (practical jokes)" SCORE 8 SPECIALTY "painful and humiliating ones"
+            "Folk Ken" SCORE 5 SPECIALTY "figuring out what will make someone most angry"
+            "Guile" SCORE 10 SPECIALTY "pretending to be someone else"
+            "Intrigue" SCORE 3 SPECIALTY "maneuvering people into his plots"
+        }
+        POWERS {
+            ^"Change Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Michael can change his appearance to match that of any human being. The change includes clothes and other equipment, as necessary."
+            }
+            ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION ""
+            }
+            ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Sensitivity to Mockery"
+            }
+            ^"Working Material" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Michael can create whatever he needs to set up a particular practical joke."
+            }
+        }
+        DESCRIPTION "Michael does not normally fight, and if he does he uses whatever weapons are suitable for his current disguise (Michael always takes wounds as a Size 0 creature, even if his current Size is different). Michael (he likes taking the name of a famous angel) is a minor demon who tempts people to wrath. He sets up elaborate, painful, and humiliating practical jokes, and makes sure that he is seen in the form of one of the victim's friends while doing so. If possible, he ensures that the victim sees him, in the form of the friend, laughing at their misfortune before running away. He normally stays around to watch the resulting confrontation, because if it isn't heated enough he sets up another, even more hurtful, joke. He is especially happy if both friends become angry, and the friendship is ruined. Since both parties feel that the other was unreasonable, sometimes they can nurse their anger for years, which is exactly what Michael wants. While Michael's jokes are normally painful and humiliating, they are almost never fatal. He wants people to sin so that they damn their souls, not die and possibly go to Heaven."
+    }
+
+    #tPoxwkFeLKonDlz5xcjCrd5T ^"Polandrus" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Virtues and Flaws" LIST ["Vulnerability (Holly)"]
+            ^"Soak" INTEGER 6
+            ^"Fatigue Levels" STRING "OK, 0, –1/–1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "1 pawn of Animal in each of four large canine teeth, all Infernally tainted."
+            ^"Appearance" STRING "An extremely large, jet black wolf, with red eyes."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Envious" +3
+            "Proud" +2
+            "Calculating" +2
+        }
+        COMBAT {
+            "Bite" INIT 18 ATTACK 11 DEFENSE 9 DAMAGE 8
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 3 SPECIALTY "livestock"
+            "Bargain" SCORE 7 SPECIALTY "for sins"
+            "Brawl" SCORE 5 SPECIALTY "bite"
+            "Charm" SCORE 4 SPECIALTY "frightened people"
+            "Folk Ken" SCORE 3 SPECIALTY "peasants"
+            "Guile" SCORE 8 SPECIALTY "when making deals"
+            "Hunt" SCORE 6 SPECIALTY "livestock"
+            "Language" SCORE 6 SPECIALTY "making deals"
+            "Leadership" SCORE 4 SPECIALTY "wolves"
+            "Survival" SCORE 5 SPECIALTY "woods"
+        }
+        POWERS {
+            ^"Calm Person" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+18"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Makes the target person unnaturally calm about talking to a large wolf. It doesn't lessen their fear, just the sense that it is something they should act on immediately."
+            }
+            ^"Dominate Wolves" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+18"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Polandrus can establish absolute control over any wolf. The wolf doesn't like it, but Polandrus doesn't care. This power applies to mundane wolves, wolves with Might scores, and to characters who can naturally take the form of a wolf, including shapechangers, lycanthropes, skinchangers, and Bjornaer with wolf heartbeasts, but not including magi who change using spells. Once established, the domination lasts until Polandrus decides to drop it, the dominated wolf enters a Dominion aura of level 3 or higher, or someone dispels the power."
+            }
+            ^"Coagulation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION ""
+            }
+            ^"Obsession" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 to 3 points"
+                    ^"Initiative" STRING "–5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Secrecy"
+            }
+        }
+        DESCRIPTION "Polandrus targets livestock farmers. He dominates a few wolves, and then kills some livestock, making sure that someone sees the wolves do it. A little later, he confronts the peasant in question, offering to ensure that the wolves do not attack for a week if the farmer does something innocuous, such as not wear a particular tunic. Polandrus comes back every week, and the requirements gradually become sinful, and more and more heinous. By the end, the wolf relies more on the threat to expose the farmer's deeds than on the threat to the livestock. Polandrus is unnaturally fast in combat, much more so than in normal situations. However, he never attacks people unless he is attacked first."
+    }
+
+    #tc1TI5vSDqXA12csmm8ftUiX ^"Demonic Steed" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 7
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER 3
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" LIST ["Enduring Constitution", "Improved Characteristics", "Lesser Infernal Power", "Long Winded", "Proud", "Corrupted Beast"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0/0, /0/0, –2, –4, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32)"
+            ^"Vis" STRING "2 pawns of Animal, in hooves."
+            ^"Appearance" STRING "A fearsome black stallion with bloodshot eyes, fangs in its mouth, and hooves of iron."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Vain" +6
+            "Brave" +1
+        }
+        COMBAT {
+            "Kick" INIT 3 ATTACK 7 DEFENSE 7 DAMAGE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "long-distance running"
+            "Brawl" SCORE 3 SPECIALTY "hooves"
+        }
+        POWERS {
+            ^"The Unimpeded Traveler" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "This steed is not impeded by poor terrain, and may move at maximum speed along even the poorest of roads, achieving 30 miles a day. It may even cross open water and chasms, unsupported by ground, but can do this only at a trotting pace."
+            }
+        }
+        DESCRIPTION "Lesser Infernal Power, Proud, and Corrupted Beast are a result of its corruption. This horse is one of three created by an Infernalist magus in a tribunal at the fringes of the Order by repeated applications of a tainted version of Steed of Vengeance (Muto Animal Level 35). There were many failures before he successfully created these three corrupted beasts. Because the spell is well-known, he is able to use the steeds in front of other magi with impunity."
+    }
+
+    #txh0YchefNi7f2fawqqp4Fsq ^"Two-Headed Hound" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Infernal" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Greater Infernal Power", "Ferocity (against intruders)", "Improved Characteristics", "Long Winded", "Sharp Ears", "Horrifying Appearance", "Reckless", "Corrupted Beast"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20)"
+            ^"Vis" STRING "2 pawns of Vim, one in each head."
+            ^"Appearance" STRING "This huge dog has two slavering heads protruding from its massive shoulders. The two heads are cursed with independent minds which clearly hate each other and would like nothing more than to bite the other; it is only because the hound's necks are too short that it cannot. The dog is covered in gray fur in the few areas which are not affected by mange, which has left patches of puffy, purulent red flesh."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Hatred of Owner" +6
+            "Hatred of Humans" +5
+            "Hatred of Self" +3
+            "Reckless" +3
+            "Vigilant" +1
+        }
+        COMBAT {
+            "Bite" INIT 2 ATTACK 11 DEFENSE 10 DAMAGE 1
+            "Spit Fire" INIT 6 DAMAGE 15
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "pursuit"
+            "Awareness" SCORE 4 SPECIALTY "keeping watch"
+            "Brawl" SCORE 6 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "track by scent"
+        }
+        POWERS {
+            ^"Spit Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "The hound may spit a bolt of fire at its opponents. The creature may bite one opponent and spit fire at another in the same round."
+            }
+        }
+        DESCRIPTION "Greater Infernal Power, Horrifying Appearance, Reckless, and Corrupted Beast are a result of its corruption. This corrupted beast was created by a diabolist to be a guard for his sanctum. He controls it with an Infernal charm, but is fearful of the day that this charm fails, for he knows that the dog hates him."
+    }
+}

@@ -1,0 +1,675 @@
+EXTENSION "ARMDef_Spells_Aquam" {
+    NAME "Ars Magica Definitive Edition - Aquam Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tJ59OfT43iph23VJjwzFZ8CM ^"Footsteps of Slippery Oil" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Diam"
+            }
+        }
+        DESCRIPTION "From each of the next ten footsteps the caster of this spell takes, nonflammable grease spreads out, leaving a slick area 10 paces wide. Dexterity stress rolls are required to remain upright whenever a character on the oil does something more challenging than walking. A roll against an Ease Factor of 6 is needed for the average maneuver, with Ease Factors of up to 15 needed to (for example) make a right turn at full speed on a smooth, greased surface. The duration is the length of time that the oil lasts.\n\nThis spell was invented by a rather good-natured magus, and the gestures associated with the most common variations of the spell are as comical as the effects themselves. You stand first on one leg, and then the other, vigorously rubbing the bottom of each upturned foot, as if spreading on a salve."
+    }
+
+    #ttAPtP8Vd7k1yO9LKYz2eTZh ^"Creeping Oil" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Saturates a porous material with flammable oil. When casting this spell, you make a flicking motion with your index finger and thumb, as if propelling something at the target. A dot of oil appears on the target after the spell is finished, and slowly spreads over the target, saturating enough cloth to cover a person. If used on a person's clothes and ignited, the oil does +12 damage the first round, +6 the second, and +0 the third."
+    }
+
+    #tp1uMO8aBdRGJ6rAmK0oDgNM ^"Mighty Torrent of Water" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "A 3-foot-diameter jet of water sprays from your outstretched arms towards your target. The target of this gusher of water takes +10 damage and must make a Strength + Size stress roll against an Ease Factor of 9 or be sent flying back.\n\nMarbaid of Flambeau's wizard's sigil is connected to his obsession with blood. In his version of the spell the target is hit by a gush of blood, and the stains do not go away until sunrise/sunset. This does not require a requisite, as it is a purely cosmetic effect."
+    }
+
+    #tDUiJJda59H56WKMzwajx9KD ^"Deluge of Rushing and Dashing" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Concentration"
+            +3 "size"
+            }
+            NOTES ["so that the whole stream floods"]
+        }
+        DESCRIPTION "Causes a stream to flood, starting at the stream's nearest point to you and continuing downstream. The results of this spell are generally quite impressive. As the stream overflows its original bed, it becomes a raging torrent, sucking in everything near it. Damage from the spell can last for many years.\n\nAs long as you concentrate, the stream remains at flood levels. Anyone caught near the stream when it floods is struck by the rush of water (+10 damage), caught up in the flood, and dragged along. Every round, a victim makes a Strength + Swim stress roll against an Ease Factor of 9. Success means the character escapes the flood. Otherwise, the character loses one Fatigue level and takes +5 damage. Any who fall unconscious drown. This roll is repeated until the character either escapes the flood or dies."
+    }
+
+    #ttCgHDt7LIl6CFLk7EEKuozJ ^"Clear Sight of the Naiad" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +4 "Vision"
+            }
+        }
+        DESCRIPTION "You can see as clearly through water as through air, for a single moment."
+    }
+
+    #tN81nMdoSuc7jc4cPl6NEBQv ^"Subtle Taste of Poison and Purity" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Taste"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Concentration"
+            }
+        }
+        DESCRIPTION "You can taste all of the properties of any liquid or mixture of liquids. Unlike Touch of the Pearls, you can use this sense on any number of liquids during the duration of the spell, but you must taste the liquids in question."
+    }
+
+    #tUK6QhFww6UhdSWBsepiEIr7 ^"Touch of the Pearls" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Tells you whether a liquid you hold or touch is poisonous, just as a pearl sometimes does. Safer than Subtle Taste of Poison and Purity, as you don't have to taste the possibly poisonous liquid.\n\nIn Verdan of Ex Miscellanea's version of the spell, poisonous liquids turn a faint green. According to his sigil, all his spells involve the color green."
+    }
+
+    #tmg24JEmwTvm6dKaNIRA6M9F ^"Call of the Rushing Waters" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +4 "Arcane Connection"
+            +1 "Concentration"
+            }
+        }
+        DESCRIPTION "Allows you to find any natural body of water for which you have an Arcane Connection (for example, a vial of water from it). Once you cast the spell, you can hear the water while you concentrate. Following the sound eventually brings you to the water, but you must make simple Perception rolls against an Ease Factor of 6 to follow the sound accurately (roll once per day for long journeys). If you break concentration, you must cast the spell again. A body of water that does not move or that makes little noise requires a roll against an Ease Factor of 9 to be traced."
+    }
+
+    #tK7dWCH9yjHIpKsGR8qJrdmE ^"Voice of the Lake" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Concentration"
+            }
+        }
+        DESCRIPTION "You can hold a conversation with a body of water. A body of water usually knows about things directly in contact with it, such as boats and fish. Genuine lakes are too complex for this spell to affect; they are not Individuals of Aquam."
+    }
+
+    #t2ScErGVoi1SWPPKiCd5YKlm ^"Enchantment of the Scrying Pool" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Imaginem"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["Special spell"]
+        }
+        DESCRIPTION "Turns a body of water into a scrying pool. Innately magical people (including most companions with mystical powers) who look into the pool can see any spot they know of that is within sight of some natural body of water. The view you get is the same view that someone would have from a low boat on the water — either close to shore or far from shore, as desired. Maximum range for scrying is 500 miles; the range of the spell is the range to the pool when the spell is cast. This ritual is not entirely of Hermetic magic, and does not conform to the normal InAq guidelines. It is an old Mercurian ritual that has become known throughout the Order, and which appears to use one body of water as an Arcane Connection to any other body of water. A number of theoreticians would like to make that work more generally, but so far this has not proved possible."
+    }
+
+    #tGy27fsuo8fk9cekSAUnQM5A ^"Incantation of Putrid Wine" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "Makes all liquids within the target room vile, and malodorous. The room where this spell is cast may not lose the stench for weeks or months. Note that this spell only affects liquids that are in the room when it is cast, and they remain malodorous even if removed from the room."
+    }
+
+    #tuQff3e0RyB7qpNFlO4qeZDW ^"Lungs of the Fish" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Requisite" STRING "Auram"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "Part"
+            }
+        }
+        DESCRIPTION "Turns water into air as it enters your lungs, allowing you to breathe water as you do air. This spell puzzles Hermetic theoreticians, as it behaves like a dynamic container target despite not being a container target.\n\nAll known attempts to create analogous effects have failed, even though analysis of this spell has not revealed any sign of non-Hermetic influence, or integrated experimentation. Most magi just point to it as an example of how Hermetic magic is not fully understood, and get on with their lives."
+    }
+
+    #tIHiJ8HMPszSG9hg9RXDcFHY ^"Vile Water of Sterility" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 45 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Group"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Year"
+            +2 "Group"
+            +2 "size"
+            }
+            NOTES ["a very unnatural liquid"]
+        }
+        DESCRIPTION "Ruins a body of water up to the size of a small lake, making it unfit for natural habitation and consumption. The water becomes dark and murky, and noxious fumes emanate from it. Vegetation on the banks either dies or becomes corrupt. Nearby trees become gnarled and blackened, and land animals flee the area."
+    }
+
+    #tFC0UYPxEm0TVX046XCG9rKh ^"Comfort of the Drenched Traveler" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Dries a person and his or her clothes."
+    }
+
+    #tf9L1SjXIypJloNuDtVgD7uL ^"Parching Wind" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Part"
+            }
+        }
+        DESCRIPTION "Removes most of the water from any object, including plants (with a Herbam requisite), possibly making the object brittle and fragile. With a Corpus or Animal requisite, the spell can affect humans or animals. This causes +10 damage, against which armor is no defense, and makes the target extremely thirsty."
+    }
+
+    #tnHdhn4hmjEhlMeqDlCm3nTm ^"Closing the Earth's Gate" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Dries a single spring, so that it never flows again. This spell targets the spring, not the water in it at a particular time, so the spring does not start to flow again later."
+    }
+
+    #t1PPX03dKfI3d20bp3Bih19F ^"Curse of the Desert" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Part"
+            }
+        }
+        DESCRIPTION "Removes virtually all the fluid from the target's body, doing +15 damage, which armor does not protect against. The target must drink within a few minutes of being struck with this spell, or it dies. Casting requisites are Animal for beasts, and Corpus for humans."
+    }
+
+    #t6OuwVLouZFeQ19srm8Aqjix ^"Calling the Odious Drought" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 50 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Boundary"
+            ^"Requisite" STRING "Auram"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Year"
+            +4 "Boundary"
+            }
+            NOTES ["no increase for requisite"]
+        }
+        DESCRIPTION "Causes a drought over the surrounding area. Only one-tenth the normal rain falls, streams dry up, and rivers dwindle."
+    }
+
+    #tcs6g63NmNOxxkxFx16uLdD9 ^"Ward Against Faeries of the Waters" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Ring"
+            ^"Target" STRING "Circle"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["Base spell"]
+        }
+        DESCRIPTION "No water faerie whose Faerie Might is equal to or less than the level of the spell can affect those targeted by the spell. Faeries cannot directly or indirectly break the magic circle, nor can they use ranged attacks or magic to affect those within it.\n\nSeen from certain angles at night, the ring appears as a light blue dome."
+    }
+
+    #t2wSRkNoG5ra0OeLIm49dqje ^"Cloak of the Duck's Feathers" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "slightly unnatural control"
+            }
+        }
+        DESCRIPTION "Makes water run off one object or creature, protecting the target and the target's apparel from dampness. The spell is broken if the target is submerged in water."
+    }
+
+    #t309kS71ggeN1QDe7wzpHqDI ^"Break the Oncoming Wave" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Conc"
+            }
+            NOTES ["ward, so the target is the warded Individual, not the water"]
+        }
+        DESCRIPTION "Breaks all waves and torrents of water (including magical ones) just before they touch you. The water either crashes to the ground or flows around you in a truly impressive display.\n\nIn Ferramentum of Verditius's version of this spell, the water breaks precisely one inch from the target, leaving a very clean line showing where the waves stopped. All of his spells may be recognized by their orderliness."
+    }
+
+    #tfG9vXTfVVBByBBvA4B7xYa0 ^"Breath of Winter" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "Part"
+            }
+        }
+        DESCRIPTION "Turns a circle of water up to five paces across into snow. The Duration ensures that it will not melt until the spell expires, no matter how warm the weather."
+    }
+
+    #tgb850UOxd0SIOtBqH5khEzO ^"Push of the Gentle Wave" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "A low wave is formed to propel a small boat slowly through the water. When casting this spell, you commonly make a pushing gesture. This spell, and other similar ones, pick out a particular current in the body of water and make it behave as desired, and thus have Individual Targets.\n\nIn Silva of Merinita's version of this spell, the wave occasionally drifts or bobs about, as if it is happy and playful."
+    }
+
+    #tjxaXlZQVtPC9DCWByEDlcCN ^"Bridge of Frost" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +1 "Part"
+            +1 "size"
+            +1 "to allow various shapes"
+            }
+        }
+        DESCRIPTION "Causes a thick layer of frost (firm enough to walk on) to form on the surface of a body of water. The frost can take any shape up to fifteen paces in any direction.\n\nIn Cralian of Tremere's version of this spell, the frost is so crystal clear that it can hardly be seen. All of his spells are very subtle."
+    }
+
+    #t15wCyHjikqbxP0IX1VjfEld ^"Chaos of the Angry Waves" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +1 "Part"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Causes water to churn wildly, overturning small water craft and forcing Swim rolls at –6, in a circular area 20 paces across."
+    }
+
+    #tCV2JRaM5FLnaM1AFtwBymyC ^"Parting the Waves" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "Parts a body of water, revealing a dry path 5 paces wide along the bottom. Very large bodies of water are too large for the Group target, and are thus unaffected."
+    }
+
+    #tzpRbz34p9Osy2wBsXeYhV0N ^"Waves of Drowning and Smashing" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +3 "Sight"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Raises a wave 5 feet high and 30 paces wide, which can submerge swimmers, overturn rowboats, and damage sailing ships. It starts as a small, curved wave and grows for the first 10 paces, at which point it reaches maximum size. If it travels 100 paces without striking an object large enough to break it up, it dissipates."
+    }
+
+    #tTW0vUv8wWnTr2A2zMTfgA9u ^"Ice of Drowning" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Concentration"
+            +1 "Part"
+            +1 "size"
+            +1 "additional effect, changing the water to ice"
+            }
+            NOTES ["for the violent pounding"]
+        }
+        DESCRIPTION "Turns part of the water in a circle 10 paces across into large, jagged chunks of ice and drives them to pound against anything on the water's surface. The ice can punch holes in small boats but does not damage ships. Any swimmers in the area take +15 damage, and suffer –6 and two extra botch checks on Swim rolls."
+    }
+
+    #teJuCa5TisoDtxTqqN6gci6T ^"Pull of the Watery Grave" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +3 "Sight"
+            +1 "Conc"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Creates a strong undertow that pulls any object smaller than a rowboat 25 fathoms (150 feet) into the depths. Each of those caught in the undercurrent must make a Strength + Swim stress roll against an Ease Factor of 9 to avoid being dragged down. A roll is made each round that the spell is maintained."
+    }
+
+    #t1BWOeFhirsKnTYCPzqhXvLj ^"Tower of Whirling Water" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "From a large body of water you form a waterspout that moves under your mental direction. It causes a simple die + 15 damage to anyone it hits (no Attack roll necessary). In addition, those struck must make a Quickness stress roll against an Ease Factor of 6 to avoid being sucked up by the waterspout. Those who fail are helplessly pulled into the spout and begin to drown immediately. When the waterspout fails, they fall up to 20 feet to the water's surface. If you direct the waterspout to move across land, you must make an Intelligence + Concentration stress roll against an Ease Factor of 9 each round to maintain it."
+    }
+
+    #t6ULNAQKy66sfxT8ICMgBK5Q ^"Neptune's Wrath" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Aquam" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +3 "Sight"
+            +3 "size"
+            }
+            NOTES ["ritual for large effect"]
+        }
+        DESCRIPTION "A gigantic wave is created in a very large body of water. The wave, which is only 20 feet high but up to a mile wide, is capable of capsizing ships at sea, smashing and drowning people near shore, and seriously damaging coastline communities. The tidal wave needs 5 miles of water surface to build itself up to proper proportions. The magus cannot control the wave without casting another spell."
+    }
+}

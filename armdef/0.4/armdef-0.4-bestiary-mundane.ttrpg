@@ -1,0 +1,483 @@
+EXTENSION "ARMDef_Bestiary_Mundane" {
+    NAME "Ars Magica Definitive Edition - Mundane Beasts"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+    DEPENDS_ON "ARMDef_Core_Creature"
+
+    #tMY9GPHqsn7jxi6aZH6aCGDQ ^"Adder (Viperis)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER -4
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -1
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER -6
+                ^"Communication" INTEGER -6
+                ^"Strength" INTEGER -8
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 3
+            }
+            ^"Virtues and Flaws" LIST ["Lightning Reflexes", "Infamous"]
+            ^"Reputations" LIST ["Venomous (local) 4"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1), –3 (2), –5 (3), Incapacitated (4), Dead (5+)"
+            ^"Appearance" STRING "The common adder is a small snake, usually about a foot and a half in length. Its color varies from pale grey or yellow to red, with diamond-shaped black markings along its back. Some individuals are completely black. The adder's head is triangular in shape."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Hostile" +2
+        }
+        COMBAT {
+            "Fangs" INIT 3 ATTACK 8 DEFENSE 7 DAMAGE -7
+        }
+        ABILITIES {
+            "Awareness" SCORE 2 SPECIALTY "prey"
+            "Brawl" SCORE 2 SPECIALTY "fangs"
+            "Hunt" SCORE 4 SPECIALTY "rodents"
+            "Stealth" SCORE 4 SPECIALTY "stalking prey"
+            "Survival" SCORE 3 SPECIALTY "grassy areas"
+        }
+        POWERS {
+            ^"Venomous Bite" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "n/a"
+                    ^"Initiative" STRING "n/a"
+                }
+                DESCRIPTION "When the adder attacks, compare its Attack Advantage to the victim's armor Protection (not his Soak). If the adder's advantage is higher, the victim suffers the effects of adder venom as listed in the Poison Table on page 406, regardless of whether the bite inflicts an actual wound. The storyguide may adjust the required Attack Advantage for special circumstances: for instance, high boots might offer an effective Protection +3 against the adder's special attack even though they don't protect against normal attacks."
+            }
+        }
+        DESCRIPTION "The adder is a venomous snake commonly found throughout Mythic Europe (except in Ireland). It is hardy enough to hibernate through the winter. It hunts rodents, lizards, and frogs by hiding and waiting for prey to pass nearby. Its venom is weak and can sicken, but not usually kill, a man. The adder is prone to attack reflexively when anything stumbles across its hiding-place (see the Lightning Reflexes Virtue). Because it's so thin and flexible, it gains a +6 bonus to Defense against grapple attacks."
+    }
+
+    #tJWt1EwHjvoLNiqSHZV5Z8oU ^"Bear (Ursus)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" LIST ["Ferocity (when injured)", "Improved Characteristics (x2)", "Tough", "Greedy (minor)", "Reclusive"]
+            ^"Reputations" LIST ["Ferocious (local) 2"]
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Appearance" STRING "The bear is a large, shaggy beast that weighs up to fifty stone (700 pounds) and stands over seven feet tall on its hind legs. Its coat may be light brown or yellowish in color to black; most often, it is medium brown. The bear has large claws and makes a bellowing roar."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Slothful" +3
+            "Aggressive" +2
+        }
+        COMBAT {
+            "Claws" INIT 0 ATTACK 13 DEFENSE 9 DAMAGE 10
+            "Teeth" INIT 0 ATTACK 11 DEFENSE 7 DAMAGE 7
+            "Grapple" INIT 0 ATTACK 7 DEFENSE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "sprinting"
+            "Awareness" SCORE 3 SPECIALTY "prey"
+            "Brawl" SCORE 5 SPECIALTY "claws"
+            "Hunt" SCORE 4 SPECIALTY "deer"
+            "Survival" SCORE 5 SPECIALTY "foraging"
+            "Swim" SCORE 3 SPECIALTY "against the current"
+        }
+        DESCRIPTION "The only bear species that exists in Mythic Europe is known today as the brown bear. It can be found throughout Mythic Europe in forests, mountains, and even the northern tundra. Its range extends across North Africa and through Asia as well. It is most common in wilderness areas like the Pyrenees, the Alps, and Scandinavia and Russia. The bear makes its lair in the earth, either in a cave or in a den it digs with its mighty claws. It lives mainly by foraging but can hunt and kill anything up to the size of a red deer. Men hunt the bear by setting deadfalls or chasing it with hounds. Few dare to engage it at close range with spears, for it is extremely powerful, and ferocious when wounded. The brown bear can run quickly, gaining a +3 bonus to rolls involving running. It can stand on its hind legs so as to attack a man on horseback. It can climb trees and is a strong swimmer. According to Pliny the Elder, the he-bear sleeps for forty days in winter and the she-bear sleeps for four months. The bear cub is born a shapeless lump of flesh until the she-bear licks it into the shape of a little bear."
+    }
+
+    #tFV7aCoIbxfIqp1mh1HC6gzm ^"Boar, Wild (Aper)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" LIST ["Berserk", "Enduring Constitution", "Ferocity (when cornered)", "Tough", "Greedy (minor)", "Wrathful (minor)"]
+            ^"Reputations" LIST ["Ill-tempered (local) 2"]
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "OK, 0/0, 0/0, –2/–2, –4, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Appearance" STRING "The wild boar has prominent tusks and a hairy ridge along its spine. It is densely covered in short bristles ranging in color from grey to black or brown. Its legs are longer than those of a domestic pig and it can run quickly for short distances."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +4
+            "Angry" +3
+        }
+        COMBAT {
+            "Tusks" INIT 1 ATTACK 10 DEFENSE 9 DAMAGE 7
+            "Tusks (berserk)" INIT 1 ATTACK 12 DEFENSE 7 DAMAGE 7
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "sprinting"
+            "Awareness" SCORE 3 SPECIALTY "foraging"
+            "Brawl" SCORE 5 SPECIALTY "tusks"
+            "Survival" SCORE 5 SPECIALTY "forests"
+        }
+        DESCRIPTION "The wild boar lives in forests throughout Mythic Europe, where it forages by night and rests by day. Wild swine travel in groups called sounders of twenty or more individuals, though they are also encountered singly. In France and England the boar is called la bête noire, \"the black beast,\" for its evil temper. It is a favorite sport of noblemen, who hunt it from horseback using hounds, lances, and swords. According to Pliny the Elder, the wild boar toughens its hide by rubbing against trees. Boars vary greatly in size, from eight stone (112 pounds) to more than thirty stone (420 pounds). The largest boars are Size +1."
+    }
+
+    #tKiXhonN9CSUuQLFbPLI5dbY ^"Bull (Taurus)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -1
+            }
+            ^"Virtues and Flaws" LIST ["Affinity with Brawl", "Ferocity (charging)", "Tough", "Oversensitive (to provocation)"]
+            ^"Reputations" LIST ["Strong (local) 4"]
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Appearance" STRING "These statistics are for a bull of the Spanish type, which is black in color, weighs about eighty stone (1120 pounds), and has sharp, inward-curving horns and a hump on its back. There are many breeds of cattle in Mythic Europe, some of them larger than this specimen. Most breeds in Mythic Europe are short and broad-bodied and have long horns. They may be black, white, tan, red, or brown in color. Some breeds have a coat of shaggy fur. Pliny the Elder writes of magical bulls that live in India, but the statistics here are for a mundane bull."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Aggressive" +2
+        }
+        COMBAT {
+            "Horns" INIT 0 ATTACK 8 DEFENSE 3 DAMAGE 7
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "charging"
+            "Awareness" SCORE 3 SPECIALTY "predators"
+            "Brawl" SCORE 5 SPECIALTY "horns"
+        }
+        DESCRIPTION "The bull does not attack without reason, but it is easily — sometimes accidentally — provoked. When a bull charges, it exerts itself to gain an Attack bonus and may simultaneously spend Confidence. In Spain, the Moorish nobles make a spectacle of fighting bulls from horseback on festival days. The sport of bull-baiting, where spectators watch a tethered bull being killed by a pack of dogs, is known throughout Mythic Europe. Bulls are somewhat clumsy fighters at first, but if they survive combat they quickly grow \"wise\" and become very dangerous. The speed with which they learn to fight is reflected in their Affinity with Brawl."
+    }
+
+    #tTSWTSAukcVwQKCfkvM134wW ^"Cat (Felis)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER -3
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER -7
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 4
+            }
+            ^"Virtues and Flaws" LIST ["Perfect Balance", "Puissant Awareness", "Sharp Ears", "Nocturnal"]
+            ^"Reputations" LIST ["Evil (local) 2"]
+            ^"Soak" INTEGER 1
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–2), –3 (3–4), –5 (5–6), Incapacitated (7–8), Dead (9+)"
+            ^"Appearance" STRING "In Mythic Europe, domestic cats are short-haired and tend to have grey or yellow-orange fur with darker stripes, though black, white, and calico cats are not uncommon. The European wildcat looks much like a large domestic cat with a thicker, shaggier coat and bushy tail. Its coat is grey-brown with black stripes and a white underbelly."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Curious" +4
+            "Timid" +2
+        }
+        COMBAT {
+            "Claws" INIT 3 ATTACK 8 DEFENSE 10 DAMAGE -5
+            "Teeth" INIT 4 ATTACK 8 DEFENSE 7 DAMAGE -6
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "jumping"
+            "Awareness" SCORE 4 SPECIALTY "at night"
+            "Brawl" SCORE 2 SPECIALTY "claws"
+            "Hunt" SCORE 4 SPECIALTY "mice"
+            "Stealth" SCORE 4 SPECIALTY "stalking"
+        }
+        DESCRIPTION "The cat has a reputation for evil among the common folk. They accuse it of stealing the breath of babies, though only supernatural cats can do such a thing. Cats are sometimes tolerated because they keep down the population of rats, but they are not commonly kept as pets and they are often killed by peasants out of superstition or cruelty. For some reason, the cat's bad reputation is unknown in England and it is looked upon more favorably in that land. Pliny the Elder says nothing about the cat's reputation, noting only that the cat is the natural enemy of mice and that its eyes are so keen it can see in the dark. Cats generally flee from any opponent larger than themselves. They are excellent climbers and jumpers, gaining a +3 bonus to appropriate rolls. This reputation is strongest in Celtic areas, and weaker or unknown in other places."
+    }
+
+    #tCS0jLBY5GMEhV43vdYxXsOE ^"Falcon (Falco)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER -3
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER -6
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 6
+            }
+            ^"Virtues and Flaws" LIST ["Ferocity (swooping attack)", "Keen Vision", "Fragile Constitution"]
+            ^"Soak" INTEGER -2
+            ^"Fatigue Levels" STRING "OK, 0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–2), –3 (3–4), –5 (5–6), Incapacitated (7–8), Dead (9+)"
+            ^"Appearance" STRING "These statistics are for a gyrfalcon, the largest and most prized of falcons. Its wingspan can exceed four feet. It has a short, hooked beak and dark eyes. Its plumage may be white, grey, or dark brown and has a banded pattern."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Fierce" +3
+        }
+        COMBAT {
+            "Talons" INIT 5 ATTACK 6 DEFENSE 12 DAMAGE -4
+            "Beak" INIT 6 ATTACK 6 DEFENSE 9 DAMAGE -5
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "swift flight"
+            "Awareness" SCORE 4 SPECIALTY "spotting prey"
+            "Brawl" SCORE 2 SPECIALTY "talons"
+            "Hunt" SCORE 4 SPECIALTY "game birds"
+            "Survival" SCORE 3 SPECIALTY "cold climates"
+        }
+        DESCRIPTION "The falcon is among the swiftest of birds and hunts on the wing, overtaking its prey in flight. Nobles use falcons to hunt game birds such as partridge. In the wild, the gyrfalcon can kill prey as large as a goose, and usually hunts birds and small rodents. It lives in cold northern lands including Scandinavia, Iceland, and Russia. Other, smaller species of falcon are Size –4. All falcons are fast fliers and gain a +3 bonus to rolls involving speed."
+    }
+
+    #tFJ9uqPllvOOZH4SHdyqWlfB ^"Horse, Courser (Equus)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Long-Winded", "Improved Characteristics", "Fear (loud noises)", "Non-combatant"]
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (16–21), Incapacitated (22–28), Dead (29+)"
+            ^"Appearance" STRING "The courser is a swift horse belonging to a mid-sized, athletic breed like the Andalusian. The Andalusian stallion is tall and strong, weighing about 80 stone (1120 pounds) and standing 15 hands (60 inches) high. It has a gracefully curving neck, a broad chest, straight back, and a flowing mane and tail. Its coat may be grey, black, chestnut, or roan."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Skittish" +3
+            "Brave" -2
+        }
+        COMBAT {
+            "Hooves" INIT 4 ATTACK 0 DEFENSE 4 DAMAGE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "long-distance running"
+            "Awareness" SCORE 3 SPECIALTY "noises"
+        }
+        DESCRIPTION "The courser is a swift horse used by knights and nobles for hunting, traveling, and carrying important messages. The courser is not trained for battle and panics relatively easily; the statistics for its kick are given in case a character is unlucky enough to be next to a panic-stricken horse. A light horse trained for battle is called a charger. Another kind of light horse is the palfrey, which is a riding horse chosen for its gentle gait and often ridden by inexperienced riders or by ladies. Any light horse — courser, charger, or palfrey — gets a +3 to rolls involving running or jumping."
+    }
+
+    #tECmS4nxKwkptpvje88VaCke ^"Horse, Destrier (Equus)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER 3
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Virtues and Flaws" LIST ["Ferocity (when ridden in battle)", "Improved Characteristics", "Long-Winded", "Proud (minor)"]
+            ^"Reputations" LIST ["Aggressive (local) 1"]
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Incapacitated (25–32), Dead (33+)"
+            ^"Appearance" STRING "The destrier is a heavy warhorse. One breed used as destriers is the Percheron, a huge horse weighing over 140 stone (1960 pounds) and standing over 16 hands (64 inches) high at the withers. It has a heavy, slightly curved neck, a broad and deep chest, and powerful, stocky legs. Its coat is either grey or black in color."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +2
+            "Brave" +1
+        }
+        COMBAT {
+            "Hooves" INIT 1 ATTACK 7 DEFENSE 5 DAMAGE 7
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "balancing"
+            "Brawl" SCORE 3 SPECIALTY "hooves"
+        }
+        DESCRIPTION "The destrier, or heavy war horse, has been bred in Mythic Europe since at least the time of Charles Martel (8th century A.D.). Some of the large horse breeds in Mythic Europe are the Percheron, the Belgian, and the Friesian. These horses are used mainly for battle; farm work is done using oxen. The destrier is almost always a stallion. It is highly trained so it will charge without fear when its rider commands. When pressed into melee, it can rear on its hind legs and lash out with its forehooves. Though huge, the destrier is agile and can balance on its hind legs for several combat rounds without difficulty. It is trained to fight independently of its rider, so it can help defend him if he should be dismounted or badly wounded. Like all horses, the destrier is a fast runner and gains a +3 bonus to rolls involving speed. It is too heavy to be much of a jumper."
+    }
+
+    #ta1LasxJzrmvgsIc5Akwldpe ^"Hound (Canis)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER -4
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Improved Characteristics", "Long-Winded", "Sharp Ears", "Reckless"]
+            ^"Reputations" LIST ["Loyal (local) 2"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–15), Incapacitated (16–20), Dead (21+)"
+            ^"Appearance" STRING "These statistics are for a large hound such as the bloodhound. The bloodhound stands a little over two feet at the shoulder and weighs up to nine stone (126 pounds). It has large jowls, dangling ears, and a heavy tail. Its coat is short and may be tan, red, or liver in color."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Loyal" +3
+            "Reckless" +3
+            "Brave" +2
+        }
+        COMBAT {
+            "Bite" INIT 2 ATTACK 8 DEFENSE 7 DAMAGE 1
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "distance running"
+            "Awareness" SCORE 3 SPECIALTY "keeping watch"
+            "Brawl" SCORE 3 SPECIALTY "bite"
+            "Hunt" SCORE 4 SPECIALTY "track by scent"
+        }
+        DESCRIPTION "There are many breeds of dogs in Mythic Europe, many of them similar to breeds that exist in our world (though they may be called by different names). The largest dogs are used for guarding livestock or hunting dangerous beasts like wolves, bears, and wild boars. They include the breeds like the bloodhound, elkhound, Rottweiler, mastiff, and great Dane. Smaller hounds, such as the greyhound, Basset hound, and Dalmatian, are Size –1 and are often used to hunt deer, fox, and small game. Medium-sized dogs (Size –2) include spaniels, used to chase small game and to flush game birds for falconers; terriers, which hunt badgers, stoats, and rats; and the Welsh corgi, a small cattle-herding dog. The smallest dogs (Size –3) include lap-dogs, small terriers bred for vermin control, and the tiny Italian greyhound. Several breeds that are popular in the real world, such as the German shepherd and most retrievers, did not exist in the Middle Ages. These statistics are for the bloodhound, and the Characteristics of other breeds may be different. All dogs have a good sense of smell, and the bloodhound's sense is so keen it gets a +3 bonus to all related rolls. Dogs also get a +3 to endurance-related rolls due to their Long-Winded Virtue. A pack of dogs may fight as a trained group under the leadership of a human Master of the Pack. Use the Master's Animal Handling score instead of his Leadership score to determine how many dogs he can command at a time."
+    }
+
+    #txeqZy3QeWD0GcUq1y1y7Lfm ^"Lion (Leo)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 6
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" LIST ["Ferocity (self-defense)", "Improved Characteristics (x2)", "Puissant Brawl", "Self-Confident", "Tough", "Proud", "Weakness (submission)"]
+            ^"Reputations" LIST ["Fierce (local) 4"]
+            ^"Soak" INTEGER 8
+            ^"Fatigue Levels" STRING "OK, 0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Appearance" STRING "The lion is a legendary beast more often depicted in artwork than encountered in the flesh. It can weigh up to 35 stone (490 pounds) and have a body length of over ten feet. It has a short, broad muzzle with powerful jaws and teeth. Its coat is tawny and the male lion has a dark, shaggy mane. The fearsome roar of the lion can be heard from a great distance."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +5
+            "Fierce" +5
+        }
+        COMBAT {
+            "Claws" INIT 1 ATTACK 15 DEFENSE 12 DAMAGE 10
+            "Bite" INIT 1 ATTACK 13 DEFENSE 9 DAMAGE 9
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "pouncing"
+            "Awareness" SCORE 2 SPECIALTY "smell"
+            "Brawl" SCORE 5 SPECIALTY "claws"
+            "Hunt" SCORE 4 SPECIALTY "deer"
+            "Stealth" SCORE 4 SPECIALTY "stalking"
+            "Survival" SCORE 5 SPECIALTY "arid climates"
+        }
+        DESCRIPTION "Pliny the Elder writes that, during his time, lions were found in Europe only between the rivers Achelous and Mestus (in Greece), and that they also inhabited Syria and North Africa. The European lion was extinct before the middle ages in historical Europe, but might have survived in Mythic Europe. Pliny writes that there are two kinds of lions: those with long manes, which are bold; and those with curly manes, which are timid. These statistics are for the bold variety. Pliny also notes that the lion will not attack a man who lies prostrate before it. The lion can make impressive leaps and gets +3 to jump-related rolls. It can easily leap high enough to attack a man on horseback."
+    }
+
+    #tNaeIgxzbm1I4S8ry2XJDgHa ^"Stag (Cervus)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -5
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Higher Purpose (protect the herd)", "Improved Characteristics", "Defensive Fighter", "Extra Natural Weapons", "Fast Runner", "Good Jumper", "Large Antlers", "Sharp Ears"]
+            ^"Reputations" LIST ["Noble (local) 2"]
+            ^"Soak" INTEGER 2
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Appearance" STRING "These statistics are for the red deer, one of the largest deer in Mythic Europe. Adult males average 40 to 50 stone in weight (560 to 700 pounds) depending on the richness of the available food supply, and may be up to 15 hands high—as tall as some horses, but more lightly built. The red deer’s coat is reddish-brown in winter and tan in summer, with a lighter rump and underbelly. Stags have a shaggy mane of dark fur and an impressive rack of antlers over four feet across from tip to tip. They make a deep, bellowing roar during the autumn mating season.\n\nThe red deer lives in open woodlands, moors, and grasslands throughout Mythic Europe. It avoids dense, tangled forests but can be found in alpine forests and meadows. The species is called \"elk\" in contemporary North America. The size of the red deer varies from +1 where grazing is poor to +2 where the grass is rich and plentiful. Does are smaller than stags and lack antlers.\n\nThe red deer is a favorite quarry of hunters. In some places, only nobles are allowed to hunt it. The stag usually flees from combat, trying to draw enemies away from its herd, but it can fight if it must. All deer gain a +3 bonus to rolls involving running or jumping."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +1
+        }
+        COMBAT {
+            "Antlers" INIT 4 ATTACK 7 DEFENSE 8 DAMAGE 5
+            "Hooves" INIT 4 ATTACK 6 DEFENSE 8 DAMAGE 3
+            "Dodge" INIT 2 DEFENSE 7
+            "Antlers (natural weapon, autumn/winter)" INIT 2 ATTACK 3 DEFENSE 2 DAMAGE 3
+            "Hooves (natural weapon, spring)" INIT 2 ATTACK 2 DEFENSE 2 DAMAGE 1
+        }
+        ABILITIES {
+            "Athletics" SCORE 4 SPECIALTY "sprinting"
+            "Awareness" SCORE 3 SPECIALTY "predators"
+            "Brawl" SCORE 4 SPECIALTY "dodge"
+            "Survival" SCORE 3 SPECIALTY "woodlands"
+        }
+        DESCRIPTION "During the autumn and winter, a stag has antlers with which it fights; in spring, it sheds its antlers and must fight with its hooves until the following autumn."
+    }
+
+    #tuyJcB3Wv7bt6AQY8zLsl5zi ^"Wolf (Lupus)" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Size" INTEGER -1
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 2
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Improved Characteristics (x2)", "Ferocity (when hungry)", "Long-Winded", "Sharp Ears", "Compulsion (killing)", "Infamous", "Aggressive", "Hardy", "Keen Sense of Smell", "Pack Animal/Pack Leader", "Pursuit Predator", "Thick Fur", "Vocal"]
+            ^"Reputations" LIST ["Bloodthirsty (local) 4"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0/0, –1/–1, –3, –5, unconscious"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16), Dead (17+)"
+            ^"Appearance" STRING "The wolf has erect, triangular ears, a narrow muzzle, and a coat of shaggy fur. Its eyes are usually yellowish and have a steady, unsettling gaze. Its color may be any shade from pale grey through dark brown, often with lighter patches on the sides of the face and around the eyes. The wolf can bark, but its better-known sound is its eerie, piercing howl.\n\nThe wolf is found throughout Mythic Europe, the Middle East, and North Africa. According to Pliny the Elder, the wolves of northern regions are fierce while those of Africa and Egypt are weak\n\nWolves are greatly feared by commoners. They are hunted with large hounds because they kill livestock. In some lands, there is a bounty on their hides. Many tales attribute supernatural powers to wolves, but most wolves are mundane and have no powers at all."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Brave" +3
+            "Cowardly" +3
+        }
+        COMBAT {
+            "Teeth" INIT 2 ATTACK 11 DEFENSE 9 DAMAGE 0
+            "Teeth (natural weapon)" INIT 0 ATTACK 3 DEFENSE 1 DAMAGE 1
+        }
+        ABILITIES {
+            "Athletics" SCORE 5 SPECIALTY "distance running"
+            "Awareness" SCORE 3 SPECIALTY "smell"
+            "Brawl" SCORE 5 SPECIALTY "teeth"
+            "Hunt" SCORE 4 SPECIALTY "track by smell"
+            "Survival" SCORE 3 SPECIALTY "winter"
+            "Leadership" SCORE 5 SPECIALTY "wolves"
+        }
+        DESCRIPTION "The Flaws above reflect the medieval perception of the wolf as a wanton, bloodthirsty killer. Individual wolves, such as the Animal Companion of a player character, may substitute another Personality Flaw in place of the Compulsion. A wolf Animal Companion that goes around killing livestock could be disruptive to stories. Regardless of such a wolf's actual personality, mundanes are likely to treat it with a great deal of fear and suspicion.\n\nThe leader of a wolf pack has the additional Ability, Leadership 5 (wolves). A pack may fight as a trained group when its leader is present. A wolf pack is extremely dangerous. Its thick fur gives it a Protection of +1."
+    }
+}

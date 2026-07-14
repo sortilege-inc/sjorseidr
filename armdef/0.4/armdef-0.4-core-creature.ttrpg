@@ -1,0 +1,40 @@
+BASE "ARMDef_Core_Creature" {
+    NAME "Ars Magica Definitive Edition - Creature (core stub)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+
+    # Minimal base type for Bestiary creatures (armdef-0.4-bestiary-*.ttrpg).
+    # Individual creatures set concrete inline values; system sub-blocks
+    # (PERSONALITY_TRAITS / COMBAT / ABILITIES / POWERS) carry the typed
+    # lists. Mundane Beasts have no Might/Might Realm.
+
+    #taDz3ITq9fRoE374AgiL8VE4 ^"Creature" DEF {
+
+        PROPERTIES {
+            ^"Might" INTEGER MIN 0
+            ^"Might Realm" ENUM ["Magic", "Faerie", "Infernal", "Divine"]
+            ^"Form" STRING
+            ^"Size" INTEGER
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER
+                ^"Cunning" INTEGER
+                ^"Perception" INTEGER
+                ^"Presence" INTEGER
+                ^"Communication" INTEGER
+                ^"Strength" INTEGER
+                ^"Stamina" INTEGER
+                ^"Dexterity" INTEGER
+                ^"Quickness" INTEGER
+            }
+            ^"Virtues and Flaws" LIST OF STRING
+            ^"Reputations" LIST OF STRING
+            ^"Soak" INTEGER
+            ^"Fatigue Levels" STRING
+            ^"Wound Penalties" STRING
+            ^"Vis" STRING
+            ^"Appearance" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

@@ -1,0 +1,729 @@
+EXTENSION "ARMDef_Spells_Ignem" {
+    NAME "Ars Magica Definitive Edition - Ignem Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #toiVgH2FKYML1dk6N3lAtxav ^"Moonbeam" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 3 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Causes a gentle light, bright enough to read by, to shine down from above and illuminate the area described by your encircled arms. Lasts as long as you hold your arms in a circle."
+    }
+
+    #t0HtyLJLfeSR8lN8GdPKmpUk ^"Palm of Flame" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "A flame leaps up in your palm, which must be upturned for the spell's duration. The flame casts light like a torch, and can ignite very flammable items. It does no damage, and does not burn the caster."
+    }
+
+    #tm5xpKzjNyjc8mVRtaej7Hwv ^"Heat of the Searing Forge" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Heats a piece of metal so that it is too hot to touch. Something the size of a breastplate or helmet does +5 damage if in direct contact with the skin for one round. For each additional round, more damage is done, the amount dropping by two points each round (+3 damage on round two, then +1). Smaller objects do less damage. Most metal armor has leather or cloth underneath that gives the victim a +3 Soak bonus against the heat."
+    }
+
+    #tPXEMWJB1bho6nAJT78uEypV ^"Lamp Without Flame" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "This spell creates a steady light as bright as daylight on a cloudy day. The light has no apparent source, but illuminates an area about ten paces across, centered on a point indicated by the caster. This point may be a mobile item."
+    }
+
+    #twzPmRCH2gCk144kMJrNfQ4u ^"Blade of the Virulent Flame" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Diameter"
+            }
+        }
+        DESCRIPTION "Forms a fire along the length of a metal blade. This flame doubles the weapon damage score for the blade (or adds +5, whichever is greater), and can start fires as well. If the spell is cast repeatedly on the same blade, the blade gets hot enough to melt after half an hour, which ends the spell. Letting the blade cool for half an hour between castings avoids this."
+    }
+
+    #t63Mbk29CfTzFbiuUHEyxjEH ^"Flash of the Scarlet Flames" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "A brilliant red flash explodes in the air where you designate. If you target a person's face the target needs a Stamina stress roll against an Ease Factor of 9 to avoid temporary blindness. If the target botches the roll, he is permanently blinded. If temporarily blinded, he can try to make a simple Stamina roll against an Ease Factor of 9 each minute to recover. The flash is equivalent to looking straight at the sun.\n\nIn Rose of Jerbiton's version of this spell, there is a faint odor of roses in the area where the flash explodes."
+    }
+
+    #tV90ZQF58o2LRijKElOWlNAR ^"Pilum of Fire" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "A 2-foot, thick, spear-shaped jet of fire flies from your palms, doing +15 damage to the individual it hits."
+    }
+
+    #tD2Tgp9MubdRisgDlKGlzzIt ^"Arc of Fiery Ribbons" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "A dozen multi-hued ribbons of flame leap from your hands and fly out as far as your voice carries, covering a 60-degree arc. All those in the arc take +10 damage."
+    }
+
+    #tGi1Ja4imax8uBzBwotr4Upr ^"Coat of Flame" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Rego"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Diam"
+            +1 "Rego requisite"
+            }
+        }
+        DESCRIPTION "The target is swathed in fire, and takes +5 damage every round while the spell is in effect. That is, the damage must be rolled against Soak twenty times during the spell. The Rego requisite ensures that the fire does not spread."
+    }
+
+    #tT7n40ZprmWf0cEXlumMLeJR ^"Ball of Abysmal Flame" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +2 "Voice"
+            }
+            NOTES ["the ball appearing to shoot from your hand is a cosmetic effect"]
+        }
+        DESCRIPTION "A ball of flame shoots from your hand to strike a single target, doing +30 damage.\n\nMarius of Tremere's version of the spell causes the ball to make a loud bang when it hits the target. His sigil is a gaudiness in his spells."
+    }
+
+    #tB8kKEHrawCDO8St1F8AteFU ^"Circle of Encompassing Flames" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Creates a circle of flames 6 feet high. The circle begins at a 1-pace radius, but you can make it shrink to a pillar or grow to a 3-pace radius as you concentrate if you cast with a Rego requisite. Anyone moving through the flames takes +20 damage. You cannot move the center of the circle."
+    }
+
+    #tT5yqAAunP2UltMjM1PtiAk1 ^"Tales of the Ashes" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Lets you see what the ashes you touch originally were, and how and when the object was burned. The latter two are divined from markings and signs in the ashes."
+    }
+
+    #tiHw8iFSAU9X9aWZEHd7RKMT ^"Shadows of the Fires Past" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +4 "Vision"
+            }
+        }
+        DESCRIPTION "Allows you to see where fires have been in the past lunar month. A light red flickering haze appears where the fire was, and you gain an intuitive sense of when the fire was there. This spell does not look into the past, but detects the traces of fire."
+    }
+
+    #twXIhYE8vcpCbWbHQft2w9Zv ^"Vision of Heat's Light" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Sun"
+            +4 "Vision"
+            }
+        }
+        DESCRIPTION "Allows you to see the heat of objects that are of human body temperature or hotter. Excellent for use in the dark, but it doesn't give true vision. You can see well enough to use a weapon, even a missile weapon, without penalty, but recognizing people is very difficult."
+    }
+
+    #tYGR35BEPcEZLreMHbbH7FOP ^"Eyes of the Flame" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +4 "Arc"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Lets you see a fire to which you have an Arcane Connection. You can also see all those things which the fire illuminates."
+    }
+
+    #t8L7sG4ItrFax8UwYEbooRWR ^"Words of the Flickering Flame" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Allows you to converse with a fire, commonly very chaotic and distractible. Promising a fire more fuel might keep its interest. Fires are mostly aware of what they've burned, but they have a limited awareness of what goes on around them as well."
+    }
+
+    #tvhaQg98Uh48uejO4EUAEE9C ^"The Many-Hued Conflagration" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Makes a fire burn brightly in shifting colors for an instant. Each being looking at the fire must make a Stamina stress roll against an Ease Factor of 6 or be blinded for one round by the multicolored lights."
+    }
+
+    #tNFlJMHPRu98CLWbZT1BVLXz ^"Show of the Flames and Smoke" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Causes smoke of different colors, streams of flame, and strange popping and sizzling noises to come from a fire. The effect is so spectacular that onlookers are either entranced or horrified, depending on the circumstances. The pyrotechnics might ignite nearby flammable objects and cause minor burns to those within 2 paces of the fire."
+    }
+
+    #tmW5wsUFZA0f0Bmsg2kwFrcs ^"Hornet Fire" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Rego"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +1 "Rego requisite"
+            }
+        }
+        DESCRIPTION "Turns a fire into a swarm of fireballs, each the size of a large insect, that fly and harass at your command. Their burning touch gives one person within range both a –3 penalty on all rolls and two extra botch dice, but they do not cause actual damage."
+    }
+
+    #t7tX4EZlAj7UyPXHhiEUt2DB ^"Prison of Flames" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +1 "Size"
+            }
+        }
+        DESCRIPTION "Turns a bonfire into a prison shaped like a miniature castle. A person thrown into the middle is not burned, but takes +15 damage if he or she tries to escape."
+    }
+
+    #tWFsjmlP1AnCiIXkY6L8nqGW ^"Trapping the Fire" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Terram"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+            NOTES ["requisite is free"]
+        }
+        DESCRIPTION "This spell turns the heat and flames of a large campfire into a small, very hard object, such as a gem or a piece of metal. If the object is broken, the flame returns, but dies if there is nothing to burn."
+    }
+
+    #tWH2KGYhMNcmF4pf4fc89tgL ^"Flames of Sculpted Ice" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Aquam"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "Turns a fire up to the size of a small house into ice. The ice forms beautiful sculptures of leaping flame, until it begins to melt. When the ice has melted halfway, the flames start again, but probably won't spread, because of wet surroundings."
+    }
+
+    #txlzEBpmVtEzGaEBMgdHzacB ^"Gloom of Evening" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Diam"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "The level of light in the target room drops substantially, making the room gloomy, with deep shadows everywhere."
+    }
+
+    #tHUd8IEKoISu6XcuY3FJ5o5J ^"Winter's Icy Touch" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Causes the target to feel a chill and lose body heat. The target loses a Fatigue level."
+    }
+
+    #tVBR6LixKvFC6lTRjjdQlhNo ^"Soothe the Raging Flames" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Eradicates the heat of a bonfire, which, however, continues to burn until the fuel already covered in flame is consumed. The flames do not spread, or harm anything beyond what they were already burning. If the fire is extinguished and relit, it will burn hot again, as it is now a different fire."
+    }
+
+    #t0B3PLSWBZ1hbiEKSQ99kTI9 ^"Well Without Light" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Structure"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +3 "Str"
+            }
+        }
+        DESCRIPTION "Removes light from the target structure. Only spells greater than level 25 can create light within this area. When casting this spell, magi typically clench a hand into a fist, and the light flows into the fist like a living entity, until the entire area is dark."
+    }
+
+    #tEIh5IuIO7uoUbj9lrfp1nGm ^"Conjuration of the Indubitable Cold" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Part"
+            +2 "size"
+            }
+        }
+        DESCRIPTION "Cools the air within ten paces of the target, leaving it slightly below freezing. All nonliving things are chilled thoroughly, not just on the surface. All living things (except you, if you cast with a Rego requisite) lose one Fatigue level. House fires become as small as campfires, bonfires become as small as torch fires, and campfires and smaller fires go out."
+    }
+
+    #t6pya5BYBKGQEuOmxI3GLVm5 ^"Wizard's Icy Grip" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Chills a single target so that it takes +20 damage. If this is enough to kill, the target is frozen solid. Armor does not add to Soak against this spell."
+    }
+
+    #ttrnwcYmM39iaXbNuGKKo4vZ ^"Wizard's Eclipse" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Diam"
+            +4 "Bound"
+            +3 "size"
+            }
+        }
+        DESCRIPTION "The sun is eclipsed within the target area, making it as dark as night. The darkness begins very suddenly — the superstitious are likely to panic, especially if they see that there is normal daylight just beyond the boundary of the spell."
+    }
+
+    #tMIfWcmcWBfCzzJ1nH9hifes ^"Tremulous Vault of the Torch's Flame" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Causes a fire to quiver a few seconds and then make a leap of up to 10 feet in any direction. A Targeting roll is required to hit a specific target. The flame stays at the spot it hits if it can burn there (see rules for fire damage on page 407). Otherwise, it simply scorches the spot and goes out (doing +5 damage)."
+    }
+
+    #tbgOGtZu8rQXxmMgqq93oDON ^"Leap of the Fire" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "size"
+            }
+        }
+        DESCRIPTION "Causes a bonfire to make a leap of up to 10 paces in any direction, where it catches if there is fuel, or burns out if there is none. Make a Targeting roll to hit a target; the flames do +10 damage."
+    }
+
+    #tntJKOA1ejEq082inD97OMR7 ^"Light Shaft of the Night" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "Collects moonbeams and starlight into a single vertical shaft of soft, silvery light that moves under your control. It illuminates an area 15 paces across with light nearly equal to sunlight (if the moon is out) or moonlight (if the moon is not out). If the sky is overcast, the spell does not work. Can only be cast under the night sky."
+    }
+
+    #t0hAQYY7RVdnah2ZQ6dMoyqE ^"Burst of the Sweeping Flames" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +3 "Sight"
+            }
+            NOTES ["Base 10 (4 + 2 magnitudes for the intensity of the fire)"]
+        }
+        DESCRIPTION "This spell causes a fire to explode outwards from its source along the ground, as if a giant wind were blowing on it from above. The fire travels for no more than 10 paces, but it ferociously ignites anything in its path. The original fire is left dead, but in all probability a number of new fires will be started. The flames cause +5 to +15 damage, depending on the intensity of the original fire."
+    }
+
+    #t0ul3lAZx5hrioUyaCG2DJjR ^"Ward Against Heat and Flames" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Ignem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "for up to +15 damage"
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Keeps heat and fire at bay, unable to approach within a couple of inches of the target. This renders the target immune to damage from flames or heat of intensity less than that of molten iron. The target gets a +15 Soak against all fire-related damage. Any fire doing less than +15 damage per round doesn't penetrate the ward. Such fires simply dim at the protected person's passing and flare back up after he or she is gone."
+    }
+}

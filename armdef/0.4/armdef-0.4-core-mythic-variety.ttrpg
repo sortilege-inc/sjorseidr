@@ -1,0 +1,28 @@
+BASE "ARMDef_Core_Mythic_Variety" {
+    NAME "Ars Magica Definitive Edition - Mythic Companion Variety (core stub)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+
+    # Minimal base type for the four Mythic Companion varieties — one per
+    # supernatural realm (armdef-0.4-mythic-companions.ttrpg). Individual
+    # varieties set concrete inline values. Required Virtues/Flaws entries are
+    # as-printed names with their parenthetical cost/type riders kept verbatim
+    # (same shape as Character Virtues/Flaws), resolvable by name against the
+    # chapter IV Virtue/Flaw DEFs.
+
+    #tDx0L91yCFzngaSZLriMpJUf ^"Mythic Companion Variety" DEF {
+        APPLIES TO [^"Mythic Companion"]
+
+        PROPERTIES {
+            ^"Realm" ENUM ["Infernal", "Faerie", "Divine", "Magic"] REQUIRED
+            ^"Required Virtues" LIST OF STRING
+            ^"Required Flaws" LIST OF STRING
+            ^"Required Flaws Note" STRING
+            ^"Point Rules" STRING
+            ^"Note" STRING
+            ^"Abilities Note" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

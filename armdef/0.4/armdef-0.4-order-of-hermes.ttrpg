@@ -1,0 +1,175 @@
+EXTENSION "ARMDef_Order_Of_Hermes" {
+    NAME "Ars Magica Definitive Edition - The Order of Hermes"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+    DEPENDS_ON "ARMDef_Core_Base"
+
+        #tydir0xssRNt20ELMet33u5a ^"Covenants (The Order)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Covenants are as important to the Order of Hermes as Houses, and magi can, and do, spend hours debating which is more important in the end.\n\nStrictly speaking, a covenant is any group of magi who agree to a set of rules that go beyond the Code of Hermes, and that allow them to share resources and co-operate more easily. In the overwhelming majority of cases, covenants are formed by magi who want to live in the same place, sharing access to a Magic aura, buildings, and servants. Thus, the term 'covenant' has come to refer to a place where a number of magi live together, as well as to the group of magi making the agreement.\n\nA typical covenant has about half a dozen magi as members, but they range from two magi to large organizations with over two dozen magi and hundreds of mundane staff. Most **Ars Magica** sagas center around a single covenant, and ensuring that the covenant prospers is as important as individual advancement. After all, characters belonging to a well-supplied covenant will advance more quickly than those who must rely on their own resources.\n\nThe physical form of covenants varies, but towers and castles are common. In addition, covenants are normally located some distance from major mundane settlements, in large part because that is where most Magic auras are found."
+        }
+        #t2Lar3w2qnyioRiW0T8EiTSS ^"The Code of Hermes" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The foundation of the Order of Hermes as an organization is the Code of Hermes. This short text, also called the Hermetic Oath because all members of the Order recite and swear to it when they are admitted, sets the structure of the Order and fixes certain limits on what its members may do. It was drafted to give magi as much freedom as possible, while protecting them from each other.\n\nThe degree to which magi obey the Oath varies from magus to magus, covenant to covenant, and Tribunal to Tribunal. Magi who violate the Oath and get caught, however, usually find themselves in trouble with their Tribunal.\n\nThe Code of Hermes, first sworn by Bonisagus, can be found on the next page. Since he was the first to swear it, his name is recorded whenever it is written down. There is a slight difference between the Code that members of House Bonisagus swear and the Code that members of other Houses swear. The difference is marked."
+        }
+        #t0JrCdYpXLo3Yer5bcLvIg1M ^"The Peripheral Code" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The Peripheral Code consists of all decisions made in Tribunal since the foundation of the Order. Its formal authority derives from the clause in the Code requiring magi to abide by the decisions made at Tribunal, but as every case is different later Tribunals are not bound by the decisions of earlier Tribunals. Indeed, there are contradictory precedents throughout the Peripheral Code, and few magi outside the Quaesitores are familiar with all of its details. Some points are widely known, however, and worth discussing in this section.\n\nIn theory, the only penalty for breaking the Code is death. In practice, Tribunals only rarely impose that, instead settling for vis fines, time spent in service, or other lesser punishments. These punishments are backed up by the ultimate sanction, however, and refusing to submit to the punishment imposed by a Tribunal is always taken as reason for the death penalty. This is enforced by declaring a Wizard's March, which casts the offender from the Order and thus deprives him of the Code's protection. This is called 'Renouncing', and magi subject to a Wizard's March are known as 'renounced magi'. Since the criminal's possessions are, by tradition, granted to those who kill him, powerful magi are often interested in helping to hunt down the offenders.\n\nMuch more information about the Peripheral Code and its enforcement can be found in *Houses of Hermes: True Lineages*, starting from page 45."
+        }
+        #ttJzFY0kRV35er4VfM579ZHB ^"The Hermetic Oath" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "\"I, Bonisagus, hereby swear my everlasting loyalty to the Order of Hermes and its members.\n\n\"I will not deprive nor attempt to deprive any member of the Order of his magical power. I will not slay nor attempt to slay any member of the Order, except in justly executed and formally declared Wizards' War. I hereby understand that Wizards' War is an open conflict between two magi who may slay each other without breaking this oath, and that should I be slain in a Wizards' War, no retribution shall fall on he who slays me.\n\n\"I will abide by the decisions made by fair vote at Tribunal. I will have one vote at Tribunal, and I will use it prudently. I will respect as equal the votes of all others at Tribunal.\n\n\"I will not endanger the Order through my actions. Nor will I interfere with the affairs of mundanes and thereby bring ruin on my sodales. I will not deal with devils, lest I imperil my soul and the souls of my sodales as well. I will not molest the faeries, lest their vengeance catch my sodales also.\n\n\"I will not use magic to scry upon members of the Order of Hermes, nor shall I use it to peer into their affairs.\n\n\"I will train apprentices who will swear to this Code, and should any of them turn against the Order and my sodales, I shall be the first to strike them down and bring them to justice. No apprentice of mine shall be called a magus until he first swears to uphold this Code.\n\nFollowers of Bonisagus: \"I shall further the knowledge of the Order and share with its members all that I find in my search for wisdom and power.\"\n\nAll Others: \"I concede to Bonisagus the right to take my apprentice if he should find my apprentice valuable to him in his studies.\"\n\n* The Peripheral Code extends Bonisagus's right to claim apprentices to followers of Bonisagus.\n\n\"I request that should I break this oath, I be cast out of the Order. If I am cast out of the Order, I ask my sodales to find me and slay me, that my life not continue in degradation and infamy.\n\n\"The enemies of the Order are my enemies. The friends of the Order are my friends. The allies of the Order are my allies. Let us work together as one and grow hale and strong.\n\n\"This oath I hereby swear on the third day of Pisces, in the nine hundred and fifth year of Aries. Woe to they who try to tempt me to break this oath, and woe to me if I succumb to the temptation.\"\n\nIn witness here of:"
+        }
+        #tZAL4k3R378PUas5iV8OzZUk ^"Lex Hermae" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "“Ego, Bonisagus, me ordinem sodalesque ﬁdeliter adiuvare me vivo hac re iuro.\n\n“Quemquam sodalem ordinis potentia magica non privabo vel privare conabor. quemquam sodalem ordinis non necabo vel necare temptabo, bello magorum iure effecto excepto. bellum magorum pugnam apertam magorum duorum esse, atque si in bello magorum interﬁciar, poenam nullam in magum qui me necaverit cadere intellego.\n\n“Decretis in tribunale suffragio aequo factis stabo. suffragium unum in tribunale habebo, cauteque utar. aequa suffragia ceterorum in tribunale habebo.\n\n“Ordinem ab actionibus non periclitabor. rebus quotidianorum non interveniam et ab ea re sodales pessum dabo. cum diabolis non ageam, ne animum meum animosque sodalium quoque in periculum adducturus sim. nymphas non vexabo, ne ultio sodalibus quoque nocitura sit.\n\n“Arte magica non utar ut sodales ordinis Hermae speculer.\n\n“Filios qui in hanc legem iurabit docebo, et si ullus animum ab ordine sodalibusque alienaturus sit, primum feriam. ﬁlius nullus meus magus appellabitur donec in hanc legem iuraverit.\n\n“Scientiam ordinis augebo atque omnem quam me sapientiam potentiamque quaerente invenero cum sodalibus meis communicabo.\n\n“Hortor ut, si hanc ﬁdem fefellero, ex ordine expellar. si expulsus ero, sodales meos hortor ut me inveniant necentque, ut viva mea in dedeco infamiaque non pergat.\n\n“Hostes ordinis hostes mei sunt. amici ordinis amici mei sunt. socii ordinis socii mei sunt. tamquam unus laboremus ﬁrmemurque.\n\n“Id hac re iuro in die tertia Piscium Geminorum in anno nonacentensimo quinto Arietis. dolor illis qui ut hanc ﬁdem fallam inlicere conabuntur sit, et dolor mihi si inlecebra cecidero sit."
+        }
+        #tfRNoJpVPa4cSDGdlVNn9eQa ^"Depriving of Magical Power" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "This clause is often invoked to punish actions against a magus that fall short of physical harm, such as damaging his laboratory or killing grogs. The justification is that, by depriving a magus of the resources he needs to study, the miscreant is depriving him of some of the magical power he would otherwise enjoy. The core meaning of the clause, though, is that magi must not try to damage each other's Gift."
+        }
+        #t7XDUdPDryScGmWdvCo5S9h0 ^"Wizard's War" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The Code allows for a conflict between two magi to escalate to open conflict in certain conditions. When those conditions are met, the two magi involved may step outside the bounds of the Code temporarily to settle their differences. One magus initiates a Wizards’ War by sending a declaration of war to the other. The message must arrive on the next night of the full moon. The war then begins on the rise of the following full moon, and lasts until the rise of the next full moon after that.\n\nUnjust or constant use of Wizards’ War is discouraged by the majority of level-headed magi. Occasionally, those who declare war too often find themselves victims of a Wizard's March."
+        }
+        #tqTezoYcBMpsOZtcVC0O8lda ^"Tribunals (Lex Hermae)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Tribunals are central to the political life of the Order, as was always Trianoma's intent, and thus they are discussed in detail in their own section, below. This clause is vital, however, as it gives Tribunals some authority to make new rules and interpret the clauses of the Code to fit changing situations."
+        }
+        #tWGxRmUbCZXuIo2kchS0FSbk ^"Interfering with Mundanes" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The clause forbidding interference with mundanes is probably the most controversial clause in the Code. Covenants have to deal with mundanes repeatedly in order to exist, and fortified dwellings containing substantial numbers of warriors tend to draw the attention of local nobles. As a result, the second half of the sentence, 'and thereby bring ruin on my sodales', is brought into most debates. As long as dealings with mundanes do not harm other magi, nor seem likely to cause such harm, they are permitted. Many precedents, however, have established that working as a court wizard is a violation of the Code."
+        }
+        #tHarNplyDYJrE9B8kKLEZph9 ^"Dealing with Demons" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The Order hunts down and kills any member found dealing with demons. This is the only clause enforced absolutely. Trying to destroy demons is normally acceptable, but even then drawing a demon's attention to the Order is frowned upon."
+        }
+        #tMUgwOCk33EuzGDMFiqaYA44 ^"Molesting the Faeries" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Interpretation of this clause rests heavily on what counts as molestation. Faerie places are good vis sources, so few magi have been willing to argue that charging into a faerie area spells blazing, stealing large amounts of faerie property, and retreating to your covenant, counts as molestation. This has made it rather difficult to say what is, and prosecutions under this clause tend to come down to politics, and whether other magi have suffered. Unlike the mundane and demonic clauses, however, it does not prohibit friendly dealings with faeries, at any level."
+        }
+        #tZfUr5nNn6cFwSk0xHspcIxK ^"Magical Creatures (Lex Hermae)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Notably missing from the Code is a clause granting protection to magical creatures or other wizards. This was deliberate, as Trianoma wanted the Order to be able to use force to compel people to join. Excessive interference with powerful magical beings, however, can still fall under 'endangering the Order by my actions'."
+        }
+        #tTBYIIDuPfiN6FUr7eDqAP34 ^"Scrying (Lex Hermae)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "This prohibition is enforced with surprising rigor. Tribunals have ruled that it is illegal to scry on a non-magus, if by so doing you learn about the magus's activities, that simply walking around invisible is magical scrying, and that you can be punished for using Intellego magic on a magus even if you didn't know that he was a magus. There are also contrary rulings on many of these points, but in general Tribunals have taken a very strict view of what constitutes magical scrying."
+        }
+        #tu8yb31YrEjUGR7Z9yDMeNH9 ^"Apprentices (Lex Hermae)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "By contrast, the clause on apprentices is hardly enforced at all. Magi do not have to train apprentices, and the obligation on the parens to join a Wizard's March against his filius is treated more as a social expectation than a legal duty.\n\nThe special right of Bonisagus magi to take apprentices from other magi is upheld, however, as is the duty of Bonisagus magi to share their work."
+        }
+        #tXFqchRGKFna1rTVyAdbbFsW ^"Tribunals" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "In origin, a Tribunal was any formal gathering of magi that made decisions by a majority vote of those present, and kept a record of those decisions. As the Order grew, however, the Peripheral Code rapidly provided more definition. The Tribunals of the Order are now the Grand Tribunal, and any other Tribunals formally established by it. In 1220, the regional Tribunals are the only ones so established.\n\nA legal Tribunal must be attended, in person, by at least twelve magi from at least four different covenants. There must be one Quaesitor present to oversee the legality of the proceedings, and while the Quaesitor does not vote, he does count towards the quorum. Magi may vote by proxy, giving their voting sigils to someone who is attending on their behalf, who may or may not be required to use them in a certain way, depending on the agreement with the person granting the sigil.\n\nThe Tribunal is chaired by the Praeco, the oldest magus present, and while he also cannot vote, except to break ties, he does have the power to choose the order of business and, in extreme circumstances, silence a magus or eject him from the Tribunal. If the ejections render the Tribunal inquorate, or deprive it of a presiding Quaesitor, the Tribunal ceases to be valid. At the end of the Tribunal, the presiding Quaesitor must certify it as valid, and this is the main check on the Praeco abusing his power."
+        }
+        #tF17tZm1y4jakH8GOdIGT2Gk ^"The Grand Tribunal" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "The most important Tribunal of the Order is the Grand Tribunal, held every 33 years and drawing magi from the whole Order. The Grand Tribunal is always held at Durenmar, the domus magna of House Bonisagus and the birthplace of the Order. Three representatives are sent from each of the regional Tribunals (see later), and the Primi of all Houses also attend. The Primus of House Bonisagus serves as Praeco, even if older magi are present, and the Primus of House Guernicus as Presiding Quaesitor.\n\nThe Grand Tribunal discusses matters affecting the whole Order, and its decisions are generally given far more weight than the decisions of lesser Tribunals. In addition, it is the only Tribunal with authority over the whole Order, and thus the forum where inter-Tribunal disputes must be settled."
+        }
+        #tV7onZwbyLykiHpkhfyzMhDw ^"Regional Tribunals" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Each regional Tribunal is composed, in theory, of all the magi living in a certain area of Europe. These areas are roughly fixed by Grand Tribunal decisions, but the magi in them can change the name of the Tribunal at will, and set the membership requirements freely. In general, you don't change Tribunals if you visit a covenant in a different Tribunal, and different Tribunals might have different rules on just how long a visit can be. Regional Tribunals meet once every seven years, and the Redcaps are required to ensure that every magus in the Tribunal has received an invitation. Otherwise, they follow the normal rules for Tribunals.\n\nFor the borders and names of the Regional Tribunals, see the map on page 494. Note that the borders are only approximate, as no disputes have yet arisen requiring them to be precisely fixed. Six of the Tribunals have been described in detail in supplements for **Ars Magica 5th Edition**: *Guardians of the Forests* (the Rhine Tribunal), *The Lion and the Lily* (the Normandy Tribunal), *The Sundered Eagle* (the Theban Tribunal), *Against the Dark* (the Transylvanian Tribunal), *The Contested Isle* (the Hibernian Tribunal), and *Faith & Flame* (the Provençal Tribunal)."
+        }
+        #trJlz4oDuZeB8Id3u2bXQ7gs ^"The Order and Society" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Most Hermetic magi want society to leave them alone to get on with their research, and in return they are perfectly happy to leave society alone. Life is, of course, not that simple, and magi are often forced to interact with many parts of society. Some even want to do so."
+        }
+        #tANHPrirhiw5b9MUVRAIWWq6 ^"Peasants" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Most peasants are afraid of magi, and stay away from their covenants. This fear is generally reasonable, as covenants are almost invariably founded in Magical areas, where strange and dangerous things happen. Further, magi themselves, due to The Gift and their ability to turn people into frogs, tend to inspire fear in the uneducated. Local legends may grow up around a covenant, and older legends or legends from distant places may be attached to it, giving it a very strange, and largely undeserved, reputation.\n\nOn the other hand, a covenant in a remote location which keeps to itself might well be almost unknown among the peasants. They have no particular reason to want to know about it, and there is no reason for them to hear about it. In this case, they are probably still scared of the region, which almost certainly has a Magical aura, but may not even know that there are magi living there.\n\nMost covenants rely on some peasants to grow food, just as the nobility and clergy do. These peasants find the magi creepy, due to The Gift, but are likely to accept them as lords as long as they treat their charges fairly well. Indeed, they might even be seen as better lords than most, as magi can do something about bad weather, plagues, or rampaging dragons. Sensible covenants will have an unGifted official in charge of direct interaction with the peasants, but there is no reason why the local peasants shouldn't feel a certain degree of affection for 'their' wizards, as long as they don't have to deal with them in person too often.\n\nFinally, peasants who don't fit into Mythic European society for whatever reason may seek sanctuary at the covenant. Women who want to be scholars or warriors, serfs who want to be free, and people fleeing the consequences of a single misjudgment are all potential recruits. As a rule, people join a covenant because they have a good reason not to be somewhere else, rather than because they particularly want to live with wizards."
+        }
+        #tNhFepLZdqSnj6phkiJSbOpP ^"The Church" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Relations between the Order and the Church are officially non-existent. The Order is well aware that the Church, with God's backing, could wipe them out with no problem. The Church is well aware that Hermetic magi are very powerful, and that at least some are good Christians. The Order's tendency to harbor heretics draws suspicion, but as long as magi stay out of ecclesiastical affairs, the Church is not willing to take official action.\n\nIndividual clergy, however, run the full range of attitudes, from self-righteous certainty that magi are devil worshipers who must be destroyed, to enthusiastic collaboration with them as fellow scholars, albeit scholars with unusual talents. Most covenants try to establish good relations with the local parish clergy, at least, and most succeed at that. Again, using unGifted intermediaries is generally a good idea.\n\nTribunals tend to treat interfering with the Church as a very serious crime, simply because the Church is the only organization with the potential to wipe out the entire Order. Friendly, or at least neutral, relations are encouraged; magi who launch attacks on the Church can expect to be renounced and Marched before they can inspire a Crusade."
+        }
+        #towGTIcFGgB8EFBUXnRiqfCw ^"Nobility" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Most nobles are aware of the existence of the Order of Hermes, and all local nobles will quickly become aware of a standard covenant, with its castle and armed troops. Most nobles also have some vague recollection that these powerful wizards aren't allowed to swear fealty to them, or serve them as court wizards, and thus they apply a bit more subtlety in trying to forge relationships with their powerful new neighbors.\n\nAgain, individual attitudes run the full gamut, from eager, sycophantic fawning in the hope of magical assistance, to outright hostility in the hope of convincing the magi to set up somewhere else, a long way away. Most covenants, again, try to establish good relationships with the local nobility, but many fail to win over everyone, thus leaving a constant rival as a thorn in their side. Few nobles are stupid enough to mount a direct assault on a covenant, and those who are tend to die, but equally any covenant that deliberately wiped out a noble rival would be hauled before Tribunal and Marched, post-haste.\n\nThe Peripheral Code has tended to rule that deals with nobles that don't involve service or permanent magical aid are not a violation of the clause against interfering with mundanes. This is only a tendency, though, and covenants with extensive mundane involvement need to pay close attention to their Hermetic relationships as well, lest they find themselves isolated and condemned at Tribunal."
+        }
+        #tpoDUX9aiCV4nbJRKXlZXJBC ^"Cities" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Most covenants and magi stay away from cities. In a city, The Gift is a major handicap, and most cities have Dominion auras that interfere strongly with magical research. On the other hand, cities contain scholars, merchants, and all kinds of mundane resources, and even simple magic can support an effective trade, so some magi, particularly of House Jerbiton, enjoy living there.\n\nCity covenants try to find a Magic aura, ideally a regio, in which they can undertake laboratory work without undue interference, and often offer their services as go-betweens for more remote covenants who want to deal with an urban area. For most magi, however, cities are an interesting place to visit, but they wouldn't want to live there."
+        }
+        #tvNmZA29iOjD3siqpEskuPls ^"Magical Items (Society)" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "In the early days of the Order, magi were allowed to sell enchanted devices or other magical services to mundanes without restriction, as long as they were never at the beck and call of a mundane. This changed in 1061, with a series of Tribunal rulings making it illegal to accept money or other mundane goods as payment for arcane services from anyone other than a member of the Order of Hermes or a Hermetic covenant. The rulings also make it clear that any magic sold in this way to a non-magus must eventually lose its power, whether because it is a charged item, or because the effect has a limited duration.\n\nThere are two obvious loopholes in this ruling. The first is less important; mundanes can pay with other arcane items, or with vis. Very few mundanes have access to vis, and the Order is quite keen to gather permanent enchanted devices in return for temporary ones. A mundane offered a temporary item which will last for his and his son's lifetime might be quite willing to trade a rather weaker permanent item for it. Trades of this sort are actually encouraged by the Quaesitores, as they take permanent items sold before the ruling out of mundane circulation.\n\nThe second loophole is so glaring that it must have been deliberately designed. There is nothing to stop a mundane covenant member from selling an enchanted item on, or, indeed, to stop him from accepting a commission to obtain a particular item. Thus, the main effect has been to stop magi from dealing directly with mundanes."
+        }
+        #tTYn4bhswshVPfiDCXsQKUiI ^"Other Wizards" DEF {
+            APPLIES TO [^"Character"]
+            PROPERTIES {
+                ^"Source" STRING "Core Rules"
+            }
+            DESCRIPTION "Hermetic magi may be the most powerful users of magic in Europe, but they are far from the only ones. People with supernatural abilities are much more common than people with The Gift, and not everyone with The Gift becomes a Hermetic magus. The official policy is still that all wizards must join the Order, or die. However, this is rarely enforced, particularly if the wizard in question is weak, or a member of the Church, or a noble.\n\nPowerful, isolated wizards are strongly encouraged to join, and may well be killed if they refuse, but other wizards may merely be threatened with dire consequences if they cause trouble for the Order. Since other wizards have no equivalent of Parma Magica, these threats can easily be backed up.\n\nThere is one case in which the 'Join or Die' policy is rigorously enforced. Any non-Hermetic wizard who learns the Parma Magica, or any other form of general magic resistance, must join the Order of Hermes or be hunted down. The Order is virtually unanimous in its opinion that this monopoly must be preserved.\n\nMore information about non-Hermetic wizards can be found in *Hedge Magic Revised Edition* and *Rival Magic*, and in the regional sourcebooks for areas outside Mythic Europe: *The Cradle and the Crescent, Between Sand and Sea*, and *Lands of the Nile.*"
+        }}

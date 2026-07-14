@@ -1,0 +1,22 @@
+BASE "ARMDef_Core_House" {
+    NAME "Ars Magica Definitive Edition - Hermetic House (core stub)"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+
+    # Minimal base type for the twelve Hermetic Houses
+    # (armdef-0.4-houses.ttrpg). Individual houses set concrete inline values.
+
+    #tlabSpgxsPGTTR2WePb65NMD ^"Hermetic House" DEF {
+        APPLIES TO [^"Magus"]
+
+        PROPERTIES {
+            ^"House Type" ENUM ["True Lineage", "Mystery Cult", "Societas"] REQUIRED
+            ^"Prima" STRING
+            ^"Domus Magna" STRING
+            ^"Benefit" STRING
+            ^"Outer Mystery" STRING
+            ^"Source" STRING DEFAULT "Core Rules"
+        }
+    }
+}

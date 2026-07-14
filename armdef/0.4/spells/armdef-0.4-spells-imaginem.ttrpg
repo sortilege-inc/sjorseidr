@@ -1,0 +1,702 @@
+EXTENSION "ARMDef_Spells_Imaginem" {
+    NAME "Ars Magica Definitive Edition - Imaginem Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tx7cAAhg2V5yjnzh9LmN3Mki ^"Phantasm of the Talking Head" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Diam"
+            +1 "intelligible speech"
+            }
+        }
+        DESCRIPTION "Creates an illusory face on a wall or other flat object. The visage can speak during the spell's duration. Individual wizards' sigils can produce very interesting differences in how the voice sounds, how the face looks, and so on."
+    }
+
+    #tMawjLkxB1VE83VmQnmChMw5 ^"Phantasmal Animal" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Diameter"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Diam"
+            +2 "move under your command"
+            }
+        }
+        DESCRIPTION "Creates an image of any animal or beast up to the size of a pony (Size +1). Under your direct mental command, it moves about (within range) and makes appropriate noises. You need to be able to concentrate, and be within range, whenever you wish to direct the illusion to move in some manner. If you move out of range or stop concentrating, the illusion just freezes in place. The image does smell like an animal, but it has absolutely no effect on the sense of touch. Of course, a magus may not use this spell to create the image of an animal he or she does not know exists."
+    }
+
+    #tT8P234GfDZFCipJeVoHcEXA ^"Phantasmal Fire" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Ignem"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +1 "for light from Ignem requisite"
+            }
+        }
+        DESCRIPTION "Makes an image of a fire (up to the size of a large campfire) that dances, illuminates, crackles, and (apparently) warms. It does not spread, burn, or protect against cold. Makes a great joke at gatherings of House Flambeau, although creating a real fire is even more popular."
+    }
+
+    #to5bSBSGIrkH7KB2ypu8zbNM ^"Phantasm of the Human Form" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +2 "move at your command"
+            +1 "intricacy"
+            }
+        }
+        DESCRIPTION "Makes an image of a clothed and equipped person that can make noise. Under your direct, unspoken command, the person can move about, speak, and behave as a human does."
+    }
+
+    #tWhfL4uvnqOZLDcxfV51ym33 ^"Haunt of the Living Ghost" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Intellego"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +4 "Arc"
+            +1 "Conc"
+            +2 "move at your command"
+            +1 "intricacy"
+            +1 "Intellego requisite"
+            }
+        }
+        DESCRIPTION "With this spell, you can instantly project your own image and voice to any designated spot that you have an Arcane Connection to (though troupes may wish to limit this range to some absolute distance like 300 miles). You can see and hear through the image. The image must appear in some medium, such as a fire, mirror, or pool. Some magi use this spell to attend inter-covenant councils without traveling the intervening distance. Because other magi can see you, this spell is not held to constitute scrying by magic. Using it through another covenant's Aegis counts as showing off, however."
+    }
+
+    #tMfLkEu7mBIO9K1bRDsHwm8H ^"The Shadow of Human Life" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Mentem"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "intricacy"
+            +6 "Mentem requisite"
+            }
+            NOTES ["for a very elaborate effect"]
+        }
+        DESCRIPTION "The human image created (as in Phantasm of the Human Form) has limited freedom and simulated intellect. It functions as an independent human, albeit a stupid one, capable of interpreting general orders in new situations."
+    }
+
+    #tJypRVXbDYEmNvlxPYftVQNP ^"Discern the Images of Truth and Falsehood" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            MODIFIERS {
+            +1 "Conc"
+            }
+            NOTES ["Base effect, +1 Conc"]
+        }
+        DESCRIPTION "You can tell whether an image has been created or altered through a spell, seeing both the original and false images in the case of alterations. This spell must be at least 1 magnitude higher than an illusion in order to discern it. If you botch the spell, you mistake illusions for the real thing and reality for illusion. Your discernment is not limited to visual illusions, although you can only tell that a sound is illusory if you are looking at the apparent source."
+    }
+
+    #tVAsWYNlAhfbh9uFjwtfZhyP ^"Prying Eyes" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "You can see inside a room, as long as you can touch one of its walls. If the room is unlit or poorly lit, you can only see as much as you could if you were inside, but magical enhancements of your senses do apply. You may change your viewpoint within the room throughout the duration of the spell."
+    }
+
+    #tDLXSCPHtpjEW5oN837MIJLi ^"Discern Own Illusions" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +2 "Sun"
+            +4 "Vision"
+            }
+        }
+        DESCRIPTION "This spell makes your own illusions appear largely transparent to you, but still discernible."
+    }
+
+    #tty2mbGTL9lO0ACNxmtyxwP0 ^"The Ear for Distant Voices" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +4 "Arc"
+            +1 "Conc"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "You can hear what is happening in the place you designate. You must have an Arcane Connection with the place or with a person there."
+    }
+
+    #t3G6jdRZWyGkPbmgMPFGPz7Y ^"Eyes of the Eagle" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Sun"
+            +4 "Vision"
+            }
+        }
+        DESCRIPTION "You see distant things clearly. No matter how far away something is, you can make out details as if it were only a foot or so from you. Things do not all appear to be a foot away; you can simply make out details as well as if they were. You can still judge distance accurately; in fact, more accurately than normal, to within an inch or so at a distance of several miles, since you can see as clearly as if you were judging distance a foot away."
+    }
+
+    #tv2l1rV06Bi3RlMa3drHeCC2 ^"Summoning the Distant Image" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +4 "Arc"
+            +1 "Conc"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "You can see and hear what is happening in a distant place if you have some sort of Arcane Connection to either the location or a person there."
+    }
+
+    #tHlWD1XK3ZbaWiu2Sd0jF0c8 ^"Taste of the Spices and Herbs" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "A setting's worth of food or drink tastes and smells exactly as you designate."
+    }
+
+    #tz2aQ6PAHEEQZCGREHKqFqyI ^"Aura of Ennobled Presence" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "The target appears more forceful, authoritative, and believable. Numerous subtle changes in appearance bring about this change, including a slight supernatural illumination of the face, a more erect posture, and a louder and smoother voice. The character gets a +3 on rolls to influence, lead, or convince others."
+    }
+
+    #tJjbOUbzL52G5Tmaowo3mRXV ^"Notes of a Delightful Sound" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Room"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 1
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +2 "Room"
+            }
+        }
+        DESCRIPTION "Causes all sounds in a room, particularly music, to be especially clear and sonorous. The notes are clearer, sharper, and more distinct."
+    }
+
+    #tUhEYXiNz10uFkBgamuJb5xv ^"Disguise of the Transformed Image" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Makes someone look, sound, feel, and smell different, though at least passably human."
+    }
+
+    #tX5g3ldNXroCUzMh16sUi3qb ^"Image Phantom" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Any one thing, including a living thing, can be made to appear as if it were something else of approximately the same shape and size. The illusion cannot be cast on things that have a shape or size improper to the final appearance. If the target moves or is moved in such a way that the illusion is inappropriate, it looks very strange indeed."
+    }
+
+    #tNs7MA2gSBNqHiVBRKVjGO93 ^"Dispel the Phantom Image" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "Destroys the image from any one CrIm spell whose level you match or exceed on a stress die + the level of your spell."
+    }
+
+    #tmBueZLwQo6E8sbQk6N177hp ^"Taste of the Dulled Tongue" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Hides the taste of any substance, liquid or solid."
+    }
+
+    #t05Hi3KaqtyTatCEfub5wyWl ^"Illusion of Cool Flames" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "A source of heat, such as a fire, seems to lose its heat and drop to the surrounding temperature. It still, however, has its normal beneficial and harmful effects (that is, glowing coals still cook meat or burn a person's hand, though they do not feel hot)."
+    }
+
+    #tsMRP4uLHcegFNkiM0i1T92Q ^"Invisibility of the Standing Wizard" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "The target becomes invisible, but the spell is broken if the target moves (aside from breathing and shifting slightly in place). He still casts a shadow."
+    }
+
+    #tfxHosf0cjku8nIDSmCPZz7o ^"Veil of Invisibility" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "changing image"
+            }
+        }
+        DESCRIPTION "The target becomes completely undetectable to normal sight, regardless of what it does, but still casts a shadow."
+    }
+
+    #tHiefEihzec2EQYGuh0LVuRY ^"Removal of the Conspicuous Sigil" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "Part"
+            }
+        }
+        DESCRIPTION "Grooves, runes, writings, and similar markings are obscured so that they are not visible, but the overall shape of the medium remains constant. For example, runes carved into a sword blade can be made invisible, making the sword appear normal."
+    }
+
+    #tmNPV8KmIAehWd1NnRhvqLvT ^"Silence of the Smothered Sound" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +1 "changing image"
+            }
+        }
+        DESCRIPTION "Makes one being or object incapable of producing sound. Magi who cannot utter their magic words suffer the normal penalties to their spellcasting rolls."
+    }
+
+    #txfFCYyudDFFHJEhbA79GvNN ^"Chamber of Invisibility" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Group"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +2 "Group"
+            }
+        }
+        DESCRIPTION "Causes a Group of creatures to become invisible. Any affected character who moves or is touched makes everyone visible. All members of the Group still cast shadows."
+    }
+
+    #tWWQk7uLdPJ44n9xgWyEygf7 ^"Restore the Moved Image" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["Base effect"]
+        }
+        DESCRIPTION "Cancels a ReIm spell that moves an image, putting the image back where it belongs, as long as you can match the spell's level on a stress die + the level of your spell. This spell targets the image."
+    }
+
+    #t6QIU7TVequpNPurEhgBhJrO ^"Illusion of the Shifted Image" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Makes any person or object appear to be a pace away from its actual position. The image cannot be placed in a solid object. As soon as the original or image moves, the spell ends."
+    }
+
+    #tCBmldMbMhXkJZI3a3RpVtXd ^"Wizard's Sidestep" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Sun"
+            +1 "changing image"
+            +1 "moved image matches changes"
+            }
+        }
+        DESCRIPTION "Your image appears up to 1 pace from where you actually are, so attacks aimed there are likely to miss you. Whenever the image is successfully struck, it disappears and reappears in another spot. In combat, early attacks are aimed at the image, and so automatically miss you. Once the image has been hit once, you have a +9 bonus to Defense, as attackers must try to find you in a fairly large area."
+    }
+
+    #t4MgP7tLfyrjV5zs1KLX2mks ^"The Captive Voice" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +1 "Part"
+            +1 "changing image"
+            }
+        }
+        DESCRIPTION "Captures a person's voice and places it in a bag. The person may not speak unless the bag is open, in which case the voice comes from the bag, not the victim's mouth. If the victim screams while the bag is shut, the bag vibrates visibly."
+    }
+
+    #t70uxq1GLOxTvAERhTGhBpus ^"Confusion of the Insane Vibrations" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            +4 "Vision"
+            +1 "additional senses"
+            }
+        }
+        DESCRIPTION "The target of the spell sees everything vibrate back and forth at varying high speeds. In addition, sounds are displaced and seem to come from the wrong areas. Anyone trying to fight in these circumstances suffers –3 on Attack and Defense scores, and must roll two extra botch dice. The target is likely to become desperate and terribly confused. Navigation is exceedingly difficult. The visual effects of this spell are negated if the target is in complete darkness or if they close their eyes."
+    }
+
+    #tXVf2cQwxwZXzK0vNRPftDzZ ^"Image from the Wizard Torn" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Intellego"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Conc"
+            +1 "additional sense"
+            +1 "moving image"
+            +1 "Intellego requisite"
+            }
+        }
+        DESCRIPTION "Your image separates from your body. It can speak whatever you say and do so in your voice, and you can see through its eyes. You must make an Int + Concentration stress roll for each solid object the image passes through and for each mile it travels. If you wish the image to be able to leave your sight, you must use an Arcane Connection to yourself (for example, a fingernail or a lock of hair) when you cast the spell. That connection becomes an integral part of the image, and when the spell ends, it falls to the ground wherever the image was located. As your image is away from your body, you are invisible and silent at your actual location. The image is your image, so while you may move it in space you may not have it sit down if you are standing. Further, it appears as if illuminated by whatever light is falling on you, no matter what the level of illumination is at the image."
+    }
+
+    #tNfHSLmhUAJgw23OiyFuTMmc ^"Illusion of the Misplaced Castle" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Imaginem" FIXED
+            ^"Level" INTEGER 50 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +4 "Bound"
+            }
+        }
+        DESCRIPTION "Moves the image of any bounded structure or set of structures the size of a castle or less up to one mile from its actual position."
+    }
+}

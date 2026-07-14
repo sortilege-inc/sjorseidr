@@ -1,0 +1,1136 @@
+EXTENSION "ARMDef_Spells_Corpus" {
+    NAME "Ars Magica Definitive Edition - Corpus Spells"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-13"
+    DEPENDS_ON "ARMDef_Core_Magic_Spell"
+
+    #tBgBPrT9bPvOb5FGhrqjC2VI ^"Bind Wound" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "This spell binds the target's wounds, so that he can undertake any activity without the risk of worsening the wounds. He still suffers from the wound penalties, however, and cannot heal naturally while under the influence of this spell.\n\nTypically, you place your hands on the target and pass them over his wounds, which magically seal themselves and stop bleeding."
+    }
+
+    #tcqSgViAevr7JPCgRyf47OuK ^"Charm Against Putrefaction" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +3 "Moon"
+            }
+        }
+        DESCRIPTION "Prevents decay of a human corpse, or of a severed body part. Necromancers use it to preserve their revived corpses."
+    }
+
+    #tybWdiqCq6HDxzY7mPHYTwDS ^"The Chirurgeon's Healing Touch" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "This spell heals a single Light Wound suffered by the person touched. This spell does not heal damage from poison or disease."
+    }
+
+    #tltA46PfhbDPvkgJ6klGTHza ^"Gentle Touch of the Purified Body" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "The target is cured of a Light Wound caused by poison or disease. This spell does not heal damage caused by injury."
+    }
+
+    #tcXu72R8mRFEnaPaUgwosEtA ^"Purification of the Festering Wounds" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +3 "Moon"
+            }
+        }
+        DESCRIPTION "The target gains a +9 bonus to Recovery rolls, as long as he has been under the influence of this spell for the whole of the recovery interval. The recovery interval is counted from the time that the spell is cast; any previous time is ignored."
+    }
+
+    #tgohyv3ukEpDQ2kviNJdlMJJ ^"Restoration of the Defiled Body" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Removes the crippling or malignant after-effects of any injury, poison, or disease, or of premature aging. The effects of natural aging cannot be undone by this or any spell. This spell does not heal wounds, only extra effects."
+    }
+
+    #t336DbR1iaZdNi3xrdoWwqoJ ^"The Severed Limb Made Whole" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +1 "Touch"
+            -1 "the old limb is needed"
+            }
+        }
+        DESCRIPTION "A limb that has been detached from the body can be reattached, but any decay that has occurred on the severed limb remains after the limb is reattached. After a day of decomposition, a limb is weak. After seven days, it is nearly useless and infects the character on whom it is replaced (Stamina stress roll against an Ease Factor of 6 or take a Medium Wound). If it's been severed for more than two weeks, the limb is completely useless."
+    }
+
+    #thL66j1VgF8XIjpeRO2hgKRe ^"Cheating the Reaper" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Resolves a major (or less severe) crisis caused by aging. The target still requires rest for the remainder of the season to recover fully. Note that each application of this spell causes Warping. See page 392 for details on crises."
+    }
+
+    #tE0d2DAT2Z8bVG5zSH8mMSW8 ^"Incantation of the Body Made Whole" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 35
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Heals all damage to a human body at the conclusion of the ritual. The spell can only heal wounds, not such damage as missing limbs, or diseases and damage from poisons."
+    }
+
+    #tsqGEkjrGrbgHoCG3tEjz1zy ^"The Shadow of Life Renewed" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Creo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 75 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Mentem"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 70
+            MODIFIERS {
+            +1 "Touch"
+            }
+            NOTES ["no addition for requisite"]
+        }
+        DESCRIPTION "Brings the semblance of life to a corpse. During the ritual, healing spells work on the corpse, which is important because the body must be physically whole or else it simply dies again once it is brought back to life. For each day that the person has been dead, roll for aging. When the ritual is complete, roll a simple die to determine the success of the attempt:\n\n4 - 5: Automaton with no Abilities over 3\n\n9 - 10: Person with will, but no personality. In any case, the revived person is not truly alive and is unable to gain experience points. Also, the person must make an aging roll at the beginning of each year of its existence, regardless of age. This is the closest that the Order has gotten to raising a person from the dead."
+    }
+
+    #tuVud3cw97gpAw5SMkc8vJtY ^"Sight of the True Form" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"General Level" BOOLEAN true
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Vision"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            NOTES ["Variable base"]
+        }
+        DESCRIPTION "You see the true, original form of any person whose form has been changed or masked. This spell can see through mundane masks and disguises at level 10, and can see through the effects of other spells that are equal to or lower than the level of this spell."
+    }
+
+    #tI2oeRWyC3HPgndpQZHvYS9l ^"Physician's Eye" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Determines the general health of a single person. Specific afflictions appear to you as areas of yellow coloration on the person's body. A Perception + Medicine stress roll is required to identify unusual diseases. The Ease Factor is determined by the rarity of the disease."
+    }
+
+    #twCfl6u9LHf9pUBI9CTjuTRt ^"Revealed Flaws of Mortal Flesh" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "You are able to find any medical defects in a person or being that you are touching. This provides more, and more specific, information than Physician's Eye."
+    }
+
+    #t9lM87EfKEr9uD8z8FujTHVF ^"Whispers Through the Black Gate" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Mentem"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            }
+            NOTES ["no cost for requisite"]
+        }
+        DESCRIPTION "You can speak through the barrier — the figurative \"gate\" — that stands between the dead and the living, to one corpse that has not yet decayed into a skeleton. The corpse cannot have been buried in Church burial, nor have belonged to a spirit that went straight to Heaven (for example, a saint or a crusader). The spirit that you speak with is not compelled to tell the truth; you can, of course, find ways to coerce or trick it into doing so. All those around you can hear the voice of the corpse."
+    }
+
+    #tBVxUgcFQBsRAXxRDRmlQ1Dt ^"The Inexorable Search" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +4 "Arc"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Determines the location of a specific person. To cast the spell you need a map and an Arcane Connection. After casting the spell, you can move your finger over the map at the rate of one hour per square foot of map. When your finger passes over the person's location as represented on the map, you sense the person's presence. (If the person is not in the area covered by the map, no sensations result.) You can locate the person to within a thumb's width on the map. A similar spell allows you to search for a dead body (Tracing the Trail of Death's Stench)."
+    }
+
+    #tj7MPu2rqOk2OhOiU3m94PJf ^"The Eye of the Sage" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Intellego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Arcane Connection"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Imaginem"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +4 "Arc"
+            +1 "Conc"
+            +1 "requisite"
+            }
+        }
+        DESCRIPTION "Lets you see a specific person and what is within one pace of that person. The image is clear enough to allow reading."
+    }
+
+    #tHGMThqegQIRGfMCBEc7eS0T ^"Eyes of the Cat" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Animal"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+            NOTES ["requisite free"]
+        }
+        DESCRIPTION "The target gains the eyes of a cat, which allow him or her to see in near darkness (but not in absolute darkness, such as a lightless subterranean cavern)."
+    }
+
+    #tQ0umQrqZ3LEkeM1sQ1KCuXJ ^"Disguise of the New Visage" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "Part"
+            }
+        }
+        DESCRIPTION "The target's facial features are transformed to any approximately human configuration you choose.\n\nIn Cralian of Tremere's version of this spell, the new visage is always as unassuming as possible."
+    }
+
+    #tcByZkd3yyfE0Xf6lFGTkw5U ^"Preternatural Growth and Shrinking" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            +1 "the spell allows growth or two kinds of shrinking"
+            }
+        }
+        DESCRIPTION "Adds +1 to the target's normal Size or decreases it by up to 2 points."
+    }
+
+    #tJO5seqfqwupuMW3M4bQwp2a ^"Arm of the Infant" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            +1 "Part"
+            }
+        }
+        DESCRIPTION "Shrinks a person's arm to half its original length and makes it pudgy, like an infant's."
+    }
+
+    #tmNfGE8g2CXhtMmdoGAupQ6P ^"Gift of the Bear's Fortitude" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Your flesh becomes resistant to physical damage. You get +3 to your Soak. Your flesh is tough and insensitive; any rolls that involve a sensitive touch (such as for picking a lock) are at –1."
+    }
+
+    #tSTI0bg5KXEvMfEhSWvTzSsJ ^"Shape of the Woodland Prowler" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Animal"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "You place a wolf skin over yourself or another, and the target changes into a wolf. The target may change back at will, ending the spell. Before casting this spell, you must first, of course, acquire the skin of a wolf, if you want to be able to end the spell early."
+    }
+
+    #tu6trQQu0W1ZeSKW0SGLMN2h ^"Cloak of Black Feathers" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Animal"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "You hang a small cape of raven feathers on your back and transform into a raven. You can resume human form at will, but doing so ends the spell."
+    }
+
+    #tvxReipIblaXBSnGFIFSnLI0 ^"Curse of Circe" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Animal"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "Turns a person into a pig."
+    }
+
+    #tD9P5DFIDuWHJqZLiELBLW1O ^"Stance of the Patient Tree" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Herbam"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "You turn yourself into a tree about 12 feet high, with a trunk about a foot thick. You can sense only the most basic things, such as night and day, strong winds, and things that can affect a tree. You can resume human form at will, but doing so ends the spell. While in tree form, you do not heal any wounds or restore any Fatigue levels. The tree branch you use to let yourself change back determines the kind of tree you become, and you cannot cast the spell without the branch."
+    }
+
+    #t7v7N7LOiFGEwTwpO7DpgH0d ^"Cloak of Mist" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Auram"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 30
+            MODIFIERS {
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "You turn yourself into a thick, cohesive mist of approximately human size. You can float through the air at walking speed and can see and hear what is going on around you. You can also seep through cracks, but cannot move through solid objects. You may return to human form at any time, but doing so ends the spell. As mist, you are subject to the forces of the wind. In order to cast this spell, you inhale some mist, and you keep the mist in your 'mouth' until you want to end the spell."
+    }
+
+    #t4tBP0wIBTfMfmGezhlddcny ^"Transform to Water" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Sun"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Aquam"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 30
+            MODIFIERS {
+            +2 "Sun"
+            }
+        }
+        DESCRIPTION "You turn yourself into water, one pint for every pound of the your weight. As water, you can hold yourself together unless someone makes an effort to separate part of you from the rest. You can roll slowly across the ground, but cannot move uphill. You can hear sounds, feel things that touch you, and can sense temperature. You can resume human form at will, but doing so ends the spell. You cannot resume human form if a significant part of your body/water is separated from the rest. You pour a small amount of water into your hands when you cast the spell."
+    }
+
+    #tTpMZc83Yt9haYI7yJ5KYcCz ^"The Silent Vigil" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 45 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Moon"
+            ^"Target" STRING "Individual"
+            ^"Requisite" STRING "Terram"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 25
+            MODIFIERS {
+            +3 "Moon"
+            +1 "special effect"
+            }
+        }
+        DESCRIPTION "You can move into and become part of a rock formation that is at least twice your size. While in the stone, you can hear what is going on around you, but you cannot use other senses. The spell lasts until you come out, and you must come out where you went in. You have no need for food or drink, though you do age. Rolls to recover from Fatigue or wounds take twice as long to make while you are in the stone. Casting requisites are required for items you take with you into the stone."
+    }
+
+    #tsRzc2bdpezv8qEGPAR1uHAe ^"Mists of Change" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Muto" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 60 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Sun & Year"
+            ^"Target" STRING "Boundary"
+            ^"Requisite" STRING "Animal"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +4 "Year"
+            +4 "Bound"
+            }
+            NOTES ["slightly nonstandard effect", "mist and wind are cosmetic only"]
+        }
+        DESCRIPTION "As this spell is cast, a whipping wind arises and patches of mist begin to roll across the landscape. Sometimes, a patch of mist suddenly envelops a person for a few seconds, during which time the victim cannot move. When the mist blows away, continuing its course, the person is left transformed into a random creature. Roll a simple die to determine the result:\n\n1: Wolf 2: Horse 3: Brown Bear 4: Large Toad 5: Ferret 6: Viper 7: Boar/Sow 8: Dog 9: Cat 0: Other (storyguide picks; be cruel).\n\nPeople transformed retain their human minds, but inherit all the passions and instincts of their new forms.\n\nThe mist covers the target area, which must be in sight when you cast the spell. The mists affect the area until sunrise or sunset, and transform anyone who remains in the area during that time. For important characters, roll a simple die when the spell is cast and every half hour afterwards, and on a roll lower than the number of rolls made so far the mists envelope and transform them at some point in the next half hour. The transformations last for a Year."
+    }
+
+    #tFbWJWMIgK4Jo3sXa2og69BL ^"Touch of the Goose Feather" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 3
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "The target lets out a loud sneeze. Spellcasters who sneeze must make Intelligence + Concentration stress rolls against an Ease Factor of 12 to maintain concentration, and others get –1 on most activities at the moment of the sneeze."
+    }
+
+    #tSfRSJAiWATRxxL6FdCr86FY ^"Dust to Dust" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Turns a dead body or mindless undead body to dust in two rounds. The spell doesn't affect those undead possessed by spirits. To do this to an animal corpse requires a Perdo Animal spell."
+    }
+
+    #tPanVEqV6XaCidI6AduQHxM4 ^"The Wound That Weeps" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 5
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "When casting this spell, you point at the victim and a large wound opens on his or her body. The wound is not a deep one, but it bleeds profusely. This is only a Light Wound, but it looks bad."
+    }
+
+    #t9KfZMtiYFrWXWOe9LYgntq8 ^"Invocation of Weariness" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "The target loses a Fatigue level. The phrases used with this spell are usually singsong melodies, which lull the victim into drowsiness."
+    }
+
+    #trdPToQa0TVTFaKPyfjBkYjD ^"Bane of the Decrepit Body" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "The target ages 5 years. Determine effects normally. This spell does not work on children younger than age 16."
+    }
+
+    #tqPDgZdxsVIP2dmYfxY3aDwK ^"Curse of the Leprous Flesh" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "This spell inflicts leprosy on the target, which causes a person's flesh to rot off in a matter of weeks — a truly hideous sight. Much of the target's flesh literally hangs from his or her frame, and there is a pungent rotting smell about him at all times. The target takes an Incapacitating Wound from the disease, and must roll as normal to recover. The target also loses a point of Stamina by the time the disease ends. If the victim somehow survives this curse, he is shunned by mundane communities. If the victim succeeds in a Stamina roll against an Ease Factor of 6 when the spell is cast, he shakes off the disease, although he still feels unwell for a few days, and may have problems if an astute doctor realizes he is leprous."
+    }
+
+    #tl3SkCDB0HqpD9XKIYKuEI7b ^"Grip of the Choking Hand" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "The target feels an invisible, strangling hand on the throat. Each round, the target loses a Fatigue level. Once the target falls unconscious, the spell has no further effect. The spell works by seriously constricting the target's windpipe, hence the feeling. This constriction is not quite enough to kill, however."
+    }
+
+    #tqis8z1ET111nIn4ljzrEmqq ^"Incantation of the Milky Eyes" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "Blinds a target, leaving the eyes milky with cataracts. This heals as a Heavy Wound."
+    }
+
+    #tVkNMEMhIAdl1uCnks2XUdy0 ^"Twist of the Tongue" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Part"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Part"
+            }
+        }
+        DESCRIPTION "Twists the target's tongue into a spiral, completely destroying the ability to speak. A grave offense to a magus. The damage heals as a Medium Wound."
+    }
+
+    #tsOWmr9yjxE1NJarc4FQtbtS ^"Clenching Grasp of the Crushed Heart" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 40 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 30
+            MODIFIERS {
+            +2 "Voice"
+            }
+        }
+        DESCRIPTION "When casting this spell, you make a clenching motion with your hand. The victim doubles over and dies at once."
+    }
+
+    #tgu2i2u1dDp3NRevMAeLplqr ^"The Kiss of Death" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 45 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 30
+            MODIFIERS {
+            +1 "Touch"
+            +2 "no words"
+            }
+        }
+        DESCRIPTION "The person you kiss dies a sudden death. The only mark on the corpse is the black imprint of your lips. You do not need to speak when casting this spell, and thus gain no penalty from silence. (This is why the spell is higher level than the guidelines would indicate.)"
+    }
+
+    #t3IDJkHDg98HzZgywdKysoGS ^"Curse of the Unportended Plague" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Perdo" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 55 FIXED
+            ^"Range" STRING "Sight"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Boundary"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 20
+            MODIFIERS {
+            +3 "Sight"
+            +4 "Bound"
+            }
+        }
+        DESCRIPTION "Starts a plague in a city or other Boundary. Everyone within the boundary is afflicted with the disease when the ritual is complete, and suffers as described under Curse of the Leprous Flesh, on the previous page. The conditions causing the disease last but a moment, so people entering the area after the spell is cast are safe. Using, or even transcribing, this spell is rigorously discouraged by most of the Order of Hermes. (Note: the disease caused by this spell is not the later Bubonic Plague, which is unknown in Europe in 1220.)"
+    }
+
+    #tKS5EFgauqKg2WOLETsDTV0t ^"Curse of the Unruly Tongue" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Causes the target to stutter and slur words. Communication rolls are at –3. Spoken spells are at –6 to the spellcasting roll, and there is an extra botch die."
+    }
+
+    #tjit2wQmyiTfaM1ZyL2TRXzU ^"Spasms of the Uncontrolled Hand" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 5 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 2
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "One of the target's hands spasms, causing him to drop anything he is holding in it. It keeps spasming for as long as you concentrate."
+    }
+
+    #tWVzIXU26OAEcpl0GYsKDyCn ^"Rise of the Feathery Body" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 10 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +1 "Touch"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Allows the target to float vertically to any height, carrying up to 50 pounds, and rising as fast as smoke rises, slower if carrying a heavy load. The target cannot move horizontally through this spell."
+    }
+
+    #t6YlKGZVFpSdyp4rB08bTuuX ^"Despair of the Quivering Manacles" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Your target shakes vigorously from side to side without falling. Those affected get –3 on rolls requiring physical movement, and –1 to most other rolls."
+    }
+
+    #t4NerRDlLuULddCnUjZWrvZ6 ^"Endurance of the Berserkers" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Your body acts as though it were unwounded and unfatigued for as long as you concentrate. Keep track of the actual Fatigue levels that the body loses while \"berserk,\" because as soon as the spell wears off, you lose those levels. If you run out of Fatigue levels, the spell terminates immediately and you fall unconscious.\n\nA character under the influence of this spell does risk worsening wounds, but he may not notice."
+    }
+
+    #tHFC28uIjdn80GOjHwCmmogg ^"Gift of the Frog's Legs" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Allows the target to leap up to 15 feet vertically or 25 feet horizontally (2 feet less for every Encumbrance point). The person must make a Dexterity – Encumbrance stress roll against an Ease Factor of 0 to land without injury. A miss indicates that he takes a Light Wound, and a botch indicates a Medium Wound. The target can only leap once for each casting of the spell, and that leap must be made within ten seconds. As with a frog's leap, a running start does not improve the leap."
+    }
+
+    #t6kyAwuuVo3SfDSAEKqX322M ^"Lifting the Dangling Puppet" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 15 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 4
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Lifts a person of Size +1 or less vertically into the air. Generally, you can make the target rise or descend as fast as smoke rises, but a heavier person rises more slowly and falls more quickly."
+    }
+
+    #tTGGJl9hmMXiqlmJ9wi1S8sb ^"The Gift of Vigor" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 20 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 15
+            MODIFIERS {
+            +1 "Touch"
+            }
+        }
+        DESCRIPTION "Transfers bodily energy from you to any target who is at a lower Fatigue level than you. You are thus at the target's current Fatigue level, and he or she assumes your previous level. If you lose a Fatigue level from casting this spell, the loss comes after the transfer. Magi have long looked for a way to restore their energy in order to cast more spells. This is the closest they've come."
+    }
+
+    #tUSfRxxD5gSNxSV51rnDR1Zc ^"Awaken the Slumbering Corpse" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "Causes a corpse to function at your verbal command. Commands have to be very simple, like \"attack anyone who comes through here.\" The corpse used cannot have been buried by Church ceremony."
+    }
+
+    #tNaZBpMm3nfO7gNBSmuRUMho ^"Strings of the Unwilling Marionette" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 25 FIXED
+            ^"Range" STRING "Voice"
+            ^"Duration" STRING "Concentration"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +2 "Voice"
+            +1 "Conc"
+            }
+        }
+        DESCRIPTION "You can control the physical movements of a person, such as walking, standing, and turning. If the target resists the control, the movements are jerky. The target can yell, but you can prevent intelligible speech by controlling the target's mouth. The target must be conscious to be moved about."
+    }
+
+    #tReYLpIOCTfvBfYqTa8X8AIe ^"Seven-League Stride" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 30 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 30
+        }
+        DESCRIPTION "Transports you to any place within seven leagues either that you can see or that you have an Arcane Connection with. If you fail an Intelligence + Finesse stress roll against an Ease Factor of 9, your arrival goes slightly awry. For instance, you might fall when you appear, or just be facing the wrong way. A botch means you appear in the wrong place, perhaps even in a wall.\n\nPraefactus of Bonisagus's version of this spell always allows him to appear in a safe, unembarrassing place (assuming he doesn't fail his Finesse roll). All Praefactus's spells make him seem as dignified as possible — manifesting his wizard's sigil."
+    }
+
+    #t15KzQBV8xBVD2oN7GonsKrl ^"The Leap of Homecoming" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Personal"
+            ^"Duration" STRING "Momentary"
+            ^"Target" STRING "Individual"
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 35
+        }
+        DESCRIPTION "Transports you to any place to which you have an Arcane Connection. Most magi use this to return to their laboratories."
+    }
+
+    #tMrOnzA0PouoXvHEkX3qZa3p ^"The Walking Corpse" DEF {
+        EXTENDS ^"Formulaic Spell"
+        PROPERTIES {
+            ^"Technique" STRING "Rego" FIXED
+            ^"Form" STRING "Corpus" FIXED
+            ^"Level" INTEGER 35 FIXED
+            ^"Range" STRING "Touch"
+            ^"Duration" STRING "Year"
+            ^"Target" STRING "Individual"
+            ^"Ritual" BOOLEAN true
+            ^"Source" STRING "Core Rules"
+        }
+        LEVEL_CALCULATION {
+            BASE 10
+            MODIFIERS {
+            +1 "Touch"
+            +4 "Year"
+            }
+        }
+        DESCRIPTION "Turns a corpse into a nearly mindless servant that can follow your simple verbal commands faithfully but unimaginatively. Unless the corpse is preserved with Charm Against Putrefaction or the equivalent, the body decays normally, but even a skeleton can be animated."
+    }
+}

@@ -1,0 +1,1676 @@
+EXTENSION "ARMDef_Bestiary_Magical" {
+    NAME "Ars Magica Definitive Edition - Creatures of Magic"
+    VERSION "0.4"
+    SPEC_VERSION "0.4"
+    RELEASE_DATE "2026-07-14"
+    DEPENDS_ON "ARMDef_Core_Creature"
+
+    #td7NwuKqsgmFME5TIQT9Bcvd ^"Baghl, an Earth Jinni" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Terram"
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER -1
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -1
+            }
+            ^"Virtues and Flaws" LIST ["Jinn", "Greater Immunity: Fire", "Ways of the Mountains", "Second Sight", "Skinchanger", "Strong-Willed", "Tough", "Greater Malediction (honor bargains made)", "Magical Air", "Vulnerable Magic (mua'addhin's call)", "Reclusive"]
+            ^"Soak" INTEGER 10
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Vis" STRING "1 pawn of Terram vis can be collected every year from his haunt, in the form of a quartz-encrusted stalactite at the back of his cave. If slain in physical form, his body yields 3 pawns of Terram vis."
+            ^"Appearance" STRING "Baghl is the jinni of a dark cave found in the Elbruz mountains that was once used as a quarry until he drove off the miners. He may be appeased mainly by being left alone to enjoy his beautiful cave formations, although he sometimes agrees to converse with theological scholars. He appears as an obese man with a mule's head, pupilless eyes of jetblack stone, and quartz-veined limbs that heft an oversized maul. In physical form he can also assume the shape of a large black mule."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Reclusive" +5
+            "Immutable" +3
+            "Proud" +2
+        }
+        COMBAT {
+            "Maul (warhammer)" INIT -1 ATTACK 11 DEFENSE 3 DAMAGE 15
+        }
+        ABILITIES {
+            "Arabic" SCORE 5 SPECIALTY "stone"
+            "Athletics" SCORE 3 SPECIALTY "climbing"
+            "Great Weapon" SCORE 4 SPECIALTY "maul"
+            "Profession: Miner" SCORE 3 SPECIALTY "gemstones"
+            "Second Sight" SCORE 4 SPECIALTY "jinn"
+            "Theology: Islam" SCORE 3 SPECIALTY "jinn"
+        }
+        POWERS {
+            ^"Flesh to Stone" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "-4"
+                    ^"Form" STRING "Terram"
+                    ^"Design" STRING "Base 20, +1 Touch, +2 Sun"
+                }
+                DESCRIPTION "Baghl can change any human he touches into stone until sunrise or until the morning call to prayer."
+            }
+            ^"Ruler of Earth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1–3 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Duplicates any non-Ritual Perdo Terram or Rego Terram spell less than or equal to 15th level at a cost of 1 Might point per magnitude of the effect."
+            }
+            ^"Incorporeal" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "Constant"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Baghl is naturally both invisible and intangible, and cannot be influenced by the physical world. Magic can only directly target him if the caster can sense his existence. In this form he has no physical statistics or combat scores. Without taking a corporeal form, Baghl's physical characteristics are only used when dealing with other incorporeal creatures."
+            }
+            ^"Donning the Corporeal Veil" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Baghl can form the physical body described under Appearance to house his spiritual form; when doing so he acquires the physical characteristics, size, combat statistics, and Wound levels listed earlier. His arms and armor are also created with this power. He cannot become fatigued. This body lasts until he decides he no longer needs it. Killing the body does not kill Baghl."
+            }
+            ^"Presence" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Baghl is aware of everything that goes on within his haunt. This power needs to Penetrate to perceive beings with a Magic Resistance."
+            }
+        }
+    }
+
+    #t2JtJs2YkNOwxMVRQTadOqYA ^"Caladrius" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 14
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER -2
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER -4
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Lesser Immunity (to non-lethal diseases)", "Unaffected by the Gift", "Compassionate (minor)", "Noncombatant"]
+            ^"Soak" INTEGER 3
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Vis" STRING "3 Corpus (1 in each eye, 1 in the wings)"
+            ^"Appearance" STRING "The caladrius is a magnificent, all-white bird somewhat resembling a heron (but with shorter legs and beak). It has a long, gracefully curving neck and a short, slightly downward-curving beak."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Ibis" +3
+            "Magnificent Appearance (Presence)" +3
+        }
+        COMBAT {
+            "Dodge" INIT 2 DEFENSE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "flying"
+            "Awareness" SCORE 4 SPECIALTY "food"
+            "Brawl" SCORE 2 SPECIALTY "dodging"
+            "Ignem Resistance" SCORE 4 SPECIALTY "solar heat"
+            "Survival" SCORE 3 SPECIALTY "wetlands"
+        }
+        POWERS {
+            ^"Healing Gaze" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "-14"
+                    ^"Form" STRING "Corpus"
+                    ^"Range" STRING "Eye"
+                    ^"Duration" STRING "Mom"
+                    ^"Target" STRING "Ind"
+                    ^"Spell Equivalent" STRING "CrCo 40"
+                    ^"Design" STRING "Base 30, +1 Eye, +1 affect either disease or aging"
+                }
+                DESCRIPTION "By gazing into a person's eyes, the caladrius can draw out any non-fatal disease from a sick person into itself. This removes any disease of up to Incapacitating strength, or resolves a critical or lesser aging crisis. The caladrius must immediately fly up toward the sun or else the disease returns to the patient."
+            }
+            ^"Perceive the Afflictions of Mortal Flesh" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Corpus"
+                    ^"Range" STRING "Per"
+                    ^"Duration" STRING "Mom"
+                    ^"Target" STRING "Sight"
+                    ^"Spell Equivalent" STRING "InCo 25"
+                    ^"Design" STRING "Base 5, +4 Sight"
+                }
+                DESCRIPTION "By sight, the caladrius can identify any diseases a person has and how serious they are."
+            }
+        }
+        DESCRIPTION "\"If anyone is ill, the caladrius will tell whether the patient will live or die.\" — Pierre de Beauvais"
+    }
+
+    #tfbqDPgdPsXPwZuq0IrIe7OJ ^"Aneirin the Bard" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Imaginem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 4
+            }
+            ^"Vis" STRING "If his spirit is somehow bottled rather than banished 2 Imaginem Vis remains."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Careful" +3
+            "Observant" +2
+        }
+        ABILITIES {
+            "Area Lore Stonehenge Tribunal" SCORE 10
+            "Magic Lore" SCORE 8
+            "Music" SCORE 12
+            "Teaching" SCORE 5
+        }
+        POWERS {
+            ^"Discorporate" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING ""
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Aneirin never physically manifests, save as a shadow and a melodic voice. He can only be harmed with magic."
+            }
+            ^"Names of Power" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING ""
+                }
+                DESCRIPTION "Aneirin knows many names of minor spirits and can teach them as a result of a Pact."
+            }
+        }
+        DESCRIPTION "One of the five great Welsh poets believed by the Order to have left Daimons behind after their death (the other four being Taliesin, Talhaearn Tad Awen, Blwchbardd, and Cian). Famous for a single poem, Y Gododdin, Aneirin praises his fellows among the war band of Mynyddawg Mwynfawr (Mynyddawg the Wealthy) of Caereidyn (near Edinburgh), an army 300 strong sent on a doomed mission to recapture an old Roman stronghold from the Saxons. His tomb lies somewhere in the Cambrian Mountains. His spirit wanders across the entire mountain range, helping those who further his ideals and punishing those who go against them, but he is most powerful within his own tomb."
+    }
+
+    #tyvUuB9Eed9VGLXQu58I13IE ^"Chnoubis the Serpent" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 30
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Mentem"
+            ^"Size" INTEGER -1
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 6
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 5
+            }
+            ^"Soak" INTEGER 9
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Banished (13+)"
+            ^"Vis" STRING "On being banished his scales remain, containing 3 pawns of Intellego and 2 of Mentem vis"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Curious" +4
+            "Diplomatic" +3
+            "Proud" +2
+            "Noble" +1
+        }
+        COMBAT {
+            "Bite" INIT 5 ATTACK 8 DEFENSE 8 DAMAGE 5
+        }
+        POWERS {
+            ^"Augury" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "varies"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "By using this power Chnoubis is able to perform auguries as the Virtue Divination & Augury (see The Mysteries Revised Edition, page 58), with each Might Point allowing ten levels of success. If you do not have access to The Mysteries Revised Edition, this power allows Chnoubis to duplicate the effects of any Hermetic Intellego spell, and costs 1 point for every ten levels of the spell."
+            }
+            ^"Aura of Rightful Authority" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Equivalent to the ReMe20 Hermetic spell."
+            }
+            ^"Discorporation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "varies, 1 point"
+                    ^"Initiative" STRING "+7"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Becomes a discorporate spirit which can move as fast as lightning and is only visible to Intellego Vim magics or Second Sight. He sneaks up on victims invisibly and bites them, then listens to their secrets as the toxin takes effect."
+            }
+        }
+        DESCRIPTION "On being bitten the victim must make a Fatigue test against Ease Factor 9 or lose a Fatigue level each round until he has succeeded for three consecutive rounds or fallen unconscious. While suffering these effects, the victim is unable to tell a lie (Penetration 25, Mentem), and is eager to talk to anyone present about anything on their mind, talking to themselves if necessary. Once the victim falls unconscious no further Fatigue is lost, but they awaken with a terrible headache and must make a Stamina stress roll (plus Art of Memory if they have that Ability) at Ease Factor 6 to recall what transpired. A lion-headed serpent called upon for his abilities to scry and ferret out secrets. He claims to be a native of the Nile, but theurgists across Europe may successfully summon him. True to his visage, Chnoubis is a powerful fighter, but is much more interested in the power of words."
+    }
+
+    #t3HslLZrgCPuZ1XkzJ7zlP1x ^"Dietrich von Bern" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 35
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 2
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 5
+                ^"Communication" INTEGER 3
+                ^"Strength" INTEGER 5
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 5
+                ^"Quickness" INTEGER 3
+            }
+            ^"Soak" INTEGER 22
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Banished (22+)"
+            ^"Vis" STRING "7 Rego"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +3
+            "Barbarous" +2
+            "Crafty" +2
+        }
+        COMBAT {
+            "Greatsword" INIT 5 ATTACK 19 DEFENSE 17 DAMAGE 15
+        }
+        ABILITIES {
+            "Athletics" SCORE 6
+            "Great Weapon" SCORE 10
+            "Intrigue" SCORE 6
+            "Leadership" SCORE 8
+        }
+        POWERS {
+            ^"Sacred Kingship" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "10 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "By laying hands on another character, Dietrich can permanently increase the character's Perception, Presence, or Communication by 1 point. He can only do this once per person, and can only to a maximum of +3. Increasing Presence this way is a very useful aid to the aspiring Mystagogue."
+            }
+        }
+        DESCRIPTION "Dietrich's sword has been dipped in dragon's blood. No magical spell of a level 40 or lower can deflect, harm, or control it. After being hit, the dragon's blood burns, causing an extra +5 damage per round (armor does not soak) unless an alchemist, herbalist, or healer can cure the wound. Soak +22 is from full chain mail drenched in dragon's blood. A hero in German poetry and song, Dietrich was the boy-king of Bern after the fall of Rome. During his reign, several great Nibelungen heroes, including Siegfried himself, were loyal members of his court. When his uncle Ermenrik, German ruler of Rome, conquered Bern, Dietrich fled to the court of Attila the Hun, where he went on many adventures and became one of the greatest warriors in history. He returned after his uncle died, retook Bern and captured Rome. He died in a quest for revenge against a friend who betrayed him, and was buried in an ornate tomb in the Lessini Mountains, where the Alps cross over into Italy. His tomb is a treasure trove of weapons and armor, enchanted by being dipped in the blood of a great dragon Dietrich slew. When anyone enters the tomb, however, the Daimon of Dietrich animates his hulking corpse. If you come seeking wisdom and prove yourself worthy, he will dispense kingly advice. If you come seeking power, you will face one of the greatest warriors on Earth, even in death. Another legend propagated by the Church says Dietrich, a heretic suspected of Arianism, was thrown into the volcanic Mount Etna. The legend of Dietrich appears in Das Heldenbuch (\"The Book of Heroes\") a collection of German romances published in the early 13th century, organizing the tales of the Ostrogoths and Franconians into two epic cycles."
+    }
+
+    #tM7NqFgx0UTGKFNMuFyve1lK ^"Gydryty-kom the Giant" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 40
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Auram"
+            ^"Size" INTEGER 3
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 8
+                ^"Stamina" INTEGER 6
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 3
+            }
+            ^"Soak" INTEGER 20
+            ^"Wound Penalties" STRING "–1 (1–8), –3 (9–16), –5 (17–24), Banished (25+)"
+            ^"Vis" STRING "When he is banished his tongue remains, and contains 8 pawns of Auram Vis."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Hates Being Interrupted" +4
+            "Determined" +3
+            "Protective" +2
+        }
+        COMBAT {
+            "Brawl" INIT 3 ATTACK 10 DEFENSE 10 DAMAGE 8
+        }
+        POWERS {
+            ^"Auram Magic" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "varies"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "May perform equivalent effects to any Auram magic at a cost of 1 point per magnitude, or for spells involving hail, 1 point per three magnitudes. Can perform Auram Ritual spells as if they were Formulaic spells; no extra time or vis is required."
+            }
+            ^"Swallow Spells" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Can swallow any magical spell or effect with a level of 50 or less, completely dispelling it."
+            }
+        }
+        DESCRIPTION "Gydryty-kom is the master of hail, a giant who can stretch his mouth from the ground to the clouds. He swallows storms and lightning, but grows angry when summoned because it interrupts his eternal battle with a Daimonic snake of fog that threatens to swallow the world. Gydryty-kom was once highly regarded in the lands of the Albanians, but his power has faded thanks to Christianity."
+    }
+
+    #tn3IVX5xghATdkGnZ5YQDIfW ^"Hipta the Nurse" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Animal"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 2
+            }
+            ^"Wound Penalties" STRING "Varies by form. Substitute Banished for Incapacitated"
+            ^"Vis" STRING "Leaves 3 pawns of Animal Vis in the form of a white feather when banished."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Calm" +4
+            "Protective" +2
+        }
+        POWERS {
+            ^"Shapechange" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "May change form into any natural or fantastic beast from size –5 to +2. The change is instantaneous, and she can always speak in any form."
+            }
+            ^"Dispel" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "varies"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "May perform any Perdo Vim spell at will, for the cost of one Might point per magnitude. Hipta counts as familiar with all styles of magic for this purpose, and has a Penetration Score of 30, making invoking her a common way to end malevolent curses."
+            }
+        }
+        DESCRIPTION "The nurse of Dionysus, Hipta is a powerful shapechanger but favors the form of a lovely dove. Her name and spells to summon her can be found in several ancient texts. She is invoked for forgiveness from curses and magical harm. Str, Sta, Dex, Qik vary; Size varies from –5 to +2; Combat and Soak vary with form."
+    }
+
+    #tWGtr6inQBW8sRmR8OpkKwAI ^"Honos" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 30
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 5
+                ^"Dexterity" INTEGER 4
+                ^"Quickness" INTEGER 4
+            }
+            ^"Soak" INTEGER 14
+            ^"Wound Penalties" STRING "–1 (1–5), –3 (6–10), –5 (11–20), Incapacitated (21–25), Banished (26+)"
+            ^"Vis" STRING "Leaves 6 pawns of Corpus in his armor when banished."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Honorable" +6
+            "Authoritarian" +3
+            "Disciplined" +3
+        }
+        COMBAT {
+            "Long Spear" INIT 7 ATTACK 14 DEFENSE 12 DAMAGE 10
+        }
+        ABILITIES {
+            "Athletics" SCORE 4
+            "Great Weapon" SCORE 6 SPECIALTY "long spear"
+            "Leadership" SCORE 6
+            "Teaching" SCORE 3 SPECIALTY "leadership"
+        }
+        POWERS {
+            ^"Instill Leadership" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "With a touch of his long spear, Honos can teach 17 experience points in the ability Leadership, to a maximum of Ability score 6. The Theurgist receives the insights immediately, but must then devote the season to study and reflecting upon them to gain the increase."
+            }
+            ^"Centurions’ Feast" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "30 points"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Produces a magical feast sufficient to feed one hundred people. All who partake of the feast who possess the Flaw Dutybound are instantly cured of any Light and Medium Wounds, and gain +10 on their next recovery checks. The food lasts for one hour, then dissipates, but the effects are permanent."
+            }
+        }
+        DESCRIPTION "Honos is a Roman Daimon of morality and military honor, with several temples built in his name. Honos appears as a young warrior in ancient armor, carrying a lance and a cornucopia (“horn of plenty”). Honos’ temples in Rome have been destroyed or blanketed by the Dominion, although the Legion of Mithras are rumored to know the location of one surviving shrine where he can be invoked."
+    }
+
+    #tDt5QYWqZc7U7UunnDspJIev ^"Portunes, Spirit of Safe Harbor" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 25
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Auram"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Wound Penalties" STRING "n/a"
+            ^"Vis" STRING "None."
+            ^"Appearance" STRING "When summoned, he appears either as a ghostly serpent or the shadowy visage of a bearded man in a leather apron, but he never takes on a solid physical form."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Watchful" +3
+        }
+        POWERS {
+            ^"Safe Harbor" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "12 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Guarantees calm weather in the harbor of a port for an entire season, and resists all spells that would disrupt this with a Magic Resistance of 60."
+            }
+            ^"Opening Enchanted Locks" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "8 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "Portunes can dispel any magical lock with a level of less then 40 with this power."
+            }
+        }
+        DESCRIPTION "A Spirit charged with ports and harbors, the Greeks called him Palaemon and Melicertes. His purview also covers keys, locks, and domestic animals. In Rome he was worshipped as a god, with a temple located near the Forum Boarium. His feast, the Portunalia, is observed on August 17th. The rite to summon him involves throwing keys into a fire. He has no combat: he vanishes if attacked, and can only be harmed by Perdo Vim spells. He never materializes, so has no Soak."
+    }
+
+    #tk6pGOlDxW6a8pCfEBfNMT0Z ^"Pukis, Dragon of the Hearth" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Ignem"
+            ^"Size" INTEGER -2
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER -1
+                ^"Stamina" INTEGER 4
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 6
+            }
+            ^"Soak" INTEGER 8
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Banished (10+)"
+            ^"Vis" STRING "2 Ignem, 1 Rego"
+            ^"Appearance" STRING "This Daimon takes the form of a small dragon of fire that dwells in the hearth or a fireplace. Although small, Pukis is long and thin."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Mischievous" +3
+            "Loyal" +3
+            "Fickle" +2
+        }
+        COMBAT {
+            "Bite" INIT 5 ATTACK 6 DEFENSE 9 DAMAGE 3
+            "Lashing tail" INIT 6 ATTACK 10 DEFENSE 13 DAMAGE 0
+        }
+        POWERS {
+            ^"Invisibility" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Pukis can turn itself completely invisible and inaudible, for as long as it chooses, or until it touches a person or animal."
+            }
+            ^"Mischievous Flame" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "With a glance, Pukis can set anything slightly flammable aflame."
+            }
+            ^"Sneak Thief" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "By touching any object weighing less than 3 pounds, Pukis can instantly teleport the object to its home so that it appears at the edge of its master’s hearth."
+            }
+            ^"Sacred Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "As long as Pukis lives in a particular hearth, and the fire is kept hot year round, the ashes from the fire can be collected for 1 pawn of Ignem per season."
+            }
+        }
+        DESCRIPTION "Although small, Pukis is long and thin. It can engage 2 opponents without penalty, attacking one with its jaws and the other with its quick tail. It is also burning hot, and can ignite easily flammable materials on touch. First summoned by Baltic wizards, it enjoys napping amongst burning logs and coals, coiling its long-snake like body beneath the flames to conceal its presence. It will leave gifts for the master of the household, possibly stolen from somewhere else, and will attack strangers if they act destructively. If it is treated poorly, it will cause mischief before departing. The magus Andrilikes, a theurgist of the Novgorod tribunal, wrote a Hermetic ritual for summoning this lesser Daimon to his sanctum, and has given copies to several of his friends."
+    }
+
+    #t5jq4HYMMIAelp9lC3CCiyUU ^"An Earth Elemental" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Terram"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER -2
+                ^"Communication" INTEGER -4
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 6
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" LIST ["Berserk", "Great Stamina", "Tough", "Ways of the Cavern", "Poor Memory", "Short Attention Span", "Simple Minded"]
+            ^"Soak" INTEGER 9
+            ^"Wound Penalties" STRING "–1 & 1 Might point (1–5), –3 & 3 Might points (6–10), –5 & 5 Might points (11–15), Incapacitated & 5 Might points (16–20), Dead & all Might points (21+)"
+            ^"Vis" STRING "3 pawns of Terram, in body"
+            ^"Appearance" STRING "An earth elemental appears much like any other object of earth or rock, except it is made up of sharp edges and right-angled corners that form cubic corpuscles of different sizes."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Cave" +3
+        }
+        COMBAT {
+            "Bludgeon (includes Ways of the Cavern)" INIT 3 ATTACK 11 DEFENSE 7 DAMAGE 9
+            "Bludgeon when Berserk (includes Ways of the Cavern)" INIT 3 ATTACK 13 DEFENSE -5 DAMAGE 9
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "pursuit"
+            "Awareness" SCORE 2 SPECIALTY "interlopers"
+            "Brawl" SCORE 3 SPECIALTY "bludgeon"
+            "Penetration" SCORE 3 SPECIALTY "Slake Thirst Power"
+            "Stealth" SCORE 2 SPECIALTY "keeping still"
+        }
+        POWERS {
+            ^"Crush" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "-2"
+                    ^"Form" STRING "Terram"
+                    ^"Range" STRING "Touch"
+                    ^"Duration" STRING "Sun"
+                    ^"Target" STRING "Ind"
+                }
+                DESCRIPTION "The elemental clubs at an opponent with its heavy limbs, requiring a normal Bludgeon melee attack, which does its own damage as normal. If the elemental is at least equal in Size to its opponent, a successful Crush attack can pin him to the ground, and the elemental adds its (Might/5, rounded up) to its Grapple Strength to prevent its victim escaping. If the elemental successfully grapples, then any equipment carried by its victim is damaged; fragile items are destroyed, robust items are broken (and are destroyed if affected again by this power), and metal items are damaged (and are broken if affected again by this power)."
+            }
+            ^"Slake Thirst" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+4"
+                    ^"Form" STRING "Aquam"
+                    ^"Range" STRING "Touch"
+                    ^"Duration" STRING "Mom"
+                    ^"Target" STRING "Part"
+                }
+                DESCRIPTION "Earth elementals are always thirsty, and direct contact with the elemental removes water from the target, inflicting a Fatigue level of damage. Once all Fatigue levels are gone, successive strikes (or rounds of contact) inflict a Light Wound, then a Medium Wound, then a Heavy Wound, and so forth. Fatigue levels may be restored by drinking at least two pints of water (for a Size 0 individual), while wounds are healed as normal."
+            }
+        }
+        DESCRIPTION "This elemental was rarefied in a cavern with a Magic aura, and guards the vis source found therein with a furious passion."
+    }
+
+    #tBU63PmLvk3O6byDLfC5mnhk ^"A Water Elemental" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Aquam"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 4
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER -4
+            }
+            ^"Virtues and Flaws" LIST ["Puissant Hunt", "Tough", "Ways of the River", "Poor Memory", "Short Attention Span", "Simple Minded"]
+            ^"Soak" INTEGER 6
+            ^"Wound Penalties" STRING "–1 & 1 Might point (1–5), –3 & 3 Might points (6–10), –5 & 5 Might points (11–15), Incapacitated & 5 Might points (16–20), Dead & all Might points (21+)"
+            ^"Vis" STRING "3 pawns of Aquam, in body"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "River" +3
+        }
+        COMBAT {
+            "Bludgeon" INIT -4 ATTACK 8 DEFENSE 3 DAMAGE 6
+            "Bludgeon" INIT -1 ATTACK 11 DEFENSE 6 DAMAGE 6
+        }
+        ABILITIES {
+            "Athletics" SCORE 2 SPECIALTY "when hunting"
+            "Brawl" SCORE 3 SPECIALTY "bludgeon"
+            "Hunt" SCORE 3 SPECIALTY "river banks"
+            "Penetration" SCORE 2 SPECIALTY "Chill Touch power"
+            "Swim" SCORE 3 SPECIALTY "speed"
+        }
+        POWERS {
+            ^"Drown" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "See insert on previous page for details."
+            }
+            ^"Chill Touch" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "See insert on previous page for details."
+            }
+            ^"Crafter of Water" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 – 3 points"
+                    ^"Initiative" STRING "–4 – Might Cost"
+                    ^"Form" STRING "Aquam"
+                }
+                DESCRIPTION "Duplicate any Creo Aquam or Rego Aquam spell of level 15 or below, at a cost of 1 Might point per magnitude of the spell."
+            }
+        }
+        DESCRIPTION "This lympha haunts the river banks near its home, preying on the warmth of small creatures who dwell there."
+    }
+
+    #tYJS5CPFHC4cJAqL40n69bYg ^"An Air Elemental" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Auram"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER -4
+                ^"Dexterity" INTEGER -2
+                ^"Quickness" INTEGER 4
+            }
+            ^"Virtues and Flaws" LIST ["Keen Vision", "Shapeshifter", "Ways of the Storm", "Poor Memory", "Short Attention Span", "Simple Minded"]
+            ^"Soak" INTEGER 0
+            ^"Wound Penalties" STRING "–1 & 1 Might point (1–5), –3 & 3 Might points (6–10), –5 & 5 Might points (11–15), Incapacitated & 5 Might points (16–20), Dead & all Might points (21+)"
+            ^"Vis" STRING "3 pawns of Auram, in body."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Storm" +3
+        }
+        COMBAT {
+            "Jupiter's Touch Power" INIT 5 ATTACK 5 DAMAGE 30
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "high points"
+            "Athletics" SCORE 3 SPECIALTY "storm force winds"
+            "Awareness" SCORE 3 SPECIALTY "metal objects"
+            "Brawl" SCORE 3 SPECIALTY "Jupiter's Touch Power"
+            "Penetration" SCORE 2 SPECIALTY "Jupiter's Touch Power"
+            "Shapeshifter" SCORE 4 SPECIALTY "birds"
+        }
+        POWERS {
+            ^"Suffocate" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "See insert on previous page for details."
+            }
+            ^"Jupiter's Touch" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "See insert on previous page for details."
+            }
+            ^"Charge of the Angry Winds" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Auram"
+                    ^"Spell Equivalent" STRING "CrAu 15"
+                    ^"Design" STRING "Base 3, +2 Voice, +1 Conc, +1 unnatural"
+                }
+                DESCRIPTION "As the spell of the same name; add the elemental's Strength to all the Ease Factors for acting within the wind."
+            }
+        }
+        DESCRIPTION "A creature born of storms, it can be devastating if roused. Its Shapeshifter Virtue allows it to adopt the forms of the creatures it has seen: a raven, an eagle, a hound, and a bull."
+    }
+
+    #tI1oSX2qK15EHMucWW613G4k ^"A Fire Elemental" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Ignem"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 0
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER 3
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER -4
+                ^"Stamina" INTEGER 0
+                ^"Dexterity" INTEGER 5
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Lightning Reflexes", "Ways of the Forest Fire", "Poor Memory", "Short Attention Span", "Simple Minded"]
+            ^"Soak" INTEGER 4
+            ^"Wound Penalties" STRING "–1 & 1 Might point (1–5), –3 & 3 Might points (6–10), –5 & 5 Might points (11–15), Incapacitated & 5 Might points (16–20), Dead & all Might points (21+)"
+            ^"Vis" STRING "3 pawns of Ignem, in body."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Forest Fire" +3
+        }
+        COMBAT {
+            "Burn Power" INIT 3 ATTACK 12
+        }
+        ABILITIES {
+            "Athletics" SCORE 3 SPECIALTY "leaping between fuel sources"
+            "Brawl" SCORE 3 SPECIALTY "Burn Power"
+            "Charm" SCORE 3 SPECIALTY "small animals"
+            "Penetration" SCORE 3 SPECIALTY "Fascination Power"
+        }
+        POWERS {
+            ^"Burn" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "See insert for details."
+            }
+            ^"Fascination" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "+6"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "See insert for details."
+            }
+            ^"Enliven the Gross Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "6 points"
+                    ^"Initiative" STRING "–10"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "This ritual-like power rarefies (creates) a fire elemental from a sufficient amount of raw elemental matter. The elemental can have any Might less than that of the creature using this power. The elemental is automatically under the control of the creature; this power can also be used to control elementals which are not of the creature's own making, but in this case must Penetrate the elemental's Might. When the creature has no further use for the elemental, its control lapses but the elemental remains."
+            }
+        }
+        DESCRIPTION "Recovers Might points in one quarter of the normal time, which for an elemental means 3 weeks rather than a season. For a Might 15 elemental this is approximately 2 Might points every 3 days. Born of a lightning strike hitting a magically tainted tree (perhaps a vis source), this elemental has the frightening power to spawn more fire elementals, which it does if fought with water."
+    }
+
+    #tamtoMQeWP8ijBdlaCFWIo4W ^"Ghostly Warder" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 10
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Mentem"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 1
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" LIST ["None (may take Virtues and Flaws as a grog, if desired by the troupe.)"]
+            ^"Reputations" LIST ["None"]
+            ^"Vis" STRING "None. Magi cannot render other characters' Ghostly Warders down for vis."
+            ^"Appearance" STRING "An older peasant woman, rather gaunt, dressed in simple but well-repaired clothes and carrying the tools used in some part of daily life. This may be a distaff and spindle, or a pot, or a broom; it changes from time to time. Note that she is invisible to characters without an appropriate Virtue."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Protective" +3
+        }
+        ABILITIES {
+            "Area Lore" SCORE 5 SPECIALTY "places children get lost"
+            "Awareness" SCORE 5 SPECIALTY "where her children are"
+            "Church Lore" SCORE 1 SPECIALTY "funerals"
+            "Divine Lore" SCORE 1 SPECIALTY "after death"
+            "Folk Ken" SCORE 4 SPECIALTY "people lying to her children"
+            "Living Language" SCORE 5 SPECIALTY "scolding"
+            "Magic Lore" SCORE 2 SPECIALTY "ghosts"
+            "Profession (housewife)" SCORE 5 SPECIALTY "cleaning"
+        }
+        POWERS {
+            ^"Kinesis" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The ghost can move an object as if she were still physically present. One expenditure of Might allows her to move one object until she puts it down again. She has no combat Abilities, so she cannot fight wielding an object as a weapon."
+            }
+        }
+        DESCRIPTION "The ghost is non-physical, and so cannot be harmed by combat or harm others in combat. Two additional Personality Traits are chosen by the player. This Ghostly Warder (see the Magical Warder Virtue, page 93) was the character's mother, aunt, or possibly grandmother. She still gives him all the advice he received as a child, such as to wear warm clothes and stay away from the river, but she is also quite perceptive, both about people and about mundane events."
+    }
+
+    #tMebeN5F0u5en9fBZctRtrnB ^"A Typical Giant" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 12
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 5
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -3
+                ^"Perception" INTEGER 1
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 12
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER -2
+            }
+            ^"Virtues and Flaws" LIST ["Tough", "Warrior", "Wrathful (minor)", "Weak-Willed"]
+            ^"Soak" INTEGER 9
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–10), –3 (11–20), –5 (21–30), Incapacitated (31–40), Dead (41+)"
+            ^"Vis" STRING "3 Corpus in skull"
+            ^"Appearance" STRING "The common giant is an enormous, ugly man with bulging eyes, an oversized, squarish head, and a shapeless gash of a mouth full of crooked teeth. He stands about 20 feet tall and wears a crude garment stitched together from bear skins."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Oafish" +3
+        }
+        COMBAT {
+            "Cudgel" INIT -2 ATTACK 12 DEFENSE 5 DAMAGE 19
+            "Kick" INIT -3 ATTACK 6 DEFENSE 1 DAMAGE 15
+            "Stone" INIT -3 ATTACK 7 DEFENSE 2 DAMAGE 14
+        }
+        ABILITIES {
+            "Brawl" SCORE 4 SPECIALTY "kick"
+            "Great Weapon" SCORE 5 SPECIALTY "cudgel"
+            "Living Language" SCORE 4 SPECIALTY "coarse expressions"
+            "Thrown Weapon" SCORE 3 SPECIALTY "stone"
+        }
+        DESCRIPTION "These statistics are for a typical giant of the sort found throughout the British Isles. Such giants have been known to form alliances with hedge wizards or faeries. Unlike many magical creatures, giants need to eat, drink, and breathe, and get old and die."
+    }
+
+    #t6YOzXaHBWEvX3meW0mWFHQP ^"Sir Giles, a Ghostly Knight" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 16
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Mentem"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -1
+                ^"Perception" INTEGER -1
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 0
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 1
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Knight", "Puissant Single Weapon", "Self-Confident", "Proud (Major)", "Baneful Circumstances (during the day)"]
+            ^"Reputations" LIST ["Proud 3 (local)"]
+            ^"Soak" INTEGER 10
+            ^"Fatigue Levels" STRING "OK, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1(1–5), –3 (6–10), –5 (11–15), Incapacitated (16+)"
+            ^"Vis" STRING "4 Mentem in lance"
+            ^"Appearance" STRING "Sir Giles is a Magical apparition — a ghostly knight in black mail, riding a fearsome black destrier. His shield and surcoat are solid black without any heraldic device, and atop his helm is a crest shaped like a cockerel. If he removes his helm, he appears to be a rather handsome, well-groomed knight whose face shows an expression of fierce pride."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +6
+            "Belligerent" +2
+            "Brave" +2
+        }
+        COMBAT {
+            "Lance & Heater, mounted" INIT 2 ATTACK 17 DEFENSE 16 DAMAGE 7
+            "Lance, dismounted" INIT 3 ATTACK 9 DEFENSE 7 DAMAGE 9
+            "Long Sword & Heater, mounted" INIT 2 ATTACK 17 DEFENSE 17 DAMAGE 8
+            "Long Sword & Heater" INIT 2 ATTACK 14 DEFENSE 14 DAMAGE 8
+            "Long Sword only" INIT 2 ATTACK 13 DEFENSE 10 DAMAGE 8
+        }
+        ABILITIES {
+            "Area Lore" SCORE 3 SPECIALTY "nobles"
+            "Animal Handling" SCORE 3 SPECIALTY "horses"
+            "Athletics" SCORE 2 SPECIALTY "running"
+            "Awareness" SCORE 3 SPECIALTY "in battle"
+            "Brawl" SCORE 2 SPECIALTY "fist"
+            "Concentration" SCORE 1 SPECIALTY "remaining invisible"
+            "Charm" SCORE 1 SPECIALTY "ladies"
+            "Etiquette" SCORE 3 SPECIALTY "nobles"
+            "Great Weapon" SCORE 3 SPECIALTY "long spear"
+            "Hunt" SCORE 2 SPECIALTY "deer"
+            "Intrigue" SCORE 1 SPECIALTY "noble courts"
+            "Leadership" SCORE 3 SPECIALTY "soldiers"
+            "Ride" SCORE 5 SPECIALTY "in battle"
+            "Single Weapon" SCORE 5 SPECIALTY "heater shield"
+        }
+        POWERS {
+            ^"Donning the Corporeal Veil" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "–1"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "Sir Giles can assume material form."
+            }
+            ^"Riding the Phantom Steed" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Animal"
+                    ^"Range" STRING "Touch"
+                    ^"Duration" STRING "Sun"
+                    ^"Target" STRING "Ind"
+                    ^"Spell Equivalent" STRING "Cr(Re)An 40"
+                    ^"Design" STRING "Base 15, +1 Touch, +2 Sun, +1 Rego requisite, +1 Size"
+                }
+                DESCRIPTION "When Sir Giles takes physical form, he can also materialize his war horse for an additional Might cost. He can dissolve the horse at will due to the Rego requisite. Use the statistics for a destrier."
+            }
+            ^"Invisibility" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Imaginem"
+                    ^"Range" STRING "Touch"
+                    ^"Duration" STRING "Conc"
+                    ^"Target" STRING "Group"
+                    ^"Spell Equivalent" STRING "PeIm 20"
+                    ^"Design" STRING "Base 4, +1 Touch, +1 Conc, +2 Group"
+                }
+                DESCRIPTION "Even in material form, Sir Giles and his horse can become invisible when he wishes (though they can still be seen by Second Sight)."
+            }
+            ^"Ride in Dreams" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                    ^"Range" STRING "Touch"
+                    ^"Duration" STRING "Sun"
+                    ^"Target" STRING "Ind"
+                    ^"Spell Equivalent" STRING "CrMe 15"
+                    ^"Design" STRING "Base 4, +1 Touch, +2 Sun"
+                }
+                DESCRIPTION "When in spirit form, Sir Giles can enter the dreams of a sleeping person whose name he knows, tormenting him with nightmares of a furious, dark knight. The victim must make a Stamina roll against an Ease Factor of Sir Giles' Presence + Leadership or lose a Long-Term Fatigue Level."
+            }
+        }
+        DESCRIPTION "Not all ghosts belong to the Magic realm; there are Infernal and Faerie ghosts as well. Magical ghosts remain tied to the world through some overwhelming emotion or personal need. If its connection is somehow resolved, the ghost passes from the world, never to return."
+    }
+
+    #tlfl7LrbAgffEppYBpnaFv0j ^"A Magical Wolf" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 20
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER -1
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 1
+                ^"Communication" INTEGER 1
+                ^"Strength" INTEGER 2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["None"]
+            ^"Reputations" LIST ["None"]
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "n/a (The magical wolf is tireless.)"
+            ^"Wound Penalties" STRING "–1 (1–4), –3 (5–8), –5 (9–12), Incapacitated (13–16)"
+            ^"Vis" STRING "4 pawns of Animal, in head."
+            ^"Appearance" STRING "A gray male wolf, slightly larger than normal, but only slightly, and looking extremely healthy. His eyes, in particular, sparkle more brightly than should be possible."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Leader" +3
+            "Loyal" +2
+        }
+        COMBAT {
+            "Bite" INIT 12 ATTACK 10 DEFENSE 14 DAMAGE 9
+        }
+        ABILITIES {
+            "Area Lore" SCORE 6 SPECIALTY "game trails"
+            "Brawl" SCORE 6 SPECIALTY "biting"
+            "Hunt" SCORE 7 SPECIALTY "in a pack"
+            "Living Language" SCORE 5 SPECIALTY "hunting terminology"
+            "Survival" SCORE 6 SPECIALTY "forests"
+        }
+        POWERS {
+            ^"Pack of One" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+10"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "The wolf can create five duplicates of himself, who can then fight as a trained group. For these purposes, treat the wolf as having a Leadership score of 5, so that he can get the full +15 group bonus to his attacks. The power lasts until the pack brings down its opponent, which may be a group, or disengages from the fight. As the pack is really all one creature, the nomination of a vanguard is arbitrary. Further, the group does not need to disengage and reform when the vanguard is killed; it can seamlessly transfer the role to another wolf. Finally, the wolf only dies if all the copies are killed. When the duplicates vanish, the least wounded wolf remains."
+            }
+            ^"Terrifying Howl" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 points"
+                    ^"Initiative" STRING "+0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Anyone who hears the wolf's howl is struck with fear of the wolf and of wilderness places away from the haunts of men. Someone already in a house will merely not want to leave. Overcoming this fear completely requires a Brave roll against an Ease Factor of 12. Acting sensibly while responding to it, such as heading back to the village carefully, requires a Brave roll against an Ease Factor of 6. Those who fail the easier roll simply flee in panic."
+            }
+            ^"Wolf Lord" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Animal"
+                }
+                DESCRIPTION "Any wolf the magical wolf strikes in deadly combat dies instantly. In addition, the magical wolf can make mundane wolves follow his instructions even when he is not around, as long as the instructions are quite simple."
+            }
+        }
+        DESCRIPTION "The magical wolf does not care for such human niceties as names, and isn't particularly interested in human beings. Instead, he watches over all the wolves in his range, doing what he can to ensure their safety, health, and food supply. Sometimes, this means hunting wolves down himself, to keep population down, and in that case he removes the weak from the packs. While he has no interest in human beings, he does see that they are important, and might be willing to negotiate with a village. On the other hand, he might decide to drive them out. This magical wolf has the same reactions to The Gift as a mundane animal, although other magical wolves may not."
+    }
+
+    #tAVFaOUlFmLGyQ2LEh5jC4dk ^"Adranus, the Spirit of Mount Etna" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 50
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Ignem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 3
+                ^"Perception" INTEGER 3
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER -1
+                ^"Quickness" INTEGER -2
+            }
+            ^"Virtues and Flaws" LIST ["Ways of the Mountains", "Improved Characteristics x5", "Fury, Wrathful"]
+            ^"Reputations" LIST ["Bringer of Death and Destruction 5 (Local)"]
+            ^"Vis" STRING "10 pawns of Ignem vis; 5 pawns per year can also be harvested from the crater at the volcano's summit."
+            ^"Appearance" STRING "Mount Etna is a conical and blasted peak that rises ten thousand feet above the eastern end of the island of Sicily."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Wrathful" +6
+            "Slumbering" +3
+        }
+        ABILITIES {
+            "Sicily Lore" SCORE 6 SPECIALTY "mountains"
+            "Magic Lore" SCORE 8 SPECIALTY "underworld"
+        }
+        POWERS {
+            ^"Crafter of Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "-2 – Might cost"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Duplicates any non-Ritual Creo Ignem or Rego Ignem spell no greater than 50th level at a cost of 1 Might point per magnitude of the effect."
+            }
+            ^"Crafter of Earth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "-2 – Might cost"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Duplicates any non-Ritual Creo Terram or Rego Terram spell no greater than 50th level at a cost of 1 Might point per magnitude of the effect."
+            }
+            ^"Grant Visions" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "-12"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The target gains the Visions Flaw. Adranus can grant the Flaw temporarily, in which case it does not recover the Might Points spent until it withdraws the Flaw, or permanently, in which case its Might Score is reduced by 5."
+            }
+            ^"Grant Simple-Minded" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "-12"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The target gains the Simple-Minded Flaw. Adranus can grant the Flaw temporarily, in which case it does not recover the Might Points spent until it withdraws the Flaw, or permanently, in which case its Might Score is reduced by 5."
+            }
+            ^"Grant Wrathful" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "-12"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The target gains the Wrathful Flaw. Adranus can grant the Flaw temporarily, in which case it does not recover the Might Points spent until it withdraws the Flaw, or permanently, in which case its Might Score is reduced by 5."
+            }
+            ^"Hibernation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "15 points"
+                    ^"Initiative" STRING "-32"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "The spirit remains completely inactive for a year (spending no other Might points); the 15 points spent on this power are saved and added to the Might Pool for the first year out of hibernation. In this fashion, the Might Pool may exceed the permanent Might score (50). Using this power, the volcano can save up Might points over many years in succession and have a great amount to spend in the single year in which it awakens."
+            }
+            ^"Manifestation" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "4 or more points"
+                    ^"Initiative" STRING "equal to (Qik – Might points spent)"
+                    ^"Form" STRING "Animal"
+                    ^"Range" STRING "Touch"
+                    ^"Duration" STRING "Conc"
+                    ^"Target" STRING "Ind or Group"
+                    ^"Spell Equivalent" STRING "ReHe 20 or more or ReAn 25 or more"
+                    ^"Design" STRING "(Base 10, +1 Touch, +1 Conc) or (Base 15, +1 Touch, +1 Conc)"
+                }
+                DESCRIPTION "Manifests the spirit's consciousness among animals it touches, temporarily granting them a Might score equal to the Might points spent, and controlling their actions. It is a Rego Herbam effect of Level 20 to control a plant that is a pace in diameter (costing 4 Might points), and a Rego Animal of Level 25 to control a single creature of Size +1 (costing 5 Might points). For an extra 2 Might points, a group of ten standard creatures (or the equivalent mass) can be controlled. For each additional 2 Might points spent, the mass of creatures controlled is multiplied by 10. The spirit cannot spend more Might points on this power than the magnitude of its Magic Might. Humans and other sentient beings cannot be controlled by this power. Adranus is considered to be touching any animal on the mountain."
+            }
+            ^"Master of Earth" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "-2 – Might cost"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Duplicates any non-Ritual Muto Terram or Perdo Terram spell no greater than 50th level at a cost of 1 Might point per magnitude of the effect."
+            }
+            ^"Presence" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Imaginem"
+                    ^"Range" STRING "Arc"
+                    ^"Duration" STRING "Sun"
+                    ^"Target" STRING "Ind"
+                    ^"Spell Equivalent" STRING "InIm 30"
+                    ^"Design" STRING "(Base 2, +4 Arc, +2 Sun, +1 constant effect, +1 non-Hermetic effects)"
+                }
+                DESCRIPTION "Grants awareness of everything that happens within the bounds of Mount Etna. In essence, the spirit is coterminous with its associated landscape feature, so it is present simultaneously everywhere within its boundaries. The area controlled by the spirit can produce a yearly harvest of 5 pawns of Ignem vis, which manifests as physical objects within the controlled region. Harvesting this vis does not erode the spirit's Might."
+            }
+            ^"Regio" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "15 points"
+                    ^"Initiative" STRING "-32"
+                    ^"Form" STRING "Vim"
+                }
+                DESCRIPTION "By permanently spending Might, the spirit can add levels to the regio around the volcano's crater."
+            }
+            ^"Ruler of Lava" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "-2 – Might cost"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "Duplicates any non-Ritual spell pertaining to lava no greater than 50th level, at a cost of 1 Might point per magnitude of the effect."
+            }
+            ^"Ruler of Smoke" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "-2 – Might cost"
+                    ^"Form" STRING "Auram"
+                }
+                DESCRIPTION "Duplicates any non-Ritual spell pertaining to smoke no greater than 50th level, at a cost of 1 Might point per magnitude of the effect."
+            }
+        }
+    }
+
+    #tJMEUj1sEYbkziMROZhlsRNy ^"Revenant, Corpse-Like Form" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 9
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER 0
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER -2
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 3
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" LIST ["Baneful Circumstances (in daylight)"]
+            ^"Soak" INTEGER 11
+            ^"Wound Penalties" STRING "–1(1–5), –3 (6–10), –5 (11–15), –5 (16–20), Destroyed (21+)"
+            ^"Vis" STRING "2 Corpus in eyes (1 per eye)"
+            ^"Appearance" STRING "A shriveled, leathery corpse; its eyes blaze with unnatural fury."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Vengeful" +6
+        }
+        COMBAT {
+            "Fist" INIT 0 ATTACK 7 DEFENSE 4 DAMAGE 5
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "fist"
+        }
+        POWERS {
+            ^"Breath of Corruption" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Auram"
+                    ^"Range" STRING "Special"
+                    ^"Duration" STRING "Mom"
+                    ^"Target" STRING "Ind"
+                    ^"Spell Equivalent" STRING "CrAu 20"
+                    ^"Design" STRING "(Base 10, +2 Range equivalent to Voice)"
+                }
+                DESCRIPTION "The walking corpse can exhale foul humors, infecting a person within 2 paces with a disease (Ease Factor 9, effect as a Medium wound)."
+            }
+            ^"Rise from the Grave" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "-1"
+                    ^"Form" STRING "Terram"
+                    ^"Range" STRING "Touch"
+                    ^"Duration" STRING "Diameter"
+                    ^"Target" STRING "Part"
+                    ^"Spell Equivalent" STRING "ReTe 5"
+                    ^"Design" STRING "(Base 2, +1 Touch, +1 Diameter, +1 Part)"
+                }
+                DESCRIPTION "The revenant can cause the earth over its grave to open for one Diameter so it may enter or leave. The ground then seals, leaving no trace of disturbance."
+            }
+        }
+    }
+
+    #ts8tqYvObdZKPZasIKvbHfnu ^"Revenant, Skeletal Form" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 6
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Corpus"
+            ^"Size" INTEGER -2
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER -2
+                ^"Presence" INTEGER 0
+                ^"Communication" INTEGER -2
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 2
+                ^"Quickness" INTEGER 1
+            }
+            ^"Virtues and Flaws" LIST ["Baneful Circumstances (in daylight)", "Weak Characteristics (x2)"]
+            ^"Soak" INTEGER 9
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), –5 (10–12), Destroyed (13+)"
+            ^"Vis" STRING "1 Corpus in skull"
+            ^"Appearance" STRING "A leering skeleton whose bony fingers are as sharp as claws."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Vengeful" +3
+        }
+        COMBAT {
+            "Bony Claws" INIT 2 ATTACK 8 DEFENSE 8 DAMAGE 2
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "claws"
+        }
+        POWERS {
+            ^"Rise from the Grave" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Terram"
+                    ^"Range" STRING "Touch"
+                    ^"Duration" STRING "Diameter"
+                    ^"Target" STRING "Part"
+                    ^"Spell Equivalent" STRING "ReTe 10"
+                    ^"Design" STRING "(Base 3, +1 Touch, +1 Diameter, +1 Part)"
+                }
+                DESCRIPTION "The skeleton can cause the earth over its grave to open for one Diameter so it may enter or leave. The earth then seals, leaving no trace of disturbance."
+            }
+        }
+        DESCRIPTION "A human skeleton weighs much less than a living person, so an animate skeleton's Size is –2."
+    }
+
+    #tEPWavQHn85UDCUhZPmd1alC ^"Scitalis" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 5
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER -2
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER 1
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 4
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER -2
+                ^"Stamina" INTEGER 2
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER -2
+            }
+            ^"Virtues and Flaws" LIST ["Great Presence", "Poor Quickness", "Weak Characteristics"]
+            ^"Soak" INTEGER 4
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–3), –3 (4–6), –5 (7–9), Incapacitated (10–12), Dead (13+)"
+            ^"Vis" STRING "1 Imaginem in skin"
+            ^"Appearance" STRING "The scitalis is a large snake, about six feet long and as thick as a man's arm. Its scales are patterned in a variety of spectacular colors."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Lethargic" +2
+            "Territorial" +2
+        }
+        COMBAT {
+            "Fangs" INIT -2 ATTACK 7 DEFENSE 3 DAMAGE -1
+        }
+        ABILITIES {
+            "Brawl" SCORE 3 SPECIALTY "fangs"
+            "Ignem Resistance" SCORE 3 SPECIALTY "cold"
+            "Survival" SCORE 2 SPECIALTY "winter"
+        }
+        POWERS {
+            ^"Dazzling Appearance" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "-3"
+                    ^"Form" STRING "Mentem or Animal"
+                    ^"Range" STRING "Per"
+                    ^"Duration" STRING "Conc"
+                    ^"Target" STRING "Spectacle"
+                    ^"Spell Equivalent" STRING "ReMe(An) 45"
+                    ^"Design" STRING "(Base 15, +1 Conc, +4 Spectacle, +1 Animal requisite)"
+                }
+                DESCRIPTION "The scitalis can use its wondrous colors and appearance to stupefy those who look at it. Victims stand in slack-jawed amazement, unable to move, speak, or act, for as long as the scitalis concentrates. It uses this power to capture its prey, for it is a slow-moving creature."
+            }
+            ^"Venom" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "n/a"
+                    ^"Form" STRING "Aquam"
+                    ^"Range" STRING "Touch"
+                    ^"Duration" STRING "Sun"
+                    ^"Target" STRING "Ind"
+                    ^"Spell Equivalent" STRING "CrAq 30"
+                    ^"Design" STRING "(Base 10, +1 Touch, +2 Sun, +1 continuous effect)"
+                }
+                DESCRIPTION "The scitalis' fangs drip a venom that causes a Medium Wound (if it penetrates Magic Resistance) unless its victim can make a Stamina roll against an Ease Factor of 9."
+            }
+        }
+        DESCRIPTION "The scitalis is a slow-moving serpent that relies on its marvelous appearance to stun its prey. The scitalis usually hunts by hiding near a water source or game trail. It typically preys on small animals, but has been known to attack humans if it feels threatened. Unlike mundane snakes, the blood of the scitalis is hot, enabling the serpent to remain active throughout the winter months."
+    }
+
+    #tVAmrZ0d6aEPytRGEExAjf6m ^"Stag of Virtue" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 17
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Animal"
+            ^"Size" INTEGER 2
+            ^"Characteristics" DEF {
+                ^"Cunning" INTEGER -2
+                ^"Perception" INTEGER 2
+                ^"Presence" INTEGER 2
+                ^"Communication" INTEGER -3
+                ^"Strength" INTEGER 4
+                ^"Stamina" INTEGER 3
+                ^"Dexterity" INTEGER 1
+                ^"Quickness" INTEGER 2
+            }
+            ^"Virtues and Flaws" LIST ["Ways of the Forest", "Essential Virtue (healthy, minor)", "Ferocity (when at bay)", "Great Quickness", "Lesser Immunity (fevers)", "Long-Winded", "Puissant Athletics", "Hatred (of serpents, major)", "Higher Purpose (protect its herd)", "Restricted Power (x2)"]
+            ^"Reputations" LIST ["Noble 2 (local)"]
+            ^"Soak" INTEGER 7
+            ^"Fatigue Levels" STRING "OK, 0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–7), –3 (8–14), –5 (15–21), Incapacitated (22–28), Dead (29+)"
+            ^"Vis" STRING "3 Creo in right antler."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Stag" +3
+            "Noble" +3
+            "Healthy (Stamina)" +3
+            "Brave" +2
+        }
+        COMBAT {
+            "Antlers" INIT 4 ATTACK 10 DEFENSE 10 DAMAGE 7
+            "Hooves" INIT 4 ATTACK 8 DEFENSE 9 DAMAGE 5
+        }
+        ABILITIES {
+            "Athletics" SCORE 8 SPECIALTY "sprinting"
+            "Awareness" SCORE 5 SPECIALTY "hunters"
+            "Brawl" SCORE 5 SPECIALTY "antlers"
+            "Stealth" SCORE 3 SPECIALTY "hiding in undergrowth"
+            "Survival" SCORE 4 SPECIALTY "forests"
+        }
+        POWERS {
+            ^"Healing" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "3 points"
+                    ^"Initiative" STRING "-8"
+                    ^"Form" STRING "Animal"
+                    ^"Range" STRING "Per"
+                    ^"Duration" STRING "Mom"
+                    ^"Target" STRING "Ind"
+                    ^"Spell Equivalent" STRING "CrAn 25"
+                    ^"Design" STRING "(Base effect)"
+                }
+                DESCRIPTION "The stag can heal one of its own Heavy or lesser wounds. This is a Restricted Power: the stag must eat the herb dittany to activate it."
+            }
+            ^"Delay the Serpent's Venom" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "n/a"
+                    ^"Form" STRING "Aquam"
+                    ^"Range" STRING "Per"
+                    ^"Duration" STRING "Sun"
+                    ^"Target" STRING "Ind"
+                    ^"Spell Equivalent" STRING "Re(In)Aq 20"
+                    ^"Design" STRING "(Base 5, +2 Sun, +1 Intellego requisite)"
+                }
+                DESCRIPTION "The Stag of Virtue is magically warded against poison. Any poison introduced into the Stag's body takes no effect until the next sunrise or sunset (whichever comes first). This power activates whenever such a poison is introduced, and thus has an Intellego requisite."
+            }
+            ^"Alleviate the Serpent's Bite" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+1"
+                    ^"Form" STRING "Aquam"
+                    ^"Range" STRING "Per"
+                    ^"Duration" STRING "Mom"
+                    ^"Target" STRING "Ind"
+                    ^"Spell Equivalent" STRING "PeAq 15"
+                    ^"Design" STRING "(Base 15)"
+                }
+                DESCRIPTION "A Stag of Virtue can permanently neutralize any poison already inside its body. This is a Restricted Power, which the Stag must drink water to activate."
+            }
+        }
+        DESCRIPTION "A Stag of Virtue is a great enemy of serpents and kills them whenever it can. It does this by filling its mouth with water and spitting it down the serpent's hole; when the serpent emerges to escape drowning, the Stag of Virtue tramples it to death. A Stag of Virtue enjoys vigorous health and can live a very long time (in fact, like other Beasts of Virtue, it can live forever). To keep itself youthful and healthy, this stag swallows a live, venomous serpent. Then it drinks a large quantity of water to neutralize the venom. After this process, its antlers fall off and its vigor is restored. Hermetic experts concur that the Stag of Virtue actually consumes Magical serpents for this process and that it becomes weak and looks aged when it cannot find snakes to eat (such as during the winter). The Stag of Virtue lives only in places where Magical snakes can be found. The right antler of a Stag of Virtue has healing powers and is greatly sought by hedge wizards and magi alike. The stag always buries its antlers after shedding them. Anyone who consumes the flesh of a Stag of Virtue gains a Lesser Immunity to fevers for Moon duration. The stag itself is immune to fevers and the venison transfers this immunity through the Law of Contagion."
+    }
+
+    #tYRdC3inztNaGGaLM7rydTeA ^"Stellatus, the Dragon" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 50
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Ignem"
+            ^"Size" INTEGER 8
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 4
+                ^"Perception" INTEGER 4
+                ^"Presence" INTEGER 7
+                ^"Communication" INTEGER 2
+                ^"Strength" INTEGER 8
+                ^"Stamina" INTEGER 8
+                ^"Dexterity" INTEGER 3
+                ^"Quickness" INTEGER 0
+            }
+            ^"Virtues and Flaws" LIST ["Second Sight"]
+            ^"Reputations" LIST ["The Powerful Dragon who Lives in the Mountains (local) 5"]
+            ^"Soak" INTEGER 20
+            ^"Fatigue Levels" STRING "OK, 0/0/0/0/0, –1, –3, –5, Unconscious"
+            ^"Wound Penalties" STRING "–1 (1–13), –3 (14–26), –5 (27–39), Incapacitated (40–52)"
+            ^"Vis" STRING "5 pawns of Ignem vis in each eye."
+            ^"Appearance" STRING "An enormous lizard with great wings, covered in scales of red so dark as to be almost black. His eyes are lit from within by a smoldering orange glow. Although he is a little on the small side for a dragon, he is larger than most houses."
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Proud" +3
+        }
+        COMBAT {
+            "Claws" INIT 3 ATTACK 22 DEFENSE 18 DAMAGE 20
+        }
+        ABILITIES {
+            "[Area] Lore" SCORE 5 SPECIALTY "history"
+            "Awareness" SCORE 8 SPECIALTY "human beings"
+            "Brawl" SCORE 7 SPECIALTY "claws"
+            "Divine Lore" SCORE 1 SPECIALTY "saints"
+            "Faerie Lore" SCORE 2 SPECIALTY "knights"
+            "Folk Ken" SCORE 2 SPECIALTY "scholars"
+            "Guile" SCORE 4 SPECIALTY "keeping secrets"
+            "Infernal Lore" SCORE 0 SPECIALTY "undead"
+            "Magic Lore" SCORE 8 SPECIALTY "dragons"
+            "Order of Hermes Lore" SCORE 1 SPECIALTY "Tytalus"
+            "Second Sight" SCORE 8 SPECIALTY "magical invisibility"
+        }
+        POWERS {
+            ^"Human Form" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Corpus"
+                }
+                DESCRIPTION "The dragon can assume the form of a human being. This is always the same form, a man with dark hair and eyes, in the prime of life. The transformation lasts until he eats or drinks, or until Stellatus uses the same power again to change back. The dragon has all his powers in human form, and the same Characteristics, but he is much weaker in combat and thus changes back if he needs to fight."
+            }
+            ^"Instill Loyalty" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "5 points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Mentem"
+                }
+                DESCRIPTION "Stellatus can make any individual whom he can see totally loyal. This does not remove free will, but the victim is completely loyal to the dragon, and this loyalty lasts as long as Stellatus is alive."
+            }
+            ^"Fiery Breath" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 point"
+                    ^"Initiative" STRING "+5"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Stellatus can breathe fire. The fire extends in a cone from his mouth, out to a distance of 20 paces, where it is 20 paces across. The fire has an intensity of +15. Dodging it is a Qik + Athletics roll against an Ease Factor of 9. A failure means that the character is engulfed in the flames, taking +45 damage, a success by 3 points or less means that a limb is covered, for +30 damage, a success by 4 to 6 points (that is, success against Ease Factor 12) means that the character is only brushed by the flames, for +15 damage, while success by 7 points or more (that is, success against Ease Factor 15) means that the character dodges out of the fire entirely."
+            }
+            ^"Master of Fire" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "1 or more Might Points"
+                    ^"Initiative" STRING "0"
+                    ^"Form" STRING "Ignem"
+                }
+                DESCRIPTION "Stellatus can control fire. He can duplicate any Hermetic Rego Ignem spell of fourth magnitude or less at the cost of 1 Might point. For every additional Might point he spends, the level of the spell increases by one magnitude."
+            }
+        }
+        DESCRIPTION "Stellatus is an ancient dragon who has laired under the same mountain range for centuries. Most of the time he lies quietly in his lair, contemplating his treasure, or travels the area around in human form (he can go for weeks without eating or drinking). Every couple of centuries, he erupts in draconic form to carry out some plan or seize some item, and every decade or so some would-be hero disturbs him. The dragon is aware of The Gift, but it inspires him with curiosity, making him less likely to simply kill magi who enter his lair. A Tytalus maga did spend some time challenging the dragon in various ways, and although Stellatus eventually killed her by rigging an entirely mundane rock-fall trap, he quite enjoyed the experience. He regards himself as superior to all Hermetic magi, and is firmly convinced that he is immune to their magic. With a Magic Resistance of 50, this is almost, but not quite, true."
+    }
+
+    #tROL9hZgdTQUAe6r3Cq7pj9b ^"Zwergenstimme" DEF {
+        EXTENDS ^"Creature"
+        PROPERTIES {
+            ^"Might" INTEGER 15
+            ^"Might Realm" STRING "Magic" FIXED
+            ^"Form" STRING "Imaginem"
+            ^"Characteristics" DEF {
+                ^"Intelligence" INTEGER 0
+                ^"Perception" INTEGER 0
+                ^"Presence" INTEGER -1
+                ^"Communication" INTEGER 4
+                ^"Strength" INTEGER 0
+                ^"Stamina" INTEGER -1
+                ^"Dexterity" INTEGER 0
+                ^"Quickness" INTEGER 3
+            }
+            ^"Virtues and Flaws" LIST ["Great Communication", "Improved Characteristics", "Sharp Ears"]
+            ^"Reputations" LIST ["Murderous 1 (Local)"]
+            ^"Vis" STRING "3 pawns of Imaginem, as an immaterial echo"
+            ^"Appearance" STRING "An echo. This spirit appears only as auditory species to those with Second Sight"
+            ^"Source" STRING "Core Rules"
+        }
+        PERSONALITY_TRAITS {
+            "Mischievous" +3
+            "Echo" +3
+        }
+        COMBAT {
+            "Thrown Rock" INIT 3 ATTACK 4 DAMAGE 5
+        }
+        ABILITIES {
+            "Awareness" SCORE 4 SPECIALTY "sounds"
+            "Folk Ken" SCORE 1 SPECIALTY "fear"
+            "Guile" SCORE 1 SPECIALTY "mimicry"
+            "Music" SCORE 2 SPECIALTY "echoes"
+            "Thrown Weapon" SCORE 4 SPECIALTY "rocks"
+        }
+        POWERS {
+            ^"Master of Sound" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable points"
+                    ^"Initiative" STRING "+5 – Might cost"
+                    ^"Form" STRING "Imaginem"
+                    ^"Spell Equivalent" STRING "(Te)Im15"
+                }
+                DESCRIPTION "The spirit can duplicate any non-Ritual spell involving sound up to Level 15, at a cost of 1 Might Point per magnitude of effect."
+            }
+            ^"Bring Down the Roof" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "2 points"
+                    ^"Initiative" STRING "+3"
+                    ^"Form" STRING "Terram"
+                    ^"Range" STRING "Touch"
+                    ^"Target" STRING "Room"
+                    ^"Spell Equivalent" STRING "PeTe 20"
+                    ^"Design" STRING "base 3, +2 Size"
+                }
+                DESCRIPTION "The Zwergenstimme can cause the roof of a cave to collapse, crushing any within it. This causes +20 damage, and seals the exit from the cave."
+            }
+            ^"Presence" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "0 points"
+                    ^"Initiative" STRING "constant"
+                    ^"Form" STRING "Imaginem"
+                }
+                DESCRIPTION "Grants awareness of everything that happens within the bounds of a specific domain chosen by the spirit. In essence, the spirit is coterminous with its associated landscape feature, so it is present simultaneously everywhere within its boundaries. The area controlled by the spirit can produce a yearly harvest of 2 pawns of vis of an appropriate Form, which manifests as physical objects within the controlled region. Harvesting this vis does not erode the spirit's Might. The echo spirit can haunt a series of caves (constituting a Structure)."
+            }
+            ^"Ghost Touch" DEF {
+                PROPERTIES {
+                    ^"Cost" STRING "variable cost"
+                    ^"Initiative" STRING "+2"
+                    ^"Form" STRING "Terram"
+                }
+                DESCRIPTION "The spirit can hurl rocks at enemies. It uses the combat scores listed above, but each attack costs 1 Might point."
+            }
+        }
+        DESCRIPTION "This spirit of an echo lurks in caves or ravines. Its name literally means \"dwarf voice\" in German, and these spirits have been known to mislead lost humans by “playing” with them. The spirit certainly has no intent to harm; it doesn't even understand what harm is."
+    }
+}
