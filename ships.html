@@ -195,12 +195,65 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .ability-row .ab-name{color:var(--ink)}
 .ability-row .ab-spec{color:var(--ink-soft);font-style:italic;font-size:11.5px}
 .ability-row .ab-score{font-weight:600;color:var(--teal);flex:none}
+.rollable{cursor:pointer;transition:background .12s}
+.rollable:hover{background:rgba(198,155,63,.16)}
+.ability-row.rollable{border-radius:4px;padding-left:4px;padding-right:4px;margin:0 -4px}
+.ability-row.rollable:hover .ab-name::before{content:'🎲 ';font-size:11px}
 
 .spell-item{margin-bottom:9px;padding:7px 9px;background:rgba(244,235,213,.5);border-radius:6px;
   border:1px solid rgba(120,90,40,.25)}
+.spell-item.rollable:hover{border-color:var(--gold);background:rgba(198,155,63,.12)}
 .spell-item .sp-name{font-weight:600;font-size:13px;color:var(--ink)}
+.spell-item.rollable:hover .sp-name::before{content:'✨ ';font-size:11px}
 .spell-item .sp-meta{font-size:11px;color:var(--ink-soft);margin:1px 0 3px}
 .spell-item .sp-desc{font-size:12px;color:var(--ink-soft);line-height:1.4}
+
+/* ── Dice-roll modal ─────────────────────────────────────── */
+#rollModal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;
+  background:rgba(30,18,6,.55);padding:16px}
+#rollModal.open{display:flex}
+.roll-dialog{background:linear-gradient(180deg,#f3e9cf,#e7d7ac);border:1.5px solid var(--line);
+  border-radius:12px;box-shadow:0 10px 40px rgba(40,24,8,.5);width:min(440px,96vw);
+  max-height:92vh;overflow-y:auto;padding:18px 20px 20px}
+.roll-dialog h3{font-family:'Cinzel',serif;font-size:16px;color:var(--rust-bright);margin:0 0 2px}
+.roll-dialog .rd-sub{font-size:12px;color:var(--ink-soft);font-style:italic;margin:0 0 14px}
+.roll-dialog .rd-close{float:right;cursor:pointer;font-size:18px;color:var(--ink-soft);
+  background:none;border:none;line-height:1;margin:-4px -6px 0 0}
+.rd-row{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:13px}
+.rd-row label{flex:1;color:var(--ink)}
+.rd-row .rd-hint{color:var(--ink-soft);font-size:11px;font-style:italic}
+.rd-row select,.rd-row input[type=number]{font-family:'EB Garamond',serif;font-size:13px;
+  padding:4px 7px;border:1px solid rgba(120,90,40,.45);border-radius:6px;background:rgba(255,250,238,.8);
+  color:var(--ink)}
+.rd-row input[type=number]{width:62px;text-align:center}
+.rd-row select{min-width:120px}
+.rd-check{display:flex;align-items:flex-start;gap:7px;margin:5px 0;font-size:12.5px;color:var(--ink)}
+.rd-check input{margin-top:3px;flex:none}
+.rd-check .rd-val{color:var(--teal);font-weight:600;flex:none}
+.rd-check.on{color:var(--ink)}
+.rd-divider{border:none;border-top:1px dashed rgba(120,90,40,.4);margin:13px 0 10px}
+.rd-section-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-soft);margin:12px 0 5px}
+.rd-buttons{display:flex;gap:8px;margin-top:14px}
+.rd-btn{flex:1;font-family:'Cinzel',serif;font-weight:600;font-size:12.5px;letter-spacing:.03em;
+  cursor:pointer;border:1px solid #7a5318;border-radius:8px;padding:9px 8px;color:#fff6df;
+  background:linear-gradient(180deg,var(--gold-bright),var(--gold));box-shadow:0 2px 4px var(--shadow)}
+.rd-btn:hover{filter:brightness(1.07)}
+.rd-btn.simple{background:linear-gradient(180deg,var(--teal-bright),var(--teal));border-color:#1f4b47}
+.rd-btn:disabled{opacity:.4;cursor:not-allowed;filter:none}
+.rd-result{margin-top:15px;padding:13px 14px;border-radius:9px;background:rgba(255,250,238,.7);
+  border:1px solid rgba(120,90,40,.4);display:none}
+.rd-result.show{display:block;animation:rdpop .18s ease}
+@keyframes rdpop{from{transform:scale(.96);opacity:.4}to{transform:scale(1);opacity:1}}
+.rd-total{font-family:'Cinzel',serif;font-size:15px;color:var(--ink)}
+.rd-total b{font-size:26px;color:var(--rust-bright);vertical-align:-2px}
+.rd-total.botch b{color:var(--rust)}
+.rd-outcome{font-size:13px;margin-top:5px;font-weight:600}
+.rd-outcome.good{color:var(--green)}
+.rd-outcome.bad{color:var(--rust)}
+.rd-breakdown{font-size:11.5px;color:var(--ink-soft);margin-top:7px;line-height:1.5;font-family:'EB Garamond',serif}
+.rd-breakdown .rd-die{color:var(--gold);font-weight:600}
+.rd-botchflag{color:var(--rust);font-weight:600}
 
 .trait-chips,.rep-chips{display:flex;flex-wrap:wrap;gap:5px}
 .trait-chip{font-size:11.5px;padding:2px 9px;border-radius:11px;background:rgba(91,58,138,.12);
@@ -230,6 +283,8 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
   <div id="sidebarContent"></div>
 </div>
 
+<div id="rollModal"><div class="roll-dialog" id="rollDialog"></div></div>
+
 <div class="wrap" id="wrap">
   <header>
     <div>
@@ -249,7 +304,7 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
   </div>
   <div id="content"></div>
 
-  <footer>Full character sheets (pulled from Foundry) are wired up for the six PC magi and 32 more grogs, companions, and NPC magi. Hilda, Karl, and Rody have no Foundry sheet yet and still get the quick-note card.</footer>
+  <footer>Full character sheets (pulled from Foundry) are wired up for the six PC magi and 32 more grogs, companions, and NPC magi. Hilda, Karl, and Rody have no Foundry sheet yet and still get the quick-note card.<br><strong>Click an ability to roll it</strong> (pick a Characteristic, add modifiers and virtues/flaws, roll stress or simple) <strong>or a spell to cast it</strong> (computes the casting total vs. its level). Rolls are a calculator — they display the outcome but don't change the sheet.</footer>
 </div>
 
 <script>
@@ -511,8 +566,8 @@ function vfListHtml(list, cls){
 
 function abilitiesHtml(list){
   if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
-  return list.map(a=>`
-    <div class="ability-row">
+  return list.map((a,i)=>`
+    <div class="ability-row rollable" data-roll="ability" data-idx="${i}" title="Click to roll">
       <span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span>
       <span class="ab-score">${a.score}</span>
     </div>
@@ -523,8 +578,8 @@ const RDT = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
 
 function spellsHtml(list){
   if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
-  return list.map(sp=>`
-    <div class="spell-item">
+  return list.map((sp,i)=>`
+    <div class="spell-item rollable" data-roll="spell" data-idx="${i}" title="Click to cast">
       <div class="sp-name">${esc(sp.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:11.5px">(lvl ${sp.level})</span></div>
       <div class="sp-meta">${esc(sp.technique)}${sp.form?'/'+esc(sp.form):''} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${sp.ritual?' · Ritual':''}</div>
       ${sp.description?`<div class="sp-desc">${esc(sp.description)}</div>`:''}
@@ -621,13 +676,17 @@ function magusSheetHtml(m){
   `;
 }
 
+let CURRENT_SHEET = null;
+
 function openSidebar(name){
   const found = findCharacterSheet(name);
   if(found){
+    CURRENT_SHEET = found.sheet;
     $('#sidebarContent').innerHTML = magusSheetHtml(found.sheet);
     $('#sidebar').classList.add('wide');
     $('#wrap').classList.add('sidebar-wide');
   } else {
+    CURRENT_SHEET = null;
     const c = (DATA.characters||{})[name] || {};
     $('#sidebarContent').innerHTML = `
       <div class="sb-name">${esc(name)}</div>
@@ -650,6 +709,304 @@ function closeSidebar(){
 }
 $('#sidebarClose').onclick = closeSidebar;
 $('#overlay').onclick = closeSidebar;
+
+/* ══════════════ Dice engine + roll dialogs ══════════════
+   Faithful to armdef-0.4-core-systems.ttrpg (Simple/Stress Die, Botch Dice)
+   and armdef-0.4-hermetic-magic.ttrpg (casting totals). Stateless: rolls
+   display an outcome but never mutate the character snapshot. */
+
+function d10(){ return Math.floor(Math.random()*10); } // 0..9 (0 reads as 10 except on a stress first-roll)
+
+function rollSimple(){
+  const r = d10();
+  const v = r===0 ? 10 : r;
+  return { value:v, detail:`simple die ${v}` };
+}
+
+function rollStress(botchDice){
+  let first = d10();
+  if(first >= 2){ return { value:first, botch:false, detail:`stress die ${first}` }; }
+  if(first === 1){
+    // Explode: reroll doubling; on rerolls a 0 counts as 10.
+    let mult = 2, chain = ['1'];
+    while(true){
+      let r = d10();
+      if(r === 1){ mult *= 2; chain.push('1'); continue; }
+      const face = r===0 ? 10 : r;
+      chain.push(String(face));
+      return { value: face*mult, botch:false, detail:`stress die ${chain.join('→')} ×${mult} = ${face*mult}` };
+    }
+  }
+  // first === 0 → botch check
+  const n = Math.max(0, botchDice|0);
+  let zeros = 0;
+  for(let i=0;i<n;i++){ if(d10()===0) zeros++; }
+  if(zeros > 0){ return { value:0, botch:true, botchCount:zeros, detail:`stress die 0 — ${zeros} botch die${zeros>1?'s':''} came up 0` }; }
+  return { value:0, botch:false, detail:`stress die 0 (no botch on ${n} die${n===1?'':'s'})` };
+}
+
+const CHAR_FULL = {int:'Intelligence',per:'Perception',str:'Strength',sta:'Stamina',pre:'Presence',com:'Communication',dex:'Dexterity',qik:'Quickness'};
+const ART_CODE = {Creo:'cr',Intellego:'in',Muto:'mu',Perdo:'pe',Rego:'re',Animal:'an',Aquam:'aq',Auram:'au',Corpus:'co',Herbam:'he',Ignem:'ig',Imaginem:'im',Mentem:'me',Terram:'te',Vim:'vi'};
+
+// Best-guess default Characteristic for an ability (ArM5 convention; player can override).
+// defaultChaAb from Foundry wasn't carried into the committed data — revisit on next pull.
+const ABILITY_CHAR = [
+  [/awareness|scan|search|hunt|survival|track|chirurgy|medicine/i,'per'],
+  [/brawl|single weapon|great weapon|bows|thrown|martial|siege|weapon/i,'dex'],
+  [/athletics|swim|climb/i,'str'],
+  [/stealth|legerdemain|ride|animal handling/i,'qik'],
+  [/guile|charm|leadership|bargain|etiquette|intrigue|carouse|folk ken/i,'pre'],
+  [/language|native|latin|greek|speak|music/i,'com'],
+  [/concentration/i,'sta'],
+];
+function defaultCharFor(name){
+  for(const [re,c] of ABILITY_CHAR){ if(re.test(name)) return c; }
+  return 'int';
+}
+
+// Parametric virtues we can value automatically. Everything else is a manual toggle.
+function puissantFor(sheet, targetLabel){
+  const t = targetLabel.toLowerCase();
+  return (sheet.virtues||[]).some(v=>{
+    const m = /puissant\s+(.+)/i.exec(v.name||'');
+    return m && m[1].replace(/\*$/,'').trim().toLowerCase() === t;
+  });
+}
+function focusVirtues(sheet){
+  return (sheet.virtues||[]).filter(v=>/magical focus/i.test(v.name||''));
+}
+function abilityScore(sheet, name){
+  const a = (sheet.abilities||[]).find(x=>x.name.toLowerCase()===name.toLowerCase());
+  return a ? a.score : 0;
+}
+
+function openRollModal(){ $('#rollModal').classList.add('open'); }
+function closeRollModal(){ $('#rollModal').classList.remove('open'); }
+
+function charOptions(sel){
+  return CHAR_ORDER.map(k=>`<option value="${k}" ${k===sel?'selected':''}>${CHAR_FULL[k]} (${signed((CURRENT_SHEET.characteristics||{})[k])})</option>`).join('');
+}
+
+// ── Ability roll dialog ─────────────────────────────────
+function abilityDialog(ab){
+  const sheet = CURRENT_SHEET;
+  const defChar = defaultCharFor(ab.name);
+  const puiss = puissantFor(sheet, ab.name);
+  const specLabel = ab.speciality ? `Specialty applies (+1) — ${esc(ab.speciality)}` : '';
+  $('#rollDialog').innerHTML = `
+    <button class="rd-close" onclick="closeRollModal()">✕</button>
+    <h3>${esc(ab.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:13px">score ${ab.score}</span></h3>
+    <p class="rd-sub">Characteristic + Ability + die roll</p>
+
+    <div class="rd-row">
+      <label>Characteristic</label>
+      <select id="rdChar">${charOptions(defChar)}</select>
+    </div>
+    <div class="rd-row"><label>Ability score</label><span class="rd-val" style="color:var(--teal);font-weight:600">${ab.score}</span></div>
+    ${ab.speciality ? `<label class="rd-check on"><input type="checkbox" id="rdSpec"><span>${specLabel}</span></label>` : ''}
+    ${puiss ? `<label class="rd-check on"><input type="checkbox" id="rdPuiss" checked><span>Puissant ${esc(ab.name)} <span class="rd-val">+2</span></span></label>` : ''}
+    ${vfToggles(sheet)}
+    <div class="rd-row"><label>Other modifier</label><input type="number" id="rdMod" value="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice <span class="rd-hint">(stress only)</span></label><input type="number" id="rdBotch" value="1" min="0" step="1"></div>
+
+    <div class="rd-buttons">
+      <button class="rd-btn" onclick="doAbilityRoll(true)">🎲 Roll Stress</button>
+      <button class="rd-btn simple" onclick="doAbilityRoll(false)">Roll Simple</button>
+    </div>
+    <div class="rd-result" id="rdResult"></div>
+  `;
+  openRollModal();
+}
+
+function vfToggles(sheet){
+  // Optional per-roll virtue/flaw checkboxes with a user-set value each.
+  const items = [...(sheet.virtues||[]).map(v=>({name:v.name,kind:'virtue'})),
+                 ...(sheet.flaws||[]).map(v=>({name:v.name,kind:'flaw'}))]
+    .filter(v=>!/^the gift$|^hermetic magus$/i.test(v.name));
+  if(!items.length) return '';
+  const rows = items.map((v,i)=>`
+    <label class="rd-check">
+      <input type="checkbox" class="rdVF" data-i="${i}">
+      <span>${esc(v.name)}</span>
+      <input type="number" class="rdVFval" data-i="${i}" value="${v.kind==='flaw'?-1:1}" step="1" style="width:52px" disabled>
+    </label>`).join('');
+  return `<hr class="rd-divider"><div class="rd-section-label">Optional virtues / flaws (set a value)</div>${rows}`;
+}
+
+function collectVF(){
+  let sum = 0; const parts = [];
+  $$('.rdVF').forEach(cb=>{
+    if(cb.checked){
+      const val = document.querySelector(`.rdVFval[data-i="${cb.dataset.i}"]`);
+      const n = parseInt(val.value,10)||0;
+      sum += n;
+      parts.push(`${cb.parentElement.querySelector('span').textContent} ${signed(n)}`);
+    }
+  });
+  return {sum, parts};
+}
+
+function doAbilityRoll(stress){
+  const sheet = CURRENT_SHEET;
+  const charKey = $('#rdChar').value;
+  const charVal = (sheet.characteristics||{})[charKey]||0;
+  const ab = ROLL_CTX.ab;
+  const spec = $('#rdSpec') && $('#rdSpec').checked ? 1 : 0;
+  const puiss = $('#rdPuiss') && $('#rdPuiss').checked ? 2 : 0;
+  const mod = parseInt($('#rdMod').value,10)||0;
+  const vf = collectVF();
+  const base = charVal + ab.score + spec + puiss + mod + vf.sum;
+
+  const die = stress ? rollStress(parseInt($('#rdBotch').value,10)||0) : rollSimple();
+  const botched = !!die.botch;
+  const total = botched ? 0 : base + die.value;
+
+  const parts = [
+    `${CHAR_FULL[charKey]} ${signed(charVal)}`,
+    `${ab.name} ${signed(ab.score)}`,
+    spec?`specialty +1`:'',
+    puiss?`Puissant +2`:'',
+    ...vf.parts,
+    mod?`other ${signed(mod)}`:'',
+    `<span class="rd-die">${die.detail}</span>`
+  ].filter(Boolean);
+
+  showResult({
+    total, botched,
+    breakdown: parts.join(' · '),
+    outcome: botched ? {cls:'bad', text:'✗ Botch — the roll fails badly.'} : null
+  });
+}
+
+// ── Spell casting dialog ────────────────────────────────
+function spellDialog(sp){
+  const sheet = CURRENT_SHEET;
+  const arts = sheet.arts||{};
+  const techScore = (arts[ART_CODE[sp.technique]]||{}).score||0;
+  const formScore = (arts[ART_CODE[sp.form]]||{}).score||0;
+  const sta = (sheet.characteristics||{}).sta||0;
+  const puissT = puissantFor(sheet, sp.technique);
+  const puissF = puissantFor(sheet, sp.form);
+  const foci = focusVirtues(sheet);
+  const ritual = !!sp.ritual;
+
+  $('#rollDialog').innerHTML = `
+    <button class="rd-close" onclick="closeRollModal()">✕</button>
+    <h3>${esc(sp.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:13px">lvl ${sp.level}</span></h3>
+    <p class="rd-sub">${esc(sp.technique)}/${esc(sp.form)} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${ritual?' · Ritual':''}</p>
+
+    <div class="rd-section-label">Casting score</div>
+    <div class="rd-row"><label>${esc(sp.technique)} (Technique)</label><span class="rd-val">${signed(techScore)}</span></div>
+    <div class="rd-row"><label>${esc(sp.form)} (Form)</label><span class="rd-val">${signed(formScore)}</span></div>
+    <div class="rd-row"><label>Stamina</label><span class="rd-val">${signed(sta)}</span></div>
+    ${puissT?`<label class="rd-check on"><input type="checkbox" id="rdPuT" checked><span>Puissant ${esc(sp.technique)} <span class="rd-val">+2</span></span></label>`:''}
+    ${puissF?`<label class="rd-check on"><input type="checkbox" id="rdPuF" checked><span>Puissant ${esc(sp.form)} <span class="rd-val">+2</span></span></label>`:''}
+    ${foci.map((f,i)=>`<label class="rd-check"><input type="checkbox" class="rdFocus" data-i="${i}"><span>${esc(f.name)} — doubles the weaker Art <span class="rd-val">+${Math.min(techScore,formScore)}</span></span></label>`).join('')}
+    <div class="rd-row"><label>Encumbrance</label><input type="number" id="rdEnc" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Aura modifier</label><input type="number" id="rdAura" value="0" step="1"></div>
+    ${ritual?`<div class="rd-row"><label>Artes Liberales <span class="rd-hint">(ritual)</span></label><span class="rd-val">${signed(abilityScore(sheet,'Artes Liberales'))}</span></div>
+    <div class="rd-row"><label>Philosophiae <span class="rd-hint">(ritual)</span></label><span class="rd-val">${signed(abilityScore(sheet,'Philosophiae'))}</span></div>`:''}
+    <div class="rd-row"><label>Other modifier</label><input type="number" id="rdMod" value="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice</label><input type="number" id="rdBotch" value="1" min="0" step="1"></div>
+
+    <div class="rd-buttons">
+      ${ritual
+        ? `<button class="rd-btn" onclick="doSpellCast('ritual')">✨ Cast Ritual (stress)</button>`
+        : `<button class="rd-btn" onclick="doSpellCast('stress')">✨ Cast (stress)</button>
+           <button class="rd-btn simple" onclick="doSpellCast('simple')">Cast (calm)</button>`}
+    </div>
+    <div class="rd-result" id="rdResult"></div>
+  `;
+  openRollModal();
+}
+
+function doSpellCast(mode){
+  const sheet = CURRENT_SHEET;
+  const sp = ROLL_CTX.sp;
+  const arts = sheet.arts||{};
+  const techScore = (arts[ART_CODE[sp.technique]]||{}).score||0;
+  const formScore = (arts[ART_CODE[sp.form]]||{}).score||0;
+  const sta = (sheet.characteristics||{}).sta||0;
+  const enc = parseInt($('#rdEnc').value,10)||0;
+  const aura = parseInt($('#rdAura').value,10)||0;
+  const mod = parseInt($('#rdMod').value,10)||0;
+  const puT = $('#rdPuT') && $('#rdPuT').checked ? 2 : 0;
+  const puF = $('#rdPuF') && $('#rdPuF').checked ? 2 : 0;
+  let focus = 0;
+  $$('.rdFocus').forEach(cb=>{ if(cb.checked) focus += Math.min(techScore,formScore); });
+  const ritual = mode==='ritual';
+  const al = ritual ? abilityScore(sheet,'Artes Liberales') : 0;
+  const ph = ritual ? abilityScore(sheet,'Philosophiae') : 0;
+
+  const score = techScore + formScore + sta - enc + aura + puT + puF + focus + al + ph + mod;
+  const die = (mode==='simple') ? rollSimple() : rollStress(parseInt($('#rdBotch').value,10)||0);
+  const botched = !!die.botch;
+  const total = botched ? 0 : score + die.value;
+  const diff = total - sp.level;
+
+  let outcome;
+  if(botched){
+    outcome = {cls:'bad', text:'✗ Botch — the spell fails; something goes wrong.'};
+  } else if(ritual){
+    let fat, cast;
+    if(diff>=0){cast=true;fat=1;} else if(diff>=-5){cast=true;fat=2;} else if(diff>=-10){cast=true;fat=3;} else if(diff>=-15){cast=false;fat=4;} else {cast=false;fat=5;}
+    outcome = {cls:cast?'good':'bad', text:`${cast?'✓ Cast':'✗ Failed'} — ${fat} long-term Fatigue level${fat>1?'s':''} lost${cast?'':' (spell does not take effect)'}.`};
+  } else {
+    let fat, cast;
+    if(diff>=0){cast=true;fat=0;} else if(diff>=-10){cast=true;fat=1;} else {cast=false;fat=1;}
+    outcome = {cls:cast?'good':'bad', text:`${cast?'✓ Cast':'✗ Failed'} — ${fat===0?'no Fatigue lost':fat+' Fatigue level lost'}${cast?'':' (spell does not take effect)'}.`};
+  }
+
+  const parts = [
+    `${sp.technique} ${signed(techScore)}`, `${sp.form} ${signed(formScore)}`, `Sta ${signed(sta)}`,
+    enc?`Enc ${signed(-enc)}`:'', aura?`aura ${signed(aura)}`:'',
+    puT?`Puissant +2`:'', puF?`Puissant +2`:'', focus?`focus +${focus}`:'',
+    ritual?`Artes Lib ${signed(al)}`:'', ritual?`Philo ${signed(ph)}`:'',
+    mod?`other ${signed(mod)}`:'',
+    `<span class="rd-die">${die.detail}</span>`
+  ].filter(Boolean);
+
+  showResult({
+    total, botched,
+    label: botched ? 'Casting total 0' : `Casting total ${total} vs. level ${sp.level} (${signed(diff)})`,
+    breakdown: parts.join(' · '),
+    outcome
+  });
+}
+
+function showResult({total, botched, label, breakdown, outcome}){
+  const el = $('#rdResult');
+  el.innerHTML = `
+    <div class="rd-total ${botched?'botch':''}">${label ? esc(label).replace(/(-?\d+)(?=\s*vs)/,'<b>$1</b>') : `Total <b>${total}</b>`}${botched?' <span class="rd-botchflag">BOTCH</span>':''}</div>
+    ${outcome?`<div class="rd-outcome ${outcome.cls}">${outcome.text}</div>`:''}
+    <div class="rd-breakdown">${breakdown}</div>
+  `;
+  el.classList.add('show');
+}
+
+// Delegated: clicking a rollable ability/spell row opens its dialog.
+let ROLL_CTX = {};
+$('#sidebarContent').addEventListener('click', e=>{
+  const row = e.target.closest('.rollable');
+  if(!row || !CURRENT_SHEET) return;
+  const idx = parseInt(row.dataset.idx,10);
+  if(row.dataset.roll==='ability'){
+    const ab = (CURRENT_SHEET.abilities||[])[idx];
+    if(ab){ ROLL_CTX = {ab}; abilityDialog(ab); }
+  } else if(row.dataset.roll==='spell'){
+    const sp = (CURRENT_SHEET.spells||[])[idx];
+    if(sp){ ROLL_CTX = {sp}; spellDialog(sp); }
+  }
+});
+$('#rollModal').addEventListener('click', e=>{ if(e.target.id==='rollModal') closeRollModal(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeRollModal(); });
+// Enable a V/F value field only when its checkbox is ticked.
+$('#rollDialog').addEventListener('change', e=>{
+  if(e.target.classList.contains('rdVF')){
+    const val = document.querySelector(`.rdVFval[data-i="${e.target.dataset.i}"]`);
+    if(val){ val.disabled = !e.target.checked; e.target.parentElement.classList.toggle('on', e.target.checked); }
+  }
+});
 
 load();
 </script>
