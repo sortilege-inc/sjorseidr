@@ -697,6 +697,412 @@
       "activeWounds": [],
       "biography": "The Bonisagus is most likely Driven to make some great discovery in magic. He or she is a so-called 'lab rat', a magus happier in his laboratory than in the outside world. However, the favors he owes and his drive to discover are likely to push him out. Similarly, enchanted items are very useful to him, but he is bad at making them for himself. That also tends to drive him into stories. This concept is built around the Virtues and the Driven Flaw; the other Flaws can be changed easily. He can also take two additional Minor Flaws, or make Driven Major, and take two additional Minor Virtues to balance them. Similarly, the Arts in which the character has an Affinity can be changed, but that also requires changing the spells he knows.",
       "covenant": "Eboris"
+    },
+    "Queris": {
+      "name": "Queris",
+      "foundryName": "Queris ex Tytalus",
+      "charType": "magus",
+      "portrait": null,
+      "house": "Tytalus",
+      "parens": "Sir Edwin of Hexham",
+      "sigil": "Earth - A settling of dust/gritAir - A gust of clean airFire - A wreath of smokeWater - A wisp of mist",
+      "born": 1198,
+      "age": 25,
+      "apparentAge": 25,
+      "characteristics": {
+        "int": 3,
+        "per": 1,
+        "str": 1,
+        "sta": 1,
+        "pre": 3,
+        "com": 0,
+        "dex": -2,
+        "qik": 1
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 2,
+        "points": 5
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 5,
+          "xp": 15
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 5,
+          "xp": 15
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 5,
+          "xp": 15
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 5,
+          "xp": 15
+        },
+        "re": {
+          "label": "Rego",
+          "score": 5,
+          "xp": 15
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 8,
+          "xp": 38
+        },
+        "au": {
+          "label": "Auram",
+          "score": 8,
+          "xp": 38
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 8,
+          "xp": 38
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 8,
+          "xp": 38
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a magus, may take Hermetic Virtues and Flaws which relate to intrinsic ability rather than background or training. Characters may take Virtues that grant Supernatural Abilities without taking The Gift, and such characters do not suffer the penalties imposed by The Gift. However, such characters may not learn new Supernatural Abilities in the course of the saga, although they may improve the ones they already have. It is possible for unGifted characters to Initiate new Supernatural Abilities through a Mystery Cult, but even this is harder for them than for the Gifted.Characters who have The Gift may start play with a single Supernatural Ability, without having to take any other Virtue, but if they wish to learn others they must find opportunities to do so in the course of the saga. They may also take Virtues granting Supernatural Abilities if they wish to have more Abilities at character creation. Note that it is harder for a character with Supernatural Abilities to become a Hermetic magus (see Training Your Apprentice on page @@), so you may not wish to take any such abilities if you plan for the character to become an apprentice. The ability to cast Hermetic magic is the single supernatural ability possessed by Hermetic magi in virtue of The Gift again, they may take more Supernatural Ability Virtues if they wish.Grogs can never have The Gift, as a character with The Gift is too important to be a grog. As a rule, companions should only have The Gift if they are intended to become magi, or if they are members of one of the other magical traditions described in Ars Magica 5th Edition supplements. Troupes should not allow any other Gifted characters unless they are absolutely sure that they want them."
+        },
+        {
+          "name": "Hermetic Magus",
+          "impact": "free",
+          "description": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it."
+        },
+        {
+          "name": "Elemental Magic",
+          "impact": "major",
+          "description": "You have been trained in the ability to manipulate raw elemental Forms (Aquam, Auram, Ignem, and Terram), and view them as a connected whole rather than four separate Arts. Whenever you gain experience from a source dedicated to one of these Arts, you gain half the Source Quality (rounded up) in experience points in each of the other three Arts. For example, if you studied Ignem from a book with a Source Quality of 13, you would gain 7 experience points in each of Aquam, Auram, and Terram. During character creation, assign all your experience points in Arts. Then assign half the experience points assigned to each of the elemental Forms to each of the other elemental Forms. Do not actually add these experience points to the Form in question until you have finished calculating all the bonus experience points. For example, if you assign 10 experience points to each of Aquam, Auram, and Terram, and 21 experience points to Ignem, then you should assign 15 bonus experience points to Ignem (5 from each of Aquam, Auram, and Terram), and 21 bonus experience points to each of Aquam, Auram, and Terram (11 from Ignem, and 5 each from the other two Forms). In addition, if a spell with one of these Forms as its primary Form has another element as a requisite, you use the primary Form to calculate totals, even if the requisite is lower."
+        },
+        {
+          "name": "Affinity With Rego",
+          "impact": "minor",
+          "description": "Your Advancement Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts."
+        },
+        {
+          "name": "Cautious Sorcerer",
+          "impact": "minor",
+          "description": "You are very careful with magic, and are less likely to fail spectacularly if you do fail. You roll three fewer botch dice when casting spells (whether ritual, formulaic, or spontaneous), and when working in the laboratory. This Virtue may not reduce the number of botch dice rolled below one. However, its effects are applied before any other effects which reduce botch dice, such as Spell Mastery (see page @@), and they may reduce the number of botch dice to zero."
+        },
+        {
+          "name": "Free Study",
+          "impact": "minor",
+          "description": "You are better at figuring things out for yourself than you are at poring over books. Add +3 to the Source Quality when studying from raw vis."
+        },
+        {
+          "name": "Personal Vis Source",
+          "impact": "minor",
+          "description": "You have exclusive access to a supply of raw vis. Determine the amount and type with the help of your troupe; the yield should be about one tenth as much as the player covenant expects to gather per year at the beginning of the saga. The yield of your source does not normally change over the course of time, even if the covenant uncovers new sources."
+        },
+        {
+          "name": "Improved Characteristics",
+          "impact": "minor",
+          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Improved Characteristics",
+          "impact": "minor",
+          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Self-confident",
+          "impact": "minor",
+          "description": "You have firm confidence in your own abilities, and have a Confidence Score of two. You also start with five Confidence Points, rather than the usual three. (See page @@ for Confidence rules.)"
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Incompatible Arts MuCo/ReCo",
+          "impact": "minor",
+          "description": "For some reason you are completely unable to use two combinations of Techniques and Forms. For example, you may be unable to use Intellego Herbam and Intellego Animal. You may not use these Arts together even if one or both are requisites. This Flaw may be taken repeatedly with different combinations, but may not be combined with a Deficiency (see page @@).Muto/Corpus & Rego/Corpus"
+        },
+        {
+          "name": "Susceptibility To Infernal Power",
+          "impact": "minor",
+          "description": "You are especially vulnerable to the dark powers. Whenever you enter an area of Infernal influence, you must make a Stamina roll equal to or greater than the aura rating or become ill (–1 on all rolls). You get only half your normal Magic Resistance score against infernal effects, though if someone else's Parma Magica is protecting you, it counts normally."
+        },
+        {
+          "name": "Supernatural Nuisance",
+          "impact": "major",
+          "description": "Supernatural entities of a certain kind interfere in your life in minor ways whenever you are around them. This differs from Plagued by Supernatural Entity in that the nuisances do not have any long-term plans. This could represent a ghost that haunts you, or general enmity from faeries towards you."
+        },
+        {
+          "name": "Driven (Major)",
+          "impact": "major",
+          "description": "You have some goal which you are determined to bring about. This has to be the sort of big goal that could shape an entire life, but if you do accomplish it you will immediately turn to a new project."
+        },
+        {
+          "name": "Deficient Form - Imagonem",
+          "impact": "minor",
+          "description": "Almost all totals (including Casting Totals and Lab Totals, but excluding Magic Resistance) to which a particular Form is added are halved. Advancement Totals are not halved. Experience points required are based on the actual value of the Technique, before halving."
+        },
+        {
+          "name": "Susceptibility To Warping",
+          "impact": "minor",
+          "description": "Your character’s constant exposure to magic has made him more susceptible to supernatural Warping than he might otherwise be.In any year in which the character gains a Warping Point from any Realm or any source (including Longevity Rituals, living within an aura, and powerful supernatural effects), the character gains one additional Warping Point associated with that same Realm. This means that if he gains a single Warping Point from each Realm in a year, he gains four additional Warping Points, one from each Realm, at the end of that year.These additional points do not contribute to Wizard’s Twilight or to other events caused by the acquisition of Warping Points as they accrete slowly over the course of the year."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Language: Native (Scottish)",
+          "speciality": "Ballads",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Dead language: Latin",
+          "speciality": "Scribing",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Magic Theory",
+          "speciality": "Elementals",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Jumping",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Awareness",
+          "speciality": "Searching",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Dodging",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Grogs",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Guile",
+          "speciality": "Intricate Deceptions",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Intrigue",
+          "speciality": "Gossip",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Horsingas Lore",
+          "speciality": "Geography",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Swim",
+          "speciality": "Underwater Maneuvering",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Grogs",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Profession: Scribe",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Stealth",
+          "speciality": "Sneak",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Logic",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Concentration",
+          "speciality": "Spell Concentration",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Code of Hermes",
+          "speciality": "Tribunal Procedures",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Finesse",
+          "speciality": "Targeting",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Creatures",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Parma Magica",
+          "speciality": "Mentem",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Penetration",
+          "speciality": "Rego",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [
+        {
+          "name": "Circling Winds of Protection",
+          "technique": "Creo",
+          "form": "Auram",
+          "level": 20,
+          "range": "touch",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "Surrounds you with winds that circle at great speed. Since the wind picks up dust and other small, loose objects, you may be obscured. Anyone standing near enough to attack you with a hand weapon must make a Size stress roll of 9+ at the beginning of each against you are at -3, and missile or thrown attacks are at -9."
+        },
+        {
+          "name": "Pilum of Fire",
+          "technique": "Creo",
+          "form": "Ignem",
+          "level": 20,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "A 2-foot, thick, spear-shaped jet of fire flies from your palms, doing +15 damage to the individual it hits."
+        },
+        {
+          "name": "Lungs of the Fish",
+          "technique": "Muto",
+          "form": "Aquam",
+          "level": 20,
+          "range": "touch",
+          "duration": "sun",
+          "target": "part",
+          "ritual": false,
+          "description": "Turns water into air as it enters your lungs, allowing you to breathe water as you do air. This spell puzzles Hermetic theoreticians, as it behaves like a dynamic container target despite not being a container target. All known attempts to create analogous effects have failed, even though analysis of this spell has not revealed any sign of non-Hermetic influence, or integrated experimentation. Most magi just point to it as an example of how Hermetic magic is not fully understood, and get on with their lives."
+        },
+        {
+          "name": "Quiet the Raging Winds",
+          "technique": "Perdo",
+          "form": "Auram",
+          "level": 20,
+          "range": "touch",
+          "duration": "moment",
+          "target": "group",
+          "ritual": false,
+          "description": "Stops all wind from blowing, leaving only calm air. This spell is not powerful enough to affect winds caused by Ritual magic, and only affects winds blowing on the caster when it is cast. Under normal circumstances, the winds will not pick up again for at least an hour or so."
+        },
+        {
+          "name": "Soothe the Raging Flames",
+          "technique": "Perdo",
+          "form": "Ignem",
+          "level": 20,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "Eradicates the heat of a bonfire, which, however, continues to burn until the fuel already covered in flame is consumed. The flames do not spread, or harm anything beyond what they were already burning. If the fire is extinguished and relit, it will burn hot again, as it is now a different fire."
+        },
+        {
+          "name": "The Unseen Arm",
+          "technique": "Rego",
+          "form": "Terram",
+          "level": 5,
+          "range": "voice",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "Slowly moves a nonliving thing, like a mug, instrument, or small pouch of coins; it cannot oppose intentional resistance. Magi use this spell to manipulate things at a distance, but the spell cannot be used to pull something from a person’s hand or to move something that is held. Casting requisites of an appropriate Form for the target are required."
+        },
+        {
+          "name": "Hands of the Grasping Earth",
+          "technique": "Rego",
+          "form": "Terram",
+          "level": 15,
+          "range": "voice",
+          "duration": "diam",
+          "target": "part",
+          "ritual": false,
+          "description": "Earthen hands from beneath the target rise out of the ground, and grasp the target’s ankles. To break free requires a Strength stress roll of 15+. (One attempt is allowed per round, and each requires a Fatigue roll.) Each hand can be destroyed by beating its +25 Soak roll (hacking weapons do double normal damage) and inflicting a Light Wound."
+        }
+      ],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "The Maelstrom's Maw's Laboratory (30 pts)",
+      "familiar": null,
+      "activeWounds": [],
+      "biography": "ShyoreseiterNequam (Willelm) filius Sir Edwin follower of Tytalus",
+      "covenant": "Nidi",
+      "note": "Mechanically a reskin of Nequam of Tytalus (identical characteristics/arts/abilities/virtues/flaws) — per GM confirmation, this is an intentional shared stat block, not a data error."
     }
   }
 }
