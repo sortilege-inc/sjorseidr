@@ -205,8 +205,8 @@
       "context": "Refines the earlier plan (session 7: a season getting initiated into a minor virtue to teach the folk-magic system). Per the player's latest notes, Dietrich is specifically aiming to learn enough Magic Lore to self-initiate — the broader goal being to teach actual Magic Theory at his university, not just the folk system.",
       "raised_in": "Player notes (2026-07-13)",
       "raised_event": "Dietrich pitches folk magic to scholars and a Redcap; Dustin interrogates him",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Confirmed by the GM (2026-07-14): after the Tribunal, Dietrich returned to Cologne to teach — his self-initiation/teaching plan went ahead."
     },
     {
       "id": "q017",
@@ -886,6 +886,39 @@
       "title": "Dolly Price, a Southampton merchant, is under Solving's personal protection — nobody's followed up on it.",
       "context": "Pulled fresh from Foundry (2026-07-14): Dolly Price, a wealthy Southampton merchant with coastal-smuggling connections, carries a \"Protection (Solving Epicurusson)\" virtue — meaning Solving personally vouches for her, a relationship that predates his 1220 disappearance. She also has enemies in the Sheriff of Southampton and some hidden infernal curse. Given how little is confirmed about Solving's dealings before he vanished (see t034, t052), this could be a real lead — or just flavor. Never surfaced at the table.",
       "raised_in": "Foundry actor pull (2026-07-14)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t062",
+      "type": "Thread",
+      "category": "Research",
+      "title": "Dustin's Spring 1224 teaching/research plans.",
+      "context": "Per the GM (2026-07-14): Dustin wants to teach (leveraging his Inventive Genius virtue) in Spring 1224, and also work on Auram during the spring. The note as given was a little tangled (\"Auram in the the spring\") — worth double-checking with the GM whether this is one season's plan or two, and who he's actually teaching.",
+      "raised_in": "GM notes (2026-07-14)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "tl025",
+      "type": "Tool",
+      "category": "Rules",
+      "title": "Look up how Magic Theory is learned/created from scratch.",
+      "context": "GM note (2026-07-14) — flagged for rules research, likely relevant to Dustin's and/or Wilhelm's teaching and folk-magic-system plans (see t019, t062).",
+      "raised_in": "GM notes (2026-07-14)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "tl026",
+      "type": "Tool",
+      "category": "Rules",
+      "title": "Look up how spontaneous magic integrates with the Boundary target.",
+      "context": "GM note (2026-07-14) — flagged for rules research.",
+      "raised_in": "GM notes (2026-07-14)",
       "raised_event": "",
       "status": "Open",
       "resolution": ""
