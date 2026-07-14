@@ -400,6 +400,11 @@
             "name": "Ysbrand van Tolen",
             "role": "Merchant family — moneychangers, Flemish",
             "note": "Recent arrivals from Bruges dealing in credit notes, Dutch dyes, and manuscript copying; worship discreetly at a private chapel to a Flemish saint. Ysbrand is a stoic merchant-banker whose daughter has visions of ships that never returned. Hook: their ledgers are impossibly accurate — possibly enchanted, possibly hedge math."
+          },
+          {
+            "name": "Dolly Price",
+            "role": "Wealthy merchant, coastal smuggling connections",
+            "note": "A wealthy Southampton merchant with real influence among coastal criminals and smugglers, though she'd never put it that plainly. A committed busybody who knows everyone's business, she's made a genuine enemy of the Sheriff of Southampton and carries some manner of infernal curse she keeps carefully hidden. Most striking: she's under the personal protection of Solving Epicurusson — a connection that predates his 1220 disappearance and has never been followed up on (see t061)."
           }
         ]
       },
@@ -482,7 +487,13 @@
             "text": "Used for discreet meetings with other covenants or hedge practitioners; possibly linked to fae enclaves or Criamon pilgrims heading inland."
           }
         ],
-        "npcs": []
+        "npcs": [
+          {
+            "name": "Otto-Pauels",
+            "role": "Boulogne-sur-Mer — well-traveled clerk, ex-warrior",
+            "note": "A literate former warrior (arthritis-slowed now, possibly a Crusade veteran) turned clerk, well-traveled enough to get along anywhere in the region. Owns a minor holy relic. Haunted by a diabolic past he's since escaped, and troubled by a weakness for adventure that undoes his better judgment when something shiny catches his attention."
+          }
+        ]
       },
       {
         "name": "Bruges — civic structure",

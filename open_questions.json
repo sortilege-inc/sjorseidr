@@ -878,6 +878,17 @@
       "raised_event": "",
       "status": "Open",
       "resolution": ""
+    },
+    {
+      "id": "t061",
+      "type": "Thread",
+      "category": "NPC / Identity",
+      "title": "Dolly Price, a Southampton merchant, is under Solving's personal protection — nobody's followed up on it.",
+      "context": "Pulled fresh from Foundry (2026-07-14): Dolly Price, a wealthy Southampton merchant with coastal-smuggling connections, carries a \"Protection (Solving Epicurusson)\" virtue — meaning Solving personally vouches for her, a relationship that predates his 1220 disappearance. She also has enemies in the Sheriff of Southampton and some hidden infernal curse. Given how little is confirmed about Solving's dealings before he vanished (see t034, t052), this could be a real lead — or just flavor. Never surfaced at the table.",
+      "raised_in": "Foundry actor pull (2026-07-14)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
     }
   ],
   "gmReference": {
@@ -1390,6 +1401,15 @@
           "shallow": "Nothing, for the infinite has no bounds.",
           "deep": "Itself, for infinity is a circle, ever turning upon its own path."
         }
+      ]
+    },
+    "futureGrogNames": {
+      "title": "Future Grog Names",
+      "note": "Unassigned named grog stubs sitting in Foundry's Grogs folder, pulled 2026-07-14 — ready to use next time a new grog needs a name instead of inventing one on the spot.",
+      "names": [
+        "Maud Douwe",
+        "Roeland van Aalst",
+        "Joost Lemmens"
       ]
     }
   }

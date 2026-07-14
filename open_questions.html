@@ -222,7 +222,8 @@ function renderTypeTabs(){
     `<div class="typetab ${activeType===t?'active':''}" data-type="${t}">${TYPE_ICON[t]} ${t}s <span class="n">(${counts[t]})</span></div>`).join('');
   const refCount = (STATE.gmReference?.brugesRoster.entries.length||0)
     + (STATE.gmReference?.seaFae.zones.reduce((a,z)=>a+z.entities.length,0)||0)
-    + (STATE.gmReference?.criamonRiddles.entries.length||0);
+    + (STATE.gmReference?.criamonRiddles.entries.length||0)
+    + (STATE.gmReference?.futureGrogNames.names.length||0);
   const refTab = STATE.gmReference
     ? `<div class="typetab ${activeType==='reference'?'active':''}" data-type="reference">📚 GM Reference <span class="n">(${refCount})</span></div>` : '';
   $('#typetabs').innerHTML = allTab + tabs + refTab;
@@ -303,6 +304,7 @@ function renderReference(){
     ['roster', `🎭 Bruges Roster (${ref.brugesRoster.entries.length})`],
     ['seaFae', `🌊 Sea Fae Bestiary`],
     ['riddles', `🌀 Criamon Riddles (${ref.criamonRiddles.entries.length})`],
+    ['grogNames', `🧑‍🤝‍🧑 Future Grog Names (${ref.futureGrogNames.names.length})`],
   ];
   const tabsHtml = tabs.map(([k,label])=>`<div class="reftab ${activeRefTab===k?'on':''}" data-ref="${k}">${label}</div>`).join('');
 
@@ -332,6 +334,9 @@ function renderReference(){
           <p class="riddle-ans"><b>Deep</b>${esc(r.deep)}</p>
         </div>
       `).join('')}</div>`;
+  } else if(activeRefTab === 'grogNames'){
+    body = `<p class="type-desc" style="margin-top:0">${esc(ref.futureGrogNames.note)}</p>
+      <div class="roster-grid">${ref.futureGrogNames.names.map(n=>`<div class="roster-card"><div class="roster-name">${esc(n)}</div></div>`).join('')}</div>`;
   }
 
   $('#qlist').innerHTML = `<div class="reftabs">${tabsHtml}</div>${body}`;

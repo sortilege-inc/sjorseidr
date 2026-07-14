@@ -1,0 +1,702 @@
+{
+  "meta": {
+    "note": "Named magi belonging to other Normandy Tribunal covenants (not Sjórseiðr), pulled from Foundry for the tribunal reference page. Same extraction shape as npcs.json."
+  },
+  "npcs": {
+    "Adelaide": {
+      "name": "Adelaide",
+      "foundryName": "Adelaide ex Jerbiton",
+      "charType": "magus",
+      "portrait": null,
+      "house": "Jerbiton",
+      "parens": "",
+      "sigil": "A flash of blue light.",
+      "born": 1198,
+      "age": 25,
+      "apparentAge": 25,
+      "characteristics": {
+        "int": 3,
+        "per": 1,
+        "str": 0,
+        "sta": 0,
+        "pre": 1,
+        "com": 1,
+        "dex": 1,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 6,
+          "xp": 21
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 1,
+          "xp": 1
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 6,
+          "xp": 21
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 1,
+          "xp": 1
+        },
+        "re": {
+          "label": "Rego",
+          "score": 6,
+          "xp": 21
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 5,
+          "xp": 15
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 10,
+          "xp": 55
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a magus, may take Hermetic Virtues and Flaws which relate to intrinsic ability rather than background or training. Characters may take Virtues that grant Supernatural Abilities without taking The Gift, and such characters do not suffer the penalties imposed by The Gift. However, such characters may not learn new Supernatural Abilities in the course of the saga, although they may improve the ones they already have. It is possible for unGifted characters to Initiate new Supernatural Abilities through a Mystery Cult, but even this is harder for them than for the Gifted.Characters who have The Gift may start play with a single Supernatural Ability, without having to take any other Virtue, but if they wish to learn others they must find opportunities to do so in the course of the saga. They may also take Virtues granting Supernatural Abilities if they wish to have more Abilities at character creation. Note that it is harder for a character with Supernatural Abilities to become a Hermetic magus (see Training Your Apprentice on page @@), so you may not wish to take any such abilities if you plan for the character to become an apprentice. The ability to cast Hermetic magic is the single supernatural ability possessed by Hermetic magi in virtue of The Gift again, they may take more Supernatural Ability Virtues if they wish.Grogs can never have The Gift, as a character with The Gift is too important to be a grog. As a rule, companions should only have The Gift if they are intended to become magi, or if they are members of one of the other magical traditions described in Ars Magica 5th Edition supplements. Troupes should not allow any other Gifted characters unless they are absolutely sure that they want them."
+        },
+        {
+          "name": "Hermetic Magus",
+          "impact": "free",
+          "description": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it."
+        },
+        {
+          "name": "Gentle Gift",
+          "impact": "major",
+          "description": "Unlike other magi, whose Magical nature disturbs normal people and animals, your Gift is subtle and quiet. You do not suffer the usual penalties when interacting with people and animals."
+        },
+        {
+          "name": "Improved Characteristics",
+          "impact": "minor",
+          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Privileged Upbringing",
+          "impact": "minor",
+          "description": "You grew up in an environment where you had access to teachers and free time for study. You have an additional 50 experience points, which may be spent on General, Academic, or Martial Abilities. You may not, however, buy Academic or Martial Abilities with your normal pool of experience points unless you have another Virtue or Flaw permitting that. The most common reason for this Virtue is that your family was wealthy while you were a child, but if you are wealthy now, you should take the Wealthy Virtue (page @@)."
+        },
+        {
+          "name": "Free Expression",
+          "impact": "minor",
+          "description": "You have the imagination and creativity needed to compose a new ballad or to paint an original picture, and have the potential to be a great artist. You get a +3 bonus on all rolls to create a new work of art."
+        },
+        {
+          "name": "Puissant Music*",
+          "impact": "minor",
+          "description": "You are particularly adept with one Ability, and add 2 to its value whenever you use it. Note that you do not, in general, use an Ability when learning it, writing about it, or helping someone else to improve it. You may only take this Virtue once for a given Ability, but may take it more than once for different Abilities."
+        },
+        {
+          "name": "Venus's Blessing",
+          "impact": "minor",
+          "description": "People are often attracted to you. You get +3 on Communication and Presence rolls with sexually compatible characters in appropriate situations. At times you can put this to good use. At other times it’s an annoyance."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Necessary Condition (singing)",
+          "impact": "major",
+          "description": "In order for your magic to work, you must perform a specific action while casting any spell. This should be something simple, such as singing or spinning around three times. If you cannot perform the action, you cannot cast spells at all."
+        },
+        {
+          "name": "Deficient Technique (Perdo)",
+          "impact": "major",
+          "description": "All totals, including Lab and Casting totals, including a particular Technique are halved. Advancement Totals are not halved. Experience points required are based on the actual value of the Technique, before halving."
+        },
+        {
+          "name": "Susceptibility To Infernal Power",
+          "impact": "minor",
+          "description": "You are especially vulnerable to the dark powers. Whenever you enter an area of Infernal influence, you must make a Stamina roll equal to or greater than the aura rating or become ill (–1 on all rolls). You get only half your normal Magic Resistance score against infernal effects, though if someone else's Parma Magica is protecting you, it counts normally."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Latin",
+          "speciality": "musical terms",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Native Language",
+          "speciality": "noble style",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Music",
+          "speciality": "singing",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Charm",
+          "speciality": "the opposite sex",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Theory",
+          "speciality": "Imaginem",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Carouse",
+          "speciality": "maintaining dignity",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Etiquette",
+          "speciality": "nobility",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "nobles",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Jerbiton",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Guile",
+          "speciality": "fast excuses",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Code of Hermes",
+          "speciality": "dealing with mundanes",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "music",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Parma Magica",
+          "speciality": "Mentem",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [
+        {
+          "name": "Phantasm of the Human Form",
+          "technique": "Creo",
+          "form": "Imaginem",
+          "level": 25,
+          "range": "voice",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "Makes an image of a clothed and equipped person that can make noise. Under your direct, unspoken command, the person can move about, speak, and behave as a human does."
+        },
+        {
+          "name": "Phantasm of the Talking Head",
+          "technique": "Creo",
+          "form": "Imaginem",
+          "level": 10,
+          "range": "voice",
+          "duration": "diam",
+          "target": "ind",
+          "ritual": false,
+          "description": "Creates an illusory face on a wall or other flat object. The visage can speak during the spell’s duration. Individual wizards’ sigils can produce very interesting differences in how the voice sounds, how the face looks, and so on."
+        },
+        {
+          "name": "Discern Own Illusions",
+          "technique": "Intellego",
+          "form": "Imaginem",
+          "level": 15,
+          "range": "personal",
+          "duration": "sun",
+          "target": "sight",
+          "ritual": false,
+          "description": "This spell makes your own illusions largely transparent, but still discernible."
+        },
+        {
+          "name": "Notes of a Delightful Sound",
+          "technique": "Muto",
+          "form": "Imaginem",
+          "level": 10,
+          "range": "touch",
+          "duration": "sun",
+          "target": "room",
+          "ritual": false,
+          "description": "Causes all sounds in a room, particularly music, to be especially clear and sonorous. The notes are clearer, sharper, and more distinct."
+        },
+        {
+          "name": "Disguise of the Transformed Image",
+          "technique": "Muto",
+          "form": "Imaginem",
+          "level": 15,
+          "range": "touch",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "Makes someone look, sound, feel, and smell different, though at least passably human."
+        },
+        {
+          "name": "Taste of the Spices and Herbs",
+          "technique": "Muto",
+          "form": "Imaginem",
+          "level": 5,
+          "range": "touch",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "A setting’s worth of food or drink tastes and smells exactly as you designate."
+        },
+        {
+          "name": "Aura of Ennobled Presence",
+          "technique": "Muto",
+          "form": "Imaginem",
+          "level": 10,
+          "range": "touch",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "The target appears more forceful, authoritative, and believable. Numerous subtle changes in appearance bring about this change, including a slight supernatural illumination of the face, a more erect posture, and a louder and smoother voice. The character gets a +3 on rolls to influence, lead, or convince others."
+        },
+        {
+          "name": "Illusion of Cool Flames",
+          "technique": "Perdo",
+          "form": "Imaginem",
+          "level": 10,
+          "range": "voice",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "A source of heat, such as a fire, seems to lose its heat and drop to the surrounding temperature. It still, however, has its normal beneficial and harmful effects (that is, glowing coals still cook meat or burn a person’s hand, though they do not feel hot)."
+        },
+        {
+          "name": "Wizard’s Sidestep",
+          "technique": "Rego",
+          "form": "Imaginem",
+          "level": 10,
+          "range": "personal",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "Your image appears up to 1 pace from where you actually are, so attacks aimed there are likely to miss you. Whenever the image is successfully struck, it disappears and reappears in another spot. In combat, early attacks are aimed at the image, and so automatically miss you. Once the image has been hit once, you have a +9 bonus to Defense, as attackers must try to find you in a fairly large area."
+        },
+        {
+          "name": "Illusion of the Shifted Image",
+          "technique": "Rego",
+          "form": "Imaginem",
+          "level": 10,
+          "range": "voice",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": "Makes any person or object appear to be a pace away from its actual position. The image cannot be placed in a solid object. As soon as the original or image moves, the spell ends."
+        }
+      ],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "biography": "The Jerbiton took Puissant Music as his free House-related Virtue. He is designed as a social creature who sees himself as an artist in music and magic. He can take up to three points more of Flaws, with the corresponding Virtues. Note that he has the Gentle Gift, and thus can interact with mundanes without any penalty.",
+      "covenant": "Bellum Iocari"
+    },
+    "Cyrene": {
+      "name": "Cyrene",
+      "foundryName": "Cyrene ex Bonisagus",
+      "charType": "magus",
+      "portrait": null,
+      "house": "Bonisagus",
+      "parens": "",
+      "sigil": "A flash of blue light.",
+      "born": 1198,
+      "age": 25,
+      "apparentAge": 25,
+      "characteristics": {
+        "int": 3,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "pre": 0,
+        "com": 1,
+        "dex": 0,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 12,
+          "xp": 52
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 3,
+          "xp": 6
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 12,
+          "xp": 52
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 4,
+          "xp": 10
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a magus, may take Hermetic Virtues and Flaws which relate to intrinsic ability rather than background or training. Characters may take Virtues that grant Supernatural Abilities without taking The Gift, and such characters do not suffer the penalties imposed by The Gift. However, such characters may not learn new Supernatural Abilities in the course of the saga, although they may improve the ones they already have. It is possible for unGifted characters to Initiate new Supernatural Abilities through a Mystery Cult, but even this is harder for them than for the Gifted.Characters who have The Gift may start play with a single Supernatural Ability, without having to take any other Virtue, but if they wish to learn others they must find opportunities to do so in the course of the saga. They may also take Virtues granting Supernatural Abilities if they wish to have more Abilities at character creation. Note that it is harder for a character with Supernatural Abilities to become a Hermetic magus (see Training Your Apprentice on page @@), so you may not wish to take any such abilities if you plan for the character to become an apprentice. The ability to cast Hermetic magic is the single supernatural ability possessed by Hermetic magi in virtue of The Gift again, they may take more Supernatural Ability Virtues if they wish.Grogs can never have The Gift, as a character with The Gift is too important to be a grog. As a rule, companions should only have The Gift if they are intended to become magi, or if they are members of one of the other magical traditions described in Ars Magica 5th Edition supplements. Troupes should not allow any other Gifted characters unless they are absolutely sure that they want them."
+        },
+        {
+          "name": "Book Learner",
+          "impact": "minor",
+          "description": "You have a talent for comprehending the writings of others. When studying from books, treat them as if they were three Quality levels higher than they actually are."
+        },
+        {
+          "name": "Free Study",
+          "impact": "minor",
+          "description": "You are better at figuring things out for yourself than you are at poring over books. Add +3 to the Source Quality when studying from raw vis."
+        },
+        {
+          "name": "Great Intelligence (x2)",
+          "impact": "minor",
+          "description": "You may raise any Characteristic that already has a score of at least +3 by one point, to no more than +5. Make sure you describe what it is about you that causes that increase (such as sheer bulk, a lean build, or extreme charisma). You may take this Virtue twice for the same Characteristic, and for more than one Characteristic."
+        },
+        {
+          "name": "Affinity with Creo",
+          "impact": "minor",
+          "description": "Your Advancement Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts."
+        },
+        {
+          "name": "Hermetic Magus",
+          "impact": "free",
+          "description": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it."
+        },
+        {
+          "name": "Affinity with Auram",
+          "impact": "minor",
+          "description": "Your Advancement Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts."
+        },
+        {
+          "name": "Inventive Genius",
+          "impact": "minor",
+          "description": "Invention comes naturally to you. You get +3 to your Lab Total if you are not using a Laboratory Text or being taught. If you experiment, you get +6."
+        },
+        {
+          "name": "Great Intelligence (x2)",
+          "impact": "minor",
+          "description": "You may raise any Characteristic that already has a score of at least +3 by one point, to no more than +5. Make sure you describe what it is about you that causes that increase (such as sheer bulk, a lean build, or extreme charisma). You may take this Virtue twice for the same Characteristic, and for more than one Characteristic."
+        },
+        {
+          "name": "Puissant Magic Theory*",
+          "impact": "minor",
+          "description": "You are particularly adept with one Ability, and add 2 to its value whenever you use it. Note that you do not, in general, use an Ability when learning it, writing about it, or helping someone else to improve it. You may only take this Virtue once for a given Ability, but may take it more than once for different Abilities."
+        },
+        {
+          "name": "Secondary Insight",
+          "impact": "minor",
+          "description": "Your method of magical study is especially versatile. When you spend a season studying one of the magical Techniques from a book, a teacher, or raw vis, you also gain a single experience point in any 4 Forms of your choosing. When studying one of the magical Forms, you also gain a single experience point in any 2 separate Techniques of your choosing. You may not put more than one bonus experience point into a single Art, and may choose different Arts to receive the bonus experience points in each season, even when continuing to study the same Art from the same source. These bonus experience points are not increased by Affinities or any other factors."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Painful Magic",
+          "impact": "major",
+          "description": "Casting spells causes you to suffer the equivalent of one Fatigue level in pain for each spell you cast. This reduces all your actions by the appropriate Fatigue penalty, which is cumulative with any from actual fatigue or injuries (though you do not suffer any physical damage from pain). You recover these \"pain levels\" just like Fatigue levels."
+        },
+        {
+          "name": "Favors",
+          "impact": "major",
+          "description": "You owe a boon to someone (or to a great many people), and may be called upon to return the favor at any time. The consequences of ignoring such a request can range from mild to deadly serious, at the storyguide’s discretion."
+        },
+        {
+          "name": "Weak Enchanter",
+          "impact": "minor",
+          "description": "Your Gift is ill attuned to creating enchanted devices. Halve your Lab Total whenever you create or investigate an enchanted item. If you have a Deficiency that counts as part of the Lab Total, apply the Deficiency first and then halve the remaining total."
+        },
+        {
+          "name": "Driven (Minor)",
+          "impact": "minor",
+          "description": "You have some goal which you are determined to bring about. This has to be the sort of big goal that could shape an entire life, but if you do accomplish it you will immediately turn to a new project."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Native Language",
+          "speciality": "educated talk",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Latin",
+          "speciality": "Hermetic technical terms",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Magic Theory",
+          "speciality": "Creo",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Concentration",
+          "speciality": "spell casting",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Teaching",
+          "speciality": "Hermetic Arts",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Charm",
+          "speciality": "equals",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "magi",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Awareness",
+          "speciality": "when working",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "great discoveries",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "logic",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Penetration",
+          "speciality": "Auram",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Parma Magica",
+          "speciality": "Mentem",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "non-Hermetic magic",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [
+        {
+          "name": "Clouds of Rain and Thunder",
+          "technique": "Creo",
+          "form": "Auram",
+          "level": 25,
+          "range": "sight",
+          "duration": "conc",
+          "target": "group",
+          "ritual": false,
+          "description": "Creates a small but severe rainstorm, including lightning and winds. The storm gathers and breaks in a few seconds as the caster concentrates, and dissipates with similar speed when he stops doing so.\nNote that reducing the Range for this spell makes the storm increasingly unnatural, so versions of this spell with lower Range still have the same level."
+        },
+        {
+          "name": "The Incantation of Lightning",
+          "technique": "Creo",
+          "form": "Auram",
+          "level": 35,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": "A lightning bolt shoots forth from your outstretched hand in the direction you are pointing, doing +30 damage to a single target it hits. There must be nothing between you and the target. Those near the target must make Size stress rolls of 6+ to remain standing."
+        },
+        {
+          "name": "Charge of the Angry Winds",
+          "technique": "Creo",
+          "form": "Auram",
+          "level": 15,
+          "range": "voice",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": "A wall of wind roars away from you, starting up to 10 paces away and continuing until it dissipates naturally. The wind is confined by any existing barriers, but if unconfined it can be up to a hundred paces wide. All within the area must make a Dexterity + Size stress roll of 9+ or fall down and be blown along by the winds. The rolls must be made at the start of the gale and each subsequent round that the wind is maintained. You must concentrate on the gale. Missile fire into or out of the gale is futile, and marching against the gale requires a Strength + Size stress roll of 15+. Failure in this attempt mandates another Dexterity + Size stress roll of 12+ to keep from falling."
+        },
+        {
+          "name": "Clouds of Summer Snow",
+          "technique": "Creo",
+          "form": "Auram",
+          "level": 25,
+          "range": "sight",
+          "duration": "conc",
+          "target": "group",
+          "ritual": false,
+          "description": "Creates clouds that drop snow over an area about a mile across. The clouds gather over a few seconds at the beginning of the spell, and dissipate over the same sort of time when the caster stops concentrating. The spell does not affect temperature."
+        },
+        {
+          "name": "Purification of the Festering Wounds",
+          "technique": "Creo",
+          "form": "Corpus",
+          "level": 20,
+          "range": "touch",
+          "duration": "moon",
+          "target": "ind",
+          "ritual": false,
+          "description": "The target gains a +9 bonus to Recovery rolls to recover from injuries or diseases, as long as he has been under the influence of this spell for the whole of the recovery interval. The recovery interval is counted from the time that the spell is cast; any previous time is ignored."
+        }
+      ],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "biography": "The Bonisagus is most likely Driven to make some great discovery in magic. He or she is a so-called 'lab rat', a magus happier in his laboratory than in the outside world. However, the favors he owes and his drive to discover are likely to push him out. Similarly, enchanted items are very useful to him, but he is bad at making them for himself. That also tends to drive him into stories. This concept is built around the Virtues and the Driven Flaw; the other Flaws can be changed easily. He can also take two additional Minor Flaws, or make Driven Major, and take two additional Minor Virtues to balance them. Similarly, the Arts in which the character has an Affinity can be changed, but that also requires changing the spells he knows.",
+      "covenant": "Eboris"
+    }
+  }
+}
