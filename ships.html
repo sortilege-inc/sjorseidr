@@ -260,6 +260,14 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .rd-pen-total{font-family:'Cinzel',serif;font-weight:600}
 .rd-pen-total.good{color:var(--green)}
 .rd-pen-total.bad{color:var(--rust)}
+.combat-open{font-family:'Cinzel',serif;font-weight:600;font-size:12px;letter-spacing:.03em;cursor:pointer;
+  border:1px solid #6a2418;border-radius:7px;padding:7px 13px;color:#fff6df;
+  background:linear-gradient(180deg,var(--rust-bright),var(--rust));box-shadow:0 2px 4px var(--shadow);margin-top:2px}
+.combat-open:hover{filter:brightness(1.08)}
+.cb-summary{display:flex;flex-wrap:wrap;gap:4px 12px;margin:11px 0 2px;padding:9px 11px;
+  background:rgba(120,90,40,.1);border-radius:7px;font-family:'Cinzel',serif;font-size:12px;color:var(--ink)}
+.cb-summary .cb-ab{color:var(--teal)}
+.rd-total b.hit{color:var(--green)}
 
 .trait-chips,.rep-chips{display:flex;flex-wrap:wrap;gap:5px}
 .trait-chip{font-size:11.5px;padding:2px 9px;border-radius:11px;background:rgba(91,58,138,.12);
@@ -310,7 +318,7 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
   </div>
   <div id="content"></div>
 
-  <footer>Full character sheets (pulled from Foundry) are wired up for the six PC magi and 32 more grogs, companions, and NPC magi. Hilda, Karl, and Rody have no Foundry sheet yet and still get the quick-note card.<br><strong>Click an ability to roll it</strong> (pick a Characteristic, add modifiers and virtues/flaws, roll stress or simple) <strong>or a spell to cast it</strong> (computes the casting total vs. its level). Rolls are a calculator — they display the outcome but don't change the sheet.</footer>
+  <footer>Full character sheets (pulled from Foundry) are wired up for the six PC magi and 32 more grogs, companions, and NPC magi. Hilda, Karl, and Rody have no Foundry sheet yet and still get the quick-note card.<br><strong>Click an ability to roll it</strong> (pick a Characteristic, add modifiers and virtues/flaws, roll stress or simple), <strong>a spell to cast it</strong> (casting total vs. level, plus a Penetration calculator), <strong>or open the ⚔ Combat roller</strong> (weapon/armor pickers, attack/defense/initiative, and hit-to-wound resolution). Rolls are a calculator — they display the outcome but don't change the sheet.</footer>
 </div>
 
 <script>
@@ -649,6 +657,9 @@ function magusSheetHtml(m){
     <div class="sheet-section-title">Arts</div>
     ${artsGridHtml(m.arts||{})}
     ` : ''}
+
+    <div class="sheet-section-title">Combat</div>
+    <button class="combat-open" onclick="combatDialog(CURRENT_SHEET)">⚔ Open combat roller</button>
 
     ${m.personalityTraits && m.personalityTraits.length ? `
     <div class="sheet-section-title">Personality</div>
@@ -1175,6 +1186,209 @@ function showResult({total, botched, label, breakdown, outcome, penetration}){
   el.classList.add('show');
 }
 
+/* ══════════════ Combat roller ══════════════
+   armdef-0.4-obstacles: Init/Attack/Defense/Damage/Soak, weapon & armor
+   tables, and the Damage/Wound table. Stateless calculator.            */
+const WEAPONS = [
+  {n:'Dodge', ab:'Brawl', init:0, atk:null, dfn:0, dam:null},
+  {n:'Fist', ab:'Brawl', init:0, atk:0, dfn:0, dam:0},
+  {n:'Kick', ab:'Brawl', init:-1, atk:0, dfn:-1, dam:3},
+  {n:'Gauntlet', ab:'Brawl', init:0, atk:0, dfn:1, dam:2},
+  {n:'Bludgeon', ab:'Brawl', init:0, atk:2, dfn:0, dam:2},
+  {n:'Dagger', ab:'Brawl', init:0, atk:2, dfn:0, dam:3},
+  {n:'Knife', ab:'Brawl', init:0, atk:1, dfn:0, dam:2},
+  {n:'Axe', ab:'Single', init:1, atk:4, dfn:0, dam:6},
+  {n:'Club', ab:'Single', init:1, atk:2, dfn:1, dam:3},
+  {n:'Hatchet', ab:'Single', init:0, atk:3, dfn:0, dam:4},
+  {n:'Lance', ab:'Single', init:2, atk:4, dfn:0, dam:5},
+  {n:'Mace', ab:'Single', init:1, atk:3, dfn:0, dam:8},
+  {n:'Mace and Chain', ab:'Single', init:2, atk:3, dfn:0, dam:7},
+  {n:'Spear, Short', ab:'Single', init:2, atk:2, dfn:0, dam:5},
+  {n:'Sword, Short', ab:'Single', init:1, atk:3, dfn:1, dam:5},
+  {n:'Sword, Long', ab:'Single', init:2, atk:4, dfn:1, dam:6},
+  {n:'Cudgel', ab:'Great', init:1, atk:4, dfn:1, dam:7},
+  {n:'Farm Implement', ab:'Great', init:1, atk:3, dfn:1, dam:5},
+  {n:'Flail', ab:'Great', init:1, atk:3, dfn:1, dam:8},
+  {n:'Pole Arm', ab:'Great', init:3, atk:4, dfn:1, dam:8},
+  {n:'Pole Axe', ab:'Great', init:1, atk:5, dfn:0, dam:11},
+  {n:'Spear, Long', ab:'Great', init:3, atk:3, dfn:1, dam:7},
+  {n:'Sword, Great', ab:'Great', init:2, atk:5, dfn:2, dam:9},
+  {n:'Staff', ab:'Great', init:2, atk:3, dfn:3, dam:2},
+  {n:'Warhammer', ab:'Great', init:0, atk:6, dfn:0, dam:12},
+  {n:'Axe, Throwing', ab:'Thrown', init:0, atk:2, dfn:0, dam:6, missile:true},
+  {n:'Javelin', ab:'Thrown', init:0, atk:2, dfn:0, dam:5, missile:true},
+  {n:'Knife (thrown)', ab:'Thrown', init:0, atk:1, dfn:0, dam:2, missile:true},
+  {n:'Sling', ab:'Thrown', init:-3, atk:1, dfn:0, dam:4, missile:true},
+  {n:'Stone', ab:'Thrown', init:0, atk:1, dfn:0, dam:2, missile:true},
+  {n:'Bow, Long', ab:'Bow', init:-2, atk:4, dfn:0, dam:8, missile:true},
+  {n:'Bow, Short', ab:'Bow', init:-1, atk:3, dfn:0, dam:6, missile:true},
+];
+const SHIELDS = [
+  {n:'(none)', init:0, atk:0, dfn:0, dam:0},
+  {n:'Shield, Buckler', init:0, atk:0, dfn:1, dam:0},
+  {n:'Shield, Round', init:0, atk:0, dfn:2, dam:0},
+  {n:'Shield, Heater', init:0, atk:0, dfn:3, dam:0},
+];
+const ARMORS = [
+  {n:'(none)', prot:0},
+  {n:'Quilted / Fur — partial', prot:1},
+  {n:'Heavy Leather — partial', prot:2},
+  {n:'Metal-Reinf. Leather — partial', prot:2},
+  {n:'Metal-Reinf. Leather — full', prot:4},
+  {n:'Leather Scale — partial', prot:3},
+  {n:'Leather Scale — full', prot:5},
+  {n:'Metal Scale — partial', prot:4},
+  {n:'Metal Scale — full', prot:7},
+  {n:'Chain Mail — partial', prot:6},
+  {n:'Chain Mail — full', prot:9},
+];
+const CB_AB = {Brawl:'Brawl', Single:'Single Weapon', Great:'Great Weapon', Thrown:'Thrown Weapon', Bow:'Bows'};
+
+// Each (5 + Size) points of damage past Soak raises the wound level.
+function woundLevel(through, size){
+  if(through < 1) return {level:'No wound', note:''};
+  let step = 5 + (size||0); if(step < 1) step = 1;
+  const n = Math.ceil(through/step);
+  const levels=['Light','Medium','Heavy','Incapacitating','Dead'];
+  const notes=['−1 penalty','−3 penalty','−5 penalty','incapacitated','slain'];
+  const i=Math.min(n-1,4);
+  return {level:levels[i], note:notes[i]};
+}
+
+function combatDerived(sheet){
+  const w = WEAPONS[+$('#cbWeapon').value] || WEAPONS[1];
+  const sh = SHIELDS[+$('#cbShield').value] || SHIELDS[0];
+  const ar = ARMORS[+$('#cbArmor').value] || ARMORS[0];
+  const enc = parseInt($('#cbEnc').value,10)||0;
+  const wound = parseInt($('#cbWound').value,10)||0;
+  const form = parseInt($('#cbForm').value,10)||0;
+  const ch = sheet.characteristics||{};
+  const abName = CB_AB[w.ab];
+  const abSc = abilityScore(sheet, abName) + puissantAbilityBonus(sheet, abName);  // Puissant applies in combat
+  const initMod=(w.init||0)+(sh.init||0), atkMod=(w.atk||0)+(sh.atk||0), dfnMod=(w.dfn||0)+(sh.dfn||0), damMod=(w.dam||0)+(sh.dam||0);
+  return {
+    w, sh, ar, enc, wound, form, abName, abSc, ch, initMod, atkMod, dfnMod, damMod,
+    init: (ch.qik||0) + initMod - enc - wound,
+    atk: (ch.dex||0) + abSc + atkMod - wound,
+    def: (ch.qik||0) + abSc + dfnMod - wound,
+    damBase: (ch.str||0) + damMod,
+    soak: (ch.sta||0) + (ar.prot||0) + form,
+    canAttack: w.atk!==null, canDamage: w.dam!==null
+  };
+}
+
+function bestCombatWeaponIndex(sheet){
+  const prefs = [['Single Weapon','Sword, Long'],['Great Weapon','Sword, Great'],['Bows','Bow, Short'],['Thrown Weapon','Javelin']];
+  let best=null, bestScore=0;
+  prefs.forEach(([ab,wn])=>{ const s=abilityScore(sheet,ab); if(s>bestScore){bestScore=s; best=wn;} });
+  const idx = best ? WEAPONS.findIndex(w=>w.n===best) : -1;
+  return idx<0 ? WEAPONS.findIndex(w=>w.n==='Fist') : idx;
+}
+
+function updateCombatSummary(){
+  const el=$('#cbSummary'); if(!el || !ROLL_CTX.combat) return;
+  const d=combatDerived(ROLL_CTX.combat);
+  el.innerHTML = `<span>Init ${signed(d.init)}</span><span>Atk ${d.canAttack?signed(d.atk):'—'}</span><span>Def ${signed(d.def)}</span><span>Dam ${d.canDamage?signed(d.damBase):'—'} <span class="rd-hint">+adv</span></span><span>Soak ${signed(d.soak)}</span><span class="cb-ab">${esc(d.abName)} ${signed(d.abSc)}</span>`;
+}
+
+function combatDialog(sheet){
+  if(!sheet) return;
+  ROLL_CTX = {combat:sheet};
+  const wOpts = WEAPONS.map((w,i)=>`<option value="${i}">${esc(w.n)} · ${esc(CB_AB[w.ab])}${w.missile?' (missile)':''}</option>`).join('');
+  const shOpts = SHIELDS.map((s,i)=>`<option value="${i}">${esc(s.n)}</option>`).join('');
+  const arOpts = ARMORS.map((a,i)=>`<option value="${i}">${esc(a.n)}${a.prot?` (Prot ${a.prot})`:''}</option>`).join('');
+  $('#rollDialog').innerHTML = `
+    <button class="rd-close" onclick="closeRollModal()">✕</button>
+    <h3>⚔ Combat — ${esc(sheet.name)}</h3>
+    <p class="rd-sub">Init = Qik + wpn − Enc · Atk = Dex + Ability + wpn · Def = Qik + Ability + wpn · each + stress die</p>
+    <div class="rd-row"><label>Weapon</label><select id="cbWeapon">${wOpts}</select></div>
+    <div class="rd-row"><label>Shield / off-hand</label><select id="cbShield">${shOpts}</select></div>
+    <div class="rd-row"><label>Armor</label><select id="cbArmor">${arOpts}</select></div>
+    <div class="rd-row"><label>Encumbrance</label><input type="number" id="cbEnc" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Wound penalty <span class="rd-hint">(as positive)</span></label><input type="number" id="cbWound" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Form bonus to Soak <span class="rd-hint">(magi)</span></label><input type="number" id="cbForm" value="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice</label><input type="number" id="cbBotch" value="1" min="0" step="1"></div>
+    <div id="cbSummary" class="cb-summary"></div>
+    <div class="rd-buttons">
+      <button class="rd-btn simple" onclick="combatRoll('init')">Initiative</button>
+      <button class="rd-btn" onclick="combatRoll('attack')">Attack</button>
+      <button class="rd-btn simple" onclick="combatRoll('defense')">Defense</button>
+    </div>
+    <div class="rd-section-label" style="margin-top:14px">Attack resolution (optional — fill before rolling Attack)</div>
+    <div class="rd-row"><label>Target Defense Total</label><input type="number" id="cbTgtDef" placeholder="—" step="1" style="width:62px"></div>
+    <div class="rd-row"><label>Target Soak Total</label><input type="number" id="cbTgtSoak" placeholder="—" step="1" style="width:62px"></div>
+    <div class="rd-row"><label>Target Size</label><input type="number" id="cbTgtSize" value="0" step="1" style="width:62px"></div>
+    <div class="rd-result" id="rdResult"></div>
+  `;
+  $('#cbWeapon').value = bestCombatWeaponIndex(sheet);
+  updateCombatSummary();
+  openRollModal();
+}
+
+function combatRoll(kind){
+  const sheet = ROLL_CTX.combat; if(!sheet) return;
+  const d = combatDerived(sheet);
+  const botchDice = parseInt($('#cbBotch').value,10)||0;
+  const woundBit = d.wound?` · wound −${d.wound}`:'';
+
+  if(kind==='init'){
+    const die = rollStress(botchDice);
+    const total = die.botch ? Math.min(0,d.init) : d.init + die.value;
+    return showCombat({title:'Initiative', total, botched:die.botch,
+      breakdown:`Qik ${signed(d.ch.qik)} · ${esc(d.w.n)} init ${signed(d.initMod)} · Enc ${signed(-d.enc)}${woundBit} · ${die.detail}`});
+  }
+  if(kind==='defense'){
+    const die = rollStress(botchDice);
+    const total = die.botch ? Math.min(0,d.def) : d.def + die.value;
+    return showCombat({title:'Defense', total, botched:die.botch,
+      breakdown:`Qik ${signed(d.ch.qik)} · ${esc(d.abName)} ${signed(d.abSc)} · def mod ${signed(d.dfnMod)}${woundBit} · ${die.detail}`,
+      outcome: die.botch ? {cls:'bad', text:'✗ Botch on defense — very dangerous; the attacker gains a large advantage.'} : null});
+  }
+  // attack
+  if(!d.canAttack) return showCombat({title:'Attack', text:`${esc(d.w.n)} is a defensive/dodge option and cannot attack.`});
+  const die = rollStress(botchDice);
+  const atk = die.botch ? Math.min(0,d.atk) : d.atk + die.value;
+  const breakdown = `Dex ${signed(d.ch.dex)} · ${esc(d.abName)} ${signed(d.abSc)} · atk mod ${signed(d.atkMod)}${woundBit} · ${die.detail}`;
+  const res = {title:'Attack', total:atk, botched:die.botch, breakdown};
+
+  const tdRaw = ($('#cbTgtDef')||{}).value;
+  if(die.botch){
+    res.outcome = {cls:'bad', text:'✗ Botch — a combat botch is dangerous (dropped weapon, lost footing, an opening for the foe).'};
+  } else if(tdRaw!==''){
+    const tgtDef = parseInt(tdRaw,10)||0;
+    const aa = atk - tgtDef;
+    if(aa <= 0){
+      res.outcome = {cls:'bad', text:`✗ Miss — Attack ${atk} vs Defense ${tgtDef} (advantage ${signed(aa)}; hit needs advantage &gt; 0).`};
+    } else {
+      const damTotal = d.damBase + aa;
+      let txt = `✓ Hit — Attack Advantage +${aa}. Damage Total <b>${damTotal}</b> (Str ${signed(d.ch.str)} · wpn ${signed(d.damMod)} · advantage +${aa})`;
+      const tsRaw = ($('#cbTgtSoak')||{}).value;
+      if(tsRaw!==''){
+        const tgtSoak = parseInt(tsRaw,10)||0;
+        const tSize = parseInt(($('#cbTgtSize')||{}).value,10)||0;
+        const through = damTotal - tgtSoak;
+        const w = woundLevel(through, tSize);
+        txt += `. Past Soak ${tgtSoak}: ${Math.max(0,through)} → Size ${signed(tSize)} → <b>${w.level}</b>${w.note?` (${w.note})`:''}`;
+      } else {
+        txt += ` — enter Target Soak for the wound.`;
+      }
+      res.outcome = {cls:'good', text:txt};
+    }
+  }
+  showCombat(res);
+}
+
+function showCombat({title, total, botched, breakdown, outcome, text}){
+  const el=$('#rdResult');
+  el.innerHTML = `
+    ${text?`<div class="rd-total">${text}</div>`:''}
+    ${total!=null?`<div class="rd-total ${botched?'botch':''}">${esc(title)} <b>${total}</b>${botched?' <span class="rd-botchflag">BOTCH</span>':''}</div>`:''}
+    ${outcome?`<div class="rd-outcome ${outcome.cls}">${outcome.text}</div>`:''}
+    ${breakdown?`<div class="rd-breakdown">${breakdown}</div>`:''}
+  `;
+  el.classList.add('show');
+}
+
 // Delegated: clicking a rollable ability/spell row opens its dialog.
 let ROLL_CTX = {};
 $('#sidebarContent').addEventListener('click', e=>{
@@ -1203,6 +1417,10 @@ $('#rollDialog').addEventListener('change', e=>{
     if(wrap){ wrap.style.opacity = on?'1':'.4'; wrap.style.pointerEvents = on?'auto':'none';
       if(!on) wrap.querySelectorAll('input').forEach(i=>{ i.checked=false; }); }
   }
+  if(e.target.id && e.target.id.startsWith('cb')) updateCombatSummary();
+});
+$('#rollDialog').addEventListener('input', e=>{
+  if(e.target.id && e.target.id.startsWith('cb')) updateCombatSummary();
 });
 
 load();
