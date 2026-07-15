@@ -256,6 +256,10 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .rd-botchflag{color:var(--rust);font-weight:600}
 .rd-flags{margin-top:11px;padding:9px 11px;border-radius:8px;background:rgba(138,51,36,.1);
   border:1px solid rgba(138,51,36,.3);color:var(--rust);font-size:11.5px;line-height:1.55}
+.rd-pen{margin-top:9px;padding-top:9px;border-top:1px dashed rgba(120,90,40,.35);font-size:12.5px;color:var(--ink)}
+.rd-pen-total{font-family:'Cinzel',serif;font-weight:600}
+.rd-pen-total.good{color:var(--green)}
+.rd-pen-total.bad{color:var(--rust)}
 
 .trait-chips,.rep-chips{display:flex;flex-wrap:wrap;gap:5px}
 .trait-chip{font-size:11.5px;padding:2px 9px;border-radius:11px;background:rgba(91,58,138,.12);
@@ -988,6 +992,46 @@ function castingArts(sheet, sp){
   };
 }
 
+function penAbility(sheet){
+  return (sheet.abilities||[]).find(a=>a.name.toLowerCase()==='penetration') || {score:0, speciality:''};
+}
+// Penetration section: Bonus = (Penetration + specialty + mastery) × multiplier,
+// multiplier = 1 + Arcane-Connection bonus + stacked sympathetic bonuses.
+const SYMP_CONNECTIONS = [
+  ['Blood relative of target', 1],
+  ['Signature of target', 1],
+  ['Nickname or birth name', 1],
+  ['Secret magic-ritual name', 1],
+  ["Today's horoscope", 1],
+  ['Nativity horoscope', 2],
+  ['Symbolic representation', 2],
+];
+function penetrationSection(sheet, sp){
+  const pen = penAbility(sheet);
+  const specMatch = pen.speciality && [sp.technique, sp.form].some(x=>x.toLowerCase()===pen.speciality.toLowerCase());
+  return `
+    <hr class="rd-divider">
+    <div class="rd-section-label">Penetration (optional)</div>
+    <div class="rd-row"><label>Penetration Ability</label><span class="rd-val">${signed(pen.score)}</span></div>
+    ${pen.speciality?`<label class="rd-check ${specMatch?'on':''}"><input type="checkbox" id="rdPenSpec" ${specMatch?'checked':''}><span>Penetration specialty (+1) — ${esc(pen.speciality)}${specMatch?' <span class="rd-hint">matches this spell</span>':''}</span></label>`:''}
+    <div class="rd-row"><label>Mastery (Penetration)</label><input type="number" id="rdPenMastery" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Arcane Connection</label>
+      <select id="rdPenAC">
+        <option value="0">none (×1)</option>
+        <option value="1">lasts hours–days (+1)</option>
+        <option value="2">lasts weeks–months (+2)</option>
+        <option value="3">lasts years–decades (+3)</option>
+        <option value="4">lasts indefinitely (+4)</option>
+      </select></div>
+    <div id="rdSympWrap" style="opacity:.4;pointer-events:none">
+      <div class="rd-hint" style="margin:5px 0 2px">Sympathetic connections (need an Arcane Connection; stack):</div>
+      ${SYMP_CONNECTIONS.map(([label,v])=>`<label class="rd-check"><input type="checkbox" class="rdSymp" data-v="${v}"><span>${esc(label)} <span class="rd-val">+${v}</span></span></label>`).join('')}
+    </div>
+    <label class="rd-check"><input type="checkbox" id="rdForceless"><span>Forceless casting <span class="rd-hint">(cap Penetration at 0 — tournaments)</span></span></label>
+    <div class="rd-row"><label>Target Magic Resistance <span class="rd-hint">(optional)</span></label><input type="number" id="rdMR" placeholder="—" step="1" style="width:62px"></div>
+  `;
+}
+
 function spellDialog(sp){
   const sheet = CURRENT_SHEET;
   const a = castingArts(sheet, sp);
@@ -1022,6 +1066,7 @@ function spellDialog(sp){
     <div class="rd-row"><label>Other modifier</label><input type="number" id="rdMod" value="0" step="1"></div>
     <div class="rd-row"><label>Botch dice</label><input type="number" id="rdBotch" value="${baseBotch}" min="0" step="1"></div>
     ${flags.length?`<div class="rd-flags">${flags.map(f=>`⚠ ${esc(f)}`).join('<br>')}</div>`:''}
+    ${penetrationSection(sheet, sp)}
 
     <div class="rd-buttons">
       ${ritual
@@ -1079,20 +1124,53 @@ function doSpellCast(mode){
     `<span class="rd-die">${die.detail}</span>`
   ].filter(Boolean);
 
+  // ── Penetration Total = Casting Total + Penetration Bonus − Spell Level ──
+  let penetration = null;
+  if(!botched){
+    const pen = penAbility(sheet);
+    const penSpec = ($('#rdPenSpec') && $('#rdPenSpec').checked) ? 1 : 0;
+    const penMastery = parseInt(($('#rdPenMastery')||{}).value,10)||0;
+    const acBonus = parseInt(($('#rdPenAC')||{}).value,10)||0;
+    let sympBonus = 0;
+    if(acBonus>0){ $$('.rdSymp').forEach(cb=>{ if(cb.checked) sympBonus += parseInt(cb.dataset.v,10)||0; }); }
+    const multiplier = 1 + acBonus + sympBonus;
+    const penAbilTotal = pen.score + penSpec + penMastery;
+    const penBonus = penAbilTotal * multiplier;
+    const forceless = $('#rdForceless') && $('#rdForceless').checked;
+    const natural = total + penBonus - sp.level;
+    const penTotal = forceless ? Math.min(0, natural) : natural;
+
+    const mrRaw = ($('#rdMR')||{}).value;
+    const mr = (mrRaw===''||mrRaw==null) ? null : (parseInt(mrRaw,10)||0);
+    let verdict;
+    if(mr!=null) verdict = penTotal > mr ? `penetrates Magic Resistance ${mr} ✓` : `resisted by Magic Resistance ${mr} ✗`;
+    else if(penTotal<=0) verdict = 'cannot affect anything with Magic Resistance (unresisted targets only)';
+    else verdict = `affects targets whose Magic Resistance is below ${penTotal}`;
+
+    const bd = [
+      `Pen ${signed(pen.score)}`, penSpec?'spec +1':'', penMastery?`mastery +${penMastery}`:'',
+      multiplier!==1?`× ${multiplier} (1${acBonus?` +${acBonus} AC`:''}${sympBonus?` +${sympBonus} symp`:''})`:'× 1',
+      forceless?'· forceless':''
+    ].filter(Boolean).join(' ');
+    penetration = { total: penTotal, verdict, breakdown: `bonus ${signed(penBonus)} = [${bd}] · casting ${total} − level ${sp.level}` };
+  }
+
   showResult({
     total, botched,
     label: botched ? 'Casting total 0' : `Casting total ${total} vs. level ${sp.level} (${signed(diff)})`,
     breakdown: parts.join(' · '),
-    outcome
+    outcome, penetration
   });
 }
 
-function showResult({total, botched, label, breakdown, outcome}){
+function showResult({total, botched, label, breakdown, outcome, penetration}){
   const el = $('#rdResult');
+  const penCls = penetration ? (penetration.total>0 ? 'good' : 'bad') : '';
   el.innerHTML = `
     <div class="rd-total ${botched?'botch':''}">${label ? esc(label).replace(/(-?\d+)(?=\s*vs)/,'<b>$1</b>') : `Total <b>${total}</b>`}${botched?' <span class="rd-botchflag">BOTCH</span>':''}</div>
     ${outcome?`<div class="rd-outcome ${outcome.cls}">${outcome.text}</div>`:''}
     <div class="rd-breakdown">${breakdown}</div>
+    ${penetration?`<div class="rd-pen"><span class="rd-pen-total ${penCls}">Penetration ${signed(penetration.total)}</span> — ${esc(penetration.verdict)}<div class="rd-breakdown">${esc(penetration.breakdown)}</div></div>`:''}
   `;
   el.classList.add('show');
 }
@@ -1118,6 +1196,12 @@ $('#rollDialog').addEventListener('change', e=>{
   if(e.target.classList.contains('rdVF')){
     const val = document.querySelector(`.rdVFval[data-i="${e.target.dataset.i}"]`);
     if(val){ val.disabled = !e.target.checked; e.target.parentElement.classList.toggle('on', e.target.checked); }
+  }
+  if(e.target.id==='rdPenAC'){
+    const on = (parseInt(e.target.value,10)||0) > 0;
+    const wrap = document.getElementById('rdSympWrap');
+    if(wrap){ wrap.style.opacity = on?'1':'.4'; wrap.style.pointerEvents = on?'auto':'none';
+      if(!on) wrap.querySelectorAll('input').forEach(i=>{ i.checked=false; }); }
   }
 });
 
