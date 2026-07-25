@@ -840,9 +840,42 @@
       "type": "Thread",
       "category": "Research",
       "title": "Dustin's Spring 1224 teaching/research plans.",
-      "context": "Per the GM (2026-07-14): Dustin wants to teach (leveraging his Inventive Genius virtue) in Spring 1224, and also work on Auram during the spring. The note as given was a little tangled (\"Auram in the the spring\") — worth double-checking with the GM whether this is one season's plan or two, and who he's actually teaching.",
+      "context": "Per the GM (2026-07-14): Dustin wants to teach (leveraging his Inventive Genius virtue) in Spring 1224, and also work on Auram during the spring. The note as given was a little tangled (\"Auram in the the spring\") — worth double-checking with the GM whether this is one season's plan or two, and who he's actually teaching.\n\nUpdate (2026-07-25) — also tracked here (per Summer-1223 planning, now verified): Dustin flagged that he has NEGLECTED his own Arts study lately between running trade and teaching Stijntje, and plans to make time to catch up — alongside the teaching/Auram plans above.",
       "raised_in": "GM notes (2026-07-14)",
       "raised_event": "",
+      "status": "Resolved",
+      "resolution": "Answered (2026-07-25) via the now-verified 'Season plans' event: Dustin's plan is to TEACH his apprentice STIJNTJE across two seasons — Inventive Genius in spring 1224, then Auram in summer — leveraging his own Inventive Genius virtue. Resolves the earlier 'one season or two / who is he teaching' ambiguity: two seasons, teaching Stijntje (not Dustin studying Auram himself). His separate, ongoing intent to catch up on his own neglected Arts is noted above and folds into general character advancement."
+    },
+    {
+      "id": "t065",
+      "type": "Thread",
+      "category": "Covenant Business",
+      "title": "Isle of Man unclaimed vis source (earmarked for Wilhelm) — not yet canon",
+      "context": "Floated Summer 1223 during Ireland-trip planning but EXPLICITLY NOT CANON yet (moved off the canon event to GM-side tracking per GM, 2026-07-25): the Isle of Man reportedly has an unclaimed vis source earmarked as available for Wilhelm's eventual use, once the covenant actually winters there (Isle of Man wintering is deferred to a future year). Tentative — confirm/claim it in play before treating it as real.",
+      "raised_in": "Ireland-trip planning (Summer 1223)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t063",
+      "type": "Thread",
+      "category": "Character",
+      "title": "Éogan's Talisman project (jade)",
+      "context": "Declared Summer 1223 (now verified). Éogan bought jade at the Tribunal markets — house-ruled +Aquam over plain crystal — intending to begin a Talisman, reasoning a magus needn't be powerful to start one and the earlier it's begun the more useful it becomes. GM-side tracking of the ongoing project; not yet started.",
+      "raised_in": "Post-Tribunal planning (Summer 1223)",
+      "raised_event": "Éogan buys jade for a future Talisman; Dagmar eyes a longevity ritual; Dustin catches up on his own Arts",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "t064",
+      "type": "Thread",
+      "category": "Character",
+      "title": "Dagmar's longevity ritual (planned, not yet begun)",
+      "context": "Declared Summer 1223 (now verified). Dagmar is planning toward a longevity ritual as the magi reach their late twenties, but deliberately NOT rushing: real aging doesn't set in until ~35, and he wants his Creo significantly stronger before attempting it — prep for 'next year or so.' Noted cost: longevity rituals also cause infertility. GM-side tracking.",
+      "raised_in": "Post-Tribunal planning (Summer 1223)",
+      "raised_event": "Éogan buys jade for a future Talisman; Dagmar eyes a longevity ritual; Dustin catches up on his own Arts",
       "status": "Open",
       "resolution": ""
     },
@@ -867,6 +900,17 @@
       "raised_event": "",
       "status": "Resolved",
       "resolution": "Answered (2026-07-25) from ArM5e core: the Boundary target forces a spell to be a Ritual (the enchantment rules note \"no other reason for the spell to be a ritual, such as Year duration, Boundary target, or major effect\"), and Ritual magic cannot be cast spontaneously. Therefore spontaneous magic cannot use the Boundary target at all."
+    },
+    {
+      "id": "tl027",
+      "type": "Tool",
+      "category": "System / Tooling",
+      "title": "Map feature: per-ship icons + season time-slider on the Normandy Tribunal map",
+      "context": "Feature request (GM, 2026-07-25): update normandy_tribunal_1223.html to show an individual icon for each of the covenant's ships (instead of the single covenant icon), and add a time slider by season that updates each ship's path and position over time. To be built after the proposed-events review.",
+      "raised_in": "Feature request (2026-07-25)",
+      "raised_event": "",
+      "status": "Open",
+      "resolution": ""
     }
   ],
   "gmReference": {
