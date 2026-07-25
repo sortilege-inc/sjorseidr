@@ -2089,15 +2089,12 @@
     "icon": "🔥",
     "activity_type": "Full Covenant",
     "cast": [
-      "Kor Ex Flambeau",
-      "🧣 Éogan Dobhartha",
-      "Dagmar",
       "Valdemar Bjornsson",
-      "Dustin Page"
+      "Valerian de Castellane"
     ],
     "timeline": "❄️ Winter 1223-24",
     "date": "December 20, 1223 → March 19, 1224",
-    "sort_iso": "1223-12-20T00:00",
+    "sort_iso": "1223-11-05T12:00",
     "notes": "All magi are generally involved in this, but they can also perform a compatible season activity. 10 Terram vis result.",
     "season_activity": false,
     "status": "Future Plan",
@@ -2448,14 +2445,14 @@
     "cast": [
       "Dagmar"
     ],
-    "timeline": "🍂 Fall 1223",
-    "date": "Fall 1223",
-    "sort_iso": "1223-10-20T12:00",
+    "timeline": "❄️ Winter 1223-24",
+    "date": "Winter 1223-24",
+    "sort_iso": "1223-11-25T12:00",
     "notes": "With Confluensis having reneged, Oleron becomes the actual custodian of the covenant's tournament-prize books — and Dagmar decides to winter there in person rather than just visiting for a season, for three separate reasons.",
     "season_activity": "",
     "status": "Historical",
-    "body_text": "The covenant's tournament-prize books and texts are going to **Oleron** — the book-storage question left open when Bertrand ex Verditius denied any arrangement (see the earlier Tribunal-week entries) resolves here, quietly, in Oleron's favor, consistent with how warmly Raoul had already been treating the covenant.\n**Dagmar will winter at Oleron in person**, not just spend a working season there, with three stated goals: (1) actually use/study the prize texts on-site, (2) spend time with **Caris ex Criamon**, the magus he faced in the Dimicatio final — a fellow Criamon who, by his own account, hasn't been among his own order in a very long time, and (3) get properly briefed on the Tribunal politics the covenant has just stepped into, which he admits he still doesn't fully understand.\nHis ship will return for him come **spring 1224**.\nDagmar's wintering there in person also serves as the covenant's **formal acknowledgment** of the (non-vassal, protector/patron-flavored) relationship with Oleron — no separate representative needed — and he offered the covenant's trade/commerce capacity as a thank-you gesture.",
-    "body_html": "<p>The covenant's tournament-prize books and texts are going to <strong>Oleron</strong> — the book-storage question left open when Bertrand ex Verditius denied any arrangement (see the earlier Tribunal-week entries) resolves here, quietly, in Oleron's favor, consistent with how warmly Raoul had already been treating the covenant.</p><p><strong>Dagmar will winter at Oleron in person</strong>, not just spend a working season there, with three stated goals: (1) actually use/study the prize texts on-site, (2) spend time with <strong>Caris ex Criamon</strong>, the magus he faced in the Dimicatio final — a fellow Criamon who, by his own account, hasn't been among his own order in a very long time, and (3) get properly briefed on the Tribunal politics the covenant has just stepped into, which he admits he still doesn't fully understand.</p><p>His ship will return for him come <strong>spring 1224</strong>.</p><p>Dagmar's wintering there in person also serves as the covenant's <strong>formal acknowledgment</strong> of the (non-vassal, protector/patron-flavored) relationship with Oleron — no separate representative needed — and he offered the covenant's trade/commerce capacity as a thank-you gesture.</p>"
+    "body_text": "The covenant's tournament-prize books and texts are going to **Oleron** — the book-storage question left open when Bertrand ex Verditius denied any arrangement (see the earlier Tribunal-week entries) resolves here, quietly, in Oleron's favor, consistent with how warmly Raoul had already been treating the covenant.\n**Dagmar will winter at Oleron in person**, not just spend a working season there, with three stated goals: (1) actually use/study the prize texts on-site, (2) spend time with **Caris ex Criamon**, the magus he faced in the Dimicatio final — a fellow Criamon who, by his own account, hasn't been among his own order in a very long time, and (3) get properly briefed on the Tribunal politics the covenant has just stepped into, which he admits he still doesn't fully understand.\nHis ship will return for him come **spring 1224**.\nDagmar's wintering there in person also serves as the covenant's **formal acknowledgment** of the (non-vassal, protector/patron-flavored) relationship with Oleron — no separate representative needed — and he offered the covenant's trade/commerce capacity as a thank-you gesture.\n**Winter reading plan at Oleron:** Dagmar splits two seasons of study — **The Babble Within Thought** in Fall, and a personal loan from **Caris** (his old Dimicatio-final rival, now something like a mentor-in-residence at Oleron) in Winter.",
+    "body_html": "<p>The covenant's tournament-prize books and texts are going to <strong>Oleron</strong> — the book-storage question left open when Bertrand ex Verditius denied any arrangement (see the earlier Tribunal-week entries) resolves here, quietly, in Oleron's favor, consistent with how warmly Raoul had already been treating the covenant.</p><p><strong>Dagmar will winter at Oleron in person</strong>, not just spend a working season there, with three stated goals: (1) actually use/study the prize texts on-site, (2) spend time with <strong>Caris ex Criamon</strong>, the magus he faced in the Dimicatio final — a fellow Criamon who, by his own account, hasn't been among his own order in a very long time, and (3) get properly briefed on the Tribunal politics the covenant has just stepped into, which he admits he still doesn't fully understand.</p><p>His ship will return for him come <strong>spring 1224</strong>.</p><p>Dagmar's wintering there in person also serves as the covenant's <strong>formal acknowledgment</strong> of the (non-vassal, protector/patron-flavored) relationship with Oleron — no separate representative needed — and he offered the covenant's trade/commerce capacity as a thank-you gesture.</p><p><strong>Winter reading plan at Oleron:</strong> Dagmar splits two seasons of study — <strong>The Babble Within Thought</strong> in Fall, and a personal loan from <strong>Caris</strong> (his old Dimicatio-final rival, now something like a mentor-in-residence at Oleron) in Winter.</p>"
   },
   {
     "file": "045_2026-05-23_season-plans-ireland-the-isle-of-man-and-a-covenant-full-of-.md",
@@ -2536,23 +2533,6 @@
     "body_html": "<p>The <strong>Brineborn</strong> and <strong>Scholar's Wake</strong> drop the party just past <strong>Dublin</strong>, then continue up the coast to <strong>Drogheda</strong> to spare them the walk before turning off to winter at the <strong>Isle of Man</strong> — the crews, not the travelers; the plan is to reconvene back in Dublin once the ice breaks in spring.</p><p>Heading inland toward the <strong>Hill of Tara</strong> — the seat of the Hibernian Tribunal's own meeting-place, ringed by burial mounds Éogan has seen before as an apprentice — the party is stopped by <strong>three armed men</strong> on the road, plausibly a toll, plausibly closer to banditry.</p><p><strong>Éogan talks them down entirely</strong> — a Communication roll in Gaelic using his travel-jargon specialty, dropping into the local dialect convincingly enough that the toll-men immediately clock him as native to the area and wave the group through, half-apologizing for having pegged them as an easy foreign mark.</p><p>An Intelligence-based <strong>Ireland/magical-sites</strong> check (very strong roll) turns up the <strong>Hill of Uisneach</strong> just off the route — a site of old fire festivals and bird-flight divination, especially potent for reading the coming winter's severity when visited in the fall. The party detours to stop there.</p><p>Continuing deeper toward <strong>Cruachan</strong>, close to Samhain, the land shifts character — genuine threshold territory, \"the monstrous, the uncanny, the underworld\" close to the surface. Éogan tells Stijntje ghost-stories about <strong>Fomorians</strong> still lurking in the forests, partly to keep her steering clear of exactly the places that need steering clear of.</p><p>Cruachan itself isn't a proper Hermetic covenant — scattered <strong>magical enclaves</strong>, some temporary, some closer to permanent ritual-farming settlements. Hermetic magi are treaty-bound to <strong>no more than three days at a time</strong> inside Connacht itself, so the party keeps their stop brief before pushing on north to winter at <strong>Carrick</strong>.</p>"
   },
   {
-    "file": "054_2026-06-20_looking-to-1224-back-to-scarem-montem-and-a-still-unfinished.md",
-    "title": "Looking to 1224: back to Scarem Montem, and a still-unfinished prize list",
-    "icon": "📅",
-    "activity_type": "Covenant Decision",
-    "cast": [
-      "Wilhelm Stienauer"
-    ],
-    "timeline": "❄️ Winter 1223-24",
-    "date": "Fall 1223",
-    "sort_iso": "1223-10-15T12:00",
-    "notes": "Forward-looking beats confirmed for next year, plus two open threads the GM flagged as still pending on their end.",
-    "season_activity": "",
-    "status": "Historical",
-    "body_text": "**1224:** once winter breaks, **Wilhelm heads to Scarem Montem** — \"perhaps with some backup\" — to retrieve his stolen Latin thesis copy in person.\n**Open thread — remaining prize picks.** The GM acknowledged their notes on the covenant's full Tribunal prize list (beyond the Mont-Saint-Michel tide pools, the Terram summa, and Subtle Knives already locked in) were incomplete going into this session and need a second pass before the remaining ~20 prize pawns can be resolved.\n**Open thread — vis-source delegation.** With a much larger prize/resource footprint than before, the covenant will need to actively decide who staffs which vis-harvesting season and where — flagged as \"too much to think about right now,\" deferred to once the full resource list is in hand. Noted in passing: harvesting conventions vary by source — some (like Fire From the Sky) require being present for a specific trigger event, others can be left to accumulate and harvested later as needed, Hibernian-hedge-tradition style.",
-    "body_html": "<p><strong>1224:</strong> once winter breaks, <strong>Wilhelm heads to Scarem Montem</strong> — \"perhaps with some backup\" — to retrieve his stolen Latin thesis copy in person.</p><p><strong>Open thread — remaining prize picks.</strong> The GM acknowledged their notes on the covenant's full Tribunal prize list (beyond the Mont-Saint-Michel tide pools, the Terram summa, and Subtle Knives already locked in) were incomplete going into this session and need a second pass before the remaining ~20 prize pawns can be resolved.</p><p><strong>Open thread — vis-source delegation.</strong> With a much larger prize/resource footprint than before, the covenant will need to actively decide who staffs which vis-harvesting season and where — flagged as \"too much to think about right now,\" deferred to once the full resource list is in hand. Noted in passing: harvesting conventions vary by source — some (like Fire From the Sky) require being present for a specific trigger event, others can be left to accumulate and harvested later as needed, Hibernian-hedge-tradition style.</p>"
-  },
-  {
     "file": "059_2026-07-11_wintering-at-carrick-a-border-fortress-town-and-an-idiosyncr.md",
     "title": "Wintering at Carrick: a border fortress town, and an idiosyncratic Bonisagus",
     "icon": "🏰",
@@ -2564,29 +2544,12 @@
     ],
     "timeline": "❄️ Winter 1223-24",
     "date": "Winter 1223-24",
-    "sort_iso": "1223-11-01T12:00",
+    "sort_iso": "1223-11-15T12:00",
     "notes": "Carrick turns out to be a strategic chokepoint disproportionately fortified for its size. Dustin spends the winter soaking up language and culture with Éogan translating; en route they pass a Bonisagus magus whose narrow, idiosyncratic focus on a handful of Arts baffles Dustin.",
     "season_activity": "",
     "status": "Historical",
     "body_text": "**Carrick**, though a small town, sits at a geographic **bottleneck** along the northern valley route through Ireland — the natural corridor an English invasion would have to funnel through — and is built up militarily well beyond what its population would otherwise justify. Not because it defends anything valuable in itself, but because whoever holds it can stall an advance.\nInterior Ireland reads less like a melting pot and more like a **salad bowl** — communities half a mile apart keeping fiercely distinct dialects, folklore, and even magical idiosyncrasies, without necessarily being hostile to their neighbors. On the way in, the party passes a **Bonisagus magus** who has narrowed his entire practice down to a handful of Arts and Techniques, to the flat exclusion of everything else — a decision that reads as arbitrary rather than tactical, and leaves Dustin quietly baffled.\n**Dustin** spends his downtime soaking in language and culture (beyond his tutoring obligations); **Éogan** acts as willing translator and uses the time to get to know **Stijntje** better.",
     "body_html": "<p><strong>Carrick</strong>, though a small town, sits at a geographic <strong>bottleneck</strong> along the northern valley route through Ireland — the natural corridor an English invasion would have to funnel through — and is built up militarily well beyond what its population would otherwise justify. Not because it defends anything valuable in itself, but because whoever holds it can stall an advance.</p><p>Interior Ireland reads less like a melting pot and more like a <strong>salad bowl</strong> — communities half a mile apart keeping fiercely distinct dialects, folklore, and even magical idiosyncrasies, without necessarily being hostile to their neighbors. On the way in, the party passes a <strong>Bonisagus magus</strong> who has narrowed his entire practice down to a handful of Arts and Techniques, to the flat exclusion of everything else — a decision that reads as arbitrary rather than tactical, and leaves Dustin quietly baffled.</p><p><strong>Dustin</strong> spends his downtime soaking in language and culture (beyond his tutoring obligations); <strong>Éogan</strong> acts as willing translator and uses the time to get to know <strong>Stijntje</strong> better.</p>"
-  },
-  {
-    "file": "060_2026-07-11_continuing-the-tribunal-prize-draft-falcons-cliff-and-dagmar.md",
-    "title": "Continuing the tribunal prize draft: Falcon's Cliff, and Dagmar's winter reading list",
-    "icon": "🦅",
-    "activity_type": "Research",
-    "cast": [
-      "Dagmar"
-    ],
-    "timeline": "❄️ Winter 1223-24",
-    "date": "Winter 1223-24",
-    "sort_iso": "1223-11-15T12:00",
-    "notes": "The tribunal prize draft continues asynchronously. The covenant adds Falcon's Cliff to its claimed vis sources, and Dagmar picks two library texts to read over the winter at Oleron — one of them a Mentem summa fit for a Criamon studying Mira/Caris's own tradition.",
-    "season_activity": "",
-    "status": "Historical",
-    "body_text": "**Vis source claimed: Falcon's Cliff** — a falcon's nest on a coastal cliff not far northwest of the covenant's usual range, where a serpent tries to steal the egg each year. Preventing the theft yields Animal vis; catching the snake after a successful theft yields Vim instead. Flagged as one of the most conveniently reachable options on offer.\n**Library texts claimed:** \"**The Compact Explained**\" (a tractatus on Order of Hermes Lore) and \"**The Babble Within Thought**\" (a Mentem summa, Level 12 · Quality 11) — the latter picked specifically as a Criamon-relevant text.\n**Winter reading plan at Oleron:** Dagmar splits two seasons of study — **The Babble Within Thought** in Fall, and a personal loan from **Caris** (his old Dimicatio-final rival, now something like a mentor-in-residence at Oleron) in Winter.",
-    "body_html": "<p><strong>Vis source claimed: Falcon's Cliff</strong> — a falcon's nest on a coastal cliff not far northwest of the covenant's usual range, where a serpent tries to steal the egg each year. Preventing the theft yields Animal vis; catching the snake after a successful theft yields Vim instead. Flagged as one of the most conveniently reachable options on offer.</p><p><strong>Library texts claimed:</strong> \"<strong>The Compact Explained</strong>\" (a tractatus on Order of Hermes Lore) and \"<strong>The Babble Within Thought</strong>\" (a Mentem summa, Level 12 · Quality 11) — the latter picked specifically as a Criamon-relevant text.</p><p><strong>Winter reading plan at Oleron:</strong> Dagmar splits two seasons of study — <strong>The Babble Within Thought</strong> in Fall, and a personal loan from <strong>Caris</strong> (his old Dimicatio-final rival, now something like a mentor-in-residence at Oleron) in Winter.</p>"
   },
   {
     "file": "061_2026-07-11_kariss-parting-gift-erroneous-meditations-on-the-enigma.md",
