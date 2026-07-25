@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sjórseiðr — Integrating a New Magic System</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86;
+  --purple:#5b3a8a; --green:#3e6b35;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;
+  min-height:100vh;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(120,80,30,.06) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(90,60,20,.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 50% 85%, rgba(120,80,30,.05) 0 2px, transparent 3px);
+  background-size:140px 140px,180px 180px,160px 160px;opacity:.6;mix-blend-mode:multiply;
+}
+.wrap{position:relative;z-index:1;max-width:820px;margin:0 auto;padding:32px 20px 80px}
+a{color:var(--teal-bright)}
+
+header{border-bottom:2px solid var(--line);padding-bottom:16px;margin-bottom:22px}
+.crumb{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--rust-bright);margin:6px 0 4px}
+.subtitle{font-style:italic;color:var(--ink-soft);font-size:14.5px;margin:0}
+
+.section{margin:30px 0}
+.section-title{font-family:'Cinzel',serif;font-size:14px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--rust-bright);border-bottom:1px solid rgba(120,90,40,.35);margin:0 0 12px;padding-bottom:5px}
+.section-sub{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.04em;text-transform:uppercase;
+  color:var(--ink-soft);margin:20px 0 6px}
+p{font-size:15.5px;line-height:1.62;color:var(--ink)}
+p.lede{font-size:16.5px;color:var(--ink-soft)}
+ul,ol{font-size:15.5px;line-height:1.6;color:var(--ink)}
+li{margin-bottom:6px}
+strong{color:var(--rust)}
+code{font-family:'Cinzel',serif;font-size:13px;background:rgba(120,90,40,.1);padding:1px 6px;border-radius:4px}
+
+.note-flag{font-size:14px;font-style:italic;color:var(--ink-soft);margin:0 0 18px;
+  padding:11px 15px;background:rgba(120,90,40,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0}
+
+/* stepped point thresholds */
+.tier-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin:14px 0}
+.tier{background:rgba(244,235,213,.6);border:1px solid rgba(120,90,40,.35);border-radius:9px;padding:13px 15px}
+.tier h4{font-family:'Cinzel',serif;font-size:14px;color:var(--rust-bright);margin:0 0 3px}
+.tier .pts{font-family:'Cinzel',serif;font-size:12px;color:var(--gold);letter-spacing:.03em;margin-bottom:7px}
+.tier p{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin:0}
+
+/* verbatim rules quote */
+.rules{position:relative;margin:14px 0 8px;padding:16px 18px 14px;
+  background:rgba(245,238,220,.75);border:1px solid rgba(120,90,40,.4);border-radius:8px;
+  box-shadow:0 1px 0 rgba(255,255,255,.4) inset}
+.rules::before{content:"Rules text — verbatim";position:absolute;top:-9px;left:14px;
+  font-family:'Cinzel',serif;font-size:10px;letter-spacing:.09em;text-transform:uppercase;
+  color:var(--ink-soft);background:var(--parch);padding:0 8px;border:1px solid rgba(120,90,40,.35);border-radius:10px}
+.rules p{font-size:14.5px;line-height:1.58;margin:9px 0}
+.rules p:first-of-type{margin-top:4px}
+.rules p:last-of-type{margin-bottom:0}
+.cite{font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.02em;color:var(--ink-soft);
+  margin:4px 0 22px;padding-left:2px}
+.cite::before{content:"— ";}
+
+.applied{background:rgba(44,107,102,.07);border:1px solid rgba(44,107,102,.3);border-radius:9px;padding:4px 18px 10px;margin:14px 0}
+.applied .section-sub{color:var(--teal)}
+
+.xref{font-size:13.5px;color:var(--ink-soft)}
+.xref code{background:rgba(44,107,102,.12)}
+
+footer{text-align:center;margin-top:48px;font-size:12.5px;color:var(--ink-soft);opacity:.8;
+  border-top:1px solid rgba(120,90,40,.3);padding-top:16px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="crumb"><a href="index.html">Sjórseiðr</a> · Storyteller · GM Reference</div>
+    <h1>Integrating a New Magic System into Hermetic Theory</h1>
+    <p class="subtitle">The Original Research → Breakthrough → Integration track — how a covenant magus turns
+      folk magic (or any non-Hermetic tradition) into something the Order can learn.</p>
+  </header>
+
+  <p class="note-flag">Prep reference for the plans tracked as
+    <a href="open_questions.html">t019</a> (Wilhelm's folk-magic "pocket" system),
+    <a href="open_questions.html">q017</a> (learning new folk-magic guidelines), and
+    <a href="open_questions.html">tl025</a> (how Magic Theory is created from scratch).
+    Everything in the boxed passages below is reproduced <strong>verbatim</strong> from the rules; the
+    connecting text and the applied notes are the GM's own framing.</p>
+
+  <div class="section">
+    <div class="section-title">The shape of it, in one breath</div>
+    <p class="lede">A magus cannot simply "learn" a rival tradition. To bring a non-Hermetic practice inside
+      Hermetic magic he mounts a <strong>research project</strong> that accumulates <strong>breakthrough
+      points</strong> until it crosses a threshold. Points come from two engines — blind
+      <strong>experimentation</strong>, and studying the foreign magic for <strong>insight</strong>
+      (the <em>Integration</em> path) — and the two can be mixed in a single project. When the threshold is
+      reached, the discovery is <strong>stabilized</strong> (paying Warping), and only <em>then</em> can it be
+      taught to other magi, usually as <strong>Supernatural Virtues</strong>.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Step 1 · Decide the size of the Breakthrough</div>
+    <p>The troupe must define the intended result <em>in advance</em> and agree on its scale. Folk magic is
+      explicitly a <strong>Major Breakthrough</strong> — the rules name it directly.</p>
+
+    <div class="tier-grid">
+      <div class="tier">
+        <h4>Minor</h4>
+        <div class="pts">~30 points</div>
+        <p>A new Range, Target, or Duration — adds to existing theory without reaching the Limits of Magic.</p>
+      </div>
+      <div class="tier">
+        <h4>Major</h4>
+        <div class="pts">~45 points</div>
+        <p>Pushes the limits without breaking them. <strong>Incorporating hedge magic is a Major
+          Breakthrough</strong>, taught onward as Supernatural Virtues.</p>
+      </div>
+      <div class="tier">
+        <h4>Hermetic</h4>
+        <div class="pts">~60 points</div>
+        <p>Breaks a Lesser Limit of Magic (e.g. a new Arcane Ability). Once in 450 years: Bonisagus's Parma.</p>
+      </div>
+    </div>
+
+    <div class="rules">
+      <p>To achieve an arcane discovery, you must accumulate a number of <strong>breakthrough points</strong>
+        determined by the type of Breakthrough your magus is attempting. There are three kinds of Breakthrough:
+        <strong>Minor, Major</strong> and <strong>Hermetic</strong>. Note that it is recommended that the exact
+        number of breakthrough points required may be varied, so the players do not know the precise number
+        needed for the Breakthrough.</p>
+      <p>A <strong>Minor Breakthrough</strong> is a development that is immediately useful and applicable in the
+        existing framework of Hermetic magic, such as a new Range, Target or Duration. It improves upon or adds
+        to existing theory without truly reaching the limits of magic. A Minor Breakthrough typically requires
+        around 30 breakthrough points. In many sagas, Minor Breakthroughs happen easily enough that a maga can
+        expect to achieve this goal once or twice during her lifetime. Minor Breakthroughs could be more common,
+        but are few because most magi Bonisagi have loftier goals. Why invent a new Range when you can attempt
+        to break a Hermetic Limit? Grandiosity usually propels magi toward harder projects.</p>
+      <p>A <strong>Major Breakthrough</strong> pushes those limits, but does not break them; these include
+        Hermetic Virtues for Gifted characters. Incorporating hedge magic into Hermetic theory is a Major
+        Breakthrough, and the incorporation can then be taught to others as Supernatural Virtues. A Major
+        Breakthrough typically requires around 45 breakthrough points. Notatus' development of the
+        <em>Aegis of the Hearth</em> was a Major Breakthrough, a variable spell based on Bonisagus' Parma Magica.
+        Major Breakthroughs make a magus famous. With persistence, a troupe playing in a fast saga could
+        realistically see a player make a Major Breakthrough.</p>
+      <p>A <strong>Hermetic Breakthrough</strong> is research that breaks one of the Lesser Limits of Magic, for
+        example a new Arcane Ability or the ability to cast permanent duration spells without vis. Hermetic
+        Breakthroughs re-write the theory books; the only Hermetic Breakthrough in 450 years was the development
+        of the Parma Magica by Bonisagus, which broke the Lesser Limit of Magic Resistance, a limit that still
+        binds all known forms of nonHermetic magic. A Hermetic Breakthrough typically requires around 60
+        breakthrough points.</p>
+      <p>A Breakthrough may be something entirely new, born from the imagination of a creative maga. It may also
+        be based on a form of non-Hermetic magic, as a magus tries to make it possible for Hermetic magi to do
+        something that non-Hermetic wizards do. In either case, the researcher may accumulate breakthrough points
+        through experimentation, as described later. In the latter case, the magus may also study the
+        non-Hermetic magic, seeking insights into its nature and applying them to Hermetic magic. Both of these
+        approaches yield breakthrough points, and points from both sources may be mixed in a single project. In
+        either case, the troupe must define the result of the research in advance and agree on the level of
+        Breakthrough. Success will change the saga, and so it is important that the whole troupe is happy with
+        those changes. <em>Ancient Magic</em> and <em>Hedge Magic Revised Edition</em> contain a large number of
+        suggested Breakthroughs that would allow a magus to incorporate certain aspects of non-Hermetic magic
+        into Hermetic theory. These can also serve as inspiration for Breakthroughs that are not linked to any
+        existing tradition.</p>
+    </div>
+    <p class="cite">Ars Magica 5th ed., Laboratory ch., "The Breakthrough" (armdef-0.4-laboratory).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Step 2a · Earn points by Experimentation (Original Research)</div>
+    <p>Invent an ordinary Hermetic spell or lesser/charged enchantment that <em>somehow embodies</em> the idea,
+      then experiment on it. You are fishing for the <strong>Discovery</strong> result on the Extraordinary
+      Results Chart; the trick is that your risk modifier is spent nudging that <em>roll</em> rather than your
+      Lab Total. Magic Theory caps the modifier: <code>+1 per 5 Magic Theory</code>, so +2 needs MT 6, +3 needs
+      MT 11.</p>
+
+    <div class="rules">
+      <p>Once you have determined what sort of Breakthrough you would like to accomplish, you must invent
+        something Hermetically that somehow incorporates your idea. This can be a spell or a magical enchantment,
+        either a lesser enchantment or a charged item. Detail the effect fully, as per the normal rules. Since
+        you are searching for clues aimed at surpassing regular Hermetic theories, you must experiment, using the
+        rules found in the Arcane Experimentation section earlier, including choosing a risk modifier for your
+        experiment and rolling on the Extraordinary Results Chart. For your original research to be fruitful you
+        must roll the Discovery result on the Extraordinary Results Chart. Fortune plays a large roll in the
+        research process. However, you can hedge your bet with original research in a way that you can not with
+        regular experimentation. Instead of adding your risk modifier into your Lab Total during the season, you
+        use that modifier to adjust your roll on the Extraordinary Results Chart. The risk modifier still runs
+        the range of +1 to +3, but you are restricted in your choice by your Magic Theory score. For every five
+        points or fraction thereof of Magic Theory (including Puissant Magic Theory) you may choose a risk
+        modifier of 1. Thus, to chose a risk modifier of +2 your Magic Theory must be 6 or higher, and a risk
+        modifier of +3 requires a Magic Theory of 11+.</p>
+      <p>Each spell or magical enchantment can only lead to one discovery. You may repeatedly invent the same
+        spell or enchantment experiment until a discovery is rolled, even if the experiment was a success. Thus,
+        you may accumulate many usable versions of the same spell in process of your research. However, once a
+        specific experiment yields a Discovery, you may no longer explore that spell or magical enchantment for
+        further discoveries.</p>
+    </div>
+    <p class="cite">Ars Magica 5th ed., Laboratory ch., "Experimentation (Arcane Discovery)" (armdef-0.4-laboratory).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Step 2b · Earn points by Integration (Insight)</div>
+    <p>The path most relevant to a covenant sitting on stacks of hedge-wizard material. Study a
+      <strong>text</strong>, a <strong>relic</strong>, or a living/ghostly <strong>teacher</strong> of the
+      tradition. Each season: a stress roll of <code>Int + Magic Theory vs. Ease Factor 18</code> (Inventive
+      Genius adds 3). Success yields one <strong>insight</strong>; a botch is a false insight that only reveals
+      itself when the effect turns out entirely Hermetic or inert.</p>
+
+    <div class="rules">
+      <p>Insight can also be gained from studying some feature of a non-Hermetic magical practice. Every insight
+        the magus gains allows him to produce a partially Hermetic effect incorporating some aspect of the magic
+        in question. As he produces more of these effects, he gains the broader understanding necessary to
+        incorporate that aspect into Hermetic theory as a whole.</p>
+      <p>The seasons spent gaining insight produce Laboratory Texts. Any magus may study these Laboratory Texts
+        over the course of a season in order to gain the same insight for himself, even without direct access to
+        the artifacts. Summaries of Laboratory Texts are not useful in this way, however; only the whole thing
+        can be used. For purposes of copying, insight Laboratory Texts have a level equal to the typical number
+        of breakthrough points needed for the type of Breakthrough in question.</p>
+      <p>There are three sources of insight: <strong>texts</strong>, <strong>relics</strong> and
+        <strong>teachers</strong>.</p>
+      <p><em>Texts</em> are books and tomes, symbolic wall paintings, or other explanatory sources which describe
+        how to learn, perform or cast a magical effect. If the text contains the information needed to improve a
+        Supernatural Ability, a character who already had the Ability could use it, as per the normal rules. Most
+        Hermetic magi however, do not have other Supernatural Abilities. Alternatively, the text may contain the
+        rites and practices needed to perform a magical spell or ritual associated with an ancient magical
+        tradition.</p>
+      <p><em>Relics</em> are the mystical devices or sacred items enchanted by practitioners of the tradition,
+        and incorporating unique aspects of that tradition. Additionally, a relic may be an on-going mystical
+        effect caused by the magical tradition. Like Hermetic magical devices, a magus is able to investigate the
+        device to learn its secrets and unlock the methods used to craft it.</p>
+      <p><em>Teachers</em> are individuals who possess the Supernatural Abilities associated with the ancient
+        magic and are able and willing to instruct a Hermetic magus. For contemporary traditions of non-Hermetic
+        magic, such individuals are relatively accessible, although close collaboration with a "hedge wizard"
+        might harm a maga's reputation. The ghosts of practitioners of extinct traditions may remain in Mythic
+        Europe, and might be convinced to teach a maga.</p>
+      <p>For every season a magus spends investigating a source of insight, make a stress roll of Intelligence +
+        Magic Theory against an Ease Factor of 18. Inventive Genius adds three to this roll, and some sources of
+        insight may add their own modifiers. If the roll succeeds, the magus gains an insight. If it fails, he
+        learns nothing now, but may try again in another season. He may do other things before returning to his
+        study. On a botch, the magus thinks he has an insight, but does not. He realizes this if he creates an
+        effect, as described below, in an attempt to use the insight; the final product is entirely Hermetic, or
+        simply non-functional.</p>
+      <p>A single source can generally only provide a single insight, although there may be rare exceptions. The
+        same source provides the same insight for any magus who studies it.</p>
+    </div>
+    <p class="cite">Ars Magica 5th ed., Laboratory ch., "Integration" (armdef-0.4-laboratory).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Step 3 · Cash each insight in — "Creating the Effect"</div>
+    <p>An insight doesn't hand you points directly; it lets you invent <em>one specific effect</em> (chosen by
+      the troupe, at a fixed level you may not yet be able to reach). Invent it — experimenting as you go — and
+      banking succeeds: you gain <strong>breakthrough points equal to the effect's magnitude</strong>, then must
+      find a fresh source of insight before repeating.</p>
+
+    <div class="rules">
+      <p>A particular insight allows the researcher to create one, specified effect. This effect might be a spell,
+        or an effect enchanted into an item. It could, conceivably, be another laboratory project; anything that
+        uses a Lab Total and creates something. However, spells are by far the most common, followed by item
+        enchantments. The magus must experiment while creating the effect, as he is most certainly stretching the
+        boundaries of Hermetic magic.</p>
+      <p>The researcher does not get to choose the effect for which he receives insight, and as the level of the
+        effect is fixed, the insight might be for an effect he cannot yet invent. For example, the effect might be
+        level 40, while the researcher has a Lab Total of 32. In that case, the researcher can increase his Lab
+        Total and then work on the effect.</p>
+      <p>The researcher must invent exactly the effect inspired by the insight. He may not vary the Range,
+        Duration, or Target, or any other parameters. As the magus must experiment while inventing the effect,
+        the result may be slightly different, as a result of rolls on the Extraordinary Results table.</p>
+      <p>If the effect is successfully created, the magus gains a number of breakthrough points equal to the
+        magnitude of the effect. This applies even if the final effect is warped or has a side effect. These
+        points are added to the magus's running total, and he must find another source of insight before
+        repeating the procedure.</p>
+    </div>
+    <p class="cite">Ars Magica 5th ed., Laboratory ch., "Creating the Effect" (armdef-0.4-laboratory).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Step 4 · Stabilize the discovery (the Warping bill)</div>
+    <p>Points earned from the <em>experimentation</em> engine aren't banked until you <strong>stabilize</strong>
+      — repeat the exact experiment (same seasons, Lab Total, risk modifier, vis) without rolling a harmful
+      result. Success banks <code>1 point per magnitude</code> and writes a Lab Text — but stabilizing
+      <strong>always</strong> costs Warping (<code>magnitude − a simple die</code>), win or lose. Higher-magnitude
+      work reaches the Breakthrough faster but courts Wizard's Twilight.</p>
+
+    <div class="rules">
+      <p>After you have achieved your Discovery, you must stabilize that process through exact repetition. You
+        must repeat the experimentation, continuing for the same number of seasons and using the exact Lab Total
+        and risk modifier that you used to find your Discovery. If you used vis during your process you must
+        repeat the amount used. You must roll again on the Extraordinary Results Chart, and you must modify your
+        roll in the same direction as you did to make the Discovery. This means that if you added your risk
+        modifier to your roll your must add it again; if you subtracted your risk modifier from your roll you must
+        subtract it this second time.</p>
+      <p>If your stabilization season succeeds, you gain one breakthrough point per magnitude of the invented
+        Hermetic spell or enchanted item. You also create a Laboratory Text that explains your discovery.</p>
+      <p>As a side affect to this stabilization process, you receive Warping Points from your attempts to
+        understand this new magic. The number of Warping Points gained is the magnitude of the effect minus a
+        simple die. If you gain 2 or more Warping Points you must roll to avoid Wizard's Twilight (page 228). You
+        can obviously mitigate the chance of gaining Warping Points by experimenting with lower magnitude effects.
+        However, this lengthens your original research process, since it is your accumulated effect magnitudes
+        that ultimately add up to your Breakthrough. Experimenting with higher magnitude spells hastens you toward
+        your Breakthrough and increases your risk of Wizard's Twilight.</p>
+    </div>
+    <p class="cite">Ars Magica 5th ed., Laboratory ch., "Stabilizing the Unknown" (armdef-0.4-laboratory).</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Step 5 · After the Breakthrough — making it teachable</div>
+    <p>Crossing the threshold gives the researcher the result immediately (no Initiation needed for himself). But
+      spreading a Major Breakthrough is deliberately hard: it must be <strong>taught directly</strong> — a new
+      Ability seeded from the converted points, or a new Virtue passed on via an <strong>Initiation Script</strong>
+      or to an apprentice. Full, free access for <em>any</em> magus requires a <em>second</em> Major Breakthrough
+      to finish the integration.</p>
+
+    <div class="rules">
+      <p>Major and Hermetic Breakthroughs must be taught to Hermetic magi directly. An Ability may be taught in
+        the usual way, either in person or through books. The discoverer converts his breakthrough points into
+        experience points in the new Ability, so that a magus who accrued 50 breakthrough points to integrate an
+        Ability would start with a score of 4.</p>
+      <p>A new Virtue may be Initiated according to the normal rules for Mysteries. The discoverer gains the
+        Virtue when he completes the integration, and does not need to be Initiated. He does need to design an
+        Initiation Script, following the rules in the Long-Term Events chapter (page 388). The Virtue can also be
+        taught to an apprentice, following the rules given earlier. In theory, it could be taught to any magus,
+        but the penalties are likely to make that impossible in practice.</p>
+      <p>A second Major Breakthrough integrates a Major or Hermetic Breakthrough completely into Hermetic magic.
+        If this succeeds, any magus may create an effect using the Breakthrough as long as he has a Lab Text, and
+        then may use the Breakthrough freely. As for Minor Breakthroughs, the same applies to any magus taught
+        Arts or spells by a magus who understands the Breakthrough. Experimentation is always suitable for this
+        second Breakthrough, and integration may be used if there are suitable non-Hermetic traditions to
+        study.</p>
+    </div>
+    <p class="cite">Ars Magica 5th ed., Laboratory ch., "After the Breakthrough" (armdef-0.4-laboratory).</p>
+  </div>
+
+  <div class="section applied">
+    <div class="section-sub">Applied to Sjórseiðr — Wilhelm &amp; Dustin</div>
+    <p><strong>Wilhelm's "pocket" folk-magic system (t019)</strong> is, in these rules' own words, a
+      <strong>Major Breakthrough</strong> (~45 points): "Incorporating hedge magic into Hermetic theory is a
+      Major Breakthrough… taught to others as Supernatural Virtues." His stated roadmap maps cleanly onto the
+      Integration engine:</p>
+    <ul>
+      <li><strong>Mine Hermetic texts / send assistants to Ireland</strong> → gathering <em>sources of insight</em>
+        (texts, relics, teachers). Each source = one Int + Magic Theory vs. 18 roll for one insight.</li>
+      <li><strong>Turn that into actual Insight, ideally ceremonial spells folk wizards can learn</strong> → the
+        <em>Creating the Effect</em> loop; each banked effect gives points equal to its magnitude.</li>
+      <li><strong>Fold results back into the folk-magic system (formulaic casting, ceremonial casting, props)</strong>
+        → these are the <em>defined results</em> the troupe agrees on up front, delivered as Supernatural Virtues
+        once the ~45 points land and the discovery is stabilized.</li>
+    </ul>
+    <p class="xref">Two GM decisions this surfaces: <strong>(1)</strong> whether Wilhelm's tradition is treated
+      under <em>Hedge Magic Revised Edition</em> / <em>Ancient Magic</em> (both named in the rules as containing
+      ready-made Breakthroughs to lift) or improvised at the table; and <strong>(2)</strong> the
+      <a href="open_questions.html">q017</a> question — "does a <em>further</em> guideline in a branch you're
+      already initiated into get easier?" — is <em>not</em> answered by core: folk/hedge guideline progression
+      lives in the supplements plus your house ruling, and sits outside this core Integration track.</p>
+    <p class="xref"><strong>Dustin (Bonisagus, Puissant Magic Theory)</strong> is unusually well-suited to be the
+      one who <em>stabilizes</em> and teaches: the risk-modifier cap counts Puissant Magic Theory, and his
+      Inventive Genius adds +3 to insight rolls. For <a href="open_questions.html">tl025</a> ("how is Magic Theory
+      created from scratch"): the Ability itself advances normally, but <em>a whole new system</em> entering the
+      theory books is precisely this Breakthrough process — points converted into a new Ability/Virtue per
+      "After the Breakthrough."</p>
+  </div>
+
+  <footer>
+    GM reference · rules verbatim from the Ars Magica 5th ed. corpus (titterpig-dsl-arm5e / armdef 0.4,
+    Laboratory chapter) · framing and applied notes are the Storyteller's.
+    Cross-refs: <em>Hedge Magic Revised Edition</em>, <em>Ancient Magic</em> (non-core, not reproduced here).
+  </footer>
+</div>
+</body>
+</html>

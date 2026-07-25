@@ -95,8 +95,8 @@
       "id": "maelstroms-maw",
       "name": "Maelstrom's Maw",
       "owner": "formerly Nequam of Tytalus, then Kor Ex Flambeau",
-      "status": "Missing",
-      "description": "Nequam's ship, handed to Kor Ex Flambeau in Summer 1220. Survived a sky-ship crash during a meteor storm (Winter 1220-21), but confirmed missing — the ship never came in, and the covenant's Master Chart no longer tracks it. No longer part of the covenant's active fleet. Its captain, Absalom, moved on to captain the Tide of Memory.",
+      "status": "On sabbatical",
+      "description": "Nequam's ship, handed to Kor Ex Flambeau in Summer 1220. Survived a sky-ship crash during a meteor storm (Winter 1220-21). Kor is currently on sabbatical — a covenant member in good standing with no mutual obligations until his return — so the ship is off the active roster by arrangement (not lost); the Master Chart simply no longer tracks it while he is away. Its former captain, Absalom, moved on to captain the Tide of Memory.",
       "standing_crew": [
         "Kor Ex Flambeau",
         "Hob",
@@ -116,7 +116,13 @@
       "owner": "Wilhelm Stienauer",
       "status": "En route to Scarem Montem",
       "description": "Confirmed: this is the ship pirated from Scarem Montem — a Tremere-crewed vessel, raided by Valdemar's crew in Summer 1221. Yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. As of Spring 1224, it's under Wilhelm's control and heading back to Scarem Montem — handing them back their own hull as the trade chip for his stolen thesis.",
-      "standing_crew": ["Wilhelm Stienauer"]
+      "standing_crew": [
+        "Wilhelm Stienauer"
+      ],
+      "former_crew": [
+        "Joris Van Damme (captain)",
+        "\"One-Eye\" Dekker (mate)"
+      ]
     }
   ],
   "characters": {
@@ -287,7 +293,7 @@
     },
     "Kor Ex Flambeau": {
       "role": "Former magus (Flambeau)",
-      "affiliation": "Maelstrom's Maw — missing",
+      "affiliation": "Maelstrom's Maw — on sabbatical",
       "note": "Last known working on a giant hovering stone platform; missing along with the ship."
     },
     "Caris": {
@@ -312,22 +318,22 @@
     },
     "Hob": {
       "role": "Grog",
-      "affiliation": "Maelstrom's Maw — missing",
+      "affiliation": "Maelstrom's Maw — on sabbatical",
       "note": ""
     },
     "Cy": {
       "role": "Crew",
-      "affiliation": "Maelstrom's Maw — missing",
+      "affiliation": "Maelstrom's Maw — on sabbatical",
       "note": ""
     },
     "Galan": {
       "role": "Grog",
-      "affiliation": "Maelstrom's Maw — missing",
+      "affiliation": "Maelstrom's Maw — on sabbatical",
       "note": ""
     },
     "Rostan": {
       "role": "Crew",
-      "affiliation": "Maelstrom's Maw — missing",
+      "affiliation": "Maelstrom's Maw — on sabbatical",
       "note": ""
     }
   },
@@ -410,17 +416,25 @@
       "assignments": [
         {
           "ship": "tide-of-memory",
-          "crew": ["Dagmar"],
+          "crew": [
+            "Dagmar"
+          ],
           "note": "Falcon's Cliff harvest, then a solo rowboat exploration (with grogs, not the ship itself) of a newly discovered regio in sea caves near Carnac."
         },
         {
           "ship": "brineborn",
-          "crew": ["Éogan Dobhartha", "Dustin Page", "Stijntje Kuiper"],
+          "crew": [
+            "Éogan Dobhartha",
+            "Dustin Page",
+            "Stijntje Kuiper"
+          ],
           "note": "Return leg through Cruachan toward Dublin to reconvene with the ships once the ice breaks — now traveling with Rody, a changeling child being delivered to the Hermetic covenant near the Hill of Uisneach."
         },
         {
           "ship": "hound-of-cassel",
-          "crew": ["Wilhelm Stienauer"],
+          "crew": [
+            "Wilhelm Stienauer"
+          ],
           "note": "Heading back to Scarem Montem — returning the ship itself as the trade chip for Wilhelm's stolen thesis."
         }
       ]

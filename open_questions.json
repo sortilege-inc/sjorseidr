@@ -15,7 +15,7 @@
       "type": "Question",
       "category": "Tribunal / Prizes",
       "title": "What are the remaining ~20 prize pawns actually being spent on?",
-      "context": "Six picks are now locked in: Mont-Saint-Michel tide pools, the Terram summa \"De Lapii\", Subtle Knives, The Falcon's Cliff (v027, harvested by Dagmar in Spring 1224), \"The Babble Within Thought\" (Dagmar's winter reading pick), and \"The Compact Explained\" — all per tribunal_data.json. That's still only 6 of ~23 total picks; no comprehensive spend list exists anywhere in canon for the rest.",
+      "context": "Six picks are now locked in: Mont-Saint-Michel tide pools, the Terram summa \"De Lapii\", Subtle Knives, The Falcon's Cliff (v027, harvested by Dagmar in Spring 1224), \"The Babble Within Thought\" (Dagmar's winter reading pick), and \"The Compact Explained\" — all per tribunal_data.json. That's still only 6 of ~23 total picks; no comprehensive spend list exists anywhere in canon for the rest.\n\nUpdate (2026-07-25): Data-checked against tribunal_data.json — it holds prize_ranks (standings/seats by covenant), but there is no per-pawn spend list for Sjórseiðr's ~23 picks beyond the 6 already known. Nothing to auto-reconcile; this stays a genuine open question pending the GM's spend list.",
       "raised_in": "Session 7 (2026-06-20)",
       "raised_event": "Looking to 1224: back to Scarem Montem, and a still-unfinished prize list",
       "status": "Open",
@@ -48,7 +48,7 @@
       "type": "Thread",
       "category": "Research",
       "title": "Wilhelm's thesis still needs a maritime hedge-tradition example.",
-      "context": "Dowsing-for-fresh-water is confirmed; open-ocean current-finding or storm prediction is the thesis's weakest citation and the whole reason for the Ireland trip.",
+      "context": "Dowsing-for-fresh-water is confirmed; open-ocean current-finding or storm prediction is the thesis's weakest citation and the whole reason for the Ireland trip.\n\nUpdate (2026-07-25) — GM: this will be handled as part of session prep; following up after the rest of this open-questions backlog is cleared. The fieldwork to close it (the Ireland/Carrick trip, research assistants gathering hedge-tradition material) is already in motion — the open piece is whether it yields a concrete sea-faring hedge tradition (storm-prediction / current-finding) to firm up the thesis's weakest citation. Keep Open, prep-pending.",
       "raised_in": "Session 6 (2026-05-23)",
       "raised_event": "Wilhelm pitches Éogan on hedge-magic sea/weather traditions for the thesis",
       "status": "Open",
@@ -62,15 +62,15 @@
       "context": "Bridget of Scarem Montem (House Tremere) offered to hold Éogan's Tourney winnings outside Normandy's recall jurisdiction, as part of a broader Lotharingian-secession pitch. As of the Tribunal, Éogan had kept this to himself.",
       "raised_in": "Session 2 (2026-02-21)",
       "raised_event": "Bridget of Scarem Montem's Lotharingian pitch",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Resolved by GM (2026-07-25): Éogan is no longer sitting on it — he SHARED Bridget of Scarem Montem's Lotharingian pitch with the covenant as they departed the Tribunal. Integrated into the 'Post-Tribunal Reflections' proposed event (proposed_events.json p046): Éogan added to the cast, and a paragraph added covering his disclosure — the obscuring-spell approach, the offer to hold his winnings beyond Normandy's recall, and how it reads differently now that Scarem Montem stole the Tapestry and openly defected (c021). No longer a private card."
     },
     {
       "id": "t011",
       "type": "Thread",
       "category": "Plot",
       "title": "Dagmar has never surfaced what he saw of Valerian's contraband trade.",
-      "context": "Dagmar caught Valerian trading Rhine-Tribunal-contraband books with an unidentified Montverte magus and quietly walked away without confronting him or reporting it. A second, untrusted axis through the Montverte relationship that's never been addressed.",
+      "context": "Dagmar caught Valerian trading Rhine-Tribunal-contraband books with an unidentified Montverte magus and quietly walked away without confronting him or reporting it. A second, untrusted axis through the Montverte relationship that's never been addressed.\n\nUpdate (2026-07-25): GM flagged this as a live thread to FOLLOW UP (has a direction in mind). Kept Open as an active plot thread, not latent — the covenant will do something with Dagmar's filed-away knowledge of Valerian's Rhine-contraband trade.",
       "raised_in": "Session 2 (2026-02-21)",
       "raised_event": "Dagmar spots Valerian trading contraband",
       "status": "Open",
@@ -81,7 +81,7 @@
       "type": "Thread",
       "category": "Diplomacy",
       "title": "Does Hervé of Turris Vigilans believe the joust win was accidental, and does the mutual-defense pact still stand?",
-      "context": "Valdemar did flash the blue sash publicly at the joust against Hervé — verified_events.json's \"Joust vs. Hervé\" event confirms \"Valdemar flashed the blue sash in greeting — accord acknowledged,\" while Valdemar himself \"quietly insisted that it wasn't him\" about the win itself. So the pact WAS shown publicly (correcting this thread's earlier premise) — but whether Hervé actually believes the win was accidental, and whether he considers the pact still binding, remains unconfirmed.",
+      "context": "Valdemar did flash the blue sash publicly at the joust against Hervé — verified_events.json's \"Joust vs. Hervé\" event confirms \"Valdemar flashed the blue sash in greeting — accord acknowledged,\" while Valdemar himself \"quietly insisted that it wasn't him\" about the win itself. So the pact WAS shown publicly (correcting this thread's earlier premise) — but whether Hervé actually believes the win was accidental, and whether he considers the pact still binding, remains unconfirmed.\n\nUpdate (2026-07-25): Data-checked against verified_events.json — the pact DISPLAY is settled: the blue sash was flashed publicly at the joust (\"accord acknowledged\"), so that half of the thread is closed. What remains genuinely open is narrower: does Hervé actually believe the win was accidental, and does he still consider the mutual-defense pact binding? Keep open on that narrower question only.",
       "raised_in": "Session 5 (2026-05-09)",
       "raised_event": "Hervé of Turris Vigilans's mutual-defense pact for Valdemar",
       "status": "Open",
@@ -95,15 +95,15 @@
       "context": "Raoul's pitch: a top-three finish would trigger vassalage pressure from somebody, so pick the gentlest liege now. The party never took him up on it, but the two covenants ended up on excellent terms anyway after the Tribunal. Does Raoul ever raise it again? Update: verified_events.json's Day-4 morning covenant huddle already shows the party deciding \"Reconsider after standings settle; try to extract a favour or non-vassal alliance from Raoul instead of full vassalage\" — i.e. they've already moved past \"pick a liege\" toward a non-vassal deal. Looks superseded, but flagging for your call rather than closing it myself.",
       "raised_in": "Session 5 (2026-05-09)",
       "raised_event": "Raoul of Oleron's light-handed liege offer to Éogan",
-      "status": "Confirm to delete",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Closed as superseded (2026-07-25): the party has already moved past Raoul's \"pick a liege\" pitch. verified_events.json's Day-4 covenant huddle shows them opting to \"extract a favour or non-vassal alliance from Raoul instead of full vassalage,\" and the two covenants ended the Tribunal on excellent terms. Nothing is blocked on the original vassalage pitch; if Raoul ever revives it, treat it as a fresh hook."
     },
     {
       "id": "t018",
       "type": "Thread",
       "category": "Diplomacy",
       "title": "Llewellyn's time-crystal offer to Dagmar is still on the table.",
-      "context": "A quartz crystal \"resonant with the platonic ideal of time\" — effectively a magical atomic clock for detecting time dilation in regiones, directly complementing Dagmar's commission with Paulus. Price: accompany Llewellyn into a regio of Dagmar's choosing. Dagmar expressed cautious interest; nothing signed.",
+      "context": "A quartz crystal \"resonant with the platonic ideal of time\" — effectively a magical atomic clock for detecting time dilation in regiones, directly complementing Dagmar's commission with Paulus. Price: accompany Llewellyn into a regio of Dagmar's choosing. Dagmar expressed cautious interest; nothing signed.\n\nUpdate (2026-07-25) — GM: tee this up as potential PREP for the upcoming venture into the regio near Carnac (t025). The pairing: Dagmar can satisfy Llewellyn's price (\"accompany me into a regio of your choosing\") by choosing the Carnac regio, and the time-crystal (a time-dilation detector) is exactly the kit that exploration wants. Develop t018 and t025 together. Kept Open.",
       "raised_in": "Session 5 (2026-05-09)",
       "raised_event": "Llewellyn's time-crystal offer to Dagmar",
       "status": "Open",
@@ -114,7 +114,7 @@
       "type": "Consequence",
       "category": "Covenant Business",
       "title": "The three magically-sealed chests from the Hound of Cassel raid are still unopened.",
-      "context": "Legal status is a deliberately fuzzy area; the covenant decided to hold them \"for now,\" prepared to return them if Scarem Montem comes asking. Never revisited since. (Worth noting: Normandy Tribunal custom holds it's legal to raid non-magical items from another covenant — part of why keeping the chests was even a live option rather than an obvious violation.)",
+      "context": "Legal status is a deliberately fuzzy area; the covenant decided to hold them \"for now,\" prepared to return them if Scarem Montem comes asking. Never revisited since. (Worth noting: Normandy Tribunal custom holds it's legal to raid non-magical items from another covenant — part of why keeping the chests was even a live option rather than an obvious violation.)\n\nUpdate (2026-07-25) — GM: still unexplored; contents NOT yet defined. To be figured out once the open-questions backlog pass is complete (flagged for end-of-pass follow-up, alongside t032). Includes deciding the wrinkle: do the chests return with the Hound of Cassel (now going back to Scarem Montem under Wilhelm, t002), get kept/opened first, or become their own negotiation. Kept Open.",
       "raised_in": "Earlier session (pre-Tribunal)",
       "raised_event": "Debates about Valerian, new Tribunal, Chests, etc",
       "status": "Open",
@@ -128,15 +128,15 @@
       "context": "Confirmed missing by the GM. The ship never came in and the covenant's Master Chart no longer tracks it; neither Kor nor Nequam (its two former owners) remain part of the active roster. No search or resolution has ever been undertaken.",
       "raised_in": "Confirmed by the GM (2026-07-13)",
       "raised_event": "The handoff of the Maelstrom's Maw",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Canon set by GM (2026-07-25): the Maelstrom's Maw and Kor Ex Flambeau are NOT lost/mysterious — they are \"on sabbatical.\" Kor holds an on-paper covenant membership with no mutual obligations until his return: the covenant owes them nothing and nothing is owed to the covenant in the meantime. Off the active roster by arrangement, not a disappearance to be investigated. IMPLICATIONS: (1) decouples t029 — Absalom's possession thread no longer needs to explain the Maw's fate; it can stand alone. (2) DATA RECONCILIATION NEEDED: ships.json still describes the Maw as \"confirmed missing — the ship never came in, and the covenant's Master Chart no longer tracks it\"; that framing should be updated to the sabbatical status. (Offered to the GM 2026-07-25.)"
     },
     {
       "id": "c019",
       "type": "Consequence",
       "category": "Diplomacy",
       "title": "Confluensis's public 13th-place humiliation has soured relations, with no repair attempted.",
-      "context": "The \"Siege of Shame\" — zero pawns, tied to a historical cheating scandal — landed on Confluensis publicly, minutes before Bertrand ex Verditius flatly denied the book-storage arrangement Dagmar and Dustin had negotiated with him. The relationship is currently just... cold.",
+      "context": "The \"Siege of Shame\" — zero pawns, tied to a historical cheating scandal — landed on Confluensis publicly, minutes before Bertrand ex Verditius flatly denied the book-storage arrangement Dagmar and Dustin had negotiated with him. The relationship is currently just... cold.\n\nUpdate (2026-07-25) — GM: keep as an ACTIVE thread. The soured Confluensis relationship (Siege of Shame + Bertrand's cold \"I know of no arrangement\" renege) is a live consequence to play out — a publicly-humiliated leash/liege-tier covenant with reason to resent or retaliate against Sjórseiðr's rise; repair or fallout to be developed. Not background. Kept Open.",
       "raised_in": "Session 6 (2026-05-23)",
       "raised_event": "Bertrand denies the book-storage arrangement ever happened",
       "status": "Open",
@@ -147,10 +147,10 @@
       "type": "Consequence",
       "category": "Diplomacy",
       "title": "Sjórseiðr's dominant Tribunal win is being read as disruptive — Dietrich named no specifics.",
-      "context": "\"I believe they have made some enemies,\" from someone with no visibility into actual covenant politics, just ambient chatter. A first-place finish over three leash covenants (Confluensis, Montverte, and effectively Fudarus/Oleron's expectations) carries real seven-year resource consequences nobody has mapped out yet.",
+      "context": "\"I believe they have made some enemies,\" from someone with no visibility into actual covenant politics, just ambient chatter. A first-place finish over three leash covenants (Confluensis, Montverte, and effectively Fudarus/Oleron's expectations) carries real seven-year resource consequences nobody has mapped out yet.\n\nCUT — redundant (2026-07-25): self-evident from a #1 finish, and the one concrete live slice (soured Confluensis relations) is already tracked as the active thread c019. No independent value. Flagged for deletion.",
       "raised_in": "Session 6 (2026-05-23)",
       "raised_event": "Dietrich warns Wilhelm about the company he's keeping",
-      "status": "Open",
+      "status": "Confirm to delete",
       "resolution": ""
     },
     {
@@ -158,10 +158,10 @@
       "type": "Consequence",
       "category": "Diplomacy",
       "title": "Scarem Montem's defection to the Lotharingian Tribunal is still rippling, beyond the stolen-thesis entanglement.",
-      "context": "A vassal breaking from its liege (Montverte) at the host's own Tribunal, immediately after stealing the host's prize relic. Sjórseiðr's only current stake in this is Wilhelm's stolen manuscript — the wider political fallout (for Montverte, for the Lotharingian-secession question generally) hasn't touched the covenant directly yet.",
+      "context": "A vassal breaking from its liege (Montverte) at the host's own Tribunal, immediately after stealing the host's prize relic. Sjórseiðr's only current stake in this is Wilhelm's stolen manuscript — the wider political fallout (for Montverte, for the Lotharingian-secession question generally) hasn't touched the covenant directly yet.\n\nCUT — redundant (2026-07-25): the defection is already fully established in play-canon (verified_events event 111 — Scarem Montem stole the Tapestry and declared early for the Lotharingian Tribunal; the secession movement is documented in event 35). This item adds no independent open question of its own — any live stake is already tracked elsewhere (Wilhelm's stolen thesis under t002/t019; Éogan's disclosure under t010). Flagged for deletion.",
       "raised_in": "Session 5 (2026-05-09)",
       "raised_event": "Scarem Montem steals the Tapestry and declares for Lotharingia",
-      "status": "Open",
+      "status": "Confirm to delete",
       "resolution": ""
     },
     {
@@ -169,7 +169,7 @@
       "type": "Consequence",
       "category": "Reputation",
       "title": "Rán's public appearance at the Tribunal feast is accumulating whispered reputation damage.",
-      "context": "Murmurs of \"molesting the fairies\" circled the room when Valdemar introduced her openly. A Presence+Guile stress-die success held the appearance for the moment, but nobody has confronted it since — what would actually happen if the Tribunal investigated?",
+      "context": "Murmurs of \"molesting the fairies\" circled the room when Valdemar introduced her openly. A Presence+Guile stress-die success held the appearance for the moment, but nobody has confronted it since — what would actually happen if the Tribunal investigated?\n\nUpdate (2026-07-25) — GM: keep as an OPEN thread for follow-up, with a direction: someone from Confluensis may be getting ready to bring this (Rán's open faerie association) and OTHER concerns before the Grand Tribunal. This ties directly to c019 — it's a likely FORM of the soured Confluensis relationship turning into active retaliation (a quaesitorial/Grand-Tribunal complaint bundling Rán + the covenant's other exposed edges). Develop alongside c019.",
       "raised_in": "Session 2 (2026-02-21)",
       "raised_event": "Valdemar introduces Rán at the feast",
       "status": "Open",
@@ -180,7 +180,7 @@
       "type": "Thread",
       "category": "Research",
       "title": "Wilhelm's plan to turn folk magic into a real \"pocket\" magic system.",
-      "context": "Player's stated research roadmap: (1) mine Hermetic texts — probably a Root or two — for hedge-magic inspiration; (2) turn that into actual Insight, ideally as ceremonial spells folk wizards can learn; (3) send the research assistants out into Ireland to gather more raw material; (4) fold the results back into the folk-magic system properly, which needs formulaic spellcasting (no more halving rolls to cast), ceremonial casting (adding Aura + Philosophiae), and — as a bonus, since folk magic already uses them informally — a correct integration of props. Basic enchanting (already loosely possible via Magic Lore + vis) is flagged as a later, incremental step. Player's own assessment: the first three are \"REALLY EASY\" to incorporate — the Learned Magicians seem to have worked out parts of it already without any Magic Theory at all.",
+      "context": "Player's stated research roadmap: (1) mine Hermetic texts — probably a Root or two — for hedge-magic inspiration; (2) turn that into actual Insight, ideally as ceremonial spells folk wizards can learn; (3) send the research assistants out into Ireland to gather more raw material; (4) fold the results back into the folk-magic system properly, which needs formulaic spellcasting (no more halving rolls to cast), ceremonial casting (adding Aura + Philosophiae), and — as a bonus, since folk magic already uses them informally — a correct integration of props. Basic enchanting (already loosely possible via Magic Lore + vis) is flagged as a later, incremental step. Player's own assessment: the first three are \"REALLY EASY\" to incorporate — the Learned Magicians seem to have worked out parts of it already without any Magic Theory at all.\n\nUpdate (2026-07-25) — GM: follow-up needed, but BLOCKED on a resource dependency — the GM is converting the relevant hedge/folk-magic sourcebooks into the titterpig DSL format; revisit once those are in-hand. Core-rules scaffolding is already documented at integrating_magic.html (folk magic = Major Breakthrough via the Insight/Integration track → Supernatural Virtues); the converted supplements will supply the specific hedge-tradition content and settle the q017 rider (further-guideline progression within an already-initiated branch). Keep Open, awaiting resources.",
       "raised_in": "Player notes (2026-07-13)",
       "raised_event": "Wilhelm pitches Éogan on hedge-magic sea/weather traditions for the thesis",
       "status": "Open",
@@ -191,7 +191,7 @@
       "type": "Thread",
       "category": "Covenant Business",
       "title": "Wilhelm may pitch the covenant a mundane vis-factory proof-of-concept.",
-      "context": "Once he has his thesis back, Wilhelm's player floated getting the covenant to set up a mundane vis factory if they're short on vis — both a practical fix and a live proof-of-concept for his folk-magic theories.",
+      "context": "Once he has his thesis back, Wilhelm's player floated getting the covenant to set up a mundane vis factory if they're short on vis — both a practical fix and a live proof-of-concept for his folk-magic theories.\n\nUpdate (2026-07-25) — GM: BLOCKED. Follow up once t009 is resolved (the maritime hedge-tradition thesis example). Dependency chain: t020 → t009 (prep-pending) → t019 (folk-magic system, awaiting the sourcebook→DSL conversion) — plus Wilhelm retrieving his stolen thesis from Scarem Montem (his 1224 errand). Keep Open, blocked.",
       "raised_in": "Player notes (2026-07-13)",
       "raised_event": "Wilhelm's manuscript reveals a Divine-vis wrinkle",
       "status": "Open",
@@ -213,7 +213,7 @@
       "type": "Question",
       "category": "Research",
       "title": "How does learning a NEW folk-magic guideline work once you're already initiated into a branch?",
-      "context": "Fairly settled: folk magic can be learned via Original Research/Experimentation, or via initiation. Genuinely open: once initiated into a branch (e.g. abjuration, scrying, cursing, warding), does learning a further new guideline in that SAME branch require a full initiation script / Original Research again, or is it progressively easier — the way learning a new scrying guideline gets easier once you're already initiated into scrying generally? Player's stated preference is the latter.",
+      "context": "Fairly settled: folk magic can be learned via Original Research/Experimentation, or via initiation. Genuinely open: once initiated into a branch (e.g. abjuration, scrying, cursing, warding), does learning a further new guideline in that SAME branch require a full initiation script / Original Research again, or is it progressively easier — the way learning a new scrying guideline gets easier once you're already initiated into scrying generally? Player's stated preference is the latter.\n\nUpdate (2026-07-25): Not answerable from ArM5e core — folk/hedge-magic guideline progression lives in Hedge Magic Revised Edition / Rival Magic plus your house rules; core is silent. This is a GM ruling, not a lookup. (The core track for turning folk magic INTO Hermetic Virtues is documented at integrating_magic.html, but that is a different question from \"does a further guideline in an already-initiated branch get easier?\") Keeping Open as a ruling item.",
       "raised_in": "Player notes (2026-07-13)",
       "raised_event": "Dietrich pitches folk magic to scholars and a Redcap; Dustin interrogates him",
       "status": "Open",
@@ -224,7 +224,7 @@
       "type": "Question",
       "category": "Rules",
       "title": "Where did the mystery 15 XP (\"an unending supply of 11xp\") come from?",
-      "context": "Flagged live by the GM during Fall 1223 XP allocation — a stray, unexplained pool of pending experience showed up on at least one character sheet. The GM made a note to chase it down rather than let it get spent without knowing the source.",
+      "context": "Flagged live by the GM during Fall 1223 XP allocation — a stray, unexplained pool of pending experience showed up on at least one character sheet. The GM made a note to chase it down rather than let it get spent without knowing the source.\n\nUpdate (2026-07-25): Data-checked: the stray XP pool is NOT present in the exported magi.json (no '11xp'/'unending'/pending-XP field anywhere in it), so it's a Foundry-side sheet artifact, not something reconcilable from this repo. Needs a look at the live Foundry actor to trace the source; leaving Open with that pointer.",
       "raised_in": "Session 8 (2026-07-11)",
       "raised_event": "Tribunal experience spent: Finesse, an Aquam push, and a magic-theory boost",
       "status": "Open",
@@ -238,8 +238,8 @@
       "context": "The Aegis is specifically designed to exclude magical creatures — and Ka'wa'ill, the merfolk companion, is one. Wilhelm (a non-covenant human) gets a token via Éogan's Arcane Connection; it's unclear whether the same trick works for, or is even offered to, Ka'wa'ill.",
       "raised_in": "Session 8 (2026-07-11)",
       "raised_event": "Casting the annual Aegis of the Hearth near Harfleur",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Answered (2026-07-25) from ArM5e core (armdef-0.4-spells-vim, Aegis of the Hearth; armdef-0.4-long-term-events, Warping). Yes — more fundamentally than Wilhelm. Ka'wa'ill is a Might creature, and RAW \"No foreign supernatural creature with Might, of any type, can cross the boundary of the Aegis unless its Might exceeds the level of the Aegis.\" To enter he must either be made a native (\"Anyone who participated in the ritual to cast the Aegis is a native of that Aegis\") or be explicitly excluded (\"The ritual also allows certain individuals to be excluded from the effects of the Aegis\"); the covenant's token is the tracking device for that. A plain human like Wilhelm needs a token only so his own supernatural powers are not suppressed inside; Ka'wa'ill needs exclusion to cross at all. CONDITIONAL on q025: the Aegis is currently recorded at level 0 — if that is genuinely 0, any Might>0 creature already \"exceeds the level\" and crosses freely, making the token moot. Settle q025 to finalize."
     },
     {
       "id": "t022",
@@ -249,17 +249,28 @@
       "context": "Caris's loaned text is, per an exceptional Premonitions read, an extremely detailed diary-style account of someone who disappeared and came back, with the causal throughlines missing the way a dream account's would be. The parallel to Solving's own 1220 disappearance into Twilight is obvious and unaddressed in-fiction so far.",
       "raised_in": "Session 8 (2026-07-11)",
       "raised_event": "Caris's parting gift: Erroneous Meditations on the Enigma",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Confirmed canon by GM (2026-07-25): the text is genuinely what the Premonitions read revealed — an extraordinarily detailed, diary-form account of someone who vanished and came back, its causal throughlines missing the way a dream's would be, with a deliberate (not-subtle) parallel to Solving's own disappearance. Lent to Dagmar by CARIS (male, he/him — a Criamon magus; note: the parens text was briefly mis-recorded as female in discussion, corrected here — no data file was affected). It reads as a real clue-thread that Dagmar now holds, resonant with his own Criamon pursuit of the Enigma/Hypostasis and with Solving being in Wizard's Twilight (t034, return possible-but-unlikely). Kept as a live held hook for Dagmar to pursue; the observation itself is settled canon."
     },
     {
       "id": "t023",
       "type": "Thread",
       "category": "Plot",
       "title": "A real Gifted child is still missing, taken by the Fae — Rody was the replacement.",
-      "context": "The party chose not to interrogate or trade with the changeling directly, planning instead to quietly brief the receiving Hermetic magi near the Hill of Uisneach once the delivery completes. Whether that briefing happens, and whether anyone actually goes looking for the real child, is entirely unresolved.",
+      "context": "The party chose not to interrogate or trade with the changeling directly, planning instead to quietly brief the receiving Hermetic magi near the Hill of Uisneach once the delivery completes. Whether that briefing happens, and whether anyone actually goes looking for the real child, is entirely unresolved.\n\nUpdate (2026-07-25) — GM confirms current canon: BOTH prongs remain live/unresolved. (1) The briefing to the receiving Hermetic magi — the covenant near the Hill of Uisneach, where Rody was 'owed delivery' — has NOT yet happened. (2) No one has gone looking for the real Gifted child Rody replaced (whose Gifted older brother was 'eaten by goblins' before his own handover). Stays an active open thread to develop in play. Source: proposed_events p16, 'The changeling boy: Rody.'",
       "raised_in": "Session 8 (2026-07-11)",
       "raised_event": "The changeling boy: Rody",
+      "status": "Open",
+      "resolution": ""
+    },
+    {
+      "id": "q026",
+      "type": "Question",
+      "category": "Plot / Fae",
+      "title": "How was Rody mistaken for a Gifted child when he's a Fae changeling?",
+      "context": "Follow-up to t023 (raised 2026-07-25). The Connacht→Hermetic delivery custom passed the party a changeling — Rody — as an \"owed\" Gifted-child delivery. Open question: how did a Fae changeling come to be treated as Gifted in the first place, i.e. where and how the mis-identification entered the delivery chain. Flagged open; no explanation settled.",
+      "raised_in": "Open-questions review (2026-07-25)",
+      "raised_event": "Follow-up to t023 (the changeling boy, Rody)",
       "status": "Open",
       "resolution": ""
     },
@@ -271,15 +282,15 @@
       "context": "Raised in passing while coordinating the Aegis-casting meetup near Harfleur — one character has a \"sea snake\" currently up in the North Sea, on a different heading from the rest of the fleet's Channel rendezvous. Never clarified whose it is or what it actually is (mount, familiar, magic item).",
       "raised_in": "Session 8 (2026-07-11)",
       "raised_event": "Casting the annual Aegis of the Hearth near Harfleur",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Canon set by GM (2026-07-25): the \"sea snake\" up in the North Sea is JÖRMUNGANDR — the Midgard/World Serpent of Norse myth (GM spelling: Jormangandr). A major mythic entity, consistent with the covenant's strong Norse undercurrent (Valdemar the Viking rune-mage, the fae Rán, Master Erlingson's suspected Order of Odin ties per t039, and the Baltic/Norse arc ideas t043/t060). NOTE: this ruling fixes WHAT it is; WHOSE / the exact character connection was left unspecified — as a cosmic world-serpent it reads more as a character being tied to or tracking it than owning it. Pin the connection later if desired."
     },
     {
       "id": "t025",
       "type": "Thread",
       "category": "World Detail",
       "title": "The regio near Carnac is still unexplored.",
-      "context": "Dagmar's spring 1224 coastal survey turned up sea caves under a low-profile regio near Carnac (apparently unnoticed by Carnac itself), on the strength of a 52 Eyes of the Eagle roll. He opted to row in solo with grogs rather than involve Carnac or the wider covenant. The GM explicitly flagged this as something to develop further before the next session — nothing inside has been described yet.",
+      "context": "Dagmar's spring 1224 coastal survey turned up sea caves under a low-profile regio near Carnac (apparently unnoticed by Carnac itself), on the strength of a 52 Eyes of the Eagle roll. He opted to row in solo with grogs rather than involve Carnac or the wider covenant. The GM explicitly flagged this as something to develop further before the next session — nothing inside has been described yet.\n\nUpdate (2026-07-25) — GM: PENDING PLAY EVENT. The regio's contents will be discovered/developed in an upcoming session rather than pre-decided; kept Open as active prep. Paired with t018 (Dagmar can choose Carnac as the regio to satisfy Llewellyn's price and bring the time-dilation crystal as kit) and tied to Dagmar's Hypostasis hunt.",
       "raised_in": "Session 8 (2026-07-11)",
       "raised_event": "A hidden regio near Carnac",
       "status": "Open",
@@ -304,15 +315,15 @@
       "context": "Corrected framing: this did come up in play. verified_events.json's \"Valerian interrogates Wilhelm about the Brabant/Church conspiracy\" event confirms Valerian already knows a great deal about \"a conspiracy involving the Duke of Brabant and the Church\" — his follow-up questions referenced things Wilhelm hadn't yet mentioned. What remains genuinely open: what Valerian intends to do with what he knows, and whether the conspiracy itself ever gets exposed, contained, or left to fester.",
       "raised_in": "GM's Notion prep notes (undated), \"The Situation with Valerian\"",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Canon set by GM (2026-07-25), reconciled with play-record in verified_events.json + magi.json. THE CONSPIRACY: a sect of magi from the RHINE TRIBUNAL has suborned the BISHOPRIC OF LIÈGE from within (verified_events event 60, \"Valerian's Revelations\") — a massive breach of the Code of Hermes (magi controlling Church hierarchy), using the Church as their proxy. It is NOT the loose \"Duke of Brabant + Church\" shorthand some notes use. VALERIAN: Valerian de Castellane, a Guernicus/Quaesitor of the Rhine Tribunal (magi.json), was investigating this when he was silenced and imprisoned by the Duke of Brabant — the capture happening IN BRUGES, which is politically sensitive and could provoke a response if known. The Church, acting for the Rhine magi, requested the capture; the Duke complied out of obligation to the Church and the Holy Roman Empire. Valerian had been compiling a case to bring to the GRAND TRIBUNAL. He escaped via a delayed teleportation spell hidden in the 'V' letter (nested Rego/Creo Vim), materializing on the Scholar's Wake 55 days later (events 51, 60). He is technically still a Quaesitor but \"not allowed to practice\"; his library is largely contraband confiscated from magi studying forbidden topics; he holds knowledge that could \"ruin a lot of people's day,\" and traded protection to Valdemar for access to it. STILL LIVE (deliberately open): Valerian's current motivations and next move — now on the run — are unclear, to be driven by play. Whether the Liège conspiracy is ever exposed/contained is likewise open. DOWNSTREAM: this reframes c023 (the Duke's motive was obligation/coercion by Church+HRE, not merely believing forged authority) and gives t028 (Reynald, still GM-prep-only, 0 play hits) its likely role as the Rhine-trained hand inside Brabant's court. t011 (Dagmar seeing Valerian's contraband trade) is the same contraband library."
     },
     {
       "id": "t028",
       "type": "Thread",
       "category": "NPC / Identity",
       "title": "Magister Reynald de Grimbergen — the Duke of Brabant's double-agent counsel — was never confronted.",
-      "context": "GM prep names Reynald, a failed Rhine apprentice turned ducal advisor, as the one who forged the documents used to imprison Valerian, while quietly feeding intelligence back to his old Rhine handlers. His current status — exposed, still embedded, retaliating — is unaddressed.",
+      "context": "GM prep names Reynald, a failed Rhine apprentice turned ducal advisor, as the one who forged the documents used to imprison Valerian, while quietly feeding intelligence back to his old Rhine handlers. His current status — exposed, still embedded, retaliating — is unaddressed.\n\nClassification — LATENT (2026-07-25): GM likes the idea but has no need of it for now. Treat as probably-canon-but-unconfirmed: Reynald stays available prep (a clean fit as the Rhine-trained hand connecting the sect → Church request → Duke's court per t027), and only becomes firm canon if/when he actually comes up in play. No development required now. Kept status Open.",
       "raised_in": "GM's Notion prep notes (undated), \"The Situation with Valerian\"",
       "raised_event": "",
       "status": "Open",
@@ -323,7 +334,7 @@
       "type": "Thread",
       "category": "Plot",
       "title": "Captain Absalom's possession-like episode was never surfaced — and may explain the missing Maelstrom's Maw.",
-      "context": "Undated GM notes describe Captain Absalom secretly buying and then destroying psalters, reliquaries, and other consecrated items at sea while apparently not himself (\"his eyes were... wrong\"). Absalom is already tied to the unresolved fate of the missing Maelstrom's Maw and Kor Ex Flambeau (see c013), and the covenant carries a \"Possession Victim\" flaw that's never been played out — this reads as unused foreshadowing for what actually happened to that ship.",
+      "context": "Undated GM notes describe Captain Absalom secretly buying and then destroying psalters, reliquaries, and other consecrated items at sea while apparently not himself (\"his eyes were... wrong\"). Absalom is already tied to the unresolved fate of the missing Maelstrom's Maw and Kor Ex Flambeau (see c013), and the covenant carries a \"Possession Victim\" flaw that's never been played out — this reads as unused foreshadowing for what actually happened to that ship.\n\nUpdate (2026-07-25) — GM ruling: the possession is CANON and live — there genuinely is a possession-victim aboard one of the covenant's ships (the covenant's active \"Possession Victim\" Story Flaw). However, the victim's IDENTITY is currently UNDETERMINED: Captain Absalom's prep episode makes him a candidate, not the confirmed answer. There are deliberate mechanical reasons the victim hasn't been detected yet (GM withholding specifics for now). Keep Open as a live, unresolved thread — pick the victim when the GM is ready; not tied to the Maelstrom's Maw (see c013).",
       "raised_in": "GM's Notion prep notes (undated), \"Evildoers\"",
       "raised_event": "",
       "status": "Open",
@@ -334,10 +345,10 @@
       "type": "Thread",
       "category": "NPC / Identity",
       "title": "Several Bruges locals independently claim to know something about Valerian's disappearance.",
-      "context": "GM-prepared Bruges NPCs never used in play include a dockhand who says he saw Valerian “dragged aboard a barge with black sails,” a lantern-boy who saw him leaving with “two monks with hard hands,” and a Castellan's guard captain with “special permission” from Duke Brabant who “may be directly tied to Valerian's disappearance.” The strongest lead: Sir Odo van Aerschot, a Brabantine-loyalist knight in Bruges, is explicitly noted as “suspected to be behind several disappearances in Bruges — including Valerian.” Two more knew him personally before the covenant — a madam who kept a lock of his hair, a dowager noblewoman who “may still mourn his absence,” and a companion who calls him “heart-sigh.” None of these leads have been pulled on. See also t026 (the unsigned “V.” letter) and t028 (Reynald de Grimbergen) — likely the same underlying conspiracy.",
+      "context": "GM-prepared Bruges NPCs never used in play include a dockhand who says he saw Valerian “dragged aboard a barge with black sails,” a lantern-boy who saw him leaving with “two monks with hard hands,” and a Castellan's guard captain with “special permission” from Duke Brabant who “may be directly tied to Valerian's disappearance.” The strongest lead: Sir Odo van Aerschot, a Brabantine-loyalist knight in Bruges, is explicitly noted as “suspected to be behind several disappearances in Bruges — including Valerian.” Two more knew him personally before the covenant — a madam who kept a lock of his hair, a dowager noblewoman who “may still mourn his absence,” and a companion who calls him “heart-sigh.” None of these leads have been pulled on. See also t026 (the unsigned “V.” letter) and t028 (Reynald de Grimbergen) — likely the same underlying conspiracy.\n\nCUT — no longer needed (GM, 2026-07-25): Valerian already escaped captivity (delayed-teleport, 1222) and is an active covenant member, so the Bruges \"who-saw-him-taken\" investigation is moot. Flagged for deletion. NOTE: the Bruges 'Cast in Reserve' roster (gmReference.brugesRoster) is left intact — those NPCs remain available for any home-port scene, repurposable beyond this thread.",
       "raised_in": "GM's Notion prep notes (undated), Bruges NPC roster",
       "raised_event": "",
-      "status": "Open",
+      "status": "Confirm to delete",
       "resolution": ""
     },
     {
@@ -348,8 +359,8 @@
       "context": "Benedictus tried to recruit Stijntje as an apprentice, drawn to The Scholar's Wake's \"unique, sea-bound laboratory\" and, more specifically, to her (see c025). Separate, unused GM notes place a magus of the same name in Southampton too, suspected by a local steward of \"unwholesome teachings\" and privately asked by a merchant to investigate ghost lights on the Solent. If it's the same Benedictus, he may have a broader pattern across Channel ports worth tracking.",
       "raised_in": "GM's Notion prep notes (undated), Bruges NPC roster + Southampton gazetteer",
       "raised_event": "Stijntje and Benedictus",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Confirmed by GM (2026-07-25): it's the same magus — one Benedictus of House Jerbiton, the Southampton-based \"Silver Tongue of Southampton.\" The conflation collapses: the magus who tried to recruit Stijntje, the one a local steward suspects of \"unwholesome teachings,\" and the one a merchant asked to investigate the Solent ghost lights are all the same man; those Southampton hooks are his. He is a single Southampton Jerbiton with a salon ambition (a \"salon of magical minds loyal to him\"), not a separate multi-port conspiracy. His active courtship of Stijntje continues to be tracked under c025."
     },
     {
       "id": "t032",
@@ -367,10 +378,10 @@
       "type": "Thread",
       "category": "Diplomacy",
       "title": "Friedrich of Merces Aurea's separatist recruitment pitch to Sjórseiðr was never pitched at the table.",
-      "context": "GM prep flags Friedrich, the Merces Aurea coalition coordinator, as likely to sound out the covenant for a Lotharingian secession cause — distinct from Bridget of Scarem Montem's already-tracked pitch (t010). Unclear whether this was ever actually raised in play — worth a GM check before treating it as live.",
+      "context": "GM prep flags Friedrich, the Merces Aurea coalition coordinator, as likely to sound out the covenant for a Lotharingian secession cause — distinct from Bridget of Scarem Montem's already-tracked pitch (t010). Unclear whether this was ever actually raised in play — worth a GM check before treating it as live.\n\nCUT — retired as redundant (2026-07-25): the Lotharingian secession-recruitment beat is already covered by Bridget of Scarem Montem's pitch (t010, resolved — Éogan shared it). Friedrich's prepped standalone approach adds nothing distinct. DISAMBIGUATION (keep on record): Friedrich (House Tremere, of Merces Aurea) is UNRELATED to Dietrich (Wilhelm's brother, the Cologne professor / folk-magic evangelist) — two separate German-named NPCs. Friedrich remains an established, usable NPC from play (verified_events: Tremere litigant contesting a legacy vis-source renewal near the Lotharingian border, vs. Theobold of Cunfin); only this unplayed recruitment pitch is retired. Flagged for deletion.",
       "raised_in": "GM's Notion prep notes (undated), \"Opponent Profile ideas\"",
       "raised_event": "",
-      "status": "Open",
+      "status": "Confirm to delete",
       "resolution": ""
     },
     {
@@ -381,8 +392,8 @@
       "context": "The covenant's founder and Dagmar's parens vanished into Twilight from Bruges in 1220 and still hasn't returned. Old GM notes float that he may have entered the Hypostasis (the Criamon concept of escape from the cycle of time that Dagmar's own research is fixated on) — but this was never more than a GM hypothesis, and nothing in the chronicle confirms or denies it.",
       "raised_in": "GM's Notion prep notes (undated)",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Canon set by GM (2026-07-25): Solving is in Wizard's Twilight (consistent with the 1220 Bruges disappearance witnessed by his grogs). His return is possible but UNLIKELY — treat him as effectively gone for the foreseeable saga. The Hypostasis / Criamon 'escape from the cycle of time' framing is NOT canonized by this ruling — it remains an unconfirmed possibility (neither affirmed nor denied); promote it only if the GM later chooses to. CASCADES: q024 (with Solving effectively gone, the elder-magus tie-break vote genuinely needs settling), t052 (his envisioned vis source), t038 (sea-fae wealth bargain), and t022 (the vanish-and-return text) all hang off this."
     },
     {
       "id": "t035",
@@ -392,8 +403,8 @@
       "context": "Merfolk lore in the GM's notes describes exile as \"something akin to a death sentence\" for most merfolk, given how insular their civilization is — which makes Ka'wa'ill's presence aboard Veðrdreki as \"the merman prince\" (see npcs.json) unusual and unexplained. The reason for his exile was never established.",
       "raised_in": "GM's Notion prep notes (undated)",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Canon set by GM (2026-07-25): Ka'wa'ill's exile is really a SELF-exile driven by pride. Staying in merfolk society meant accepting a standing in the court hierarchy lower than his pride could accept, so he left rather than swallow the demotion. Fits his status as a Knight (the lowest order of the Noble caste) and his \"merman prince\" self-regard, and reconciles with the Exiled Atlantean flaw, which applies whether the departure was involuntary or chosen — here it was chosen."
     },
     {
       "id": "c023",
@@ -403,8 +414,8 @@
       "context": "Per GM prep, the Duke acted on forged authority he believed genuine and was left \"terrified\" and doubting himself once the deception started to unravel. Whether the covenant ever told him the truth, and what he now believes about Hermetic magi as a result, hasn't come up since.",
       "raised_in": "GM's Notion prep notes (undated), \"The Situation with Valerian\"",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Canon set by GM (2026-07-25). Duke Henry of Brabant captured Valerian (in Bruges, without city sanction; held at Breda) out of OBLIGATION to the Church and the Holy Roman Empire — the Church acting as proxy for the Rhine sect (see t027). This is the canonical motive; it supersedes the earlier prep framing of \"forged authority he believed genuine\" (a forged paper trail may still have existed alongside the obligation, but the driver is obligation/coercion). DEFERRED (GM: no need to determine at this time): the Duke's current beliefs about the covenant / Hermetic magi. Since Valerian self-escaped by delayed teleport rather than via a confrontation, there is no pressing aftermath to resolve — revisit only if play brings the covenant back into contact with Brabant's court."
     },
     {
       "id": "c024",
@@ -414,15 +425,15 @@
       "context": "The Hound of Cassel's Scarem Montem-affiliated captain — proud, overconfident, per the GM's original raid prep, with a mate (\"One-Eye\" Dekker) and a mixed veteran/green crew — isn't mentioned in any account of the raid's aftermath (already resolved as \"Summer piracy,\" q001/c013c). Whether he was killed, ransomed, released, or is still at large is unknown.",
       "raised_in": "GM's Notion prep notes (undated), \"Hounds of Cassel\"",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Resolved by GM (2026-07-25): the captain's specific fate is immaterial — he was among the surrendered-and-released, or died fighting, in the Summer 1221 raid (verified_events event 38); it doesn't matter which. Joris Van Damme (captain) and \"One-Eye\" Dekker (mate) are now recorded as former_crew of the Hound of Cassel in ships.json; no further documentation needed. The Van Damme / Stijntje (t036) surname overlap is left as coincidence — not pursued."
     },
     {
       "id": "c025",
       "type": "Consequence",
       "category": "Character",
       "title": "Magus Benedictus read Stijntje's name from her mind, unprompted.",
-      "context": "When Benedictus of House Jerbiton approached the covenant's apprentice-candidate during a Southampton visit (not Bruges — corrected per verified_events.json's confirmed location) and conjured a small flame to entice her, he knew her name without being told — apparently lifted from her mind. Dustin drove him off before further contact. What else Benedictus perceived, and why he specifically targeted her (GM notes describe a deliberate courtship campaign — letters, gifts, an open invitation to Southampton \"for a season or two\"), was never established. See also t031.",
+      "context": "When Benedictus of House Jerbiton approached the covenant's apprentice-candidate during a Southampton visit (not Bruges — corrected per verified_events.json's confirmed location) and conjured a small flame to entice her, he knew her name without being told — apparently lifted from her mind. Dustin drove him off before further contact. What else Benedictus perceived, and why he specifically targeted her (GM notes describe a deliberate courtship campaign — letters, gifts, an open invitation to Southampton \"for a season or two\"), was never established. See also t031.\n\nUpdate (2026-07-25) — GM: canon extended. Benedictus's unprompted mind-read pulled not just her first name but her GENDER and FAMILY NAME as well. OPEN IMPLICATION (ties to t036): whether the family name he lifted is her nunnery-given name (Kuiper) or her true lineage (van Damme) is undecided — if the latter, Benedictus holds a lever on the latent parentage secret. Kept Open as an active thread (his courtship campaign — letters/gifts/open invitation — and what he does with what he read are still live; see t031).",
       "raised_in": "Verified chronicle, \"Stijntje and Benedictus\"; GM's Notion prep notes on Benedictus (undated)",
       "raised_event": "Stijntje and Benedictus",
       "status": "Open",
@@ -436,8 +447,8 @@
       "context": "The founding note confirms Solving formed the covenant with three other magi who \"left for more stable covenants\" over time — but none of them are named anywhere, in canon or in the GM's own Notion prep. Surfaced while accounting for the root Notion page's GM-planning content (2026-07-13).",
       "raised_in": "Cross-referenced from the Notion export root page (2026-07-13)",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Canon set by GM (2026-07-25) — the other founding members are: Khalida bint-Muhammad al-Balansī (House Flambeau); Astrid Grásúla (House Bjornaer); Erasmus the Hound (House Mercere); Photios Chrysoloras (House Jerbiton); and Torsten Fabricatus (House Verditius). ⚠ NUMERICAL DISCREPANCY TO RESOLVE: covenant.json's founding note says Solving formed Sjórseiðr with \"three other magi\" in 1209, but five are named here (six founders total). Needs GM confirmation: either correct the founding note \"three → five,\" or clarify that some of these five were early replacements Solving recruited rather than 1209 founders. Added to the data-reconciliation queue pending that call. 'Where they went' remains the generic \"left for more stable covenants\" (no specific destinations set) — flavor to fill only if a founding-era thread ever surfaces."
     },
     {
       "id": "q024",
@@ -447,15 +458,15 @@
       "context": "The charter gives the elder magus the casting vote at council; a Spring 1220 proposed amendment flagged that Solving holding the role \"in absentia\" wasn't workable and that \"another means of breaking ties may be deemed necessary\" — but this was never actually settled one way or the other.",
       "raised_in": "Cross-referenced from the Notion export root page (2026-07-13)",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Canon set by GM (2026-07-25): the elder-magus casting vote is currently held by SOLVING IN ABSENTIA — the charter's Spring-1220 option (a) is the adopted mechanism (the rotating-tiebreaker option is not taken). Despite being in Wizard's Twilight (t034), Solving is still a covenant member IN GOOD STANDING, flagged \"on sabbatical\" — the same administrative status as Kor Ex Flambeau (c013). \"On sabbatical / member in good standing\" is thus a consistent covenant mechanism for absent magi. DATA RECONCILIATION offered: covenant.json/charter still lists this as a *proposed* Spring-1220 amendment ('Solving may hold the elder magus status in absentia') — it can be updated to reflect that this is now the ratified/current arrangement, and Solving's member status flagged 'on sabbatical.'"
     },
     {
       "id": "q025",
       "type": "Question",
       "category": "Rules",
       "title": "Are the covenant's Aegis level, Aegis penetration, and regio levels genuinely zero, or just unconfigured in Foundry?",
-      "context": "Already flagged inline on covenant.html as possibly just unconfigured rather than narratively true — promoted here from the README into the actual Storyteller tracker since it's a genuine ruling needed before anyone treats covenant.json's aegis/regioLevels fields as fact.",
+      "context": "Already flagged inline on covenant.html as possibly just unconfigured rather than narratively true — promoted here from the README into the actual Storyteller tracker since it's a genuine ruling needed before anyone treats covenant.json's aegis/regioLevels fields as fact.\n\nUpdate (2026-07-25): Data-checked against covenant.json — the fields are literally aegis {level:0, penetration:0} and regioLevels:0. Proposed disposition: treat these as UNCONFIGURED defaults, not narrative truth, until the GM sets real numbers; don't let any tool read them as fact. Note the cross-link to q019 (Ka'wa'ill's Aegis token): if the Aegis level is genuinely 0, any Might>0 creature already \"exceeds the level\" and crosses freely, making a token moot. Same class of issue as tl019 (Saga/Aura).",
       "raised_in": "Flagged on covenant.html; promoted to a tracked question (2026-07-13)",
       "raised_event": "",
       "status": "Open",
@@ -466,7 +477,7 @@
       "type": "Thread",
       "category": "NPC / Identity",
       "title": "Stijntje's true parentage has never surfaced.",
-      "context": "Per the GM's own prep: Stijntje is the secret daughter of Godfried Raes van Damme, a mid-ranking Flemish nobleman near Bruges, and Katrien, a weaver he had an affair with in 1211-12. Godfried staged a false stillbirth to hide the scandal, placed the infant in a nunnery, and has anonymously funded her education ever since without ever acknowledging her; Katrien believes to this day that her baby died in childbirth. Neither parent knows Stijntje escaped the nunnery in 1220, has the Gift, or is now apprenticed to Dustin Page. Surfaced while accounting for the root Notion page's GM-planning content (2026-07-13).",
+      "context": "Per the GM's own prep: Stijntje is the secret daughter of Godfried Raes van Damme, a mid-ranking Flemish nobleman near Bruges, and Katrien, a weaver he had an affair with in 1211-12. Godfried staged a false stillbirth to hide the scandal, placed the infant in a nunnery, and has anonymously funded her education ever since without ever acknowledging her; Katrien believes to this day that her baby died in childbirth. Neither parent knows Stijntje escaped the nunnery in 1220, has the Gift, or is now apprenticed to Dustin Page. Surfaced while accounting for the root Notion page's GM-planning content (2026-07-13).\n\nClassification (2026-07-25) — CONFIRMED CANON, LATENT (GM): the parentage backstory as prepped is affirmed as settled canon — Stijntje is the secret daughter of Godfried Raes van Damme (Flemish noble near Bruges) and Katrien (weaver, 1211-12 affair); false stillbirth staged, placed in a nunnery, anonymously funded; Katrien believes the baby died; neither parent knows she escaped the nunnery (1220), has the Gift, or is apprenticed to Dustin. Held LATENT — true but unrevealed in-fiction, a card for the GM to play when chosen; no active development pending. Kept Open as a visible held thread. (Surname note: unrelated to the Hound of Cassel's Joris Van Damme, c024, which is coincidence.)",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
       "status": "Open",
@@ -477,7 +488,7 @@
       "type": "Thread",
       "category": "Character",
       "title": "None of the five active PC magi has bonded a familiar yet.",
-      "context": "Dagmar, Dustin Page, Éogan Dobhartha, Valdemar Bjornsson, and Wilhelm Stienauer all show a blank familiar field in Foundry — this was already an open to-do in the GM's earliest prep (Dagmar, Dustin, and Éogan familiars were each floated as ideas back then) and still hasn't been picked up.",
+      "context": "Dagmar, Dustin Page, Éogan Dobhartha, Valdemar Bjornsson, and Wilhelm Stienauer all show a blank familiar field in Foundry — this was already an open to-do in the GM's earliest prep (Dagmar, Dustin, and Éogan familiars were each floated as ideas back then) and still hasn't been picked up.\n\nUpdate (2026-07-25) — GM: familiars now in progress for two magi. (1) Dustin Page is working on ROSIE THE PIG as his familiar — Rosie is an established animal aboard the fleet (shown Premonitions in play, e.g. panicking at incoming fog). (2) The GM plans to SURPRISE ÉOGAN (Éogan Dobhartha) with a CAPRICORN (sea-goat) familiar next session — thematically apt for the sea covenant and Éogan's water magic. (An earlier draft misspelled Éogan as 'Eowyn'; corrected — it is the magus Éogan, not a player.) The remaining magi (Dagmar, Valdemar, Wilhelm, and Valerian) still have no familiar in progress. Kept Open.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
       "status": "Open",
@@ -488,10 +499,10 @@
       "type": "Thread",
       "category": "World Detail",
       "title": "Was Solving's original wealth really a sea-fae bargain over a sunken Roman wreck — and might the fae still be owed?",
-      "context": "Unconfirmed GM speculation, never promoted to settled fact: Solving may have parlayed with sea-fae guarding a sunken Roman gold wreck in the English Channel, trading stories or prophecies for access, with the recovered gold funding one of the fleet's ships (possibly the Maelstrom's Maw). If true, the fae may consider a debt still outstanding. Surfaced while accounting for the root Notion page's GM-planning content (2026-07-13); flagged as speculative, not merged into covenant.json's founding note as settled history.",
+      "context": "Unconfirmed GM speculation, never promoted to settled fact: Solving may have parlayed with sea-fae guarding a sunken Roman gold wreck in the English Channel, trading stories or prophecies for access, with the recovered gold funding one of the fleet's ships (possibly the Maelstrom's Maw). If true, the fae may consider a debt still outstanding. Surfaced while accounting for the root Notion page's GM-planning content (2026-07-13); flagged as speculative, not merged into covenant.json's founding note as settled history.\n\nUpdate (2026-07-25) — GM: reclassified to a DEFERRED IDEA. Parked speculation, not canon and not in active development — hold in reserve as a possible future hook (the sea-fae/outstanding-debt angle plays well against t052's underwater-Faerie-aura motif and Rán, and against Solving being in Twilight per t034). Revisit only if the GM chooses to activate it.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Open",
+      "status": "Idea",
       "resolution": ""
     },
     {
@@ -502,8 +513,8 @@
       "context": "Per the GM's own prep: a non-Hermetic craftsman in Norway, rumored (never confirmed even to Solving) to be an initiate of the Order of Odin, built the mobile lab compartments, wards, and devices for each of the covenant's ships, in an ongoing arrangement of trust and regular payment. Never named, never followed up on in play.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Canon set by GM (2026-07-25): the Nordic shipwright is MASTER ERLINGSON, of the shipyards at Bergen (already in play — verified_events event 43, where he sold Dagmar a knarr complete with a laboratory). He built the covenant's fleet and IS the suspected Order of Odin magus (the rumored, never-confirmed non-Hermetic initiate of the GM's prep), working with Solving in an ongoing arrangement of trust and regular payment. RECONCILIATION: his craft is NON-Hermetic, so ship_details.json's fleetNote (\"none of the ships have been enchanted by a Hermetic shipwright\") stands unchanged and consistent — Erlingson's wards/devices are Order-of-Odin work, not Hermetic enchantment. LINK: he is the natural in-world anchor for t060 (Norse Oath-of-Odin / Vitkir magic). OPTIONAL: add a proper Erlingson entry to npcs.json if the GM wants him tracked as a standing NPC (offered 2026-07-25)."
     },
     {
       "id": "t040",
@@ -554,7 +565,7 @@
       "type": "Thread",
       "category": "World Detail",
       "title": "Early-campaign snapshot: \"is anyone going to look for the vis source of Solving's vision?\" was never followed up.",
-      "context": "From the same early snapshot — the concentrated vis source in the North Sea that motivated the covenant's founding was never located or searched for on-page.",
+      "context": "From the same early snapshot — the concentrated vis source in the North Sea that motivated the covenant's founding was never located or searched for on-page.\n\nUpdate (2026-07-25) — GM: this stays a LIVE thread, led by Dagmar, who has done the most on it and will follow up. The strong underwater aura source (the Faerie-aura, vis-bearing wreck found at ~250m depth via Clear Sight of the Naiad) is significant — its connection to Solving's envisioned great North Sea vis source is a live possibility. But it is NOT being actively pursued at present; dormant until Dagmar picks it back up. Keep Open.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page",
       "raised_event": "",
       "status": "Open",
@@ -686,7 +697,7 @@
       "type": "Tool",
       "category": "Rules",
       "title": "Definitive Edition errata check: is Elemental Magic's Rego score supposed to be 15, and are 'elemental points' 8 or 5?",
-      "context": "Flagged as needing math confirmation against the Definitive Edition changes; never resolved in the GM's notes.",
+      "context": "Flagged as needing math confirmation against the Definitive Edition changes; never resolved in the GM's notes.\n\nUpdate (2026-07-25): Not answerable from the ArM5e core corpus (titterpig-dsl-arm5e is the 2004 core rulebook only). This is explicitly a Definitive-Edition errata question, and \"elemental points\" is not a core term — the core \"Elemental Magic\" Virtue is an unrelated Major Hermetic Virtue about shared elemental XP. Needs the Definitive Edition text (or the specific build/item this refers to). Keeping Open.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
       "status": "Open",
@@ -700,15 +711,15 @@
       "context": "The GM's notes say talismans used to give warping and reportedly no longer do, but this was never confirmed as the current ruling.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Answered (2026-07-25) from ArM5e core (armdef-0.4-long-term-events, \"Warping Points and Constant Effects\"): Talismans do NOT cause Warping. Verbatim: \"The binding between a Hermetic magus and his familiar or Talisman does not grant Warping Points, nor do any powers enchanted into the bond.\" The \"talismans used to give warping\" memory is 4th-edition; 5e core already exempts them, so there is no Definitive-Edition change to chase."
     },
     {
       "id": "tl009",
       "type": "Tool",
       "category": "Rules",
       "title": "The Magical Astrolabe's enchantment level is inconsistent across sources.",
-      "context": "The sourcebook default suggests level 40, the GM's own math came to 28, and the live Foundry item (ship_details.json) is configured at level 10 — three different numbers, never reconciled.",
+      "context": "The sourcebook default suggests level 40, the GM's own math came to 28, and the live Foundry item (ship_details.json) is configured at level 10 — three different numbers, never reconciled.\n\nUpdate (2026-07-25): Not a rules lookup — the ArM5e core corpus only gives the astrolabe's Shape & Material bonus (+5 astrology / measure the heavens / navigation), not a \"correct\" enchantment level. The Magical Astrolabe's level (sourcebook 40 vs GM-math 28 vs live 10) is a build-reconciliation decision, not a rules fact; pick the intended number and set it. Keeping Open as a build decision.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
       "status": "Open",
@@ -719,7 +730,7 @@
       "type": "Tool",
       "category": "Character Build",
       "title": "Was the fleet's build-point budget ever adjusted for having one fewer ship?",
-      "context": "The GM's notes call for 'adjust build points spent for -1 ship' (i.e. -16 build points), tied to the unclaimed 6th hull that became the Adamant instead — unclear if this adjustment was ever actually made.",
+      "context": "The GM's notes call for 'adjust build points spent for -1 ship' (i.e. -16 build points), tied to the unclaimed 6th hull that became the Adamant instead — unclear if this adjustment was ever actually made.\n\nUpdate (2026-07-25): Data-checked against ships.json — it carries NO build-point data at all (no build-point / BP fields), so whether the -16 (one-fewer-ship) adjustment was ever made can't be verified from this repo. Lives in Foundry / the owner's build sheet.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
       "status": "Open",
@@ -730,7 +741,7 @@
       "type": "Tool",
       "category": "Character Build",
       "title": "Dustin Page's character sheet had an outstanding checklist: Robe, Staff, and 'review all empty fields.'",
-      "context": "Tracked in a linked Google Sheet in the GM's notes; never confirmed closed out (magi.json's Dustin Page entry may already cover this — worth a quick compare).",
+      "context": "Tracked in a linked Google Sheet in the GM's notes; never confirmed closed out (magi.json's Dustin Page entry may already cover this — worth a quick compare).\n\nUpdate (2026-07-25): Data-checked against magi.json — Dustin Page's entry has no equipment/inventory section at all (no Robe, no Staff item, no Talisman; only character stats, arts, virtues/flaws, abilities, spells). So the Robe/Staff/'review empty fields' checklist can't be confirmed closed from this export — it lives in the linked Google Sheet / Foundry.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
       "status": "Open",
@@ -788,15 +799,15 @@
       "context": "From early prep; unclear if these questions about the vis-tracking system were ever resolved.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Answered (2026-07-25) from ArM5e core (armdef-0.4-covenants): \"Vis Sources: five Build Points for every pawn of vis available each year. Vis Stocks: one Build Point per five pawns.\" \"Vis Label and Attributes\" is not a rules concept — it is just the Foundry field tagging a source's Art + pawns/year + harvest season (data entry, no ruling needed)."
     },
     {
       "id": "tl017",
       "type": "Tool",
       "category": "Rules",
       "title": "Expand on the Famous Resident and Local Ally virtues.",
-      "context": "From early prep; no detail on what needed expanding.",
+      "context": "From early prep; no detail on what needed expanding.\n\nUpdate (2026-07-25): Not in the ArM5e core corpus — \"Famous Resident\" and \"Local Ally\" are not core Virtues; they are covenant Boons from the Covenants supplement. Needs that book to expand. Keeping Open.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
       "status": "Open",
@@ -818,7 +829,7 @@
       "type": "Tool",
       "category": "Rules",
       "title": "Saga Type was left blank, and Aura Type/Level were left at Mundane/0 defaults in Foundry's covenant configuration.",
-      "context": "See also q025 (Aegis/regio levels recorded as zero) — this is the same class of \"never configured vs. narratively true\" issue, just for Saga Type and Aura specifically.",
+      "context": "See also q025 (Aegis/regio levels recorded as zero) — this is the same class of \"never configured vs. narratively true\" issue, just for Saga Type and Aura specifically.\n\nUpdate (2026-07-25): Data-checked against covenant.json — the Saga Type half is DONE: sagaType is now filled ('Pulsed/Medium'), so tl019's \"Saga Type was left blank\" premise is stale. Still outstanding: Aura Type/Level remain at the Mundane/0 default. Recommend treating that (like the Aegis/regio values in q025) as an unconfigured Foundry default rather than a narrative fact — needs a GM ruling, not a data fix. See q025.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
       "status": "Open",
@@ -843,8 +854,8 @@
       "context": "Presumably settled by now through years of actual play (including full Tribunal combat), but never explicitly closed out.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Closed as settled by play (2026-07-25). Might, damage, and Fatigue recovery are all covered in ArM5e core (combat/damage/fatigue in armdef-0.4-obstacles; Might on creatures in armdef-0.4-realms and the bestiary), and the covenant has since run full Tribunal combat, so these foundational questions are answered in practice. Reopen a specific sub-question if one actually bites."
     },
     {
       "id": "tl022",
@@ -865,15 +876,15 @@
       "context": "Raised in the context of Dustin, a Bonisagus dabbler — never confirmed either way.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Answered (2026-07-25) from ArM5e core (armdef-0.4-houses, House Bonisagus): yes. The free House Virtue is Puissant (Magic Theory) — \"Puissant Magic Theory (researchers) or Puissant Intrigue (politicians).\" So Dustin, as a Bonisagus, gets a free Puissant Ability (Magic Theory)."
     },
     {
       "id": "tl024",
       "type": "Tool",
       "category": "Rules",
       "title": "Apprentices of Vigil (a Minor Inner Mystery of House Merinita) learn Charm Magic.",
-      "context": "Flagged as a possible mechanic for one of the covenant's Merinita-adjacent characters (Marina?) — never followed up on.",
+      "context": "Flagged as a possible mechanic for one of the covenant's Merinita-adjacent characters (Marina?) — never followed up on.\n\nUpdate (2026-07-25): Not in the ArM5e core corpus — \"Apprentices of Vigil\" is a Minor Inner Mystery of House Merinita and \"Charm Magic\" its associated tradition, both from The Mysteries Revised Edition, not core. Needs that book. Keeping Open.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
       "status": "Open",
@@ -884,7 +895,7 @@
       "type": "Thread",
       "category": "NPC / Identity",
       "title": "Dolly Price, a Southampton merchant, is under Solving's personal protection — nobody's followed up on it.",
-      "context": "Pulled fresh from Foundry (2026-07-14): Dolly Price, a wealthy Southampton merchant with coastal-smuggling connections, carries a \"Protection (Solving Epicurusson)\" virtue — meaning Solving personally vouches for her, a relationship that predates his 1220 disappearance. She also has enemies in the Sheriff of Southampton and some hidden infernal curse. Given how little is confirmed about Solving's dealings before he vanished (see t034, t052), this could be a real lead — or just flavor. Never surfaced at the table.",
+      "context": "Pulled fresh from Foundry (2026-07-14): Dolly Price, a wealthy Southampton merchant with coastal-smuggling connections, carries a \"Protection (Solving Epicurusson)\" virtue — meaning Solving personally vouches for her, a relationship that predates his 1220 disappearance. She also has enemies in the Sheriff of Southampton and some hidden infernal curse. Given how little is confirmed about Solving's dealings before he vanished (see t034, t052), this could be a real lead — or just flavor. Never surfaced at the table.\n\nClassification (2026-07-25) — AT-THE-READY NPC (reserve): GM wants Dolly Price kept as a ready-to-deploy reserve NPC, like the Bruges 'Cast in Reserve' roster. Her Foundry details are the record — wealthy Southampton merchant with coastal-smuggling ties; carries Protection (Solving Epicurusson), now effectively void since Solving is in Twilight (t034); enemies in the Sheriff of Southampton; a hidden infernal curse (rhymes with the t029 infernal motif). No active development pending; pull her into a Southampton scene when useful. Kept Open.",
       "raised_in": "Foundry actor pull (2026-07-14)",
       "raised_event": "",
       "status": "Open",
@@ -909,8 +920,8 @@
       "context": "GM note (2026-07-14) — flagged for rules research, likely relevant to Dustin's and/or Wilhelm's teaching and folk-magic-system plans (see t019, t062).",
       "raised_in": "GM notes (2026-07-14)",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Answered (2026-07-25). Two readings: (1) the Magic Theory Ability itself advances like any Arcane Ability — teaching, texts, practice (armdef-0.4-abilities). (2) Creating/integrating a whole new system into Hermetic theory is the Original Research -> Breakthrough -> Integration track, where breakthrough points convert into a new Ability or Virtue (\"After the Breakthrough\"). Full write-up with verbatim rules now lives at integrating_magic.html (GM Reference card on the index). Source: armdef-0.4-laboratory."
     },
     {
       "id": "tl026",
@@ -920,8 +931,8 @@
       "context": "GM note (2026-07-14) — flagged for rules research.",
       "raised_in": "GM notes (2026-07-14)",
       "raised_event": "",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Answered (2026-07-25) from ArM5e core: the Boundary target forces a spell to be a Ritual (the enchantment rules note \"no other reason for the spell to be a ritual, such as Year duration, Boundary target, or major effect\"), and Ritual magic cannot be cast spontaneously. Therefore spontaneous magic cannot use the Boundary target at all."
     }
   ],
   "gmReference": {
