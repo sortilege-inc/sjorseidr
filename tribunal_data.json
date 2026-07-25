@@ -101,7 +101,7 @@
       "art": "Herbam",
       "name": "The Diedne Garden",
       "yield": "3 pawns /year",
-      "status": "Available",
+      "status": "Claimed — Sjórseiðr",
       "notes": "Politically contested. An overgrown garden at a ruined Diedne covenant site still produces three unusual herbs each spring. Multiple covenants claim historical rights."
     },
     {
@@ -119,7 +119,7 @@
       "art": "Corpus",
       "name": "Norman Barrow Frost",
       "yield": "2 pawns /year",
-      "status": "Available",
+      "status": "Claimed — Sjórseiðr",
       "notes": "Winter solstice hoarfrost. The frost that forms inside the burial chamber of a Norman barrow on the solstice is Corpus vis — it must be scraped free before dawn."
     },
     {
@@ -578,7 +578,8 @@
         "Magic Theory",
         "Lvl 6 · Q 11"
       ],
-      "bp": "28 BP"
+      "bp": "28 BP",
+      "claimed_by": "Sjórseiðr (tribunal prize, 1223)"
     },
     {
       "id": "b018",
@@ -607,7 +608,8 @@
         "Spell Mastery",
         "Q 11 + Lab Text Lvl 20"
       ],
-      "bp": "15 BP"
+      "bp": "15 BP",
+      "claimed_by": "Sjórseiðr (tribunal prize, 1223)"
     },
     {
       "id": "b020",
@@ -718,7 +720,8 @@
         "Faerie Lore",
         "Lvl 3 · Q 5"
       ],
-      "bp": "14 BP"
+      "bp": "14 BP",
+      "claimed_by": "Sjórseiðr (tribunal prize, 1223)"
     },
     {
       "id": "b028",
