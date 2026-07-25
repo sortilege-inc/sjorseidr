@@ -18,8 +18,8 @@
       "context": "Six picks are now locked in: Mont-Saint-Michel tide pools, the Terram summa \"De Lapii\", Subtle Knives, The Falcon's Cliff (v027, harvested by Dagmar in Spring 1224), \"The Babble Within Thought\" (Dagmar's winter reading pick), and \"The Compact Explained\" — all per tribunal_data.json. That's still only 6 of ~23 total picks; no comprehensive spend list exists anywhere in canon for the rest.\n\nUpdate (2026-07-25): Data-checked against tribunal_data.json — it holds prize_ranks (standings/seats by covenant), but there is no per-pawn spend list for Sjórseiðr's ~23 picks beyond the 6 already known. Nothing to auto-reconcile; this stays a genuine open question pending the GM's spend list.\n\nUpdate (2026-07-25): the '1224 look-ahead' chronicle event was removed and folded into GM notes. Its prize-picks beat: the GM's notes on the full Tribunal prize list (beyond Mont-Saint-Michel tide pools, the 'De Lapii' Terram summa, Subtle Knives, and now Falcon's Cliff + the two winter library texts) were incomplete and need a second pass before the remaining prize pawns resolve.",
       "raised_in": "Session 7 (2026-06-20)",
       "raised_event": "Looking to 1224: back to Scarem Montem, and a still-unfinished prize list",
-      "status": "Open",
-      "resolution": ""
+      "status": "Resolved",
+      "resolution": "Resolved (2026-07-25): the full 31-pawn draft is now worked out and canonized in 'The Tribunal prize draft — Sjórseiðr's full slate'. Sjórseiðr spent all 31 pawns on 4 vis sources (Mont-Saint-Michel 5, Falcon's Cliff 2, Diedne Garden 3, Norman Barrow Frost 2 = 12) and 7 library books (De Lapii, Subtle Knives, Babble Within Thought, Compact Explained, Insights from Twilight, Legends of Brittany, Aegis Research Notes = 19). Spend rule: vis = annual yield, summa 3 / tractatus-lab 2. Claims are reflected in tribunal_data.json."
     },
     {
       "id": "q004",
