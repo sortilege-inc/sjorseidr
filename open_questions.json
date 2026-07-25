@@ -77,17 +77,6 @@
       "resolution": ""
     },
     {
-      "id": "t014",
-      "type": "Thread",
-      "category": "Diplomacy",
-      "title": "Does Hervé of Turris Vigilans believe the joust win was accidental, and does the mutual-defense pact still stand?",
-      "context": "Valdemar did flash the blue sash publicly at the joust against Hervé — verified_events.json's \"Joust vs. Hervé\" event confirms \"Valdemar flashed the blue sash in greeting — accord acknowledged,\" while Valdemar himself \"quietly insisted that it wasn't him\" about the win itself. So the pact WAS shown publicly (correcting this thread's earlier premise) — but whether Hervé actually believes the win was accidental, and whether he considers the pact still binding, remains unconfirmed.\n\nUpdate (2026-07-25): Data-checked against verified_events.json — the pact DISPLAY is settled: the blue sash was flashed publicly at the joust (\"accord acknowledged\"), so that half of the thread is closed. What remains genuinely open is narrower: does Hervé actually believe the win was accidental, and does he still consider the mutual-defense pact binding? Keep open on that narrower question only.",
-      "raised_in": "Session 5 (2026-05-09)",
-      "raised_event": "Hervé of Turris Vigilans's mutual-defense pact for Valdemar",
-      "status": "Open",
-      "resolution": ""
-    },
-    {
       "id": "t017",
       "type": "Thread",
       "category": "Diplomacy",
@@ -140,28 +129,6 @@
       "raised_in": "Session 6 (2026-05-23)",
       "raised_event": "Bertrand denies the book-storage arrangement ever happened",
       "status": "Open",
-      "resolution": ""
-    },
-    {
-      "id": "c020",
-      "type": "Consequence",
-      "category": "Diplomacy",
-      "title": "Sjórseiðr's dominant Tribunal win is being read as disruptive — Dietrich named no specifics.",
-      "context": "\"I believe they have made some enemies,\" from someone with no visibility into actual covenant politics, just ambient chatter. A first-place finish over three leash covenants (Confluensis, Montverte, and effectively Fudarus/Oleron's expectations) carries real seven-year resource consequences nobody has mapped out yet.\n\nCUT — redundant (2026-07-25): self-evident from a #1 finish, and the one concrete live slice (soured Confluensis relations) is already tracked as the active thread c019. No independent value. Flagged for deletion.",
-      "raised_in": "Session 6 (2026-05-23)",
-      "raised_event": "Dietrich warns Wilhelm about the company he's keeping",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
-      "id": "c021",
-      "type": "Consequence",
-      "category": "Diplomacy",
-      "title": "Scarem Montem's defection to the Lotharingian Tribunal is still rippling, beyond the stolen-thesis entanglement.",
-      "context": "A vassal breaking from its liege (Montverte) at the host's own Tribunal, immediately after stealing the host's prize relic. Sjórseiðr's only current stake in this is Wilhelm's stolen manuscript — the wider political fallout (for Montverte, for the Lotharingian-secession question generally) hasn't touched the covenant directly yet.\n\nCUT — redundant (2026-07-25): the defection is already fully established in play-canon (verified_events event 111 — Scarem Montem stole the Tapestry and declared early for the Lotharingian Tribunal; the secession movement is documented in event 35). This item adds no independent open question of its own — any live stake is already tracked elsewhere (Wilhelm's stolen thesis under t002/t019; Éogan's disclosure under t010). Flagged for deletion.",
-      "raised_in": "Session 5 (2026-05-09)",
-      "raised_event": "Scarem Montem steals the Tapestry and declares for Lotharingia",
-      "status": "Confirm to delete",
       "resolution": ""
     },
     {
@@ -341,17 +308,6 @@
       "resolution": ""
     },
     {
-      "id": "t030",
-      "type": "Thread",
-      "category": "NPC / Identity",
-      "title": "Several Bruges locals independently claim to know something about Valerian's disappearance.",
-      "context": "GM-prepared Bruges NPCs never used in play include a dockhand who says he saw Valerian “dragged aboard a barge with black sails,” a lantern-boy who saw him leaving with “two monks with hard hands,” and a Castellan's guard captain with “special permission” from Duke Brabant who “may be directly tied to Valerian's disappearance.” The strongest lead: Sir Odo van Aerschot, a Brabantine-loyalist knight in Bruges, is explicitly noted as “suspected to be behind several disappearances in Bruges — including Valerian.” Two more knew him personally before the covenant — a madam who kept a lock of his hair, a dowager noblewoman who “may still mourn his absence,” and a companion who calls him “heart-sigh.” None of these leads have been pulled on. See also t026 (the unsigned “V.” letter) and t028 (Reynald de Grimbergen) — likely the same underlying conspiracy.\n\nCUT — no longer needed (GM, 2026-07-25): Valerian already escaped captivity (delayed-teleport, 1222) and is an active covenant member, so the Bruges \"who-saw-him-taken\" investigation is moot. Flagged for deletion. NOTE: the Bruges 'Cast in Reserve' roster (gmReference.brugesRoster) is left intact — those NPCs remain available for any home-port scene, repurposable beyond this thread.",
-      "raised_in": "GM's Notion prep notes (undated), Bruges NPC roster",
-      "raised_event": "",
-      "status": "Confirm to delete",
-      "resolution": ""
-    },
-    {
       "id": "t031",
       "type": "Thread",
       "category": "NPC / Identity",
@@ -371,17 +327,6 @@
       "raised_in": "GM's Notion prep notes (undated), \"Opponent Profile ideas\"",
       "raised_event": "",
       "status": "Open",
-      "resolution": ""
-    },
-    {
-      "id": "t033",
-      "type": "Thread",
-      "category": "Diplomacy",
-      "title": "Friedrich of Merces Aurea's separatist recruitment pitch to Sjórseiðr was never pitched at the table.",
-      "context": "GM prep flags Friedrich, the Merces Aurea coalition coordinator, as likely to sound out the covenant for a Lotharingian secession cause — distinct from Bridget of Scarem Montem's already-tracked pitch (t010). Unclear whether this was ever actually raised in play — worth a GM check before treating it as live.\n\nCUT — retired as redundant (2026-07-25): the Lotharingian secession-recruitment beat is already covered by Bridget of Scarem Montem's pitch (t010, resolved — Éogan shared it). Friedrich's prepped standalone approach adds nothing distinct. DISAMBIGUATION (keep on record): Friedrich (House Tremere, of Merces Aurea) is UNRELATED to Dietrich (Wilhelm's brother, the Cologne professor / folk-magic evangelist) — two separate German-named NPCs. Friedrich remains an established, usable NPC from play (verified_events: Tremere litigant contesting a legacy vis-source renewal near the Lotharingian border, vs. Theobold of Cunfin); only this unplayed recruitment pitch is retired. Flagged for deletion.",
-      "raised_in": "GM's Notion prep notes (undated), \"Opponent Profile ideas\"",
-      "raised_event": "",
-      "status": "Confirm to delete",
       "resolution": ""
     },
     {
@@ -653,7 +598,7 @@
       "type": "Tool",
       "category": "Character Build",
       "title": "Ships-Captain grog template cleanup: delete all but one flaw and all but one virtue when copying from the Spare Grogs folder.",
-      "context": "Per the GM's own note: pick one of (Feud / Favor / Plagued by Supernatural Entity / Fury) as the flaw, and one of (Factor / Partner / Capo) as the virtue, when generating a new ship's captain.",
+      "context": "Per the GM's own note: pick one of (Feud / Favor / Plagued by Supernatural Entity / Fury) as the flaw, and one of (Factor / Partner / Capo) as the virtue, when generating a new ship's captain.\n\nUpdate (2026-07-25) — GM: BLOCKED on the sourcebook→DSL conversion (same dependency as t019/t020). Revisit once those resources are in-hand. Kept Open.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
       "status": "Open",
@@ -781,17 +726,6 @@
       "resolution": ""
     },
     {
-      "id": "tl015",
-      "type": "Tool",
-      "category": "Character Build",
-      "title": "General follow-up: 'familiars wanted.'",
-      "context": "See also thread t037 — none of the five PC magi has bonded a familiar yet; this early to-do is likely the origin of that gap.",
-      "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
-      "raised_event": "",
-      "status": "Open",
-      "resolution": ""
-    },
-    {
       "id": "tl016",
       "type": "Tool",
       "category": "Rules",
@@ -862,7 +796,7 @@
       "type": "Tool",
       "category": "Rules",
       "title": "Apprentice-creation rules were flagged for review.",
-      "context": "Alongside a note that Dustin's delegation of teaching to Henri (for Stijntje) went well — the review itself was never confirmed done.",
+      "context": "Alongside a note that Dustin's delegation of teaching to Henri (for Stijntje) went well — the review itself was never confirmed done.\n\nUpdate (2026-07-25) — GM: BLOCKED on the sourcebook→DSL conversion (same dependency as t019/t020). Revisit once those resources are in-hand. Kept Open.",
       "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
       "raised_event": "",
       "status": "Open",
