@@ -1,26 +1,5 @@
 [
   {
-    "id": "p046",
-    "file": "046_2026-06-20_post-tribunal-reflections-dagmars-paranoia-dustins-fame-and-.md",
-    "sort_iso": "1223-07-15T12:00",
-    "session": "2026-06-20",
-    "scene": "Immediate aftermath — reflections",
-    "title": "Post-Tribunal reflections: Dagmar's paranoia, Dustin's fame, and a wood sliver from every prize",
-    "icon": "🪵",
-    "timeline": "☀️ Summer 1223",
-    "date": "Late Summer 1223",
-    "cast": [
-      "Dagmar",
-      "Dustin Page",
-      "Éogan Dobhartha"
-    ],
-    "activity_type": "Character Development",
-    "status": "Proposed",
-    "notes": "The table's go-around on how each PC is processing an unplanned #1 finish. Dagmar is deep in a paranoia spiral about what winning \"for real\" now exposes the covenant to, and starts covertly marking every prize item in case something is swapped or stolen later. Dustin is just thrilled to be famous. Éogan also uses the departure to finally share the private Lotharingian pitch Bridget of Scarem Montem had made him on the free day (see open-questions t010).",
-    "source": "Transcript 2026-06-20 — table go-around on 'reflections on last time.'",
-    "body_text": "**Dagmar** came out of the Tribunal shell-shocked rather than triumphant — the plan had been to lay low, and instead the covenant is now the most visible independent in Normandy. He's replaying how the lay-low/throw-the-match plans went \"horribly, horribly wrong\" and is settling into a genuinely paranoid stretch: watching for anyone paying the covenant too much attention, and bracing for **Solving** (his long-vanished parens) to reappear and have opinions about all of it — table joke: \"he just went out for milk, he'll be back any day now.\"\n**Concrete paranoia measure:** for every book, scroll, or other prize item the covenant receives from the Tribunal, Dagmar takes a **tiny sliver from it** to keep on his person — insurance so that if something underhanded happens later (a swap, a theft, tampering) he has a physical/arcane link to try to trace it back.\n**Dustin**, by contrast, is delighted. He reads the win as unambiguously good for his personal legacy and renown, even if the *kind* of fame it brings (a jumped-up sea-covenant embarrassing three leash covenants at their own tournament) isn't necessarily the flattering kind. Table comparison: reputation as faction-specific currency — Order-of-Hermes fame doesn't automatically convert to goodwill with covenants that just got shown up.\n**Éogan**, as the covenant made ready to sail, finally surfaced a card he'd been holding since the free day: on the quiet, **Bridget of Scarem Montem** (House Tremere) had pulled him aside under an obscuring spell and walked him through the **Lotharingian secession** case, offering to hold his Tourney winnings in jurisdictions beyond Normandy's recall. He'd sat on it through the games — but with Scarem Montem having since stolen the host's Tapestry and openly declared for the Lotharingian Tribunal, the private courtship read very differently in hindsight, and he laid the whole thing out for the covenant on the way out."
-  },
-  {
     "id": "p047",
     "file": "047_2026-06-20_stijntjes-first-taste-of-peers-and-of-how-different-she-is-f.md",
     "sort_iso": "1223-07-15T12:00",
@@ -179,26 +158,6 @@
     "notes": "Forward-looking beats confirmed for next year, plus two open threads the GM flagged as still pending on their end.",
     "source": "Transcript 2026-06-20 — closing look-ahead to 1224.",
     "body_text": "**1224:** once winter breaks, **Wilhelm heads to Scarem Montem** — \"perhaps with some backup\" — to retrieve his stolen Latin thesis copy in person.\n**Open thread — remaining prize picks.** The GM acknowledged their notes on the covenant's full Tribunal prize list (beyond the Mont-Saint-Michel tide pools, the Terram summa, and Subtle Knives already locked in) were incomplete going into this session and need a second pass before the remaining ~20 prize pawns can be resolved.\n**Open thread — vis-source delegation.** With a much larger prize/resource footprint than before, the covenant will need to actively decide who staffs which vis-harvesting season and where — flagged as \"too much to think about right now,\" deferred to once the full resource list is in hand. Noted in passing: harvesting conventions vary by source — some (like Fire From the Sky) require being present for a specific trigger event, others can be left to accumulate and harvested later as needed, Hibernian-hedge-tradition style."
-  },
-  {
-    "id": "p055",
-    "file": "055_2026-07-11_the-fleets-trade-income-while-the-covenant-was-away-at-the-t.md",
-    "sort_iso": "1223-06-24T12:00",
-    "session": "2026-07-11",
-    "scene": "Summer 1223 — the fleet's trade, retroactively tallied",
-    "title": "The fleet's trade income while the covenant was away at the Tribunal",
-    "icon": "💰",
-    "timeline": "☀️ Summer 1223",
-    "date": "Summer 1223, during the Tribunal week",
-    "cast": [
-      "Éogan Dobhartha",
-      "Dustin Page"
-    ],
-    "activity_type": "Covenant Business",
-    "status": "Proposed",
-    "notes": "While the magi competed at the Tribunal, the covenant's three ships kept trading. Éogan's standing orders kept the Brineborn conservative; the Scholar's Wake, left to Heynric's judgment, swung bigger and it paid off.",
-    "source": "Transcript 2026-07-11 — trade-income tally for the ships left behind at the Tribunal.",
-    "body_text": "With the magi occupied at Montverte, the covenant's ships carried on trading independently, each captain/crew making their own risk call.\n**Brineborn** — Éogan had left standing orders not to take risks in his absence. Low risk, low reward: netted **11 mythic pounds**. Confirmed the right call — the higher-risk play would have returned nothing this round.\n**Tide of Memory** — also played conservative, for a similarly modest but positive result.\n**The Scholar's Wake** — Dustin let Heynric the Merchant make the call. Heynric let it ride, cleared the bottom rung of risk, and came back with the best haul: **15 mythic pounds**.\n**Total: 35 mythic pounds richer**, collectively, on top of whatever the Tribunal itself paid out."
   },
   {
     "id": "p056",
@@ -382,87 +341,6 @@
     "body_text": "Continuing north from the Falcon's Cliff harvest, Dagmar resumes the **regio survey** he'd heard rumors about at the Tribunal, working the stretch of coast **between Fudarus and Confluensis** territory.\n**Method:** Eyes of the Eagle (plus an aura bonus) to scan for the tell-tale visual distortion of a regio boundary at long range — deliberately steering wide of Carnac itself along the way, since Dagmar's been avoiding known covenants' territory generally.\n**The roll: 52.** Far and away the highest number rolled at this table to date. The result: sea caves under the cliffs near Carnac, giving off a regio signature described as **a mirror-flash rather than a broadcast** — undetectable at normal range, and seemingly unnoticed by Carnac itself, whose own local aura reads as unremarkable. Getting inside means rowing into the caves.\n**Decision:** rather than loop Carnac in and risk a diplomatic mess (\"I'll just cut to the chase of them blaming us for something\"), Dagmar takes a handful of grogs and explores by rowboat alone. **To be continued** — the GM flagged this as something to develop further before the next session."
   },
   {
-    "id": "p032",
-    "file": "032_2026-05-23_wilhelms-manuscript-reveals-a-divine-vis-wrinkle.md",
-    "sort_iso": "1223-06-26T09:00",
-    "session": "2026-05-23",
-    "scene": "Friday morning — Wilhelm rereads his own thesis",
-    "title": "Wilhelm's manuscript reveals a Divine-vis wrinkle",
-    "icon": "📖",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — morning",
-    "cast": [
-      "Wilhelm Stienauer"
-    ],
-    "activity_type": "Research",
-    "status": "Proposed",
-    "notes": "Rereading his own folk-magic thesis, Wilhelm clocks that once a magic-theory guideline exists for a phenomenon, its basic lab-activity benefits open up to anyone — including vis harvesting inside holy auras. Which means spells cast with that vis become, technically, Implements of the Divine.",
-    "source": "Transcript 2026-05-23 — opening scene, Wilhelm's Creo/Vim magic-theory tangent before the finals.",
-    "body_text": "With a day or two of downtime before the last finals, Wilhelm went back over his own manuscript more carefully than he had in weeks.\nThe catch: per the standard Hermetic rule that developing a magic-theory guideline unlocks the **basic benefits of laboratory activities** for anyone using it, and Wilhelm's folk-magic system covers all four Techniques/Forms-equivalent phenomena — the implication is that mundanes trained through his system could **harvest vis**, including from **holy (Divine) auras**, not merely fae or magical ones.\nThe wrinkle: magic built from Divine vis apparently becomes, by the working theory at the table, an **Implement of the Divine** — not corrupted or penalized, just now legally/theologically \"God's,\" implicitly, the way a company logo becomes a stakeholder's the moment it appears in a film. No botch penalty attached, but a real second-order consequence for anyone drawing on it.\nWilhelm's gallows-humor read on the Church angle: if anyone in Rome ever actually reads the thesis rather than reacting to rumors of it, their most likely response is a startled, genuine thank-you."
-  },
-  {
-    "id": "p033",
-    "file": "033_2026-05-23_dietrich-pitches-folk-magic-to-scholars-and-a-redcap-dustin-.md",
-    "sort_iso": "1223-06-26T09:00",
-    "session": "2026-05-23",
-    "scene": "Friday morning — Dietrich holds court in a tavern",
-    "title": "Dietrich pitches folk magic to scholars and a Redcap; Dustin interrogates him",
-    "icon": "🍺",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — morning",
-    "cast": [
-      "Dustin Page",
-      "Éogan Dobhartha",
-      "Dagmar",
-      "Wilhelm Stienauer"
-    ],
-    "activity_type": "Research / Politics",
-    "status": "Proposed",
-    "notes": "Wilhelm's brother Dietrich — a Cologne cathedral-school professor with a rhetorician's Presence — works a tavern crowd of mundane scholars and a Redcap. Dustin needles him hard on the Divine-vis danger; Dietrich extends Parma Magica for a proper scholastic debate rather than back down. Éogan and Dagmar eavesdrop with opposite reactions.",
-    "source": "Transcript 2026-05-23 — 'the professor' / Dietrich tavern scene and Dustin's cross-examination.",
-    "body_text": "**Dietrich** (Wilhelm's brother — professor of medicine and philosophy at a Cologne cathedral school, more at home teaching in a tavern's back room than a formal hall) held forth to a knot of mundane scholars and at least one Redcap, evangelizing his brother's folk-magic thesis.\nHis pitch, in the confident, theatrical register of a man used to lecturing: mundanes can do \"basic magic\" once the system is taught — season-long lab work, a few pounds of vis, eventually casting on their own — and the system appears to work equally well in Divine auras (\"align your magic with the will of God\"), a claim he leans on hard rhetorically.\n**Dustin listened in but pushed back sharply**, especially on the vis-from-holy-auras point (\"wait, that's dangerous\"). Dietrich's answer: no more dangerous than fae vis, just with its own side effects — and he clearly felt Dustin's Gift as an unpleasant edge to the conversation, gritted through it, then formally offered to have **Parma Magica extended** over him so they could debate as scholars instead. Dustin agreed; **no botch** on the roll.\nUnder structured debate, Dietrich laid out the three ways to learn a new Hermetic guideline — experimentation, being taught via initiation, or **integrating someone else's prior understanding of it** — and used Wilhelm as the live example: Wilhelm was taught actual folk **dowsing/\"folk banding\"** as a child, before his Gift opened, and that knowledge survived the Opening intact. That's the seed the whole thesis grew from.\nThe system's theorized reason for being so **syncretic** (working across pagan, fae, and Divine contexts alike): unlike Hermetic magic, it doesn't call on \"gods of magic\" or power names at all — it calls on **humanity's own innate relationship to nature**. Dietrich's framing: everyone with the Gift has magical \"perfect pitch\"; this system argues *everyone* — Gifted or not — has *rhythm*. Someone at the table called it a **proto-Spinozist magic system**.\nDietrich also aired the thesis's acknowledged problems: success would mean **thousands of new folk-magic practitioners** wanting into a Rhine/Normandy magical economy sized for a much smaller Order — a real resource and wild-vis strain — plus the obvious Church-scrutiny risk. He name-drops one cautionary case his researchers turned up: someone practicing what looked like infernal magic (commanding reality directly — \"you will do this for me\") who turned out not to be invoking anything demonic at all, just committing the sin of pride. His answer to Church risk, delivered as pure rhetorical bravado: send *him* their scholars, he'll happily walk them through it.\nOne concrete new mechanical thread surfaced: folk-magic guidelines can apparently support **spontaneous casting at Boundary and Year durations**, targets/durations normally locked to formal ritual infrastructure. Flagged as something **Valdemar** — already pulling at spontaneous-magic threads — would find very interesting, though he's keeping that interest close to the chest for now.\n**Éogan and Dagmar eavesdropped from the side.** Éogan recalled a person or two from his own village who could do small folk-magic-flavored things (calming/calling animals) without ever being identified as Gifted, and mused that formalizing hedge traditions into Hermetic theory could help magi be seen as less of pariahs among mundanes. Dagmar stayed openly unconvinced by the showmanship of the pitch — not the substance, just the hard sell — and was characteristically blunt that he hopes someone else does the actual integration work; his own priority remains keeping the covenant solvent."
-  },
-  {
-    "id": "p034",
-    "file": "034_2026-05-23_wilhelm-pitches-éogan-on-hedge-magic-seaweather-traditions-f.md",
-    "sort_iso": "1223-06-26T09:00",
-    "session": "2026-05-23",
-    "scene": "Friday morning — Wilhelm and Éogan on sea magic",
-    "title": "Wilhelm pitches Éogan on hedge-magic sea/weather traditions for the thesis",
-    "icon": "🌊",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — morning",
-    "cast": [
-      "Wilhelm Stienauer",
-      "Éogan Dobhartha"
-    ],
-    "activity_type": "Research",
-    "status": "Proposed",
-    "notes": "Wilhelm's working theory is that Hermetic guidelines are mechanically universal, so finding hedge-magic equivalents (storm prediction, current-finding) anywhere would support the thesis. Éogan's own home tradition turns out to be water-finding rather than sea-current work, and runs close to Diedne-adjacent \"Seekers\" fieldwork methodology.",
-    "source": "Transcript 2026-05-23 — Wilhelm/Éogan conversation on weather-working and water traditions.",
-    "body_text": "Wilhelm's next concrete step for the thesis: find **weather-prediction or current-navigation** hedge traditions to demonstrate the system generalizes to a sea-faring context, not just land-bound folk practice.\nHis reasoning (per his working theory that **Hermetic guidelines are effectively universal targets** in game terms): a hedge tradition anywhere that reliably finds ocean currents or predicts storms would independently validate his thesis, regardless of who practices it.\n**Éogan's read from experience:** for a sea covenant, control over wind and current isn't just survival — it's propulsion. He's personally more water- than air-inclined. But his own home tradition, as he understands it, wasn't actually a sea-navigation practice — it was oriented toward **finding fresh water inland/underground** for villages, and is more commonly associated with **fae magic** than open-ocean work.\nÉogan noted his tradition survived mostly as an unbroken master-to-student thread (\"a Hermetic cell in and of itself\") rather than a documented body of theory, and that its more active practitioners run in the methodology of House Diedne's **Seekers** suborder — fieldwork his own research assistants use without having formally joined the Seekers themselves.\nOpen thread: Wilhelm still needs an actual example of hedge-magic sea-current-finding or storm-prediction to close the thesis's weakest citation gap; dowsing-for-water is closer to confirmed but doesn't fully prove the maritime case."
-  },
-  {
-    "id": "p035",
-    "file": "035_2026-05-23_dagmar-and-dustin-pitch-bertrand-ex-verditius-on-storing-the.md",
-    "sort_iso": "1223-06-26T09:00",
-    "session": "2026-05-23",
-    "scene": "Friday morning — negotiating with Confluensis",
-    "title": "Dagmar and Dustin pitch Bertrand ex Verditius on storing the covenant's prizes",
-    "icon": "📚",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — morning",
-    "cast": [
-      "Dagmar",
-      "Dustin Page"
-    ],
-    "activity_type": "Diplomacy",
-    "status": "Proposed",
-    "notes": "With prize books and texts about to become a shipboard liability, Dagmar and Dustin pitch Confluensis (spelled \"Confluences\" in this session's transcript — same liege covenant as in prior sessions) on custodianship, not vassalage. Bertrand ex Verditius negotiates in person; a Bargain roll closes the terms, contingent on him checking with the covenant's inner circle before the finals end.",
-    "source": "Transcript 2026-05-23 — the Confluensis book-storage negotiation with Bertrand.",
-    "body_text": "Anticipating a haul of prize books and texts too valuable to risk at sea, Dagmar and Dustin sought out **Confluensis** at their tents to propose safekeeping — explicitly *not* vassalage, just custodianship with guaranteed access.\nMet **Bertrand ex Verditius** — visually a man in his 50s who is, in fact, closer to 70 or 80; tanned, Mediterranean coloring; a big, bushy black beard. Bertrand needled Dagmar good-naturedly about a sea-covenant producing \"such fine specimens.\"\n**The pitch:** Confluensis holds any prize books/texts on Sjórseiðr's behalf; Sjórseiðr keeps full access and visits to work on them as needed; no formal vassalage, just a standing mutual arrangement.\n**Dagmar rolled Area Lore: Normandy Tribunal** (stress die, +3 for prior tribunal research), got an **11**, and learned Confluensis is **significantly underperforming this Tribunal relative to its usual standing** — a covenant that pools and redistributes vassal winnings, meaning a bad Confluensis showing hurts its vassals too, and they're currently short on the usual leverage that comes with hosting a favor like this.\n**Payment discussion:** the standard rate for a season of a magus's lab service is roughly **2–3 pawns of vis**. Bertrand fished for what else Sjórseiðr could offer instead — and, after a pointed once-over of Dagmar, asked outright whether **cross-border courier/smuggling work** was something they'd done before. Dagmar demurred; Dustin didn't — the covenant had, in fact, run exactly this kind of job already (the covert Creo Vis run for Montverte, kept off the Redcap network at Montverte's insistence).\n**Dustin led the Bargain roll** (Communication, +3 assist from Dagmar) — **no botch**. Closing pitch: a season of general service is fine; being treated as someone's subordinate is not.\nBertrand agreed to take the offer back to Confluensis's inner circle (roughly 10–11 active magi at their home covenant; only a small contingent present at the Tribunal) and promised an answer **before the finals concluded**."
-  },
-  {
     "id": "p036",
     "file": "036_2026-05-23_covenant-settles-on-reachable-aquamanimal-vis-sources-passes.md",
     "sort_iso": "1223-06-26T09:00",
@@ -481,82 +359,6 @@
     "notes": "Pre-prize-draft strategizing: stick to coastal resources reachable by ship, don't overextend into unfriendly inland territory, and let Confluensis keep its long-disputed Channel Islands claim as a goodwill chip.",
     "source": "Transcript 2026-05-23 — vis-source planning ahead of the prize draft.",
     "body_text": "Before the prize draft, the covenant weighed which vis sources to prioritize if the tribunal went well: **easy access mattered more than the resource type** — trading covers most raw vis needs, but travel through unfriendly or distant territory is a real risk.\nGM-offered candidates within easy reach of the covenant's current position: an **Aquam vis source** — sea foam gathered on **St. Martin's Day (November)** at a secluded beach near **Saint-Malo** — and an **Animal vis source** on a cliff along the north shore, near Confluensis's own territory. Both reachable via the English Channel without circling Brittany.\nThe **Channel Islands vis source** (disputed jurisdiction with the London Tribunal, long held by Confluensis) came up as a possible claim — the covenant chose to **pass on contesting it**, reasoning that Confluensis will simply out-rank them on the pick order anyway, and letting Confluensis keep an already-held resource is a low-cost way to bank goodwill rather than open a jurisdictional fight the covenant doesn't need."
-  },
-  {
-    "id": "p037",
-    "file": "037_2026-05-23_valdemars-joust-final-vs-montverte-second-place.md",
-    "sort_iso": "1223-06-26T12:00",
-    "session": "2026-05-23",
-    "scene": "Joust Final",
-    "title": "Valdemar's joust final vs. Montverte — second place",
-    "icon": "🥈",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — midday",
-    "cast": [
-      "Valdemar Bjornsson"
-    ],
-    "activity_type": "Hermetic Tourney — Joust",
-    "status": "Proposed",
-    "notes": "Valdemar's bracket wins put him in the final against Montverte, tied for the tribunal lead. After debating the politics of beating a host/leash covenant, the table votes to let him go for the win. Montverte takes it fair and square in a best-of-three roll-off.",
-    "source": "Transcript 2026-05-23 — joust final roll-off vs. Montverte.",
-    "body_text": "Valdemar returned from his bracket having won cleanly against an early opponent and then against a **Semita Errabunda** rider, putting him in the **joust final against Montverte**, tied for first overall.\n**Covenant debate:** finishing above a hosting leash-covenant risks the kind of resentment already visible from Confluensis; some at the table favored letting Montverte have it as a courtesy. Consensus landed on **going for the win regardless** — \"let the chips fall where they may.\"\n**Best-of-three stress-die roll-off.** Montverte took it **2–1**, fair and square.\nTable joked about whether the loss was secretly thrown; consensus in-fiction was no — **Valdemar is confident enough to have pulled it off, but too prideful to actually try.**\n**Result: Valdemar/Sjórseiðr places 2nd in the joust.** Montverte gets the satisfaction of a clean win."
-  },
-  {
-    "id": "p038",
-    "file": "038_2026-05-23_dagmars-dimicatio-final-a-clean-win-then-a-mirror-match-loss.md",
-    "sort_iso": "1223-06-26T14:00",
-    "session": "2026-05-23",
-    "scene": "Dimicatio Final",
-    "title": "Dagmar's dimicatio final — a clean win, then a mirror-match loss to Caris of Oleron",
-    "icon": "🪞",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — afternoon",
-    "cast": [
-      "Dagmar"
-    ],
-    "activity_type": "Hermetic Tourney — Dimicatio",
-    "status": "Proposed",
-    "notes": "Two-match final. Dagmar means to win outright against a Tytalus opponent (name garbled in the recording) and go easy on Oleron's finalist as a diplomatic courtesy — but the second match, against a Criamon built by the GM as a deliberate mirror of Dagmar's own sheet, turns into a real, hard-fought loss.",
-    "source": "Transcript 2026-05-23 — dimicatio final, two matches (vs. the Tytalus magus, then vs. Caris ex Criamon).",
-    "body_text": "Dagmar entered the dimicatio final needing to beat two opponents: a **Tytalus magus** first (name unclear in the recording — heard as something close to \"Quaerus\"), and **Oleron's finalist** second. Going in, Dagmar planned to fight the first for real and **deliberately lose initiative** against Oleron's man as a diplomatic gesture.\n**Match 1 — vs. the Tytalus magus.** Dagmar cast **Posing the Silent Question** (Intellego Mentem) again; the opponent fast-cast **Banish the Thought** as a defense, but it backfired — trying to force the intrusive thought out only reinforced it. His shoulders dropped and the match was called for Dagmar. He left the field abruptly, cordial but clearly rattled.\n**Match 2 — vs. Caris ex Criamon (Oleron's finalist).** The GM built Caris explicitly as a **mirror of Dagmar's own character sheet** — boyish-faced, younger-looking than his real age, mild and a little blithe in manner.\nCaris held his action, then opened with **Pierce the Magical Veil** — attempting to open a regio *on top of his opponent* mid-duel, an unusual and unsettling approach. Followed by **Past Lives**, an eerie effect suggesting the caster's mind holds conversations with great minds of the past (compared at the table to Dante and Virgil), aimed at Dagmar. Dagmar improvised a spontaneous **Intellego/Rego Mentem** defense — grounding himself in \"the here, the now, it's me\" — and it held (a **personal/momentary/individual** spontaneous effect against a −10 casting-score penalty, needing to clear roughly half the target level).\nCaris pressed with **Words of the Unbroken Silence**, trying to plant a message directly in Dagmar's mind — blocked. He then switched tactics entirely and cast **Break the Shield**, a Perdo Vim effect functionally equivalent to dispelling Parma Magica — **Wizard's-War-tier stuff for a tournament match.** It landed. Dagmar described the sensation as the magical equivalent of being about to be disrobed and then not quite. His own spontaneous **Rego Vim** effort to restabilize his Parma (needing 9+, effectively against a −16 penalty) came up **one short**.\n**Caris did not follow up.** Dagmar conceded, badly shaken but gracious; Caris, equally gracious: *\"You will be delightful competition next tribunal. I look forward to seeing you there.\"*\n**Result: Dagmar/Sjórseiðr places 2nd in the dimicatio** — a real loss to a genuinely tough opponent, not the soft diplomatic throw originally planned, though the outcome (a loss to Oleron) lines up with what Dagmar intended going in."
-  },
-  {
-    "id": "p039",
-    "file": "039_2026-05-23_hastiludium-final-vs-lapis-crudus-first-place.md",
-    "sort_iso": "1223-06-26T14:00",
-    "session": "2026-05-23",
-    "scene": "Hastiludium Final",
-    "title": "Hastiludium final vs. Lapis Crudus — first place",
-    "icon": "🔥",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — afternoon",
-    "cast": [
-      "Éogan Dobhartha",
-      "Dustin Page",
-      "Dagmar"
-    ],
-    "activity_type": "Hermetic Tourney — Hastiludium",
-    "status": "Proposed",
-    "notes": "Lapis Crudus — the recently-freed, 80-year-faerie-imprisoned independent — plays it destructive: fire, a pit trap, and a closing ball of abysmal flame that actually catches the wagon. Grip of Ice and a strong Unseen Porter carry Sjórseiðr across first, unburned. The GM also reveals an earlier bracket round was resolved off-screen in Sjórseiðr's favor to save table time — the covenant wins the Hastiludium outright.",
-    "source": "Transcript 2026-05-23 — hastiludium final vs. Lapis Crudus.",
-    "body_text": "Opponent: **Lapis Crudus**, the independent covenant recently freed after an 80-year faerie imprisonment, fielding a \"premier\" Flambeau plus Tremere/Flambeau support (exact roster uncertain even to the GM in the moment). Reputation: destructive and \"rollicking\" — willing to injure a competitor's mount or rig rather than lose. Riding an enchanted **anvil** in place of a wagon.\nPre-cast as usual: Wizard's Sidestep, Grip of Ice, and a strong **Unseen Porter** pull (an exceptional roll — noticeably \"buffer\" than the wagon's usual pull).\n**Opening.** A pillar of flame appears directly in the wagon's path; Éogan fast-casts a −5-penalized **Mighty Torrent of Water**, rolls **29**, douses it clean.\nDustin lands **Pillum of Fire** on Lapis Crudus's anvil, heating it forge-orange — countered when their caster **Soothes the Raging Flames** right back down.\nLapis Crudus opens **Pit of the Gaping Earth** in the wagon's path; the Unseen Porter routes around it, costing a little time but avoiding the hazard entirely.\nDustin tries **Broom of the Winds** on their rider to knock them loose; they pivot into **Circling Winds of Protection** instead — deflecting the attack, though it also denies them a wind-assisted speed boost.\n**Closing move.** Lapis Crudus throws a **Ball of Abysmal Flame** at the wagon. A fast-cast **Creo Aquam** counter (classic counter-magic, matching totals) fails to beat their casting roll; a follow-up spontaneous dousing effect (needing 23+) rolls only **16** and also falls short — the fire catches.\nRather than break off this late in the race, the crew **rides it out**: a Stamina roll holds up, **Grip of Ice**'s literal ice cushions the burn (the grip loosens as it melts, faces get scorched, nothing worse), and one hand quenches the flame while the other holds the line.\nThe Unseen Porter's speed edge (**+4 net** relative to the opponents) carries Sjórseiðr across the line first — **no injuries**, thanks to the ice.\n**GM note:** an earlier hastiludium bracket round the table didn't have time to play out live was resolved off-screen in Sjórseiðr's favor between sessions, to avoid pushing the tournament into a further session.\n**Result: Sjórseiðr wins the Hastiludium outright — 1st place.**"
-  },
-  {
-    "id": "p040",
-    "file": "040_2026-05-23_tribunal-final-standings-sjórseiðr-takes-first-overall-confl.md",
-    "sort_iso": "1223-06-26T12:30",
-    "session": "2026-05-23",
-    "scene": "The reckoning — final standings",
-    "title": "Tribunal final standings: Sjórseiðr takes first overall, Confluensis takes the \"Siege of Shame\"",
-    "icon": "🏅",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — feast",
-    "cast": [],
-    "activity_type": "Tribunal Standings",
-    "status": "Proposed",
-    "notes": "Full placements read aloud at the closing feast. Confluensis's 13th-place finish (\"the Siege of Shame,\" traditionally zero reward per a historical cheating scandal) directly explains the cold reception Dagmar gets minutes later. Sjórseiðr finishes 1st overall with 51 points and 31 pawns of vis.",
-    "source": "Transcript 2026-05-23 — full standings readout at the closing feast.",
-    "body_text": "As the Redcaps tallied results, the closing feast doubled as the standings ceremony. Placements as announced (covenant names/ordinal titles as heard — a few uncertain):\n  • **21st — the \"Siege of Alms\"** → **Florum** (a leash covenant), 12 pawns instead of zero.\n  • **13th — the \"Siege of Shame\"** → **Confluensis** — **zero pawns**. There's Tribunal-wide lore behind the 13th-place designation, tied to a historical cheating scandal; landing there is a real public humiliation, not just a bad finish.\n  • **7th — the \"Siege of Notatus\"** → **Fudarus**, 17 pawns. (Siege name confirmed against the tribunal workbook's prize-rank table, not the recording itself, which was unclear here.)\n  • **4th — Montverte**, 15 pawns.\n  • **3rd — Merces Aurea**, 30 points.\n  • **2nd — the \"Siege of Valor\"** → **Oleron**, 31 points.\n  • **1st — \"The Siege of Normandy\"** → **Sjórseiðr**, with a total of **51 points and a reward of 31 pawns of vis** — the second-place gap was 31 to 51, meaning the Hastiludium win alone pulled the covenant well clear of the tie.\nA representative from each covenant was called forward in order to draft prizes."
   },
   {
     "id": "p041",
@@ -578,65 +380,6 @@
     "notes": "As tribunal winner, Dagmar leads the pick formally on the covenant's behalf. First vis-source pick and two library picks locked in on the call; remaining picks (20 of 31 prize pawns) to be settled asynchronously with the GM after the session.",
     "source": "Transcript 2026-05-23 — prize draft at the closing feast.",
     "body_text": "**Vis-source pick (1st overall pick, uncontested at that slot):** the **Mont-Saint-Michel tide pools** — a high-value, conveniently coastal Aquam source.\n**Library picks**, drawn from a partial list the GM shared mid-session and confirmed against the tribunal workbook's library data:\n  • **First pick — \"De Lapii\"**, a rare branch-specific **Terram summa** (Level 17 · Quality 14). Reaction at the table: \"that thing's nuts,\" \"I didn't even know books like that existed\" — Éogan pushed hardest for this one and it was the clear top priority.\n  • **Passed over — \"The Primal Power\"**, an **Aquam summa** (Level 9 · Quality 17) that came up in the same conversation. High quality, but Éogan's own Aquam score is already **17** — well past the book's level-9 cap — so it would teach him nothing; the party let it go.\n  • **Second pick — \"Subtle Knives\"**, a Penetration summa under Hermetic Theory & Abilities — Éogan's self-described \"far second\" choice, still locked in for the covenant's library.\n**Bookkeeping:** roughly **11 of the covenant's 31 prize pawns** were spent across these first three picks (picks cost one pawn each as the draft cycles through every covenant in placement order); **20 remain** for further rounds, to be resolved asynchronously by the GM after the session as the pick order continues."
-  },
-  {
-    "id": "p042",
-    "file": "042_2026-05-23_bertrand-denies-the-book-storage-arrangement-ever-happened.md",
-    "sort_iso": "1223-06-26T12:30",
-    "session": "2026-05-23",
-    "scene": "The reckoning — Confluensis reneges",
-    "title": "Bertrand denies the book-storage arrangement ever happened",
-    "icon": "🧊",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — feast",
-    "cast": [
-      "Dagmar"
-    ],
-    "activity_type": "Politics",
-    "status": "Proposed",
-    "notes": "Fresh off the Siege of Shame, Bertrand flatly denies the morning's negotiation ever happened, then turns back to his meal. The book-storage question is back open — Fudarus or Oleron are the live alternatives, with Oleron the more promising given how Raoul's conversation goes minutes later.",
-    "source": "Transcript 2026-05-23 — Dagmar's follow-up with Bertrand after the standings.",
-    "body_text": "Confluensis never followed up with terms before the finals ended, as promised. Dagmar sought out **Bertrand ex Verditius** directly at the feast to close the loop.\nBertrand's response, cold and immediate: **\"I know of no arrangement.\"** He turned back to his food without another word.\nDagmar's read leaving the conversation: Confluensis is not housing the books. Given the timing — this lands minutes after Confluensis's public **13th-place humiliation** — the snub reads less like forgetfulness and more like wounded pride refusing to be seen doing a favor for the covenant that just helped bury them.\n**Open thread:** the covenant's prize texts still need a custodian. Fudarus (closer, but Dagmar's openly not fond of Tytalus magi) and Oleron (further, but visibly warmer toward Sjórseiðr as of this same feast) are the two live options."
-  },
-  {
-    "id": "p043",
-    "file": "043_2026-05-23_éogan-smooths-things-over-with-raoul-of-oleron.md",
-    "sort_iso": "1223-06-26T12:30",
-    "session": "2026-05-23",
-    "scene": "The reckoning — Éogan and Raoul",
-    "title": "Éogan smooths things over with Raoul of Oleron",
-    "icon": "🍷",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — feast",
-    "cast": [
-      "Éogan Dobhartha"
-    ],
-    "activity_type": "Politics",
-    "status": "Proposed",
-    "notes": "Éogan apologizes for the covenant's matches not going Oleron's way as intended. Raoul waves it off — genuinely delighted that Sjórseiðr's rise embarrassed Confluensis and Montverte — and starts treating the covenant as a peer, floating a favorable resource swap.",
-    "source": "Transcript 2026-05-23 — Éogan's post-standings conversation with Raoul.",
-    "body_text": "Éogan sought out **Raoul of Oleron** after the standings to apologize — the covenant had hoped the finals would go Oleron's way as a courtesy, but between real opposition and events moving faster than planned, that didn't fully happen.\nRaoul brushed it off immediately, in good humor, and pulled Éogan down for a drink instead: as far as he's concerned, Sjórseiðr beating **Confluensis and Montverte** — old rivals of Oleron's within the tribunal's leash-covenant politics — is a win worth celebrating regardless of who beat whom in the bracket.\n**Reading of the room:** Raoul now treats Sjórseiðr as something close to a peer rather than a prospective vassal — \"between the two of us, we're running away with it\" — and is open to working together where interests align.\n**Concrete offer:** Oleron has additional easily-reachable island/coastal resources not on the official prize list that Raoul is willing to trade flexibly for something more inland, further south — convenient if the covenant ends up routing through Oleron territory anyway (e.g. to store Wilhelm's books there instead of Confluensis)."
-  },
-  {
-    "id": "p044",
-    "file": "044_2026-05-23_dietrich-warns-wilhelm-about-the-company-hes-keeping.md",
-    "sort_iso": "1223-06-26T19:00",
-    "session": "2026-05-23",
-    "scene": "The reckoning — a brotherly warning",
-    "title": "Dietrich warns Wilhelm about the company he's keeping",
-    "icon": "⚠️",
-    "timeline": "☀️ Summer 1223",
-    "date": "Friday, Tribunal Day 4 — evening",
-    "cast": [
-      "Wilhelm Stienauer",
-      "Éogan Dobhartha",
-      "Dagmar"
-    ],
-    "activity_type": "Intrigue",
-    "status": "Proposed",
-    "notes": "Wilhelm is still processing the covenant's win as a cheerful, low-stakes camp-games victory. Dietrich, working purely off tavern chatter and not the covenant's actual politics, still reads the room correctly enough to pull his brother aside.",
-    "source": "Transcript 2026-05-23 — Dietrich's aside to Wilhelm at the feast.",
-    "body_text": "As the covenant's win rippled through the feast, Wilhelm's read on the whole tournament stayed resolutely innocent: to him it landed somewhere between a summer-camp relay race and being crowned king-for-a-day at a village fair — fun, a little silly, not obviously dangerous.\nA nearby onlooker (heard as **Helga**) pointedly noted that a lot of covenants seem awfully sore about losing what's ostensibly just a game — more than mere competitive pride, it's described as **a reaffirming of the order of things**, one Sjórseiðr just upended by winning fair and square, with very material seven-year consequences attached (first pick of the tribunal's rare texts and resources).\n**Dietrich**, without knowing any of the covenant's actual political entanglements, picked up enough from the ambient chatter to pull Wilhelm aside privately: *\"Brother. I think you should be mindful about how deeply you throw your lot in with them. I believe they have made some enemies.\"* He then stepped back to let Wilhelm keep his privacy with the rest of the table.\nWilhelm, still mentally filing the win as a harmless game, didn't take the warning especially seriously — his more pressing concern stayed retrieving his stolen Latin manuscript and getting to Ireland."
   },
   {
     "id": "p045",
