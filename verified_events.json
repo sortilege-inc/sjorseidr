@@ -1392,23 +1392,6 @@
     "body_html": "<ul class=\"bulleted-list\"><li style=\"list-style-type:disc\">Dustin sent a letter to Montverte offering to fulfill the favor owed since Solving's deal.</li><li style=\"list-style-type:disc\">Guillaume le Pro of House Flambeau answered with two options: (A) deliver 5 pawns of Creo vis to the Tribunal <strong>outside the Redcap network</strong>, or (B) lend public diplomatic weight to Montverte's press on Dragon's Rest (vassals of Confluensis).</li><li style=\"list-style-type:disc\">Covenant decision: take <strong>both</strong>, banking a future Montverte favor against the additional effort.</li><li style=\"list-style-type:disc\">Communication roll: 4 (Order-of-Hermes Lore + Politics speciality) — negotiation closes cleanly.</li><li style=\"list-style-type:disc\">Outstanding GM questions: why Guillaume avoids the Redcap network for the vis; how Confluensis will react if the scheme is uncovered.</li></ul>"
   },
   {
-    "file": "Brineborn engages in trade 2e51e10767bd80089d17f2d8a657af9c.html",
-    "title": "Brineborn engages in trade",
-    "icon": "💵",
-    "activity_type": "",
-    "cast": [
-      "🧣 Éogan Dobhartha"
-    ],
-    "timeline": "🌺 Spring 1223",
-    "date": "April 20, 1223 → June 19, 1223",
-    "sort_iso": "1223-04-20T00:00",
-    "notes": "",
-    "season_activity": false,
-    "status": "",
-    "body_text": "",
-    "body_html": ""
-  },
-  {
     "file": "Invent Grip of Ice spell (continued 2e51e10767bd807a8957c5d100f5c202.html",
     "title": "Invent Grip of Ice spell (continued",
     "icon": "🧊",
@@ -1435,7 +1418,7 @@
     ],
     "timeline": "🌺 Spring 1223",
     "date": "April 20, 1223 → June 19, 1223",
-    "sort_iso": "1223-04-20T00:00",
+    "sort_iso": "1223-04-20T01:00",
     "notes": "",
     "season_activity": true,
     "status": "",
@@ -1452,7 +1435,7 @@
     ],
     "timeline": "🌺 Spring 1223",
     "date": "April 20, 1223 → June 19, 1223",
-    "sort_iso": "1223-04-20T00:00",
+    "sort_iso": "1223-04-20T02:00",
     "notes": "",
     "season_activity": true,
     "status": "Historical",
@@ -1469,7 +1452,7 @@
     ],
     "timeline": "🌺 Spring 1223",
     "date": "April 20, 1223 → June 19, 1223",
-    "sort_iso": "1223-04-20T00:00",
+    "sort_iso": "1223-04-20T03:00",
     "notes": "",
     "season_activity": true,
     "status": "Historical",
@@ -1486,7 +1469,7 @@
     ],
     "timeline": "🌺 Spring 1223",
     "date": "April 20, 1223 → June 19, 1223",
-    "sort_iso": "1223-04-20T00:00",
+    "sort_iso": "1223-04-20T04:00",
     "notes": "5 Animal vis",
     "season_activity": true,
     "status": "Historical",
@@ -1508,7 +1491,7 @@
       "Gerard, the Mule",
       "Garrat Coffin",
       "Drest",
-      "Valdemar's Wife",
+      "Rán",
       "Rosie the Pig",
       "Adam Smith"
     ],
@@ -1518,7 +1501,7 @@
     "notes": "Bruges → Le Mans → Montverte. Éogan exploded a Push of the Gentle Wave casting and turned the upriver leg into a luxury cruise.",
     "season_activity": false,
     "status": "Historical",
-    "body_text": "The party gathered in Bruges and sailed the coast south to the mouth of the Sarthe.\nValdemar's drakar **the Storm Dragon** carried the magi inland to Le Mans. From Le Mans they hired carts overland to Montverte.\nÉogan cast **Push of the Gentle Wave** to drive the ship upstream and rolled an exploding success — \"a very luxurious trip,\" the deck barely shifting beneath them.\nMagi aboard: Dagmar, Éogan, Dustin, Valdemar, Valerian, and Stijntje (apprentice).\nCompanions: Adam Smith (Stijntje's protector), Gerard de Mule, Valdemar's wife (placeholder Viking name: Katarina — confirmed as Rán later in saga).\nGrogs (~8–10): Garrett, Drest (from the Brineborn), several unnamed.\nSpecial: Rosie the magical pig familiar, palpably excited by the smell of distant vis caches along the route.\nNot attending: Éel (depression when landlocked), Heinrich (sent trading), Solving (excuse of \"other studies\" — covers his Twilight disappearance).",
+    "body_text": "The party gathered in Bruges and sailed the coast south to the mouth of the Sarthe.\nValdemar's drakar **the Storm Dragon** carried the magi inland to Le Mans. From Le Mans they hired carts overland to Montverte.\nÉogan cast **Push of the Gentle Wave** to drive the ship upstream and rolled an exploding success — \"a very luxurious trip,\" the deck barely shifting beneath them.\nMagi aboard: Dagmar, Éogan, Dustin, Valdemar, Valerian, and Stijntje (apprentice).\nCompanions: Adam Smith (Stijntje's protector), Gerard de Mule, Valdemar's wife Rán.\nGrogs (~8–10): Garrett, Drest (from the Brineborn), several unnamed.\nSpecial: Rosie the magical pig familiar, palpably excited by the smell of distant vis caches along the route.\nNot attending: Éel (depression when landlocked), Heinrich (sent trading), Solving (excuse of \"other studies\" — covers his Twilight disappearance).\nThe Brineborn (Éogan's ship) also engaged in trade over the journey.",
     "body_html": "<ul class=\"bulleted-list\"><li style=\"list-style-type:disc\">The party gathered in Bruges and sailed the coast south to the mouth of the Sarthe.</li><li style=\"list-style-type:disc\">Valdemar's drakar <strong>the Storm Dragon</strong> carried the magi inland to Le Mans. From Le Mans they hired carts overland to Montverte.</li><li style=\"list-style-type:disc\">Éogan cast <strong>Push of the Gentle Wave</strong> to drive the ship upstream and rolled an exploding success — &quot;a very luxurious trip,&quot; the deck barely shifting beneath them.</li><li style=\"list-style-type:disc\">Magi aboard: Dagmar, Éogan, Dustin, Valdemar, Valerian, and Stijntje (apprentice).</li><li style=\"list-style-type:disc\">Companions: Adam Smith (Stijntje's protector), Gerard de Mule, Valdemar's wife (placeholder Viking name: Katarina — confirmed as Rán later in saga).</li><li style=\"list-style-type:disc\">Grogs (~8–10): Garrett, Drest (from the Brineborn), several unnamed.</li><li style=\"list-style-type:disc\">Special: Rosie the magical pig familiar, palpably excited by the smell of distant vis caches along the route.</li><li style=\"list-style-type:disc\">Not attending: Éel (depression when landlocked), Heinrich (sent trading), Solving (excuse of &quot;other studies&quot; — covers his Twilight disappearance).</li></ul>"
   },
   {
