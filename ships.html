@@ -332,6 +332,24 @@ let MAGI = null; // name -> full sheet, keyed by exact Foundry name
 let NPCS = null; // name -> full sheet, keyed by ships.json canonical name
 let SHIP_DETAILS = null; // ships.json ship id -> hull/devices/lab detail
 let FLEET_NOTE = null;
+let RULES_IDX = {}; // normalized rules-entity name -> verbatim DESCRIPTION text (from rules.json)
+
+// Verbatim virtue/flaw/spell text is pulled from rules.json (sliced from the
+// resolved armdef corpus by scripts/build_rules.py) so the sheets aren't
+// hard-coding rules prose. Falls back to a character's own embedded description
+// for anything not in the (core-only) corpus — e.g. grog/3rd-party content.
+const rlNorm = s => (s==null?'':String(s)).toLowerCase().split(/\s+/).filter(Boolean).join(' ');
+function ruleText(name, fallback){
+  return RULES_IDX[rlNorm(name)] || fallback || '';
+}
+/* escape, then light **bold** / *italic*, then blank lines -> paragraph breaks */
+function mdRules(s){
+  return esc(s)
+    .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
+    .replace(/\n\s*\n/g, '<br><br>')
+    .replace(/\n/g, ' ');
+}
 let activeTab = null; // snapshot id, or 'all-ships'
 
 // ships.json spells some names slightly differently than the Foundry actor name
@@ -358,13 +376,20 @@ function findCharacterSheet(name){
 
 async function load(){
   try{
-    const [shipsRes, magiRes, npcsRes, detailsRes] = await Promise.all([
+    const [shipsRes, magiRes, npcsRes, detailsRes, rulesRes] = await Promise.all([
       fetch('./ships.json', {cache:'no-store'}),
       fetch('./magi.json', {cache:'no-store'}).catch(()=>null),
       fetch('./npcs.json', {cache:'no-store'}).catch(()=>null),
       fetch('./ship_details.json', {cache:'no-store'}).catch(()=>null),
+      fetch('./rules.json', {cache:'no-store'}).catch(()=>null),
     ]);
     DATA = await shipsRes.json();
+    if(rulesRes && rulesRes.ok){
+      const rulesJson = await rulesRes.json();
+      Object.entries(rulesJson.entities || {}).forEach(([name, e]) => {
+        if(e && e.text) RULES_IDX[rlNorm(name)] = e.text;
+      });
+    }
     if(magiRes && magiRes.ok){
       const magiJson = await magiRes.json();
       MAGI = magiJson.magi || {};
@@ -570,12 +595,14 @@ function artsGridHtml(arts){
 
 function vfListHtml(list, cls){
   if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
-  return `<div class="vf-list">${list.map(v=>`
+  return `<div class="vf-list">${list.map(v=>{
+    const txt = ruleText(v.name, v.description);
+    return `
     <div class="vf-item ${cls}">
       <span class="vf-name">${esc(v.name)}</span>${v.impact?`<span class="vf-impact">${esc(v.impact)}</span>`:''}
-      ${v.description?`<span class="vf-desc">${esc(v.description)}</span>`:''}
+      ${txt?`<span class="vf-desc">${mdRules(txt)}</span>`:''}
     </div>
-  `).join('')}</div>`;
+  `;}).join('')}</div>`;
 }
 
 function abilitiesHtml(list){
@@ -592,13 +619,15 @@ const RDT = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
 
 function spellsHtml(list){
   if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
-  return list.map((sp,i)=>`
+  return list.map((sp,i)=>{
+    const txt = ruleText(sp.name, sp.description);
+    return `
     <div class="spell-item rollable" data-roll="spell" data-idx="${i}" title="Click to cast">
       <div class="sp-name">${esc(sp.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:11.5px">(lvl ${sp.level})</span></div>
       <div class="sp-meta">${esc(sp.technique)}${sp.form?'/'+esc(sp.form):''} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${sp.ritual?' · Ritual':''}</div>
-      ${sp.description?`<div class="sp-desc">${esc(sp.description)}</div>`:''}
+      ${txt?`<div class="sp-desc">${mdRules(txt)}</div>`:''}
     </div>
-  `).join('');
+  `;}).join('');
 }
 
 function magusSheetHtml(m){

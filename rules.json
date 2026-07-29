@@ -1,0 +1,670 @@
+{
+ "meta": {
+  "edition": "armdef",
+  "spec_version": "0.5",
+  "generated_from": "armdef-0.5-full.resolved.json",
+  "note": "Verbatim rules text sliced from the resolved armdef corpus for runtime use by integrating_magic.html and the ships.html fleet-crew sheets. Regenerate with scripts/build_rules.py after a corpus or character update."
+ },
+ "laboratory": [
+  {
+   "name": "The Breakthrough",
+   "source": "armdef-0.5-laboratory",
+   "text": "To achieve an arcane discovery, you must accumulate a number of **breakthrough points** determined by the type of Breakthrough your magus is attempting. There are three kinds of Breakthrough: **Minor, Major** and **Hermetic**. Note that it is recommended that the exact number of breakthrough points required may be varied, so the players do not know the precise number needed for the Breakthrough.\n\nA **Minor Breakthrough** is a development that is immediately useful and applicable in the existing framework of Hermetic magic, such as a new Range, Target or Duration. It improves upon or adds to existing theory without truly reaching the limits of magic. A Minor Breakthrough typically requires around 30 breakthrough points. In many sagas, Minor Breakthroughs happen easily enough that a maga can expect to achieve this goal once or twice during her lifetime. Minor Breakthroughs could be more common, but are few because most magi Bonisagi have loftier goals. Why invent a new Range when you can attempt to break a Hermetic Limit? Grandiosity usually propels magi toward harder projects.\n\nA **Major Breakthrough** pushes those limits, but does not break them; these include Hermetic Virtues for Gifted characters. Incorporating hedge magic into Hermetic theory is a Major Breakthrough, and the incorporation can then be taught to others as Supernatural Virtues. A Major Breakthrough typically requires around 45 breakthrough points. Notatus’ development of the *Aegis of the Hearth* was a Major Breakthrough, a variable spell based on Bonisagus’ Parma Magica. Major Breakthroughs make a magus famous. With persistence, a troupe playing in a fast saga could realistically see a player make a Major Breakthrough.\n\nA **Hermetic Breakthrough** is research that breaks one of the Lesser Limits of Magic, for example a new Arcane Ability or the ability to cast permanent duration spells without vis. Hermetic Breakthroughs re-write the theory books; the only Hermetic Breakthrough in 450 years was the development of the Parma Magica by Bonisagus, which broke the Lesser Limit of Magic Resistance, a limit that still binds all known forms of nonHermetic magic. A Hermetic Breakthrough typically requires around 60 breakthrough points.\n\nA Breakthrough may be something entirely new, born from the imagination of a creative maga. It may also be based on a form of non-Hermetic magic, as a magus tries to make it possible for Hermetic magi to do something that non-Hermetic wizards do. In either case, the researcher may accumulate breakthrough points through experimentation, as described later. In the latter case, the magus may also study the non-Hermetic magic, seeking insights into its nature and applying them to Hermetic magic. Both of these approaches yield breakthrough points, and points from both sources may be mixed in a single project. In either case, the troupe must define the result of the research in advance and agree on the level of Breakthrough. Success will change the saga, and so it is important that the whole troupe is happy with those changes. *Ancient Magic* and *Hedge Magic Revised Edition* contain a large number of suggested Breakthroughs that would allow a magus to incorporate certain aspects of non-Hermetic magic into Hermetic theory. These can also serve as inspiration for Breakthroughs that are not linked to any existing tradition."
+  },
+  {
+   "name": "Experimentation (Arcane Discovery)",
+   "source": "armdef-0.5-laboratory",
+   "text": "Once you have determined what sort of Breakthrough you would like to accomplish, you must invent something Hermetically that somehow incorporates your idea. This can be a spell or a magical enchantment, either a lesser enchantment or a charged item. Detail the effect fully, as per the normal rules. Since you are searching for clues aimed at surpassing regular Hermetic theories, you must experiment, using the rules found in the Arcane Experimentation section earlier, including choosing a risk modifier for your experiment and rolling on the Extraordinary Results Chart. For your original research to be fruitful you must roll the Discovery result on the Extraordinary Results Chart. Fortune plays a large roll in the research process. However, you can hedge your bet with original research in a way that you can not with regular experimentation. Instead of adding your risk modifier into your Lab Total during the season, you use that modifier to adjust your roll on the Extraordinary Results Chart. The risk modifier still runs the range of +1 to +3, but you are restricted in your choice by your Magic Theory score. For every five points or fraction thereof of Magic Theory (including Puissant Magic Theory) you may choose a risk modifier of 1. Thus, to chose a risk modifier of +2 your Magic Theory must be 6 or higher, and a risk modifier of +3 requires a Magic Theory of 11+.\n\nConsult the Extraordinary Results Chart as normal to determine the effect on your spell, including adding your Risk Modifier. However, you may also add or subtract all or part of your Risk Modifier in order to get a Discovery in addition to the normal effect of experimentation. Thus, if you had a Risk Modifier of +3, and rolled an 8, you would get a Modified Effect (from a total of 11). You could also subtract 1 to get a Discovery in addition. The effect of the spell is still modified. You cannot use the Risk Modifier to get a supplementary result other than a Discovery.\n\nYou are hoping for a Discovery. If you do not roll a Discovery, your spell or item is still affected by the Extraordinary Results Chart. Most likely you will end up with a slightly odd Hermetic effect. If your original research involved a spell and that spell is flawed or difficult to cast, you may reinvent the spell using the rules found in the Arcane Experimentation section. If your research involved an item and that item is flawed, you may attempt to reinvent that item, but all vis used in the initial experiment is lost.\n\nIf your spell or enchanted item research takes more than a single season to complete you must continue to roll on the Extraordinary Results Chart for each season. Having deciding how you will use your Risk Modifier in a previous season, you must continue to use it in the same manner for consecutive seasons. If you subtracted 1 from your initial roll on the Extraordinary Results Chart in your first season, for example, you must subtract 1 from every additional roll on the Extraordinary Results Chart in additional seasons until the item or spell is completed. You may accrue odd and weird results as your research progresses, but may continue to experiment providing you don’t receive a Complete Failure or Disaster result.\n\nIf you do achieve a Discovery during your experimentation then the original research was a success. Ignore the Discovery sub-chart of the Extraordinary Results Chart; that chart applies to those not investigating the deeper mystery of Hermetic magic, instead discovering something more intimate about their personal connection to magic and the Arts. You, however, have found that elusive element of magic that you started your original research searching for. Now you must stabilize that experimental process to better understand your discovery.\n\nEach spell or magical enchantment can only lead to one discovery. You may repeatedly invent the same spell or enchantment experiment until a discovery is rolled, even if the experiment was a success. Thus, you may accumulate many usable versions of the same spell in process of your research. However, once a specific experiment yields a Discovery, you may no longer explore that spell or magical enchantment for further discoveries."
+  },
+  {
+   "name": "Integration",
+   "source": "armdef-0.5-laboratory",
+   "text": "Insight can also be gained from studying some feature of a non-Hermetic magical practice. Every insight the magus gains allows him to produce a partially Hermetic effect incorporating some aspect of the magic in question. As he produces more of these effects, he gains the broader understanding necessary to incorporate that aspect into Hermetic theory as a whole.\n\nThe seasons spent gaining insight produce Laboratory Texts. Any magus may study these Laboratory Texts over the course of a season in order to gain the same insight for himself, even without direct access to the artifacts. Summaries of Laboratory Texts are not useful in this way, however; only the whole thing can be used. For purposes of copying, insight Laboratory Texts have a level equal to the typical number of breakthrough points needed for the type of Breakthrough in question.\n\nThere are three sources of insight: **texts**, **relics** and **teachers**.\n\n*Texts* are books and tomes, symbolic wall paintings, or other explanatory sources which describe how to learn, perform or cast a magical effect. If the text contains the information needed to improve a Supernatural Ability, a character who already had the Ability could use it, as per the normal rules. Most Hermetic magi however, do not have other Supernatural Abilities. Alternatively, the text may contain the rites and practices needed to perform a magical spell or ritual associated with an ancient magical tradition.\n\n*Relics* are the mystical devices or sacred items enchanted by practitioners of the tradition, and incorporating unique aspects of that tradition. Additionally, a relic may be an on-going mystical effect caused by the magical tradition. Like Hermetic magical devices, a magus is able to investigate the device to learn its secrets and unlock the methods used to craft it.\n\n*Teachers* are individuals who possess the Supernatural Abilities associated with the ancient magic and are able and willing to instruct a Hermetic magus. For contemporary traditions of non-Hermetic magic, such individuals are relatively accessible, although close collaboration with a “hedge wizard” might harm a maga’s reputation. The ghosts of practitioners of extinct traditions may remain in Mythic Europe, and might be convinced to teach a maga.\n\nFor every season a magus spends investigating a source of insight, make a stress roll of Intelligence + Magic Theory against an Ease Factor of 18. Inventive Genius adds three to this roll, and some sources of insight may add their own modifiers. If the roll succeeds, the magus gains an insight. If it fails, he learns nothing now, but may try again in another season. He may do other things before returning to his study. On a botch, the magus thinks he has an insight, but does not. He realizes this if he creates an effect, as described below, in an attempt to use the insight; the final product is entirely Hermetic, or simply non-functional.\n\nA single source can generally only provide a single insight, although there may be rare exceptions. The same source provides the same insight for any magus who studies it."
+  },
+  {
+   "name": "Creating the Effect",
+   "source": "armdef-0.5-laboratory",
+   "text": "A particular insight allows the researcher to create one, specified effect. This effect might be a spell, or an effect enchanted into an item. It could, conceivably, be another laboratory project; anything that uses a Lab Total and creates something. However, spells are by far the most common, followed by item enchantments. The magus must experiment while creating the effect, as he is most certainly stretching the boundaries of Hermetic magic.\n\nThe researcher does not get to choose the effect for which he receives insight, and as the level of the effect is fixed, the insight might be for an effect he cannot yet invent. For example, the effect might be level 40, while the researcher has a Lab Total of 32. In that case, the researcher can increase his Lab Total and then work on the effect.\n\nThe troupe should decide on the effects that result from particular pieces of insight, choosing ones that advance the saga without upsetting play balance. Player characters can vary things as much as they like once they fully integrate the system, so the restrictions at this stage should be accepted with good grace.\n\nThe researcher must invent exactly the effect inspired by the insight. He may not vary the Range, Duration, or Target, or any other parameters. As the magus must experiment while inventing the effect, the result may be slightly different, as a result of rolls on the Extraordinary Results table.\n\nA spell is cast like a normal Formulaic spell, and characters with Flexible Formulaic Magic may vary it at casting time in the normal way. The spell may also be Mastered, again in the normal way.\n\nThe effect created may bend or break the limits of magic, as it incorporates non-Hermetic elements. Setting the level of the effect may well require a judgment call by the troupe, as it may do something for which there is no Hermetic guideline.\n\nIf the effect is successfully created, the magus gains a number of breakthrough points equal to the magnitude of the effect. This applies even if the final effect is warped or has a side effect. These points are added to the magus's running total, and he must find another source of insight before repeating the procedure.\n\nThe effect produced in this way can be reproduced by other Hermetic magi. However, they can only do so if they have access to a Laboratory Text describing it, and it is not possible to vary the effect in any way; it must be reproduced exactly as it was initially created.\n\nReproducing the effect in this way does not grant breakthrough points unless the reproducing magus also gains the relevant insight, whether from investigating the same item or from reading the original investigator's Laboratory Texts. It is possible to reproduce the effect first, and study the insight Laboratory Texts later."
+  },
+  {
+   "name": "Stabilizing the Unknown",
+   "source": "armdef-0.5-laboratory",
+   "text": "After you have achieved your Discovery, you must stabilize that process through exact repetition. You must repeat the experimentation, continuing for the same number of seasons and using the exact Lab Total and risk modifier that you used to find your Discovery. If you used vis during your process you must repeat the amount used. You must roll again on the Extraordinary Results Chart, and you must modify your roll in the same direction as you did to make the Discovery. This means that if you added your risk modifier to your roll your must add it again; if you subtracted your risk modifier from your roll you must subtract it this second time.\n\nDuring the stabilization season you do not need to roll a Discovery to succeed. As long as you do not roll a harmful effect (Disaster, No Benefit, Complete Failure) you stabilize your discovery. Ignore any beneficial result you might roll. If you do roll a harmful effect your stabilization process fails, although you may try again in a subsequent season.\n\nIf your stabilization season succeeds, you gain one breakthrough point per magnitude of the invented Hermetic spell or enchanted item. You also create a Laboratory Text that explains your discovery.\n\nAs a side affect to this stabilization process, you receive Warping Points from your attempts to understand this new magic. The number of Warping Points gained is the magnitude of the effect minus a simple die. If you gain 2 or more Warping Points you must roll to avoid Wizard’s Twilight (page 228). You can obviously mitigate the chance of gaining Warping Points by experimenting with lower magnitude effects. However, this lengthens your original research process, since it is your accumulated effect magnitudes that ultimately add up to your Breakthrough. Experimenting with higher magnitude spells hastens you toward your Breakthrough and increases your risk of Wizard’s Twilight.\n\nYou receive Warping Points whether you succeed or fail at stabilizing your discovery. If your stabilization attempt fails, you may spend another season and try it again. You may continue to stabilize your discovery until you succeed, providing you spend consecutive seasons until you succeed and you do not suffer some dire event along the way."
+  },
+  {
+   "name": "After the Breakthrough",
+   "source": "armdef-0.5-laboratory",
+   "text": "Minor Breakthroughs are usable immediately in the game, and are understandable by all Hermetic magi. New Ranges or Durations may be incorporated into new spells or items, and the Laboratory Texts distributed for a spell may be used by another Hermetic magus without his needing to research the Breakthrough. Any magus who has created an effect using the Breakthrough can then use that Range or Duration freely in his other spells, and any magus trained by that magus, in either Arts or spells, may also do so.\n\nMajor and Hermetic Breakthroughs must be taught to Hermetic magi directly. An Ability may be taught in the usual way, either in person or through books. The discoverer converts his breakthrough points into experience points in the new Ability, so that a magus who accrued 50 breakthrough points to integrate an Ability would start with a score of 4.\n\nA new Virtue may be Initiated according to the normal rules for Mysteries. The discoverer gains the Virtue when he completes the integration, and does not need to be Initiated. He does need to design an Initiation Script, following the rules in the Long-Term Events chapter (page 388). The Virtue can also be taught to an apprentice, following the rules given earlier. In theory, it could be taught to any magus, but the penalties are likely to make that impossible in practice.\n\nA second Major Breakthrough integrates a Major or Hermetic Breakthrough completely into Hermetic magic. If this succeeds, any magus may create an effect using the Breakthrough as long as he has a Lab Text, and then may use the Breakthrough freely. As for Minor Breakthroughs, the same applies to any magus taught Arts or spells by a magus who understands the Breakthrough. Experimentation is always suitable for this second Breakthrough, and integration may be used if there are suitable non-Hermetic traditions to study."
+  }
+ ],
+ "entities": {
+  "Exiled Atlantean": {
+   "text": "The character is an exiled Atlantean; she is tainted by her contact with the surface world, and cannot return to her magic regio. This exile is enforced by the very nature of the magic regio to which the Atlanteans are native, so there is no authority figure to which she may appeal, or any obvious method of returning to favor. The exile applies even if the Atlantean left her native magic regio involuntarily.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Tales of the Ashes": {
+   "text": "Lets you see what the ashes you touch originally were, and how and when the object was burned. The latter two are divined from markings and signs in the ashes.",
+   "source": "armdef-0.5-spells-ignem"
+  },
+  "Berserk": {
+   "text": "You are capable of entering a blinding rage when in combat or frustrating situations. You automatically gain the Personality Trait Angry +2 (or more, at your option). Any time you take a wound or wound an enemy, roll a stress die and add your Angry score. A roll of 9+ means you go berserk. The storyguide can also call for a roll when you are strongly frustrated. You may deliberately try to go berserk. In this case, you only need a 6+ when you take a wound or wound an enemy, or a 9+ if you have not been wounded or caused a wound. While berserk, you get +2 to Attack and Soak scores, but suffer a –2 penalty to Defense. While berserk, you cannot retreat, hesitate to attack, or give quarter. If you are still berserk when there are no enemies present, you attack your friends. You may roll once per round to calm down if you desire, requiring a stress die + Perception – Angry against an Ease Factor of 6. You may learn Martial Abilities at character creation.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Light Touch": {
+   "text": "You have especially good handeye coordination and great proficiency for using your hands in precise, fast ways. You gain +1 to all rolls involving subtle manipulation of objects (like picking pockets) and roll one less botch die than you normally would in such activities (minimum of one). This bonus does not apply to archery, but does apply to playing musical instruments.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Seven-League Stride": {
+   "text": "Transports you to any place within seven leagues either that you can see or that you have an Arcane Connection with. If you fail an Intelligence + Finesse stress roll against an Ease Factor of 9, your arrival goes slightly awry. For instance, you might fall when you appear, or just be facing the wrong way. A botch means you appear in the wrong place, perhaps even in a wall.\n\nPraefactus of Bonisagus's version of this spell always allows him to appear in a safe, unembarrassing place (assuming he doesn't fail his Finesse roll). All Praefactus's spells make him seem as dignified as possible — manifesting his wizard's sigil.",
+   "source": "armdef-0.5-spells-corpus"
+  },
+  "Susceptibility to Warping": {
+   "text": "Your character’s constant exposure to magic has made him more susceptible to supernatural Warping than he might otherwise be.\n\nIn any year in which the character gains a Warping Point from any Realm or any source (including Longevity Rituals, living within an aura, and powerful supernatural effects), the character gains one additional Warping Point associated with that same Realm. This means that if he gains a single Warping Point from each Realm in a year, he gains four additional Warping Points, one from each Realm, at the end of that year.\n\nThese additional points do not contribute to Wizard’s Twilight or to other events caused by the acquisition of Warping Points as they accrete slowly over the course of the year.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Improved Characteristics": {
+   "text": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Opening the Intangible Tunnel": {
+   "text": "You can open a magical channel from yourself to some target, allowing you to cast any spell with a range greater than Personal on that target. The tunnel does not, of itself, grant any sense impressions of the target — you must cast appropriate spells through it if you wish to see. Spells cast through the tunnel cannot be of higher level than that of this spell. You must make standard Concentration rolls to maintain concentration on the Opening spell as you cast other spells. A magus who magically recognizes the tunnel (through The Invisible Eye Revealed or a similar spell) may cast spells through the tunnel back at you, and he need not concentrate on keeping the tunnel open. If this magus is the target of the tunneling spell, he is considered to be touching you. Otherwise, his effective range to you is his range to the target of the tunneling spell. If the target of the spell has Magic Resistance, you must Penetrate that resistance to open the tunnel. Spells cast through the tunnel must also Penetrate Magic Resistance normally.",
+   "source": "armdef-0.5-spells-vim"
+  },
+  "Quiet the Raging Winds": {
+   "text": "Stops all wind from blowing, leaving only calm air. This spell is not powerful enough to affect winds caused by Ritual magic, and only affects winds blowing on the caster when it is cast. Under normal circumstances, the winds will not pick up again for at least an hour or so.",
+   "source": "armdef-0.5-spells-auram"
+  },
+  "Twilight Prone": {
+   "text": "You either enjoy or cannot help running excessive amounts of magic through you when you cast spells. You must roll to resist Twilight on a single magical botch, rather than on a double botch like most magi.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Study Bonus": {
+   "text": "When given the opportunity to study an Art from books or raw vis in the presence of the Form or Technique, your surroundings give you new insights into your studies. Add two to die rolls to study from vis, or two to the Quality of any text you study from. Your current Art score determines the magnitude of the surroundings you require to get the bonus. See the table for some guidelines.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Envied Beauty": {
+   "text": "The character’s beauty draws revulsion and jealousy. This envy does not strike everyone, but vain persons of the character’s gender are particularly susceptible to it.\n\nCharacters with this Flaw may avoid its penalties by refusing to reveal their beauty to the world, which creates its own complications.\n\nA character lacking a positive Presence score may not have this Flaw.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Faerie Blood": {
+   "text": "A named faerie bloodline a character with faerie ancestry may descend from, granting the bonuses stated in its write-up.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Whispering Winds": {
+   "text": "The winds bear their tidings to your ears, allowing you to hear words spoken by any group of people within your line of sight, provided no solid barrier (including glass) intervenes. This spell is an adaptation of an effect known to Bjornaer the Founder, and fits poorly into the normal framework of Hermetic magic.",
+   "source": "armdef-0.5-spells-auram"
+  },
+  "Weak Parens": {
+   "text": "Your parens was less powerful or a worse teacher than normal. You gain 60 fewer experience points and 30 fewer spell levels from apprenticeship, for a total of 180 experience points and 90 levels of spells.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Night Terrors": {
+   "text": "This character is plagued far too often by horrible nightmares and fits of screaming in his sleep. The character must make a Stress Roll against an Ease Factor of 9 in order to avoid suffering terrors. The storyguide may call for modifiers of –1 to –3 if he has faced eerie or terrifying events recently, like meeting a demon or battling the undead.\n\nSuffering from terrors means that the character wakes up often and in a panic during the night. Situations might occur where he overreacts or reacts in unfortunate ways, if forced awake during such nights. The morning leaves him with a Long Term Fatigue Level lost. These Long Term Fatigue Levels are cumulative, so several bad nights leave him in bad shape. Subtract the character's Fatigue penalty from the Ease Factor to avoid night terrors, to represent how a truly exhausted victim will at some point sleep through the nightmares due to sheer exhaustion. If a night of terrors renders the character Unconscious, he slips into deep, dreamless sleep. He sleeps for an entire day and night, and wakes up at Winded, ending the string of Night Terrors. A character with this Flaw may not also take the Sleep Disorder Flaw\n\nThis Flaw normally makes seasonal Laboratory work impossible, and so is not suitable for magi.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Lycanthrope": {
+   "text": "You have been cursed to change form into a dangerous predator (such as a wolf, lynx, or bear) on nights of the full moon (or similar, monthly, astrological events). No items or clothing transform between shapes, and it takes one full round for the full transformation to take effect. You are not immune to normal weapons, and the curse does not infect bite victims. The animal may be detected as a cursed human with an InAn or InCo spell.\n\nYou have the intelligence of an animal while changed, react to all stimuli as an animal, and do not retain any memory of actions taken in animal form, save occasionally in dreams. You may not even realize that you are under this curse. You can still recognize both friends and enemies when changed.\n\nLycanthropes may transform into a non-magical animal between Size –1 (wolf) and Size +2 (bear). You have the normal physical characteristics of a shapeshifter (see page 107), except that +3 is added to your Soak score (in animal form only). Furthermore, you are fully healed of all wounds incurred in animal form upon resuming human form (which happens at dawn).",
+   "source": "armdef-0.5-flaws"
+  },
+  "Sense of Magical Power": {
+   "text": "This spell tells the caster whether he is currently in a Magic aura. It does not give any further information. Other spells do the same for other kinds of aura.",
+   "source": "armdef-0.5-spells-vim"
+  },
+  "Lamp Without Flame": {
+   "text": "This spell creates a steady light as bright as daylight on a cloudy day. The light has no apparent source, but illuminates an area about ten paces across, centered on a point indicated by the caster. This point may be a mobile item.",
+   "source": "armdef-0.5-spells-ignem"
+  },
+  "Inventive Genius": {
+   "text": "Invention comes naturally to you. You get +3 to your Lab Total if you are not using a Laboratory Text or being taught. If you experiment, you get +6.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Chaotic Magic": {
+   "text": "Your magic is very wild. When you cast a spontaneous spell, you must specify a desired level of effect. If you fall short of or exceed that target by more than one level, the spell still works, but its effects are beyond your control—the storyguide decides the results. The level of effect includes any levels you assign to Penetration.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Black Sheep": {
+   "text": "You come from a prestigious family, but you have somehow estranged yourself from your relatives. They have nothing to do with you, unless they wish to punish you somehow or make use of you. Those who resent your family’s power can take safe revenge by assaulting you. You begin the game with a bad Reputation of your choice at level 2, among those who respect your family.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Comfort of the Drenched Traveler": {
+   "text": "Dries a person and his or her clothes.",
+   "source": "armdef-0.5-spells-aquam"
+  },
+  "Pilum of Fire": {
+   "text": "A 2-foot, thick, spear-shaped jet of fire flies from your palms, doing +15 damage to the individual it hits.",
+   "source": "armdef-0.5-spells-ignem"
+  },
+  "Companion Animal": {
+   "text": "The character is the Animal Companion of another character (either a player character or a storyguide character) and therefore has little control over his own life. He is largely dependent on his master for food and shelter, and has an additional Personality Trait of “Loyal to Master” which represents this bond. Among people who know his master, the character is treated better than he would be, perhaps as that person’s pet or bodyguard. Others most likely treat him as a brute or a dumb beast.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Maintaining the Demanding Spell": {
+   "text": "You cast this spell on a spell that you have already cast and are maintaining through concentration. The spell that requires concentration is then automatically maintained for the duration of this spell, whether you concentrate or not. You cannot change the effects of the first spell without concentrating on it again. For instance, you can use The Unseen Arm (ReTe 5) to hold an object in the air without concentrating, but to move the object still requires concentration. A Stamina + Concentration stress roll against an Ease Factor of 6 must be made in order to cast this spell while keeping the first one going (a lower roll than normal because this is what the spell is designed for). This spell only works on spells of equal or lower level.",
+   "source": "armdef-0.5-spells-vim"
+  },
+  "Magic Addiction": {
+   "text": "You crave the rush of casting and holding power over magic. Whenever you cast a spell, you have a difficult time stopping yourself from casting again and again until you drop from exhaustion. Whenever you use a stress die in spellcasting, you must, whether or not the spell succeeds, make an Intelligence + Concentration stress roll, against an Ease Factor of half the level of the spell (or, if you botched, the level you were attempting). If you fail, as your next action you must either cast a Formulaic spell of at least the same level as the previous spell, or cast any spontaneous spell, expending Fatigue and not reserving levels for Penetration. You must roll again to control your addiction, based on the level of the spell you just cast, but you get a +3 bonus to the roll for every spell you cast after the first. If you botch, you continue casting spells until you fall unconscious.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Short Attention Span": {
+   "text": "You have trouble concentrating. Keeping watch, listening to complex orders, following the plot of a story, or performing other such tasks that require continued attention are usually not within your ability.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Strong-Willed": {
+   "text": "You cannot easily be coerced into activities, beliefs, or feelings. You get +3 on any roll which may require strength of will.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Study Requirement": {
+   "text": "You are unable to study magic from books or vis alone. You must study in the presence of the appropriate Art. For example, you need to sit next to a brook or pond to study Aquam, or a large fire to study Ignem. Growing things are good for Creo, decaying ones good for Perdo. As your knowledge grows, you need to work with larger and larger quantities. See the Study Bonus Virtue on page 110 for a list of examples.\n\nYou may take both Study Bonus and Study Requirement.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Luck": {
+   "text": "You perform well in situations where luck is more of a factor than skill or talent. You get +1 to +3 (storyguide’s discretion) on rolls in such situations, depending upon how much luck is involved. You do well at games of chance, but may be labeled a cheater if you play them too often.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Weak Enchanter": {
+   "text": "Your Gift is ill attuned to creating enchanted devices. Halve your Lab Total whenever you create or investigate an enchanted item. If you have a Deficiency that counts as part of the Lab Total, apply the Deficiency first and then halve the remaining total.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Bind Wound": {
+   "text": "This spell binds the target's wounds, so that he can undertake any activity without the risk of worsening the wounds. He still suffers from the wound penalties, however, and cannot heal naturally while under the influence of this spell.\n\nTypically, you place your hands on the target and pass them over his wounds, which magically seal themselves and stop bleeding.",
+   "source": "armdef-0.5-spells-corpus"
+  },
+  "Creative Block": {
+   "text": "You have problems creating new things in the lab. You take a –3 penalty to all Lab Totals unless you are using a Laboratory Text or being taught. If you experiment, roll twice as many dice on the experimentation table.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Greater Immunity (Deprivation)": {
+   "text": "(See the Virtue on ArM5, page 43.) Much like magical beings, the character is immune to deprivation, suffering no loss of Fatigue or wounds from going without air, food or drink. However, like magic characters, she cannot regain long-term Fatigue without rest and sustenance, and if she is injured deprivation could cause her wounds to worsen.",
+   "source": "armdef-rop-magic-0.5-virtues-flaws"
+  },
+  "Failed Monk": {
+   "text": "You were once a member of a cloistered order, but were cast out for some great sin or gross incompetence, or perhaps you ran away and your abbot might allow you to come back after a suitable punishment. Because of this, you have a poor Reputation at level 2 in the local area and within the Church. You no longer need to observe your monastic vows of poverty, chastity, and obedience, though you may still practice them as they might be ingrained in your nature. You may take Academic Abilities during character creation.\n\nFemale characters may take this Flaw as Failed Nun.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Watching Ward": {
+   "text": "Watching Ward puts another spell on a given target on hold until that spell is triggered by a simple condition, which is determined when this ritual is cast. The target of the Watching Ward must be present for the entire casting ritual. When the conditions you specify come to pass, the suspended spell takes effect. Only one Watching Ward can be placed on any one person or object. The level of the Watching Ward must at least equal the level of the spell held in suspension. You can put multiple spells in the Ward, provided that its level at least equals the sum of the levels of the contained spells. If Intellego spells are included in a Watching Ward, they may be used to trigger the other spells. If someone tries to dispel the Watching Ward and fails, the suspended spell is cast. The Ritual nature of this spell supports the potentially indefinite duration. The Watching Ward is dispelled when it releases its spell. A version of this spell with target Room, known as Waiting Spell, is also well known in the Order. It can contain spells up to the level of the Waiting Spell – 10, and is also a Ritual.",
+   "source": "armdef-0.5-spells-vim"
+  },
+  "Circling Winds of Protection": {
+   "text": "Surrounds you with winds that circle at great speed. Since the wind picks up dust and other small, loose objects, you may be obscured. Anyone standing near enough to attack you with a hand weapon must make a Size stress roll against an Ease Factor of 9 at the beginning of each round or be blown back. Melee Attack rolls against you are at –3, and missile or thrown attacks are at –9.",
+   "source": "armdef-0.5-spells-auram"
+  },
+  "Magical Covenfolk": {
+   "text": "Only characters designed using the rules for Magic Character Creation may take this Virtue. The character is a magical being that is generally accepted by the other people at the covenant as an equal. The character does not command any special respect because of its magical nature, however, and how outsiders treat it depends upon its appearance; if it looks human it will be treated like a person, otherwise it will be seen as either a dumb beast or a monster. This Virtue may be combined with other Social Status Virtues and Flaws that are appropriate to the character’s form.",
+   "source": "armdef-rop-magic-0.5-virtues-flaws"
+  },
+  "Weak Scholar": {
+   "text": "You don't understand laboratory guidance very well. You get a –6 penalty to Lab Totals when working from the Lab Texts of others, including when re-inventing spells.",
+   "source": "armdef-0.5-flaws"
+  },
+  "The Call to Slumber": {
+   "text": "The target becomes sleepy and falls asleep within a few seconds.",
+   "source": "armdef-0.5-spells-mentem"
+  },
+  "Close Family Ties": {
+   "text": "Your family is one of the most important things in your life, and still supports and aids you whenever possible, even at personal risk. Family members do not hesitate to do you any favor that is within their power, and can call on their friends and neighbors to help you. It works both ways, however; your family will require help from you some day.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Unaging": {
+   "text": "You do not suffer the effects of age. In game terms, your aging points do not decrease your Characteristics, only building up to give you Decrepitude points. If a crisis is not potentially fatal, you suffer no ill-effects. You may die from terminal and potentially fatal crises, according to the normal rules. You are not enfeebled when you reach four Decrepitude points, but you die as normal when you reach five. You may choose your apparent age freely, although if you are basically human it should be less than or equal to your actual age.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Craving for Travel": {
+   "text": "The character suffers from feelings of loneliness, boredom, and depression if he does not expose himself to new experiences. He can stave off the boredom for a while, but if he remain in one place for more than a season, he suffers a –1 penalty to all rolls and totals until he experiences a change in scene. This penalty rises to –3 after a year of boredom. This character is probably the first to volunteer for a mission beyond the covenant gates, and may even spend part of each year in a different location such as the nearby wood. This Flaw might seem to make the character unsuitable for life at a covenant, so you should decide what it is at the covenant that means he keeps coming back. Perhaps it is the love of his life, the camaraderie, or perhaps just the feeling that he fits in here.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Rapid Convalescence": {
+   "text": "Your body can heal quickly. You get a +3 bonus on all rolls to recover from wounds.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Elemental Magic": {
+   "text": "You have been trained in the ability to manipulate raw elemental Forms (Aquam, Auram, Ignem, and Terram), and view them as a connected whole rather than four separate Arts. Whenever you gain experience from a source dedicated to one of these Arts, you gain half the Source Quality (rounded up) in experience points in each of the other three Arts. For example, if you studied Ignem from a book with a Source Quality of 13, you would gain 7 experience points in each of Aquam, Auram, and Terram.\n\nDuring character creation, assign all your experience points in Arts. Then assign half the experience points assigned to each of the elemental Forms to each of the other elemental Forms. Do not actually add these experience points to the Form in question until you have finished calculating all the bonus experience points. For example, if you assign 10 experience points to each of Aquam, Auram, and Terram, and 21 experience points to Ignem, then you should assign 15 bonus experience points to Ignem (5 from each of Aquam, Auram, and Terram), and 21 bonus experience points to each of Aquam, Auram, and Terram (11 from Ignem, and 5 each from the other two Forms).\n\nIn addition, if a spell with one of these Forms as its primary Form has another element as a requisite, you use the primary Form to calculate totals, even if the requisite is lower.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Favors": {
+   "text": "The covenant owes favors to someone or something, possibly another covenant, or possibly a mundane lord, bishop, or mystical creature. This person cannot give the covenant orders, but the covenant is really obliged to help if he is in difficulty.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Minor Magical Focus": {
+   "text": "Your magic is particularly attuned to some narrow field, such as self-transformation, birds of prey, or healing. In general, the field should be slightly narrower than a single Technique and Form combination, although it may include restricted areas of several such combinations. Healing, for example, is a part of Creo Corpus, Creo Animal, and possibly Creo Herbam. You cannot be focused on a laboratory activity, such as creating charged items, although a focus does apply to laboratory activities.\n\nWhen you cast a spell or generate a Lab Total within your focus, add the lowest applicable Art score twice, as for a Major Magical Focus (page 94).\n\nA magus may only have one Magical Focus, whether major or minor, regardless of the source of the focus.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Supernatural Nuisance": {
+   "text": "Supernatural entities of a certain kind interfere in your life in minor ways whenever you are around them. This differs from Plagued by Supernatural Entity in that the nuisances do not have any longterm plans. This could represent a ghost that haunts you, or general enmity from faeries towards you.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Covenfolk": {
+   "text": "Characters who have not had exposure to Latin must redistribute the experience points in that language to the other Abilities of this package.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Missing Eye": {
+   "text": "You cannot judge close distances easily and get –3 on Attack rolls for missiles and targeting rolls for spells. In melee combat you suffer –1 on Attack rolls because your field of vision is limited. You also have a blind side from which people can approach unseen. This Flaw can be combined with Poor Eyesight, but the penalties are cumulative.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Posing the Silent Question": {
+   "text": "You can ask one silent mental question of the target, then detect the answer. The truth of the answer is limited by the knowledge of the target. Questions to the effect of \"What would you do if …?\" often receive inaccurate replies. You are likely to get what the target thinks he would do, not necessarily what he would really do. The target of this spell does not notice the questioning unless he or she resists the spell, in which case they notice the attempt.",
+   "source": "armdef-0.5-spells-mentem"
+  },
+  "Veil of Invisibility": {
+   "text": "The target becomes completely undetectable to normal sight, regardless of what it does, but still casts a shadow.",
+   "source": "armdef-0.5-spells-imaginem"
+  },
+  "Fettered Magic": {
+   "text": "All of your spells and the effects of any magic items you activate are arcane connections to you. This suggests that you may have a natural aptitude for Mutantum Magic, or you might take it with Tamed Magic to represent an imperfect understanding of your talent. You cannot take this with Tethered Magic, as it already includes this effect.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Free Study": {
+   "text": "You are better at figuring things out for yourself than you are at poring over books. Add +3 to the Source Quality when studying from raw vis.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Familiarity with the Fae": {
+   "text": "You have a natural understanding of faerie ways, perhaps due to spending time among them. You get a +2 to all rolls involving social interaction with faeries. You also gain the effects of the Common Sense Virtue, but only when the situation pertains to faeries. You may purchase Faerie Lore at character generation, even if normally unable to take Arcane Abilities.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Hermetic Magus": {
+   "text": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Quiet Magic": {
+   "text": "You can cast spells using only a soft voice at no penalty, and at only a –5 penalty if you do not speak at all. You gain no benefits from using your voice normally but gain the normal benefit for using a booming voice. The range of Voice Range spells is determined normally, based on how loud your voice is.\n\nYou may take this Virtue twice, and eliminate the penalty altogether.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Wealthy": {
+   "text": "You are a rich member of your class. You may spend three seasons per year on study or adventuring, as you can pay people to look after your interests, and these seasons are genuinely free. Exactly how wealthy you are depends on your social class; a noble would have at least a dozen servants, including some bodyguards, while a wealthy townsman would have a good house and maybe three servants. Whatever your class, you are wealthy enough to afford goods generally associated with a higher class, and thus risk being labeled a vulgar social climber. Wealthy characters may live at a covenant, but they are not supported by the covenant. As all Hermetic magi are supported by their covenant, no magi may take this Virtue.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Warrior": {
+   "text": "You have been trained to fight, and may have spent some time campaigning, perhaps on one of the Crusades. You may acquire Martial Abilities during character creation, and gain an additional 50 experience points which must be spent on Martial Abilities.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Aegis of the Hearth": {
+   "text": "This ritual protects a covenant in a way similar to the way in which a Parma Magica protects a magus. It provides very strong protection against supernatural effects and creatures that originate from outside the boundary of the Aegis, and much weaker and less consistent protection against supernatural effects originating within the Aegis. The ritual also allows certain individuals to be excluded from the effects of the Aegis, so that it does not hinder their supernatural powers at all. No foreign supernatural creature with Might, of any type, can cross the boundary of the Aegis unless its Might exceeds the level of the Aegis. The Aegis of the Hearth must Penetrate the creature's Magic Resistance in order to have this effect. Any foreign supernatural effect that originates from outside the Aegis and would affect anything inside the Aegis must Penetrate a Magic Resistance equal to the level of the Aegis of the Hearth to take effect. Any foreign supernatural effect originating within the boundary of the Aegis must subtract half the level of the Aegis from any Casting Total or equivalent. Anyone who participated in the ritual to cast the Aegis is a native of that Aegis. Aegis of the Hearth was created by Notatus, the first Primus of House Bonisagus. It was a Major Breakthrough, incorporating Mercurian rituals as well as Hermetic theory, and as a result, the spell is more powerful than it ought to be, and has no Perdo requisite.",
+   "source": "armdef-0.5-spells-vim"
+  },
+  "Slow Reflexes": {
+   "text": "The character does not react well to surprises. He receives a –3 to his Initiative total in situations warranting a quick response.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Mendicant Friar": {
+   "text": "You are a follower of St. Francis or St. Dominic going among the rich and poor, spreading the word of God and giving comfort to the sick, homeless, hungry, or dying. You are sworn to serve the Church for the rest of your life, but your wandering habits are considered suspect by the local bishop and parish clergy, and you lack political influence within the organization. Like all clerics, however, you are only subject to canon law.\n\nDue to your training, you may take Academic Abilities during character generation. If you wish, you may be an ordained priest and may officiate at marriages, baptisms, funerals, and the Mass, though the parish clergy may resent your interfering on their “turf.” You do not need to take the Priest Virtue in addition to this one if you do want to be ordained.\n\nYou have sworn vows of poverty, chastity, and obedience, which could together constitute a Major Story Flaw (Monastic Vows, see page 138), and which would be a natural choice if you take this Virtue. You may not take the Wealthy Virtue or Poor Flaw. This Virtue is only available to male characters, and is compatible with the Magister in Artibus Major Virtue.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Skilled Parens": {
+   "text": "Your parens was more powerful, or a better teacher, than is common. You gain an additional 60 experience points and 30 spell levels during apprenticeship. This Virtue has no effect on your study after apprenticeship, but you still have a close relationship with a powerful magus.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Infamous": {
+   "text": "The covenant is mistrusted, has a checkered Hermetic record, or is held in contempt. This mirrors the Prestigious Minor Boon.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Common Sense": {
+   "text": "Whenever you are about to do something contrary to what is sensible in the game setting, common sense (the storyguide) alerts you to the error. This is an excellent Virtue for a beginning player, as it legitimizes any help the storyguide may give.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Humble": {
+   "text": "You are humble, always willing to believe that others are more skilled and better than you. You do not necessarily underestimate your own abilities, you just think others are better.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Well-Traveled": {
+   "text": "You have journeyed extensively in this part of the world and find it easy to get along with people throughout the area. You have fifty bonus experience points to spend on living languages, Area Lores, and Bargain, Carouse, Charm, Etiquette, Folk Ken, or Guile.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Pains of the Perpetual Worry": {
+   "text": "Gives someone a nagging, taunting, painful emotion — a recurrent sense of anxiety, a fear of something he or she does not know, a fear of everything, and a fear of nothing. To have this spell cast on you is truly a curse.",
+   "source": "armdef-0.5-spells-mentem"
+  },
+  "True Sight of the Air": {
+   "text": "2 points, Init: Qik–1, Auram R: Per, D: Sun, T: Vision A version of the spell of the same name. (15 spell levels: Base 1, +2 Sun, +4 Vision)",
+   "source": "armdef-0.5-spells-auram"
+  },
+  "Obese": {
+   "text": "You are large because of fat, not muscle. You are at –1 to all rolls that involve moving quickly or gracefully and at –3 to all Fatigue rolls. You are not so large that your Size is increased, and you may take this Flaw along with the Virtues and Flaws that change your Size.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Pessimistic": {
+   "text": "You always expect the worst. You may try to enjoy yourself, but you are sure that anything that can go wrong, will, and will pick on you.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Magical Memory": {
+   "text": "Your memory has been developed to remember magical rather than mundane things. You need not keep laboratory texts (see page 262) of your creations to get the benefit of a Lab Text when reproducing them. If you have created an effect by following another magus’s Lab Text once, you may get the same benefit in future without needing to have the text available.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Fast Caster": {
+   "text": "Your magic takes less time to perform than that of other magi. You gain +3 to Initiative to cast spells in combat and +3 to rolls to determine fast casting speed.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Diedne Magic": {
+   "text": "Your magic lineage and traditions are from the druids and the vanquished former house of Diedne, making you especially skilled with Spontaneous magic. When you cast a Spontaneous spell without expending Fatigue, you may choose to divide by 5 or by 2. If you choose to divide by 5, you need not roll a stress die, and cannot botch, just as normal. If you choose to divide by 2, you must roll a stress die, and may botch.\n\nWhen you expend Fatigue on casting a spontaneous spell, the lowest applicable Art is doubled before the whole total is divided by two. You still roll a stress die, and may botch.\n\nYou must keep your lineage hidden from the Order, giving you a Major Story Flaw — Dark Secret is an obvious choice, but you may choose a different one with troupe approval. This is in addition to your normal allowance of Flaws, and does not grant you any points with which to buy Virtues.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Tough": {
+   "text": "You can take physical punishment better than most people. You get a +3 bonus on your Soak score.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Merchant Adventurer": {
+   "text": "The character is in command of a ship, and a crew. The character has sufficient capital for a cargo, but may have substantial debts, which may be represented by the Favors Flaw. Further details are given in the main body of this chapter. A merchant adventurer who owns a share of the company he works for should select the Partner Virtue instead of this one.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Magic Sensitivity": {
+   "text": "You are often able to identify a place or object as magical. However, your sensitivity makes you more susceptible to magical effects: subtract your Magic Sensitivity score from your Magic Resistance. Choosing this Virtue confers the Ability Magic Sensitivity 1 (page 168).",
+   "source": "armdef-0.5-abilities"
+  },
+  "Wielding the Invisible Sling": {
+   "text": "Hurls any nearby object that could normally be thrown by a person at any target within range. The object must not be held down or otherwise restrained. Damage depends on the object thrown, up to +5 for a fist-sized stone. The object always hits, but it is resisted by Magic Resistance. Casting requisites of an appropriate Form for the target are required.",
+   "source": "armdef-0.5-spells-terram"
+  },
+  "Hedge Wizard": {
+   "text": "Because of your esoteric magic, other magi distrust you, and more importantly, grant you no respect. You start with a negative Reputation within the Order of Hermes at level 3 as a hedge wizard, even though you are a member of the Order.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Words of the Unbroken Silence": {
+   "text": "Lets you say two words directly to the mind of a target. The target can recognize your voice and knows that the message is of supernatural origin.",
+   "source": "armdef-0.5-spells-mentem"
+  },
+  "Poor Student": {
+   "text": "You are bad at learning new things. Subtract 3 from all Advancement Totals derived from teaching and books (that is, you have no penalty to adventure experience, exposure, practice, studying from vis, or training), but do not reduce a total below one. If you could learn something without this Flaw, you still learn a bit.",
+   "source": "armdef-0.5-flaws"
+  },
+  "No Sense of Direction": {
+   "text": "You are completely unable to follow directions. North, south, east, and west have no meaning to you, and you often confuse right and left. You frequently get lost while traveling unfamiliar paths by yourself, or with others following your lead, and often have to reason your way home or to your destination from first principles. This Flaw is incompatible with the WellTraveled Virtue.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Faerie Magic": {
+   "text": "Faerie Magic is an Arcane Ability learned after Merinitae Initiate the Outer Mystery of Faerie Magic (see ArM5, page 92), which represents how their magic differs from normal Hermetic magic. This includes the ability to apply faerie thinking to arcane activities, usually by drawing out sympathetic connections between magical and mundane things.\n\nThese mystic relationships may be integrated into casting tools that Merinitae often use with their spells, called **charms ** (see sidebar). These are symbolic representations designed to highlight a particular quality of the target that always involve some sort of artistic ability. They may be used to increase Penetration, but are also used with many of the Inner Mysteries to produce other interesting effects.\n\nMerinitae can integrate the principles of charms into their laboratory activities, making use of their knowledge of symbols associated with the Faerie and Magic realms in their work, and this is represented by three additional effects of the Faerie Magic Ability:\n\n• Faerie Magic may be substituted for Magic Theory when experimenting, when using faerie vis, or when practicing magic associated with the Faerie realm. • The amount of vis you can use in a single season is equal to your (Magic Theory + Faerie Magic) x 2, so long as all of it is faerie vis. • Add your score in Faerie Magic to the number of botch dice you roll in these conditions, but the effects\n\nof these additional dice tend to be more annoying than dangerous; it takes two of these botches to produce the negative effects of a normal botch die. The character still gains a Warping Point for each 0 rolled on these extra dice, though they do not force you to check for Twilight. (This is because integrating faerie power into magic warps the character more quickly, but does not increase her chances of being overcome by it.) Two or more botches on the standard botch dice require a check for Twilight as normal, however.\n\nFaerie Magic might also represent the union of Faerie Lore and Magic Lore, the knowledge of similarities between the two realms. Often this combination can inspire surprising insights, especially when dealing with entities traditionally associated with both realms, like pagan gods, ghosts, and chimerae. It is also an appropriate Ability to use when trying to distinguish between Magic and Faerie, as it can address differences between the two realms.\n\n**Specialties: **faerie vis, experimenting, inventing spells, charms, lore (Arcane)",
+   "source": "armdef-0.5-abilities"
+  },
+  "Call of the Rushing Waters": {
+   "text": "Allows you to find any natural body of water for which you have an Arcane Connection (for example, a vial of water from it). Once you cast the spell, you can hear the water while you concentrate. Following the sound eventually brings you to the water, but you must make simple Perception rolls against an Ease Factor of 6 to follow the sound accurately (roll once per day for long journeys). If you break concentration, you must cast the spell again. A body of water that does not move or that makes little noise requires a roll against an Ease Factor of 9 to be traced.",
+   "source": "armdef-0.5-spells-aquam"
+  },
+  "Privileged Upbringing": {
+   "text": "You grew up in an environment where you had access to teachers and free time for study. You have an additional 50 experience points, which may be spent on General, Academic, or Martial Abilities. You may not, however, buy Academic or Martial Abilities with your normal pool of experience points unless you have another Virtue or Flaw permitting that. The most common reason for this Virtue is that your family was wealthy while you were a child, but if you are wealthy now, you should take the Wealthy Virtue (page 115).",
+   "source": "armdef-0.5-virtues"
+  },
+  "Weird Magic": {
+   "text": "Your control over magic is somewhat loose, perhaps due to Twilight effects or idiosyncratic training. Roll one extra botch die when you roll a zero on stressed spell casting rolls, apart from your other botch dice. Botches from this die should be strange or bizarre rather than dangerous, and if the Weird Magic botch occurs along with a regular botch, the results could be truly spectacular.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Mastered Spells": {
+   "text": "You have fifty experience points to spend on mastering spells that you know. (See page 225 for rules on mastering spells.) You may take this Virtue if you also have Flawless Magic, to give you more experience points to spend on mastering your spells. You may take this Virtue multiple times.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Relic": {
+   "text": "You own a holy relic, such as the finger bone of a saint, with a True Faith Score of one. This can be built into any other item you possess (a sword, for instance). The relic does not possess any additional powers. See Chapter 12: Realms for rules for relics and True Faith.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Educated": {
+   "text": "You have been educated in a grammar school, and may have attended a university or cathedral school. You may purchase Academic Abilities during character generation. During character generation you get an additional 50 experience points, which must be spent on Latin and Artes Liberales.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Busybody": {
+   "text": "You usually know everything that is going on among your friends and acquaintances, especially in private matters. You are always interested in rumors and gossip, and are frequently able to extract personal secrets from people. Among magi the language is more dignified, but the idea is the same: you keep tabs on the Hermetic community (your covenant, your House, and nearby covenants — at the least). However, magi probably don’t have much knowledge of what’s going on among the lower-class members of their covenant unless they choose to apply this Flaw specifically to such people at character creation.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Enemies": {
+   "text": "Someone is causing trouble for you, such as a local baron or bishop, a band of outlaws, or a really nasty innkeeper. The enemy must be powerful enough to endanger you — this is best agreed on with the storyguide and the rest of the troupe.",
+   "source": "armdef-0.5-flaws"
+  },
+  "True Faith": {
+   "text": "Through piety and holy devotion you have faith that can move mountains. You have a True Faith score of 1 and can gain more. For more about True Faith, see page 419.",
+   "source": "armdef-0.5-realms"
+  },
+  "Long-Winded": {
+   "text": "You can last longer when exerting yourself than most, and gain +3 on all your Fatigue rolls. This bonus does not apply to casting spells.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Enduring Constitution": {
+   "text": "You can withstand pain and fatigue. Decrease the penalties for reduced Fatigue levels by one point, and reduce your total penalty from wounds by one point (but not below zero). You also get +3 on rolls to resist pain.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Sheltered Upbringing": {
+   "text": "You grew up completely separated from society, knowing only your parents or mentor. Recently you have been introduced to a wondrous new world of strangers, and you are overwhelmed. Depending on your personality, you might react with contempt, fear, or wonder. You are unable to function normally because you cannot understand most human customs. You may not take Bargain, Charm, Etiquette, Folk Ken, Guile, Intrigue, or Leadership as beginning Abilities, but you may learn them in play.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Small Frame": {
+   "text": "You are of a lighter-thanaverage build. Your Size is reduced to –1. This means that the severity of wounds you take increases in four point increments, rather than five point. (See page 404). You cannot take this Flaw and Giant Blood (page 83), Large (page 89), or Dwarf (page 126).",
+   "source": "armdef-0.5-flaws"
+  },
+  "Compulsion": {
+   "text": "You have an unfortunate urge that you have trouble resisting. Examples include drinking, sex, perfection, bragging, or gambling.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Flawless Magic": {
+   "text": "You automatically master every spell that you learn. All your spells start with a score of 1 in the corresponding Spell Mastery Ability. You may choose a different special ability for every spell you have. Further, all your Advancement Totals for Spell Mastery Abilities are doubled.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Disenchant": {
+   "text": "You make a Hermetic magic item lose all its powers permanently if the level of this spell + a stress die (no botch) equals or exceeds the highest level of the enchantments in the item. The enchantment is utterly destroyed, as is all of the vis that was used in the magic item. The object left is in all ways a mundane item, but could be invested with enchantments again at a later time.",
+   "source": "armdef-0.5-spells-vim"
+  },
+  "Merchant": {
+   "text": "You live from the buying and selling of goods. You may be a peddler, if you are relatively poor, a shopkeeper, or a traveling merchant. The Wealthy Major Virtue and Poor Major Flaw affect you normally.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Good Teacher": {
+   "text": "You can explain new concepts and skills with great facility. Add three to the Quality of any books that you write, and five to the Source Quality for anyone who studies with you.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Visions": {
+   "text": "You often see images related to emotionally or magically laden events. A vision might be of the past, a possible future, or a distant occurrence, and is often symbolic or confusing. Visions usually come to you at quiet times or in places connected with a powerful emotional or magical event, such as the site of a patricide or diabolic sacrifice. Your visions may warn you of dangers to come, or get you involved in matters you would otherwise have avoided.\n\nThe visions come purely at the storyguide's discretion, and reveal only what he wants to reveal.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Noncombatant": {
+   "text": "You have no interest in combat, nor do you have any ability with it. You might be unreasonably afraid of combat, or a complete pacifist, or prone to freezing and doing nothing.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Ghostly Warder": {
+   "text": "A ghost watches over you. It might be a grandparent, a childhood friend, or anyone else who cares for you enough to stay around after death. The ghost is invisible and silent to all but you and those with Second Sight (see page 170). It can see and hear what is going on around you and makes an excellent spy, since it can leave your presence once per day for up to half an hour. However, death does not leave people in their normal state of mind, so the ghost probably has some quirks that make it less than dependable — it might even encourage you to join it on the other side. The ghost has 300 experience points in various Abilities that it can use to advise you, and ghosts may take any Abilities. See page 457 for an example of a ghostly warder. This is a more specific version of Magical Warder (see later), and is an example of that Virtue.",
+   "source": "armdef-0.5-bestiary-magical"
+  },
+  "Premonitions": {
+   "text": "You intuitively sense whenever something is wrong, or is likely to go wrong soon. Choosing this Virtue confers the Ability Premonitions 1 (page 170).",
+   "source": "armdef-0.5-abilities"
+  },
+  "Motion Sickness": {
+   "text": "Riding a horse, in a cart, or sailing on a ship makes you violently ill. When not traveling on foot, you suffer double the fatigue loss on long journeys, with a minimum loss of two Fatigue levels. Violent jostling over a period of a few hours could conceivably lead to unconsciousness.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Wanderer": {
+   "text": "You are not tied to any community, and survive by doing casual work of some sort. The Wealthy Major Virtue and Poor Major Flaw affect you normally, although if you are Wealthy you are supported by someone or some institution. Your supporter does not question your activities in any way, however.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Cautious Sorcerer": {
+   "text": "You are very careful with magic, and are less likely to fail spectacularly if you do fail. You roll three fewer botch dice when casting spells (whether ritual, formulaic, or spontaneous), and when working in the laboratory. This Virtue may not reduce the number of botch dice rolled below one. However, its effects are applied before any other effects which reduce botch dice, such as Spell Mastery (see page 225), and they may reduce the number of botch dice to zero.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Sleep Disorder": {
+   "text": "More often than not, this character is unable to sleep soundly during the night. The resulting deprivation means that he is likely to nod off in periods of quiet and boredom. When the character is alone, comfortable, bored, or otherwise at risk of falling asleep, he needs to make a suitable Personality roll to avoid nodding off. Loyal, Reliable, and Lazy (for a penalty in the last case) are all appropriate. The character's current Fatigue penalty applies to the roll.\n\nRegardless of whether he manages to stay awake, the following night you must make a stress roll (no botch) against an Ease Factor of 6 to see if the character sleeps well. Every night he has slept poorly, he loses a Long Term Fatigue Level. Continue this until he sleeps soundly for a whole night. Once he has lost 3 Long Term Fatigue Levels, he automatically sleeps through the night, due to sheer exhaustion. This Flaw is not compatible with the Night Terrors Flaw.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Clear Sight of the Naiad": {
+   "text": "You can see as clearly through water as through air, for a single moment.",
+   "source": "armdef-0.5-spells-aquam"
+  },
+  "Break the Oncoming Wave": {
+   "text": "Breaks all waves and torrents of water (including magical ones) just before they touch you. The water either crashes to the ground or flows around you in a truly impressive display.\n\nIn Ferramentum of Verditius's version of this spell, the water breaks precisely one inch from the target, leaving a very clean line showing where the waves stopped. All of his spells may be recognized by their orderliness.",
+   "source": "armdef-0.5-spells-aquam"
+  },
+  "Wizard’s Leap": {
+   "text": "The caster instantly transports himself up to 50 paces in any direction, provided he can see his destination or has an Arcane Connection to it. His Talisman comes with him automatically but casting requisites are required to bring along any other clothing or equipment. This spell is very effective as a fast-cast defense to escape attacks or other mishaps, and can also be used for bypassing obstacles or launching surprise attacks.\n\n(Base 15)",
+   "source": "armdef-houses-societates-0.5-flambeau-spells"
+  },
+  "Carefree": {
+   "text": "You are unshakably cheerful and happy in all circumstances.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Broom of the Winds": {
+   "text": "Whips up violent, swirling winds around the target. The target must make a Size stress roll against an Ease Factor of 9 to remain standing. If the target is braced or holding onto some support, he may also make a Strength stress roll against an Ease Factor of 9. If both rolls fail, the target is knocked in a random direction. The target may be damaged, depending on whether he strikes anything.",
+   "source": "armdef-0.5-spells-auram"
+  },
+  "Push of the Gentle Wave": {
+   "text": "A low wave is formed to propel a small boat slowly through the water. When casting this spell, you commonly make a pushing gesture. This spell, and other similar ones, pick out a particular current in the body of water and make it behave as desired, and thus have Individual Targets.\n\nIn Silva of Merinita's version of this spell, the wave occasionally drifts or bobs about, as if it is happy and playful.",
+   "source": "armdef-0.5-spells-aquam"
+  },
+  "Hermetic Prestige": {
+   "text": "Because of something in your background, other magi look up to you even if you haven’t earned their respect. Some envy you, and most will certainly expect more from you than from others. You gain a Reputation of level 4 within the Order.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Difficult Longevity Ritual": {
+   "text": "Something in your magical nature makes it difficult to create an effective Longevity Ritual for you. Anyone (including yourself) creating a Longevity Ritual for you must halve their Lab Total. You may create Longevity Rituals for others without penalty.",
+   "source": "armdef-0.5-flaws"
+  },
+  "The Enigma": {
+   "text": "You have been initiated into the Outer Mystery of The Enigma (see page 235), and thus are a member of House Criamon. You have a score of 1 in Enigmatic Wisdom. Note that all Criamon magi get this Virtue free at character creation.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Gossip": {
+   "text": "You have regular social contacts in the area that provide you with all kinds of information about local social and political goingson. On a simple roll of 6+, you hear interesting news before almost everyone else. You treat all local Reputations as twice their actual level. With some well-placed words, you may be able to bestow new Reputations (whether deserved or not). You quite likely have a Reputation too — as a gossip.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Subtle Magic": {
+   "text": "You may cast spells without using gestures at no penalty. You gain no benefits from using normal gestures but gain the normal benefit for exaggerated gestures.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Intuition": {
+   "text": "You have a natural sensitivity that allows you to make the right decisions more often than luck can account for. Whenever you are given a choice in which luck plays a major role (such as deciding which of three unexplored paths to follow), you have a good chance of choosing correctly. The storyguide should secretly roll a simple die. On a 6+, your intuition kicks in and you make whatever might be considered the “right” decision. Otherwise, you fail to get any flash of insight and must make the decision without aid.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Soothe the Raging Flames": {
+   "text": "Eradicates the heat of a bonfire, which, however, continues to burn until the fuel already covered in flame is consumed. The flames do not spread, or harm anything beyond what they were already burning. If the fire is extinguished and relit, it will burn hot again, as it is now a different fire.",
+   "source": "armdef-0.5-spells-ignem"
+  },
+  "Dark Secret": {
+   "text": "The leaders of the covenant harbor a secret that, if exposed, may lead to their ostracism or punishment. Although they have many resources available to quiet it, the secret seems to crop up every few years as a potential problem. This Hook may be Unknown.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Feud": {
+   "text": "Your family is involved in a feud. The opposing family or families are roughly of equivalent strength to your family and its allies. You are liable to be ambushed or attacked by opposing clansmen, and your family expects you to join raids against your enemies.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Personal Vis Source": {
+   "text": "You have exclusive access to a supply of raw vis. Determine the amount and type with the help of your troupe; the yield should be about one tenth as much as the player covenant expects to gather per year at the beginning of the saga. The yield of your source does not normally change over the course of time, even if the covenant uncovers new sources.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Poor Concentration": {
+   "text": "While the character may have a mind that is quick to make decisions, he has a short attention span. The character has a –3 penalty to Concentration rolls.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Inspirational": {
+   "text": "You are a stirring speaker or a heroic figure, and can urge people to great efforts. You give targets a +3 bonus to rolls for appropriate Personality Traits.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Aura of Ennobled Presence": {
+   "text": "The target appears more forceful, authoritative, and believable. Numerous subtle changes in appearance bring about this change, including a slight supernatural illumination of the face, a more erect posture, and a louder and smoother voice. The character gets a +3 on rolls to influence, lead, or convince others.",
+   "source": "armdef-0.5-spells-imaginem"
+  },
+  "Magic Animal": {
+   "text": "The character is a magical animal, either a perfect example of its species that is generally known as a Beast of Virtue, or else some other sort of magical being born in an animal shape. It is designed using the Magical Animal rules for Magic Character Creation, above, which gives it a Magic Might Score and other advantages over mundane creatures. It must also deal with the innate limitations of an animal form, such as having no hands. Subtract the character’s natural Size from its starting Might Score.",
+   "source": "armdef-rop-magic-0.5-virtues-flaws"
+  },
+  "Weakness": {
+   "text": "You have a soft spot for some sort of object or person. In the face of this, all else is unimportant: promises are forgotten, duties neglected, and common sense cast to the winds. Examples include poets and storytellers, food, flattery, or a pretty face.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Perfect Balance": {
+   "text": "You are skilled at keeping your balance, especially on narrow ledges or tightropes. Add +6 to any roll to avoid falling or tripping.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Knight": {
+   "text": "You are a knight, a member of the noble classes and one of the elite warriors of Europe. Unless you are Poor, you may have high quality weapons and armor, and a horse. Typical armaments for a mid–13th century knight are lance, sword, heater shield, a complete mail suit, and a warhorse. You may take Martial Abilities during character generation. The Wealthy Virtue and Poor Flaw affect you normally. This Virtue is only available to male characters, and is compatible with the Landed Noble Virtue.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Susceptibility to Infernal Power": {
+   "text": "You are especially vulnerable to the dark powers. Whenever you enter an area of Infernal influence, you must make a Stamina roll equal to or greater than the aura rating or become ill (–1 on all rolls). You get only half your normal Magic Resistance score against infernal effects, though if someone else's Parma Magica is protecting you, it counts normally.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Self-Confident": {
+   "text": "You have firm confidence in your own abilities, and have a Confidence Score of two. You also start with five Confidence Points, rather than the usual three. (See page 52 for Confidence rules.)",
+   "source": "armdef-0.5-virtues"
+  },
+  "Monastic Vows": {
+   "text": "You have taken vows of poverty, chastity, and obedience to a religious superior. This covers the vows taken by mendicant friars, as well as those taken by monks and nuns strictly speaking.",
+   "source": "armdef-0.5-flaws"
+  },
+  "The Gift": {
+   "text": "You have the ability to work magic. See earlier, page 63, for full details.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Book Learner": {
+   "text": "You have a talent for comprehending the writings of others. When studying from books, treat them as if they were three Quality levels higher than they actually are.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Apt Student": {
+   "text": "You are particularly good at learning from others. When being taught or trained by someone else, add five to the Source Quality.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Judged Unfairly": {
+   "text": "Somehow you come across the wrong way to people, and they universally distrust and underestimate you. You catch no one's eye, impress no one, and can get no one to take you seriously. If you ever find an exceptional someone who sees you as you want to be seen, you will cling to that person. You cannot gain a positive Reputation in any community, and this Flaw is incompatible with any Virtue that gives you such a Reputation.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Monstrous Appearance": {
+   "text": "Something about the character looks strange and frightening, be it horns, scales, sharp teeth, claws, an enormous head, double-jointed arms, unnaturally colored skin, or other supernatural features. These qualities give the character a –6 penalty in all social situations, or to any rolls involving the trust or loyalty of others. Most people will attack or run away from the character on sight, rather than engage it in conversation. All Magic Humans have this Inferiority inherently, for no benefit.",
+   "source": "armdef-rop-faerie-0.5-virtues-flaws"
+  },
+  "Arcane Lore": {
+   "text": "You may take Arcane Abilities during character generation. Unless you have The Gift, you cannot learn Parma Magica. You get an additional 50 experience points, which must be spent on Arcane Abilities.\n\nA Gifted character who is not a Hermetic magus and knows Parma Magica must take the Major Story Flaw Enemy: Entire Order of Hermes, as magi are bound by their Oath to slay the character on sight, unless he immediately joins the Order. Such a character cannot be played in a normal saga, as the other player characters have to kill him.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Independent Study": {
+   "text": "The character develops new skills extremely quickly on his own. When he is studying through Practice, add two to the Source Quality, and add three to the Source Quality of his Adventure experience.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Subtle Taste of Poison and Purity": {
+   "text": "You can taste all of the properties of any liquid or mixture of liquids. Unlike Touch of the Pearls, you can use this sense on any number of liquids during the duration of the spell, but you must taste the liquids in question.",
+   "source": "armdef-0.5-spells-aquam"
+  },
+  "Short-Lived Magic": {
+   "text": "Your spells do not last as long as they should. Spells that should last a year, last a moon; those of a moon, only to the next sunrise or sundown; and those of a sun, merely Diameter. Diameter, Concentration, Ring, and Momentary spells are not affected.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Hands of the Grasping Earth": {
+   "text": "Earthen hands from beneath the target rise out of the ground, and grasp the target's ankles. To break free requires a Strength stress roll of 15+. (One attempt is allowed per round, and each requires a Fatigue roll.) Each hand can be destroyed by beating its +25 Soak roll (hacking weapons do double normal damage) and inflicting a Light Wound.",
+   "source": "armdef-0.5-spells-terram"
+  },
+  "Disfigured": {
+   "text": "A visible disfigurement makes you ugly and easy to recognize.\n\nPresence rolls that involve good looks and gaining respect from most people are at –3. You probably have a cruel nickname that refers to your unfortunate appearance. You might have a large, visible burn scar, or an enlarged and deformed eye (an ‘evil eye’), or even be albino.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Unaffected by The Gift": {
+   "text": "The character is not affected by the negative effects of The Gift or Magical Air in others. Even a Blatant Gift does not especially bother the character.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Restriction": {
+   "text": "The lab either forbids certain activities (one category of lab activity cannot be performed), or otherwise tiresome or expensive rituals or practices are required in order to perform lab work. –1 General Quality or +2 Upkeep as appropriate.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Missing Ear": {
+   "text": "You cannot accurately locate the direction of sounds, and suffer a penalty of –3 to hearing rolls.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Faerie Upbringing": {
+   "text": "Perhaps you were abandoned by your true kin, and the faeries found you. Maybe your family actually lived in a faerie forest, or faeries took you as a babe. Though you are now back in human society, you feel at home with and have an enhanced understanding of faeries, magic, and other strange things. However, you find human society, including religion, bizarre. You may learn Faerie Lore at character generation.",
+   "source": "armdef-0.5-flaws"
+  },
+  "Lungs of the Fish": {
+   "text": "Turns water into air as it enters your lungs, allowing you to breathe water as you do air. This spell puzzles Hermetic theoreticians, as it behaves like a dynamic container target despite not being a container target.\n\nAll known attempts to create analogous effects have failed, even though analysis of this spell has not revealed any sign of non-Hermetic influence, or integrated experimentation. Most magi just point to it as an example of how Hermetic magic is not fully understood, and get on with their lives.",
+   "source": "armdef-0.5-spells-aquam"
+  },
+  "Mighty Torrent of Water": {
+   "text": "A 3-foot-diameter jet of water sprays from your outstretched arms towards your target. The target of this gusher of water takes +10 damage and must make a Strength + Size stress roll against an Ease Factor of 9 or be sent flying back.\n\nMarbaid of Flambeau's wizard's sigil is connected to his obsession with blood. In his version of the spell the target is hit by a gush of blood, and the stains do not go away until sunrise/sunset. This does not require a requisite, as it is a purely cosmetic effect.",
+   "source": "armdef-0.5-spells-aquam"
+  },
+  "Failed Apprentice": {
+   "text": "The character must have the Failed Apprentice Virtue to take this package, which permits her to take Arcane and Academic Abilities. She probably has several years of Student to account for her Academic Abilities. It is assumed that she has no Art scores; either she has not been Opened to the Arts, or else her ability to work Hermetic magic has been destroyed.",
+   "source": "armdef-0.5-virtues"
+  },
+  "Large": {
+   "text": "Your Size is +1 instead of 0, so you are between six and seven feet tall. This means that the severity of wounds you take increases in six point intervals rather than five point intervals. (See page 404). You cannot take this Virtue and Giant Blood (page 83), Small Frame (page 145), or Dwarf (page 126).",
+   "source": "armdef-0.5-virtues"
+  },
+  "Eyes of the Eagle": {
+   "text": "You see distant things clearly. No matter how far away something is, you can make out details as if it were only a foot or so from you. Things do not all appear to be a foot away; you can simply make out details as well as if they were. You can still judge distance accurately; in fact, more accurately than normal, to within an inch or so at a distance of several miles, since you can see as clearly as if you were judging distance a foot away.",
+   "source": "armdef-0.5-spells-imaginem"
+  },
+  "Plagued by Supernatural Entity": {
+   "text": "Some supernatural being interferes in your life on a fairly regular basis. It may even have your best interests at heart, but the result is that you get dragged into stories. Suitable examples would be a demon trying to corrupt you, an angel trying to save you, a faerie playing games with you, or a ghost continuing the agenda she had while alive.",
+   "source": "armdef-0.5-flaws"
+  }
+ }
+}

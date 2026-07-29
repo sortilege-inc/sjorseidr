@@ -1,1 +1,142 @@
-[]
+[
+  {
+    "id": "p047",
+    "file": "047_2026-07-25_the-augury-lesson.md",
+    "sort_iso": "1223-10-06T12:00",
+    "session": "2026-07-25",
+    "scene": "Fall 1223 — drill-in at the Hill of Uisneach",
+    "title": "The augury lesson: the art is choosing the signal",
+    "icon": "🐦",
+    "timeline": "🍂 Fall 1223",
+    "date": "Fall 1223",
+    "cast": [
+      "Wilhelm Stienauer",
+      "Éogan Dobhartha"
+    ],
+    "activity_type": "Research",
+    "status": "Proposed",
+    "notes": "Detailing the Hill of Uisneach stop from the Overland to Carrick leg: Wilhelm gets his first concrete field-insight for the folk-magic thesis — the load-bearing skill in local bird-flight augury is not the spell but the reading.",
+    "source": "Session recap 2026-07-25 (Ars Magica transcript), fall-1223 travel drill-in.",
+    "body_text": "At the **Hill of Uisneach** — the old fire-festival and bird-flight divination site the party detoured to on the overland road — Wilhelm and Éogan arrive just after a **divination ritual** has wrapped. Cleaning up after it is a roughly **twelve-year-old apprentice** to one of the local hedge-magi, doing busy-work but willing to describe, imperfectly, what the rite involved.\nWilhelm reads the process with **Magic Theory** (his strong suit — a comfortable, non-stress success) and comes away underwhelmed by the *spell* and fascinated by everything around it. The working itself is mechanical and straightforward. The true art of the **auguri** is in **choosing the correct signal**: the birds are doing fifteen things fifteen times, three of which might answer the question asked *this* time, three others another time, one just there for its own sake and never yet pulled out. Selecting *which* reading, and *when* it is auspicious to ask, is at least as load-bearing as the incantation.\nWilhelm clocks the shape of what he's after: this is magic that **leans on the inherent power of the environment** — the full moon, the turn to autumn, the land underfoot — rather than on the individual sorcerer. Where **Hermetic theory strips the context out** for a formulaic effect that works anywhere and anytime, this tradition insists the environment and the time of year *matter* — and that, to Wilhelm, is the point: *if I can make this subset of magic easier by leaning on something else, fantastic.*\nHe spends the following days probing people they meet and taking notes, folding the augury insight toward his thesis (see t009) and the folk-magic system he means to formalize (t019). His scribe not being present, he keeps his own record."
+  },
+  {
+    "id": "p048",
+    "file": "048_2026-07-25_small-gods-on-the-shoulder.md",
+    "sort_iso": "1223-10-07T12:00",
+    "session": "2026-07-25",
+    "scene": "Fall 1223 — the road into Connacht, near Samhain",
+    "title": "Small gods on the shoulder: the fae that follow Éogan and Stijntje",
+    "icon": "🧚",
+    "timeline": "🍂 Fall 1223",
+    "date": "Fall 1223",
+    "cast": [
+      "Wilhelm Stienauer",
+      "Éogan Dobhartha",
+      "Stijntje Kuiper"
+    ],
+    "activity_type": "Atmosphere",
+    "status": "Proposed",
+    "notes": "Only Wilhelm's Awareness catches it: small fae keep gathering on Éogan and Stijntje as the party nears Connacht. The locals treat it as nothing; Wilhelm, tactful, says nothing either.",
+    "source": "Session recap 2026-07-25 (Ars Magica transcript), fall-1223 travel drill-in.",
+    "body_text": "As the party moves deeper toward **Connacht** around Samhain, an Awareness check goes round the table. Éogan (a near-miss) and Stijntje are **completely unaware**; only **Wilhelm** notices — and what he notices is that the two of them keep collecting **small fae** the way some people attract butterflies.\nA little **brownie** riding a shoulder, gone the instant he looks straight at it. A **pixie-light** settling on Éogan's head and winking out. A gnome half-clambering out of a backpack. The first few times Wilhelm assumes he's seeing things; after half a dozen sightings in different contexts — the creatures behaving as if this is entirely normal, everyone else simply *ignoring* them — he realizes it isn't him.\nThe GM's read: **Éogan** draws them by virtue of a Connacht upbringing that respected the land where it **bleeds in and out of faerie regiones**; **Stijntje** by simple virtue of still being a child. To the locals, the presence of these **small gods** is unremarkable — you leave a bowl of milk out at night and get on with it.\nWilhelm, who has done enough fieldwork to know that pointing such things out tends to give offense, keeps it to himself and files it away. Éogan, for his part, assumes any odd behavior of Wilhelm's is just a foreigner reacting to ordinary warding customs. **New character note:** small fae are demonstrably drawn to Éogan and Stijntje (see t068)."
+  },
+  {
+    "id": "p049",
+    "file": "049_2026-07-25_wilhelm-cracks-the-ritual-integration.md",
+    "sort_iso": "1223-11-20T12:00",
+    "session": "2026-07-25",
+    "scene": "Winter 1223-24 — Carrick",
+    "title": "Wilhelm cracks the ritual integration over the winter",
+    "icon": "📐",
+    "timeline": "❄️ Winter 1223-24",
+    "date": "Winter 1223-24",
+    "cast": [
+      "Wilhelm Stienauer"
+    ],
+    "activity_type": "Research",
+    "status": "Proposed",
+    "notes": "Wilhelm's winter work at Carrick: the folk system stops being spontaneous-only. He judges the formulaic-ritual step 'really easy — someone just needed to point it out'; the remaining work is formalizing the Artes Liberales / Philosophiae contribution.",
+    "source": "Session recap 2026-07-25 (Ars Magica transcript), winter-1223 downtime.",
+    "body_text": "Wintering at **Carrick** while his research assistants are out gathering material, Wilhelm spends the season on **integration and research** — turning his folk system from a curiosity into something with proper mechanics.\n**The breakthrough he's most confident about:** his current system knows only **spontaneous, ritual-style casting** (roll halved). Proper **formulaic** magic would let a caster add **Artes Liberales** and **Philosophiae** to the effort *and* drop the divide-by-two — roughly tripling the effective pool. Over the winter he works out that this ritual integration is, in his own estimate, **\"really easy — someone just needed to point it out\"**: give a caster the finished formula rather than making them improvise it each time.\n**The Artes Liberales angle** is the part still taking his time: the obvious-once-said refinements a folk caster never bothered to name. If a ceremony wants a circle, it helps to know **geometry** enough to draw a true one; if it wants words of power, it helps to know **rhetoric** enough to project the voice. Formalizing how Artes Liberales and Philosophiae feed the working is the winter's real labor.\n**Logistics.** His assistants are sent west and south to gather hedge-magic insight, carrying **sacks of grain and silver** as payment for anyone willing to teach the \"easy stuff.\" Wilhelm writes letters — to the loose **wizard-circle** he keeps looped in on the project, to his family, and to **Dietrich** (his brother/scribe, back at his teaching post), whom he promises a **tractatus of the generated folk-magic spells** once it's finished. He intends to set up a **lab on shore** (he is chronically seasick and will not stay aboard ship an hour longer than he must), and has arranged for his research materials to be relocated from home toward wherever the covenant next bases itself. Feeds t019, t009, and the mundane vis-factory pitch (t020)."
+  },
+  {
+    "id": "p050",
+    "file": "050_2026-07-25_brussel-the-puca.md",
+    "sort_iso": "1224-04-12T12:00",
+    "session": "2026-07-25",
+    "scene": "Spring 1224 — the return road, far west",
+    "title": "Brussel the púca asks to be taught",
+    "icon": "🐴",
+    "timeline": "🌼 Spring 1224",
+    "date": "Spring 1224",
+    "cast": [
+      "Wilhelm Stienauer",
+      "Éogan Dobhartha",
+      "Dustin Page"
+    ],
+    "activity_type": "Encounter",
+    "status": "Proposed",
+    "notes": "A talking black horse — a púca — hails Wilhelm in Latin to be taught folk magic, and parts with a rowan-wood horseshoe. Wilhelm's first genuinely eager student in the wild.",
+    "source": "Session recap 2026-07-25 (Ars Magica transcript), spring-1224 return leg.",
+    "body_text": "On the spring road back east — \"past the edge of the world,\" as Éogan puts it — the party pauses at a stream, and Wilhelm hears a voice in **Latin** from twenty paces off: *are you the one teaching magic to all?* Without looking he says yes, then turns to find a **black horse** addressing him.\nÉogan, via **Ireland / Fairy Lore**, identifies it: a **púca** — a trickster fae given to inconveniencing travelers greatly but rarely to lasting harm, and *not* the kind that steals children or spoils milk. It gives its use-name as **Brussel** (Wilhelm notes, correctly, that a wizard's by-name is at best a **weak Arcane Connection**, not the true name).\nWilhelm teaches it the folk basics — a **circle** to bind and protect energies — and the horse traces one with a hoof, imperfectly but earnestly (*\"you might make it slightly better by dragging your hoof in one continuous line\"*). Brussel offers to let Wilhelm **ride it** in exchange for instruction; Wilhelm declines with great courtesy — he is an unskilled rider and gets violently seasick on anything that moves, and *\"would not be a good teacher if I were vomiting on your head every twenty steps.\"* Brussel, it transpires, is no fonder of being ridden either.\nAt parting the delighted púca gifts Wilhelm a **horseshoe of rowan wood**. Wilhelm accepts it as a treasured gift and files it in the **covenant treasury** — moved that Brussel is the **first entity outside his own research staff** to take real interest in his work and agree to be taught. First wild student of the folk system; see t069."
+  },
+  {
+    "id": "p051",
+    "file": "051_2026-07-25_a-ward-drawn-around-rody.md",
+    "sort_iso": "1224-04-16T12:00",
+    "session": "2026-07-25",
+    "scene": "Spring 1224 — camp, the delivery road east",
+    "title": "A ward drawn around Rody, and a test left hanging",
+    "icon": "⭕",
+    "timeline": "🌼 Spring 1224",
+    "date": "Spring 1224",
+    "cast": [
+      "Wilhelm Stienauer",
+      "Éogan Dobhartha",
+      "Dustin Page"
+    ],
+    "activity_type": "Intrigue",
+    "status": "Proposed",
+    "notes": "Continues 'The changeling boy: Rody.' Wilhelm is brought in on the changeling, and his casual folk-ward demonstration doubles as a test — will Rody be able to cross a Ward against Faeries? Cliffhanger for next session.",
+    "source": "Session recap 2026-07-25 (Ars Magica transcript), spring-1224 return leg.",
+    "body_text": "With the changeling confirmed, Éogan and Dustin **bring Wilhelm in** — partly because none of them has magic that could actually *hold* a fae, and Wilhelm's folk wards handle only low-magnitude sprites and brownies, nothing strong enough to be wearing a Gifted boy's shape convincingly.\nOver a day of the march east (Rody having a little rudimentary Latin, and Wilhelm practicing his teaching), Wilhelm uses the boy as a live audience for the folk basics, then **demonstrates a set of protective wards** drawn as circles: a **ward against the spirits of the land**, a **ward against the infernal**, and — casually, drawing it around the group as he casts — a **ward against fairies**. He steps out of the fairy-ward ring himself and then invites Rody across, to see whether the boy can pass it.\n**The mechanics, as the GM laid them out:** a folk **Ward against Faeries** at roughly **base level 10** — inefficient the way ward magic always is, in that it only binds a creature it can \"get through,\" i.e. one of low enough Might. It is *highly unlikely* to hold a changeling powerful enough to counterfeit a Gifted child, but the test costs nothing and might reveal something. Wilhelm's cast lands well over the level.\n**Cliffhanger:** whether **Rody steps out of the circle** resolves at the top of next session. Either way, the party still means to complete the delivery east — toward the **Hill of Tara**, where they'll rendezvous with Wilhelm's returning research assistants and hand the boy on to the receiving Hermetic magi — and to brief those magi on the deception. The real Gifted child Rody replaced is still out there (t023, q026)."
+  },
+  {
+    "id": "p052",
+    "file": "052_2026-07-25_into-the-carnac-regio-the-dragon-tormente.md",
+    "sort_iso": "1224-04-21T12:00",
+    "session": "2026-07-25",
+    "scene": "Spring 1224 — the Carnac sea-cave regio",
+    "title": "Into the Carnac regio: the dragon Tormente",
+    "icon": "🐉",
+    "timeline": "🌼 Spring 1224",
+    "date": "Spring 1224",
+    "cast": [
+      "Dagmar"
+    ],
+    "activity_type": "Exploration",
+    "status": "Proposed",
+    "notes": "Resolves the 'hidden regio near Carnac' cliffhanger. The sea-cave regio's first layer is guarded by a magnitude-10 dragon, Tormente, who bars the way deeper — and sets Dagmar an errand to earn passage.",
+    "source": "Session recap 2026-07-25 (Ars Magica transcript), Dagmar's Carnac regio scene.",
+    "body_text": "Dagmar rows into the **Carnac sea-cave** with three grogs — **Angus** (helmsman, pirate, and reliable if boastful storyteller), **Foxglove** (scout, rogue, and acquirer of useful objects), and **Peter** — his **Eyes of the Eagle** and **Clear Sight of the Naiad** still up (the spells that found the place; he can see through water, fog, and dark).\n**Probing in.** He casts a spontaneous **Intēllego Mentem** \"is anyone around\" — modelled on the smell-silver spell, reading minds like a sense, stronger signal meaning nearer — and picks up the faint edges of the **Carnac covenant**, a small **parasitic village** beside it, one or two people on the shore, and, deeper in, **one signal unlike anything he has ever felt before**. A quick tarot draw (Knight of Cups reversed, Eight of Wands reversed) foreshadows what's coming. **Piercing the Magical Veil** confirms a clear **onion-layer** structure — and that the strange thing ahead is *barring the way forward*.\n**Crossing the first threshold**, Dagmar's over-tuned vision catches cobalt-blue flashes off what looks like **dozens of little mirrors** — then the wall *shudders and exhales*. The mirrors are **scales**. It is a **dragon**, slumped into the water and rising above it, filling the passage — roughly 45 feet of visible flank, 25 feet high, a leg going deep into the water. Only **Foxglove** glimpses its head lift and turn; to the others it stays a wall of scales. Magical Lore reads its resistance in the **50s — a magnitude-10 creature** — and the regio, oddly, as **more attuned to Auram than Aquam** despite all the water. Dagmar's read: this is a **guardian**, posted to protect an otherwise-defensible threshold; the way deeper is unobstructed *except* for the dragon in it.\n**The parley.** Speaking mind-to-mind in Latin (**Posing the Silent Question**, **Words of the Unbroken Silence**), Dagmar rouses it. The dragon — **Tormente** — asks whether he serves **\"Jeffrey the First,\"** a long-dead king of Brittany whose *\"quest of learning\"* it seems to guard; Dagmar (House Criamon, Covenant of Sjórseiðr — all names Tormente has never heard) disclaims any royal commission and professes to seek knowledge for its own sake. Pressed for a **great deed or a quest**, Dagmar boasts of the covenant's Tribunal victory — champion of the magical contests of all Normandy — and demonstrates his Intēllego on request, penetrating with a burst of confidence.\n**The price.** Satisfied, Tormente raises an arm from the water and deposits on the boat a **heavy jewelled golden crown**, Roman in style, dazzling and far too heavy to wear long. It is an **offering of peace** for Tormente's **estranged kin** — a dragon that *\"will not speak to me\"* — dwelling in a **sea-cliff cave above the waves off the English northeast coast, near Scarborough / Newcastle, just short of Scotland.** Carry the crown to the kin and reconcile them, and Tormente will **deem Dagmar worthy of passing deeper** into the regio. Dagmar accepts, and gives orders to head **north** to find the kin — possibly by way of **Stonehenge**, to collect Llewellyn and finally cash in the time-crystal (t018, t066). The Carnac regio itself stays only half-opened (t025)."
+  },
+  {
+    "id": "p053",
+    "file": "053_2026-07-25_foxglove-robs-the-dragon.md",
+    "sort_iso": "1224-04-21T20:00",
+    "session": "2026-07-25",
+    "scene": "Spring 1224 — that night, aboard ship",
+    "title": "Foxglove robs the dragon",
+    "icon": "💰",
+    "timeline": "🌼 Spring 1224",
+    "date": "Spring 1224",
+    "cast": [
+      "Dagmar"
+    ],
+    "activity_type": "Consequence",
+    "status": "Proposed",
+    "notes": "A covenant grog quietly robs Tormente's hoard the same night — while Dagmar is trying to stay in the dragon's good graces to earn passage deeper. Consequence seed.",
+    "source": "Session recap 2026-07-25 (Ars Magica transcript), Carnac regio aftermath.",
+    "body_text": "Back at the ship, **Angus** gathers the sixteen crew and spins a **broadly honest** account of the dragon for a night of bought drinks (*\"the creepy wizard made us go, he spoke spells at it, and it gave us treasure\"*) — **Peter** adding embellishments that aren't quite true, **Foxglove** conspicuously **downplaying the treasure**.\nBecause Foxglove — avaricious to the marrow — has other plans. That night she quietly takes the rowboat **back into the cave alone**, anchors it, and dives the twenty-odd feet to the cave floor, where **gold and trinkets have spilled forward** from the hoard. She gathers all she can carry, smuggles roughly **five bags of it** aboard, and hides it for herself, brushing past **Peter** with a caught-red-handed lie about running a late errand for Dagmar (a clean Guile success). Examined later, the coin is mostly **Roman** in style — priceless, and useless as currency; she means to keep every piece.\n**The wrinkle:** this is an **unsanctioned theft from Tormente's hoard**, committed the very night Dagmar has agreed to run the dragon's errand and is depending on its goodwill to pass deeper into the regio. Neither Dagmar nor the dragon knows yet (c026)."
+  }
+]
