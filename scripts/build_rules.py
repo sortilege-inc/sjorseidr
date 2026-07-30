@@ -28,6 +28,7 @@ Verbatim rule: the extracted text is reproduced exactly as the corpus stores it
 """
 import json
 import os
+import shutil
 import sys
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -94,6 +95,19 @@ def main():
                  f"pass the path to armdef-0.5-full.resolved.json as an argument.")
 
     corpus = json.load(open(corpus_path, encoding="utf-8"))
+
+    # Copy the synthesist's merged .ttrpg (sibling of the resolved json) into the
+    # repo so the site can offer it as a download. e.g.
+    # armdef-0.5-full.resolved.json -> armdef-0.5-full.merged.ttrpg
+    merged_name = None
+    if corpus_path.endswith(".resolved.json"):
+        merged_src = corpus_path[: -len(".resolved.json")] + ".merged.ttrpg"
+        if os.path.exists(merged_src):
+            merged_name = os.path.basename(merged_src)
+            shutil.copyfile(merged_src, os.path.join(REPO, merged_name))
+        else:
+            sys.stderr.write(f"WARNING: merged .ttrpg not found beside corpus: {merged_src}\n")
+
     by_name = {}
     for e in corpus.get("entities", []):
         by_name.setdefault(e["name"], e)
@@ -135,6 +149,7 @@ def main():
             "edition": corpus.get("edition"),
             "spec_version": corpus.get("spec_version"),
             "generated_from": os.path.basename(corpus_path),
+            "merged_ttrpg": merged_name,
             "note": ("Verbatim rules text sliced from the resolved armdef corpus for "
                      "runtime use by integrating_magic.html and the ships.html fleet-crew "
                      "sheets. Regenerate with scripts/build_rules.py after a corpus or "
@@ -156,6 +171,9 @@ def main():
     print(f"  referenced names: {len(refs)} | matched in corpus: {matched} "
           f"| unmatched (kept as sheet fallback): {len(refs) - matched}")
     print(f"  rules.json: {size_kb:.1f} KB")
+    if merged_name:
+        mkb = os.path.getsize(os.path.join(REPO, merged_name)) / 1024
+        print(f"  merged .ttrpg copied: {merged_name} ({mkb/1024:.1f} MB)")
 
 
 if __name__ == "__main__":
