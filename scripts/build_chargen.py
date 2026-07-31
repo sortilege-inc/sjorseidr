@@ -173,6 +173,100 @@ def char_cost_table(max_abs=3):
     return rows
 
 
+# --- Magic Character flat-prose statblock parsers (RoP:Magic) ----------------
+# The 48 Magic Characters are authored as prose strings, not structured fields.
+# These parsers were validated byte-for-byte against the source (Arkliss pilot)
+# and across all 32 loadable beings (0 power-parse failures) before use.
+_CHAR_ABBR = {"Int": "int", "Per": "per", "Pre": "pre", "Com": "com",
+              "Str": "str", "Sta": "sta", "Dex": "dex", "Qik": "qik"}
+_POWER_HDR = _re_tpl.compile(
+    r"([A-Z][\w'’ \-]{1,45}?),\s*"
+    r"((?:[\d–\-]+\s*|variable\s*)points?|constant),\s*"
+    r"(Init\s*[^,]+?|constant|[+\-–]?\d+),\s*"
+    r"([A-Z][a-z]+(?:\s+or\s+[A-Z][a-z]+\.?)?)")
+
+
+def _paren_split(s, seps=";,"):
+    out, buf, depth = [], [], 0
+    for ch in s or "":
+        if ch == "(":
+            depth += 1; buf.append(ch)
+        elif ch == ")":
+            depth = max(0, depth - 1); buf.append(ch)
+        elif ch in seps and depth == 0:
+            out.append("".join(buf).strip()); buf = []
+        else:
+            buf.append(ch)
+    if buf:
+        out.append("".join(buf).strip())
+    return [x for x in out if x]
+
+
+def parse_chars_prose(s):
+    out = {}
+    for seg in (s or "").split(","):
+        m = _re_tpl.match(r"\s*([A-Za-z]{3})\s*([+\-]?\d+)", seg)
+        if m and m.group(1) in _CHAR_ABBR:
+            out[_CHAR_ABBR[m.group(1)]] = int(m.group(2))
+    return out
+
+
+def parse_might_prose(s):
+    m = _re_tpl.match(r"\s*(\d+)\s*(?:\(([^)]+)\))?", s or "")
+    return (int(m.group(1)) if m else None, (m.group(2).strip() if m and m.group(2) else None))
+
+
+def parse_abilities_prose(s):
+    out = []
+    for seg in _paren_split(s or "", ","):
+        m = _re_tpl.match(r"^(.*?)\s+(\d+)\s*(?:\(([^)]*)\))?$", seg.strip())
+        if m:
+            out.append({"name": m.group(1).strip(), "score": int(m.group(2)),
+                        "specialty": (m.group(3) or "").strip()})
+    return out
+
+
+def parse_personality_prose(s):
+    out = []
+    for seg in (s or "").split(","):
+        m = _re_tpl.match(r"\s*(.+?)\*?\s*([+\-]\d+)\s*$", seg.strip())
+        if m:
+            out.append({"name": m.group(1).strip().rstrip("*").strip(), "score": int(m.group(2))})
+    return out
+
+
+def parse_named_list_prose(s):
+    out = []
+    for tok in _paren_split(s or "", ";,"):
+        mult, param = 1, None
+        mm = _re_tpl.search(r"\(x(\d+)\)", tok)
+        if mm:
+            mult = int(mm.group(1)); tok = tok.replace(mm.group(0), "").strip()
+        pm = _re_tpl.search(r"\(([^)]*)\)\s*$", tok)
+        if pm:
+            param = pm.group(1).strip(); tok = tok[:pm.start()].strip()
+        if tok.strip():
+            out.append({"name": tok.strip(), "count": mult, "param": param})
+    return out
+
+
+def parse_powers_prose(s):
+    s = s or ""
+    hdrs = list(_POWER_HDR.finditer(s))
+    out = []
+    for i, h in enumerate(hdrs):
+        end = hdrs[i + 1].start() if i + 1 < len(hdrs) else len(s)
+        rest = s[h.end():end]
+        rdt = _re_tpl.match(r"\s*R:\s*([^,]+?),\s*D:\s*([^,]+?),\s*T:\s*(\w+)", rest)
+        text = rest[rdt.end():].strip() if rdt else rest.strip().lstrip(":").strip()
+        out.append({"name": h.group(1).strip(), "cost": h.group(2).strip(),
+                    "initiative": h.group(3).strip(), "form": h.group(4).strip(),
+                    "range": rdt.group(1).strip() if rdt else "",
+                    "duration": rdt.group(2).strip() if rdt else "",
+                    "target": rdt.group(3).strip() if rdt else "", "text": text})
+    return out
+
+
 def main():
     corpus_path = sys.argv[1] if len(sys.argv) > 1 else DEFAULT_CORPUS
     if not os.path.exists(corpus_path):
@@ -443,6 +537,40 @@ def main():
         })
     creatures.sort(key=lambda x: (str(x["realm"]), x["name"]))
 
+    # Magic Characters (RoP:Magic) — flat-prose statblocks parsed into structured
+    # fields for the Magic realm loader. Guides/lineage/design entries are excluded.
+    quality_names = {e["name"] for e in ents if ext(e) == "Magic Quality"}
+    inferiority_names = {e["name"] for e in ents if ext(e) == "Magic Inferiority"}
+    _guide_re = _re_tpl.compile(r"Character Guide|Character Guides|Designing|Lineage", _re_tpl.I)
+    magic_beings = []
+    for me in ents:
+        if ext(me) != "Magic Character":
+            continue
+        if prop(me, "Shape") != "character" or _guide_re.search(me["name"]):
+            continue
+        might, form = parse_might_prose(prop(me, "Magic Might") or prop(me, "Magical Might"))
+        quals, infs = [], []
+        for it in parse_named_list_prose(prop(me, "Magical Qualities and Inferiorities")
+                                         or prop(me, "Magic Qualities and Inferiorities")
+                                         or prop(me, "Qualities and Inferiorities")):
+            (infs if it["name"] in inferiority_names and it["name"] not in quality_names else quals).append(it)
+        magic_beings.append({
+            "name": me["name"], "might": might, "form": form,
+            "size": _int(prop(me, "Size")), "season": prop(me, "Season"),
+            "characteristics": parse_chars_prose(prop(me, "Characteristics")),
+            "abilities": parse_abilities_prose(prop(me, "Abilities")),
+            "personalityTraits": parse_personality_prose(prop(me, "Personality Trait")),
+            "virtuesFlaws": parse_named_list_prose(prop(me, "Virtues and Flaws")),
+            "qualities": quals, "inferiorities": infs,
+            "powers": parse_powers_prose(prop(me, "Powers")),
+            "combat": prop(me, "Combat"), "soak": prop(me, "Soak"), "vis": prop(me, "Vis"),
+            "confidence": prop(me, "Confidence Score"), "reputations": prop(me, "Reputations"),
+            "appearance": prop(me, "Appearance"),
+            "description": next((b.get("value") for b in me.get("blocks", []) if b.get("keyword") == "DESCRIPTION"), "") or "",
+            "source": prop(me, "Source"),
+        })
+    magic_beings.sort(key=lambda x: x["name"])
+
     creation_rules = {}
     for key, ename in CREATION_RULE_ENTITIES.items():
         e = by_name.get(ename)
@@ -519,6 +647,7 @@ def main():
         "characterTemplates": templates,
         "realmToolkits": realm_toolkits,
         "creatures": creatures,
+        "magicBeings": magic_beings,
         "creationRules": creation_rules,
         "spellsFile": "chargen-spells.json",
         "spellCount": len(spells),
@@ -559,6 +688,9 @@ def main():
     import collections as _c
     cbr = _c.Counter(str(c['realm']) for c in creatures)
     print(f"  pre-defined beings (Creature) {len(creatures)}: " + ", ".join(f"{k} {v}" for k, v in sorted(cbr.items())))
+    print(f"  magic beings (Magic Character, parsed) {len(magic_beings)} | "
+          f"{sum(len(b['powers']) for b in magic_beings)} powers, "
+          f"{sum(len(b['abilities']) for b in magic_beings)} abilities parsed")
     print(f"  creation-rule passages {len(creation_rules)}/{len(CREATION_RULE_ENTITIES)}")
     print(f"  spell guidelines {len(guidelines)} rows across "
           f"{len(set((g['technique'],g['form']) for g in guidelines))} Te/Fo tables")

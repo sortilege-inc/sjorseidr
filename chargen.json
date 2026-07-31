@@ -29617,6 +29617,6076 @@
    "source": "Houses of Hermes: Societates"
   }
  ],
+ "magicBeings": [
+  {
+   "name": "Adranus, the Spirit of Mount Etna",
+   "might": 50,
+   "form": "Ignem",
+   "size": null,
+   "season": "Winter",
+   "characteristics": {
+    "int": 3,
+    "per": 3,
+    "pre": 2,
+    "com": 2,
+    "str": 3,
+    "sta": 2
+   },
+   "abilities": [
+    {
+     "name": "Sicily Lore",
+     "score": 6,
+     "specialty": "mountains"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 8,
+     "specialty": "underworld"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Wrathful",
+     "score": 6
+    },
+    {
+     "name": "Slumbering",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Spirit",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Daimon",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Mountains",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics x5",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Fury",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Wrathful",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Focus Power x12",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ritual Power x9",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue x2",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Reduced Abilities x18",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Crafter of Fire",
+     "cost": "variable points",
+     "initiative": "Init –2 – Might cost",
+     "form": "Ignem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual Creo Ignem or Rego Ignem spell no greater than 50th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    },
+    {
+     "name": "Crafter of Earth",
+     "cost": "variable points",
+     "initiative": "Init –2 – Might cost",
+     "form": "Terram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any nonRitual Creo Terram or Rego Terram spell no greater than 50th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    },
+    {
+     "name": "Grant Visions",
+     "cost": "5 points",
+     "initiative": "Init –12",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant (Minor Flaw) for more details. (Ritual Power)"
+    },
+    {
+     "name": "Grant Simple-Minded",
+     "cost": "5 points",
+     "initiative": "Init –12",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant (Minor Flaw) for more details. (Ritual Power)"
+    },
+    {
+     "name": "Grant Wrathful",
+     "cost": "5 points",
+     "initiative": "Init –12",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant (Minor Flaw) for more details. (Ritual Power)"
+    },
+    {
+     "name": "Hibernation",
+     "cost": "15 points",
+     "initiative": "Init –32",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "the spirit remains completely inactive for a year (spending no other Might points); the 15 points spent on this power are saved and added to the Might Pool for the first year out of hibernation. In this fashion, the Might Pool may exceed the permanent Might score (50). Using this power, the volcano can save up Might points over many years in succession and have a great amount to spend in the single year in which it awakens. No Hermetic Equivalent: Ritual Power x 3 Manifestation, 4 or more points, Init –2 – Might cost, Animal (Focus Power x 2)"
+    },
+    {
+     "name": "Master of Earth",
+     "cost": "variable points",
+     "initiative": "Init –2 – Might cost",
+     "form": "Terram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual Muto Terram or Perdo Terram spell no greater than 50th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    },
+    {
+     "name": "Presence",
+     "cost": "0 points",
+     "initiative": "constant",
+     "form": "Mentem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Regio",
+     "cost": "15 points",
+     "initiative": "Init –32",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "by permanently spending Might, the spirit can add levels to the regio around the volcano’s crater. (Ritual Power x 3)"
+    },
+    {
+     "name": "Ruler of Lava",
+     "cost": "variable points",
+     "initiative": "Init –2 – Might cost",
+     "form": "Terram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual spell pertaining to lava no greater than 50th level, at a cost of 1 Might point per magnitude of the effect. (Focus Power x2)"
+    },
+    {
+     "name": "Ruler of Smoke",
+     "cost": "variable points",
+     "initiative": "Init –2 – Might cost",
+     "form": "Auram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual spell pertaining to smoke no greater than 50th level, at a cost of 1 Might point per magnitude of the effect. (Focus Power x2)"
+    }
+   ],
+   "combat": null,
+   "soak": null,
+   "vis": "10 pawns of Ignem vis; 5 pawns per year can also be harvested from the crater at the volcano’s summit.",
+   "confidence": "1 (3 points)",
+   "reputations": "Bringer of Death and Destruction 5 (Local)",
+   "appearance": "Mount Etna is a conical and blasted peak that rises ten thousand feet above the eastern end of the island of Sicily.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Aeolus, Magical Horse",
+   "might": 8,
+   "form": "Animal",
+   "size": 2,
+   "season": "Summer",
+   "characteristics": {
+    "int": 0,
+    "per": 0,
+    "pre": 2,
+    "com": 1,
+    "str": 4,
+    "sta": 3,
+    "qik": 2
+   },
+   "abilities": [
+    {
+     "name": "Animal Handling",
+     "score": 3,
+     "specialty": "other horses"
+    },
+    {
+     "name": "Area Lore (local Tribunal)",
+     "score": 3,
+     "specialty": "geography"
+    },
+    {
+     "name": "Area Lore: Semita Errabunda’s regio",
+     "score": 4,
+     "specialty": "geography"
+    },
+    {
+     "name": "Artes Liberales",
+     "score": 1,
+     "specialty": "logic"
+    },
+    {
+     "name": "Athletics",
+     "score": 5,
+     "specialty": "running"
+    },
+    {
+     "name": "Awareness",
+     "score": 3,
+     "specialty": "alertness"
+    },
+    {
+     "name": "Brawl",
+     "score": 4,
+     "specialty": "fighting solo"
+    },
+    {
+     "name": "Charm",
+     "score": 5,
+     "specialty": "ladies"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 2,
+     "specialty": "Redcaps"
+    },
+    {
+     "name": "Latin",
+     "score": 4,
+     "specialty": "magi"
+    },
+    {
+     "name": "Living Language: Victor’s",
+     "score": 5,
+     "specialty": "trail talk"
+    },
+    {
+     "name": "Organization Lore: Order of Hermes",
+     "score": 3,
+     "specialty": "who’s who"
+    },
+    {
+     "name": "Philosophiae",
+     "score": 1,
+     "specialty": "metaphysics"
+    },
+    {
+     "name": "Profession: mount",
+     "score": 3,
+     "specialty": "ladies"
+    },
+    {
+     "name": "Stealth",
+     "score": 3,
+     "specialty": "moving quietly"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "woods"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Horse",
+     "score": 3
+    },
+    {
+     "name": "Randy",
+     "score": 3
+    },
+    {
+     "name": "Vain",
+     "score": 3
+    },
+    {
+     "name": "Skittish",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Friend",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Quickness",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Long-Winded",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Proud",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lecherous",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Gift of Speech",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 5,
+     "param": null
+    },
+    {
+     "name": "Lesser Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue",
+     "count": 3,
+     "param": "Improved Characteristics, Unaffected by The Gift, Venus’s Blessing"
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "From Nag to Charger",
+     "cost": "0 points",
+     "initiative": "Init 0",
+     "form": "Animal",
+     "range": "Per",
+     "duration": "Sun",
+     "target": "Ind",
+     "text": "Aeolus may change himself into any kind of horse, from a tired out palfrey to the finest war destrier. This effect lasts until dawn or dusk, unless Aeolus cancels the effect in the meantime. Level 15 effect (Base MuAn 4, +2 Sun, +1 size), Lesser Power (15 levels, cost -2)"
+    }
+   ],
+   "combat": "Kick: Init +4, Attack +4, Defense +8, Damage +5",
+   "soak": "+3",
+   "vis": "2 Animal, in head.",
+   "confidence": null,
+   "reputations": null,
+   "appearance": "His natural appearance is that of a horse of good but not exceptional breeding, with a chestnut coat and well-groomed black mane and tail. For appearances’ sake when in public, he will wear a bridle, but this has been especially fashioned for his comfort and has no bit, since “he carn’t tork pwopuhlee wiv a bah ih hih mouf.” Victor has obtained a fine, expensively tooled and ornamented saddle for Aeolus, to match his vanity, and Aeolus prefers to wear it as much as possible. It annoys Aeolus no end that Victor will insist on pointing out how the saddle’s value draws undue attention to them, and so they must generally share a plain saddle in public. Aeolus is the Magical Animal Companion of Victor of Mercere, from Semita Errabunda. Out of earshot, Victor might say that Aeolus is “his” horse, but Aeolus would have it that Victor is merely “his” rider. It is Aeolus’ considered opinion that he is the more intelligent and better-looking of the pair of them. It is he who comes up with all the bright ideas, though he allows Victor to believe otherwise as it is less confusing to outsiders. They often spend many hours on the road discussing the meaning of life and the nature of existence. Aeolus shares Victor’s mad passions for the chase and the hunt, and is particularly vain and proud of his superior nature and his “way with the females.” He is an intact stallion (with no intention of ever being gelded), and while he will often attempt to charm any human ladies who admire him or will listen to what he has to say, he generally prefers to put his magical good looks to use on other horses. Victor owns a magical amulet that he has woven into Aeolus’s mane. When someone speaks the command word, the charm grants the horse touching the amulet the power to ride across water, mud, or any other surface once per day. Since Aeolus can talk, he is generally the one who decides whether the charm is used or not. (Aeolus wants a charm that will let him gallop through the skies, but Victor has not yet been able to afford it.)",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Aillwee",
+   "might": 20,
+   "form": "Terram",
+   "size": null,
+   "season": "Summer",
+   "characteristics": {
+    "per": 2,
+    "pre": 1,
+    "com": 1,
+    "str": 2,
+    "sta": 2,
+    "dex": 2
+   },
+   "abilities": [
+    {
+     "name": "An Bhoireann Lore",
+     "score": 3,
+     "specialty": "underground"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 2,
+     "specialty": "subterranean creatures"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Desire for Shiny Objects",
+     "score": 3
+    },
+    {
+     "name": "Nuisance",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Spirit",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Caves",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Compulsion",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Human Ally",
+     "count": 1,
+     "param": "equal to Animal Companion"
+    },
+    {
+     "name": "Simple-Minded",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Focus Power x2",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Power x3",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ritual Power x3",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Power x1",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue x1",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Reduced Abilities x6",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Crafter of Earth",
+     "cost": "variable points",
+     "initiative": "Init –2 – Might cost",
+     "form": "Terram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any nonRitual Creo Terram or Rego Terram spell no greater than 20th level at a cost of 1 Might point per magnitude of the effect. (Focus Power)"
+    },
+    {
+     "name": "Eidolon",
+     "cost": "0 points",
+     "initiative": "Init +2",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "the spirit can create the illusions of rich mineral deposits, the seeming of fake tunnels, and the phantoms noises of footfalls and dripping water. (Greater Power)"
+    },
+    {
+     "name": "Grant No Sense of Direction",
+     "cost": "5 points",
+     "initiative": "Init -12",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant (Minor Flaw) for more details. (Ritual Power)"
+    },
+    {
+     "name": "Grant Puissance in Stealth",
+     "cost": "4 points",
+     "initiative": "Init -5",
+     "form": "Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant Puissance in (Ability) for more details. (Lesser Power)"
+    },
+    {
+     "name": "Guide",
+     "cost": "3 points",
+     "initiative": "Init -1",
+     "form": "Mentem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Healing",
+     "cost": "2 points",
+     "initiative": "Init -12",
+     "form": "Animal or Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Ritual Power)"
+    },
+    {
+     "name": "Presence",
+     "cost": "0 points",
+     "initiative": "constant",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Master of Earth",
+     "cost": "variable points",
+     "initiative": "Init -2 - Might cost",
+     "form": "Terram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual Muto Terram or Perdo Terram spell no greater than 20th level at a cost of 1 Might point per magnitude of the effect. (Focus Power)"
+    }
+   ],
+   "combat": null,
+   "soak": null,
+   "vis": "4 pawns of Terram vis; 2 pawns per year can also be harvested from the (real) crystal deposits deep inside the cave system.",
+   "confidence": "1 (3 points)",
+   "reputations": "Place of No Return 1 (Local)",
+   "appearance": "Aillwee cave is actually a system of several caves beneath a rocky wilderness known as An Bhoireann (the Burren), in the west of Hibernia. It is dotted with many stalactites and stalagmites, and a small underground river flows tortuously through it.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Amiculum, Magical Cloak",
+   "might": 5,
+   "form": "Vim",
+   "size": null,
+   "season": "Spring",
+   "characteristics": {
+    "per": 1,
+    "pre": 3,
+    "sta": 3,
+    "dex": 2,
+    "qik": 1
+   },
+   "abilities": [
+    {
+     "name": "Awareness",
+     "score": 1,
+     "specialty": "bodyguarding"
+    },
+    {
+     "name": "Concentration",
+     "score": 2,
+     "specialty": "maintaining powers"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 1,
+     "specialty": "cleanliness"
+    },
+    {
+     "name": "Latin",
+     "score": 4,
+     "specialty": "magi"
+    },
+    {
+     "name": "Legerdemain",
+     "score": 1,
+     "specialty": "magic tricks"
+    },
+    {
+     "name": "Order of Hermes Lore",
+     "score": 1,
+     "specialty": "highborn women"
+    },
+    {
+     "name": "Penetration",
+     "score": 1,
+     "specialty": "Corpus"
+    },
+    {
+     "name": "Survival",
+     "score": 2,
+     "specialty": "at camp"
+    },
+    {
+     "name": "Wilderness Sense",
+     "score": 2,
+     "specialty": "weather"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Cloak",
+     "score": 3
+    },
+    {
+     "name": "Loyal",
+     "score": 3
+    },
+    {
+     "name": "Protective",
+     "score": 3
+    },
+    {
+     "name": "Fastidious",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Thing",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Friend",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "True Friend",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Lesser Power: Cloak of the Duck’s Feathers",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Power: Whiten the Wear of Travel",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Power: The Woolen Cloud",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue : Tough",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Wilderness Sense",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Cloak of the Duck’s Feathers",
+     "cost": "0 points",
+     "initiative": "constant",
+     "form": "Aquam",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "See ArM5, page 124."
+    },
+    {
+     "name": "Whiten the Wear of Travel",
+     "cost": "0 points",
+     "initiative": "Init –1",
+     "form": "Animal",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "and Terram R: Per, D: Mom, T: Ind When activated, all dirt and travel stains are removed from the cloak, and any small rips and tears (anything smaller than a Light Wound) are instantly mended. Cr(Pe)An(Te) 20 (base 15, +1 requisite): Lesser Power (20 levels, –1 Might cost), mastery point from Cloak of the Duck’s Feathers (–1 Might cost)"
+    },
+    {
+     "name": "The Woolen Cloud",
+     "cost": "0 points",
+     "initiative": "Init –1",
+     "form": "Animal",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "and Corpus R: Per, D: Conc, T: Ind For the duration, Amiculum can float upon the air and move slowly in any direction. While floating, it can support the weight of up to two human beings. ReAn(Co) 20 (base 5, +1 Conc, +1 size, +1 requisite): Lesser Power (20 levels, –1 Might cost), mastery point from Cloak of the Duck’s Feathers (–1 Might cost)"
+    }
+   ],
+   "combat": "Dodge: Init +1, Attack n/a, Defense +1, Damage n/a Cloak (nonlethal): Init +1, Attack +2, Defense +2, Damage –3",
+   "soak": "+6",
+   "vis": "1 Animal",
+   "confidence": null,
+   "reputations": null,
+   "appearance": "Amiculum is a white woolen cloak with two sides; an intricate circle of red, green, and black is woven on the inside, which is large enough to surround a man who stands upon it. Amiculum was enchanted as a talisman for its master, a Hermetic magus known for his interest in chivalry and courtly love. When he went into Twilight, his talisman went with him and returned from the experience as an independent magical being. Because of this connection, it can affect its master with its powers as itself and does not need to penetrate his Parma Magica. As a cloak, it is mostly concerned about remaining clean and pure, and protecting its master against harm. While it understands a great deal of its master’s Latin and could converse with him, it chooses instead to remain silent so not to embarrass itself. Likewise, it is very conscious of keeping its place, and does not like to exercise its ability to move and to carry things.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Arkliss, a Dragon of the Fens",
+   "might": 22,
+   "form": "Animal",
+   "size": 0,
+   "season": "Summer",
+   "characteristics": {
+    "int": 1,
+    "per": 2,
+    "pre": 3,
+    "com": 0,
+    "str": 1,
+    "sta": 2,
+    "dex": 1,
+    "qik": 1
+   },
+   "abilities": [
+    {
+     "name": "(Area) Lore",
+     "score": 2,
+     "specialty": "legends"
+    },
+    {
+     "name": "Athletics",
+     "score": 3,
+     "specialty": "flying"
+    },
+    {
+     "name": "Awareness",
+     "score": 2,
+     "specialty": "hearing"
+    },
+    {
+     "name": "Bargain",
+     "score": 2,
+     "specialty": "ransom"
+    },
+    {
+     "name": "Brawl",
+     "score": 5,
+     "specialty": "teeth"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 2,
+     "specialty": "peasants"
+    },
+    {
+     "name": "Hunt",
+     "score": 3,
+     "specialty": "waterfowl"
+    },
+    {
+     "name": "Intrigue",
+     "score": 2,
+     "specialty": ""
+    },
+    {
+     "name": "Magic Lore",
+     "score": 4,
+     "specialty": "magical beasts"
+    },
+    {
+     "name": "Penetration",
+     "score": 3,
+     "specialty": "Auram"
+    },
+    {
+     "name": "Stealth",
+     "score": 2,
+     "specialty": "underwater"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "swamps"
+    },
+    {
+     "name": "Swim",
+     "score": 4,
+     "specialty": "underwater"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Avaricious",
+     "score": 6
+    },
+    {
+     "name": "Brave",
+     "score": 3
+    },
+    {
+     "name": "Cruel",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Monster",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Arcane Lore",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 3,
+     "param": null
+    },
+    {
+     "name": "Lightning Reflexes",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "SelfConfident",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Essential Flaw",
+     "count": 1,
+     "param": "avaricious, major"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Gift of Speech",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Attack",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Damage",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Defense",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Fatigue",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Powers",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 5,
+     "param": null
+    },
+    {
+     "name": "Personal Power",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Domination",
+     "cost": "1 points",
+     "initiative": "Init +1",
+     "form": "Mentem",
+     "range": "Eye",
+     "duration": "Moon",
+     "target": "Ind",
+     "text": "By gazing into a person’s eyes, Arkliss can bend him to her will. The victim will carry out one verbal command to the best of his ability, but he must be able to understand Arlkiss’s orders. People do not normally want to make eye contact with Arkliss, however. To use this power, she must catch her victim by surprise. ReMe 40 (Base 20, +1 Eye, +3 Moon): Greater Power (40 levels, –2 Might cost), Improved Powers (1 mastery point, –1 Might cost)"
+    },
+    {
+     "name": "Pestilential Breath",
+     "cost": "1 points",
+     "initiative": "Init +1",
+     "form": "Auram",
+     "range": "Touch",
+     "duration": "Diam",
+     "target": "Group",
+     "text": "Arkliss can exhale a noxious, cloying mist that infects everyone within five paces with a disease, inflicting a Medium wound unless the victim succeeds in a Stamina roll against an Ease Factor of 9. CrAu 30 (Base 10, +1 Touch, +1 Diameter, +2 Group): Greater Power (30 levels, –2 Might cost, 10 xp Penetration)"
+    },
+    {
+     "name": "Lungs of the Fish",
+     "cost": "0 points",
+     "initiative": "Init n/a",
+     "form": "Aquam",
+     "range": "Touch",
+     "duration": "Sun",
+     "target": "Part",
+     "text": "As the spell on page 122 of ArM5. This power is continuously active. MuAq 20 (Base 4, +1 Touch, +2 Sun, +1 Part, +1 continuous effect): Personal Power (20 levels, –1 Might cost), Improved Powers (1 mastery point, –1 Might cost)"
+    }
+   ],
+   "combat": "Teeth: Init +2, Attack +12, Defense +11, Damage +5 Claws: Init +1, Attack +10, Defense +12, Damage +6",
+   "soak": "+12",
+   "vis": "4 Vim in brain",
+   "confidence": "2 (6)",
+   "reputations": "Evil 3 (local)",
+   "appearance": "Arkliss is a true dragon about the size of a man. Her wide jaws are full of sharp teeth; she has large, bat-like wings and a barbed tail. She has a forked tongue with which she tastes the air as a snake does. Arkliss is a small but fierce dragon who makes her lair at the bottom of a bog near the middle of a large swamp. She can survive on waterfowl and frogs but much prefers red meat. Nearby peasants attempt to placate her with offerings of sheep and goats, but Arkliss is perfectly willing to hunt for herself. Arkliss used 1 mastery point from her Improved Powers Quality on her Lungs of the Fish power and 1 on Domination, and spent the remaining 3 points on 15 xp in Penetration.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Barcas, the Giant",
+   "might": 16,
+   "form": "Terram",
+   "size": 2,
+   "season": "Summer",
+   "characteristics": {
+    "per": 0,
+    "pre": 1,
+    "str": 6,
+    "sta": 2,
+    "dex": 2,
+    "qik": 0
+   },
+   "abilities": [
+    {
+     "name": "(Area) Lore",
+     "score": 3,
+     "specialty": "famous wrestlers"
+    },
+    {
+     "name": "Animal Handling",
+     "score": 4,
+     "specialty": "sheep"
+    },
+    {
+     "name": "Carouse",
+     "score": 3,
+     "specialty": "drinking wine"
+    },
+    {
+     "name": "Craft (Carpentry)",
+     "score": 1,
+     "specialty": "building lean-tos"
+    },
+    {
+     "name": "Leadership",
+     "score": 2,
+     "specialty": "intimidation"
+    },
+    {
+     "name": "(Living Language)",
+     "score": 4,
+     "specialty": "rustic dialect"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "mountains"
+    },
+    {
+     "name": "Terram Resistance",
+     "score": 4,
+     "specialty": "metal"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Boastful",
+     "score": 4
+    },
+    {
+     "name": "Brave",
+     "score": 2
+    },
+    {
+     "name": "Impulsive",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Human",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Puissant Brawl",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Tough",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Overconfident",
+     "count": 1,
+     "param": "minor"
+    },
+    {
+     "name": "Weakness",
+     "count": 1,
+     "param": "alcohol"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Gigantic",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 6,
+     "param": null
+    },
+    {
+     "name": "Personal Power",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Terram Resistance",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Minor Flaw",
+     "count": 1,
+     "param": "Lesser Malediction: vulnerable spot"
+    },
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Invulnerability to Metal",
+     "cost": "0 points",
+     "initiative": "Init n/a",
+     "form": "Terram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "Barcas cannot be harmed by metal weapons of any kind; they simply bounce off his skin. There is one weakness in this defense (see below). ReTe 30 (Base 5, +2 Sun, +2 affect metal, +1 continuous effect): Lesser Power x2 (35 levels, –3 Might cost)"
+    }
+   ],
+   "combat": "Grapple: Init 0, Attack +11, Defense +9, Damage n/a Fist: Init 0, Attack +10, Defense +8, Damage +6",
+   "soak": "+9",
+   "vis": "4 Terram in skin",
+   "confidence": "1 (3)",
+   "reputations": null,
+   "appearance": "Barcas stands about nine feet tall and weighs over 600 pounds. He has wild hair and a long, unkempt beard. His skin is flint colored and of a gravelly texture. He is rather good looking as giants go, being merely homely instead of hideously ugly. He wears crude garments of sheepskin and carries no weapons. Barcas considers himself an invincible wrestler and loudly proclaims his prowess to anyone who will listen. He loves a good fight and eagerly accepts a challenge from any warrior or wrestler. Barcas scorns weapons as things for “puny little people,” but he doesn’t object if his opponent wants to use them; he feels utterly secure that his magical power will protect him. Barcas enjoys a nearly complete immunity to metal weapons. He has only one small vulnerable spot, just below the sternum. If an attacker knows this weakness and specifically concentrates his attacks on it, he suffers a –3 penalty to Attack but can inflict full normal damage, bypassing both Barcas’s magical invulnerability and his Terram Resistance. Spells and non-metallic weapons can harm Barcas normally; his Terram Resistance gives him a Soak bonus against metal weapons that bypass his Magic Resistance.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Black Boar of the Bog",
+   "might": 20,
+   "form": "Animal",
+   "size": 2,
+   "season": "Summer",
+   "characteristics": {
+    "int": 0,
+    "per": 1,
+    "str": 6,
+    "sta": 5,
+    "dex": 0,
+    "qik": 1
+   },
+   "abilities": [
+    {
+     "name": "Animal Handling",
+     "score": 4,
+     "specialty": "boars"
+    },
+    {
+     "name": "Animal Resistance",
+     "score": 4,
+     "specialty": "claws"
+    },
+    {
+     "name": "(Area) Lore",
+     "score": 5,
+     "specialty": "woods"
+    },
+    {
+     "name": "Athletics",
+     "score": 4,
+     "specialty": "running"
+    },
+    {
+     "name": "Awareness",
+     "score": 5,
+     "specialty": "predators"
+    },
+    {
+     "name": "Brawl",
+     "score": 5,
+     "specialty": "tusks"
+    },
+    {
+     "name": "Ignem Resistance (spells)",
+     "score": 4,
+     "specialty": ""
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "woods"
+    },
+    {
+     "name": "Swimming",
+     "score": 1,
+     "specialty": "swampy waters"
+    },
+    {
+     "name": "Terram Resistance",
+     "score": 4,
+     "specialty": "spears"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Territorial",
+     "score": 6
+    },
+    {
+     "name": "Vengeful",
+     "score": 6
+    },
+    {
+     "name": "Boar",
+     "score": 3
+    },
+    {
+     "name": "Brave",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Champion",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Wood",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Berserk",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Self-Confident",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Wrathful",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Fury",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Nocturnal",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Gigantic",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Power",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Animal Resistance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ignem Resistance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 3,
+     "param": null
+    },
+    {
+     "name": "Improved Attack",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Damage",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Fatigue",
+     "count": 3,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Great Characteristic",
+     "count": 1,
+     "param": "Stamina"
+    },
+    {
+     "name": "Minor Virtue: Tough",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Terram Resistance",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Monstrous Appearance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Protect the Herd",
+     "cost": "4 points",
+     "initiative": "Init –4",
+     "form": "Animal",
+     "range": "Voice",
+     "duration": "Sun",
+     "target": "Group",
+     "text": "When this power is used, the Boar and all of his animal allies receive a bonus of +5 to their Soak totals for Sun Duration. MuAn 45 (Base 25, +2 Sun, +2 Group): Greater Power (45 levels, –1 Might cost)"
+    },
+    {
+     "name": "Terror of the Charging Boar",
+     "cost": "3 points",
+     "initiative": "Init –2",
+     "form": "Animal or Mentem",
+     "range": "Voice",
+     "duration": "Sun",
+     "target": "Ind",
+     "text": "Anyone or anything the Boar charges becomes overwhelmed with a mortal fear of the Boar for Sun Duration. The target must flee immediately from the Boar and is reluctant to ever face him again. ReMe(An) 25 (Base 4, +2 Voice, +2 Sun, +1 special effect: lingering effect): Greater Power (25 levels, +25 xp in Penetration)"
+    }
+   ],
+   "combat": "Tusks: Initiative +1, Attack +14, Defense +9, Damage +11",
+   "soak": "+12 (+17 when using Protect the Herd)",
+   "vis": "2 pawns of Animal vis in each tusk.",
+   "confidence": "2 (5)",
+   "reputations": "Truculent 2 (local)",
+   "appearance": "A very large, black boar with crimson-stained tusks and yellow eyes. The Black Boar guards a swampy portion of a larger wood that is filled with gnarled trees. The dense canopy of the wood gives it a foreboding feeling, but it is filled with wildlife. This section of the wood is a haven for herbivores because the Black Boar guards it jealously. He attacks all large predators and men who enter the area, regardless of their intentions toward the inhabitants. The Black Boar is a solitary creature, but quickly lends his protection to any inhabitants of his area that come under attack. The Boar’s tusks may be Enriched by soaking them in the blood of the Boar for one month and then using the tusks to strike the killing blow on a predator that hunted the area where the Boar lived. If this is done, any character carrying the tusks in battle is granted the Berserk Virtue.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Black Dog of the Moor",
+   "might": 25,
+   "form": "Animal",
+   "size": 2,
+   "season": "Autumn",
+   "characteristics": {
+    "int": 0,
+    "per": 1,
+    "pre": 0,
+    "str": 4,
+    "sta": 3,
+    "dex": 1,
+    "qik": 1
+   },
+   "abilities": [
+    {
+     "name": "Animal Handling",
+     "score": 5,
+     "specialty": "canines"
+    },
+    {
+     "name": "Animal Resistance",
+     "score": 4,
+     "specialty": "claws"
+    },
+    {
+     "name": "(Area) Lore",
+     "score": 5,
+     "specialty": "hunting trails"
+    },
+    {
+     "name": "Athletics",
+     "score": 4,
+     "specialty": "running"
+    },
+    {
+     "name": "Awareness",
+     "score": 5,
+     "specialty": "prey"
+    },
+    {
+     "name": "Brawl",
+     "score": 5,
+     "specialty": "bite"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 4,
+     "specialty": "travelers"
+    },
+    {
+     "name": "Hunt",
+     "score": 6,
+     "specialty": "tracking"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 1,
+     "specialty": "regiones"
+    },
+    {
+     "name": "Penetration",
+     "score": 7,
+     "specialty": "Corpus"
+    },
+    {
+     "name": "Stealth",
+     "score": 5,
+     "specialty": "stalking prey"
+    },
+    {
+     "name": "Survival",
+     "score": 4,
+     "specialty": "moors"
+    },
+    {
+     "name": "Swimming",
+     "score": 2,
+     "specialty": "quietly"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Territorial",
+     "score": 6
+    },
+    {
+     "name": "Dog",
+     "score": 3
+    },
+    {
+     "name": "Brave",
+     "score": 3
+    },
+    {
+     "name": "Gluttonous",
+     "score": 3
+    },
+    {
+     "name": "Overconfident",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Champion",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Moor",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "SelfConfident",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Sharp Ears",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Fury",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greedy",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Nocturnal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Proud",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Gigantic",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Power",
+     "count": 5,
+     "param": null
+    },
+    {
+     "name": "Animal Resistance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Attack",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Damage",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Fatigue",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Improved Characteristics",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Tough",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Nose of the Bloodhound",
+     "cost": "1 point",
+     "initiative": "Init –2",
+     "form": "Corpus or Animal",
+     "range": "Arc",
+     "duration": "Conc",
+     "target": "Ind",
+     "text": "Once the Black Dog picks up the scent of a creature, he may track it to the ends of the earth. If the Black Dog frequents the same location as the quarry or examines one of its personal effects and makes a Perception roll against an Ease Factor of 6, the Black Dog picks up the creature’s scent. As long as the Black Dog is tracking the quarry, he always knows the direction of the shortest path to the quarry. InCo(An) 25 (Base 3, +4 Arc, +1 Conc, +1 special effect: scent serves as Arcane Connection): Greater Power x2 (25 levels, –2 Might cost, +65 xp in Penetration)"
+    },
+    {
+     "name": "Dominate Canine",
+     "cost": "1 point",
+     "initiative": "Init –3",
+     "form": "Animal",
+     "range": "Voice",
+     "duration": "Sun",
+     "target": "Group",
+     "text": "Any canine that hears the voice of the Black Dog is strongly inclined to obey his orders. This is similar to the spell Aura of Rightful Authority. ReAn 35 (Base 5, +2 Voice, +2 Sun, +2 Group): Greater Power (35 levels, –3 Might cost)"
+    },
+    {
+     "name": "Leader of the Pack",
+     "cost": "2 points",
+     "initiative": "Init –3",
+     "form": "Animal",
+     "range": "Voice",
+     "duration": "Sun",
+     "target": "Group",
+     "text": "When the Black Dog is present in any group of canines, they fight as a trained group and all of their attack rolls are at +2. ReAn 40 (Base 10, +2 Voice, +2 Sun, +2 Group): Greater Power (40 levels, –2 Might cost)"
+    },
+    {
+     "name": "Shadow Form",
+     "cost": "1 point",
+     "initiative": "Init –3",
+     "form": "Animal",
+     "range": "Per",
+     "duration": "Conc",
+     "target": "Ind",
+     "text": "When the Black Dog enters a shadow that is big enough to cover his Size +1, he may take the form of shadow. While in shadow form, the Black Dog adds +4 to all Stealth rolls and is unaffected by physical attacks. MuAn 35 (Base 30, +1 Conc): Greater Power (35 levels, –3 Might cost)"
+    }
+   ],
+   "combat": "Bite: Initiative +1, Attack +13, Defense +8, Damage +13",
+   "soak": "+8",
+   "vis": "5 pawns of Animal vis in his hide.",
+   "confidence": "2 (5)",
+   "reputations": "Murderous 2 (local)",
+   "appearance": "A gigantic, black hound that is similar in appearance to a monstrous rottweiler. The Black Dog of the Moor dominates all canines in his area and considers it his duty to protect dogs, wolves, and jackals, where present. He fights any canine in the area that challenges his authority, but only kills when the food supply is insufficient to support the local canine population. The Black Dog of the Moor is generally indifferent to the activities of humans, but in some areas, where wolves or jackals are hunted, he takes a more active role and discourages the hunts by harassing or killing the hunters. The Black Dog of the Moor is one example of a class of creature called Black Dogs. The Black Dogs go by many different names, as they are known throughout northern Europe — Ireland (Coinn Iotair), Wales (Cwn Annwn), England (Gytrash), Isle of Manx (Mauthe Dhoog), France (Rongeur D’os), and Brittany (Youdic Dogs). The Black Dogs are solitary and have well-delineated habitats. They often prowl a moor, swamp, or abandoned castle. Some people believe these hounds to be agents of the Infernal, but this is largely based on fear of the unknown and the hounds’ habit of prowling their territory at night. A Black Dog will assert its dominance over the territory by closely following or chasing nighttime travelers. A Black Dog never attacks unless its quarry attacks first, and then the Black Dog drags the person off, never to be seen again. The hide of a Black Dog may be Enriched by tanning it in total darkness. It must then be buried under a new moon and left undisturbed for one month. The resulting hide may be fashioned into a cowl that grants the wearer the Puissant Stealth Virtue.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Brienz",
+   "might": 30,
+   "form": "Aquam",
+   "size": null,
+   "season": "Autumn",
+   "characteristics": {
+    "int": 3,
+    "per": 3,
+    "pre": 3,
+    "com": 3,
+    "str": 2,
+    "sta": 3,
+    "dex": 1,
+    "qik": 0
+   },
+   "abilities": [
+    {
+     "name": "Alps Lore",
+     "score": 8,
+     "specialty": "lakes and rivers"
+    },
+    {
+     "name": "Faerie Lore",
+     "score": 4,
+     "specialty": "water faeries"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 5,
+     "specialty": "water spirits"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Reclusive",
+     "score": 4
+    },
+    {
+     "name": "Irritated by Fish",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Spirit",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Daimon",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Lakes",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics x9",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Supernatural Nuisance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Reclusive",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Focus Power x6",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Power x2",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Power x3",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue x9",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Reduced Abilities x6",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Crafter of Water",
+     "cost": "variable points",
+     "initiative": "Init 0 – Might cost",
+     "form": "Aquam",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual Creo Aquam or Rego Aquam spell no greater than 30th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2) Grant Puissance in Profession:"
+    },
+    {
+     "name": "Boating",
+     "cost": "4 points",
+     "initiative": "Init –3",
+     "form": "Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant Puissance in (Ability) for more details. (Lesser Power) Grant Puissance in Profession:"
+    },
+    {
+     "name": "Fishing",
+     "cost": "4 points",
+     "initiative": "Init –3",
+     "form": "Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant Puissance in (Ability) for more details. (Lesser Power)"
+    },
+    {
+     "name": "Grant Puissance in Swim",
+     "cost": "4 points",
+     "initiative": "Init –3",
+     "form": "Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant Puissance in (Ability) for more details. (Lesser Power)"
+    },
+    {
+     "name": "Guide",
+     "cost": "3 points",
+     "initiative": "Init +1",
+     "form": "Mentem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Master of Water",
+     "cost": "variable points",
+     "initiative": "Init 0 – Might cost",
+     "form": "Aquam",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual Muto Aquam or Perdo Aquam spell no greater than 30th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    },
+    {
+     "name": "Presence",
+     "cost": "0 points",
+     "initiative": "constant",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Ruler of Fog",
+     "cost": "variable points",
+     "initiative": "Init 0 – Might cost",
+     "form": "Auram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual spell pertaining to fog or mist less no greater than 30th level, at a cost of 1 Might point per magnitude of the effect (Focus Power x 2)"
+    }
+   ],
+   "combat": null,
+   "soak": null,
+   "vis": "6 pawns of Aquam vis; 3 pawns per year can also be harvested by diving deep into the lake.",
+   "confidence": "1 (3 points)",
+   "reputations": "Quiet and Mysterious 2 (Local)",
+   "appearance": "Lake Brienz is located on the northern edge of the Alps, and is fed by the river Aare. It is nine miles long and a mile and a half wide. Its steep-sided slopes are very difficult to navigate by foot, and are thus sparsely settled.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Caladrius",
+   "might": 14,
+   "form": "Animal",
+   "size": null,
+   "season": "Spring",
+   "characteristics": {
+    "per": 2,
+    "pre": 1,
+    "sta": 3,
+    "dex": 1,
+    "qik": 2
+   },
+   "abilities": [
+    {
+     "name": "Athletics",
+     "score": 3,
+     "specialty": "flying"
+    },
+    {
+     "name": "Awareness",
+     "score": 4,
+     "specialty": "food"
+    },
+    {
+     "name": "Brawl",
+     "score": 2,
+     "specialty": "dodging"
+    },
+    {
+     "name": "Ignem Resistance (solar heat)",
+     "score": 4,
+     "specialty": ""
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "wetlands"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Ibis",
+     "score": 3
+    },
+    {
+     "name": "Magnificent Appearance* (Presence)",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Friend",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Essential Virtue",
+     "count": 1,
+     "param": "magnificent appearance"
+    },
+    {
+     "name": "Unaffected by the Gift",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Immunity",
+     "count": 1,
+     "param": "to non-lethal diseases"
+    },
+    {
+     "name": "Noncombatant",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Compassionate",
+     "count": 1,
+     "param": "minor"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Ritual Power",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Ignem Resistance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Powers",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Personal Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Flaw: Restricted Power",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing Gaze",
+     "cost": "4 points",
+     "initiative": "Init –14",
+     "form": "Corpus",
+     "range": "Eye",
+     "duration": "Mom",
+     "target": "Ind",
+     "text": "By gazing into a person’s eyes, the caladrius can draw out any non-fatal disease from a sick person into itself. This removes any disease of up to Incapacitating strength, or resolves a critical or lesser aging crisis. The caladrius must immediately fly up toward the sun or else the disease returns to the patient (this is a Restricted Power). CrCo 40 (Base 30, +1 Eye, +1 affect either disease or aging): Ritual Power x2 (40 levels, –2 Might cost), Improved Powers (–2 Might cost)"
+    },
+    {
+     "name": "Perceive the Afflictions of Mortal Flesh",
+     "cost": "0 points",
+     "initiative": "Init +1",
+     "form": "Corpus",
+     "range": "Per",
+     "duration": "Mom",
+     "target": "Sight",
+     "text": "By sight, the caladrius can identify any diseases a person has and how serious they are. InCo 25 (Base 5, +4 Sight): Personal Power (25 levels), Improved Powers (–3 Might cost)"
+    }
+   ],
+   "combat": "Dodge: Init +2, Attack n/a, Defense +5, Damage n/a",
+   "soak": "+3",
+   "vis": "3 Corpus (1 in each eye, 1 in the wings)",
+   "confidence": null,
+   "reputations": null,
+   "appearance": "The caladrius is a magnificent, all-white bird somewhat resembling a heron (but with shorter legs and beak). It has a long, gracefully curving neck and a short, slightly downward-curving beak. A caladrius is a mystical bird much sought by royal households. It can determine whether a sick person will live or die. If the patient is to die, the caladrius sadly turns away from him, but if he is to live, it gazes deeply into his eyes, drawing the sickness into itself. It then flies away toward the sun, going so high that the sun’s rays burn away the disease (but they do not harm the caladrius itself). A caladrius will not absorb a terminal illness (its Lesser Immunity would not protect it), but it will gladly heal any lesser ailment. It can heal either spontaneous diseases, which result from aging crises (see ArM5, page 168) or diseases due to an external cause (ArM5, page 180). As long as the crisis is not terminal or the disease does not cause a Lethal Wound, a caladrius can cure it. It can only heal wounds caused by disease, not those resulting from poison, combat, or other causes. It cannot remove Decrepitude. The eyes of a caladrius are Enriched by grinding them to a paste, which is then used to fill a hollow wing bone taken from the same bird. This must be soaked in the urine of a virgin girl for a season, after which time it grants the wielder the Puissant Medicine Virtue.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Cockerel of Virtue",
+   "might": 9,
+   "form": "Animal",
+   "size": null,
+   "season": "Spring",
+   "characteristics": {
+    "per": 2,
+    "pre": 2,
+    "com": 0,
+    "sta": 0,
+    "dex": 2,
+    "qik": 4
+   },
+   "abilities": [
+    {
+     "name": "Athletics",
+     "score": 1,
+     "specialty": "balancing"
+    },
+    {
+     "name": "Awareness",
+     "score": 3,
+     "specialty": "invisible spirits"
+    },
+    {
+     "name": "Brawl",
+     "score": 3,
+     "specialty": "spurs"
+    },
+    {
+     "name": "Music",
+     "score": 3,
+     "specialty": "crowing"
+    },
+    {
+     "name": "Penetration",
+     "score": 4,
+     "specialty": "Mentem effects"
+    },
+    {
+     "name": "Sense Holiness and Unholiness",
+     "score": 3,
+     "specialty": "invisible spirits"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Cockerel",
+     "score": 3
+    },
+    {
+     "name": "Proud",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Champion",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Essential Virtue",
+     "count": 1,
+     "param": "proud, minor"
+    },
+    {
+     "name": "Ferocity",
+     "count": 1,
+     "param": "battles for dominance"
+    },
+    {
+     "name": "Compulsion",
+     "count": 1,
+     "param": "fight for dominance"
+    },
+    {
+     "name": "Overconfident",
+     "count": 1,
+     "param": "minor"
+    },
+    {
+     "name": "Restricted Power",
+     "count": 1,
+     "param": "nocturnal spirits only"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Powers",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Sense Holiness and Unholiness",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Scourge the Spirits of the Night",
+     "cost": "0 points",
+     "initiative": "Init +4",
+     "form": "Mentem",
+     "range": "Per",
+     "duration": "Sun",
+     "target": "Sound",
+     "text": "When the Cockerel of Virtue crows, any nocturnal spirits who hear the sound (and whose Magic Resistance fails to protect them) are stricken with panic and flee the area, remaining away until the next sunrise or sunset. This power is effective against spirits of any Realm, as long as they are only active at night (including most ghosts and some demons and dark fae, at the storyguide’s discretion). CrMe 20 (Base 4, +2 Sun, +3 Sound): Greater Power (20 levels, +1 Initiative, –2 Might cost, 15 xp Penetration)"
+    }
+   ],
+   "combat": "Spurs: Init +3, Attack +8, Defense +10, Damage –5 Beak: Init +4, Attack +8, Defense +8, Damage –5",
+   "soak": "0",
+   "vis": "2 Vim in comb The Cockerel of Virtue benefits farmers through its crowing, which drives away evil spirits. A mundane cockerel normally crows to herald the coming of dawn, so the Cockerel of Virtue’s cry terrifies spirits of darkness through the Law of Sympathy. A variant effect for the Cockerel’s crow may be found on page 29 of Houses of Hermes: Mystery Cults. Cocks fight one another for dominance. The winner is the proudest of all creatures and struts regally around the barnyard, but the loser becomes dejected (temporarily gaining the Personality Flaw, Depressed) and does not crow. The comb of a Cockerel of Virtue can be Enriched by stretching the skin over an amber bead which must then rest on consecrated ground for a period not less than 12 Sundays. When worn around the neck, the wearer gains Second Sight with an Ability of 3.",
+   "confidence": "1 (3)",
+   "reputations": "Proud (local) 3",
+   "appearance": null,
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Great Stallion of the Camargue",
+   "might": 15,
+   "form": "Animal",
+   "size": 2,
+   "season": "Summer",
+   "characteristics": {
+    "int": 0,
+    "per": 1,
+    "pre": 1,
+    "str": 5,
+    "sta": 3,
+    "dex": 1,
+    "qik": 4
+   },
+   "abilities": [
+    {
+     "name": "Animal Handling",
+     "score": 5,
+     "specialty": "horses"
+    },
+    {
+     "name": "Animal Resistance",
+     "score": 4,
+     "specialty": "claws"
+    },
+    {
+     "name": "(Area) Lore",
+     "score": 7,
+     "specialty": "Camargue"
+    },
+    {
+     "name": "Athletics",
+     "score": 6,
+     "specialty": "running"
+    },
+    {
+     "name": "Awareness",
+     "score": 3,
+     "specialty": "predators"
+    },
+    {
+     "name": "Brawl",
+     "score": 3,
+     "specialty": "dodging"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "Camargue"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Brash",
+     "score": 6
+    },
+    {
+     "name": "Stallion",
+     "score": 3
+    },
+    {
+     "name": "Stubborn",
+     "score": 3
+    },
+    {
+     "name": "Loyal",
+     "score": 3
+    },
+    {
+     "name": "Proud",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magical Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Champion",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Characteristic",
+     "count": 1,
+     "param": "Quickness"
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "LongWinded",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Strong-Willed",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Overconfident",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Close Family Ties",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Higher Purpose",
+     "count": 1,
+     "param": "protect the herd"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Quickness",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Major Virtue: Ways of the Marsh",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Animal Resistance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Defense",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Fatigue",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Personal Power",
+     "count": 3,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Sprint of the Zephyr",
+     "cost": "1 point",
+     "initiative": "Init +2",
+     "form": "Animal",
+     "range": "Per",
+     "duration": "Diam",
+     "target": "Ind",
+     "text": "The horse may gallop at amazing speeds for relatively short distances. Unencumbered, it can travel one league in one Diameter. Add one Diameter to the travel time for each Burden level of the horse. ReAn 20 (Base 15, +1 Diam): Personal Power (20 levels, –1 Might cost) The Unimpeded Traveler, 3 points, Constant, Animal R: Per, D: Sun, T: Ind This steed is not impeded by poor terrain and may move at maximum speed along even the poorest of terrain, achieving 30 miles a day. It may even cross open water and chasms, unsupported by ground, but can do this only at a trotting pace. ReAn 25 (Base 10, Sun +2, +1 Constant): Personal Power (25 levels)"
+    },
+    {
+     "name": "Great Leap",
+     "cost": "0 points",
+     "initiative": "Init +2",
+     "form": "Animal",
+     "range": "Per",
+     "duration": "Mom",
+     "target": "Ind",
+     "text": "The Stallion is able to leap instantly up to 30 paces vertically or 50 paces horizontally. The Stallion must make a Dexterity – Encumbrance stress roll of 0+ to land without injury. ReAn 15 (Base 15): Personal Power (15 levels, –2 Might cost)"
+    }
+   ],
+   "combat": "Hooves: Initiative +6, Attack +6, Defense +12, Damage +6.",
+   "soak": "+2",
+   "vis": "3 pawns of Animal vis in his hooves.",
+   "confidence": "1 (3)",
+   "reputations": "Elusive 2 (local)",
+   "appearance": "A beautiful white stallion. The Camargue is a large, flat, and marshy delta region of the Rhône River. Within the marsh live the magical, wild horses of the Camargue. They are a herd that can run faster and leap higher than any mundane horse. They are nearly impossible to capture because they are led by the Great Stallion of the Camargue. The Stallion has an extensive knowledge of the Camargue and a magical ability to sense any potential trap. The Stallion leads the herd away from trouble whenever possible. The Great Stallion of the Camargue cannot be broken without magic, but may grant a particularly brave or noble warrior the honor of riding it for a short time. The Stallion leads a herd of Horses of Virtue. The horses are largely similar to the Great Stallion, except they are Magic Might 10 and do not possess the Stallion’s ability to Sense the Feet that Tread the Earth, the Ways of the Marsh Virtue, or the Improved Abilities Quality, which reduces their (Area) Lore (Camargue) to only 3. The Stallion’s hooves may be Enriched by carving them into various accoutrements for a bit, bridle, and saddle to outfit a single horse. The leather used to construct the tack must be of the finest quality and anointed with oil infused with one dozen leaves of coltsfoot harvested under a full moon. The rider who uses the resulting tack is granted the Puissant Ride Virtue.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Lise",
+   "might": null,
+   "form": null,
+   "size": 0,
+   "season": null,
+   "characteristics": {
+    "int": 2,
+    "pre": 5,
+    "str": 1,
+    "sta": 2
+   },
+   "abilities": [
+    {
+     "name": "Awareness",
+     "score": 3,
+     "specialty": "in regiones"
+    },
+    {
+     "name": "Brawl",
+     "score": 4,
+     "specialty": "dagger"
+    },
+    {
+     "name": "Carouse",
+     "score": 4,
+     "specialty": "pagan rituals"
+    },
+    {
+     "name": "Chirurgy",
+     "score": 5,
+     "specialty": "poisoning"
+    },
+    {
+     "name": "Concentration",
+     "score": 3,
+     "specialty": "prayer"
+    },
+    {
+     "name": "Entrancement",
+     "score": 6,
+     "specialty": "widowers"
+    },
+    {
+     "name": "Faerie Lore",
+     "score": 3,
+     "specialty": "forest fae"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 3,
+     "specialty": "pagans"
+    },
+    {
+     "name": "Forest Lore",
+     "score": 6,
+     "specialty": "herbs"
+    },
+    {
+     "name": "Guile",
+     "score": 2,
+     "specialty": "men"
+    },
+    {
+     "name": "Hunt",
+     "score": 4,
+     "specialty": "small game"
+    },
+    {
+     "name": "Local Area Lore",
+     "score": 5,
+     "specialty": "regio"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 7,
+     "specialty": "worship of Earth Mother"
+    },
+    {
+     "name": "Music",
+     "score": 2,
+     "specialty": "ritual music"
+    },
+    {
+     "name": "Native Language",
+     "score": 5,
+     "specialty": "prayer"
+    },
+    {
+     "name": "Penetration",
+     "score": 5,
+     "specialty": "Entrancement"
+    },
+    {
+     "name": "Premonitions",
+     "score": 4,
+     "specialty": "threats to forest"
+    },
+    {
+     "name": "Regional Area Lore",
+     "score": 3,
+     "specialty": "pagans"
+    },
+    {
+     "name": "Second Sight",
+     "score": 5,
+     "specialty": "genii loci"
+    },
+    {
+     "name": "Stealth",
+     "score": 4,
+     "specialty": "forests"
+    },
+    {
+     "name": "Survival",
+     "score": 5,
+     "specialty": "forests"
+    },
+    {
+     "name": "Init",
+     "score": 0,
+     "specialty": ""
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Vengeful",
+     "score": 3
+    },
+    {
+     "name": "Resourceful",
+     "score": 2
+    },
+    {
+     "name": "Sly",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Spirit Votary",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Wise One",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Entrancement",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Immunity to Iron",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Spiritual Pact",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Forest",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Affinity with Magic Lore",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Forest Lore*",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Presence",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Premonitions",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Puissant Profession Herbalist",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Second Sight",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Self Confident",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Pagan",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Restriction",
+     "count": 1,
+     "param": "must be in contact with earth"
+    },
+    {
+     "name": "Poor",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Driven",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Malediction (bizarre appearance)**",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Visions** *Described in Guardians of the Forest on page 37 and Houses of Hermes: Mystery Cults on page 103",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "this virtue grants a Supernatural Ability that represents a mystic connection with the landscape. If these sources are unavailable",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "substitute Wilderness Lore. **from Warping",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [],
+   "inferiorities": [],
+   "powers": [],
+   "combat": "Dagger: Init –1, Attack +6, Defense +4, Damage +4 Thrown Knife: Init –1, Attack +5, Defense +4, Damage +3",
+   "soak": "+2",
+   "vis": null,
+   "confidence": "2 (8 points)",
+   "reputations": "Pagan Priestess 2 (Local)",
+   "appearance": "Lise’s life has been greatly extended by the Stasis power of her guardian spirit, however, this has left her appearance severely Warped; her body is a patchwork of different ages. While her face is that of a maiden, she has the body of a mature woman and the limbs of a crone. When invoking her power, her legs sprout roots that writhe into the ground, and there is a strong smell of damp soil. Raised in the Old Ways by her grandmother deep in the woods, Lise was sixteen before she met another human. Once she discovered a village she visited it often, even falling in love with one of the serfs. Seeking marriage, she went to a priest to accept baptism, but rather than being taught her catechism she was badly treated by him instead. The priest told lies to Lise’s lover, which resulted in his rejection of her. She fled from the village, vowing never to return. In the forest, her hatred for the priest (and by extension, the Church) festered. Remembering her grandmother’s teaching, she searched out the holy place of the Dark Mother, a chthonic spirit of the deep forest and fertile earth who had good reason to resent the Church. Lise became the Dark Mother’s only priestess. She has since dwelled within the spirit’s Magical regio of 8, her life extended by the spirit’s Stasis power, but she has been terribly Warped.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Panther of Virtue",
+   "might": 15,
+   "form": "Animal",
+   "size": 0,
+   "season": "Spring",
+   "characteristics": {
+    "per": 2,
+    "str": 1,
+    "sta": 0,
+    "dex": 4,
+    "qik": 2
+   },
+   "abilities": [
+    {
+     "name": "Athletics",
+     "score": 3,
+     "specialty": "pouncing"
+    },
+    {
+     "name": "Awareness",
+     "score": 2,
+     "specialty": "laying ambush"
+    },
+    {
+     "name": "Brawl",
+     "score": 3,
+     "specialty": "claws"
+    },
+    {
+     "name": "Concentration",
+     "score": 1,
+     "specialty": "maintaining effects"
+    },
+    {
+     "name": "Stealth",
+     "score": 3,
+     "specialty": "hiding"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "forests"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Panther",
+     "score": 3
+    },
+    {
+     "name": "Hateful",
+     "score": 3
+    },
+    {
+     "name": "Cunning Ambusher* (Cunning)",
+     "score": 3
+    },
+    {
+     "name": "Reclusive",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Monster",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Essential Virtue",
+     "count": 1,
+     "param": "cunning ambusher"
+    },
+    {
+     "name": "Great Dexterity",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Perfect Balance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Puissant Brawl",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Puissant Stealth",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Essential Flaw",
+     "count": 1,
+     "param": "savage appearance"
+    },
+    {
+     "name": "Hatred",
+     "count": 1,
+     "param": "minor, of other beasts"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 5,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 2,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Pleasing Breath",
+     "cost": "2 points",
+     "initiative": "Init +1",
+     "form": "Animal or Mentem",
+     "range": "Per",
+     "duration": "Conc",
+     "target": "Scent",
+     "text": "The breath of the panther has an irresistible, savory smell as of all the spices in the world. Any human or beast who smells it becomes entranced unless it succeeds on a Stamina roll against an Ease Factor of 9. Entranced victims follow the scent to where the panther lies in ambush. The panther’s breath travels on the wind and is effective at up to 100 paces in ideal conditions. Dragons are immune to its effects. ReAn 35 (Base 15, +1 Conc, +2 Scent, +1 Mentem requisite): Greater Power (35 levels, –2 Might cost, 5 xp Concentration)"
+    }
+   ],
+   "combat": "Claws: Init +1, Attack +12, Defense +11, Damage +3 Teeth: Init +2, Attack +12, Defense +8, Damage +2",
+   "soak": "+4",
+   "vis": "3 Rego in tongue",
+   "confidence": null,
+   "reputations": "Deceitful 2 (local)",
+   "appearance": "The Panther of Virtue is about the size of a large dog. Its fur is white and covered with small spots of many colors. The face of a Panther of Virtue is hideous to behold, with bulging eyes and a twisted, evil expression. It has a pronounced muzzle and a gaping maw filled with sharp teeth. The Panther of Virtue is a dangerous predator whose fragrant breath lures animals to their doom. The animals walk, mesmerized, toward where the panther lies in hiding. The spell is broken when they see its hideous face, but by then it is too late. The Panther of Virtue preys mainly on weak animals — it is not a brave beast and flees if it encounters serious resistance. When it attacks from hiding, it automatically wins Initiative in the first round of combat, and gains a +3 to its attack total for the first round only. Pliny the Elder writes that panthers were brought from Africa to Italy for use in the Roman circus. Some might have escaped to survive in Mythic Europe, either in the remote wilderness or in regiones. The tongue of a Panther of Virtue can grant the Entrancement Ability at a score of 3. It must first be Enriched by coating it with a thin layer of silver every week for a season, and then be inscribed with the words SAPHAT ELONAI METHIAX written in blue enamel. The tongue must be placed in the character's mouth to work (a Necessary Condition).",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Pentele, a Lion of Virtue",
+   "might": 31,
+   "form": "Animal",
+   "size": 2,
+   "season": "Autumn",
+   "characteristics": {
+    "int": 1,
+    "per": 0,
+    "pre": 3,
+    "str": 6,
+    "sta": 2,
+    "dex": 2,
+    "qik": 1
+   },
+   "abilities": [
+    {
+     "name": "(Area) Lore",
+     "score": 4,
+     "specialty": "forest animals"
+    },
+    {
+     "name": "Animal Ken",
+     "score": 5,
+     "specialty": "felines"
+    },
+    {
+     "name": "Athletics",
+     "score": 5,
+     "specialty": "pouncing"
+    },
+    {
+     "name": "Awareness",
+     "score": 4,
+     "specialty": "prey"
+    },
+    {
+     "name": "Concentration",
+     "score": 2,
+     "specialty": "maintaining powers"
+    },
+    {
+     "name": "Etiquette",
+     "score": 3,
+     "specialty": "Beasts of Virtue"
+    },
+    {
+     "name": "Guile",
+     "score": 3,
+     "specialty": "misleading"
+    },
+    {
+     "name": "Hunt",
+     "score": 5,
+     "specialty": "deer"
+    },
+    {
+     "name": "Leadership",
+     "score": 6,
+     "specialty": "felines"
+    },
+    {
+     "name": "Penetration",
+     "score": 3,
+     "specialty": "Animal effects"
+    },
+    {
+     "name": "Stealth",
+     "score": 4,
+     "specialty": "stalking"
+    },
+    {
+     "name": "Survival",
+     "score": 4,
+     "specialty": "forests"
+    },
+    {
+     "name": "Wilderness Sense",
+     "score": 4,
+     "specialty": "hazards"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Lion",
+     "score": 3
+    },
+    {
+     "name": "Brave",
+     "score": 3
+    },
+    {
+     "name": "Wild",
+     "score": 3
+    },
+    {
+     "name": "Merciful",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Master",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Essential Virtue",
+     "count": 1,
+     "param": "brave, minor"
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Puissant Brawl",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Self-Confident",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Difficult Underlings",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Proud",
+     "count": 1,
+     "param": "major"
+    },
+    {
+     "name": "Ability Block",
+     "count": 1,
+     "param": "languages"
+    },
+    {
+     "name": "Fear",
+     "count": 1,
+     "param": "wheels"
+    },
+    {
+     "name": "Infamous",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Weakness",
+     "count": 1,
+     "param": "helpless creatures"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Attack",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Defense",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Fatigue",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 8,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Lesser Power",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Animal Ken",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Wilderness Sense",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Personal Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Flaw: Restricted Power",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Terrifying Roar",
+     "cost": "3 points",
+     "initiative": "Init +2",
+     "form": "Animal or Mentem",
+     "range": "Per",
+     "duration": "Diameter",
+     "target": "Sound",
+     "text": "A Lion of Virtue can unleash a roar causing all who hear it to freeze in terror. This power affects both humans and animals. ReAn(Me) 30 (Base 5, +1 Diameter, +3 Sound, +1 Mentem requisite): Greater Power (30 levels, +2 Initiative, 10 xp Penetration)"
+    },
+    {
+     "name": "Trackless Step",
+     "cost": "1 point",
+     "initiative": "Init 0",
+     "form": "Terram",
+     "range": "Touch",
+     "duration": "Conc",
+     "target": "Ind",
+     "text": "By sweeping the ground behind him with his tail, a Lion of Virtue can wipe out his tracks as he walks. The requirement to use his tail makes this a Restricted Power. ReTe 10 (Base 4, +1 Touch, +1 Conc): Lesser Power (10 levels, –1 Might cost, 15 xp Concentration; Might cost equal to magnitude to meet criteria for a Lesser Power)"
+    },
+    {
+     "name": "Circle of Beast Warding",
+     "cost": "1 point",
+     "initiative": "Init +2",
+     "form": "Animal",
+     "range": "Touch",
+     "duration": "Ring",
+     "target": "Circle",
+     "text": "A Lion of Virtue can trace a circle on the ground that no mundane beast can cross. It sometimes uses this to capture prey. ReAn 5 (Base 2, +1 Touch, +2 Ring): Lesser Power (5 levels, +2 Initiative, 10 xp Penetration; Might cost equal to magnitude to meet criteria for a Lesser Power)"
+    },
+    {
+     "name": "Sleep with Eyes Open",
+     "cost": "0 points",
+     "initiative": "Init n/a",
+     "form": "Animal",
+     "range": "Per",
+     "duration": "Sun",
+     "target": "Ind",
+     "text": "A Lion of Virtue sleeps with its eyes open, so enemies have a hard time taking it by surprise. ReAn 10 (Base 4, +2 Sun, +1 continuous effect): Personal Power (10 levels, –1 Might cost, 10 xp Penetration)"
+    }
+   ],
+   "combat": "Large claws: Init +1, Attack +19, Defense +17, Damage +10 Large teeth: Init +1, Attack +17, Defense +14, Damage +9",
+   "soak": "+10",
+   "vis": "6 Rego in mane Pentele is literally the King of Beasts. All other animals yield to his majesty — except the cockerel, which struts so proudly that even Pentele is cowed. Pentele rules an animal kingdom in some remote part of Mythic Europe (deep in the wilderness, or perhaps in a strong Magic aura or regio). Just as there are many nations and many rulers in the lands of men, so there are many different Lions of Virtue, each ruling over a different animal kingdom. Like any ruler, Pentele is attended by nobles, courtiers, guards, and lackeys — a retinue of Beasts of Virtue of many different species. If, during his travels, a Lion of Virtue catches scent of humans, it covers its tracks by sweeping the earth behind itself with its tail. Ever watchful for hunters and enemies, it sleeps with its eyes open so as not to be taken unaware. Though mighty and very wild, a Lion of Virtue is merciful by nature. Pierre be Beauvais writes that the lion spares small, defenseless animals; it refrains from attacking women, children, and unarmed men. A person who throws herself on the ground in submission to a Lion of Virtue will receive mercy. A Lion of Virtue is afraid of the sound of turning wheels and, like most beasts, it has a healthy respect for fire. It is a natural enemy of dragons. To Enrich a Lion of Virtue's mane, each individual hair must be plucked and spun into thread, then woven with gold thread into a fabric collar worn by its maker. Once per day, the wearer can make eye contact with an animal and duplicate the effects of Mastering the Unruly Beast (ArM5, page 120) as a Greater Power that has a Penetration Total of 5. However, the collar’s wearer cannot show fear when commanding an animal; if the animal is threatening him he must make a Brave roll (with an Ease Factor determined by the fierceness of the animal in question). If he gets scared while controlling an animal, the power automatically fails. Alternatively, the mane can be Enriched by curing the skin with potash and anointing it with oil made from sage plants every three days at noon. When made into a belt, it grants a Lesser Immunity to Fear.",
+   "confidence": "2 (5)",
+   "reputations": "Dangerous Beast 4 (local)",
+   "appearance": null,
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Polymathes, the Draconic Librarian",
+   "might": 41,
+   "form": "Animal",
+   "size": 7,
+   "season": "Winter",
+   "characteristics": {
+    "int": 5,
+    "per": 4,
+    "pre": 8,
+    "com": 3,
+    "str": 12,
+    "sta": 8,
+    "dex": 3
+   },
+   "abilities": [
+    {
+     "name": "(Area) Lore",
+     "score": 5,
+     "specialty": "history"
+    },
+    {
+     "name": "(Another Area) Lore",
+     "score": 3,
+     "specialty": "history"
+    },
+    {
+     "name": "Arabic",
+     "score": 4,
+     "specialty": "poetry"
+    },
+    {
+     "name": "Artes Liberales",
+     "score": 5,
+     "specialty": "rhetoric"
+    },
+    {
+     "name": "Athletics",
+     "score": 2,
+     "specialty": "flying"
+    },
+    {
+     "name": "Awareness",
+     "score": 4,
+     "specialty": "smell"
+    },
+    {
+     "name": "Charm",
+     "score": 2,
+     "specialty": "scholars"
+    },
+    {
+     "name": "Civil and Canon Law",
+     "score": 3,
+     "specialty": "property law"
+    },
+    {
+     "name": "Concentration",
+     "score": 4,
+     "specialty": "reading"
+    },
+    {
+     "name": "Dominion Lore",
+     "score": 3,
+     "specialty": "saints"
+    },
+    {
+     "name": "Faerie Lore",
+     "score": 2,
+     "specialty": "earth faeries"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 4,
+     "specialty": "scholars"
+    },
+    {
+     "name": "Guile",
+     "score": 5,
+     "specialty": "concealing intentions"
+    },
+    {
+     "name": "Greek",
+     "score": 4,
+     "specialty": "academic usage"
+    },
+    {
+     "name": "Hunt",
+     "score": 5,
+     "specialty": "mountain goats"
+    },
+    {
+     "name": "Latin",
+     "score": 5,
+     "specialty": "academic usage"
+    },
+    {
+     "name": "Leadership",
+     "score": 4,
+     "specialty": "scholars"
+    },
+    {
+     "name": "(Living Language)",
+     "score": 5,
+     "specialty": "large vocabulary"
+    },
+    {
+     "name": "(Another Living Langauge)",
+     "score": 4,
+     "specialty": "large vocabulary"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 6,
+     "specialty": "ancient magic"
+    },
+    {
+     "name": "Penetration",
+     "score": 2,
+     "specialty": "Mentem"
+    },
+    {
+     "name": "Philosophiae",
+     "score": 6,
+     "specialty": "metaphysics"
+    },
+    {
+     "name": "Second Sight",
+     "score": 5,
+     "specialty": "invisible things"
+    },
+    {
+     "name": "Teaching",
+     "score": 2,
+     "specialty": "Philosophiae"
+    },
+    {
+     "name": "Theology",
+     "score": 4,
+     "specialty": "great theologians"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Avaricious",
+     "score": 6
+    },
+    {
+     "name": "Inquisitive",
+     "score": 4
+    },
+    {
+     "name": "Selfish",
+     "score": 4
+    },
+    {
+     "name": "Callous",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Monster",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Immunity",
+     "count": 1,
+     "param": "heat and fire"
+    },
+    {
+     "name": "Arcane Lore",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Educated",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 35,
+     "param": null
+    },
+    {
+     "name": "Puissant Brawl",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Second Sight",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Self-Confident",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Essential Flaw",
+     "count": 1,
+     "param": "Avaricious, major"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Focus Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Power",
+     "count": 3,
+     "param": null
+    },
+    {
+     "name": "Magical Meditation",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Gift of Speech",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Improved Attack",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Improved Damage",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Improved Defense",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Improved Fatigue",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Initiative",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Improved Powers",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Recovery",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 8,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Reduced Might",
+     "count": 18,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Master of Illusion",
+     "cost": "1–5 points",
+     "initiative": "Init –1",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "Polymathes can spontaneously alter the appearance of anything he touches, spontaneously producing the effect of a Muto Imaginem spell of fifth magnitude or less at a cost of one Might point per magnitude. (Focus Power)"
+    },
+    {
+     "name": "Fiery Breath",
+     "cost": "2 points",
+     "initiative": "Init +3",
+     "form": "Ignem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": ". R: Voice, D: Mom, T: Ind Polymathes can belch forth a torrent of fire 50 paces long and 10 paces wide. Anyone caught in its path takes a stress die +45 damage from the flames; a character may attempt to dodge with a Qik + Athletics roll; if the roll succeeds against an Ease Factor of 12, the character is only singed for a stress die +15 damage. CrIg 50 (Base 40, +2 Voice): Greater Power (50 levels), Improved Powers (partial, –3 Might cost)"
+    },
+    {
+     "name": "Peering Into the Mortal Mind",
+     "cost": "2 points",
+     "initiative": "Init +3",
+     "form": "Mentem",
+     "range": "Sight",
+     "duration": "Mom",
+     "target": "Ind",
+     "text": "As the spell on page 149 of ArM5, but Polymathes can read the mind of anyone he can see; the target does not need to make eye contact with him. InMe 40 (Base 25, +3 Sight): Greater Power (40 levels, –2 Might cost)"
+    },
+    {
+     "name": "Poisonous Blood",
+     "cost": "0 points",
+     "initiative": "Init n/a",
+     "form": "Aquam",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "Polymathes’s blood is a deadly poison that keeps its potency for nine days after it is spilled. If anyone should manage to inflict a wound on Polymathes, and later in the battle rolls a botch, then a drop of blood has hit the unfortunate character’s skin, and the player must make a Stamina roll of 12+ or the character dies instantly. CrAq 45 (Base 25, +3 Duration equivalent to Moon, +1 continuous effect): Greater Power (45 levels, –1 Might cost), Improved Powers (partial, –3 Might cost), Improved Powers (partial, –1 Might cost) Improved Powers (partial, 15xp in Penetration)"
+    }
+   ],
+   "combat": "Large Claws: Init +4, Atk +23, Dfn +20, Dam +22 Large Teeth: Init +4, Atk +21, Dfn +17, Dam +21",
+   "soak": "+24",
+   "vis": "9 Intellego in heart",
+   "confidence": "3 (9)",
+   "reputations": "Dragon Who Eats Everyone And Leaves No Survivors 4 (local)",
+   "appearance": "Polymathes resembles a squat lizard about 25 feet from shoulder to rump, with a thin, sinuous neck about 15 feet long and a whip-like tail of similar length. He is covered in shimmering golden scales that are has hard as iron. His large wings are graceful and flexible, and he has the habit of gesticulating with them when he gets excited, to the detriment of bystanders. Polymathes is something of a runt among dragons, but he is very ancient and magically potent. He lairs in a complex of tunnels in a remote mountain range, emerging every decade or two in search of new treasures. His lair is a place of wondrous illusions where nothing is what it seems. One of his favorite tricks is to make a pile of rubble resemble a gleaming mound of gold; when would-be thieves discover the illusion, they usually decide the rumored dragon treasure was some kind of hoax, and give up. When he decides it would be amusing to deal with intruders in person, he disguises himself as a huge boulder and positions himself so intruders literally have to climb over him to get the “treasure.” Polymathes is as consumed by lust for treasure as any of his kind. However, the wealth he craves is not money, but knowledge. He has a magnificent hoard of rare books and scrolls, some of them very ancient. There are a few tens of thousands of gold coins as well, collected in Polymathes’ younger days before he could appreciate the finer things in life. He has carefully arranged his treasures in piles and sleeps coiled among them. He does read the books from time to time (hence his smattering of Academic Abilities), but he’s primarily interested as a collector. He is preoccupied with expanding his collection, by whatever means are convenient. (It would be highly inadvisable to mention the Great Library of Durenmar in his presence.)",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Raven of Virtue",
+   "might": 9,
+   "form": "Animal",
+   "size": null,
+   "season": "Spring",
+   "characteristics": {
+    "int": 1,
+    "per": 2,
+    "com": 0,
+    "sta": 0,
+    "dex": 1,
+    "qik": 5
+   },
+   "abilities": [
+    {
+     "name": "Athletics",
+     "score": 3,
+     "specialty": "flying"
+    },
+    {
+     "name": "Awareness",
+     "score": 3,
+     "specialty": "shiny objects"
+    },
+    {
+     "name": "Brawl",
+     "score": 3,
+     "specialty": "dodging"
+    },
+    {
+     "name": "Hunt",
+     "score": 1,
+     "specialty": "voles"
+    },
+    {
+     "name": "Premonitions",
+     "score": 4,
+     "specialty": "homicide"
+    },
+    {
+     "name": "Second Sight",
+     "score": 4,
+     "specialty": "ghosts"
+    },
+    {
+     "name": "Stealth",
+     "score": 1,
+     "specialty": "hiding in trees"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "fields"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Raven",
+     "score": 3
+    },
+    {
+     "name": "Understands Portents* (Intelligence)",
+     "score": 3
+    },
+    {
+     "name": "Morbid",
+     "score": 3
+    },
+    {
+     "name": "Nurturing",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Friend",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Essential Virtue",
+     "count": 1,
+     "param": "understands portents"
+    },
+    {
+     "name": "Keen Vision",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Unaffected by the Gift",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Compulsion",
+     "count": 1,
+     "param": "steal shiny objects"
+    },
+    {
+     "name": "Weak Characteristics",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Improved Abilities",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Defense",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Premonitions",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Second Sight",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [],
+   "combat": "Dodge: Init +5, Attack n/a, Defense +12, Damage n/a Beak: Init +5, Attack +7, Defense +11, Damage –6",
+   "soak": "0",
+   "vis": "2 Intellego, 1 in each eye The Raven of Virtue is a bird of ill omen. It can foresee many calamities and intentionally appears to humans as an enigmatic warning. It does this not to be helpful, but because it enjoys causing anxiety and consternation. Ravens eat carrion as well as insects and small animals. When they come upon a corpse, they eat the eyes first. They do not feed their young until the fledglings develop black plumage. Before that time, the raven chicks must subsist on dew, but after their feathers grow their parents recognize them as their own and are careful and attentive. The vis in a Raven of Virtue is Enriched by turning the whole corpse inside out, wrapping the bloody flesh in the leaves of plant called eyebright, then suspending it in the top branches of an ash tree for a season. The detached claws then grant the wearer the Keen Vision Virtue. If buried under the roots of a willow instead, the raven’s skull grants the Intuition Virtue when crafted into a ring.",
+   "confidence": null,
+   "reputations": "Bad luck (local) 2",
+   "appearance": null,
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Rhenus, the Spirit of the Rhine",
+   "might": 50,
+   "form": "Aquam",
+   "size": null,
+   "season": "Winter",
+   "characteristics": {
+    "int": 5,
+    "per": 5,
+    "pre": 5,
+    "com": 4,
+    "str": 3,
+    "sta": 3,
+    "dex": 3,
+    "qik": 3
+   },
+   "abilities": [
+    {
+     "name": "Bargain",
+     "score": 8,
+     "specialty": "treasure"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 10,
+     "specialty": "ancient legends"
+    },
+    {
+     "name": "Rhine Lore",
+     "score": 12,
+     "specialty": "upper Rhine"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Desires Release",
+     "score": 6
+    },
+    {
+     "name": "Lust for Wealth",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Spirit",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Daimon",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Rivers",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Communication",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Intelligence x2",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Presence x2",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Perception x2",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics x14",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Malediction",
+     "count": 1,
+     "param": "Bound"
+    },
+    {
+     "name": "Avaricious",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Focus Power x4",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Power x2",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ritual Power x6",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue x20",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Reduced Abilities x7",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Control Human",
+     "cost": "2 points",
+     "initiative": "Init +3",
+     "form": "Mentem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Crafter of Water",
+     "cost": "variable points",
+     "initiative": "Init +3 – Might cost",
+     "form": "Aquam",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "Duplicates any nonRitual Creo Aquam or Rego Aquam spell no greater than 50th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    },
+    {
+     "name": "Grant Greater Malediction",
+     "cost": "10 points",
+     "initiative": "Init –17",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "curses a person to suffer a great misfortune on their next trip along or across the Rhine; see Grant (Major Flaw) for more details. (Ritual Power x 2) Grant Puissance in Profession:"
+    },
+    {
+     "name": "Boating",
+     "cost": "4 points",
+     "initiative": "Init +0",
+     "form": "Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant Puissance in (Ability) for more details. (Lesser Power)"
+    },
+    {
+     "name": "Oath-Swearing",
+     "cost": "10 points",
+     "initiative": "Init –7",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Ritual Power)"
+    },
+    {
+     "name": "Presence",
+     "cost": "0 points",
+     "initiative": "constant",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Regio",
+     "cost": "15 points",
+     "initiative": "Init –27",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "by permanently spending Might, the spirit can add levels to the regio around the top of the island in the center of the waterfall. (Ritual Power x 3)"
+    },
+    {
+     "name": "Master of Water",
+     "cost": "variable points",
+     "initiative": "Init +3 – Might cost",
+     "form": "Aquam",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any nonRitual Muto Aquam or Perdo Aquam spell no greater than 50th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    }
+   ],
+   "combat": null,
+   "soak": null,
+   "vis": "10 pawns of Aquam vis; 5 pawns per year can also be harvested by performing sacrifices of wealth to the spirit.",
+   "confidence": "1 (3 points)",
+   "reputations": "Ancient and Harmless Myth 2 (Local)",
+   "appearance": "The river Rhine plunges down eighty feet in an almighty torrent over a set of cataracts at its upper stretches, south of the Black Forest. A rocky island is perched perilously at the center of the falls, and houses the spirit’s regio.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Rok, the Storm Giant",
+   "might": 28,
+   "form": "Auram",
+   "size": 4,
+   "season": "Summer",
+   "characteristics": {
+    "per": 0,
+    "pre": 2,
+    "str": 10,
+    "sta": 2,
+    "dex": 1
+   },
+   "abilities": [
+    {
+     "name": "Auram Resistance",
+     "score": 4,
+     "specialty": "hail"
+    },
+    {
+     "name": "Brawl",
+     "score": 3,
+     "specialty": "kick"
+    },
+    {
+     "name": "Leadership",
+     "score": 2,
+     "specialty": "intimidation"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 4,
+     "specialty": "Norse giants"
+    },
+    {
+     "name": "(Living Language)",
+     "score": 3,
+     "specialty": "nautical terms"
+    },
+    {
+     "name": "Old Norse",
+     "score": 5,
+     "specialty": "incantations"
+    },
+    {
+     "name": "Single Weapon",
+     "score": 5,
+     "specialty": "axe and round shield"
+    },
+    {
+     "name": "Survival",
+     "score": 4,
+     "specialty": "cold climates"
+    },
+    {
+     "name": "Thrown Weapon",
+     "score": 1,
+     "specialty": "javelin"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Avaricious",
+     "score": 6
+    },
+    {
+     "name": "Angry",
+     "score": 3
+    },
+    {
+     "name": "Violent",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Human",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Arcane Lore",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Berserk",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Reserves of Strength",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Avaricious",
+     "count": 1,
+     "param": "major"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Focus Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Gigantic",
+     "count": 3,
+     "param": null
+    },
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Auram Resistance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 3,
+     "param": null
+    },
+    {
+     "name": "Improved Powers",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 3,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue",
+     "count": 1,
+     "param": "Lesser Immunity to lightning"
+    },
+    {
+     "name": "Personal Power",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Master of Fierce Winds",
+     "cost": "1–5 points",
+     "initiative": "Init –7",
+     "form": "Auram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "Rok can spontaneously conjure Rego Auram effects of fifth magnitude or less that create violent winds or hail. One of his favorite effects is Charge of the Angry Winds (ArM5, page 125). (Focus Power)"
+    },
+    {
+     "name": "Gathering of the Stormy Might",
+     "cost": "2 points",
+     "initiative": "Init –3",
+     "form": "Auram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": ". R: Sight, D: Conc, T: Group As the spell on page 129 of ArM5. ReAu 40 (Base 5, +3 Sight, +2 Group, +2 Size): Greater Power (40 levels, –2 Might cost)"
+    },
+    {
+     "name": "True Sight of the Air",
+     "cost": "0 points",
+     "initiative": "Init n/a",
+     "form": "Auram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": ". R: Per, D: Sun, T: Vision As the spell on page 127 of ArM5. This ability is continuously active. InAu 20 (Base 1, +2 Sun, +4 Vision, +1 continuous effect): Personal Power (20 levels, –1 Might cost), Improved Powers (–1 Might cost, 10 xp Concentration)"
+    }
+   ],
+   "combat": "Axe & Round Shield: Init –1, Attack +11*, Defense +6*, Damage +16 Axe: Init –1, Attack +10*, Defense +3*, Damage +16 Kick: Init –3, Attack +4*, Defense 0*, Damage +13 * Add +2 to Attack and –2 to Defense when Rok is berserk",
+   "soak": "+14 (+16 when berserk)",
+   "vis": "6 Auram in hands",
+   "confidence": "1 (3)",
+   "reputations": null,
+   "appearance": "Rok is a fierce-looking giant with long, flowing hair and a beard tousled by the small winds that constantly whirl about him. He stands about 15 feet tall. He dresses in the manner of the Northmen of bygone days, including — when prepared for battle — an iron helmet and mail byrnie. Rok is something of a weakling among the storm giants, being one of the smaller members of that mighty and fearsome race. In battle, he uses his power over winds to create a Charge of the Angry Winds effect, to let him break up groups of opponents and hold enemies at bay until he can single out one victim to engage with his axe.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Salamander of Virtue",
+   "might": 24,
+   "form": "Ignem",
+   "size": null,
+   "season": null,
+   "characteristics": {
+    "per": 1,
+    "sta": 3,
+    "dex": 2,
+    "qik": 10
+   },
+   "abilities": [
+    {
+     "name": "Brawl",
+     "score": 1,
+     "specialty": "dodging"
+    },
+    {
+     "name": "Stealth",
+     "score": 4,
+     "specialty": "hiding in crannies"
+    },
+    {
+     "name": "Survival",
+     "score": 2,
+     "specialty": "wetlands"
+    },
+    {
+     "name": "Swim",
+     "score": 3,
+     "specialty": "standing water"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Salamander",
+     "score": 3
+    },
+    {
+     "name": "ColdBlooded* (Stamina)",
+     "score": 3
+    },
+    {
+     "name": "Destructive",
+     "score": 2
+    },
+    {
+     "name": "Timid",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Monster",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Immunity",
+     "count": 1,
+     "param": "to heat and flames"
+    },
+    {
+     "name": "Essential Virtue",
+     "count": 1,
+     "param": "cold-blooded"
+    },
+    {
+     "name": "Unaffected by the Gift",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Noncombatant",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Weak Characteristics",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Powers",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Personal Power",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Devouring the Heat of the Fire",
+     "cost": "0 points",
+     "initiative": "Init +14",
+     "form": "Ignem",
+     "range": "Touch",
+     "duration": "Mom",
+     "target": "Ind",
+     "text": "The Salamander of Virtue can instantly extinguish any fire it touches, even the hottest furnace. If the fire is very large, only a three-pace radius around the Salamander is extinguished. Even if it does not use this power, the Salamander of Virtue is completely unharmed by heat and flames. PeIg 15 (Base 4, +1 Touch, +1 Part, +2 Size): Greater Power (15 levels, +5 Initiative, –2 Might cost)"
+    },
+    {
+     "name": "Sense of the Bright Flame",
+     "cost": "0 points",
+     "initiative": "Init n/a",
+     "form": "Ignem",
+     "range": "Per",
+     "duration": "Sun",
+     "target": "Hearing",
+     "text": "The Salamander of Virtue can locate fires as if by sense of hearing. This power is continuously active. InIg 15 (Base 2, +2 Sun, +3 Hearing, +1 continuous effect): Personal Power (15 levels, –2 Might cost)"
+    },
+    {
+     "name": "Poisoning the Well",
+     "cost": "1 point",
+     "initiative": "Init +9",
+     "form": "Aquam",
+     "range": "Touch",
+     "duration": "Moon",
+     "target": "Ind",
+     "text": "The Salamander of Virtue can poison water (or other liquid) by touch. The amount affected is ten times the base Individual target. The material remains poisonous for Moon Duration; if ingested, it inflicts an Incapacitating wound to any who fail a Stamina roll against an Ease Factor of 12. Since the poison is magical, Magic Resistance can protect against its effects. The Salamander of Virtue automatically invokes this power when it dies. MuAq 45 (Base 10, +1 Touch, +3 Moon, +1 Size): Greater Power (45 levels, –3 Might cost)"
+    },
+    {
+     "name": "Poisoning the Fruit of the Vine",
+     "cost": "4 points",
+     "initiative": "Init +9",
+     "form": "Herbam",
+     "range": "Touch",
+     "duration": "Moon",
+     "target": "Ind",
+     "text": "Similarly, by touching a fruit tree or edible plant, the Salamander of Virtue can make that plant poisonous to eat. The effects of the poison are identical to those from the Poisoning the Well power, above. MuHe 50 (Base 20 (new guideline), +1 Touch, +3 Moon, +2 Size): Greater Power (50 levels), Improved Powers (1 mastery point, –1 Might cost)"
+    },
+    {
+     "name": "Poisonous Skin",
+     "cost": "0 points",
+     "initiative": "Init n/a",
+     "form": "Aquam",
+     "range": "Touch",
+     "duration": "Sun",
+     "target": "Ind",
+     "text": "Finally, the Salamander of Virtue’s skin is continuously coated with a contact poison that causes an Incapacitating Wound to any who touch it and fail a Stamina roll against an Ease Factor of 12. Magic Resistance protects against this effect normally. CrAq 40 (Base 20, +1 Touch, +2 Sun, +1 continuous effect): Greater Power (40 levels, –2 Might cost), Improved Powers (2 mastery points, –2 Might cost)"
+    }
+   ],
+   "combat": "Dodge: Init +10, Attack n/a, Defense +12, Damage n/a",
+   "soak": "+3",
+   "vis": "5 pawns of dedicated Vis in the Art combination of Perdo Ignem (see Chapter 8: Magic Things, Dedicated Vis)",
+   "confidence": null,
+   "reputations": "Immune to Fire 6 (local)",
+   "appearance": "The salamander is a tiny lizard only two or three inches long. Its smooth, moist skin is covered with dark spots. The word “salamander” comes from Greek. Magi use it as a kind of blanket term for various beings associated with the Form of Ignem. The term “Salamander of Virtue” specifically refers to a small lizard with remarkable powers over fire. A Salamander of Virtue is very cold by nature and seeks out any source of heat: fires, or even warm-blooded creatures. When it finds a fire, a Salamander of Virtue eagerly crawls into it and extinguishes it. The body of a Salamander of Virtue, if dried by smoking it over embers of alder wood, is Enriched into a Thing of Virtue. When touched to the hands, heart, and forehead (a Necessary Condition), it grants Immunity to Fire for as long as its possessor touches it.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Sir Giles, a Ghostly Knight",
+   "might": 16,
+   "form": "Mentem",
+   "size": 0,
+   "season": "Summer",
+   "characteristics": {
+    "pre": 1,
+    "com": 0,
+    "str": 2,
+    "sta": 1,
+    "dex": 2,
+    "qik": 2
+   },
+   "abilities": [
+    {
+     "name": "(Area) Lore",
+     "score": 3,
+     "specialty": "nobles"
+    },
+    {
+     "name": "Animal Handling",
+     "score": 3,
+     "specialty": "horses"
+    },
+    {
+     "name": "Athletics",
+     "score": 2,
+     "specialty": "running"
+    },
+    {
+     "name": "Awareness",
+     "score": 3,
+     "specialty": "in battle"
+    },
+    {
+     "name": "Brawl",
+     "score": 2,
+     "specialty": "fist"
+    },
+    {
+     "name": "Concentration",
+     "score": 1,
+     "specialty": "remaining invisible"
+    },
+    {
+     "name": "Charm",
+     "score": 1,
+     "specialty": "ladies"
+    },
+    {
+     "name": "Etiquette",
+     "score": 3,
+     "specialty": "nobles"
+    },
+    {
+     "name": "Great Weapon",
+     "score": 3,
+     "specialty": "long spear"
+    },
+    {
+     "name": "Hunt",
+     "score": 2,
+     "specialty": "deer"
+    },
+    {
+     "name": "Intrigue",
+     "score": 1,
+     "specialty": "noble courts"
+    },
+    {
+     "name": "Leadership",
+     "score": 3,
+     "specialty": "soldiers"
+    },
+    {
+     "name": "Ride",
+     "score": 5,
+     "specialty": "in battle"
+    },
+    {
+     "name": "Single Weapon",
+     "score": 5,
+     "specialty": "long sword and heater"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Proud",
+     "score": 6
+    },
+    {
+     "name": "Belligerent",
+     "score": 2
+    },
+    {
+     "name": "Brave",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Spirit",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Monster",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Knight",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Puissant Single Weapon",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Self-Confident",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Proud",
+     "count": 1,
+     "param": "Major"
+    },
+    {
+     "name": "Baneful Circumstances",
+     "count": 1,
+     "param": "during the day"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Lesser Power",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Minor Flaw",
+     "count": 1,
+     "param": "x 1"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Donning the Corporeal Veil",
+     "cost": "5 points",
+     "initiative": "Init –1",
+     "form": "Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "Sir Giles can assume material form. (Lesser Power)"
+    },
+    {
+     "name": "Riding the Phantom Steed",
+     "cost": "2 points",
+     "initiative": "Init 0",
+     "form": "Animal",
+     "range": "Touch",
+     "duration": "Sun",
+     "target": "Ind",
+     "text": "When Sir Giles takes physical form, he can also materialize his war horse for an additional Might cost. He can dissolve the horse at will due to the Rego requisite. Use the statistics for a destrier from the Book of Mundane Beasts appendix. Cr(Re)An 40 (Base 15, +1 Touch, +2 Sun, +1 Rego requisite, +1 Size): Greater Power (40 levels, –2 Might cost)"
+    },
+    {
+     "name": "Invisibility",
+     "cost": "1 point",
+     "initiative": "Init 0",
+     "form": "Imaginem",
+     "range": "Touch",
+     "duration": "Conc",
+     "target": "Group",
+     "text": "Even in material form, Sir Giles and his horse can become invisible when he wishes (though they can still be seen by Second Sight). PeIm 20 (Base 4, +1 Touch, +1 Conc, +2 Group): Greater Power (partial: 20 levels, –1 Might cost, 5 xp Concentration)"
+    },
+    {
+     "name": "Ride in Dreams",
+     "cost": "1 point",
+     "initiative": "Init 0",
+     "form": "Mentem",
+     "range": "Touch",
+     "duration": "Sun",
+     "target": "Ind",
+     "text": "When in spirit form, Sir Giles can enter the dreams of a sleeping person whose name he knows, tormenting him with nightmares of a furious, dark knight. The victim must make a Stamina roll against an Ease Factor of Sir Giles’ Presence + Leadership or lose a Long-Term Fatigue Level. CrMe 15 (Base 4, +1 Touch, +2 Sun): Greater Power (partial: 15 levels, –1 Might cost)"
+    }
+   ],
+   "combat": "Lance & Heater, mounted: Init +3, Attack +16, Defense +14, Damage +7 Lance, dismounted: Init +4, Attack +8, Defense +5, Damage +9 Long Sword & Heater, mounted: Init +3, Attack +17, Defense +16, Damage +8 Long Sword & Heater: Init +3, Attack +14, Defense +13, Damage +8 Long Sword only: Init +3, Attack +13, Defense +9, Damage +8",
+   "soak": "+10",
+   "vis": "4 Mentem in lance",
+   "confidence": "2 (6)",
+   "reputations": "Proud 3 (local)",
+   "appearance": "Sir Giles is a Magical apparition — a ghostly knight in black mail, riding a fearsome black destrier. His shield and surcoat are solid black without any heraldic device, and atop his helm is a crest shaped like a cockerel. If he removes his helm, he appears to be a rather handsome, well-groomed knight whose face shows an expression of fierce pride. Magic THings The power of magic touches inanimate objects as often as it touches the living. Sometimes that power becomes concentrated as raw vis. While all raw vis is valuable to magi, rare forms have additional powers that make them even more desirable. Some items are not vis, but are still imbued with power by the realm of Magic; these are the Herbs and Objects of Virtue. Items and plants can also be awakened, giving them a certain amount of consciousness, but generally no Might score. Finally, the power of Magic can fully animate pure substances, creating the elementals.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Stag of Virtue",
+   "might": 17,
+   "form": "Animal",
+   "size": 2,
+   "season": "Summer",
+   "characteristics": {
+    "per": 2,
+    "pre": 2,
+    "str": 4,
+    "sta": 3,
+    "dex": 1,
+    "qik": 2
+   },
+   "abilities": [
+    {
+     "name": "Awareness",
+     "score": 5,
+     "specialty": "hunters"
+    },
+    {
+     "name": "Brawl",
+     "score": 5,
+     "specialty": "antlers"
+    },
+    {
+     "name": "Stealth",
+     "score": 3,
+     "specialty": "hiding in undergrowth"
+    },
+    {
+     "name": "Survival",
+     "score": 4,
+     "specialty": "forests"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Stag",
+     "score": 3
+    },
+    {
+     "name": "Noble",
+     "score": 3
+    },
+    {
+     "name": "Healthy (Stamina)",
+     "score": 3
+    },
+    {
+     "name": "Brave",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Monster",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Forest",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Essential Virtue",
+     "count": 1,
+     "param": "healthy, minor"
+    },
+    {
+     "name": "Ferocity",
+     "count": 1,
+     "param": "when at bay"
+    },
+    {
+     "name": "Great Quickness",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Immunity",
+     "count": 1,
+     "param": "fevers"
+    },
+    {
+     "name": "Long-Winded",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Puissant Athletics",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Hatred",
+     "count": 1,
+     "param": "of serpents, major"
+    },
+    {
+     "name": "Higher Purpose",
+     "count": 1,
+     "param": "protect its herd"
+    },
+    {
+     "name": "Restricted Power",
+     "count": 2,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Ritual Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 7,
+     "param": null
+    },
+    {
+     "name": "Improved Powers",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Personal Power",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Major Flaw: Hunger for Animal Vis",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Healing",
+     "cost": "3 points",
+     "initiative": "Init –8",
+     "form": "Animal",
+     "range": "Per",
+     "duration": "Mom",
+     "target": "Ind",
+     "text": "The stag can heal one of its own Heavy or lesser wounds. This is a Restricted Power: the stag must eat the herb dittany to activate it. CrAn 25 (Base effect): Ritual Power (25 levels), Improved Powers (2 mastery point, –2 Might cost)"
+    },
+    {
+     "name": "Delay the Serpent’s Venom",
+     "cost": "0 points",
+     "initiative": "Init n/a",
+     "form": "Aquam",
+     "range": "Per",
+     "duration": "Sun",
+     "target": "Ind",
+     "text": "The Stag of Virtue is magically warded against poison. Any poison introduced into the Stag’s body takes no effect until the next sunrise or sunset (whichever comes first). This power activates whenever such a poison is introduced, and thus has an Intellego requisite. Re(In)Aq 20 (Base 5, +2 Sun, +1 Intellego requisite): Personal Power (20 levels, –1 Might cost), Improved Powers (1 mastery point, –1 Might cost)"
+    },
+    {
+     "name": "Alleviate the Serpent’s Bite",
+     "cost": "1 point",
+     "initiative": "Init +1",
+     "form": "Aquam",
+     "range": "Per",
+     "duration": "Mom",
+     "target": "Ind",
+     "text": "A Stag of Virtue can permanently neutralize any poison already inside its body. This is a Restricted Power, which the Stag must drink water to activate. PeAq 15 (Base 15): Personal Power (15 levels, +1 Initiative, –1 Might cost)"
+    }
+   ],
+   "combat": "Antlers: Init +4, Attack +10, Defense +10, Damage +7 Hooves: Init +4, Attack +8, Defense +9, Damage +5",
+   "soak": "+7",
+   "vis": "3 Creo in right antler. This is spell-like (see Chapter 8: Magic Things, Spell-Like Vis) with an effect similar to Restoration of the Defiled Body (ArM5, page 129). A Stag of Virtue is a great enemy of serpents and kills them whenever it can. It does this by filling its mouth with water and spitting it down the serpent’s hole; when the serpent emerges to escape drowning, the Stag of Virtue tramples it to death. A Stag of Virtue enjoys vigorous health and can live a very long time (in fact, like other Beasts of Virtue, it can live forever). To keep itself youthful and healthy, this stag swallows a live, venomous serpent. Then it drinks a large quantity of water to neutralize the venom. After this process, its antlers fall off and its vigor is restored. Hermetic experts concur that the Stag of Virtue actually consumes Magical serpents for this process and that it becomes weak and looks aged when it cannot find snakes to eat (such as during the winter). The Stag of Virtue lives only in places where Magical snakes can be found. The right antler of a Stag of Virtue has healing powers and is greatly sought by hedge wizards and magi alike. The stag always buries its antlers after shedding them. Anyone who consumes the flesh of a Stag of Virtue gains a Lesser Immunity to fevers for Moon duration. The stag itself is immune to fevers and the venison transfers this immunity through the Law of Contagion. The right antler of a Stag of Virtue may be Enriched by carving it into a cup, which every day for a season is filled with the blood and powdered skull of a viper. If filled with clear spring water with a leaf of dittany (a Necessary Condition), the cup neutralizes any poison (Greater Purifying Touch (Poison))",
+   "confidence": "1 (3)",
+   "reputations": "Noble 2 (local)",
+   "appearance": null,
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "The Cat-Fish (Felis Aquatica)",
+   "might": null,
+   "form": null,
+   "size": null,
+   "season": null,
+   "characteristics": {
+    "per": 1,
+    "sta": 0,
+    "dex": 3,
+    "qik": 4
+   },
+   "abilities": [
+    {
+     "name": "Awareness",
+     "score": 4,
+     "specialty": "at night"
+    },
+    {
+     "name": "Brawl",
+     "score": 2,
+     "specialty": "claws"
+    },
+    {
+     "name": "Hunt",
+     "score": 4,
+     "specialty": "water rats"
+    },
+    {
+     "name": "Stealth",
+     "score": 4,
+     "specialty": "stalking"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "forests"
+    },
+    {
+     "name": "Swim",
+     "score": 4,
+     "specialty": "ambush"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Curious",
+     "score": 4
+    },
+    {
+     "name": "Bold",
+     "score": 1
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Perfect Balance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Puissant Awareness",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Sharp Ears",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Aquam Monstrosity",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [],
+   "inferiorities": [],
+   "powers": [],
+   "combat": "Claws: Init +3, Attack +8, Defense +10, Damage –5 Teeth: Init +4, Attack +8, Defense +7, Damage –6",
+   "soak": "+1",
+   "vis": "1 pawn of Muto vis in fish tail.",
+   "confidence": "0",
+   "reputations": "Magical beast 2 (local)",
+   "appearance": "The fore-part of the cat-fish is that of a black cat, and the back-part is that of a silvery fish. His favorite hunting method is to hide under the surface of the water, and grab small vermin nesting in the banks of the river. Sometimes he will chase a fish on a line, but this is more of a kitten-like regression than serious hunting. Like all cats, the cat-fish gains a +3 bonus on rolls to climb and jump, due to his Perfect Balance, although of course he cannot easily climb out of the water. The cat does not have gills, and so cannot breath underwater. Village fishermen in Champagne tell stories of a cat that lives in a tributary of the river Seine. The cat, it is claimed, is half fish — a kind of feline mermaid — and is very bold, sometimes even stealing fish from the line. The Bonisagus magus Yonnlius, currently a Master in the Rhine Tribunal, claims to have caught the cat several years ago and examined it. His supposition is that a cat became Warped after falling into a powerful magical regio in the river Seine, while attempting to catch fish from the river bank. It is unclear, from the record held at Durenmar, whether Yonnlius also located this regio, although he does note that upon the completion of his study the animal was released unharmed.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "The Dog that Flew (Canis Volata)",
+   "might": null,
+   "form": null,
+   "size": null,
+   "season": null,
+   "characteristics": {
+    "per": 2,
+    "com": 0,
+    "str": 0,
+    "sta": 2,
+    "dex": 1,
+    "qik": 2
+   },
+   "abilities": [
+    {
+     "name": "Athletics",
+     "score": 4,
+     "specialty": "aerial maneuvers"
+    },
+    {
+     "name": "Awareness",
+     "score": 4,
+     "specialty": "keeping watch"
+    },
+    {
+     "name": "Brawl",
+     "score": 3,
+     "specialty": "bite"
+    },
+    {
+     "name": "Hunt",
+     "score": 4,
+     "specialty": "track by scent"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Paranoid",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Improved Characteristics",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Long-Winded",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Sharp Ears",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Auram Monstrosity",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Warped Senses",
+     "count": 1,
+     "param": "sensitive to sound"
+    },
+    {
+     "name": "Reckless",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [],
+   "inferiorities": [],
+   "powers": [],
+   "combat": "Bite: Init +2, Attack +8, Defense +7, Damage +1",
+   "soak": "+2",
+   "vis": "1 pawn of Muto in wing feathers.",
+   "confidence": "0",
+   "reputations": "Flying dog 2 (local)",
+   "appearance": "The dog is lean, lanky, and hungry looking. She stands about 3 feet tall, and has a large pair of grey feathered wings, with an extended wing span of over 3 yards; although normally the wings are tucked tight against her body. The dog cannot really fly, but can glide for long distances. To become air-borne she usually leaps from a high place, and is able to remain in flight for one Diameter for each 10 feet of initial height. Alternatively, the dog can take to the air for a short period (one Diameter) by running at speed with wings spread; make a stress roll of Strength + Athletics against an Ease Factor of 6 to check if she is successful. The town of Hersfeld, in Central Germany (see Guardians of the Forests, page 86), has a prominent bell tower over which the townsfolk witnessed a dog flying in the summer of 1217. Even the monks of the nearby Benedictine Abbey, who attributed the sight to a miracle, recorded the event. Some members of the Hermetic order have proposed that the sighted creature was an animal Warped by magical springs that are known to be in the region, but an expedition in 1219 was unable to find evidence of the flying dog. The flying dog is very skittish, and is afraid of both other animals and humans. She is still hiding near the town of Hersfeld, and survives by scavenging urban refuse. The dog was once a hunting dog and became transformed after finding herself caught near a magical explosion, although this actually occurred in a distant, mountainous area of Mythic Europe — from which she flew. A magus who finds the flying dog may become curious as to the source of the magical explosion and be able to retrace her flight path.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "The Flora of a Bulrush",
+   "might": 5,
+   "form": "Herbam",
+   "size": null,
+   "season": "Spring",
+   "characteristics": {
+    "per": 2,
+    "pre": 2,
+    "com": 2,
+    "dex": 2,
+    "qik": 0
+   },
+   "abilities": [
+    {
+     "name": "Charm",
+     "score": 1,
+     "specialty": "swimmers"
+    },
+    {
+     "name": "Local Area Lore",
+     "score": 4,
+     "specialty": "river"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 2,
+     "specialty": "water spirits"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Cheerful",
+     "score": 3
+    },
+    {
+     "name": "Curious",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Spirit",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Puissant Swim",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Gossip",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Focus Power",
+     "count": 1,
+     "param": "Master of Water"
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Power",
+     "count": 1,
+     "param": "Eidolon"
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Eidolon",
+     "cost": "2 points",
+     "initiative": "Init 0",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "See Common Powers, above."
+    },
+    {
+     "name": "Master of Water",
+     "cost": "1 point",
+     "initiative": "Init +3",
+     "form": "Aquam",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual Perdo or Muto Aquam of 5th level or below, at a cost of 1 Might point. PeAq or MuAq 5: Focus Power (5 levels, +4 Init)"
+    }
+   ],
+   "combat": null,
+   "soak": null,
+   "vis": "1 pawn of Herbam, in the head of the bulrush it inhabited",
+   "confidence": null,
+   "reputations": null,
+   "appearance": "To those who can see it, this spirit appears as a young naked girl paddling in a stream, her hair piled high on top of her head like the distinctive head of a bulrush. This spirit can be found near the river’s edge, close to the rushes that gave her birth. She is a playful creature, and uses her power to make minor changes to the flow of the river around her home.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "The Mice That Burned the Barn (Mus Flammeus)",
+   "might": null,
+   "form": null,
+   "size": null,
+   "season": null,
+   "characteristics": {
+    "per": 1,
+    "sta": 1,
+    "dex": 3,
+    "qik": 8
+   },
+   "abilities": [
+    {
+     "name": "Athletics",
+     "score": 3,
+     "specialty": "running"
+    },
+    {
+     "name": "Awareness",
+     "score": 4,
+     "specialty": "larger creatures"
+    },
+    {
+     "name": "Brawl",
+     "score": 3,
+     "specialty": "bite"
+    },
+    {
+     "name": "Stealth",
+     "score": 4,
+     "specialty": "hiding"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "field"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Timid",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Lightning Reflexes",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Sharp Ears",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Timid",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "(Ignem) Monstrosity",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Poor Eyesight",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [],
+   "inferiorities": [],
+   "powers": [],
+   "combat": "Bite: Init +8, Attack +7, Defense +5, Damage –17",
+   "soak": "+1",
+   "vis": "1 pawn of Muto in stomach.",
+   "confidence": "0",
+   "reputations": "Vermin 1 (local)",
+   "appearance": "The mouse is small and unremarkable looking, but occasionally (perhaps once per day) the mouse belches a torrent of sparks, particularly when the mouse is nervous. This small fire (+1) is incapable of causing much damage, but it can ignite dry materials. The mouse is not immune to fire, so will normally try to flee any resulting conflagration. Belching sparks also draws attention to the mouse, and any character nearby spots him on a Perception + Awareness Roll against an Ease Factor of 9. A predator, like a cat, will be curious and surprised if a mouse she is stalking belches fire. This family of mice ate the magical residue of a blast of Ignem magic cast by a Flambeau hoplite while dueling with a faerie knight. The now-monstrous mice, somewhat randomly breathe fiery sparks. The magus, distracted at the time, did not notice the collateral effect of his magic as he hurtled off in pursuit of his faerie foe, but the mice have since burned down several nearby barns as they tried to nestle among the stored hay. The farmers who own the barns have not figured out what is happening; they suspect that an arsonist is the cause, and have set a watch on the remaining barns.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "The Spirit of Self-Importance",
+   "might": 10,
+   "form": "Mentem",
+   "size": null,
+   "season": "Summer",
+   "characteristics": {
+    "int": 0,
+    "per": 1,
+    "pre": 3,
+    "com": 2,
+    "str": 1,
+    "sta": 2,
+    "dex": 1,
+    "qik": 1
+   },
+   "abilities": [
+    {
+     "name": "Carouse",
+     "score": 3,
+     "specialty": "inflating self importance"
+    },
+    {
+     "name": "Charm",
+     "score": 4,
+     "specialty": "enemies"
+    },
+    {
+     "name": "Craft Stories",
+     "score": 3,
+     "specialty": "about self"
+    },
+    {
+     "name": "Etiquette",
+     "score": 4,
+     "specialty": "making self look better"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 4,
+     "specialty": "the character that originated it"
+    },
+    {
+     "name": "Guile",
+     "score": 4,
+     "specialty": "exaggeration"
+    },
+    {
+     "name": "Intrigue",
+     "score": 4,
+     "specialty": "setting allies against each other"
+    },
+    {
+     "name": "Leadership",
+     "score": 4,
+     "specialty": "those of lower social status"
+    },
+    {
+     "name": "Penetration",
+     "score": 3,
+     "specialty": "Mentem"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Envious",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Spirit",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Self Confident",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Meddler",
+     "count": 1,
+     "param": "Minor"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": "Gift of Self Assurance"
+    },
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": "The Preening Peacock"
+    },
+    {
+     "name": "Lesser Power",
+     "count": 1,
+     "param": "Donning the Corporeal Veil"
+    },
+    {
+     "name": "Minor Virtue: Improved Characteristics x3",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Gift of Self Assurance",
+     "cost": "1 point",
+     "initiative": "Init +2",
+     "form": "Mentem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "the spirit donates a Confidence point from its own store to assist any single action of its target. This action, if it succeeds, must make the character seem more competent in the eyes of others; this power doesn’t work if the affected character is alone. CrMe 10 (base 4; +1 Touch, +1 Conc): Greater Power (10 levels, –1 Might cost, +3 Init, 10xp in Penetration)"
+    },
+    {
+     "name": "The Preening Peacock",
+     "cost": "1 point",
+     "initiative": "Init +0",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "the Presence of the touched target is temporarily raised to be one point higher than the highest Presence among the target’s companions. This power lasts until the target looks foolish in front of his peers, such as by failing in an important task. It can only be used once on any given being. MuIm 15 (base 3, +1 Touch, +1 Sun, +1 complexity): Greater Power (15 levels, –1 Might cost, +2 Init, 20xp in Penetration)"
+    },
+    {
+     "name": "Donning the Corporeal Veil",
+     "cost": "5 points",
+     "initiative": "Init – 2",
+     "form": "Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "the spirit manifests with the physical Characteristics given above. See Common Powers for more details."
+    }
+   ],
+   "combat": null,
+   "soak": null,
+   "vis": "2 pawns of Mentem, as an immaterial corpse",
+   "confidence": "2 (6 points)",
+   "reputations": null,
+   "appearance": "This spiritual copy looks like the person’s idealized perception of himself; straighter, taller, more handsome, and in better clothing.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Varkos, the Fire Drake",
+   "might": 15,
+   "form": "Animal",
+   "size": 1,
+   "season": "Summer",
+   "characteristics": {
+    "per": 1,
+    "str": 4,
+    "sta": 2,
+    "dex": 2,
+    "qik": 2
+   },
+   "abilities": [
+    {
+     "name": "(Area) Lore",
+     "score": 3,
+     "specialty": "dragon stories"
+    },
+    {
+     "name": "Athletics",
+     "score": 3,
+     "specialty": "climbing"
+    },
+    {
+     "name": "Awareness",
+     "score": 2,
+     "specialty": "alertness"
+    },
+    {
+     "name": "Brawl",
+     "score": 5,
+     "specialty": "claws"
+    },
+    {
+     "name": "Ignem Resistance",
+     "score": 4,
+     "specialty": "fire drake breath"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 2,
+     "specialty": "sensing fear"
+    },
+    {
+     "name": "Guile",
+     "score": 3,
+     "specialty": "feigning fierceness"
+    },
+    {
+     "name": "Hunt",
+     "score": 3,
+     "specialty": "hares"
+    },
+    {
+     "name": "Leadership",
+     "score": 2,
+     "specialty": "intimidation"
+    },
+    {
+     "name": "Stealth",
+     "score": 2,
+     "specialty": "stalking"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "mountains"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Vain",
+     "score": 3
+    },
+    {
+     "name": "Lonely",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Monster",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Strength",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Large",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Piercing Gaze",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Tough",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Obsessed",
+     "count": 1,
+     "param": "with reputation"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Gift of Speech",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ignem Resistance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Might",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 3,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Puff of Flame",
+     "cost": "1 point",
+     "initiative": "Init +1",
+     "form": "Ignem",
+     "range": "Voice",
+     "duration": "Mom",
+     "target": "Ind",
+     "text": "Varkos can spit a cabbage-sized ball of flame out to about 15 paces, inflicting +5 damage. CrIg 10 (Base 4, +2 Voice): Greater Power (10 levels)"
+    },
+    {
+     "name": "Torrent of Flame",
+     "cost": "2 points",
+     "initiative": "Init +1",
+     "form": "Ignem",
+     "range": "Voice",
+     "duration": "Mom",
+     "target": "Group",
+     "text": "With some effort, Varkos can belch forth an impressive torrent of flame about 30 paces long and five paces wide. All within that area take +15 fire damage. CrIg 35 (Base 15, +2 Voice, +2 Group): Greater Power (35 levels, –1 Might cost)"
+    }
+   ],
+   "combat": "Claws: Init +1, Attack +10, Defense +11, Damage +6 Large Teeth: Init +2, Attack +11, Defense +8, Damage +7",
+   "soak": "+11",
+   "vis": "3 Ignem in heart",
+   "confidence": "1 (3)",
+   "reputations": "Fierce 3 (local)",
+   "appearance": "Varkos is a misshapen dragon with a a build like a bulldog’s: massive shoulders and smaller hindquarters. His head is crocodile-like and has a pronounced underbite. His bat-like wings are ridiculously small, but he sometimes flaps them furiously in a vain attempt to fly. He has a spiny ridge running from his forehead all along his body, but the spines poke out drunkenly in different directions. Varkos is a fire drake who desperately wants to be thought of as a fearsome dragon. He knows quite a bit about dragon stories, and tries his best to act like the dragons of legend. (His treasure hoard is coming along nicely; it’s almost big enough to fill two hand baskets.) Varkos lives in a cave overlooking a mountain pass, from which he ventures forth to prey upon livestock and set the occasional haystack on fire. He usually tries to scare away humans rather than hurt them; dead men tell no tales, and Varkos is working hard to build up a reputation. Lately he has worked up enough nerve to start robbing travelers of their treasure, and is looking forward to the time when terrified villagers will bring him his first virgin sacrifice. (He has no idea what exactly a virgin is or what real dragons are supposed to do with them.) One of the reasons Varkos tries so hard to be terrifying is that he wants to attract a mate. Living in a cave in the mountains can be lonely and rather boring. He enjoys his encounters with humans because they give him a chance to talk to someone, however briefly. Unfortunately, Varkos is not the best conversationalist; he is mostly interested in hearing stories about dragons. Characters might be able to befriend him if they pretend to be afraid of him, tell some entertaining stories, and promise to spread wild tales about how they met the “dragon of the mountains” and barely escaped with their lives.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "White Stag of the Wood",
+   "might": 22,
+   "form": "Animal",
+   "size": 2,
+   "season": "Summer",
+   "characteristics": {
+    "int": 0,
+    "per": 2,
+    "pre": 2,
+    "str": 4,
+    "sta": 2,
+    "dex": 1,
+    "qik": 3
+   },
+   "abilities": [
+    {
+     "name": "Animal Handling",
+     "score": 5,
+     "specialty": "deer"
+    },
+    {
+     "name": "Animal Resistance",
+     "score": 3,
+     "specialty": "teeth"
+    },
+    {
+     "name": "Athletics",
+     "score": 4,
+     "specialty": "running"
+    },
+    {
+     "name": "Awareness",
+     "score": 4,
+     "specialty": "predators"
+    },
+    {
+     "name": "Brawl",
+     "score": 6,
+     "specialty": "antlers"
+    },
+    {
+     "name": "Penetration",
+     "score": 2,
+     "specialty": "Mentem effects"
+    },
+    {
+     "name": "Terram Resistance",
+     "score": 4,
+     "specialty": "arrow heads"
+    },
+    {
+     "name": "Stealth",
+     "score": 4,
+     "specialty": "hiding"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "forest"
+    },
+    {
+     "name": "Wilderness Sense",
+     "score": 4,
+     "specialty": "forage"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Territorial",
+     "score": 6
+    },
+    {
+     "name": "Stag",
+     "score": 3
+    },
+    {
+     "name": "Protective",
+     "score": 3
+    },
+    {
+     "name": "Brave",
+     "score": 2
+    },
+    {
+     "name": "Lecherous",
+     "score": 2
+    },
+    {
+     "name": "Reclusive",
+     "score": 1
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magical Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Master",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Forest",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ambitious",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Enemies",
+     "count": 1,
+     "param": "obsessed hunters"
+    },
+    {
+     "name": "Higher Purpose",
+     "count": 1,
+     "param": "protect the wood"
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Vis Mastery",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Animal Resistance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Terram Resistance",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Improved Attack",
+     "count": 1,
+     "param": "antlers"
+    },
+    {
+     "name": "Improved Defense",
+     "count": 1,
+     "param": "antlers"
+    },
+    {
+     "name": "Improved Fatigue",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Soak",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Personal Power",
+     "count": 3,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Great Characteristic",
+     "count": 1,
+     "param": "Quick"
+    },
+    {
+     "name": "Minor Virtue: Long-Winded",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Sharp Ears",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Tough",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Wilderness Sense",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Defense of the Herd",
+     "cost": "2 points",
+     "initiative": "Init –1",
+     "form": "Animal",
+     "range": "Voice",
+     "duration": "Sun",
+     "target": "Group",
+     "text": "When the White Stag is present in a group of deer, the deer fight as a trained group and all of their defense rolls are at +2. ReAn 40 (Base 10, +2 Voice, +2 Sun, +2 Group): Greater Power (40 levels, –2 Might cost)"
+    },
+    {
+     "name": "Confuse Predator",
+     "cost": "0 points",
+     "initiative": "Init +2",
+     "form": "Animal or Mentem",
+     "range": "Voice",
+     "duration": "Sun",
+     "target": "Ind",
+     "text": "This power allows the Stag to confuse his enemies, both man and beast, in a manner similar to Confusion of the Numbed Will (ArM5, page 151). The victim of the power must be able to see the Stag to be affected. ReMe(An) 20 (Base 4, +2 Voice, +2 Sun): Greater Power (20 levels, –2 Might cost, 15xp in Penetration +1 Init)"
+    },
+    {
+     "name": "Great Leap",
+     "cost": "0 points",
+     "initiative": "Init +1",
+     "form": "Animal",
+     "range": "Per",
+     "duration": "Mom",
+     "target": "Ind",
+     "text": "The Stag is able to leap instantly up to 30 paces vertically or 50 paces horizontally. The Stag must make a Dexterity – Encumbrance stress roll of 0+ to land without injury. ReAn 15 (Base 15): Personal Power (15 levels, –2 Might cost) Shriek of the Impending Shafts, 1 point, Constant, Herbam R: Per, D: Sun, T: Hearing Works as the spell of the same name. Adds +9 to Defense scores against wooden weapons, if the Stag has room to dodge and allows him to automatically avoid wooden missiles fired from more than 10 paces away. (See ArM5, page 136). InHe 20 (Base 2, +2 Sun, +3 Hearing, +1 Constant): Personal Power (20 levels, –1 Might cost) Trackless Step, 0 point, Constant, Terram R: Per, D: Sun, T: Ind The Stag leaves no tracks in the earth except when he stops, such as to eat, sleep, or fight. ReTe 15 (Base 4, +2 Sun, +1 Constant): Personal Power (15 levels, –2 Might cost)"
+    }
+   ],
+   "combat": "Antlers: Initiative +5, Attack +13, Defense +14, Damage +7 Hooves: Initiative +5, Attack +9, Defense +11, Damage +5",
+   "soak": "+7",
+   "vis": "4 pawns of Rego vis in his antlers.",
+   "confidence": "1 (3)",
+   "reputations": "Lucky 2 (local)",
+   "appearance": "A large elk with a pure white coat and an impressive rack of antlers. The White Stag does not ever shed its antlers as mundane deer do. The White Stag of the Wood is a powerful magical elk that rules a large forest. The Stag prevents predators from over-hunting the forest and keeps other animal populations from outgrowing their food supply. The Stag selects the weakest animals when it must thin a herd, but attacks the pack leader when predators over-hunt their prey. Although the local peasants tell stories of the Stag, and sighting it is seen as a sign of good luck, the White Stag only becomes concerned with humans when they hunt his woods. In most areas of Mythic Europe, only nobility are allowed to hunt deer. When the Stag encounters a noble who hunts too aggressively, the Stag presents himself to the noble and taunts him into chasing him. While the noble is futilely hunting the White Stag, the other deer remain safe. If this does not protect the herd, the Stag will treat the noble as it would any other predator. The White Stag’s antlers may be Enriched by wrapping them in the hide of the Stag under the light of a full moon. For one week, the bundle must be exposed to the light of the moon and may not touch the earth. At the end of the period, anyone holding both antlers is granted the Wilderness Sense Virtue with an Ability of 3.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Wise Owl of the Forest",
+   "might": 17,
+   "form": "Animal",
+   "size": null,
+   "season": "Summer",
+   "characteristics": {
+    "int": 2,
+    "per": 2,
+    "pre": 1,
+    "com": 1,
+    "sta": 2,
+    "dex": 1,
+    "qik": 6
+   },
+   "abilities": [
+    {
+     "name": "Animal Ken",
+     "score": 4,
+     "specialty": "forest animals"
+    },
+    {
+     "name": "(Area) Lore",
+     "score": 6,
+     "specialty": "woods"
+    },
+    {
+     "name": "Athletics",
+     "score": 5,
+     "specialty": "flying"
+    },
+    {
+     "name": "Awareness",
+     "score": 4,
+     "specialty": "rodents"
+    },
+    {
+     "name": "Bargain",
+     "score": 3,
+     "specialty": "small talk"
+    },
+    {
+     "name": "Brawl",
+     "score": 2,
+     "specialty": "dodging"
+    },
+    {
+     "name": "Charm",
+     "score": 3,
+     "specialty": "inspiring confidence"
+    },
+    {
+     "name": "Faerie Lore",
+     "score": 4,
+     "specialty": "vis sources"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 3,
+     "specialty": "travelers"
+    },
+    {
+     "name": "Hunt",
+     "score": 2,
+     "specialty": "rodents"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 4,
+     "specialty": "regiones"
+    },
+    {
+     "name": "Penetration",
+     "score": 2,
+     "specialty": "Animal"
+    },
+    {
+     "name": "Survival",
+     "score": 3,
+     "specialty": "woods"
+    },
+    {
+     "name": "Wilderness Sense",
+     "score": 3,
+     "specialty": "find prey"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Loquacious",
+     "score": 6
+    },
+    {
+     "name": "Owl",
+     "score": 3
+    },
+    {
+     "name": "Inquisitive",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magical Animal",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Magical Champion",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Wilderness Sense",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Gossip",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Indiscreet",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Busybody",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Nocturnal",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Gift of Speech",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Abilities",
+     "count": 4,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Animal Ken",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Improved Characteristics",
+     "count": 2,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Gift of Tongues*",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Keen Eyes",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue: Unaffected by The Gift",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Susceptible to Deprivation",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "powers": [
+    {
+     "name": "Immobilize Prey",
+     "cost": "0 points",
+     "initiative": "Init +6",
+     "form": "Mentem or Animal.",
+     "range": "Eye",
+     "duration": "Conc",
+     "target": "Ind",
+     "text": "Any creature that makes eye contact with the Owl is unable to move and may only make small whining or moaning sounds. The target may move only if he successfully makes a Strength roll against an Ease Factor of 9. ReMe(An) 15 (Base 5, +1 Eye, +1 Conc): Greater Power (15 levels, –2 Might cost, 15xp in Penetration, +2 Init) *Gift of Tongues: Minor, Heroic Virtue, Allows the character to understand and speak any language as long as she communicates directly with someone else who is fluent in that language. Others who hear the character’s words and who understand that language can understand what the character is saying. The character cannot carry on a conversation in multiple languages, but can act as a translator for two or more people who do not have this virtue. (See Houses of Hermes: True Lineages, page 105.)"
+    }
+   ],
+   "combat": "Claws: Initiative +5, Attack +5, Defense +12, Damage –4",
+   "soak": "+2",
+   "vis": "4 pawns of dedicated Intellego Mentem vis in his skull.",
+   "confidence": "1 (3)",
+   "reputations": null,
+   "appearance": "A grey owl with very large iceblue eyes. The Owl can fly silently and has exceptional senses. It can see equally well at night or during the day. The Owl knows the woods very well and monitors the activities within them closely. The Owl questions the animals throughout the forest and shares what information she gathers, although most non-magical animals have little interest in her news. The Owl can understand human speech. She generally avoids direct contact with humans, but is curious and will monitor them when they enter her wood. Because the Owl is only able to carry on a conversation with other intelligent animals, she is often bored and starved for conversation. She occasionally talks with magi who enter the wood, as she finds them more receptive to carrying on a discussion with a talking owl than others. The owl’s skull may be Enriched by boiling it in water with rare oils and sage until no flesh remains. The skull must then be kept at the highest point on the tallest tree in the forest in which the owl lived for one season. After that period, while the skull is hung around a character’s neck, she possesses the Gift of Tongues Virtue.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "Zwergenstimme Imago",
+   "might": 15,
+   "form": "Imaginem",
+   "size": null,
+   "season": "Spring",
+   "characteristics": {
+    "int": 0,
+    "per": 0,
+    "com": 4,
+    "str": 0,
+    "dex": 0,
+    "qik": 3
+   },
+   "abilities": [
+    {
+     "name": "Awareness",
+     "score": 4,
+     "specialty": "sounds"
+    },
+    {
+     "name": "Folk Ken",
+     "score": 1,
+     "specialty": "fear"
+    },
+    {
+     "name": "Guile",
+     "score": 1,
+     "specialty": "mimicry"
+    },
+    {
+     "name": "Music",
+     "score": 2,
+     "specialty": "echoes"
+    },
+    {
+     "name": "Thrown Weapon",
+     "score": 4,
+     "specialty": "rocks"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Mischievous",
+     "score": 3
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Spirit",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Communication",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Sharp Ears",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": "Presence"
+    },
+    {
+     "name": "Focus Power",
+     "count": 1,
+     "param": "Ghost Touch"
+    },
+    {
+     "name": "Focus Power",
+     "count": 1,
+     "param": "Master of Sound"
+    },
+    {
+     "name": "Greater Power",
+     "count": 1,
+     "param": "Bring Down the Roof"
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Master of Sound",
+     "cost": "variable points",
+     "initiative": "Init +5 – Might cost",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "the spirit can duplicate any non-Ritual spell involving sound up to Level 15, at a cost of 1 Might Point per magnitude of effect. (Te)Im15: Focus Power (15 levels, +2 Init)"
+    },
+    {
+     "name": "Bring Down the Roof",
+     "cost": "2 points",
+     "initiative": "Init +3",
+     "form": "Terram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "the Zwergenstimme can cause the roof of a cave to collapse, crushing any within it. This causes +20 damage, and seals the exit from the cave. PeTe 20 (base 3, +1 Touch, +2 Room, +2 Size): Greater Power (20 levels, –2 Might cost, +4 Init)"
+    },
+    {
+     "name": "Presence",
+     "cost": "0 points",
+     "initiative": "constant",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see above for the power description. The echo spirit can haunt a series of caves (constituting a Structure). See Common Powers for more details. Ghost Touch, variable cost, Init +3 – Might points spent, Terram: the spirit can hurl rocks at enemies. It uses the combat scores listed above, but each attack costs 1 Might point. See Common Powers of Spirits for more details."
+    }
+   ],
+   "combat": "Thrown Rock: Init +3, Attack +4, Defense n/a Damage +5",
+   "soak": null,
+   "vis": "3 pawns of Imaginem, as an immaterial echo",
+   "confidence": null,
+   "reputations": "Murderous 1 (Local)",
+   "appearance": "An echo. This spirit appears only as auditory species to those with Second Sight This spirit of an echo lurks in caves or ravines. Its name literally means “dwarf voice” in German, and these spirits have been known to mislead lost humans by “playing” with them. The spirit certainly has no intent to harm; it doesn’t even understand what harm is.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  },
+  {
+   "name": "al-Meraya",
+   "might": 40,
+   "form": "Terram",
+   "size": null,
+   "season": "Winter",
+   "characteristics": {
+    "int": 2,
+    "per": 4,
+    "pre": 2,
+    "com": 1,
+    "str": 0,
+    "sta": 3,
+    "qik": 1
+   },
+   "abilities": [
+    {
+     "name": "Iberia Lore",
+     "score": 6,
+     "specialty": "deserts"
+    },
+    {
+     "name": "Magic Lore",
+     "score": 4,
+     "specialty": "Muslim lands"
+    },
+    {
+     "name": "Survival",
+     "score": 8,
+     "specialty": "Deserts"
+    }
+   ],
+   "personalityTraits": [
+    {
+     "name": "Thirsty",
+     "score": 5
+    },
+    {
+     "name": "Desire to Expand",
+     "score": 2
+    }
+   ],
+   "virtuesFlaws": [
+    {
+     "name": "Magic Spirit",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Daimon",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ways of the Deserts",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Great Perception x1",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Improved Characteristics x4",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greedy",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "qualities": [
+    {
+     "name": "Focus Power x10",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Greater Power x4",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Ritual Power x3",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Lesser Power",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Minor Virtue x5",
+     "count": 1,
+     "param": null
+    },
+    {
+     "name": "Reduced Abilities x17",
+     "count": 1,
+     "param": null
+    }
+   ],
+   "inferiorities": [],
+   "powers": [
+    {
+     "name": "Control Human",
+     "cost": "2 points",
+     "initiative": "Init +1",
+     "form": "Mentem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Eidolon",
+     "cost": "1 point",
+     "initiative": "Init +5",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "the spirit can create the illusion of an oasis. (Greater Power)"
+    },
+    {
+     "name": "Grant Dowsing",
+     "cost": "5 points",
+     "initiative": "Init –9",
+     "form": "Vim",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant (Minor Virtue) for more details. (Ritual Power)"
+    },
+    {
+     "name": "Grant Puissance in Survival",
+     "cost": "4 points",
+     "initiative": "Init –2",
+     "form": "Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "see Grant Puissance in (Ability) for more details. (Lesser Power)"
+    },
+    {
+     "name": "Guide",
+     "cost": "3 points",
+     "initiative": "Init +4",
+     "form": "Mentem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Healing",
+     "cost": "2 points",
+     "initiative": "Init –9",
+     "form": "Animal or Corpus",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Ritual Power x 2) Manifestation, 4 or more points, Init +1 – Might cost, Animal (Focus Power x 2)"
+    },
+    {
+     "name": "Master of Earth",
+     "cost": "variable points",
+     "initiative": "Init +1 – Might cost",
+     "form": "Terram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual Muto Terram or Perdo Terram spell no greater than 40th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    },
+    {
+     "name": "Master of Plants",
+     "cost": "variable points",
+     "initiative": "Init +1 – Might cost",
+     "form": "Herbam",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any non-Ritual Muto Herbam or Perdo Herbam spell no greater than 40th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    },
+    {
+     "name": "Master of Water",
+     "cost": "variable points",
+     "initiative": "Init +1 – Might cost",
+     "form": "Aquam",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any nonRitual Muto Aquam or Perdo Aquam spell no greater than 40th level at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    },
+    {
+     "name": "Presence",
+     "cost": "0 points",
+     "initiative": "constant",
+     "form": "Imaginem",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "(Greater Power)"
+    },
+    {
+     "name": "Ruler of Sandstorms",
+     "cost": "variable points",
+     "initiative": "Init +1 – Might cost",
+     "form": "Auram",
+     "range": "",
+     "duration": "",
+     "target": "",
+     "text": "duplicates any nonRitual spell pertaining to sandstorms no greater than 40th level, at a cost of 1 Might point per magnitude of the effect. (Focus Power x 2)"
+    }
+   ],
+   "combat": null,
+   "soak": null,
+   "vis": "8 pawns of Terram vis; 4 pawns per year can also be harvested from deep inside the desert.",
+   "confidence": "1 (3 points)",
+   "reputations": "Uninhabitable Desert 3 (Local)",
+   "appearance": "This desert is located about a dozen miles to the north of the Moorish port city of al-Meraya (Almeria), in the southeast of Iberia. It is a forbidding landscape of sandy, rocky soil, thinly dotted with scrub plants and cacti. By day it is oppressively hot, by night, unpleasantly cold.",
+   "description": "",
+   "source": "Realms of Power: Magic"
+  }
+ ],
  "creationRules": {
   "detailedCharacterCreation": {
    "name": "Detailed Character Creation",
