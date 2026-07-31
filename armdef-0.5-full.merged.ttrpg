@@ -187,17 +187,12 @@ Since Characteristics represent your character's inborn potential, they cannot b
         }
         DESCRIPTION "Stamina represents the limits of a character's exertion, as well as how much physical punishment he can sustain. It is staying power, both mental and physical, and one of its most important components is simply the will to live. Spellcasting relies on Stamina. Stamina also measures someone's ability to carry a load for an extended period, ignore fatigue, and withstand wounds."
     }
-    #tuzRYXRfUaNgUM9H7DlpZi2V ^"Presence" DEF {
-        EXTENDS ^"Power"
+    #t5tJ6DqjqQy67oBcCA1bz7Ha ^"Presence" DEF {
+        EXTENDS ^"Characteristic"
         PROPERTIES {
-            ^"Creature" STRING "Spirit" FIXED
-            ^"Page" INTEGER 103
-            ^"Source" STRING "Realms of Power: Magic"
+            ^"Abbreviation" STRING "Pre" FIXED
         }
-        DESCRIPTION "0 points, constant, Imaginem R: Arc, D: Sun, T: Ind Grants awareness of everything that happens within the bounds of a specific domain chosen by the spirit. In essence, the spirit is coterminous with its associated landscape feature, so it is present simultaneously everywhere within its boundaries. Double the Might of a spirit with this power for the purposes of calculating Tether Strength (see Formation of Magic Auras). The spirit’s Might score determines the size of area possible: a Room (5–10 Might), a Structure (15–25 Might), or a standard Boundary (30+ Might). For Daimons, every 5 Might above 30 adds 1 size modifier to the base Boundary; an Airy Spirit or animus can only ever control a base Boundary, regardless of Might. The area controlled by the spirit can produce a yearly harvest of (Might/10) pawns of vis of an appropriate Form, which manifests as physical objects within the controlled region. Harvesting this vis does not erode the spirit’s Might. This power is possessed by all genii loci, and many ghosts. InIm 35 (base 2, +4 Arc, +2 Sun, +1 constant effect, +1 non-Hermetic effects): Greater Power (35 levels, –3 Might cost)"
-        REFERENCES {
-            "Greater Power" -> #tI9yiBqA2pLll1mfoJpQrwzX ^"Greater Power"
-        }
+        DESCRIPTION "Presence describes a character's appearance, demeanor, and charisma. It is important for making a good impression, as well as for leading people. Presence also measures how imposing or intimidating a person is. Even if not physically attractive, a person with high Presence might still have a demeanor that commands respect."
     }
     #tJhbvfLVqcYozTTIYmRJAT76 ^"Communication" DEF {
         EXTENDS ^"Characteristic"
@@ -12317,6 +12312,15 @@ For example, if you would normally use 12 pawns, you must use 16, and 4, one qua
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You have three fewer points to spend buying Characteristics than most characters. You may take this Flaw twice, leaving you with only one point to spend."
+    }
+    #tPoorCharacteristicARMa ^"Poor Characteristic" DEF {
+        EXTENDS ^"Flaw"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Core Rules"
+        }
+        DESCRIPTION "You have an exceedingly bad Characteristic — lower one which is already –3 or lower by one point. Describe what it is about you that makes this obvious, such as a feeble stature, hideous visage, or slack-jawed stupidity. You may take this Flaw twice for a single Characteristic, lowering it to –5, and multiple times for different Characteristics."
     }
     #t25Fs0B3x0qwQNJfAK2upbC4 ^"Weak Enchanter" DEF {
         EXTENDS ^"Flaw"
@@ -24625,6 +24629,15 @@ Extreme, magically created cold, such as the effect of *Wizard’s Icy Grip* (pa
             ^"Source" STRING "Core Rules"
         }
         DESCRIPTION "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+    }
+    #tGreatCharacteristicARMa ^"Great Characteristic" DEF {
+        EXTENDS ^"Virtue"
+        PROPERTIES {
+            ^"Size" STRING "Minor" FIXED
+            ^"Category" STRING "General" FIXED
+            ^"Source" STRING "Core Rules"
+        }
+        DESCRIPTION "You may raise any Characteristic that already has a score of at least +3 by one point, to no more than +5. Make sure you describe what it is about you that causes that increase (such as sheer bulk, a lean build, or extreme charisma). You may take this Virtue twice for the same Characteristic, and for more than one Characteristic."
     }
     #t2IRyz3GX6e6DgoNPvHJRnGF ^"Indescribable Face" DEF {
         EXTENDS ^"Virtue"
@@ -75403,6 +75416,18 @@ To help with the trade, Borrowers occasionally take promising children as their 
             "Arcane Connections" -> ^"Arcane Connections"
             "Magic Resistance" -> #tmM1uJVBdvXpEsg4iImNPyjr ^"Magic Resistance"
             "Ritual Power" -> #tdQ93Crvoc8wGzRCRqAYgMKe ^"Ritual Power"
+        }
+    }
+    #tuzRYXRfUaNgUM9H7DlpZi2V ^"Presence (Power)" DEF {
+        EXTENDS ^"Power"
+        PROPERTIES {
+            ^"Creature" STRING "Spirit" FIXED
+            ^"Page" INTEGER 103
+            ^"Source" STRING "Realms of Power: Magic"
+        }
+        DESCRIPTION "0 points, constant, Imaginem R: Arc, D: Sun, T: Ind Grants awareness of everything that happens within the bounds of a specific domain chosen by the spirit. In essence, the spirit is coterminous with its associated landscape feature, so it is present simultaneously everywhere within its boundaries. Double the Might of a spirit with this power for the purposes of calculating Tether Strength (see Formation of Magic Auras). The spirit’s Might score determines the size of area possible: a Room (5–10 Might), a Structure (15–25 Might), or a standard Boundary (30+ Might). For Daimons, every 5 Might above 30 adds 1 size modifier to the base Boundary; an Airy Spirit or animus can only ever control a base Boundary, regardless of Might. The area controlled by the spirit can produce a yearly harvest of (Might/10) pawns of vis of an appropriate Form, which manifests as physical objects within the controlled region. Harvesting this vis does not erode the spirit’s Might. This power is possessed by all genii loci, and many ghosts. InIm 35 (base 2, +4 Arc, +2 Sun, +1 constant effect, +1 non-Hermetic effects): Greater Power (35 levels, –3 Might cost)"
+        REFERENCES {
+            "Greater Power" -> #tI9yiBqA2pLll1mfoJpQrwzX ^"Greater Power"
         }
     }
     #tgLpEk6oJ4HwC9R6xyijrRFp ^"Stasis" DEF {

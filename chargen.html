@@ -154,6 +154,9 @@ function blankChar(){
 }
 
 const charCost = n => (Math.abs(n)*(Math.abs(n)+1))/2 * (n<0?-1:1);
+/* Points beyond ±3 are granted free by Great/Poor Characteristic (the Minor
+   V/F already pays for them), so the 7-point buy pool only counts up to ±3. */
+const charPoolCost = n => charCost(Math.max(-3, Math.min(3, n)));
 const xpForScore = s => 5*(s*(s+1))/2;
 const scoreFromXp = xp => { let s=0; while(xpForScore(s+1)<=xp) s++; return s; };
 const vfPoints = vf => (vf.size==='Major'?3:vf.size==='Free'?0:1);
@@ -246,7 +249,7 @@ function vVF(){
   return {ok,msgs:m};
 }
 function vChars(){
-  const spent=Object.values(C.characteristics).reduce((a,n)=>a+charCost(n),0);
+  const spent=Object.values(C.characteristics).reduce((a,n)=>a+charPoolCost(n),0);
   const bud=charBudget(); const m=[{level:spent>bud?'warn':'ok',text:`Characteristic points spent: ${spent} / ${bud}.`}];
   let ok=spent<=bud;
   for(const c of DATA.characteristics){const cap=charCap(c.key),v=C.characteristics[c.key]||0;
@@ -303,7 +306,7 @@ function render(){
 function renderMsgs(cur){ const v=cur.valid();
   $('#stepMsgs').innerHTML=(v.msgs||[]).map(m=>`<div class="${m.level==='warn'?'warn':'good'}">${esc(m.text)}</div>`).join(''); }
 function renderBudget(){
-  const b=vfBudget(), cs=Object.values(C.characteristics).reduce((a,n)=>a+charCost(n),0), bud=charBudget();
+  const b=vfBudget(), cs=Object.values(C.characteristics).reduce((a,n)=>a+charPoolCost(n),0), bud=charBudget();
   const rows=[['Type',C.type]];
   if(isMagus()&&C.house) rows.push(['House',C.house]);
   rows.push(['Flaw pts',`${b.flawPts}${C.type!=='grog'?' / 10':''}`,b.flawPts>10]);
@@ -428,11 +431,11 @@ function showVFDesc(side,i){const x=(side==='virtue'?C.virtues:C.flaws)[i];
 function renderChars(el){
   const cr=DATA.creationRules.characteristicBuying, bud=charBudget();
   el.innerHTML=`<p class="step-help">${bud} points to spend (7 base${bud>7?` + ${bud-7} from Improved Characteristics`:''}). A score of ±n costs (or returns) n(n+1)/2.
-    Great/Poor Characteristic widen a slot's range (dormant — not yet in the corpus).</p>
+    Great/Poor Characteristic (Minor V/F) each grant a free point beyond ±3, up to ±5.</p>
     <div class="char-grid">${DATA.characteristics.map(ch=>{const k=ch.key,val=C.characteristics[k]||0,cap=charCap(k);
       return `<div class="char-cell"><div class="cn" data-cdesc="${esc(ch.name)}" style="cursor:help">${esc(ch.name)}${ch.text?'':' <span class="mini">*</span>'}</div>
         <div class="stepper"><button data-dec="${k}" ${val<=cap.min?'disabled':''}>−</button><span class="val">${val>0?'+':''}${val}</span><button data-inc="${k}" ${val>=cap.max?'disabled':''}>+</button></div>
-        <div class="cost">cost ${charCost(val)}</div></div>`;}).join('')}</div>
+        <div class="cost">cost ${charPoolCost(val)}</div></div>`;}).join('')}</div>
     ${DATA.characteristics.some(c=>!c.text)?'<p class="mini">* rules text not yet in the corpus for this Characteristic.</p>':''}
     ${cr?`<div class="rules-note">${mdRules(cr.text)}</div>`:''}<div id="charDesc"></div>`;
   el.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{const k=b.dataset.inc,cap=charCap(k);C.characteristics[k]=Math.min(cap.max,(C.characteristics[k]||0)+1);save();render();});

@@ -120,7 +120,7 @@
   {
    "name": "Presence",
    "key": "pre",
-   "text": "0 points, constant, Imaginem R: Arc, D: Sun, T: Ind Grants awareness of everything that happens within the bounds of a specific domain chosen by the spirit. In essence, the spirit is coterminous with its associated landscape feature, so it is present simultaneously everywhere within its boundaries. Double the Might of a spirit with this power for the purposes of calculating Tether Strength (see Formation of Magic Auras). The spirit’s Might score determines the size of area possible: a Room (5–10 Might), a Structure (15–25 Might), or a standard Boundary (30+ Might). For Daimons, every 5 Might above 30 adds 1 size modifier to the base Boundary; an Airy Spirit or animus can only ever control a base Boundary, regardless of Might. The area controlled by the spirit can produce a yearly harvest of (Might/10) pawns of vis of an appropriate Form, which manifests as physical objects within the controlled region. Harvesting this vis does not erode the spirit’s Might. This power is possessed by all genii loci, and many ghosts. InIm 35 (base 2, +4 Arc, +2 Sun, +1 constant effect, +1 non-Hermetic effects): Greater Power (35 levels, –3 Might cost)",
+   "text": "Presence describes a character's appearance, demeanor, and charisma. It is important for making a good impression, as well as for leading people. Presence also measures how imposing or intimidating a person is. Even if not physically attractive, a person with high Presence might still have a demeanor that commands respect.",
    "source": "armdef-0.5-core-base"
   },
   {
@@ -1474,6 +1474,13 @@
    "category": "Heroic",
    "text": "You can carry twice as much on your back before you become weighted down, as long as you have time to arrange yourself and your equipment properly. Divide your Burden by two before calculating your Encumbrance. You can also travel twice as far before you become fatigued by a journey.",
    "source": "armdef-houses-true-lineages-0.5-mercere-virtues-flaws"
+  },
+  {
+   "name": "Great Characteristic",
+   "size": "Minor",
+   "category": "General",
+   "text": "You may raise any Characteristic that already has a score of at least +3 by one point, to no more than +5. Make sure you describe what it is about you that causes that increase (such as sheer bulk, a lean build, or extreme charisma). You may take this Virtue twice for the same Characteristic, and for more than one Characteristic.",
+   "source": "armdef-0.5-virtues"
   },
   {
    "name": "Greater Benediction",
@@ -5224,6 +5231,13 @@
   },
   {
    "name": "Poor (Characteristic)",
+   "size": "Minor",
+   "category": "General",
+   "text": "You have an exceedingly bad Characteristic — lower one which is already –3 or lower by one point. Describe what it is about you that makes this obvious, such as a feeble stature, hideous visage, or slack-jawed stupidity. You may take this Flaw twice for a single Characteristic, lowering it to –5, and multiple times for different Characteristics.",
+   "source": "armdef-0.5-flaws"
+  },
+  {
+   "name": "Poor Characteristic",
    "size": "Minor",
    "category": "General",
    "text": "You have an exceedingly bad Characteristic — lower one which is already –3 or lower by one point. Describe what it is about you that makes this obvious, such as a feeble stature, hideous visage, or slack-jawed stupidity. You may take this Flaw twice for a single Characteristic, lowering it to –5, and multiple times for different Characteristics.",
