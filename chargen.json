@@ -478,7 +478,7 @@
    "name": "Apprentice",
    "size": "Free",
    "category": "Social Status",
-   "text": "This Virtue may be taken by a child character who has the Gift and who has been accepted by an experienced Hermetic magus, with the troupe’s approval. You are a discipulus and will receive extensive magical training, having the potential to become a Hermetic magus in your own right. However you must obey the dictates and fulfill the errands of your master and endure his or her rigorous training, and may be treated no better than a slave.",
+   "text": "The character is an apprentice to an Hermetic magus.",
    "source": "armdef-0.5-virtues"
   },
   {
@@ -669,6 +669,13 @@
    "category": "Heroic",
    "text": "Fortune smiles upon you, often protecting you from the random consequences of adventure. You have the Luck virtue, and whenever you roll a 0 on a stress die in dangerous or deadly circumstances, you may spend a Confidence point to reroll it rather than checking for a botch. This should be applied in chaotic circumstances, not calculated efforts, since luck must play a factor to make use of this virtue — for example, charging into a rain of arrows or diving off a sheer cliff are appropriate actions, but not forging a letter or following a set of tracks.",
    "source": "armdef-houses-true-lineages-0.5-mercere-virtues-flaws"
+  },
+  {
+   "name": "Child Virtue",
+   "size": "[\"Minor\", \"Major\", \"Free\", \"Major or Minor\"]",
+   "category": null,
+   "text": "",
+   "source": "armdef-apprentices-0.5-core-ext"
   },
   {
    "name": "Clan Ilfetu",
@@ -2533,6 +2540,13 @@
    "source": "armdef-houses-true-lineages-0.5-tremere-virtues"
   },
   {
+   "name": "Orphan",
+   "size": "Free",
+   "category": "Social Status",
+   "text": "The child’s parents are unknown or deceased. Someone else serves as the child’s caretaker, either a relative, a kindly cleric, or an institution. If the character starts play as an apprentice, he has the Free Social Status Virtue: Apprentice. Apprentices",
+   "source": "armdef-apprentices-0.5-creating-young-characters-virtues-flaws"
+  },
+  {
    "name": "Ostentatious",
    "size": "Major",
    "category": "General",
@@ -3553,7 +3567,7 @@
    "name": "Abandoned Apprentice",
    "size": "Major",
    "category": "Story",
-   "text": "The character was abandoned by his master midway through his Hermetic training. He knows Hermetic magic and can cast spells and enchant items like other magi. He is not a member of the Order of Hermes, however.\n\nSome Tribunals rule that an apprentice has a year to find another parens before he is hunted down and slain like a Marched magus. Most Tribunals rule that abandoning an apprentice is a low crime, and if the character makes his situation known his parens may face legal action.\n\nDecide at what age the character was abandoned. Create the character as a regular apprentice up until that age, and then give him experience points based on his age and other Virtues for his life past being abandoned. If the character knows the Parma Magica, he must join the Order or be slain.\n\nEven if the character joins the Order, his background continues to cause problems for him.",
+   "text": "The character was abandoned by his master midway through his Hermetic training. He knows Hermetic magic and can cast spells and enchant items like other magi. He is not a member of the Order of Hermes, however. Some Tribunals rule that an apprentice has a year to find another parens before he is hunted down and slain like a Marched magus. Most Tribunals rule that abandoning an apprentice is a low crime, and if the character makes his situation known his parens may face legal action.",
    "source": "armdef-0.5-flaws"
   },
   {
@@ -3632,6 +3646,13 @@
    "category": "Supernatural",
    "text": "Something about the character’s supernatural nature weakens him in relatively common circumstances, such as when touching the ground or when in the presence of women. At these times, the character cannot recover Fatigue, heal wounds, or recover Might, and if at the end of the year the character has spent more than half of his time subject to these conditions, he must make an additional Aging roll even if he is normally immune to aging because of a longevity ritual or Might Score.",
    "source": "armdef-0.5-flaws"
+  },
+  {
+   "name": "Bastard",
+   "size": "Minor",
+   "category": "Social Status",
+   "text": "The character is an illegitimate child. The father may be known, by many or a few, but does not recognize the child as his.",
+   "source": "armdef-apprentices-0.5-creating-young-characters-virtues-flaws"
   },
   {
    "name": "Beloved Rival",
@@ -3793,6 +3814,13 @@
    "category": "Supernatural",
    "text": "The character may not create amulets, but may create chartae. The character may possess this Virtue in conjunction with the No Chartae Making Flaw, which prevents him from creating any devices in the laboratory.",
    "source": "armdef-hedge-magic-0.5-virtues-flaws"
+  },
+  {
+   "name": "Child Flaw",
+   "size": "[\"Minor\", \"Major\", \"Free\", \"Major or Minor\"]",
+   "category": null,
+   "text": "",
+   "source": "armdef-apprentices-0.5-core-ext"
   },
   {
    "name": "Church Upbringing",
@@ -5513,7 +5541,7 @@
    "name": "Short of Breath",
    "size": "Minor",
    "category": "General",
-   "text": "The character cannot last as long as others when exerting himself and quickly tires during extended physical activity. He receives a –3 penalty to all Stamina rolls to avoid fatigue, including rolls to maintain Concentration.",
+   "text": "The character cannot last as long as others when exerting himself and quickly tires during extended physical activity. He receives a – 3 penalty to all Stamina rolls to avoid fatigue, including rolls to maintain Concentration.",
    "source": "armdef-0.5-flaws"
   },
   {
@@ -5688,7 +5716,7 @@
    "name": "Suppressed Gift",
    "size": "Major",
    "category": "Hermetic, Story",
-   "text": "The character has The Gift but cannot access its power, having temporarily lost his magical ability through mishap or some other misfortune. While the Gift is suppressed, the character cannot perform Hermetic magic, improve his Arts, or perform the Parma Magica. His Arts do provide him with Magic Resistance and he continues to suffer the negative social penalties of The Gift. Such a character may still use Supernatural Virtues and Abilities. He may be a member of the Order of Hermes, depending on when his Gift was suppressed.\n\nHow The Gift returns should be decided by the storyguide. Examples are surviving a laboratory disaster while assisting another magus (perhaps that was how Suppressed Gift was gained), comprehending a Temporary Twilight while in a powerful regio, visiting the Magic Realm and succeeding in some task, or undergoing a year’s instruction from an elder dragon.\n\nThe troupe should consider carefully how the character will fit into the saga. If he replaces a player’s magus, he has a very serious Flaw. If he replaces a companion, he will become much more powerful when the Story Flaw is resolved. Either approach can work, with care.",
+   "text": "The character has The Gift but cannot access its power, having temporarily lost his magical ability through mishap or some other misfortune. While the Gift is suppressed, the character cannot perform Hermetic magic, improve his Arts, or perform the Parma Magica. His Arts do provide him with Magic Resistance and he continues to suffer the negative social penalties of The Gift. Such a character may still use Supernatural Virtues and Abilities. He may be a member of the Order of Hermes, depending on when his Gift was suppressed. How The Gift returns should be decided by the storyguide. Examples are surviving a laboratory disaster while assisting another magus (perhaps that was how Suppressed Gift was gained), comprehending a Temporary Twilight while in a powerful regio, visiting the Magic Realm and succeeding in some task, or undergoing a year’s instruction from an elder dragon. The troupe should consider carefully how the character will fit into the saga. If he replaces a player’s magus, he has a very serious Flaw. If he replaces a companion, he will become much more powerful when the Story Flaw is resolved. Either approach can work, with care.",
    "source": "armdef-0.5-flaws"
   },
   {
@@ -35736,7 +35764,7 @@
   }
  },
  "spellsFile": "chargen-spells.json",
- "spellCount": 527,
+ "spellCount": 528,
  "guidelines": [
   {
    "technique": "Creo",

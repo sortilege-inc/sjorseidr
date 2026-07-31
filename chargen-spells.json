@@ -987,6 +987,20 @@
    "source": "armdef-houses-societates-0.5-jerbiton-spells"
   },
   {
+   "name": "Ager Belli",
+   "technique": "Creo",
+   "form": "Imaginem",
+   "level": "10",
+   "generalLevel": false,
+   "range": "Touch",
+   "duration": "Conc",
+   "target": "Ind",
+   "requisite": null,
+   "ritual": false,
+   "text": "This illusion creates a Roman soldier. The soldier responds to the mental direction of the caster, who must maintain concentration as the soldier moves. The image contains only visual elements. This spell is used by Hermetic apprentices to play Bellum. Note that other spells can be designed that make different illusionary images. A Roman soldier is a standard image, but any Size 0 figure is allowed, including knights, club-wielding barbarians, and supernatural creatures like fauns and satyrs. (Base 1 (illusion affecting 1 sense), +1 Touch, +1 Conc, +2 coordinate complex movements of the illusion, +1 Rego requisite.)",
+   "source": "armdef-apprentices-0.5-adolescentia-spells"
+  },
+  {
    "name": "Fooling the Eye",
    "technique": "Creo",
    "form": "Imaginem",
