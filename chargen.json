@@ -18499,6 +18499,1250 @@
    "choices": "The Verditius can take another three Minor Flaws, or one Major, and balancing Virtues. In addition, her Craft Abilities can be changed for different crafts without changing the concept much. Finally, not everyone descended from dwarfs is as small as they are, so that Flaw could be swapped for others without affecting the character on a fundamental level."
   }
  ],
+ "realmToolkits": {
+  "magic": {
+   "qualities": [
+    {
+     "name": "(Form) Resistance",
+     "text": "The character’s Magic Resistance is aligned to a particular form, and it begins with a score of 1 in the corresponding Supernatural Ability (see New and Modified Abilities, below).",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Fatigue Mastery",
+     "text": "The character can spend its Fatigue levels instead of Might Points. Each Fatigue level is worth a number of Might Points equal to the character’s (Might Score / 5).",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Gentle Air",
+     "text": "For those with Gifted or Magical Air, this Quality removes all the social penalties associated with the character’s magical nature, as if it did not have The Gift at all. If the character is both Gifted and has an inherent Magical Air, this lessens the penalty from a Blatant Magical Air to that of the normal effects of The Gift.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Gift of Speech",
+     "text": "The character can speak and make sounds as a human. (This Quality allows a Magic Animal to overcome its natural inability to talk.)",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Gifted",
+     "text": "The character has The Gift, or something very like it, in that it can learn Supernatural Abilities, can initiate new Virtues and Flaws through a Mystery Cult, and has a disturbing magical presence, as if it had the Magical Air Flaw. The character can even be opened to the Hermetic Arts, though its master’s Intellego Vim Lab Total must equal or exceed ((30 + the character’s Might Score) x 2) for the opening of the Arts to be successful. Only intelligent magic characters can take this Quality.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Gigantic",
+     "text": "The character’s Size is magically increased, making it obviously superior to mundane creatures. Because of this, the character is also stronger and proportionally slower to react. Consult the following chart to determine the amount by which the character’s Size, Strength, and Quickness should be adjusted. Also note that this Quality does not change the relative shape or apparent age of the character, so that a Gigantic human child (Size –2) would become the size of a large adult (Size +1), but would still have the proportions and features of a child. Size Size Strength Quickness Increase Bonus Penalty –11 or less +5 +10 –5 –6 to –10 +4 +8 –4 –2 to –5 +3 +6 –3 +1 to –1 +2 +4 –2 +2 or more +1 +2 –1 If the character has other Virtues, Flaws, Qualities, or Inferiorities that modify its Size, you should apply them in this order: Flaws, Inferiorities, Virtues, Qualities. You should determine its Characteristics first, so that they may be modified appropriately. For example, a base Size 0 character with Str 0, Qik 0, Improved Characteristics, Small Frame, and Gigantic would apply Improved Characteristics first, increasing its Str to +2; then Small Frame, reducing Size to –1; and finally Gigantic, increasing Size by +2, Str by +4, and reducing Quickness by –2, for a final result of Size +1, Str +6, and Qik –2. This Quality may be taken more than once. If it is, apply the effects one at a time, and base the Size increase on the Size after the previous Qualities have been applied. For example, a base Size 0 character who took Gigantic twice would increase to Size +2 from the first, and then, because his Size is now +2, by +1 for the second, to a final Size of +3.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Improved (Characteristic)",
+     "text": "Increase by one a Characteristic that is already +5 or more. This boost is applied before the character’s Strength and Quickness are adjusted for Size, so that a Size +2 and Quickness +3 character (Quickness +5 before Size is subtracted) who took this Quality could raise its Quickness to +4. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Improved Abilities",
+     "text": "You gain 50 experience points, which may be spent on any Abilities or Arts that the character can learn. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Attack",
+     "text": "One of the character’s natural weapons is magically enhanced, making it more accurate. Increase its Attack value by 2. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Confidence",
+     "text": "The character’s Confidence Score is increased by one. A starting character also gains two additional Confidence Points to spend. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Damage",
+     "text": "One of the character’s natural weapons is magically enhanced, making it sharper, heavier, or somehow more dangerous. Increase its Damage value by 3. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Defense",
+     "text": "One of the character’s natural weapons is magically enhanced, so that the character can better parry or dodge. Increase its Defense value by 2. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Fatigue",
+     "text": "The character can last longer before becoming tired, as its resistance to fatigue is magically increased. The character gains an additional Fatigue level each time you take this Quality. The new Fatigue levels are added in descending order, not counting Fresh or Unconscious, so that a character with 2 additional Fatigue levels has 2 Winded levels, 2 Weary levels, and 1 of each of the others. A character with 6 additional Fatigue levels would have 3 Winded and Weary levels, and 2 each of Tired and Dazed.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Initiative",
+     "text": "One of the character’s natural weapons is magically enhanced, making it faster. Increase its Initiative value by 3. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Might",
+     "text": "Increase the character’s Magic Might Score by 1. Note that this does not give a starting character additional Quality points to spend. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Powers",
+     "text": "The character is more skilled with its magical powers, making them more potent, activate faster, or cost fewer Might Points. This Quality gives the character 5 mastery points to spend on any of his powers, and each point can increase Initiative by 1, reduce the Might cost of a power by 1, or give the character 5 experience points in Concentration, Finesse, or Penetration. Also, a mastery point can increase the maximum level of a Focus Power by 5, so that it exceeds the character’s Might. Personal, Lesser or Greater Powers can have a Might Point cost of 0; Ritual Powers have a minimum cost of (the effect’s magnitude / 2, rounded up), and you cannot modify the cost of Focus Powers at all. At the storyguide’s discretion, this Quality can also be used to modify a power in the same way magi can master a Hermetic spell. Each time this Quality is taken, the character’s mastery score with the power is increased by 1, and this gives the character a spell mastery special ability (such as those listed on page 87 of Ars Magica Fifth Edition). Note that activating powers does not require a die roll, so many of the typical benefits of mastering a spell (such as reduced botch dice) do not apply to mastered powers. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Recovery",
+     "text": "The character recovers Might Points in half the normal time. Instead of completely refreshing its Might over the course of 24 hours, the character restores its entire Might Pool in only 12 hours. A magical being with Magic Might 30 and this Quality would recover 1 Might Point approximately every 20 minutes. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Improved Soak",
+     "text": "The character’s natural protection is magically enhanced, making it more effective at warding away blows and physical injury. Increase the character’s Soak by 2. This Quality may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Magical Meditation",
+     "text": "This Quality gives the character the Supernatural Ability Magical Meditation at 1 (see New and Modified Abilities, below).",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Major Virtue",
+     "text": "The character gains a Major Virtue, usually either General or Supernatural (Magic), to represent an advantage of its magical nature. Note that while this Quality may be taken more than once, only Virtues that allow a character to take them multiple times may be duplicated multiple times. Also, if a Virtue has requirements or restrictions on the characters who may take it, the magic character must meet them. For example, only a magic character with The Gift (or the Gifted Quality described above) can take Hermetic Virtues.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Minor Virtue",
+     "text": "The character gains a Minor Virtue, usually either General or Supernatural (Magic), to represent an advantage of its magical nature. Note that while this Quality may be taken more than once, only Virtues that allow a character to take them multiple times may be duplicated. Also, if a Virtue has requirements or restrictions on the characters that may take it, the magic character must meet them. For example, only a magic character with The Gift (or the Gifted Virtue described below) can take Hermetic Virtues.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Natural Appearance",
+     "text": "The character appears to be a normal human being, with no traces of his magical nature. Just as the Gentle Gift hides all traces of The Gift in a magus, this allows Magic Humans to hide their inherently monstrous appearance, and Magic Things in the shape of humans or animals to seem to be living flesh and blood, rather than animated matter.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "No Fatigue",
+     "text": "The character is tireless, meaning that it has no Fatigue levels, does not suffer Fatigue penalties, does not need to make Fatigue rolls, and cannot fall unconscious. It also cannot exert itself as other characters do, though the character can still simulate the loss of a Fatigue level by spending a Confidence Point, if necessary. The character does not need to sleep, which means that it effectively has two additional seasons each year in which to study. However, because of the limitations on magic character advancement, it is unlikely the character will be able to take advantage of this extra time.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Vis Mastery",
+     "text": "The character may expend some of its magic as vis. Each pawn manifests as the same Form as that associated with the character’s Might Score, and either costs the character a Confidence Point or subtracts one from the character’s permanent Might Score. The character may also consume vis in place of Confidence Points. Each pawn is equivalent to a single Confidence Point, and the player may spend them to activate any power the character possesses that requires Confidence Points, but the player cannot spend more pawns at once than the character’s Confidence Score in this way. Minor Magic Qualities",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    }
+   ],
+   "inferiorities": [
+    {
+     "name": "Acclimation Prone",
+     "text": "It is twice as difficult for the character to protect itself against Acclimation (see Acclimation, under Advancement, below). You must treat the character’s Might Score as double its actual value when remaining in a Magic aura or accounting for pawns of vis consumed, and double the number of seasons necessary to avoid Acclimation with magical effects. For example, each year a character with Might 25 would need to remain in a level 10 aura, consume 25 pawns of vis, or participate in a constant magical effect all year to avoid losing one of its Magic Qualities to Acclimation.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Limited Gestures",
+     "text": "This Inferiority is similar to the No Hands Flaw, except that the character can still grasp and manipulate objects with its appendages, just like characters with hands. Its control is limited, so that it cannot make more than vague gestures, and cannot wield a weapon with any degree of skill. Magi with this Inferiority suffer a –5 to all spellcasting totals, though this penalty may be offset by taking the Subtle Magic Virtue. (Magic Animals and characters with the No Hands or Arthritis Flaws cannot take this Inferiority.)",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Limited Movement",
+     "text": "The character can move and turn in place, and even move about freely within a limited area, such as in a room or on horseback, but is otherwise unable to transport itself further than short distances without assistance. Magic Things may take this Inferiority; cloaks slither, for example, tables could walk, and a sword jerks along the floor. It is impossible for a character with this Inferiority to carry itself further than about ten paces in an hour’s time, even when pushing itself in a cart or trolley. (Characters with the Crippled or Lame Flaws cannot take this Inferiority.)",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Limited Speech",
+     "text": "The character cannot speak intelligibly, though it can make noises that allow it to gain attention, and can shape these sounds into words that may be understood with effort. The character is probably silent most of the time, and suffers a –3 to all Communication rolls when it does speak. Magi with this Inferiority suffer a –5 to all spellcasting totals, though the penalty may be offset with the Quiet Magic Virtue. (Characters with the Mute or Afflicted Tongue Flaws cannot take this Inferiority.)",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Major Flaw",
+     "text": "The character has a Major General or Supernatural (Magic) Flaw, which represents a disadvantage of its magical nature. This Inferiority may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Miniature",
+     "text": "The character has been magically shrunk in size, making it smaller and harder to catch, and much weaker than other beings of its type. It is otherwise exactly the same, simply on a reduced scale. This reduces the character’s Size and Strength, and increases its Quickness, as shown on the chart below. Size Size Strength Quickness Decrease Penalty Bonus –10 or less –5 –10 +5 –5 to –9 –4 –8 +4 –1 to –4 –3 –6 +3 +2 to 0 –2 –4 +2 +3 or more –1 –2 +1 If the character has Virtues or Flaws that modify its Size, or other Qualities or Inferiorities with a similar effect, you should always determine its base Characteristics first, and then apply the changes for Size in this order: Flaws, Inferiorities, Virtues, Qualities. For example, a Size 0 character with Str 0, Improved Characteristics, Large, and Miniature would first apply Improved Characteristics to raise its Str to +2, then Miniature to reduce Size to –2 and Str to –2, and finally Large for a final result of Size –1 and Str –2. This Inferiority may be taken more than once. If it is taken more than once, the Inferiorities should be applied one at a time, and the reduction is based on the Size after the previous Inferiorities have taken effect. For example, a base Size 0 character who took the Inferiority twice would drop to Size –2 from the first, and then by a further –3 from the second because his Size is now –2, to a final Size of –5.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Minor Flaw",
+     "text": "The character has a Minor General or Supernatural (Magic) Flaw that represents a disadvantage of its magical nature. This Inferiority may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Monstrous Appearance",
+     "text": "Something about the character looks strange and frightening, be it horns, scales, sharp teeth, claws, an enormous head, double-jointed arms, unnaturally colored skin, or other supernatural features. These qualities give the character a –6 penalty in all social situations, or to any rolls involving the trust or loyalty of others. Most people will attack or run away from the character on sight, rather than engage it in conversation. All Magic Humans have this Inferiority inherently, for no benefit.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Reduced (Characteristic)",
+     "text": "This reduces a Characteristic that is already –5 or less because of the Poor (Characteristic) Flaw by a further 1. This penalty is applied before the character’s Strength and Quickness are adjusted for Size, so that a character with Size –1 and Strength –5 would have Strength –8. Also, this Inferiority cannot reduce a Characteristic any further than the inverse value of the character’s greatest Characteristic, again before Size is applied, so that a Size +2 character with Stamina +8 could not reduce its Quickness below –10.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    },
+    {
+     "name": "Reduced Abilities",
+     "text": "Subtract 50 experience points from the character’s existing Abilities — this represents the fact that the character has somehow lost some of its memories or has magically reverted to an earlier stage of life. This Inferiority may be taken more than once, but you cannot take this Flaw unless the character has at least 50 experience points to lose.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Reduced Attack",
+     "text": "One of the character’s natural weapons has been magically worsened, making it less accurate and less likely to hit. Decrease its Attack bonus by 2. This Inferiority may be taken only if the character’s Attack bonus for that weapon is greater than 0, though it can be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Reduced Damage",
+     "text": "One of the character’s natural weapons has been magically blunted, making it less damaging or dangerous. Decrease its Damage bonus by 3. This Inferiority may be taken only if the character’s Damage bonus for that weapon is greater than 0, though it can be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Reduced Defense",
+     "text": "One of the character’s natural weapons has been magically weakened, making it less effective at blocking or dodging other attacks. Decrease its Defense bonus by 2. This Inferiority may be taken only if the character’s Defense bonus for that weapon is greater than 0, though it can be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Reduced Fatigue",
+     "text": "Each time you take this Inferiority, the character loses one of its Fatigue levels, removed in descending order and not counting Fresh or Unconscious. Thus, a normal character who takes this Inferiority twice would have only Tired and Dazed Fatigue levels. You cannot take it more than four times unless the character has extra Fatigue levels.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Reduced Initiative",
+     "text": "One of the character’s natural weapons has been magically slowed, making the character less able to act quickly. Decrease its Initiative bonus by 3. This Inferiority may be taken only if the character’s Initiative bonus for that weapon is greater than 0, though it can be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Reduced Might",
+     "text": "Decrease the character’s Magic Might Score by 1. Note that this does not give a starting character fewer Quality points to spend. This Inferiority may be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Reduced Power",
+     "text": "Subtract 5 mastery points from any of the character’s powers. Each lost mastery point increases the number of Might Points spent to activate a power by 1, or subtracts 1 from the character’s Initiative score for a power. This Inferiority may be taken more than once, but the activation cost for a power may not exceed the character’s Might Score, and you cannot reduce a power’s Initiative below 0.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Reduced Soak",
+     "text": "The character’s natural protection is magically weakened, making it more vulnerable to physical damage. Reduce the character’s Soak by 2. This Inferiority may be taken only if the character’s Soak is greater than 0, though it can be taken more than once.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Susceptible to Deprivation",
+     "text": "Unlike other magical beings, the character cannot survive without air, food, or water, and suffers all the normal consequences when going without them. The character is still immune to aging, unless it has the Age Quickly Flaw.",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Minor"
+    },
+    {
+     "name": "Temporary Might",
+     "text": "The character does not replenish its Might Pool every day, but instead only recovers Might Points when resting in a Magic aura of no less than (its Might Score / 5), and at an extremely slow rate. It takes the character an entire season to recover all of its spent Might in this way, though like other magic characters it can still regain Might Points immediately by consuming vis: 5 Might Points for every pawn of vis associated with same Form as its Might, or 2 Might Points for every pawn of vis associated with any other Art. When the character is injured, it loses Might Points equal to the penalty of the wound — a Light wound removes 1 Might Point, a Medium wound 3 Might Points, and a Heavy wound 5 Might Points. When incapacitated, it loses 5 Might Points. Each time the character is wounded, part of its body is separated from the rest, and these pieces contain some of the character’s vis, a number of pawns equal to ((total Wound penalty / 5) – the number of pawns already lost). For example, a Light wound would separate a pawn of vis from the character, and produce another pawn after five more Light wounds. All Magic Things have this Inferiority inherently, for no benefit. Minor Magic Inferiorities",
+     "source": "Realms of Power: Magic",
+     "magnitude": "Major"
+    }
+   ],
+   "powers": [
+    {
+     "name": "Crafter of (Form)",
+     "text": "Variable points, Init equal to (Qik – 5), appropriate Form R: varies, D: varies, T: varies Duplicates any of a range of non-Ritual Creo or Rego spells pertaining to the specified Hermetic Form, at a cost of 1 Might point per magnitude of the effect. The level of the effect cannot be greater than the creature’s Might, or 25, whichever is lowest. This power affects only one Form, but some creatures have this power more than once, for different Forms. Cr(Form) or Re(Form) 25: Focus Power",
+     "source": "Realms of Power: Magic",
+     "page": "38"
+    },
+    {
+     "name": "Enliven the Gross (Elemental Form)",
+     "text": "Common Magic Power listed in the pp.38-39 insert (p.38).",
+     "source": "Realms of Power: Magic",
+     "page": "38"
+    },
+    {
+     "name": "Equine Shape",
+     "text": "2 points, Init equal to (Qik – 2), Animal R: Per, D: Sun, T: Ind The character can transform into a horse until the sun rises or sets. MuFo 25 (base 10, +2 Sun, +1 size): Personal Power (25 levels)",
+     "source": "Realms of Power: Magic",
+     "page": "38"
+    },
+    {
+     "name": "Flight of the Hummingbird",
+     "text": "0 points, Init equal to (Qik – 2), appropriate Form R: Per, D: Sun, T: Ind The character can fly through the air in any direction, simply by concentrating. If distracted, this control is lost but the power still holds the character aloft indefinitely. ReFo 15 (base 4, +2 Sun, constant): Personal Power (15 levels, –2 Might cost)",
+     "source": "Realms of Power: Magic",
+     "page": "38"
+    },
+    {
+     "name": "Grant (Major Flaw)",
+     "text": "10 points, Init equal to (Qik – 20), Vim R: Touch, D: Mom, T: Ind, Ritual Imposes the named Major Flaw upon a victim. Each creature may have more than one power of this type, each bestowing a different Flaw. The creature can decide to bestow the Flaw permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature’s Might score as well as Might pool (see Ritual Power, below). If temporary, the Might points spent on this power are only recovered when its effects are withdrawn. No Hermetic equivalent: Ritual Power x 2",
+     "source": "Realms of Power: Magic",
+     "page": "38"
+    },
+    {
+     "name": "Grant (Major Virtue)",
+     "text": "10 points, Init equal to (Qik – 20), Vim R: Touch, D: Mom, T: Ind, Ritual Imposes the named Major Virtue upon a target. Each creature may have more than one power of this type, each bestowing a different Virtue. The creature can decide to bestow the Virtue permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature’s Might score as well as Might pool (see Ritual Power, below). If temporary, the Might points spent on this power are only recovered when its effects are withdrawn. No Hermetic equivalent: Ritual Power x 2 a Characteristic that is already +5 or more. This boost is applied before the character’s Strength and Quickness are adjusted for Size, so that a Size +2 and Quickness +3 character (Quickness +5 before Size is subtracted) who took this Quality could raise its Quickness to +4. This Quality may be taken more than once. Magical Meditation: This Quality gives the character the Supernatural Ability Magical Meditation at 1 (see New and Modified Abilities, below). Major Virtue: The character gains a Major Virtue, usually either General or Supernatural (Magic), to represent an advantage of its magical nature. Note that while this Quality may be taken more than once, only Virtues that allow a character to take them multiple times may be duplicated multiple times. Also, if a Virtue has requirements or restrictions on the characters who may take it, the magic character must meet them. For example, only a magic character with The Gift (or the Gifted Quality described above) can take Hermetic Virtues. Natural Appearance: The character appears to be a normal human being, with no traces of his magical nature. Just as the Gentle Gift hides all traces of The Gift in",
+     "source": "Realms of Power: Magic",
+     "page": "38"
+    },
+    {
+     "name": "Grant (Minor Flaw)",
+     "text": "5 points, Init equal to (Qik – 10), Vim R: Touch, D: Mom, T: Ind, Ritual Imposes the named Flaw upon a victim. Each creature may have more than one power of this type, each bestowing a different Flaw. The creature can decide to bestow the Flaw permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature’s Might score as well as Might pool (see Ritual Power, below). If temporary, the Might points spent on this power are only recovered when its effects are withdrawn. No Hermetic equivalent: Ritual Power",
+     "source": "Realms of Power: Magic",
+     "page": "38"
+    },
+    {
+     "name": "Grant (Minor Virtue)",
+     "text": "5 points, Init equal to (Qik – 10), Vim R: Touch, D: Mom, T: Ind, Ritual Imposes the named Minor Virtue upon a target. Each creature may have more than one power of this type, each bestowing a different Virtue. The creature can decide to bestow the Virtue permanently or temporarily. If permanent, the power is a ritual-like power and costs points from the creature’s Might score as well as Might pool (see Ritual Power, above). If temporary, the Might points spent on this power are only recovered when its effects are withdrawn. No Hermetic equivalent: Ritual Power",
+     "source": "Realms of Power: Magic",
+     "page": "39"
+    },
+    {
+     "name": "Grant Puissance in (Ability)",
+     "text": "4 points, Init equal to (Qik – 3) Corpus R: Voice, D: Sun, T: Group Bestows prowess in a given activity. For every Might point invested, ten men can be given a +1 to all rolls in a general situation (such as combat, or woodcraft); or 1 man can be given a +3 to a specific Total or Ability (such as Soak or Hunt). Might points spent on this power are only recovered when its effects are withdrawn. MuCo 20 (base 2, +2 Voice, +2 Sun, +2 Group): Lesser Power (20 levels, +1 Init)",
+     "source": "Realms of Power: Magic",
+     "page": "38"
+    },
+    {
+     "name": "Guide",
+     "text": "3 points, Init equal to (Qik +1), Mentem R: Voice, D: Conc, T: Group Subtly influences a group of beings toward a specific course of action. Some creatures can use this power to direct the movement of a group, taking it to a desired location. Other creatures can guide humans toward rash actions, or brave actions, or wise actions. Each time this power is used, it can subtly influence the actions of a single person for a day. The storyguide should provide advice to the character in a similar way to the Common Sense Virtue, except that the advice serves the creature’s agenda, not that of the character. There is no compulsion to follow this advice. ReMe 30 (base 5, +2 Voice, +1 Conc, +2 Group): Greater Power (30 levels, +4 Init)",
+     "source": "Realms of Power: Magic",
+     "page": "39"
+    },
+    {
+     "name": "Hands of the Magical Animal",
+     "text": "0 points, Init (Qik – 2), approp. Form R: Touch, D: Sun, T: Ind This allows an animal to manipulate and carry an item as if it had human hands and a Strength of +5. The character must concentrate to do anything other than carry the object, including dropping it or taking something else. ReTe 15 (base 3, +1 Touch, +2 Sun, +1 constant): Personal Power (15 levels, –2 Might cost)",
+     "source": "Realms of Power: Magic",
+     "page": "39"
+    },
+    {
+     "name": "Healing",
+     "text": "3 points, Init equal to (Qik – 9), Animal or Corpus R: Touch, D: Mom, T: Ind, Ritual Heals a human or animal — the worst of the target’s wounds improves by one level. The healing is achieved when the recipient performs a specific action, such as drinking from a sacred spring, or swearing a vow. This is a Ritual Power that subtracts from the creature’s Might Score as well as from its Might Pool (see Ritual Power, below). If possessed by a genius loci and the target creature is indigenous to the spirit’s locus, then all wounds are healed, not just the most serious one. CrCo 30 (base 25, +1 Touch): Ritual Power x 2 (30 levels, –3 Might cost, +1 Init)",
+     "source": "Realms of Power: Magic",
+     "page": "39"
+    },
+    {
+     "name": "Human Shape",
+     "text": "1 point, Init equal to (Qik – 2), Corpus R: Per, D: Sun, T: Ind The character transforms itself into the shape of a normal human being, allowing it to move through mundane society relatively unnoticed. MuFo 20 (base 10, +2 Sun): Personal Power (20 levels, –1 Might cost)",
+     "source": "Realms of Power: Magic",
+     "page": "39"
+    },
+    {
+     "name": "Master of (Form)",
+     "text": "Variable points, Init equal to (Qik – Might cost), appropriate Form R: varies, D: varies, T: varies Duplicates any of a range of non-Ritual Muto or Perdo spells pertaining to the specified Hermetic Form, at a cost of 1 Might point per magnitude of the effect. The level of the effect cannot be greater than the creature’s Might, or 25, whichever is lowest. This power affects only one Form, but some creatures have this power more than once, for different Forms. Mu(Form) or Pe(Form) 25: Focus Power",
+     "source": "Realms of Power: Magic",
+     "page": "39"
+    },
+    {
+     "name": "Oath-Swearing",
+     "text": "10 points, Init equal to (Qik – 10), Vim R: Touch, D: Mom, T: Group, Ritual Enforces the power of a solemnly-sworn oath between two or more parties. All parties must agree to the oath of their own free will, and it must Penetrate the Magic Resistance of all parties to take effect. If a participant in the oath tries to act in direct contravention of it, he immediately becomes aware of this. If he carries on regardless, then he is struck with a Minor Flaw. This Flaw can be removed by re-swearing the oath in front of the original participants. This power persists until there is no further record of the oath, either in the memories of the participants or in written form. New participants may be added to the oath by swearing to it in the presence of the creature, and if it pays the original Might cost again. Unlike the Grant (Flaw) power, the Might points spent on Oath-swearing regenerate normally. No Hermetic equivalent: Ritual Power.",
+     "source": "Realms of Power: Magic",
+     "page": "39"
+    },
+    {
+     "name": "Sight Beyond Sight",
+     "text": "1 point, Init equal to Qik, approp. Form R: Per, D: Conc, T: Vision All five senses of the creature operate at a distance, as far as the creature can see. This gives the creature supernaturally aware of everything which occurs, and it is exceptionally difficult to catch it by surprise InIm 30 (base 5, +1 Conc, +4 Vision): Personal Power x 2 (20 levels, –2 Might cost, +2 Init) a magus, this allows Magic Humans to hide their inherently monstrous appearance, and Magic Things in the shape of humans or animals to seem to be living flesh and blood, rather than animated matter. No Fatigue: The character is tireless, meaning that it has no Fatigue levels, does not suffer Fatigue penalties, does not need to make Fatigue rolls, and cannot fall unconscious. It also cannot exert itself as other characters do, though the character can still simulate the loss of a Fatigue level by spending a Confidence Point, if necessary. The character does not need to sleep, which means that it effectively has two additional seasons each year in which to study. However, because of the limitations on magic character advancement, it is unlikely the character will be able to take advantage of this extra time. Ritual Power: The character has 25 levels of powers that replicate Ritual-level effects, and if this Quality is taken multiple times, these spell levels can be combined to allow for an effect of greater magnitude. Any effect can be designed with this sort of power, even effects that break Hermetic limits. These powers have a Might Point cost, which defaults to the magnitude of the effect, and Initiative for the power is equal to the character’s Quickness – (the magnitude of the effect x 2). You should also note the Form or Forms of the effect, for the purposes of evaluating Magic Resistance. Besides reducing the character’s Might Pool, Ritual Powers also require the player to subtract one from the character’s Might Score for each point in the Might cost, whenever it activates the effect. This lost Might may return over time, at the storyguide’s discretion, but at a much slower rate than recovering lost Might Points. For example, each point of lost Might Score could require the character to rest for an entire season in a Magic aura of no less than (its Might Score / 5), or perhaps to consume vis of the same type as its Might, a number of pawns equal to its original Might Score. Alternatively, instead of reducing its Might Score, the character can lose one Confidence Point for each Might Point in the activation cost. It can do this whenever it has enough Confidence Points, even if the number of Confidence Points would exceed the character’s Confidence Score. If the character has Confidence because of the Ferocity Virtue, it can only use them to activate the Ritual Power in the specific circumstances associated with that Virtue. Any spell levels that are left over after the Ritual Power is designed may be used to increase the effect level of other Ritual Powers, or converted into mastery points, with five full levels of effects equal to one mastery point. These may be spent like the mastery points gained from the Improved Powers Minor Quality on any of the character’s Ritual Powers. Vis Mastery: The character may expend some of its magic as vis. Each pawn manifests as the same Form as that associated with the character’s Might Score, and either costs the character a Confidence Point or subtracts one from the character’s permanent Might Score. The character may also consume vis in place of Confidence Points. Each pawn is equivalent to a single Confidence Point, and the player may spend them to activate any power the character possesses that requires Confidence Points, but the player cannot spend more pawns at once than the character’s Confidence Score in this way.",
+     "source": "Realms of Power: Magic",
+     "page": "39"
+    }
+   ]
+  },
+  "faerie": {
+   "powers": [
+    {
+     "name": "Adhere",
+     "text": "Takes control of the muscles of the lower body of the target. He cannot dismount the faerie animal unless it wishes, which is of aid when riding friendly flying animals, but is dangerous with animal-like kelpies.\n\nCosts 5 spell levels (ReCo Base 3 +1 Touch +1 Conc.)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "1 point, Init –1, Corpus",
+     "mightCostValue": "1",
+     "initiative": "Init –1",
+     "form": "Corpus"
+    },
+    {
+     "name": "Allure",
+     "text": "This power causes the faerie to seem more attractive and pleasant than it really is, granting a +3 bonus on all rolls that involve impressing or convincing others.\n\nCosts 10 spell levels (Base 3 +1 Touch +2 Sun)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "1 point, Init –1, Mentem",
+     "mightCostValue": "1",
+     "initiative": "Init –1",
+     "form": "Mentem"
+    },
+    {
+     "name": "Appear Human",
+     "text": "Allows a humanoid faerie of size –2 to +2 to look and feel human. This power is not required by humanoid faeries, only by shapeshifters who spend the majority of their time in a non-human form. This is an illusion, unlike Transform into Human, later, so a centaur that used it would still be unable to wander inconspicuously through a crowd, ride a horse, or avoid leaving hoof prints.\n\nCosts 5 spell levels (Base 2, +2 Sun, +1 constant)",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "1 point, constant",
+     "mightCostValue": "1",
+     "initiative": "constant",
+     "form": null
+    },
+    {
+     "name": "Binding Oath",
+     "text": "Enforces the power of a solemnly sworn oath or contract between two or more parties. All parties must agree to the oath of their own free will, and the power must penetrate the Magic Resistance of all parties to take effect.\n\nIf one participant attempts to act in direct contravention to the oath, the other participants are immediately aware of this. Humans who attempt to break their oaths are given a warning. This warning often takes the form of a memory or sensation this is reminiscent of the faerie’s motif. If the human fails to understand, or disregards, this warning he suffers a Major or Minor Flaw at the discretion of the Troupe.\n\nThe Troupe should assign the Flaw based on the powers of the faerie, the nature of the oath, and the seriousness of the transgression within the framework of the story. This Flaw can be removed by powers that destroy mystical effects. The character may also end the Flaw by fulfilling the conditions of the oath, swearing a new oath with the wronged faerie, or destroying all of the oath’s other participants.\n\nFaeries cannot break their oaths, although some roles allow them to seek loopholes and alternative interpretations.\n\nCosts 50 levels. Special, No Hermetic equivalent (R: Touch, D: Mom, T: Group, Ritual)",
+     "source": "Realms of Power: Faerie",
+     "group": "Ritual",
+     "mightCost": "10 points, Init (Qik – 20), Vim",
+     "mightCostValue": "10",
+     "initiative": "Init (Qik – 20)",
+     "form": "Vim"
+    },
+    {
+     "name": "Cause Drowsiness",
+     "text": "Allows the faerie to cause a human it touches to fall asleep. Versions that are slightly more powerful allow the faerie to affect people at Voice range, or keep them asleep until a certain time.\n\nCosts 5 spell levels for Touch range (Base 4 +1 Touch), Costs 10 spell levels for Voice range (Base 4 +2 Voice). Costs 1 Might, Init –1.\n\nAdd 20 spell levels for Until duration. Cost rises by 2 Might points and Initiative has further –2 penalty.",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "1 point, Init –1, Corpus or Animal",
+     "mightCostValue": "1",
+     "initiative": "Init –1",
+     "form": "Corpus or Animal"
+    },
+    {
+     "name": "Cause Fatigue",
+     "text": "This faerie can cause a human to lose a fatigue level. The mechanism that harms the human varies by faerie. Some harvest faeries cause heatstroke, for example.\n\nCosts 20 spell levels (Base 10 +2 Voice)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "2 points, Init –2, usually Corpus but varies",
+     "mightCostValue": "2",
+     "initiative": "Init –2",
+     "form": "usually Corpus but varies"
+    },
+    {
+     "name": "Cause Sickness",
+     "text": "The faerie can cause a specific, serious illness with its touch, or poison objects it touches so that they harm humans who consume them. See ArM5 page 133 for guidelines.\n\nCosts 25 spell levels (Base 20 +1 Touch)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "3 points, Init –3, Corpus",
+     "mightCostValue": "3",
+     "initiative": "Init –3",
+     "form": "Corpus"
+    },
+    {
+     "name": "Craft Magical Trinket",
+     "text": "The faerie may create an object, from glamour, that allows the character with the trinket to use a particular Virtue once. The Virtue that the faerie’s trinkets permit is selected at character creation. The faerie does not automatically regain the Might spent to produce a trinket, but may refresh itself if it has Virtues that allow it to regain Might by consuming sacrifices or humans.\n\nThe trinket ceases to function when a condition placed at the time of creation is met, or when it spends an entire day when no human with a passionate intention to use it for a specific purpose beholds it. This makes stockpiling trinkets impossible except in dire situations. In exceptional circumstances, large numbers of trinkets are possible: for example, in a covenant that knows it will soon have to withstand a Mongol siege, it might be possible for the faerie to give a trinket to each of the covenfolk.\n\nA trinket costs 10 Might points if it invokes a Minor Virtue, and 15 points if it invokes a Major Virtue.\n\nCosts 50 spell levels (Special)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "10/15 points, Init 0, as per target",
+     "mightCostValue": null,
+     "initiative": "Init 0",
+     "form": "as per target"
+    },
+    {
+     "name": "Damaging Effect",
+     "text": "Causes all of the faerie’s weapons, which are part of its glamour, to take on a more deadly aspect for two minutes. The danger of the aspect varies according to the motif usual for the faerie, but always increases the weapon’s Damage by +5. Faeries that produce mounts from their glamour can improve the Damage of those mounts with this power, since they are effectively weapons of the faerie.\n\nCosts 15 spell levels (Base 5 +1 Part +1 Diameter. This Base is lower than might appear usual in Hermetic magic, because faeries are creatures of stories, and conflict is such a useful tool in roleplaying games.)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "2 points, Init –2, By weapon",
+     "mightCostValue": "2",
+     "initiative": "Init –2",
+     "form": "By weapon"
+    },
+    {
+     "name": "Domestic Work",
+     "text": "Performs household tasks from a distance. This focus allows some aggressive behavior. A domestic faerie can kindle fires, boil water, and move household objects not held or fastened down — all of which, with a little planning, can be used to hurt humans.\n\nThe most aggressive domestic faeries hurl objects. For 1 Might point up to five pounds can be moved, and every additional Might point doubles this. If the faerie has a thrown weapon Pretense, the object may be hurled with force. Blunt objects inflict +5 damage per Might point spent. If the faerie could use the object as a weapon, then it may use the object to strike foes while using this power. All physical attacks with this power must penetrate Magic Resistance. The power lasts until the faerie releases the object.",
+     "source": "Realms of Power: Faerie",
+     "group": "Focus",
+     "mightCost": null,
+     "mightCostValue": null,
+     "initiative": null,
+     "form": null
+    },
+    {
+     "name": "Enthralling Sound",
+     "text": "Allows a faerie to create a particular emotion in any group of people that can hear it. Fear, loyalty, and infatuation are popular choices. This power also increases the intensity of an emotion that already exists. A stress roll with an appropriate Personality trait against an Ease Factor of 9 allows a victim to overcome this power’s effect.\n\nCosts 30 spell levels (CrMe Base 4 +2 Voice +2 Sun +2 Group)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "3 points, Init –3, Mentem",
+     "mightCostValue": "3",
+     "initiative": "Init –3",
+     "form": "Mentem"
+    },
+    {
+     "name": "Enthrallment",
+     "text": "Allows a faerie to take complete control of a single human’s mind for a day, by making eye contact.\n\nCosts 40 spell levels (ReMe as Enslave the Mortal Mind, ArM5 page 152)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "4 points, Init –4, Mentem",
+     "mightCostValue": "4",
+     "initiative": "Init –4",
+     "form": "Mentem"
+    },
+    {
+     "name": "Extended Glamour",
+     "text": "Grants awareness of everything that happens within the bounds of a specific domain chosen by the faerie. In essence, the faerie is coterminous with its associated landscape feature, so it is present simultaneously everywhere within its boundaries. The faerie’s Might score determines the size of area possible: a Room (5–10 Might), a Structure (15–25 Might), or a standard Boundary (30+ Might).\n\nThe area controlled by the faerie can produce a yearly harvest of (Might/10) pawns of vis of an appropriate Form, which manifests as physical objects within the controlled region. Removing this vis does not harm the faerie if it is bargained for. This is the power that allows faeries to extend auras about themselves, as described in Chapter 1: Nature of Faerie.\n\nCosts 25 spell levels: may be taken as a Lesser Power on its own, or as part of a package of Greater Powers. (Special)",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "0 points, constant, Mentem",
+     "mightCostValue": "0",
+     "initiative": "constant",
+     "form": "Mentem"
+    },
+    {
+     "name": "Father of Serpents",
+     "text": "Duplicates any non-Ritual Creo, Intellego, Muto, or Rego spells pertaining to snakes at a cost of 1 Might point per magnitude of the effect. Like many focus powers, the limiting factor is the faerie’s motif. For instance, a lion who was the ruler of a woodland glade could define exactly the same Virtue as including the entire Hermetic Form of Animal, perhaps ignoring Intellego instead of Perdo. Troupes are cautioned to only allow Focus Powers broad enough to make their saga interesting.",
+     "source": "Realms of Power: Faerie",
+     "group": "Focus",
+     "mightCost": null,
+     "mightCostValue": null,
+     "initiative": null,
+     "form": null
+    },
+    {
+     "name": "Fearful Flaming Eyes",
+     "text": "Completely paralyzes a human who makes eye contact with the faerie.\n\nCosts 15 spell levels (Base 5, +1 Eye, +1 Conc)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "2 points, Init –2, Corpus",
+     "mightCostValue": "2",
+     "initiative": "Init –2",
+     "form": "Corpus"
+    },
+    {
+     "name": "Flight",
+     "text": "The character is capable of flight. The character may use the Athletics skill to simulate difficult maneuvers, but may not engage in combat while flying incredibly swiftly. The faerie may not fly when heavily encumbered, or with a passenger of its Size or more, unless assisted by another faerie that shares the load.\n\nCosts 15 spell levels: (ReFo Base 4, +2 Sun, +1 constant. This base is deliberately lower than Hermetic magic might suggest.)",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "2 points, constant, appropriate Form",
+     "mightCostValue": "2",
+     "initiative": "constant",
+     "form": "appropriate Form"
+    },
+    {
+     "name": "Hands of the Animal",
+     "text": "This allows an animal to manipulate and carry an item as if it had human hands and a Strength of +5. The character must concentrate to do anything other than carry the object, and to drop it or take something else.\n\nCosts 15 spell levels (ReTe Base 3, +1 Touch, +2 Sun, +1 constant)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "2 points, constant, appropriate Form",
+     "mightCostValue": "2",
+     "initiative": "constant",
+     "form": "appropriate Form"
+    },
+    {
+     "name": "Hound",
+     "text": "Allows the faerie to know the direction and distance to its human quarry.\n\nCosts 20 spell levels (InCo Base 3, +4 Arc, +1 Conc)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "2 points, Init –2, Corpus",
+     "mightCostValue": "2",
+     "initiative": "Init –2",
+     "form": "Corpus"
+    },
+    {
+     "name": "Illusionary Home",
+     "text": "This comprehensive use of glamour makes a place look, sound, smell, and feel like a suitable home for the role the fairie is playing. Not all faeries use this ability — it is usually restricted to faeries who travel within the Dominion, and cannot extend their glamour over their homes. Within the altered space, the sense of taste is also affected.\n\nCosts 40 spell levels (MuIm Base 5, +1 Touch, +4 Until, +2 Room) an alternative that also costs 40 spell levels is (MuIm Base 5, +1 Touch, +2 Sun, +1 Constant, +3 Structure)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "4 points, Init –4, Imaginem",
+     "mightCostValue": "4",
+     "initiative": "Init –4",
+     "form": "Imaginem"
+    },
+    {
+     "name": "Image Phantom",
+     "text": "Allows the non-principal faerie of an area to coat an object with illusion, making it seem to be some other thing of approximately the same size and shape.\n\nCosts 20 spell levels, as spell of the same name ArM5 page 146. (Base 5 +1 Touch +2 Sun)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "2 points, Init –2, Imaginem",
+     "mightCostValue": "2",
+     "initiative": "Init –2",
+     "form": "Imaginem"
+    },
+    {
+     "name": "Immateriality",
+     "text": "Makes a faerie immaterial until sunrise or until nightfall.\n\nCosts 40 spell levels. (Base 30, +2 Sun)",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "4 points, Init –4, as suits faerie’s body",
+     "mightCostValue": "4",
+     "initiative": "Init –4",
+     "form": "as suits faerie’s body"
+    },
+    {
+     "name": "Invisibility",
+     "text": "A personal version of Veil of Invisibility, as per ArM5 page 146.\n\nCosts 15 spell levels. (Base 4, +2 Sun, +1 for moving image)",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "2 points, Init –2, Imaginem",
+     "mightCostValue": "2",
+     "initiative": "Init –2",
+     "form": "Imaginem"
+    },
+    {
+     "name": "Kiss of Forgetfulness",
+     "text": "Causes the person touched to forget his mortal life until he sees a particular object, or class of object, associated with his home.\n\nCosts 40 spell levels (Base 15 +1 Touch +4 Until)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "4 points, Init –4, Mentem",
+     "mightCostValue": "4",
+     "initiative": "Init –4",
+     "form": "Mentem"
+    },
+    {
+     "name": "Kiss of Frost",
+     "text": "Allows the person touched to survive the cold above the snowline on mountains until he treads upon grass.\n\nCosts 15 spell levels. (Base 2 +1 Touch +4 Until)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "2 points, Init –2, Ignem",
+     "mightCostValue": "2",
+     "initiative": "Init –2",
+     "form": "Ignem"
+    },
+    {
+     "name": "Kiss of the Mermaid",
+     "text": "Allows the person kissed to breathe under water until he walks upon dry land.\n\nCosts 30 spell levels (Base 4 +1 Touch, +4 Until, +1 Part)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "3 points, Init –3, Aquam",
+     "mightCostValue": "3",
+     "initiative": "Init –3",
+     "form": "Aquam"
+    },
+    {
+     "name": "Loosely Material",
+     "text": "This power allows a faerie that is generally immaterial to take on matter, over the length of a combat round, and produce a specific body of flesh, wood, or elemental matter. Some faeries have many versions of this power, and can form more than one physical shape, but can still only inhabit one at a time.\n\nEach body has defined physical Characteristics and a fixed Might cost. For each Might point spent on this power, 5 characteristic points are available to spend on the four physical Characteristics of Strength, Stamina, Dexterity, and Quickness. A faerie’s material body can have any Size up to a maximum of its Presence unless it spends additional Might points on Size. Every 5 extra points increases its Size by 1. Wound ranges for humanoid forms are as per the Size table.\n\nA faerie may maintain the material body indefinitely. If slain, the body contains pawns of vis equal to the faerie’s Might/5, of an appropriate Art. When the faerie returns to immateriality, which takes an uninterrupted combat round, it regains the Might points spent to activate this power. If it then takes on matter again, it does not carry over the wounds caused to its previous body.\n\nCosts 25 spell levels (special)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "Variable points, Init –5, appropriate Form (usually Corpus)",
+     "mightCostValue": null,
+     "initiative": "Init –5",
+     "form": "appropriate Form (usually Corpus)"
+    },
+    {
+     "name": "Miser’s Midas",
+     "text": "This power turns any living thing the character touches, excepting himself, to stone. This power requires two Virtues to get enough levels. The most combat-worthy of these effects — turning a human into stone for more than a few minutes — is level 35 (Base 20, +1 Touch, +2 Sun). A player who selected the Virtue twice could trade 15 spell levels for another focus power or for 3 intricacy points, as described in the insert earlier.",
+     "source": "Realms of Power: Faerie",
+     "group": "Focus",
+     "mightCost": null,
+     "mightCostValue": null,
+     "initiative": null,
+     "form": null
+    },
+    {
+     "name": "Pine Away",
+     "text": "This ability causes the target to slowly lose both the will to live, and the vitality that permits life. This is treated as a major disease, with an Ease Factor of 9 that causes a Light Wound, but either Faerie Lore or Medicine may be used to treat the effects. Many versions of this power exist, with both weaker and stronger effects.\n\nCosts 30 spell levels (Base 20 (5 +15 for virulence), +2 Voice)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "3 points, Init. –3, Corpus",
+     "mightCostValue": "3",
+     "initiative": "Init. –3",
+     "form": "Corpus"
+    },
+    {
+     "name": "Repel Animals",
+     "text": "Like Circle of Beast Warding\n\nCosts 5 spell levels (Base 2, +1 Touch, +2 Ring)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "1 point, Init –1, Animal",
+     "mightCostValue": "1",
+     "initiative": "Init –1",
+     "form": "Animal"
+    },
+    {
+     "name": "Send Message",
+     "text": "This power allows the faerie to send short verbal messages to beings to which it has Arcane Connections.\n\nCosts 15 spell levels. (CrMe Base 3, +4 Arcane)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "2 points, Init –2, Imaginem",
+     "mightCostValue": "2",
+     "initiative": "Init –2",
+     "form": "Imaginem"
+    },
+    {
+     "name": "Shift Human Shapes",
+     "text": "Allows the character to change its appearance to any other human configuration, although this cannot be used to replicate the features of a specific person. If the human shape selected is related to a form other than Corpus in some way, the power costs 5 extra spell levels and an added point per use. As an example, some faerie knights use this power to don armor by transforming the outer layers of their bodies into layers of metal.\n\nCosts 5 spell levels (Base 3, +2 Sun)",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "1 point, Init –1, Corpus",
+     "mightCostValue": "1",
+     "initiative": "Init –1",
+     "form": "Corpus"
+    },
+    {
+     "name": "Shrinking",
+     "text": "The character can reconfigure the matter and magic in its body into a series of increasingly tiny frames. The character may choose any Size smaller than or equal to the basic form and use the modifiers for the new Size. Players desiring a small faerie who can grow massive should design the faerie as if its basic form was massive, and select this power. Players should generate a table with the appropriate combat statistics for each Size, so as not to slow the game during play.\n\nThis can simulate the effect of any size-changing spell of level 25 of less. This power simulates selecting a spell that shrinks the character by 1 Size, then another that shrinks the character by 2 Size, and so on, plus a spell that returns the character to normal size.\n\nUtterly changing the size of a person has a Base level of 3. If these are personal effects with Sun duration, then the maximum level of effect from this focus is 5. This allows the character to claim 20 spare levels as 4 intricacy points, which are explained in the Improved Powers Minor Virtue.",
+     "source": "Realms of Power: Faerie",
+     "group": "Focus",
+     "mightCost": null,
+     "mightCostValue": null,
+     "initiative": null,
+     "form": null
+    },
+    {
+     "name": "Silent Motion",
+     "text": "Allows the character to move without making a noise.\n\nCosts 10 spell levels (Base 3, +2 Sun, +1 constant)",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "1 point, constant, Imaginem",
+     "mightCostValue": "1",
+     "initiative": "constant",
+     "form": "Imaginem"
+    },
+    {
+     "name": "Size Reduction",
+     "text": "The character can reconfigure the matter and magic in its body into a far smaller frame. The player chooses a single alternative Size less than 0 on the Size Chart and, when in the smaller form, uses the modifiers for the new size. Players desiring a small faerie who can grow massive should design the faerie as if its basic form was massive, and select this power.\n\nCosts 10 spell levels (Base 3, +2 Sun, +1 Constant)",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "1 point, Init –1, Corpus or Animal",
+     "mightCostValue": "1",
+     "initiative": "Init –1",
+     "form": "Corpus or Animal"
+    },
+    {
+     "name": "Smithying",
+     "text": "Duplicates any non-Ritual Creo, Muto, Rego, or Perdo spell pertaining to the Terram Form, at a cost of 1 Might point per magnitude of the effect, limited by the motif of the faerie.",
+     "source": "Realms of Power: Faerie",
+     "group": "Focus",
+     "mightCost": null,
+     "mightCostValue": null,
+     "initiative": null,
+     "form": null
+    },
+    {
+     "name": "Spirit Away",
+     "text": "Allows the faerie to act as a threshold guardian, as described in the Chapter 2: Faerie Realm.\n\nCosts 50 spell levels (Special)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "Variable points, n/a, Vim",
+     "mightCostValue": null,
+     "initiative": "n/a",
+     "form": "Vim"
+    },
+    {
+     "name": "Spreading a Mantle of Snow",
+     "text": "Covers an area a mile across in snow, much like Clouds of Summer Snow, ArM5 page 126.\n\nCosts 25 spell levels. (Base 2,+3 Sight, +1 Conc, +2 Group, +1 Size)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "3 points, Init –3, Auram",
+     "mightCostValue": "3",
+     "initiative": "Init –3",
+     "form": "Auram"
+    },
+    {
+     "name": "Steal Judgment",
+     "text": "Makes the target believe almost any lie that the faerie tells, by diminishing his capacity for doubt. An Intelligence roll against an Ease Factor of 6 is permitted to resist, with easier rolls for truly incredible lies.\n\nCosts 15 spell levels (Base 4, +1 Eye, +2 Sun).",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "2 points, Init –2, Mentem",
+     "mightCostValue": "2",
+     "initiative": "Init –2",
+     "form": "Mentem"
+    },
+    {
+     "name": "Supernatural Agility",
+     "text": "This power allows the character to perform minor supernatural feats when using its Athletics Pretense. These might include swiftly scaling walls, leaping from the ground onto the back of a galloping horse, and dropping great distances to the ground without harm.\n\nCosts 25 spell levels (Base 10, +2 Sun, +1 constant)",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "3 points, constant",
+     "mightCostValue": "3",
+     "initiative": "constant",
+     "form": null
+    },
+    {
+     "name": "Torrent from the Lungs",
+     "text": "As Curse of the Desert. Draws the water forth from the human body, causing +15 Damage that armor does not protect against. If the target does not drink within a few minutes, he dies. The name comes from the surprising quantity of water that pours out of the victim’s mouth.\n\nCosts 25 spell levels (PeAq Base 10, +2 Voice +1 Part) See ArM5 page 123.",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "3 points, Init –3, Aquam",
+     "mightCostValue": "3",
+     "initiative": "Init –3",
+     "form": "Aquam"
+    },
+    {
+     "name": "Transform Victim into (Animal)",
+     "text": "Turns a target who can hear the voice of the faerie into a land animal for Sun duration. The animal’s type is nominated at character creation.\n\nCosts 30 spell levels (Base 10, +2 Voice, +2 Sun); although many faeries have a variation with Until Duration that costs 40 spell levels, 4 points per use and has an Init modifier of –4.",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "3 points, Init –3, Animal",
+     "mightCostValue": "3",
+     "initiative": "Init –3",
+     "form": "Animal"
+    },
+    {
+     "name": "Transform Victim into (Bird or Fish)",
+     "text": "Turns a target who can hear the voice of the faerie into a bird or fish for Sun duration. The type of bird or fish is nominated a character creation.\n\nCosts 40 spell levels (Base 20, +2 Voice, +2 Sun)",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "4 points, Init –4, Animal",
+     "mightCostValue": "4",
+     "initiative": "Init –4",
+     "form": "Animal"
+    },
+    {
+     "name": "Transform Victim into (Object or Plant)",
+     "text": "Turns a target who can hear the voice of the faerie into a solid inanimate object or plant for Sun duration. The object is selected at character creation.\n\nCosts 45 spell levels (Base 25, +2 Voice, +2 Sun)\n\nMany faeries have a variation with Until Duration. It costs 5 Might per use and has an Init of –5. This more powerful version has Touch Range, to keep the level of effect at 50 — the highest a Greater Power may have without becoming a Ritual Power. Players should recall that the traditional objects of a faerie’s role extend the faerie’s power of touch.\n\nCosts 50 spell levels (Base 25, +1 Touch, +4 Until).",
+     "source": "Realms of Power: Faerie",
+     "group": "Greater and Lesser",
+     "mightCost": "5 points, Init –5, as per object",
+     "mightCostValue": "5",
+     "initiative": "Init –5",
+     "form": "as per object"
+    },
+    {
+     "name": "Transform into (Environmental Effect)",
+     "text": "Transforms the character into a wave, breeze, cloud, fire, or other nebulous thing.\n\nCosts 40 spell levels. (Base 30, +2 Sun) Some faeries prefer a version with an Until Duration, which requires 5 points per use, costs 50 spell levels, and has an Init of –5.",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "4 points Init –4, as Form of effect",
+     "mightCostValue": "4",
+     "initiative": "Init –4",
+     "form": "as Form of effect"
+    },
+    {
+     "name": "Transform into (Solid Object)",
+     "text": "Transforms the character into a specified object. In object form, the character is capable of speech and limited movement.\n\nCosts 35 spell levels. (Base 25, +2 Sun) Some faeries prefer a version with an Until Duration, which requires 5 points per use, costs 45 spell levels, and has an Init of –5.",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "4 points, Init –4, as Form of object",
+     "mightCostValue": "4",
+     "initiative": "Init –4",
+     "form": "as Form of object"
+    },
+    {
+     "name": "Transform into Animal",
+     "text": "Transforms the character into a specified land animal of human size or smaller. Faeries retain the power of speech in animal form.\n\nCosts 20 spell levels (Base 10, + 2 Sun) Costs 25 spell levels (Base 10, +2 Sun, +1 size) to turn into a larger animal, like a horse. This costs 3 Might per use.\n\nCosts 30 spell levels (Base 10, +4 Until) for a version with an Until Duration, which requires 3 Might per use.",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "2 or more points, Init –Might cost, Animal",
+     "mightCostValue": null,
+     "initiative": "Init –Might cost",
+     "form": "Animal"
+    },
+    {
+     "name": "Transform into Bird or Fish",
+     "text": "Transforms the character into a specified bird or fish. Faeries retain the power of speech in animal form.\n\nCosts 30 spell levels. (Base 20, +2 Sun) A version with an Until Duration requires 4 points per use, costs 40 spell levels, and has an Init of –4.",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": "3 points, Init –3, Animal",
+     "mightCostValue": "3",
+     "initiative": "Init –3",
+     "form": "Animal"
+    },
+    {
+     "name": "Transform into Human",
+     "text": "This power costs non-human faeries whatever it would cost a humanoid faerie to transform into the character’s native shape, using one of the other transform powers.",
+     "source": "Realms of Power: Faerie",
+     "group": "Personal",
+     "mightCost": null,
+     "mightCostValue": null,
+     "initiative": null,
+     "form": null
+    }
+   ],
+   "wizardry": [
+    {
+     "name": "A Horse of a Different Color",
+     "text": "Empathy/Conjure 20 R: Voice, D: Sun, T: Ind The target animal grows brightly-colored wings for the duration, transforming into a chimerical beast that is a fanciful combination of two animals. This increases its Size category by 1, and it gains the temporary ability to fly and sing. (Base 3, +2 Voice, +2 Sun, +1 size)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "A Proper Blessing",
+     "text": "Enchantment/Grant 40 R: Touch, D: Hidden, T: Ind, Ritual The target gains the Puissant Faerie Lore Virtue for as long as he keeps hidden a stone given to him by the caster, typically in his shoe or inside his hat. This is a Charmed Virtue; to make use of it, the target must perform a secret ceremonial charm that is taught to him by the caster during the rite. As with all Charmed Virtues, if the secrecy surrounding this charm is ever broken, the effect fails until the caster can fashion a new one for the target, by recasting the rite. (Base 15, +1 Touch, +4 Hidden)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Ars Fabulosa",
+     "text": "The fantastic art facilitates communication between two parties — the summoner and a supernatural being. Like other forms of summoning, the art brings this being to the summoner, and if his skill exceeds its power then it also protects him against it. Unlike other forms of summoning, it does not force the being to comply or bind it to service unless it agrees to the bargain that the summoner proposes. For this reason, the art and its related powers are often called simply \"bargaining.\" There are four powers associated with bargaining: Summoning, Bonding, Captivating, and Dismissing. Each of these powers may be learned as a Supernatural Ability (see Chapter 5: Touches of Faerie, Learning Faerie Abilities) or gained from a Virtue (see Chapter 5: Touches of Faerie, New and Modified Virtues). Once gained, these powers have an initial score of 0, and increase as Arts, though they can be practiced and studied as if they were Supernatural Abilities. There are several other summoning arts (see the Summoning Faeries sidebar), but this type of Summoning is almost always aligned with the Faerie realm. It is possible that there are other versions of this Summoning power aligned to the other realms, which similarly facilitate bargains with magic, infernal, or divine beings instead of faeries, but the other three bargaining arts (Bonding, Captivating, and Dismissing) are exclusively Faerie powers.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Bargaining"
+    },
+    {
+     "name": "Beguile",
+     "text": "Beguile is the power to command the target to do as you suggest, or to convince him that he has already done so. Note that this power does not typically give the target the ability to do anything it cannot already do, such as allow an inanimate object to move. However, those effects that change a target's memories can change the memories of inanimate objects and other things that do not have a mind — these changes will only come to light if the object is supernaturally questioned, of course.\n\nNormally, the caster must have a Sympathy Trait that is appropriate to the target. With Beguile, however, any Sympathy Trait may be applicable so long as it is appropriate to the memory, emotion, or perception brought about by the rite. For example, a caster with a Wind Sympathy Trait could change a person's memory of a wind, perception of the wind, or feelings about the wind.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Bonding",
+     "text": "It is possible to establish enough supernatural rapport with a faerie that the summoner can create a mystic bond between him and it, through which he can channel its powers and use them as his own. It relies upon the summoner's Communication and Faerie Rank as well as his score in Bonding, and the maximum Might Score he can affect is again limited by his Sympathy Traits, just as in Summoning. It also requires him to spend a Fatigue level to activate the effect, and the affected faerie must be within range of his voice when the bond is first formed. The Bonding Total must exceed the faerie's Might to succeed, and must penetrate its Magic Resistance (though as usual the summoner can add his highest applicable Sympathy Trait to his Penetration score). If the faerie is held by a successful Summoning (one that penetrated its Magic Resistance), treat the effect level as 0 when calculating the Penetration Total, otherwise the effect level is the faerie's Might Score. For example, to bond with a faerie with Faerie Might 15, the summoner would need a Bonding Total + Penetration bonus of 30, or 15 if the faerie were held by a successful Summoning effect. If the Bonding succeeds, the summoner forges a special connection between himself and the faerie, or between the faerie and something he is touching. This bond acts as an Arcane Connection between the faerie and the bearer for as long as it endures. Through this bond, the bearer gains access to one of the following effects, chosen by the summoner at the time the bond is formed: • The bearer can use any of the faerie's Characteristics or Pretenses as if they were his own, and can take advantage of the faerie's supernatural senses, perceiving his surroundings as the faerie would see them in his place. This includes the use of Faerie Virtues like Faerie Sight and Faerie Speech. The faerie can do the same with the bearer's Characteristics, Abilities, and senses. • The bearer gains access to the faerie's powers, spending the faerie's Might Points to activate them. If the bond is with an object, the bearer or the faerie can treat the object as an extension of himself or itself, and can affect it with their powers at Personal range. The faerie can also draw upon the bearer's fatigue at will. If it wishes to exert itself in combat or for any other reason, the bearer immediately loses a Fatigue level. • The bond is opened for a temporary enchantment of a single faerie effect. Any spell or power the bearer can cast may be placed into the bond, so long as his casting total is at least equal to the effect level. The faerie and the bearer then gain the ability to cast that effect as a power. Both the faerie and the bearer must perform all the same actions as the caster each time the power is activated — including spending time, vis, Confidence, or Fatigue — but they do not need to roll the die, and the effect uses the faerie's (Might Score – the level of the effect) for Penetration. • The bearer is immune to Warping gained from living in a Faerie aura that season, does not suffer wounds caused by suffocation, lack of food or drink, exposure, or extreme fatigue, can ignore all Fatigue penalties, and may delay all Aging rolls until after the bonding is over (these rolls are made all at once as soon as the bond is broken). If the bond is tied to an object instead of a person, the object requires a charm (see Chapter 5: Touches of Faerie, Charms), which must be activated each day for the bearer to receive the effects. This charm is created at the time the bond is formed, and must be taught to the bearer by the summoner. If the secrecy of the charm is broken, the bond is undone and the bargain is ended. The bond also ends if the object is destroyed. A character may only benefit from a single bond at any given time, and activating a second bond destroys the first. Either the faerie or the bearer may also break the bond at will, though faeries rarely do this if it would go against the terms of a bargain. It is possible to bond with a faerie without its permission to do so, assuming the summoner can overcome its resistance, but there is nothing stopping the faerie from ending the effect immediately, if it does not believe the arrangement will be to its benefit.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Bargaining"
+    },
+    {
+     "name": "Borrowers",
+     "text": "The Ars Fabulosa have only just begun to spread through Mythic Europe, and among the people who practice them is a strange sort that call themselves \"faerie borrowers.\" These folk often seem especially foreign and exotic — like travelers from far-off lands with odd habits and unusual customs. They may present themselves as merchants or pilgrims, performers or messengers, or even soldiers or spies for distant lords. Their primary interest is in faeries, with whom they are especially skilled at dealing, and it is with faeries that they conduct their business. They essentially make their living selling goods to the faerie realm; their payment is the blessings of the fae. When asked what it is that they borrow, they might answer that they borrow the power of the faeries — though some of them \"borrow\" from humans as well, since not all of their wares are always obtained honestly.\n\nBorrowers usually trade in novelty; they pick up strange goods from distant places, including small animals, food and drink, fine art, and even magical artifacts (such as enchanted devices or other objects containing vis), and these wares often fetch a good price with faeries, since they usually accept the claim that treasures from distant lands contain more vitality than items obtained locally. Through careful negotiation, Borrowers can sustain a burgeoning business on just a few faerie bargains a year, as long as their competition remains relatively scarce. To ensure this, they usually prefer to keep moving — which also keeps their stock fresh, they say.\n\nTo help with the trade, Borrowers occasionally take promising children as their apprentices, usually by bargaining them away from faeries that have claimed or stolen them from their parents. While making use of prentice labor, they teach them to bargain and the intricacies of dealing with faeries, and eventually initiate them into the Ars Fabulosa. Eventually they become skilled enough to take over the trade from their master, or else to set off on their own.",
+     "source": "Realms of Power: Faerie",
+     "section": "Pagan Traditions"
+    },
+    {
+     "name": "Captivating",
+     "text": "Captivating is the art of exchanging places with a faerie — giving it control over the summoner's body while the summoner becomes the faerie for the duration. The summoner can only affect a faerie that is within range of his voice and has Faerie Might no greater than the absolute total of his applicable Sympathy Traits multiplied by 5. Initiating the effect costs the summoner a Fatigue level. The Captivating Total must exceed the faerie's Might to succeed, and must penetrate its Magic Resistance (though as usual the summoner can add his highest applicable Sympathy Trait to his Penetration score). If the faerie is held by a successful Summoning (one that penetrated its Magic Resistance), treat the effect level as 0 when calculating the Penetration Total, otherwise the effect level is the faerie's Might Score. For example, to change places with a Faerie Might 20 faerie, the summoner would need a Captivating Total + Penetration bonus of 40, or 20 if the faerie were held by a successful Summoning. If the effect penetrates, the summoner and the faerie immediately switch places. Perhaps the easiest way to do this is to have the players trade character sheets. The summoner can do whatever it likes with the faerie, and the faerie has complete control over the summoner. They do not trade their memories, but they do effectively trade minds, so that either character can cast spells on itself to learn about that character's past actions. The only limitation is that the exchange does not affect either character's Personality Traits or Confidence Points (and Faith Points, if the summoner has True Faith), and the summoner also takes his Sympathy Traits with him. Either party can try to cancel the exchange at will, which faeries usually do when the terms of their bargain with the summoner expire. If the other does not wish to relinquish control, they have an emotional struggle for dominance. Both players should choose a Personality Trait that they agree is appropriate to the circumstances and what the character is currently doing — for example, if the summoner's body is sleeping, the faerie's Slothful Trait might best apply, while the summoner might use his Impatient Trait. If the character has no appropriate Personality Traits, treat this as a Trait with a score of 0. If the summoner character has Sympathy Traits appropriate to the faerie he is captivating, that player adds them to his total. Both players then add a stress die roll, and compare the results. If one of them has a higher total than the other, that player may decide whether or not to end the exchange. Captivating is a powerful, continuous effect that warps the summoner over time, giving his body 1 Warping Point every season, and another one every year. However, because the summoner's body is controlled by the faerie, and the faerie is controlled by the summoner, both of them are immune to Faerie Calling for as long as the exchange lasts. It is a risky but effective route to immortality, and a compelling way for a summoner to experience Faerie without giving up his essential humanity. It is said that if the faerie dies while its body is controlled by the summoner, the exchange becomes permanent. Whether or not this is so has yet to be proven, however; others fear that in fact the faerie returns to its body and it is the summoner who dies. Most summoners prefer to ensure that the faerie inhabiting their body remains safe and undamaged for the duration.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Bargaining"
+    },
+    {
+     "name": "Conjure",
+     "text": "Conjure rites produce solid images that conform to the same rules that faeries obey to create their identities — it makes faerie shapes appropriate to a particular faerie's role and made of the power of the realm. A faerie wizard can draw upon his Faerie sympathy to create or change an object in the same way that a faeries does when it adopts a new shape.\n\nThings conjured in this way are called glamours in the guidelines and effects given here, though most faerie wizards would probably not use this word. They are treated like animate illusions with substance, which last only for the duration of the effect, and often the consequences of the glamour are undone when the effect is ended. For example, a fire glamour burns down a house, but as soon as the effect goes away, the house might return exactly as it was. A person slain with a conjured sword is very likely to recover from the wound as soon as the weapon is dispelled.\n\nMany Conjure rites allow the caster to change a target into something else. In these cases, the caster must have an applicable Sympathy Trait for both states, before and after, though both Traits apply to the maximum effect level. For example, to change a monk into a lamb, the caster would need appropriate Sympathy Traits for both a monk and a lamb, but would factor both Traits into the total to decide how powerful an effect he can produce.\n\nSince glamours are based on images, it is possible to create very unnatural situations with them, such as a place that is larger on the inside than on the outside. For example, one could change the inside of a tent into the inside of a castle, or a bag into a deep well. This is simply creating the illusion of the castle on the inside of the tent, but because of the properties of glamours it is as if it were real. When the effect ends, the results are unpredictable and often surprising — the contents of the tent larger on the inside than outside might simply vanish, reappear outside the tent, or wind up transported into Faerie.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Curse of the Faerie Forest",
+     "text": "Enchantment/Conjure (Dream) 45 R: Voice, D: Until, T: Group, Ritual The target group is changed into animals that are most appropriate to their surface thoughts. This effect lasts until they apologize to the enchanter and make amends for the insult that inspired this spell, or else until they or the caster die. (Base 5, +2 Voice, +4 Until, +2 Group)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Curse of the Festering Bruise",
+     "text": "This rite is cast on a weapon of some kind — typically an arrowhead or a knife — and targets the person struck by it. One of this target's wounds (probably the one caused by the weapon) heals as an Incapacitating wound for the duration of the effect. This means that the target must make a Recovery roll at sunrise and sunset, with the normal risk of death or a worsened condition, but is not actually incapacitated. Once the immediate danger has passed, the wound will remain a Heavy wound until the rite's duration ends, at which time it reverts to the level of wound it was previously.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Dismissing",
+     "text": "Summoners who have studied the art of Dismissing have the power to undo supernatural effects made by beings with Might, and to free these beings from other effects that bind them. To do this, the summoner must expend a Fatigue level, and must speak with the being in question. As with the other Arts, he cannot affect a greater Might Score or effect Level than his Sympathy Traits allow.\n\nDismissing has three uses:\n\n• The summoner can cancel any effect produced by the powers of a being with a Might Score, by exceeding the level of the effect on his Dismissing Total and penetrating the being's Magic Resistance. The summoner can also deflect the use of a being's power before it takes effect, if he beats the being's Initiative Total on a Quickness + Finesse stress roll. (If the summoner has Finesse, he can add his highest applicable Sympathy Trait to his score.) Just as magi can fast-cast spells, a summoner can try to dismiss multiple effects in one round, but he suffers a cumulative –6 penalty for each one. • Dismissing can end the duration of any effects that target a being with a Might Score, if he penetrates that being's Magic Resistance and exceeds the level of the cancelled effect on his Dismissing Total. • The summoner can release a being with a Might Score from the terms of an agreement that has supernatural force, such as a bargain made between a summoner and a faerie. To do this, the summoner must exceed the creature's Might Score on his Dismissing Total, and must penetrate its Magic Resistance. Many believe that through this process the summoner takes the debt upon himself, freeing the being from its obligation.\n\nWhen checking for penetration, do not subtract the effect level from the Penetration Total if the being is held by a successful Summoning effect (as above, one that penetrated its Magic Resistance). Note that the summoner can add his highest applicable Sympathy Trait to his Penetration score if he has it.\n\nDismissing is a good way for a summoner to make bargains with faeries that he has no intention of keeping, without suffering the loss of sympathy. While doing this does not affect the summoner's Faerie Rank, individual faeries are likely to resent this behavior. To avoid their enmity, a shrewd summoner will always offer a faerie something of comparable value to the terms of the original bargain in return for accepting the use of this power against it.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Bargaining"
+    },
+    {
+     "name": "Dream",
+     "text": "Dream is the power to see into the lands of Faerie beyond Mythic Europe, as an impartial observer from outside the stories in which faeries play their parts. Here, the dreamer can see the world around him from outside his body, and can comprehend the thoughts and words of others through the universal language of dreams. It is even possible to glimpse an idea of the future through dreams, though the information gained is based on how things generally go in faerie stories, and tends to be in the form of vague signs and portents — symbols of good or bad things to come. Faerie visions can be misleading, and some faerie wizards believe that they actually cause to happen what the dreamer imagines will happen, based on his conviction in his interpretation.\n\nTo handle these visions in the game, the storyguide should allow the player to ask one question about the circumstances in the future, and answer it with a good feeling or bad feeling about the character's fate, perhaps with varying grades of severity. This should be associated with a symbol to give the player something to watch for. For example, a character might see an \"old crow\" as a very good sign within the next day, or a \"green cloak\" as a bad omen for the coming year. The troupe should consider this an opportunity for the dreaming character's player to request a story that he would like to see happen, by describing elements of a vision that the storyguide can bring to pass.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Empathy",
+     "text": "Empathy is the ability to create the power of Faerie within the caster, by drawing forth the qualities of the realm through intense concentration. The caster must expend a Fatigue level while undergoing a mystic ritual, typically designed to lull the caster into a trance-like state. (If the character cannot spend Fatigue levels, or is so tired that the loss would knock him unconscious, the character suffers a Light Wound instead.) The ritual takes about an hour to perform, though if the character is already in this state (intoxicated, say, or having gone without sleep for an entire day and night), it takes no additional time. The disorientation caused by the ritual lasts for the duration of the effect, so that the lost Fatigue cannot be recovered until it has ended.\n\nAs long as the character possesses the Empathy Ability, he may extend the length of a rite by expending another Fatigue level. This allows him to double up any bonuses he might receive to the Rite Casting Total, such as from expending Confidence (or vis, if he has access to Evocation). Each time the character exerts himself, the limit of Confidence Points or pawns of vis he can spend is reset. As part of this calculation, Empathy allows him to effectively double the value of the Sympathy Traits that determine his effect level, so that a character with a total of 3 in Traits could produce a maximum level 30 effect by spending two Fatigue levels, or 45 if he spent three.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Methods"
+    },
+    {
+     "name": "Enchantment",
+     "text": "Enchantment involves convincing a target to accept the effects of the rite through some sort of a performance, such as a song, dance, story, or another art form. This is represented through the use of an Ability, making a roll against an Ease Factor of (the magnitude of the intended effect x 3). If the character succeeds at this task, he may then perform the rite in the following round, but with the level of the effect fixed at the intended magnitude. Or, he may begin another performance, making another roll and increasing the magnitude of the effect he is trying to produce by one. The amount by which his previous total exceeds the target Ease Factor may be applied as a bonus to the character's next roll, whether this is another performance or the Casting total for the rite. Thus, it may be better for the caster to risk botching low-level effects for several rounds, and to slowly increase the magnitude of the rite as his advantage builds. If he fails to achieve the declared Ease Factor, he cannot produce the effect of the rite and must start over with no bonus to the roll.\n\nFor example, a knight attempts to enchant a lady of his acquaintance who is watching him at a tournament, using his skill at Single Weapon to hit a target. His player would like to produce a rite with an effect level of 25, which requires him to beat an Ease Factor of 15, but he does not think he will be able to do it without making several rolls. Thus he begins by declaring an effect of Level 15, which means the Ease Factor is 9. The knight makes a pass on the tourney field, and his player rolls a 6. This combined with his score of 5 and his Dexterity of +1 give him a total of 12. He has exceeded the necessary Ease Factor by 3, and if he released the spell he would gain a +3 bonus to his Casting total. Instead, he elects to increase the effect to Level 20 and an Ease Factor of 12, and the knight makes another pass. He rolls an 8, giving him a total of 17 and a bonus of +5. Increasing the effect level to 25 and the Ease Factor to 15, he makes a final pass and rolls a 7. This gives him a total of 17; he decides his performance is finished, and makes his Casting roll for a Level 25 effect with a +2 bonus in the following round.\n\nThe character with this Method can perform all of his rites as part of his performance activity, even those that use another Method, and it is impossible for a bystander to recognize where his performance ends and the rite begins except by supernatural means (such as Magic Resistance or effects that detect Faerie powers). Enchantment also allows the player to choose to roll a simple die on the Casting roll for any rite, even those that use another Method, removing the risk of botching and losing sympathy on a roll of 0, but also forgoing the chance to gain sympathy on a roll of 1.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Methods"
+    },
+    {
+     "name": "Evocation",
+     "text": "Through Evocation, the character ritually calls upon one or more of the many gods associated with the Faerie realm, and through a short ceremony convinces them to lend their power to the rite. The character gains a Warping Point or spends a Confidence Point, and must call upon his patron faeries in a bold voice with firm gestures, much like a typical magus casting a spell. (Note that though this Method may call upon specific gods, it actually draws upon the power of the Faerie realm in general, and so specific faeries may or may not be involved in the rite.)\n\nAs part of learning Evocation, the character learns to activate vis as magi do, with each pawn spent increasing his Rite Casting Total by 2. This vis can be used to improve any rite, even those that use another Method.\n\nThe character is limited to a number of pawns equal to his score in Evocation + his score in the associated Faerie Power for any given rite, and note that unless the vis is associated with Faerie, each pawn of vis adds an additional botch die in case of a 0 on the Casting roll.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Methods"
+    },
+    {
+     "name": "Faerie Bargains",
+     "text": "Faeries have a special etiquette all of their own, as anyone with Faerie Lore might know, and a great deal of it has to do with how faeries make bargains. Faeries naturally value vitality, as discussed in Chapter 1: Nature of Faerie, but incognizant faeries may not realize that it is vitality they want. Accordingly, summoning a random faerie within range, even though it avoids the need to Penetrate Magic Resistance, is a risk, because the summoner does not know what this faerie thinks it wants. Intelligence + Faerie Lore rolls against an Ease Factor of 12 or higher may allow the character to work out exactly what a faerie wants after a short period of trial bargaining. It is safer to research a faerie, find an Arcane Connection, and then summon that faerie, but that is not always possible. On the other side, if the summoner does not know what a faerie can do, it is hard to make a reasonable request. Players are encouraged to roleplay the bargaining session, and try to come to an agreement in character. If a player accidentally commits a breach of etiquette, such as saying \"thank you\" or acting above their station, the storyguide may allow the player to make an Intelligence + Faerie Lore roll versus an appropriate Ease Factor to see whether or not the character would have actually made that mistake. A particularly bad social gaffe might make it impossible for the characters to ever come to terms, and end the bargaining session immediately. If after a certain period of time the players cannot come to an agreement, say after a few minutes, you can quickly resolve the bargaining session with a contested Communication + Bargain roll, modified by the character's Faerie Rank. Note that applicable Sympathy Traits may also apply as a specialization to this Ability. Summoners generally bring beer, milk, gemstones, or other vitality-rich items with them when they travel, to offer in bargains; careful choice of Sympathy traits can make it likely that such items will be acceptable. Typical requests they might make of faeries include: service, such as fighting with the summoner against an enemy, using its powers to bless the summoner, or allowing the summoner to affect it with his other bargaining powers; permission to travel through lands owned by the faerie, or to harvest vis or other resources from it; a pact of non-aggression with the summoner and his community or his traveling companions; or the promise to owe the summoner a favor, to come and give aid when next called upon. Most faeries try to avoid long-term commitments, as they restrict their ability to gain vitality. Incognizant or narrowly cognizant faeries may, however, accept long-term commitments that suit them perfectly. They still expect substantial compensation from the summoner, however.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Bargaining"
+    },
+    {
+     "name": "Gaze of Gray Years",
+     "text": "The caster performs a work of grim and chilling significance, and then concentrates until he can look his target directly in the eye to release the effect. That person, who must be at least 35 years of age, must immediately make an Aging roll. As an additional effect, this rite includes a curse that gives the target a +15 penalty to this roll. This is generally powerful enough to cause the target to gain a Decrepitude Point and suffer an Aging crisis, and since this is a natural consequence of age, these effects are not undone when the duration ends.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Gown of Enfolding Colors",
+     "text": "Evocation/Beguile 15 R: Touch, D: Mid, T: Room The caster causes all the people in a room to perceive her or another as especially beautiful, and more alluring than anyone else. This impression is superficial only, and the targets may see through the effect by interacting with her in a more significant way. (Base 2, +1 Touch, +2 Mid, +2 Room)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Grant",
+     "text": "Grant gives the caster the power to bless (or curse) a target with the supernatural power of Faerie. This most often manifests in the form of Warping Points or temporary Virtues and Flaws. Since most of these powers only last for the effect's duration, they are usually cast as rituals that remain until a particular condition is fulfilled. All Flaws gained from this power are either Supernatural (Faerie) or General, and all Virtues are Charmed Virtues; see Chapter 5: Touches of Faerie, Charms for details.\n\nSome Grant effects give the target faerie sympathy in the form of Sympathy Traits. Note that like Sympathy Traits gained through sympathetic influence, these Traits are temporary and cannot be increased, and do not affect the character's Faerie Rank (see Chapter 5: Touches of Faerie, Sympathetic Influence).",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Hearth Prison",
+     "text": "All those within the room at the time of casting are prevented from leaving the room for the duration. If the rite is performed within a supernatural aura, this is essentially a permanent effect, though the targets may be able to escape through the Faerie Realm or otherwise departing the mortal realm without actually leaving the room's confines.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Hermetic Rites",
+     "text": "A magus with a Faerie Method and Power can design rituals that use the guidelines for faerie rites, and may use any of the special Faerie Ranges, Durations, or Targets in these Hermetic versions. The storyguide should determine which Technique and Form are used for the ritual, but just as in faerie rites the effects are not natural changes, and will fade as soon as the duration expires. These rituals are cast like Hermetic rituals, including the vis cost, though the caster may use magic or faerie vis without penalty. Also, the caster may add his scores in the Method and Power instead of Artes Liberales and Philosophiae to his Casting Total, and the player may use either the Faerie column or the Magic column of the Realm Interaction Table to determine the aura modifier. The caster must still perform the actions prescribed by the applicable Method during the casting of the ritual, including any additional costs such as expended Fatigue levels or Confidence Points.",
+     "source": "Realms of Power: Faerie",
+     "section": "Rites of Faerie"
+    },
+    {
+     "name": "Know Then the Calloused Touch of Faerie Hands",
+     "text": "Evocation/Grant 30 R: Voice, D: Mom, T: Ind The target immediately gains 5 Warping Points — 4 from this effect and 1 from being exposed to a Level-30 rite. For a character who has never experienced Warping, unless the target has some connection to a supernatural realm, this typically increases his Warping Score to 1 and this gives him a Minor Flaw appropriate to his circumstances, such as Fear or Disfigured. Unlike the effects of other faerie rites this is a permanent effect, as Warping is a natural consequence of exposure to concentrated supernatural power. (Base 20, +2 Voice)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Leap of the Shadows",
+     "text": "The caster causes any target he can see to move immediately to a place within the shadows. This requires a Sympathy Trait associated with darkness or shadow to enact.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Ollamhain",
+     "text": "The Ollamhain (pronounced \"ah-luh-VAIN\") are Irish poets, sages, and performers who have had many dealings with the Fair Folk, as they call the faeries, and who claim special kinship with them. Many of them have Faerie Blood. Their ancient songs and poems are said to contain magic when performed in the correct style — the power to see into hearts and minds, the future, and even the Faerie Realm itself. For these performances, many of them favor the Irish harp that is symbolically associated with them and their island, and pass from father to son special enchanted instruments that have been blessed to play especially well.",
+     "source": "Realms of Power: Faerie",
+     "section": "Pagan Traditions"
+    },
+    {
+     "name": "Performing Faerie Rites",
+     "text": "Faerie rites require the character to possess three things: a Faerie Method, a Faerie Power, and faerie sympathy with the target, represented with an appropriate Sympathy Trait. The Method describes what the character must do to perform the rite, the Power describes the effect of the rite, and the Sympathy Trait describes the qualities the target must possess.\n\nIf the character has an appropriate Sympathy Trait, and has met the activation conditions of the Faerie Method, he rolls a stress die and adds the result to the following formula: the Characteristic associated with the Faerie Method + the character's score in the Faerie Method Ability + the character's score in the Faerie Power Ability + the aura modifier for a Faerie effect. The result is the level of effect produced by the rite, though this cannot exceed the value of (the sum of the character's applicable Sympathy Traits x 5). For example, a character with two applicable Sympathy Traits — one at +2 and the other at +1 — has a Sympathy Trait total of +3, and cannot produce an effect greater than level 15.\n\nIt is possible to use negative Sympathy Traits to perform a rite, since they mean that the character has a powerful relationship with the faerie realm, albeit a negative one. When calculating the maximum level of a faerie rite, you should treat negative Sympathy Traits as if they were positive. Thus, a character with two applicable Sympathy Traits, at +1 and –4, could produce an effect of up to Level 25.\n\nWhen performing a faerie rite, a roll of 1 on the stress die gives the character an experience point in all of the applicable Sympathy Traits used in the ceremony, and a botch removes an experience point from each of them, just as when using Sympathy Traits as specializations. Negative Sympathy Traits also add additional botch dice, as usual.\n\nCharacters have access to a wide variety of Ranges, Durations, and Targets associated with the Faerie realm when performing faerie rites. These are listed in the sidebar below. They can also use any of the standard Hermetic parameters, and players are also encouraged to invent others that seem appropriate to the effects produced by the rites, since there are many other limitations on these effects (especially the requirement for applicable Sympathy Traits).\n\nRitual-level rites take fifteen minutes for each magnitude of the effect, just as in Hermetic magic, but do not require vis. However, it is impossible to produce a permanent effect with a faerie rite, the way it is done with Hermetic spells; rituals with Momentary duration simply end, and the targets immediately return to their natural and unaffected state. The only circumstances that have lasting effects are when the rite involves a natural (or supernatural) process, such as aging, healing, or Warping. For example, an effect that forces a character to age temporarily subjects that character to the same physical conditions that winter causes each year, and if the player fails the roll the character suffers the natural consequences.",
+     "source": "Realms of Power: Faerie",
+     "section": "Rites of Faerie"
+    },
+    {
+     "name": "Portage",
+     "text": "Portage is the power to travel across the sky in the blink of an eye, or put a girdle around the earth in forty minutes. It transports the target and anything attached to it from one place to another by means of the phenomenon known as faerie trods — a Hermetic term to describe areas of space that connect one place to another, like the paths between different levels of regiones. These short-cuts take no time at all to traverse, so that an outsider who watches such a traveler might see him disappear and immediately reappear several paces away. To the traveler himself, of course, this journey appears seamless.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Red Sky at Dawn, Blue Sky at Dusk",
+     "text": "Empathy/Grant General R: Touch, D: Mid, T: Bound, Ritual The caster tints a Faerie aura with one of his Sympathy Traits for the duration, causing all those within the area to become sensitive to that Trait. (Base effect, +1 Touch, +2 Mid, +4 Bound)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Release the Spellbound Servant",
+     "text": "For the duration, the target is freed from a single supernatural effect, as if the duration of the effect had ended, so long as the level of this rite equals or exceeds the level of the effect. This protection lasts for an hour and a day, at which point the suppressed effect returns.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Seduce the Innocent Heart",
+     "text": "Enchantment/Beguile 30 R: Prs, D: Sun, T: Ind The target experiences powerful curiosity and carnal desire, which affects everything he does until the sun rises. These inflamed passions may be easily manipulated by a skilled seducer, though of course the target is unlikely to do anything to which he is fundamentally opposed. The rite merely removes his inhibitions for the duration. (Base 10, +2 Prs, +2 Sun)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Sovereign Silence of Opposition",
+     "text": "For as long as the target does not speak, or until a month has passed, no creature with a Might Score less than or equal to the level of this effect may harm the target or cause the target to be harmed by its actions. This includes affecting the target with its powers, even if those powers seem to be beneficial. This requires that the caster possesses a Sympathy Trait appropriate to the subjects of the ward, as well as a Trait appropriate to the target. For example, Children would keep creatures associated with childhood at bay, and Stone would ward away beings tied to rock and solid earth.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Stir the Body",
+     "text": "The target, who must be either incapacitated or must have suffered a Light wound, may make an immediate Recovery roll. If the results are negative, treat them as no change.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Summoning",
+     "text": "Summoning is the mystic art of calling out faeries from the surrounding area and holding them in attendance in order to bargain with them. To some it may appear as if this art actually creates a faerie, or transforms a mundane object into a faerie, but most summoners believe that the faerie comes from somewhere nearby and manifests in an appropriate shape. And since it is possible to summon faeries who have assumed a specific role, most summoners also believe that the other faeries that appear must exist before the summoning as well. To summon a faerie, a summoner must have an appropriate Sympathy Trait, positive or negative, to represent a connection to that type of faerie. If the summoner has several applicable Sympathy Traits, their scores are added together; if the values are negative, treat them as positive. The sum of these Traits, multiplied by 5, determines the maximum Might Score that the character can summon. The summoner's Faerie Rank also boosts or penalizes his Summoning Total. The summoner must then mentally prepare himself for a few minutes and expend a Fatigue level (if he cannot expend Fatigue, he cannot perform the summoning). The player decides the strength of the faerie he will attempt to summon, which cannot exceed the maximum Might Score determined by his applicable Sympathy Traits, and makes a roll: a stress die + Presence + Summoning + his Faerie Rank + the aura modifier. No matter what the Summoning Total, a faerie will appear, even on a botch. If there is a mundane object nearby that is associated with the Sympathy Traits used in the summoning, the faerie could appear by animating that object, or else it might simply emerge from somewhere in the surrounding environment, like from behind a tree or out of the ground. If the player does botch, the faerie will be hostile to the summoner, or perhaps unbound by the terms of any bargain they make. Or perhaps the summoner calls an angel or a demon by mistake, or a faerie that appears to be a different faerie, or is more or less powerful than the summoner intended. The summoner can try to summon a specific faerie based on its role, though unless he has an Arcane Connection to it there is no guarantee that the faerie he gets is the faerie that he wants. The effect will summon a faerie with Might Score no greater than the maximum value that has all of the qualities of the Sympathy Traits used in the summoning. And if this can apply to more than one faerie in the area, then it is left to the storyguide which one appears. If the summoner does have an Arcane Connection to a particular faerie, he must penetrate its Magic Resistance to be certain that it will appear, and note that the player may add his highest applicable Sympathy Trait to his Penetration score if he has it. Otherwise, the targeted faerie may receive the summons and simply ignore it. If the Summoning Total equals or exceeds to the summoned faerie's Might Score and the effect penetrates its Magic Resistance, the summoner takes hold of the faerie for the duration. When a faerie is held in this way, it is much easier to penetrate its Magic Resistance with his other bargaining arts. Also, until the summoning is over, it must attend to him and listen to what he has to say, and he is warded against any attacks or powers it tries to use against him. However, either the summoner or the faerie can end the summoning at any time, and this immediately returns the faerie to wherever it came from. A faerie might choose to stay and listen to what the summoner has to say, or it might simply leave immediately if it does not care for the circumstances. Most faeries will listen long enough to hear what the summoner has to offer. If the Summoning Total is less than the targeted faerie's Might Score, or the effect fails to penetrate its Magic Resistance, the faerie that appears is not in any way bound by the summoning. It is free to ignore the summoner, attack him, or affect him with its powers as it wishes. The faerie can return to where it came from at will, but the summoner cannot send it away. Once the summoning is over, if the two of them were able to come to an arrangement, the summoner gains an experience point in an appropriate Sympathy Trait. If they did not make a bargain, he subtracts an experience point from an appropriate Sympathy Trait. This means that it is generally bad for the character to harass faeries with disingenuous offers. Any bargain the two of them make is binding for the faerie, and it cannot through action or inaction break this agreement, even if the summoner does not fulfill his part of the arrangement. A summoner who breaks the terms of a bargain made during a summoning immediately gains a –3 Sympathy Trait appropriate to the faerie. This means that it is rarely worthwhile for a summoner to renege on a deal, since this will cause him to lose faerie sympathy and possibly Faerie Rank as well.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Bargaining"
+    },
+    {
+     "name": "Summoning Faeries",
+     "text": "There are at least three other Supernatural Abilities in Mythic Europe that may be used to summon faeries, and since all of them originate from the same art practiced by sorcerers long before the birth of Christ, they use very similar concepts. The differences are mostly in how they target faeries and other supernatural beings, as summarized below. To help distinguish them, each version of Summoning might have a parenthetical in front of it, suggesting its focus. For example, faerie summoning from the Ars Fabulosa might be called (Faerie) Summoning, since it only affects beings of its particular realm. (Spirit) Summoning: This Art calls an incorporeal spirit to the summoner, generally one associated with the realm of power that gives the summoner this power, though demons are also especially likely. If the summoning is successful, the spirit is bound in a circle until released by the summoner. Spirit Summoning is always tainted with the influence of the Infernal, and thus infernal versions are most common, but it may be associated with the Faerie or Magic realms instead. The related arts (Ablating, Binding, and Commanding) are all Infernal. (Realms of Power: The Infernal, pages 114-115.) (Elemental) Summoning: Some applications of this type of hedge magic summon an elemental being associated with a specific element (Aquam, Auram, Ignem, or Terram). This being can come from any realm, including Faerie, and is typically held within a container where it remains under the summoner's control until released. The power is most commonly Magic, though versions associated with other realms are possible. The related Elementalist Arts (Controlling, Divining, and Refining) are always aligned with Magic. (Hedge Magic, Chapter 2: Elementalists, Summoning) Sihr: This Art can summon and bind jinn, including faerie jinn, if the targets have been properly researched by a Hermetic Sihr. It is a Magic power, thought to be very similar to the Elemental version of Summoning, though perhaps Faerie, Infernal, or even Divine versions also exist. (Houses of Hermes: Societates, pages 135-136.)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Bargaining"
+    },
+    {
+     "name": "The Endless Summer",
+     "text": "For the duration of the effect, the target receives a bonus to Aging rolls, equal to (3 x (the magnitude of this effect – 2)). For example, a Level-25 effect would subtract 9 from Aging rolls. This also negatively affects Recovery rolls made during the period by the same amount. This effect must remain active for at least half of the period before the roll is made, so the rite must be performed no later than summer to affect a character's Aging roll for that year.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "The Eternal Parry",
+     "text": "The caster wields a blade while performing a dance, and from then on he receives a +3 bonus to his Defense for as long as he continues to brandish his weapon. The effect ends the moment he sheathes it, drops it, or stops fighting.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "The Faerie Shade",
+     "text": "This rite brings the target back from the dead, restoring life to a corpse. The target remembers everything it knew up to the moment of its death, and can make new memories, but cannot learn anything or gain experience. Many believe that the body is animated by the spirit of a faerie, rather than the lost soul, and in support of this theory the person returned to life is often found to have a very different personality.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "The Irresistible Dance",
+     "text": "Empathy/Beguile 25 R: Voice, D: Focus, T: Ind The target is filled with wild, hedonistic abandon, and feels compelled to dance. While under the effect of this rite, the target must make Stamina rolls to avoid losing Fatigue levels, and cannot fall unconscious — if he would pass out, he suffers a Light wound instead and keeps dancing. The effect lasts until the caster performs another rite, or uses any other supernatural power. (Base 10, +2 Voice, +1 Focus)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "The Old Guard",
+     "text": "Evocation/Conjure 20 R: Touch, D: Sun, T: Group The caster creates the glamour of ten men, properly equipped as grogs, who gather protectively about the caster to protect him from harm. These imaginary people have average Characteristics and no Abilities, and must act as an untrained group. (Base 3, +1 Touch, +2 Sun, +2 Group)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "The Reflecting Pool",
+     "text": "Evocation/Dream 30 R: Sympathy, D: Aura, T: Medium, Ritual After this rite has been performed, anyone can look into the pool and perceive events as they transpire at another location, described by the caster during the casting. It is often possible for the person looking into the pool to change this location, if he has strong faerie sympathy with another place. (Base 1, +4 Sympathy, +4 Aura, +1 Medium)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "The Urgent Messenger",
+     "text": "For as long as the target is traveling, his movement rate is doubled.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Touch of the Merciless Lover",
+     "text": "The caster brushes against the target, and the target immediately wastes away and dies. When the effect's duration ends, the target is restored to life, waking in exactly the same physical state as before the spell took effect, assuming no additional damage has been dealt to his body. However, if the corpse is buried or hanged, the target will likely suffocate upon reawakening. If it is destroyed during the interim, the target might still return but as a faerie ghost or spirit. While under the effects of this rite, the target may undergo something similar to the Faerie Calling, returning to life with a Faerie Sympathy Trait that is appropriate to the experience.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Vision of the Oracles",
+     "text": "Empathy/Dream 30 R: Prop, D: Mom, T: Ind, Ritual The caster places a coin against the target’s forehead, and concentrates upon a question posed by the target. The caster then experiences a brief, fleeting faerie vision related to that question that concerns potential events in the next year. (Base 25, +1 Prop)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Volkhvy",
+     "text": "Far beyond the reach of the eastern arm of the Christian Church are people who have never heard the Gospels and who still keep the old pagan ways — Russian faerie wizards known as the Volkhvy. Their great rites are legendary, where everyone in the community comes together to entreat their faerie gods for aid, usually through glamours and blessings that reflect the harsh wilderness in which they live. They typically possess great conviction because of these extreme conditions, becoming especially self-confident, though of course this Virtue could come from their faerie rites as easily as their personal fortitude.",
+     "source": "Realms of Power: Faerie",
+     "section": "Pagan Traditions"
+    },
+    {
+     "name": "Ware",
+     "text": "Ware allows the caster to take responsibility for the target and put it under his protection. This is designed to keep the target safe from harm, both natural and supernatural, often through the use of wards. Wards are effects that keep the specified thing from touching the target, or acting against it in any way. This includes using its powers on the target, and even sticking it with weapons or throwing things at it. The warded subject cannot harm the target, or through its actions cause it harm. While all rites require a Sympathy Trait that is applicable to the target, many of these effects require the caster to have two applicable Sympathy Traits — one to affect the target, and one to describe what the target is protected against. Use both of these Traits to determine the maximum level of the effect. These faerie wards are more effective in keeping away subjects with which the caster has positive sympathy than they are at warding away subjects with which the caster has negative sympathy. Like magical wards, the effect must penetrate to affect a subject with Magic Resistance.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Weal",
+     "text": "This Power represents the faerie ability to shrug off damage relatively quickly, since injuries are rarely part of a faerie's persona. They tend to do this by changing how the target heals naturally, rather than actually healing, since most faerie powers do not have lasting effects beyond their durations. This can be seen most clearly in the Weal guidelines below. Weal also affects age, making living targets less likely to suffer the ravages of time, and can cause a target to regress in years for the duration. This effect cannot cause a character to revert to childhood, nor can it affect a character who has not yet reached physical maturity.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Wise Folk",
+     "text": "There are many sorts of faerie-touched men and women who typically live on the fringes of society. Called \"wise men\" and \"wise women\" by villagers who turn to them when troubled, they are also forced to live apart from the community because of their strange ways and their intimidating powers. Their strengths are in keeping the supernatural at bay and protecting those in their charge, and through their exertions they can mend or injure those who they think worthy. It is folk like this that the magi of the Order of Hermes often imagine when they use the term \"hedge wizard.\"",
+     "source": "Realms of Power: Faerie",
+     "section": "Pagan Traditions"
+    },
+    {
+     "name": "Woe",
+     "text": "Faerie rites allow faerie wizards to damage a target directly, like the faeries whose power they channel. Consequently, Woe can cause grave injuries with greater ease than Hermetic magic. However, because of the universal properties of faerie rites, this damage immediately goes away as soon as the effect wears off. Those who wield this power thus usually seek to harass and delude their quarry with their rites rather than simply destroying them. And of course, it is generally much easier to simply cut off their enemies' heads once they are disoriented.",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    },
+    {
+     "name": "Words that Live in Song",
+     "text": "Enchantment/Dream 20 R: Touch, D: While, T: Group The caster of the rite clasps hands with one of the targets, and begins a song in his native language. For as long as the song lasts, everyone in the group can understand the lyrics to the song, and can contribute to it by singing their own words. (Base 4, +1 Touch, +1 While, +2 Group)",
+     "source": "Realms of Power: Faerie",
+     "section": "Faerie Powers"
+    }
+   ],
+   "blood": [
+    {
+     "name": "Bloodcap Blood",
+     "text": "Bloodcaps are frightening faeries of cruel winter who haunt the wildernesses where blood has been shed, drawn to violence and death. Children with bloodcap blood most often come about when a woman is held captive by one of these faeries and subjected to a terrifying imprisonment while the faerie feeds off her fear. It is said that one of Mercere’s grandchildren married a bloodcap in an unholy ceremony, and raised her children as Redcaps (see Houses of Hermes: True Lineages, pages 91, 104–105 for more details).",
+     "source": "Realms of Power: Faerie",
+     "stock": "Bloodcap",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Brownie Blood",
+     "text": "Couples that are fortunate to have a helpful faerie such as a brownie or portune would be wise to exercise caution before introducing a child to the family. Household faeries can be very jealous of babies and may take them in lieu of payment for their service. Such children, if retrieved, may bear the blood of a brownie. And even if it is wellinclined towards the child, the attention of a brownie can still taint an infant, leaving it with Faerie Blood. Characters with brownie blood are usually diligent by nature and hard workers. They often have an unnatural desire to help people out.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Brownie",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Dwarf Blood",
+     "text": "This variety of Faerie Blood can originate in any diminutive subterranean faeries. Dwarfs often make their homes close to mundane settlements. And mortals may profit from their labor, although not always with the consent of the dwarf. Subterranean faeries occasionally make charms that are bought or stolen from them. These charms induce fertility, health, or else are designed to ward a child from evil; but all can also cause Faerie Blood. Like their cousins the goblins, dwarfs are also prone to taking children in exchange for changelings.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Dwarf",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Ettin Blood",
+     "text": "Ettins (also called ogres or trolls) are common in the stories of Germanic people. They are brutish giants that usually range from Size +3 to +5. Female ettins — called \"troll-wives\" — can often be exceedingly beautiful. Troll-wives are particularly prone to take husbands among heroic men who impress them, and their children are often powerful magicians. Some troll-wives steal Gifted children rather than giving birth to them, then raise them as their own. Trollwives are usually no more than 3 points of Size from their husband, or else are capable of adopting a human-sized form. Characters with ettin blood must be careful in bright sunlight, since it is often painful or can even turn the character to stone until sunset, although only direct sunlight can have this effect.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Ettin",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Faerie God Blood",
+     "text": "Sometimes the gods of old — powerful faeries in their own right — had children with mortals, and legends abound with the stories of their exploits. Characters with this variety of Faerie Blood might be descendants of Zeus, Venus, Morrigan, Odin, Pelos, or any one of the host of the other gods of their people. With such noble blood in their veins, these characters rarely remain anonymous for long, and many believe that a great destiny lies before them. Picking Sympathy Traits appropriate to the specific god is very important, and they should relate to his or her principle attributes.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Faerie God",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Ghul Blood",
+     "text": "The ghula are rapacious wasteland faeries of the Arabic world. Sexual encounters between human men and female ghula result in either another ghula (if the child is a girl) or ghul-blooded humans (if a boy is born). The sons of ghula can then go on to produce either girls or boys with ghul blood. This variety of faerie blood could also represent other violent faerie ancestors. Those with ghul blood are nearly always sinister-looking, born with teeth, and unusually aware of their surroundings.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Ghul",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Goblin Blood",
+     "text": "\"Goblin\" is the general term for a subterranean faerie of a destructive bent such as those found in caves or mines. More generally it is used to denote a malicious faerie of short stature. Goblin Blood nearly always enters a human lineage through changelings who have been retrieved by their parents or else abandoned by the goblin troupe once the faeries lose interest.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Goblin",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Huldra Blood",
+     "text": "The huldra (plural huldrene) is a variety of nymph native to Scandinavian lands, also known as a skogsrå or tallemaja. The rarer male form is called a huldu or huldrekall. They are often exceedingly beautiful from the front, although their backs are hollow like a canoe. Huldrene never wear clothes, and have the tail of a cow. Their most distinctive feature is their power to disappear from sight and remain hidden when no-one is watching. A man can unknowingly marry a huldra and raise children with her, but she always eventually leaves him when he discovers her secret. Some huldrene are sexual predators, rewarding those who please them and killing those who disappoint. Others are guardians of morality; if a man is unfaithful to his wife with a huldra, then the faerie punishes him by causing him to father huldrablooded children.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Huldra",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Nymph Blood",
+     "text": "Nymphs haunt the borders of human settlement, and are the archetypal sexual predator. They are particularly attracted to young men on the verge of adulthood, and occasionally seek out young heroes with whom to mate. A nymph who has a child herself is transformed into a different type of faerie altogether, and abandons the child with its father. Consequently, some nymphs chose not to directly have children; instead, an encounter with the nymph leaves a man both exceptionally lustful and especially virile, and he often conceives a child with a mortal woman while still under the faerie's influence. These children always have nymph blood. Nymphs also partake in wild parties with satyrs, and any girl children born to humans following such a party bear nymph blood.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Nymph",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Padfoot Blood",
+     "text": "A padfoot is a faerie that takes the form of an immense black dog with glowing green eyes. Padfoots are commonly believed to be hostile to man, perhaps because a number of other faeries and demons take a similar form, but in actual fact they take it upon themselves to protect travelers from dangers such as treacherous bridges and bandits. Those whom they ward from these dangers are often terrified of the hound and oblivious of the danger they are in until later. Pregnant women who are protected by a padfoot may have a child who bears animal features.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Padfoot",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Satyr Blood",
+     "text": "Almost as common as mortal descendants of courtly faeries are those engendered by fauns and satyrs. These lustful faeries frequently force themselves on mortal women who meet them on the borders of the wilderness; but such encounters are about the sexual act, not procreation. However, on occasion satyrs and fauns hold bacchanalian parties with nymphs, and not all who attend are faeries. Mortal men and women are deliberately included in these orgies, although they are shrouded in the glamour to appear as fauns or nymphs, respectively. Children that are conceived at one of these parties have Faerie Blood — the boys have satyr blood and the girls have nymph blood.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Satyr",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Selkie Blood",
+     "text": "Selkies and their close cousins the swanmaidens can be trapped by mortal men, and become their brides. They derive vitality from their families by acting the part of wife and mother, and raise children with selkie blood. Should the selkie gain her freedom from the marriage (and they almost always do), then the child is often left to fend for itself while the father fruitlessly searches for his wife.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Selkie",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Sidhe Blood",
+     "text": "The most common varieties of all Faerie Blood are derived from the courtly faeries, which in Ireland are called \"sidhe.\" Highly cognizant faeries of this type often seek out humans for the specific purpose of producing a child who partakes in the faerie's own nature. The Faerie Heritage Flaw is therefore particularly common among those with sidhe blood. Stories are told of Faerie Knights who have a passionate encounter with a mortal woman but who then leave, unaware of the child conceived of their lust. When, many years later, the son tracks down his father the faerie does the honorable thing and marries the woman he has shamed. More sinister are the glanconers who abduct maidens from their homes. The woman never returns, but occasionally a child might appear on the doorstep of its grandparents' home.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Sidhe",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    },
+    {
+     "name": "Undine Blood",
+     "text": "Undines are those Courtly Faeries who inhabit rivers, particularly those rivers that form boundaries between countries or geographical features. They may be the progenitors of lineages of mortals in similar manner to other Courtly Faeries. Perhaps the most famous lineage of undine blood is that of the rulers of Lusignan castle, who had Mélusine as their ancestor. A character with undine blood often needs to be immersed in water regularly, or else he suffers ill effects. This variety of Faerie Blood can substitute for a water-inhabiting faerie such as a mermaid, although those faeries that can change shape are best treated as a variety of selkie blood instead.",
+     "source": "Realms of Power: Faerie",
+     "stock": "Undine",
+     "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
+    }
+   ]
+  }
+ },
  "creationRules": {
   "detailedCharacterCreation": {
    "name": "Detailed Character Creation",

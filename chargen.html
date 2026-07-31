@@ -886,12 +886,17 @@ function renderReview(el){
     <div class="navbtns" style="justify-content:flex-start;flex-wrap:wrap">
       <button class="btn" id="dlBtn">⬇ Download JSON</button>
       <button class="btn ghost" id="copyBtn">Copy to clipboard</button>
+      <button class="btn" id="actorBtn" title="titterpig-dsl .actor file">⬇ Export .actor (titterpig-dsl)</button>
       <button class="btn" id="foundryBtn" title="arm5e Actor JSON — Foundry: Actors → Import Data">⬇ Export to Foundry (arm5e)</button>
     </div>
-    <p class="mini" style="margin-top:6px">Foundry import: in an arm5e world, <em>Actors → Import Data</em> on a new Actor. Abilities/Virtues/Flaws/Spells are mapped to arm5e keys where possible; a few mystery abilities import as custom.</p>
+    <p class="mini" style="margin-top:6px"><strong>.actor</strong>: a titterpig-dsl character DEF (drops into an armdef corpus). <strong>Foundry</strong>: in an arm5e world, <em>Actors → Import Data</em> on a new Actor; Abilities/Virtues/Flaws/Spells map to arm5e keys where possible.</p>
     <textarea class="export-area" id="exp" readonly>${esc(JSON.stringify(obj,null,2))}</textarea>`;
   $('#dlBtn').onclick=()=>{const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(C.name||'character').replace(/\s+/g,'_')+'.json';a.click();};
   $('#copyBtn').onclick=()=>{navigator.clipboard.writeText(JSON.stringify(obj,null,2)).then(()=>{$('#copyBtn').textContent='Copied ✓';});};
+  $('#actorBtn').onclick=()=>{ try{ const txt=buildActorFile();
+    const blob=new Blob([txt],{type:'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);
+    a.download=(C.name||'character').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')+'.actor';a.click();
+  }catch(e){ $('#actorBtn').textContent='.actor export failed'; console.error(e); } };
   $('#foundryBtn').onclick=async()=>{
     const btn=$('#foundryBtn'); btn.textContent='Building…';
     try{ await ensureFmap(); const actor=buildFoundryActor();
@@ -987,6 +992,69 @@ function buildFoundryActor(){
     },
     items
   };
+}
+/* ---- titterpig-dsl .actor export ----------------------------------------
+   Emits the character as a structured DEF inside an EXTENSION document, in the
+   same shape the armdef corpus uses for named characters (Characteristics DEF,
+   Virtues/Flaws LIST with parameters, ABILITIES/PERSONALITY_TRAITS blocks, and —
+   for magi — Hermetic Arts + SPELLS_KNOWN). This is the export path for realm
+   (Magic/Faerie) characters that have no Foundry mapping, and is offered for all. */
+function dslHash(seed){
+  const cs='abcdefghijklmnopqrstuvwxyz0123456789';
+  let h=0; for(let i=0;i<seed.length;i++) h=(h*31+seed.charCodeAt(i))>>>0;
+  let out=''; for(let i=0;i<24;i++){ h=(h*1103515245+12345)>>>0; out+=cs[h%36]; }
+  return 't'+out;
+}
+function buildActorFile(){
+  const baseType = isMagus()?'Magus':(C.type==='companion'?'Companion':'Grog');
+  const name = (C.name||'Unnamed Character').replace(/"/g,'');
+  const hash = dslHash(name+'|'+baseType);
+  const q = s => '"'+String(s==null?'':s).replace(/\\/g,'\\\\').replace(/"/g,'\\"').replace(/\r?\n/g,'\\n')+'"';
+  const T = n => '    '.repeat(n);
+  const vfList = arr => '['+arr.map(v=>'^"'+v.name+'"'+(v.detail?`("${String(v.detail).replace(/"/g,'')}")`:'')).join(', ')+']';
+  const L=[];
+  L.push(`EXTENSION "Sjorseidr_Chargen_${hash.slice(0,12)}" {`);
+  L.push(`${T(1)}NAME "Sjórseiðr character: ${name}"`);
+  L.push(`${T(1)}VERSION "0.5.0"`);
+  L.push(`${T(1)}SPEC_VERSION "0.5"`);
+  L.push(`${T(1)}DEPENDS_ON "ARMDef_Core_Base"`);
+  L.push('');
+  L.push(`${T(1)}#${hash} ^"${name}" DEF {`);
+  L.push(`${T(2)}EXTENDS ^"${baseType}"`);
+  L.push(`${T(2)}PROPERTIES {`);
+  L.push(`${T(3)}^"Characteristics" DEF {`);
+  DATA.characteristics.forEach(c=>L.push(`${T(4)}^"${c.name}" INTEGER ${C.characteristics[c.key]||0}`));
+  L.push(`${T(3)}}`);
+  L.push(`${T(3)}^"Size" INTEGER ${+C.size||0}`);
+  L.push(`${T(3)}^"Age" INTEGER ${+C.age||0}`);
+  if(C.might && C.mightRealm) L.push(`${T(3)}^"Might" INTEGER ${+C.might||0} NOTE "${C.mightRealm} Might"`);
+  if(isMagus()&&C.house) L.push(`${T(3)}^"House" STRING "${C.house}"`);
+  L.push(`${T(3)}^"Virtues" LIST ${vfList(C.virtues)}`);
+  L.push(`${T(3)}^"Flaws" LIST ${vfList(C.flaws)}`);
+  if(C.equipment) L.push(`${T(3)}^"Equipment" STRING ${q(C.equipment)}`);
+  L.push(`${T(3)}^"Source" STRING "Sjórseiðr character creator"`);
+  if(isMagus()){
+    const at=artTotals();
+    L.push(`${T(3)}^"Hermetic Arts" DEF {`);
+    [...DATA.arts.techniques,...DATA.arts.forms].forEach(a=>L.push(`${T(4)}^"${a.name}" INTEGER ${scoreFromXp(at[a.key]||0)}`));
+    L.push(`${T(3)}}`);
+  }
+  L.push(`${T(2)}}`);
+  const pts=(C.personalityTraits||[]).filter(t=>t.name);
+  if(pts.length){ L.push(`${T(2)}PERSONALITY_TRAITS {`);
+    pts.forEach(t=>L.push(`${T(3)}"${t.name.replace(/"/g,'')}" ${(+t.score>=0?'+':'')}${+t.score||0}`)); L.push(`${T(2)}}`); }
+  const abils=abilityTotals();
+  if(abils.length){ L.push(`${T(2)}ABILITIES {`);
+    abils.forEach(t=>{ const nm=(t.name+(t.param?` (${t.param})`:'')).replace(/"/g,''); const spec=t.name===NATIVE?C.childhood.nativeLang:(t.spec||'');
+      L.push(`${T(3)}"${nm}" SCORE ${scoreFromXp(t.xp)}${spec?` SPECIALTY "${String(spec).replace(/"/g,'')}"`:''}`); });
+    L.push(`${T(2)}}`); }
+  if(isMagus()&&C.spells.length){ L.push(`${T(2)}SPELLS_KNOWN {`);
+    C.spells.forEach(s=>L.push(`${T(3)}"${(s.name||'').replace(/"/g,'')}" TECHNIQUE "${s.technique||''}" FORM "${s.form||''}" LEVEL ${+s.level||0}`));
+    L.push(`${T(2)}}`); }
+  if(C.biography) L.push(`${T(2)}DESCRIPTION ${q(C.biography)}`);
+  L.push(`${T(1)}}`);
+  L.push('}');
+  return L.join('\n')+'\n';
 }
 function exportObject(){
   const at=artTotals(), artsObj={};

@@ -365,6 +365,35 @@ def main():
         })
     templates.sort(key=lambda x: (x["type"], x["name"]))
 
+    # Realm toolkits — the building blocks for Magic/Faerie characters (the realm
+    # modifier). All present in the corpus, verbatim descriptions preserved.
+    def toolkit(ext, extra):
+        out = []
+        for te in ents:
+            if te.get("extends") != ext:
+                continue
+            row = {"name": te["name"], "text": desc(te), "source": prop(te, "Source")}
+            for src_prop, key in extra.items():
+                row[key] = prop(te, src_prop)
+            out.append(row)
+        out.sort(key=lambda x: x["name"])
+        return out
+
+    realm_toolkits = {
+        "magic": {
+            "qualities": toolkit("Magic Quality", {"Magnitude": "magnitude"}),
+            "inferiorities": toolkit("Magic Inferiority", {"Magnitude": "magnitude"}),
+            "powers": toolkit("Common Magic Power", {"Page": "page"}),
+        },
+        "faerie": {
+            "powers": toolkit("Faerie Power", {"Group": "group", "Might Cost": "mightCost",
+                                               "Might Cost Value": "mightCostValue",
+                                               "Initiative": "initiative", "Form": "form"}),
+            "wizardry": toolkit("Faerie Wizardry", {"Section": "section"}),
+            "blood": toolkit("Faerie Blood", {"Stock": "stock", "RoP Faerie Note": "note"}),
+        },
+    }
+
     creation_rules = {}
     for key, ename in CREATION_RULE_ENTITIES.items():
         e = by_name.get(ename)
@@ -439,6 +468,7 @@ def main():
         "abilities": abilities,
         "trainingPackages": training,
         "characterTemplates": templates,
+        "realmToolkits": realm_toolkits,
         "creationRules": creation_rules,
         "spellsFile": "chargen-spells.json",
         "spellCount": len(spells),
@@ -471,6 +501,11 @@ def main():
           f"({sum(1 for t in templates if t['type']=='grog')} grog / "
           f"{sum(1 for t in templates if t['type']=='companion')} companion / "
           f"{sum(1 for t in templates if t['type']=='magus')} magus)")
+    rm = realm_toolkits
+    print(f"  realm toolkits: magic {len(rm['magic']['qualities'])}Q/"
+          f"{len(rm['magic']['inferiorities'])}I/{len(rm['magic']['powers'])}P | "
+          f"faerie {len(rm['faerie']['powers'])}P/{len(rm['faerie']['wizardry'])}W/"
+          f"{len(rm['faerie']['blood'])}B")
     print(f"  creation-rule passages {len(creation_rules)}/{len(CREATION_RULE_ENTITIES)}")
     print(f"  spell guidelines {len(guidelines)} rows across "
           f"{len(set((g['technique'],g['form']) for g in guidelines))} Te/Fo tables")
