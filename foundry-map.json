@@ -1,0 +1,436 @@
+{
+ "meta": {
+  "source": "arm5e arm5e-3.0.1-Stentorius",
+  "note": "arm5e Foundry export codes. Regenerate with scripts/build_foundry_map.py."
+ },
+ "houses": {
+  "House Bjornaer": "bjo",
+  "House Bonisagus": "bon",
+  "House Criamon": "cri",
+  "House Ex Miscellanea": "exm",
+  "House Flambeau": "fla",
+  "House Guernicus": "gue",
+  "House Jerbiton": "jer",
+  "House Mercere": "mer",
+  "House Merinita": "mta",
+  "House Tremere": "tre",
+  "House Tytalus": "tyt",
+  "House Verditius": "ver"
+ },
+ "abilities": {
+  "(Area) Lore": {
+   "key": "areaLore",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "(Dead Language)": {
+   "key": "deadLanguage",
+   "category": "academic",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "(Living Language)": {
+   "key": "livingLanguage",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "com"
+  },
+  "(Mystery Cult) Lore": {
+   "key": "organizationLore",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "(Organization) Lore": {
+   "key": "organizationLore",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Animal Handling": {
+   "key": "animalHandling",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "com"
+  },
+  "Area Lore": {
+   "key": "areaLore",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Artes Liberales": {
+   "key": "artesLib",
+   "category": "academic",
+   "option": false,
+   "defaultChaAb": "int"
+  },
+  "Athletics": {
+   "key": "athletics",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "dex"
+  },
+  "Awareness": {
+   "key": "awareness",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "per"
+  },
+  "Bargain": {
+   "key": "bargain",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "com"
+  },
+  "Bows": {
+   "key": "bows",
+   "category": "martial",
+   "option": false,
+   "defaultChaAb": "per"
+  },
+  "Brawl": {
+   "key": "brawl",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "dex"
+  },
+  "Carouse": {
+   "key": "carouse",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "sta"
+  },
+  "Charm": {
+   "key": "charm",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "pre"
+  },
+  "Chirurgy": {
+   "key": "chirurgy",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "dex"
+  },
+  "Civil and Canon Law": {
+   "key": "law",
+   "category": "academic",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Code of Hermes": {
+   "key": "hermeticCode",
+   "category": "arcane",
+   "option": false,
+   "defaultChaAb": "int"
+  },
+  "Common Law": {
+   "key": "law",
+   "category": "academic",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Craft": {
+   "key": "craft",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "dex"
+  },
+  "Craft (Type)": {
+   "key": "craft",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "dex"
+  },
+  "Craft Poppets": {
+   "key": "craft",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "dex"
+  },
+  "Craft: Farrier": {
+   "key": "craft",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "dex"
+  },
+  "Dead Language": {
+   "key": "deadLanguage",
+   "category": "academic",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Dominion Lore": {
+   "key": "dominionLore",
+   "category": "arcane",
+   "option": false,
+   "defaultChaAb": "int"
+  },
+  "Etiquette": {
+   "key": "etiquette",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "com"
+  },
+  "Faerie Lore": {
+   "key": "faerieLore",
+   "category": "arcane",
+   "option": false,
+   "defaultChaAb": "int"
+  },
+  "Finesse": {
+   "key": "finesse",
+   "category": "arcane",
+   "option": false,
+   "defaultChaAb": "per"
+  },
+  "Folk Ken": {
+   "key": "folkKen",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "per"
+  },
+  "Great Weapon": {
+   "key": "greatWeapon",
+   "category": "martial",
+   "option": false,
+   "defaultChaAb": "str"
+  },
+  "Guile": {
+   "key": "guile",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "com"
+  },
+  "House Bjornaer Lore (Arcane)": {
+   "key": "organizationLore",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "House Merinita Lore": {
+   "key": "organizationLore",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Hunt": {
+   "key": "hunt",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "per"
+  },
+  "Infernal Lore": {
+   "key": "infernalLore",
+   "category": "arcane",
+   "option": false,
+   "defaultChaAb": "int"
+  },
+  "Islamic Law": {
+   "key": "law",
+   "category": "academic",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Judaic Lore": {
+   "key": "organizationLore",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Leadership": {
+   "key": "leadership",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "pre"
+  },
+  "Legerdemain": {
+   "key": "legerdemain",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "dex"
+  },
+  "Living Language": {
+   "key": "livingLanguage",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "com"
+  },
+  "Magic Lore": {
+   "key": "magicLore",
+   "category": "arcane",
+   "option": false,
+   "defaultChaAb": "int"
+  },
+  "Magic Theory": {
+   "key": "magicTheory",
+   "category": "arcane",
+   "option": false,
+   "defaultChaAb": "int"
+  },
+  "Medicine": {
+   "key": "medicine",
+   "category": "academic",
+   "option": false,
+   "defaultChaAb": "int"
+  },
+  "Music": {
+   "key": "music",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "com"
+  },
+  "Organization Lore": {
+   "key": "organizationLore",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Philosophiae": {
+   "key": "philosophy",
+   "category": "academic",
+   "option": false,
+   "defaultChaAb": "int"
+  },
+  "Profession": {
+   "key": "profession",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "com"
+  },
+  "Profession (Type)": {
+   "key": "profession",
+   "category": "general",
+   "option": true,
+   "defaultChaAb": "com"
+  },
+  "Rabbinic Law": {
+   "key": "law",
+   "category": "academic",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Ride": {
+   "key": "ride",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "dex"
+  },
+  "Single Weapon": {
+   "key": "singleWeapon",
+   "category": "martial",
+   "option": false,
+   "defaultChaAb": "dex"
+  },
+  "Stealth": {
+   "key": "stealth",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "qik"
+  },
+  "Survival": {
+   "key": "survival",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "per"
+  },
+  "Swim": {
+   "key": "swim",
+   "category": "general",
+   "option": false,
+   "defaultChaAb": "str"
+  },
+  "Theology: Christian": {
+   "key": "theology",
+   "category": "academic",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Theology: Islam": {
+   "key": "theology",
+   "category": "academic",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Theology: Judaism": {
+   "key": "theology",
+   "category": "academic",
+   "option": true,
+   "defaultChaAb": "int"
+  },
+  "Thrown Weapon": {
+   "key": "trownWeapon",
+   "category": "martial",
+   "option": false,
+   "defaultChaAb": "dex"
+  }
+ },
+ "techniques": {
+  "Creo": "cr",
+  "Intellego": "in",
+  "Muto": "mu",
+  "Perdo": "pe",
+  "Rego": "re"
+ },
+ "forms": {
+  "Animal": "an",
+  "Aquam": "aq",
+  "Auram": "au",
+  "Corpus": "co",
+  "Herbam": "he",
+  "Ignem": "ig",
+  "Imaginem": "im",
+  "Mentem": "me",
+  "Terram": "te",
+  "Vim": "vi"
+ },
+ "ranges": {
+  "Personal": "personal",
+  "Touch": "touch",
+  "Eye": "eye",
+  "Voice": "voice",
+  "Sight": "sight",
+  "Arcane": "arc",
+  "Arcane Connection": "arc"
+ },
+ "durations": {
+  "Momentary": "moment",
+  "Concentration": "conc",
+  "Diameter": "diam",
+  "Sun": "sun",
+  "Ring": "ring",
+  "Moon": "moon",
+  "Year": "year"
+ },
+ "targets": {
+  "Individual": "ind",
+  "Circle": "circle",
+  "Part": "part",
+  "Group": "group",
+  "Room": "room",
+  "Structure": "struct",
+  "Boundary": "bound",
+  "Taste": "taste",
+  "Touch": "touch",
+  "Smell": "smell",
+  "Hearing": "hearing",
+  "Sight": "sight",
+  "Vision": "sight"
+ },
+ "vfType": {
+  "Social Status": "social",
+  "General": "general",
+  "Hermetic": "hermetic",
+  "Supernatural": "supernatural",
+  "Personality": "personality",
+  "Story": "story",
+  "Heroic": "heroic"
+ },
+ "vfImpact": {
+  "Minor": "minor",
+  "Major": "major",
+  "Free": "free"
+ }
+}

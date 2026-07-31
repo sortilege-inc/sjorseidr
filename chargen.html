@@ -135,7 +135,7 @@ function mdRules(s){return esc(s).replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</stro
 const norm = s => (s==null?'':String(s)).toLowerCase();
 const LS_KEY = 'sjorseidr_chargen_v2';
 
-let DATA=null, SPELLS=null, C=null, step=0;
+let DATA=null, SPELLS=null, C=null, step=0, FMAP=null;
 
 function blankChar(){
   return {
@@ -608,10 +608,110 @@ function renderReview(el){
   const obj=exportObject();
   el.innerHTML=`${problems.length?`<div class="warn"><strong>RAW issues (${problems.length}):</strong><ul style="margin:6px 0 0">${problems.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`:'<div class="good">All RAW checks pass. Ready to export.</div>'}
     <p class="step-help">Export is a superset of the site's <code>magi.json</code> shape — paste it into <code>magi.json</code>'s <code>magi</code> map to view in <a href="ships.html">Fleet &amp; Crew</a>. Foundry export is planned.</p>
-    <div class="navbtns" style="justify-content:flex-start"><button class="btn" id="dlBtn">⬇ Download JSON</button><button class="btn ghost" id="copyBtn">Copy to clipboard</button></div>
+    <div class="navbtns" style="justify-content:flex-start;flex-wrap:wrap">
+      <button class="btn" id="dlBtn">⬇ Download JSON</button>
+      <button class="btn ghost" id="copyBtn">Copy to clipboard</button>
+      <button class="btn" id="foundryBtn" title="arm5e Actor JSON — Foundry: Actors → Import Data">⬇ Export to Foundry (arm5e)</button>
+    </div>
+    <p class="mini" style="margin-top:6px">Foundry import: in an arm5e world, <em>Actors → Import Data</em> on a new Actor. Abilities/Virtues/Flaws/Spells are mapped to arm5e keys where possible; a few mystery abilities import as custom.</p>
     <textarea class="export-area" id="exp" readonly>${esc(JSON.stringify(obj,null,2))}</textarea>`;
   $('#dlBtn').onclick=()=>{const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(C.name||'character').replace(/\s+/g,'_')+'.json';a.click();};
   $('#copyBtn').onclick=()=>{navigator.clipboard.writeText(JSON.stringify(obj,null,2)).then(()=>{$('#copyBtn').textContent='Copied ✓';});};
+  $('#foundryBtn').onclick=async()=>{
+    const btn=$('#foundryBtn'); btn.textContent='Building…';
+    try{ await ensureFmap(); const actor=buildFoundryActor();
+      const blob=new Blob([JSON.stringify(actor,null,2)],{type:'application/json'});
+      const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='fvtt-Actor-'+((C.name||'character').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''))+'.json';a.click();
+      btn.textContent='⬇ Export to Foundry (arm5e)';
+    }catch(e){ btn.textContent='Foundry export failed'; console.error(e); }
+  };
+}
+
+/* ---- Foundry (arm5e) Actor export ---------------------------------------
+   Translates the character into an arm5e Foundry VTT Actor, using foundry-map.json
+   (arm5e system codes: ability keys, House codes, spell R/D/T short codes). */
+async function ensureFmap(){ if(FMAP) return;
+  FMAP = await (await fetch('./foundry-map.json',{cache:'no-store'})).json(); }
+let _fidCounter = 0;
+function fid(){ // 16-char Foundry-style id (deterministic per build, unique)
+  const cs='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let base=(C.name||'x')+'|'+(_fidCounter++)+'|'; let h=0, out='';
+  for(let i=0;i<base.length;i++){ h=(h*31+base.charCodeAt(i))>>>0; }
+  for(let i=0;i<16;i++){ h=(h*1103515245+12345)>>>0; out+=cs[h%62]; }
+  return out;
+}
+const kebab = s => (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+function abilDesc(name){ const a=DATA.abilities.find(x=>x.name===name); return a&&a.text?`<p>${esc(a.text)}</p>`:''; }
+function itemStats(){ return {compendiumSource:null,duplicateSource:null,coreVersion:"13.351",systemId:"arm5e",systemVersion:"3.0.1.14",createdTime:null,modifiedTime:null,lastModifiedBy:null,exportSource:null}; }
+function foundryAbilityItem(name, spec, xp){
+  const fm=FMAP.abilities[name]||{};
+  return { name, type:"ability", img:"", effects:[], flags:{}, folder:null, sort:0, ownership:{default:0}, _id:fid(), _stats:itemStats(),
+    system:{ description:abilDesc(name), source:"ArM5Def", page:0, defaultChaAb:fm.defaultChaAb||"int",
+      speciality:spec||"", xp:+xp||0, key:fm.key||"", option:"", realm:"mundane", indexKey:kebab(name),
+      optionLinked:false, accelerated:false, credits:"" } };
+}
+function foundryVFItem(v, isFlaw){
+  const src=isFlaw?DATA.flaws:DATA.virtues; const def=src.find(x=>x.name===v.name)||{};
+  return { name:v.name+(v.detail?` (${v.detail})`:''), type:isFlaw?"flaw":"virtue", img:"", effects:[], flags:{}, folder:null, sort:0, ownership:{default:0}, _id:fid(), _stats:itemStats(),
+    system:{ description:def.text?`<p>${esc(def.text)}</p>`:"", source:"ArM5Def", page:0,
+      type:FMAP.vfType[def.category]||"general", impact:{value:FMAP.vfImpact[v.size]||"minor"},
+      indexKey:kebab(v.name), hidden:false, tainted:false, credits:"" } };
+}
+function foundrySpellItem(s){
+  const te=FMAP.techniques[s.technique]||"", fo=FMAP.forms[s.form]||"";
+  const treq={cr:false,in:false,mu:false,pe:false,re:false}, freq={an:false,aq:false,au:false,co:false,he:false,ig:false,im:false,me:false,te:false,vi:false};
+  return { name:s.name, type:"spell", img:te&&fo?`systems/arm5e/assets/magic/${fo}.png`:"", effects:[], flags:{}, folder:null, sort:0, ownership:{default:0}, _id:fid(), _stats:itemStats(),
+    system:{ technique:{value:te}, form:{value:fo}, baseLevel:+s.level||0, level:+s.level||0,
+      range:{value:FMAP.ranges[s.range]||"personal"}, duration:{value:FMAP.durations[s.duration]||"moment"},
+      target:{value:FMAP.targets[s.target]||"ind"}, ritual:!!s.ritual, general:false, complexity:0,
+      "technique-req":treq, "form-req":freq, description:s.description?esc(s.description):"", source:"ArM5Def", page:0,
+      indexKey:kebab(s.name), xp:0, bonus:0, applyFocus:false, masteryAbilities:"", credits:"" } };
+}
+function buildFoundryActor(){
+  const items=[];
+  // abilities (native language + phase allocations, aggregated)
+  const totals=abilityTotals();
+  for(const [name,xp] of Object.entries(totals)){
+    const spec = name===NATIVE ? C.childhood.nativeLang : (C.specs[name]||"");
+    items.push(foundryAbilityItem(name, spec, xp));
+  }
+  C.virtues.forEach(v=>items.push(foundryVFItem(v,false)));
+  C.flaws.forEach(f=>items.push(foundryVFItem(f,true)));
+  C.spells.forEach(s=>items.push(foundrySpellItem(s)));
+  const personalities={};
+  (C.personalityTraits||[]).filter(t=>t.name).forEach((t,i)=>{ personalities[i]={name:t.name,score:+t.score||0};
+    items.push({ name:t.name, type:"personalityTrait", img:"", effects:[], flags:{}, folder:null, sort:0, ownership:{default:0}, _id:fid(), _stats:itemStats(),
+      system:{ xp:xpForScore(Math.abs(+t.score||0)), description:"", source:"custom", page:0, credits:"" } }); });
+  const chars={}; for(const c of DATA.characteristics){ chars[c.key]={value:C.characteristics[c.key]||0, aging:0}; }
+  const arts={techniques:{},forms:{}};
+  DATA.arts.techniques.forEach(a=>arts.techniques[a.key]={label:a.name, xp:artTotals()[a.key]||0});
+  DATA.arts.forms.forEach(a=>arts.forms[a.key]={label:a.name, xp:artTotals()[a.key]||0});
+  const houseCode = isMagus() ? (FMAP.houses[C.house]||"gen") : "n-a";
+  return {
+    name:C.name||"Unnamed", type:"player",
+    img:"", effects:[], folder:null, flags:{arm5e:{}}, ownership:{default:0},
+    _stats:{...itemStats(), exportSource:{worldId:"sjorseidr",systemId:"arm5e",systemVersion:"3.0.1.14"}},
+    prototypeToken:{ name:C.name||"Unnamed", displayName:0, actorLink:false, width:1, height:1, disposition:0, flags:{} },
+    system:{
+      charType:{value:C.type, label:"Char. Type"},
+      house:{value:houseCode, label:"House"},
+      parens:{label:"Parens", dtype:"String", value:C.parens||""},
+      sigil:{label:"Wizard's Sigil", dtype:"String", value:C.sigil||""},
+      age:{value:C.age}, apparent:{dtype:"Number", value:C.apparentAge||C.age},
+      description:{ born:{value:C.born}, apprentice:{value:0}, birthname:{value:""}, birthplace:{value:""} },
+      con:{label:"Confidence ", score:C.confidence.score, points:C.confidence.points},
+      covenant:{value:"Sjórseiðr", actorId:null},
+      biography:C.biography?`<p>${esc(C.biography)}</p>`:"", secrets:"", source:"ArM5Def",
+      characteristics:chars, arts, personalities,
+      states:{creationMode:true, pendingCrisis:false, confidencePrompt:false, pendingDamage:false},
+      creationMode:true,
+      decrepitude:{points:0, effects:"", finalScore:0}, warping:{points:0, effects:"", finalScore:0},
+      realms:{magic:{aligned:false,susceptible:false},faeric:{aligned:false,susceptible:false},divine:{aligned:false,susceptible:false},infernal:{aligned:false,susceptible:false}},
+      features:{magicSystem:false, powers:false},
+      magicSystem:{name:"",adjective:"",practitioner:"",effects:"",laboratory:"",realm:"mundane"}
+    },
+    items
+  };
 }
 function exportObject(){
   const at=artTotals(), artsObj={};
