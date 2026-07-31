@@ -474,8 +474,11 @@ function loadCreature(name){
     if(vd) C.virtues.push({name:vd.name,size:vd.size||'Minor',category:vd.category||'General',detail,auto:false});
     else if(fd) C.flaws.push({name:fd.name,size:fd.size||'Minor',category:fd.category||'General',detail,auto:false});
     else C.virtues.push({name:String(nm),size:'Free',category:'Special',detail:null,auto:false}); });
-  C.template={name:c.name, abilities:(c.abilities||[]).filter(a=>!/^Native Language$/i.test(a.name))
-    .map(a=>({name:a.name,param:'',spec:a.specialty||'',xp:xpForScore(a.score||0)}))};
+  // A loaded faerie's abilities ARE its Pretenses — put them in the Pretense
+  // bucket so they register in the pool and are editable in the Pretense allocator.
+  C.template={name:'',abilities:[]};
+  C.faerie.pretenses=(c.abilities||[]).filter(a=>!/^Native Language$/i.test(a.name))
+    .map(a=>({name:a.name,param:'',spec:a.specialty||'',xp:xpForScore(a.score||0)}));
   C.childhood={nativeLang:C.childhood.nativeLang||'',spread:[]}; C.later={years:C.later.years||15,alloc:[]};
   C.apprentice={arts:{},abilities:[]}; C.laterYears={years:0,arts:{},abilities:[],spellLevels:0}; C.training={packageName:'',duration:'',grants:[]};
   C.personalityTraits=(c.personalityTraits||[]).map(t=>({name:t.name,score:+t.score||0}));
