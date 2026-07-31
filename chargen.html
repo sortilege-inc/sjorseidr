@@ -145,6 +145,9 @@ function blankChar(){
   return {
     name:'', type:'magus', concept:'', born:1198, age:25, apparentAge:null, size:0,
     house:null, parens:'', sigil:'', templateName:'',
+    realm:'', might:0, season:'',                        // realm modifier: '' | 'magic' | 'faerie'
+    magic:{ qualities:[], inferiorities:[], powers:[] },
+    faerie:{ powers:[], wizardry:[], blood:[], cognizance:'' },
     characteristics:{int:0,per:0,str:0,sta:0,pre:0,com:0,dex:0,qik:0},
     virtues:[], flaws:[],
     childhood:{ nativeLang:'', spread:[] },
@@ -269,6 +272,13 @@ function migrateChar(c){
   c.training=c.training||{packageName:'',duration:'',grants:[]}; c.training.grants=toArr(c.training.grants).map(g=>({...g,auto:true}));
   c.template=c.template||{name:'',abilities:[]}; c.template.abilities=toArr(c.template.abilities);
   if(c.size==null) c.size=0;
+  if(c.realm==null) c.realm='';
+  if(c.might==null) c.might=0;
+  if(c.season==null) c.season='';
+  c.magic=c.magic||{qualities:[],inferiorities:[],powers:[]};
+  ['qualities','inferiorities','powers'].forEach(k=>{ if(!Array.isArray(c.magic[k])) c.magic[k]=[]; });
+  c.faerie=c.faerie||{powers:[],wizardry:[],blood:[],cognizance:''};
+  ['powers','wizardry','blood'].forEach(k=>{ if(!Array.isArray(c.faerie[k])) c.faerie[k]=[]; });
   return c;
 }
 
@@ -277,6 +287,7 @@ const STEPS=[
   {id:'house',  title:'House',           render:renderHouse,  valid:vHouse,  magiOnly:true},
   {id:'vf',     title:'Virtues & Flaws', render:renderVF,     valid:vVF},
   {id:'chars',  title:'Characteristics', render:renderChars,  valid:vChars},
+  {id:'realm',  title:'Might & Powers',  render:renderRealm,  valid:vRealm, realmOnly:true},
   {id:'child',  title:'Early Childhood', render:renderChild,  valid:vChild},
   {id:'training',title:'Training Package',render:renderTraining,valid:()=>({ok:true,msgs:[]})},
   {id:'later',  title:'Later Life',      render:renderLater,  valid:vLater},
@@ -286,7 +297,7 @@ const STEPS=[
   {id:'finish', title:'Personality & Details', render:renderFinish, valid:()=>({ok:true,msgs:[]})},
   {id:'review', title:'Review & Export', render:renderReview, valid:()=>({ok:true,msgs:[]})},
 ];
-const visibleSteps = () => STEPS.filter(s=>!s.magiOnly || isMagus());
+const visibleSteps = () => STEPS.filter(s=>(!s.magiOnly || isMagus()) && (!s.realmOnly || !!C.realm));
 
 function vType(){ return {ok:!!C.name.trim(), msgs: C.name.trim()?[]:[{level:'warn',text:'Give the character a name.'}]}; }
 function vHouse(){ if(!isMagus()) return {ok:true,msgs:[]};
@@ -391,6 +402,8 @@ function renderBudget(){
   rows.push(['Char pts',`${cs} / ${bud}`,cs>bud]);
   rows.push(['Childhood',`${abilSum(C.childhood.spread)} / 45`,abilSum(C.childhood.spread)>45]);
   if(C.training.grants.length) rows.push(['Training',`+${abilSum(C.training.grants)} XP · ${C.training.packageName}`]);
+  if(C.realm==='magic'){ const mb=magicBudget(); rows.push(['Magic Might',`${+C.might||0}`]); rows.push(['Quality pts',`${mb.qpts} / ${mb.budget}`,mb.qpts>mb.budget]); }
+  if(C.realm==='faerie'){ rows.push(['Faerie Might',`${+C.might||0}`]); rows.push(['Faerie Powers',`${C.faerie.powers.length}`]); }
   rows.push(['Later life',`${abilSum(C.later.alloc)} / ${laterRate()*(+C.later.years||0)}`,abilSum(C.later.alloc)>laterRate()*(+C.later.years||0)]);
   if(isMagus()){
     rows.push(['Apprentice',`${sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities)} / 240`,(sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities))>240]);
@@ -446,7 +459,10 @@ function renderType(el){
   const tpls=(DATA.characterTemplates||[]).filter(t=>t.type===C.type && (!tplFilter.q||norm(t.name).includes(norm(tplFilter.q))));
   el.innerHTML=`<p class="step-help">Choose the kind of character and sketch the concept. Magi get extra phases (House, Apprenticeship, Arts, Spells).</p>
     <div class="typecards">${types.map(t=>`<div class="tc ${C.type===t[0]?'sel':''}" data-t="${t[0]}"><h4>${t[1]}</h4><p>${t[2]}</p></div>`).join('')}</div>
-    <div class="row2"><div><label class="fld">Name</label><input type="text" id="cName" value="${esc(C.name)}"></div>
+    <label class="fld" style="margin-top:14px">Realm modifier — optional</label>
+    <p class="step-help" style="margin:0 0 6px">Make this a supernatural being of the Magic or Faerie realm (at most one). Adds a <strong>Might</strong> score and a <strong>Powers</strong> step; realm characters export to <code>.actor</code>, not Foundry.</p>
+    <div class="typecards" style="grid-template-columns:repeat(3,1fr)">${[['','Mundane','No realm Might — an ordinary mortal.'],['magic','Magic','A Magic-realm being (Might, Magic Qualities & Powers). RoP: Magic.'],['faerie','Faerie','A Faerie-realm being (Might, Faerie Powers, Pretenses). RoP: Faerie.']].map(r=>`<div class="tc ${C.realm===r[0]?'sel':''}" data-realm="${r[0]}"><h4>${r[1]}</h4><p>${r[2]}</p></div>`).join('')}</div>
+    <div class="row2" style="margin-top:12px"><div><label class="fld">Name</label><input type="text" id="cName" value="${esc(C.name)}"></div>
       <div><label class="fld">Concept</label><input type="text" id="cConcept" value="${esc(C.concept)}"></div></div>
     <div class="row2"><div><label class="fld">Born (year A.D.)</label><input type="number" id="cBorn" value="${C.born}"></div>
       <div><label class="fld">Age</label><input type="number" id="cAge" value="${C.age}"></div></div>
@@ -459,7 +475,8 @@ function renderType(el){
       <div class="searchbar"><input type="text" id="tplQ" placeholder="search ${esc(C.type)} templates…" value="${esc(tplFilter.q)}"></div>
       <div class="list" style="max-height:180px">${tpls.map(t=>`<div class="opt" data-tpl="${esc(t.name)}" style="${C.templateName===t.name?'background:rgba(198,155,63,.18)':''}"><span>${esc(t.name)}${t.house?' <span class="mini">'+esc(t.house)+'</span>':''}</span><span class="mini">${esc(t.source||'')}</span></div>`).join('')||'<div class="opt mini">no templates for this type</div>'}</div>
     </div>`;
-  el.querySelectorAll('.tc').forEach(c=>c.onclick=()=>{if(C.type!==c.dataset.t)clearTemplate();C.type=c.dataset.t;if(C.type!=='magus')C.house=null;save();render();});
+  el.querySelectorAll('[data-t]').forEach(c=>c.onclick=()=>{if(C.type!==c.dataset.t)clearTemplate();C.type=c.dataset.t;if(C.type!=='magus')C.house=null;save();render();});
+  el.querySelectorAll('[data-realm]').forEach(c=>c.onclick=()=>{C.realm=c.dataset.realm;C.mightRealm=C.realm==='magic'?'Magic':C.realm==='faerie'?'Faerie':'';if(!C.realm)C.might=0;save();render();});
   const bind=(id,fn)=>{const e=el.querySelector(id);if(e)e.oninput=()=>{fn(e.value);save();renderBudget();};};
   bind('#cName',v=>C.name=v);bind('#cConcept',v=>C.concept=v);bind('#cBorn',v=>C.born=+v||0);bind('#cAge',v=>C.age=+v||0);
   bind('#cParens',v=>C.parens=v);bind('#cSigil',v=>C.sigil=v);
@@ -570,6 +587,87 @@ function renderChars(el){
   el.querySelectorAll('[data-dec]').forEach(b=>b.onclick=()=>{const k=b.dataset.dec,cap=charCap(k);C.characteristics[k]=Math.max(cap.min,(C.characteristics[k]||0)-1);save();render();});
   el.querySelectorAll('[data-cdesc]').forEach(c=>c.onclick=()=>{const ch=DATA.characteristics.find(x=>x.name===c.dataset.cdesc);
     $('#charDesc').innerHTML=ch&&ch.text?`<div class="rules-note"><strong>${esc(ch.name)}</strong><br>${mdRules(ch.text)}</div>`:`<div class="warn">No corpus rules text for ${esc(c.dataset.cdesc)} (data gap).</div>`;});
+}
+
+/* --- Realm modifier: Might + Powers (Magic / Faerie) ----------------------- */
+let realmFilter={qualities:'',inferiorities:'',powers:'',fpowers:'',wizardry:'',blood:''};
+const magPts = m => m==='Major'?3:m==='Free'?0:1;
+const toolkitMag = (list,name) => { const x=(list||[]).find(y=>y.name===name); return x?x.magnitude:null; };
+function magicBudget(){
+  const T=DATA.realmToolkits.magic;
+  const q=C.magic.qualities.reduce((a,c)=>a+magPts(toolkitMag(T.qualities,c.name)),0);
+  const i=C.magic.inferiorities.reduce((a,c)=>a+magPts(toolkitMag(T.inferiorities,c.name)),0);
+  return {qpts:q, ipts:i, budget:(+C.might||0)+i};
+}
+function vRealm(){
+  if(!C.realm) return {ok:true,msgs:[]};
+  if(C.realm==='faerie'){
+    const m=[]; if(!C.might) m.push({level:'warn',text:'Set a Faerie Might score.'});
+    m.push({level:'ok',text:`Faerie: ${C.faerie.powers.length} Power(s), ${C.faerie.wizardry.length} Wizardry, ${C.faerie.blood.length} Blood.`});
+    return {ok:!!C.might, msgs:m};
+  }
+  const b=magicBudget(); const m=[];
+  if(!C.might) m.push({level:'warn',text:'Set a Magic Might score.'});
+  m.push({level:b.qpts>b.budget?'warn':'ok',text:`Magic Quality points: ${b.qpts} / ${b.budget} (Might ${+C.might||0} + ${b.ipts} from Inferiorities).`});
+  return {ok:(!!C.might)&&b.qpts<=b.budget, msgs:m};
+}
+function realmBadge(x,badgeKey){ if(!badgeKey) return ''; const v=x[badgeKey]; if(v==null||v==='') return '';
+  return badgeKey==='mightCostValue'?`${v} pt`:String(v); }
+function realmListItems(key,src,badgeKey){
+  const q=realmFilter[key]||'';
+  const items=src.filter(x=>!q||norm(x.name).includes(norm(q))).slice(0,300);
+  return items.map(x=>{const bd=realmBadge(x,badgeKey);
+    return `<div class="opt" data-radd="${key}" data-name="${esc(x.name)}"><span>${esc(x.name)}</span>${bd?`<span class="sz ${bd==='Major'?'major':''}">${esc(bd)}</span>`:''}</div>`;}).join('')||'<div class="opt mini">no matches</div>';
+}
+function realmPickerHtml(key,label,src,chosen,badgeKey){
+  const chips=chosen.length?chosen.map((c,i)=>{const def=src.find(y=>y.name===c.name)||{};const bd=realmBadge(def,badgeKey);
+    return `<span class="chip virtue"><span data-rdesc="${key}:${i}" style="cursor:help">${esc(c.name)}</span>${bd?` <span class="det">${esc(bd)}</span>`:''}<button class="x" data-rrm="${key}:${i}">×</button></span>`;}).join(''):'<span class="mini">— none —</span>';
+  return `<div class="pick-col" style="margin-top:12px"><h4 class="mini">${esc(label)} <span class="count-pill">${src.length}</span></h4>
+    <div class="searchbar"><input type="text" class="rq" data-rk="${key}" placeholder="search…" value="${esc(realmFilter[key]||'')}"></div>
+    <div class="list" id="rlist_${key}" style="max-height:150px">${realmListItems(key,src,badgeKey)}</div>
+    <div class="chosen">${chips}</div></div>`;
+}
+function wireRealmPicker(el,key,src,chosen,badgeKey){
+  const wireAdds=()=>el.querySelectorAll(`[data-radd="${key}"]`).forEach(o=>o.onclick=()=>{ if(!chosen.some(c=>c.name===o.dataset.name)) chosen.push({name:o.dataset.name}); save();renderRealm($('#stepBody'));renderBudget();});
+  const inp=el.querySelector(`.rq[data-rk="${key}"]`);
+  if(inp) inp.oninput=()=>{ realmFilter[key]=inp.value; const lst=el.querySelector(`#rlist_${key}`); if(lst){lst.innerHTML=realmListItems(key,src,badgeKey); wireAdds();} };
+  wireAdds();
+  el.querySelectorAll(`[data-rrm="${key}"]`).forEach(b=>b.onclick=()=>{chosen.splice(+b.dataset.rrm.split(':')[1],1);save();renderRealm($('#stepBody'));renderBudget();});
+  el.querySelectorAll(`[data-rdesc="${key}"]`).forEach(s=>s.onclick=()=>{const it=src.find(y=>y.name===chosen[+s.dataset.rdesc.split(':')[1]].name)||{};const bd=realmBadge(it,badgeKey);
+    $('#realmDesc').innerHTML=`<div class="rules-note"><strong>${esc(it.name)}</strong>${bd?` <span class="mini">(${esc(bd)})</span>`:''}<br>${mdRules(it.text||'—')}</div>`;});
+}
+function renderRealm(el){ return C.realm==='faerie'?renderFaerie(el):renderMagic(el); }
+function renderMagic(el){
+  const T=DATA.realmToolkits.magic, b=magicBudget();
+  const seasons=[['Spring',120],['Summer',360],['Autumn',720],['Winter',1200]];
+  el.innerHTML=`<p class="step-help">A Magic-realm being. <strong>Magic Might</strong> is set by the saga's power level and the character's role; you then take <strong>Quality points equal to your Might</strong> (Minor Quality 1, Major 3). Magic Inferiorities give extra points to spend. Powers are the being's innate magical abilities (each with a Might-point activation cost).</p>
+    <div class="row2"><div><label class="fld">Magic Might</label><input type="number" id="mMight" value="${+C.might||0}"></div>
+      <div><label class="fld">Season <span class="mini">(ability XP)</span></label><select id="mSeason"><option value="">—</option>${seasons.map(s=>`<option value="${s[0]}" ${C.season===s[0]?'selected':''}>${s[0]} — ${s[1]} XP</option>`).join('')}</select></div></div>
+    <div class="alloc-pool ${b.qpts>b.budget?'bad':''}">Magic Quality points: ${b.qpts} / ${b.budget} <span class="mini">(Might ${+C.might||0} + ${b.ipts} from Inferiorities)</span></div>
+    ${realmPickerHtml('qualities','Magic Qualities',T.qualities,C.magic.qualities,'magnitude')}
+    ${realmPickerHtml('inferiorities','Magic Inferiorities',T.inferiorities,C.magic.inferiorities,'magnitude')}
+    ${realmPickerHtml('powers','Common Magic Powers',T.powers,C.magic.powers,null)}
+    <div id="realmDesc"></div>`;
+  $('#mMight').oninput=e=>{C.might=+e.target.value||0;save();renderMagic(el);renderBudget();};
+  $('#mSeason').onchange=e=>{C.season=e.target.value;save();};
+  wireRealmPicker(el,'qualities',T.qualities,C.magic.qualities,'magnitude');
+  wireRealmPicker(el,'inferiorities',T.inferiorities,C.magic.inferiorities,'magnitude');
+  wireRealmPicker(el,'powers',T.powers,C.magic.powers,null);
+}
+function renderFaerie(el){
+  const F=DATA.realmToolkits.faerie;
+  el.innerHTML=`<p class="step-help">A Faerie-realm being. Set <strong>Faerie Might</strong>, then choose Faerie Powers (each with a Might cost), Wizardry, and Blood. Faeries use <em>Pretenses</em> in place of true Abilities; the full Might/Pretense budget (RoP: Faerie p.45) lands in the next pass.</p>
+    <div class="row2"><div><label class="fld">Faerie Might</label><input type="number" id="fMight" value="${+C.might||0}"></div>
+      <div><label class="fld">Cognizance</label><select id="fCog"><option value="">—</option>${['Incognizant','Narrowly Cognizant','Cognizant'].map(c=>`<option ${C.faerie.cognizance===c?'selected':''}>${c}</option>`).join('')}</select></div></div>
+    ${realmPickerHtml('fpowers','Faerie Powers',F.powers,C.faerie.powers,'mightCostValue')}
+    ${realmPickerHtml('wizardry','Faerie Wizardry',F.wizardry,C.faerie.wizardry,null)}
+    ${realmPickerHtml('blood','Faerie Blood',F.blood,C.faerie.blood,null)}
+    <div id="realmDesc"></div>`;
+  $('#fMight').oninput=e=>{C.might=+e.target.value||0;save();renderBudget();};
+  $('#fCog').onchange=e=>{C.faerie.cognizance=e.target.value;save();};
+  wireRealmPicker(el,'fpowers',F.powers,C.faerie.powers,'mightCostValue');
+  wireRealmPicker(el,'wizardry',F.wizardry,C.faerie.wizardry,null);
+  wireRealmPicker(el,'blood',F.blood,C.faerie.blood,null);
 }
 
 const cssId = s => s.replace(/[^a-z0-9]+/gi,'_');
@@ -887,9 +985,9 @@ function renderReview(el){
       <button class="btn" id="dlBtn">⬇ Download JSON</button>
       <button class="btn ghost" id="copyBtn">Copy to clipboard</button>
       <button class="btn" id="actorBtn" title="titterpig-dsl .actor file">⬇ Export .actor (titterpig-dsl)</button>
-      <button class="btn" id="foundryBtn" title="arm5e Actor JSON — Foundry: Actors → Import Data">⬇ Export to Foundry (arm5e)</button>
+      ${C.realm?'':`<button class="btn" id="foundryBtn" title="arm5e Actor JSON — Foundry: Actors → Import Data">⬇ Export to Foundry (arm5e)</button>`}
     </div>
-    <p class="mini" style="margin-top:6px"><strong>.actor</strong>: a titterpig-dsl character DEF (drops into an armdef corpus). <strong>Foundry</strong>: in an arm5e world, <em>Actors → Import Data</em> on a new Actor; Abilities/Virtues/Flaws/Spells map to arm5e keys where possible.</p>
+    <p class="mini" style="margin-top:6px"><strong>.actor</strong>: a titterpig-dsl character DEF (drops into an armdef corpus).${C.realm?' Realm (Magic/Faerie) characters use <code>.actor</code> — no Foundry export.':' <strong>Foundry</strong>: in an arm5e world, <em>Actors → Import Data</em> on a new Actor; Abilities/Virtues/Flaws/Spells map to arm5e keys where possible.'}</p>
     <textarea class="export-area" id="exp" readonly>${esc(JSON.stringify(obj,null,2))}</textarea>`;
   $('#dlBtn').onclick=()=>{const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(C.name||'character').replace(/\s+/g,'_')+'.json';a.click();};
   $('#copyBtn').onclick=()=>{navigator.clipboard.writeText(JSON.stringify(obj,null,2)).then(()=>{$('#copyBtn').textContent='Copied ✓';});};
@@ -897,7 +995,7 @@ function renderReview(el){
     const blob=new Blob([txt],{type:'text/plain'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);
     a.download=(C.name||'character').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'')+'.actor';a.click();
   }catch(e){ $('#actorBtn').textContent='.actor export failed'; console.error(e); } };
-  $('#foundryBtn').onclick=async()=>{
+  if($('#foundryBtn'))$('#foundryBtn').onclick=async()=>{
     const btn=$('#foundryBtn'); btn.textContent='Building…';
     try{ await ensureFmap(); const actor=buildFoundryActor();
       const blob=new Blob([JSON.stringify(actor,null,2)],{type:'application/json'});
@@ -1027,11 +1125,24 @@ function buildActorFile(){
   L.push(`${T(3)}}`);
   L.push(`${T(3)}^"Size" INTEGER ${+C.size||0}`);
   L.push(`${T(3)}^"Age" INTEGER ${+C.age||0}`);
-  if(C.might && C.mightRealm) L.push(`${T(3)}^"Might" INTEGER ${+C.might||0} NOTE "${C.mightRealm} Might"`);
+  const mightRealm = C.realm==='magic'?'Magic':C.realm==='faerie'?'Faerie':'';
+  if(mightRealm) L.push(`${T(3)}^"Might" INTEGER ${+C.might||0} NOTE "${mightRealm} Might"`);
   if(isMagus()&&C.house) L.push(`${T(3)}^"House" STRING "${C.house}"`);
   L.push(`${T(3)}^"Virtues" LIST ${vfList(C.virtues)}`);
   L.push(`${T(3)}^"Flaws" LIST ${vfList(C.flaws)}`);
   if(C.equipment) L.push(`${T(3)}^"Equipment" STRING ${q(C.equipment)}`);
+  const crefs = arr => '['+arr.map(x=>'^"'+x.name+'"').join(', ')+']';
+  if(C.realm==='magic'){
+    if(C.season) L.push(`${T(3)}^"Season" STRING "${C.season}"`);
+    if(C.magic.qualities.length) L.push(`${T(3)}^"Magic Qualities" LIST ${crefs(C.magic.qualities)}`);
+    if(C.magic.inferiorities.length) L.push(`${T(3)}^"Magic Inferiorities" LIST ${crefs(C.magic.inferiorities)}`);
+    if(C.magic.powers.length) L.push(`${T(3)}^"Powers" LIST ${crefs(C.magic.powers)}`);
+  } else if(C.realm==='faerie'){
+    if(C.faerie.cognizance) L.push(`${T(3)}^"Cognizance" STRING "${C.faerie.cognizance}"`);
+    if(C.faerie.blood.length) L.push(`${T(3)}^"Faerie Blood" LIST ${crefs(C.faerie.blood)}`);
+    if(C.faerie.wizardry.length) L.push(`${T(3)}^"Faerie Wizardry" LIST ${crefs(C.faerie.wizardry)}`);
+    if(C.faerie.powers.length) L.push(`${T(3)}^"Powers" LIST ${crefs(C.faerie.powers)}`);
+  }
   L.push(`${T(3)}^"Source" STRING "Sjórseiðr character creator"`);
   if(isMagus()){
     const at=artTotals();
@@ -1064,6 +1175,9 @@ function exportObject(){
     key:(C.name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''),
     name:C.name, house:isMagus()?C.house:'', parens:C.parens||'', sigil:C.sigil||'',
     born:C.born, age:C.age, apparentAge:C.apparentAge||C.age, charType:C.type,
+    realm:C.realm||'', might:C.realm?(+C.might||0):null, mightRealm:C.realm==='magic'?'Magic':C.realm==='faerie'?'Faerie':'',
+    realmTraits:C.realm==='magic'?{season:C.season||'',qualities:C.magic.qualities.map(x=>x.name),inferiorities:C.magic.inferiorities.map(x=>x.name),powers:C.magic.powers.map(x=>x.name)}
+      :C.realm==='faerie'?{cognizance:C.faerie.cognizance||'',powers:C.faerie.powers.map(x=>x.name),wizardry:C.faerie.wizardry.map(x=>x.name),blood:C.faerie.blood.map(x=>x.name)}:null,
     characteristics:{...C.characteristics}, size:+C.size||0,
     confidence:{label:'Confidence',score:C.confidence.score,points:C.confidence.points}, decrepitude:0, warping:0,
     arts:artsObj,
