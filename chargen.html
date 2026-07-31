@@ -148,6 +148,7 @@ function blankChar(){
     realm:'', might:0, season:'',                        // realm modifier: '' | 'magic' | 'faerie'
     magic:{ qualities:[], inferiorities:[], powers:[], beingName:'', loadedPowers:[] },
     faerie:{ powers:[], wizardry:[], blood:[], cognizance:'', beingName:'', loadedPowers:[], pretenses:[], avgAge:21 },
+    young:{ enabled:false, xp:[], beingName:'' },
     characteristics:{int:0,per:0,str:0,sta:0,pre:0,com:0,dex:0,qik:0},
     virtues:[], flaws:[],
     childhood:{ nativeLang:'', spread:[] },
@@ -186,7 +187,7 @@ const AGG='␟';
 function abilInstances(){
   const out=[];
   if(C.childhood.nativeLang) out.push({name:NATIVE,param:C.childhood.nativeLang,spec:C.specs[NATIVE]||'',xp:75,native:true});
-  [C.template.abilities, C.childhood.spread, C.training.grants, C.later.alloc, C.apprentice.abilities, C.laterYears.abilities, C.faerie.pretenses]
+  [C.template.abilities, C.childhood.spread, C.training.grants, C.later.alloc, C.apprentice.abilities, C.laterYears.abilities, C.faerie.pretenses, C.young.xp]
     .forEach(arr=>(arr||[]).forEach(a=>out.push({name:a.name,param:a.param||'',spec:a.spec||'',xp:+a.xp||0})));
   return out;
 }
@@ -204,6 +205,15 @@ function artTotals(){ const t={}; [C.apprentice.arts, C.laterYears.arts].forEach
 const sumObj = o => Object.values(o).reduce((a,x)=>a+(+x||0),0);
 const abilSum = arr => (arr||[]).reduce((a,x)=>a+(+x.xp||0),0);
 function laterRate(){ return C.flaws.some(f=>/^Poor$/i.test(f.name))?10 : C.virtues.some(v=>/^Wealthy$/i.test(v.name))?20 : 15; }
+const isYoung = () => !!C.young.enabled;
+/* Apprentices: age-based Characteristic/Size penalty (Aging Chart), and the
+   young-character ability-XP pool (15/yr after age 5; Wealthy 20, Poor 10). */
+function agingFor(age){
+  const chart=(DATA.apprentices&&DATA.apprentices.agingChart)||[];
+  const row=chart.find(r=>age>=r.ageMin && age<=r.ageMax);
+  return row?{charMod:+row.charMod||0, sizeMod:+row.sizeMod||0, label:row.age}:{charMod:0,sizeMod:0,label:''};
+}
+function youthXpBudget(){ return laterRate()*Math.max(0,(+C.age||0)-5); }
 function artKey(name){ const a=[...DATA.arts.techniques,...DATA.arts.forms].find(x=>x.name===name); return a?a.key:null; }
 
 /* Which parameter control (if any) a Virtue/Flaw needs. The corpus carries no
@@ -282,6 +292,9 @@ function migrateChar(c){
   ['powers','wizardry','blood','loadedPowers','pretenses'].forEach(k=>{ if(!Array.isArray(c.faerie[k])) c.faerie[k]=[]; });
   if(c.faerie.beingName==null) c.faerie.beingName='';
   if(c.faerie.avgAge==null) c.faerie.avgAge=21;
+  c.young=c.young||{enabled:false,xp:[],beingName:''};
+  if(!Array.isArray(c.young.xp)) c.young.xp=[];
+  if(c.young.beingName==null) c.young.beingName='';
   return c;
 }
 
@@ -291,6 +304,7 @@ const STEPS=[
   {id:'vf',     title:'Virtues & Flaws', render:renderVF,     valid:vVF},
   {id:'chars',  title:'Characteristics', render:renderChars,  valid:vChars},
   {id:'realm',  title:'Might & Powers',  render:renderRealm,  valid:vRealm, realmOnly:true},
+  {id:'youth',  title:'Youth (Age & XP)', render:renderYouth, valid:vYouth, youngOnly:true},
   {id:'child',  title:'Early Childhood', render:renderChild,  valid:vChild},
   {id:'training',title:'Training Package',render:renderTraining,valid:()=>({ok:true,msgs:[]})},
   {id:'later',  title:'Later Life',      render:renderLater,  valid:vLater},
@@ -302,8 +316,9 @@ const STEPS=[
 ];
 /* Faeries buy Pretenses (in the realm step) instead of the mundane childhood/later
    ability phases, so those steps are hidden for a Faerie-realm character. */
-const visibleSteps = () => STEPS.filter(s=>(!s.magiOnly || isMagus()) && (!s.realmOnly || !!C.realm)
-  && !(C.realm==='faerie' && ['child','training','later'].includes(s.id)));
+const visibleSteps = () => STEPS.filter(s=>(!s.magiOnly || isMagus()) && (!s.realmOnly || !!C.realm) && (!s.youngOnly || isYoung())
+  && !(C.realm==='faerie' && ['child','training','later'].includes(s.id))
+  && !(isYoung() && ['child','training','later'].includes(s.id)));
 
 function vType(){ return {ok:!!C.name.trim(), msgs: C.name.trim()?[]:[{level:'warn',text:'Give the character a name.'}]}; }
 function vHouse(){ if(!isMagus()) return {ok:true,msgs:[]};
@@ -328,7 +343,8 @@ function vVF(){
     if(b.majV>3){m.push({level:'warn',text:'At most 3 Major Virtues.'});ok=false;}
     if(b.majF>3){m.push({level:'warn',text:'At most 3 Major Flaws.'});ok=false;}
   }
-  if(isMagus() && !C.virtues.some(v=>v.name==='The Gift')){m.push({level:'warn',text:'A magus must have The Gift (added with your House).'});ok=false;}
+  if(isYoung() && b.virPts!==b.flawPts){m.push({level:'warn',text:`Young characters: Virtue points (${b.virPts}) must equal Flaw points (${b.flawPts}).`});ok=false;}
+  if(isMagus() && !isYoung() && !C.virtues.some(v=>v.name==='The Gift')){m.push({level:'warn',text:'A magus must have The Gift (added with your House).'});ok=false;}
   if(b.social!==1){m.push({level:'warn',text:`Every character needs exactly one Social Status (currently ${b.social}).`});ok=false;}
   const needParam=[...C.virtues,...C.flaws].filter(x=>detailType(x.name)&&!x.detail);
   if(needParam.length){m.push({level:'warn',text:`Specify a choice for: ${needParam.map(x=>x.name).join(', ')}.`});ok=false;}
@@ -410,6 +426,7 @@ function renderBudget(){
   if(C.training.grants.length) rows.push(['Training',`+${abilSum(C.training.grants)} XP · ${C.training.packageName}`]);
   if(C.realm==='magic'){ const mb=magicBudget(); rows.push(['Magic Might',`${+C.might||0}`]); rows.push(['Quality pts',`${mb.qpts} / ${mb.budget}`,mb.qpts>mb.budget]); }
   if(C.realm==='faerie'){ rows.push(['Faerie Might',`${+C.might||0}`]); const ps=abilSum(C.faerie.pretenses),pb=faeriePretenseBudget(); rows.push(['Pretense pts',`${ps} / ${pb}`,ps>pb]); }
+  if(isYoung()){ const a=agingFor(+C.age||0), s=abilSum(C.young.xp), yb=youthXpBudget(); rows.push(['Age',`${+C.age||0} (${a.label})`]); rows.push(['Aging',`Ch ${a.charMod}, Sz ${a.sizeMod}`]); rows.push(['Youth XP',`${s} / ${yb}`,s>yb]); }
   rows.push(['Later life',`${abilSum(C.later.alloc)} / ${laterRate()*(+C.later.years||0)}`,abilSum(C.later.alloc)>laterRate()*(+C.later.years||0)]);
   if(isMagus()){
     rows.push(['Apprentice',`${sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities)} / 240`,(sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities))>240]);
@@ -522,6 +539,16 @@ function renderType(el){
     <label class="fld" style="margin-top:14px">Realm modifier — optional</label>
     <p class="step-help" style="margin:0 0 6px">Make this a supernatural being of the Magic or Faerie realm (at most one). Adds a <strong>Might</strong> score and a <strong>Powers</strong> step; realm characters export to <code>.actor</code>, not Foundry.</p>
     <div class="typecards" style="grid-template-columns:repeat(3,1fr)">${[['','Mundane','No realm Might — an ordinary mortal.'],['magic','Magic','A Magic-realm being (Might, Magic Qualities & Powers). RoP: Magic.'],['faerie','Faerie','A Faerie-realm being (Might, Faerie Powers, Pretenses). RoP: Faerie.']].map(r=>`<div class="tc ${C.realm===r[0]?'sel':''}" data-realm="${r[0]}"><h4>${r[1]}</h4><p>${r[2]}</p></div>`).join('')}</div>
+    <label class="fld" style="margin-top:14px">Age at creation — optional (Apprentices)</label>
+    <p class="step-help" style="margin:0 0 6px">Create a character younger than adult — infancy, childhood, or adolescence. Applies the Aging Chart penalty, age-based XP, Child Virtues &amp; Flaws, and an ability-score cap of 5.</p>
+    <div class="typecards" style="grid-template-columns:1fr 1fr">
+      <div class="tc ${!isYoung()?'sel':''}" data-young="0"><h4>Adult</h4><p>Normal creation.</p></div>
+      <div class="tc ${isYoung()?'sel':''}" data-young="1"><h4>Young character</h4><p>Younger than 21; Aging Chart penalties + Child Virtues/Flaws.</p></div>
+    </div>
+    ${isYoung()?`<label class="fld" style="margin-top:10px">Load a young-character example — optional</label>
+      ${C.young.beingName?`<div class="good">Loaded: <strong>${esc(C.young.beingName)}</strong> <button class="btn ghost" id="youngClear" style="padding:3px 10px;margin-left:8px">Clear</button></div>`:''}
+      <div class="searchbar"><input type="text" id="youngQ" placeholder="search young characters…" value="${esc(beingFilter)}"></div>
+      <div class="list" style="max-height:140px">${((DATA.apprentices&&DATA.apprentices.youngCharacters)||[]).filter(y=>!beingFilter||norm(y.name).includes(norm(beingFilter))).map(y=>`<div class="opt" data-youngload="${esc(y.name)}" style="${C.young.beingName===y.name?'background:rgba(198,155,63,.18)':''}"><span>${esc(y.name)}</span><span class="mini">age ${y.age==null?'?':esc(String(y.age))}</span></div>`).join('')||'<div class="opt mini">no matches</div>'}</div>`:''}
     <div class="row2" style="margin-top:12px"><div><label class="fld">Name</label><input type="text" id="cName" value="${esc(C.name)}"></div>
       <div><label class="fld">Concept</label><input type="text" id="cConcept" value="${esc(C.concept)}"></div></div>
     <div class="row2"><div><label class="fld">Born (year A.D.)</label><input type="number" id="cBorn" value="${C.born}"></div>
@@ -540,6 +567,15 @@ function renderType(el){
     if(!C.realm)C.might=0;
     else if(C.realm==='faerie'&&!C.might)C.might=(DATA.realmToolkits.faerie.creation||{}).startingMight||5;
     save();render();});
+  el.querySelectorAll('[data-young]').forEach(c=>c.onclick=()=>{ const on=c.dataset.young==='1';
+    if(on===isYoung()) return;
+    if(on){ C.young.enabled=true; if((+C.age||25)>=15) C.age=10; }
+    else { C.young={enabled:false,xp:[],beingName:''}; if((+C.age||0)<15) C.age=25; }
+    save();render(); });
+  if($('#youngQ'))$('#youngQ').oninput=e=>{beingFilter=e.target.value;renderType(el);};
+  if($('#youngClear'))$('#youngClear').onclick=()=>{C.young.beingName='';save();render();};
+  el.querySelectorAll('[data-youngload]').forEach(o=>o.onclick=()=>{ loadYoungCharacter(o.dataset.youngload);
+    const fi=visibleSteps().findIndex(s=>s.id==='finish'); step=fi>=0?fi:step; save();render(); });
   const bind=(id,fn)=>{const e=el.querySelector(id);if(e)e.oninput=()=>{fn(e.value);save();renderBudget();};};
   bind('#cName',v=>C.name=v);bind('#cConcept',v=>C.concept=v);bind('#cBorn',v=>C.born=+v||0);bind('#cAge',v=>C.age=+v||0);
   bind('#cParens',v=>C.parens=v);bind('#cSigil',v=>C.sigil=v);
@@ -645,6 +681,7 @@ function renderChars(el){
         <div class="stepper"><button data-dec="${k}" ${val<=cap.min?'disabled':''}>−</button><span class="val">${val>0?'+':''}${val}</span><button data-inc="${k}" ${val>=cap.max?'disabled':''}>+</button></div>
         <div class="cost">cost ${charPoolCost(val)}</div></div>`;}).join('')}</div>
     ${DATA.characteristics.some(c=>!c.text)?'<p class="mini">* rules text not yet in the corpus for this Characteristic.</p>':''}
+    ${isYoung()?(()=>{const a=agingFor(+C.age||0);return `<div class="good" style="background:rgba(44,107,102,.08);border-color:rgba(44,107,102,.3);color:var(--teal)">Young character, age ${+C.age||0} (${esc(a.label||'—')}): the buy above is the age-group score; a <strong>${a.charMod}</strong> Aging penalty then applies to every Characteristic and <strong>${a.sizeMod}</strong> to Size. Effective: ${DATA.characteristics.map(ch=>`${esc(ch.name.slice(0,3))} ${((C.characteristics[ch.key]||0)+a.charMod>=0?'+':'')}${(C.characteristics[ch.key]||0)+a.charMod}`).join(', ')}.</div>`;})():''}
     ${cr?`<div class="rules-note">${mdRules(cr.text)}</div>`:''}<div id="charDesc"></div>`;
   el.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{const k=b.dataset.inc,cap=charCap(k);C.characteristics[k]=Math.min(cap.max,(C.characteristics[k]||0)+1);save();render();});
   el.querySelectorAll('[data-dec]').forEach(b=>b.onclick=()=>{const k=b.dataset.dec,cap=charCap(k);C.characteristics[k]=Math.max(cap.min,(C.characteristics[k]||0)-1);save();render();});
@@ -767,6 +804,79 @@ function renderFaerie(el){
   wireRealmPicker(el,'fpowers',F.powers,C.faerie.powers,'mightCostValue');
   wireRealmPicker(el,'wizardry',F.wizardry,C.faerie.wizardry,null);
   wireRealmPicker(el,'blood',F.blood,C.faerie.blood,null);
+}
+
+/* --- Young characters (Apprentices): age-based XP + Child V/F ---------------- */
+function vYouth(){
+  if(!isYoung()) return {ok:true,msgs:[]};
+  const bud=youthXpBudget(), spent=abilSum(C.young.xp), m=[]; let ok=true;
+  m.push({level:spent>bud?'warn':'ok',text:`Youth ability XP: ${spent} / ${bud}.`});
+  if(spent>bud) ok=false;
+  const over=abilityTotals().filter(t=>scoreFromXp(t.xp)>5);
+  if(over.length){ m.push({level:'warn',text:`Over the young ability cap of 5: ${over.map(t=>t.name).join(', ')}.`}); ok=false; }
+  return {ok,msgs:m};
+}
+function childVfPickerHtml(key,label,src,side){
+  const chosen=(side==='virtue'?C.virtues:C.flaws).filter(x=>x.child);
+  return `<div class="pick-col" style="margin-top:12px"><h4 class="mini">${esc(label)} <span class="count-pill">${src.length}</span></h4>
+    <div class="list" style="max-height:120px">${src.map(x=>`<div class="opt" data-cadd="${key}" data-name="${esc(x.name)}"><span>${esc(x.name)}</span><span class="sz ${x.size==='Major'?'major':''}">${esc(x.size||'')}</span></div>`).join('')||'<div class="opt mini">none</div>'}</div>
+    <div class="chosen">${chosen.length?chosen.map(x=>`<span class="chip ${side}"><span data-cdesc2="${key}:${esc(x.name)}" style="cursor:help">${esc(x.name)}</span><button class="x" data-crm="${side}:${esc(x.name)}">×</button></span>`).join(''):'<span class="mini">— none —</span>'}</div></div>`;
+}
+function wireChildVf(el,key,src,side){
+  el.querySelectorAll(`[data-cadd="${key}"]`).forEach(o=>o.onclick=()=>{const def=src.find(y=>y.name===o.dataset.name);if(!def)return;
+    const arr=side==='virtue'?C.virtues:C.flaws;
+    if(!arr.some(x=>x.name===def.name)) arr.push({name:def.name,size:def.size||'Minor',category:def.category||'Child',detail:null,child:true});
+    save();renderYouth($('#stepBody'));renderBudget();});
+  el.querySelectorAll(`[data-crm="${side}"]`).forEach(b=>b.onclick=()=>{const nm=b.dataset.crm.split(':').slice(1).join(':');const arr=side==='virtue'?C.virtues:C.flaws;const i=arr.findIndex(x=>x.name===nm);if(i>=0)arr.splice(i,1);save();renderYouth($('#stepBody'));renderBudget();});
+  el.querySelectorAll(`[data-cdesc2="${key}"]`).forEach(s=>s.onclick=()=>{const nm=s.dataset.cdesc2.split(':').slice(1).join(':');const def=src.find(y=>y.name===nm)||{};
+    $('#youthDesc').innerHTML=`<div class="rules-note"><strong>${esc(nm)}</strong> <span class="mini">(${esc(def.size||'')}, Child — swap at a Transition of Maturation)</span><br>${mdRules(def.text||'—')}</div>`;});
+}
+function renderYouth(el){
+  const age=+C.age||0, aging=agingFor(age), bud=youthXpBudget(), spent=abilSum(C.young.xp);
+  const A=DATA.apprentices||{};
+  el.innerHTML=`<p class="step-help">Created at age ${age} (${esc(aging.label||'—')}). Characteristics take a <strong>${aging.charMod}</strong> Aging penalty (applied to every Characteristic) and Size <strong>${aging.sizeMod}</strong>; the buy in the Characteristics step is the age-group score before this penalty. Abilities: ${laterRate()} XP/year after age 5, max score 5. Child Virtues &amp; Flaws (below) count toward your Virtue/Flaw balance and must be swapped at a Transition of Maturation (ages 8, 15, 21).</p>
+    <div class="row2"><div><label class="fld">Age</label><input type="number" id="yAge" value="${age}"></div>
+      <div><label class="fld">Aging penalty</label><input type="text" value="Characteristics ${aging.charMod}, Size ${aging.sizeMod}" disabled></div></div>
+    <div class="alloc-pool ${spent>bud?'bad':''}" id="poolLine">Youth ability XP: ${spent} / ${bud} <span class="mini">(${laterRate()}×(${age}−5))</span></div>
+    <label class="fld">Abilities <span class="mini">(max score 5)</span></label>
+    <div class="searchbar"><input type="text" class="al-q" placeholder="search abilities…"></div>
+    <div class="list al-add" style="max-height:130px"></div>
+    <div class="al-rows" style="margin-top:6px">${abilAllocRows(C.young.xp,'young')}</div>
+    <div class="pick-grid">${childVfPickerHtml('cv','Child Virtues',A.childVirtues||[],'virtue')}${childVfPickerHtml('cf','Child Flaws',A.childFlaws||[],'flaw')}</div>
+    <div id="youthDesc"></div>`;
+  $('#yAge').oninput=e=>{C.age=+e.target.value||0;save();renderYouth(el);renderBudget();};
+  updatePoolLine=()=>{const s=abilSum(C.young.xp),p=youthXpBudget(),ln=$('#poolLine');if(ln){ln.textContent=`Youth ability XP: ${s} / ${p}`;ln.classList.toggle('bad',s>p);}};
+  wireAbilAlloc(el, C.young.xp, 'young', null, ()=>renderYouth(el));
+  wireChildVf(el,'cv',A.childVirtues||[],'virtue');
+  wireChildVf(el,'cf',A.childFlaws||[],'flaw');
+}
+function loadYoungCharacter(name){
+  const c=((DATA.apprentices&&DATA.apprentices.youngCharacters)||[]).find(x=>x.name===name); if(!c) return;
+  C.young.enabled=true;
+  if(/^Grog/i.test(c.name)) C.type='grog';
+  else if(/^Companion/i.test(c.name)) C.type='companion';
+  else { C.type='magus'; const hm=c.name.match(/House (\w+)/); C.house=hm?('House '+hm[1]):(c.house||null); }
+  if(c.age!=null)C.age=c.age; if(c.size!=null)C.size=c.size;
+  const ch={int:0,per:0,str:0,sta:0,pre:0,com:0,dex:0,qik:0};
+  for(const k in (c.characteristics||{})) ch[k]=c.characteristics[k];
+  C.characteristics=ch;
+  C.virtues=[]; C.flaws=[];
+  (c.virtuesFlaws||[]).forEach(vf=>{ const base=String(vf.name), detail=vf.param||null;
+    const cv=(DATA.apprentices.childVirtues||[]).find(v=>v.name===base), cf=(DATA.apprentices.childFlaws||[]).find(f=>f.name===base);
+    const vd=DATA.virtues.find(v=>v.name===base), fd=DATA.flaws.find(f=>f.name===base);
+    if(cv) C.virtues.push({name:cv.name,size:cv.size||'Minor',category:cv.category||'Child',detail,child:true});
+    else if(cf) C.flaws.push({name:cf.name,size:cf.size||'Minor',category:cf.category||'Child',detail,child:true});
+    else if(vd) C.virtues.push({name:vd.name,size:vd.size||'Minor',category:vd.category||'General',detail,auto:false});
+    else if(fd) C.flaws.push({name:fd.name,size:fd.size||'Minor',category:fd.category||'General',detail,auto:false});
+    else C.virtues.push({name:base,size:'Free',category:'Special',detail,auto:false}); });
+  C.young.xp=(c.abilities||[]).filter(a=>!/^Native Language$/i.test(a.name)).map(a=>({name:a.name,param:'',spec:a.specialty||'',xp:xpForScore(a.score||0)}));
+  C.childhood={nativeLang:C.childhood.nativeLang||'',spread:[]}; C.later={years:15,alloc:[]}; C.template={name:'',abilities:[]}; C.training={packageName:'',duration:'',grants:[]};
+  C.apprentice={arts:{},abilities:[]}; C.laterYears={years:0,arts:{},abilities:[],spellLevels:0}; C.spells=[];
+  C.personalityTraits=(c.personalityTraits||[]).map(t=>({name:t.name,score:+t.score||0}));
+  if(c.description||c.appearance) C.biography=[c.appearance,c.description].filter(Boolean).join('\n\n');
+  C.equipment=c.equipment||C.equipment||'';
+  C.young.beingName=c.name;
+  save();
 }
 
 const cssId = s => s.replace(/[^a-z0-9]+/gi,'_');
@@ -1226,6 +1336,7 @@ function buildActorFile(){
   L.push(`${T(3)}^"Age" INTEGER ${+C.age||0}`);
   const mightRealm = C.realm==='magic'?'Magic':C.realm==='faerie'?'Faerie':'';
   if(mightRealm) L.push(`${T(3)}^"Might" INTEGER ${+C.might||0} NOTE "${mightRealm} Might"`);
+  if(isYoung()){ const a=agingFor(+C.age||0); L.push(`${T(3)}^"Characteristic Modifier" INTEGER ${a.charMod} NOTE "Aging Chart, age ${+C.age||0} — applies to every Characteristic; Size ${a.sizeMod}"`); }
   if(isMagus()&&C.house) L.push(`${T(3)}^"House" STRING "${C.house}"`);
   L.push(`${T(3)}^"Virtues" LIST ${vfList(C.virtues)}`);
   L.push(`${T(3)}^"Flaws" LIST ${vfList(C.flaws)}`);
@@ -1288,6 +1399,7 @@ function exportObject(){
     realm:C.realm||'', might:C.realm?(+C.might||0):null, mightRealm:C.realm==='magic'?'Magic':C.realm==='faerie'?'Faerie':'',
     realmTraits:C.realm==='magic'?{season:C.season||'',being:C.magic.beingName||'',qualities:C.magic.qualities.map(x=>x.count>1?x.name+' (x'+x.count+')':x.name),inferiorities:C.magic.inferiorities.map(x=>x.count>1?x.name+' (x'+x.count+')':x.name),powers:C.magic.powers.map(x=>x.name),loadedPowers:C.magic.loadedPowers.map(p=>p.name)}
       :C.realm==='faerie'?{cognizance:C.faerie.cognizance||'',being:C.faerie.beingName||'',powers:C.faerie.powers.map(x=>x.name),wizardry:C.faerie.wizardry.map(x=>x.name),blood:C.faerie.blood.map(x=>x.name),loadedPowers:C.faerie.loadedPowers.map(p=>p.name)}:null,
+    young:isYoung()?(()=>{const a=agingFor(+C.age||0),eff={};for(const c of DATA.characteristics)eff[c.key]=(C.characteristics[c.key]||0)+a.charMod;return {age:+C.age||0, agingLabel:a.label, characteristicModifier:a.charMod, sizeModifier:a.sizeMod, effectiveCharacteristics:eff, effectiveSize:(+C.size||0)+a.sizeMod, example:C.young.beingName||'', childVirtuesFlaws:[...C.virtues,...C.flaws].filter(x=>x.child).map(x=>x.name)};})():null,
     characteristics:{...C.characteristics}, size:+C.size||0,
     confidence:{label:'Confidence',score:C.confidence.score,points:C.confidence.points}, decrepitude:0, warping:0,
     arts:artsObj,
