@@ -74,6 +74,18 @@ BUDGETS = {
     "confidence": {"score": 1, "points": 3},
 }
 
+# Castable spell parameters for guideline-based design: code -> (label, magnitude).
+# Magnitudes are RAW (matching ARM5E.magic.{ranges,durations,targets}.impact).
+SPELL_RANGES = [("personal", "Personal", 0), ("touch", "Touch", 1), ("eye", "Eye", 1),
+                ("voice", "Voice", 2), ("sight", "Sight", 3), ("arc", "Arcane Connection", 4)]
+SPELL_DURATIONS = [("moment", "Momentary", 0), ("conc", "Concentration", 1),
+                   ("diam", "Diameter", 1), ("sun", "Sun", 2), ("ring", "Ring", 2),
+                   ("moon", "Moon", 3), ("year", "Year", 4)]
+SPELL_TARGETS = [("ind", "Individual", 0), ("circle", "Circle", 0), ("part", "Part", 1),
+                 ("group", "Group", 2), ("room", "Room", 2), ("struct", "Structure", 3),
+                 ("bound", "Boundary", 4), ("taste", "Taste", 0), ("touch", "Touch", 1),
+                 ("smell", "Smell", 2), ("hearing", "Hearing", 3), ("sight", "Vision", 4)]
+
 CREATION_RULE_ENTITIES = {
     "detailedCharacterCreation": "Detailed Character Creation",
     "characteristicBuying": "Characteristic Buying",
@@ -235,6 +247,27 @@ def main():
                                int(s["level"]) if str(s["level"]).isdigit() else 0,
                                s["name"]))
 
+    # Spell design guidelines from the "<Te> <Fo> Guidelines" entities' GUIDELINES blocks.
+    import re as _re
+    guidelines = []
+    for e in ents:
+        if not e["name"].endswith(" Guidelines"):
+            continue
+        te, fo = prop(e, "Technique"), prop(e, "Form")
+        gb = next((b for b in e.get("blocks", []) if b.get("keyword") == "GUIDELINES"), None)
+        if not (te and fo and gb):
+            continue
+        for row in gb.get("rows", []):
+            label = row.get("label", "")
+            cells = row.get("cells", [])
+            effect = (cells[0].get("value") if cells else "") or ""
+            m = _re.match(r"Level\s+(\d+)", label)
+            level = int(m.group(1)) if m else ("General" if "general" in label.lower() else label)
+            guidelines.append({"technique": te, "form": fo, "level": level, "effect": effect})
+
+    def param_rows(rows):
+        return [{"code": c, "label": lab, "magnitude": mag} for c, lab, mag in rows]
+
     meta = {
         "edition": corpus.get("edition"),
         "spec_version": corpus.get("spec_version"),
@@ -257,6 +290,10 @@ def main():
         "creationRules": creation_rules,
         "spellsFile": "chargen-spells.json",
         "spellCount": len(spells),
+        "guidelines": guidelines,
+        "spellParams": {"ranges": param_rows(SPELL_RANGES),
+                        "durations": param_rows(SPELL_DURATIONS),
+                        "targets": param_rows(SPELL_TARGETS)},
     }
     chargen_spells = {"meta": meta, "spells": spells}
 
@@ -275,6 +312,8 @@ def main():
           f"arts {len(techniques)}+{len(forms)}")
     print(f"  virtues {len(virtues)} | flaws {len(flaws)} | abilities {len(abilities)}")
     print(f"  creation-rule passages {len(creation_rules)}/{len(CREATION_RULE_ENTITIES)}")
+    print(f"  spell guidelines {len(guidelines)} rows across "
+          f"{len(set((g['technique'],g['form']) for g in guidelines))} Te/Fo tables")
     print(f"wrote {out_spells}  ({os.path.getsize(out_spells)/1024:.1f} KB) | "
           f"spells {len(spells)}")
 

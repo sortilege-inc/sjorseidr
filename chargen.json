@@ -6923,5 +6923,3146 @@
   }
  },
  "spellsFile": "chargen-spells.json",
- "spellCount": 527
+ "spellCount": 527,
+ "guidelines": [
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 1,
+   "effect": "Give an animal a +1 bonus to Recovery rolls"
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 2,
+   "effect": "Give an animal a +3 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 2,
+   "effect": "Preserve a corpse from decay."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 3,
+   "effect": "Give an animal a +6 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 4,
+   "effect": "Give an animal a +9 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Create an animal product, such as spidersilk or wool. (Note that an Individual is a single hair, a single hide, or a single tusk.)"
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Create an insect or similar bug."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Give an animal a +12 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Create the corpse of an animal."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Create a bird, reptile, fish, or amphibian."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Give an animal a +15 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Heal a Light Wound."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Give an animal a +18 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Create a mammal"
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Cause an animal to reach full maturity over the course of a single day or night. This accelerated maturation only applies during the spell's Duration, and thus full effect requires a Sun Duration spell cast early in the day or night."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 20,
+   "effect": "Heal a Medium Wound"
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 20,
+   "effect": "Give an animal a +21 bonus to Recovery rolls"
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 20,
+   "effect": "Cause an animal to reach full maturity over the course of about two hours"
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 25,
+   "effect": "Stop the progress of a disease."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 25,
+   "effect": "Heal a Heavy Wound."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 25,
+   "effect": "Restore a lost sense."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 25,
+   "effect": "Restore a lost limb."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 25,
+   "effect": "Cure a disease, counteracting its effects. (Unless cast as a Momentary Ritual, this is the same as stopping the progress of a disease.)"
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 25,
+   "effect": "Cause an animal to reach full maturity over the course of ten Diameters (twenty minutes)."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 30,
+   "effect": "Heal an Incapacitating Wound."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 30,
+   "effect": "Increase one of an animal's Characteristics by one point, to no more than the average score for that kind of animal."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 30,
+   "effect": "Cause an animal to reach full maturity over the course of a single Diameter."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 35,
+   "effect": "Heal all wounds."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 35,
+   "effect": "Increase one of an animal's Characteristics by one point, to no more than one higher than the average score for that kind of animal."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 40,
+   "effect": "Increase one of an animal's Characteristics by one point, to no more than two higher than the average score for that kind of animal."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 40,
+   "effect": "Cause an animal to reach full maturity in a moment."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 45,
+   "effect": "Increase one of an animal's Characteristics by one point, to no more than three higher than the average score for that kind of animal."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 50,
+   "effect": "Create a magical beast. When creating a magical creature, the Magic Might of the creature cannot exceed the level of the spell, and requisites must be included for any special powers (for example, Ignem if it can breathe fire, Rego and Mentem if it can control people's minds). A Vim requisite, for the magical nature, is always required."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 50,
+   "effect": "Increase one of an animal's Characteristics by one point, to no more than four higher than the average score for that kind of animal."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 55,
+   "effect": "Increase one of an animal's Characteristics by one point, to no more than five higher than the average score for that kind of animal. A greater increase is not within the natural range for the animal, and thus cannot be effected by Creo magic."
+  },
+  {
+   "technique": "Creo",
+   "form": "Animal",
+   "level": 75,
+   "effect": "Raise an animal from the dead."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 1,
+   "effect": "Get a mental image of an animal."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 3,
+   "effect": "Sense the state of consciousness of a beast."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 3,
+   "effect": "Get general information about an animal's body."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 4,
+   "effect": "Sense the dominant drive of a beast."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 4,
+   "effect": "Learn a specific fact about an animal's body."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Learn the origin, age, and history of something made of animal products"
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Speak with an animal."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Read an animal's surface thoughts."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Read the recent memories of a beast."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Animal",
+   "level": 20,
+   "effect": "Thoroughly probe the mind of a beast."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 1,
+   "effect": "Make a superficial change to something made of animal products (like changing its color)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 2,
+   "effect": "Make a major change to something made of animal products that preserves the substance (for example, turn a leather jerkin into a saddle)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 2,
+   "effect": "Make a superficial change to a beast"
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 3,
+   "effect": "Change an animal's limb."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 3,
+   "effect": "Change something made of animal products into a different animal product."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 4,
+   "effect": "Make a major change in a beast, while leaving it recognizably the same sort of animal (for example, make a horse bigger and change its color)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 4,
+   "effect": "Change something made of animal products in a minor unnatural way."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Change an animal into a different animal."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Change an animal in a minor way so that it is no longer natural (for example, change the color of a horse's coat to match the covenant's coat of arms)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Change something made of animal products in a major unnatural way."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Change an animal into a human (though it retains its animal mentality and does not gain a soul, requires a Corpus requisite)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Change an animal into a plant (requires a Herbam requisite)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Change an animal in a major unnatural way (for example, give a horse claws, fangs, and scaly armored skin)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Change an animal into a non-living item (appropriate requisite required)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Animal",
+   "level": 25,
+   "effect": "Radically change an animal in an unnatural way (for example, give a horse wings). Give an animal a 'magical' ability, such as the ability to breathe fire (requires a requisite for the ability)."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 2,
+   "effect": "Damage something made of animal products."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 3,
+   "effect": "Do superficial damage to a beast (for example, remove its hair)."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 4,
+   "effect": "Destroy something made of animal products."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 4,
+   "effect": "Cause a beast pain, but do no real damage."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 4,
+   "effect": "Make a beast lose one Fatigue level."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Injure an animal so that it is hampered, but not damaged. For example, make a horse lame, a bird lose its voice, or weaken the scales of a serpent. This roughly halves the effectiveness of the targeted thing. Recovery as from a Light Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Destroy an animal's corpse."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Inflict a Light Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Inflict a Medium Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Destroy one of a beast's minor senses."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Inflict a Heavy Wound"
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Cripple a beast's limb, so that it is unusable but could heal."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Age a beast by one-twelfth of its natural lifespan. Only affects beasts that have already reached maturity."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 20,
+   "effect": "Inflict an Incapacitating Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 20,
+   "effect": "Destroy or sever a beast's limb, so that it cannot naturally regain it."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 20,
+   "effect": "Destroy one of a beast's major senses."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 30,
+   "effect": "Kill an animal."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Animal",
+   "level": 40,
+   "effect": "Destroy one property of an animal, such as its weight or aggression."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": "General",
+   "effect": "Ward against beings associated with Animal from one supernatural realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": "General",
+   "effect": "Create a circle warding against animals from one realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell (Touch, Ring, Circle). Note that animals are not necessarily associated with Animal, or vice versa."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 1,
+   "effect": "Manipulate items made from animal products"
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 2,
+   "effect": "Plant a single suggestion in the mind of an animal."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 2,
+   "effect": "Protect the target from animal attacks (only affects animals without supernatural abilities)."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 2,
+   "effect": "Treat items made of animal products."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 3,
+   "effect": "Treat and process items made of animal products."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 4,
+   "effect": "Calm an animal."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Manipulate an animal's emotions."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Paralyze an animal."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Ward against animals or objects made from animal products. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Control a disembodied spirit associated with Animal."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 5,
+   "effect": "Cause vermin to spontaneously generate in appropriate matter, such as flesh, plants, soil, or water."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Make an animal completely passive."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 10,
+   "effect": "Transport an animal instantly up to 5 paces. Non-living animal products are transported with Rego Terram. Add 1 magnitude to increase the distance to 50 paces, 2 magnitudes for 500 paces, 3 magnitudes for 1 league, 4 magnitudes for seven leagues, and 5 magnitudes to a place for which you have an Arcane Connection."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Completely control an animal."
+  },
+  {
+   "technique": "Rego",
+   "form": "Animal",
+   "level": 15,
+   "effect": "Summon a disembodied spirit associated with Animal."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Aquam",
+   "level": 1,
+   "effect": "Make a sense unaffected by water."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Aquam",
+   "level": 2,
+   "effect": "Get an image of water within range."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Aquam",
+   "level": 3,
+   "effect": "Get an image of water and its immediate surroundings within range."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Aquam",
+   "level": 3,
+   "effect": "Learn the natural properties of a liquid."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Aquam",
+   "level": 4,
+   "effect": "Learn the natural properties of a mixture of liquids."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Aquam",
+   "level": 5,
+   "effect": "Learn the magical properties of a liquid"
+  },
+  {
+   "technique": "Intellego",
+   "form": "Aquam",
+   "level": 10,
+   "effect": "Learn the magical properties of a mixture of liquids."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Aquam",
+   "level": 15,
+   "effect": "Speak with a natural body of water."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Aquam",
+   "level": 20,
+   "effect": "Speak with an artificial body of water (like a fountain)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": "General",
+   "effect": "Change a liquid into a liquid that does +(Level) points of damage on contact."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": "General",
+   "effect": "Convert part of a water elemental's body into another type of water (salt water to fresh water, etc.), reducing the elemental's Might pool by the level of the spell +2 magnitudes. If the elemental is not destroyed by this effect, when the duration ends it can restore this Might by re-absorbing the matter."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 2,
+   "effect": "Change a natural liquid into another natural liquid."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 2,
+   "effect": "Change a liquid into a poison causing a Light Wound."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 3,
+   "effect": "Change a liquid into a poison causing a Medium Wound."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 3,
+   "effect": "Change a natural liquid into a slightly unnatural liquid (for example, make blue water or strawberry flavored castor oil), or vice versa."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 4,
+   "effect": "Change a liquid into an unrelated solid or gas (with requisites; Terram for solids and Auram for gases)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 4,
+   "effect": "Change a natural liquid into two or more different natural liquids, with the two types separate (although they will mix again normally)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 4,
+   "effect": "Change a liquid into a poison causing a Heavy Wound."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 4,
+   "effect": "Change a liquid into a very unnatural liquid (for example, a shocking pink liquid that causes bizarre hallucinations) — requisites will often be required."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 5,
+   "effect": "Change a liquid into a mixture of any liquid, solid (with Terram requisite), or gas (with Auram requisite)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 5,
+   "effect": "Change a liquid into a slightly unnatural solid or gas."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 5,
+   "effect": "Change a liquid into a poison causing an Incapacitating Wound."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 10,
+   "effect": "Change a liquid into a very unnatural solid or gas."
+  },
+  {
+   "technique": "Muto",
+   "form": "Aquam",
+   "level": 10,
+   "effect": "Change a liquid into a poison causing a Fatal Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Aquam",
+   "level": "General",
+   "effect": "Destroy sufficient matter to reduce a water elemental's Might Score by the level of the spell +2 magnitudes."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Aquam",
+   "level": 4,
+   "effect": "Completely dry something (up to the size of a small house) that is wet."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Aquam",
+   "level": 5,
+   "effect": "Greatly reduce the amount of a liquid without destroying it completely."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Aquam",
+   "level": 10,
+   "effect": "Destroy a liquid (requisites may be required)."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Aquam",
+   "level": 15,
+   "effect": "Destroy one property of a liquid (like alcohol's ability to intoxicate or sea water's saltiness)."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Aquam",
+   "level": 20,
+   "effect": "Destroy a small spring, so that it never flows again."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": "General",
+   "effect": "Ward against beings associated with Aquam from one supernatural realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 1,
+   "effect": "Control a liquid in an extremely gentle way."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 3,
+   "effect": "Change a liquid into the corresponding solid or gas (for example, change water into ice or steam). This does not require requisites."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 4,
+   "effect": "Control a liquid in a forceful but calm way, such as a fast but constant current."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 4,
+   "effect": "Transport a liquid instantly up to 5 paces. Add 1 magnitude to increase the distance to 50 paces, 2 magnitudes for 500 paces, 3 magnitudes for 1 league, 4 magnitudes for seven leagues, and 5 magnitudes to a place for which you have an Arcane Connection."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 5,
+   "effect": "Ward against mundane water."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 5,
+   "effect": "Control a liquid in a violent way."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 5,
+   "effect": "Control a disembodied spirit associated with Aquam."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 5,
+   "effect": "Completely control a water elemental."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 10,
+   "effect": "Control a liquid in an extremely violent way."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 15,
+   "effect": "Summon a disembodied spirit associated with Aquam."
+  },
+  {
+   "technique": "Rego",
+   "form": "Aquam",
+   "level": 20,
+   "effect": "Ward against liquids. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Creo",
+   "form": "Auram",
+   "level": 1,
+   "effect": "Create a minor weather phenomenon: a breeze, a mist, a light drizzle."
+  },
+  {
+   "technique": "Creo",
+   "form": "Auram",
+   "level": 2,
+   "effect": "Create a normal weather phenomenon: a cloud, wind, fog, rain from a cloud that already exists."
+  },
+  {
+   "technique": "Creo",
+   "form": "Auram",
+   "level": 3,
+   "effect": "Create a severe weather phenomenon: deafening thunder, monsoon rain, impenetrable fog, gale force wind."
+  },
+  {
+   "technique": "Creo",
+   "form": "Auram",
+   "level": 3,
+   "effect": "Create a debilitating kind of air: noxious stench, mild poison, etc."
+  },
+  {
+   "technique": "Creo",
+   "form": "Auram",
+   "level": 5,
+   "effect": "Create a very severe weather phenomenon: hurricane force winds, lightning strike, tornado."
+  },
+  {
+   "technique": "Creo",
+   "form": "Auram",
+   "level": 25,
+   "effect": "Create an air elemental from a base amount of elemental material. (Ritual)"
+  },
+  {
+   "technique": "Creo",
+   "form": "Auram",
+   "level": 25,
+   "effect": "Create a phenomenon in a slightly unnatural fashion: +1 magnitude (for example, indoors)"
+  },
+  {
+   "technique": "Creo",
+   "form": "Auram",
+   "level": 25,
+   "effect": "Create a phenomenon in a very unnatural fashion: +2 magnitudes"
+  },
+  {
+   "technique": "Creo",
+   "form": "Auram",
+   "level": 25,
+   "effect": "Create a phenomenon wholly divorced from its normal context (for example, a lightning bolt springing from the caster's hands): +4 magnitudes"
+  },
+  {
+   "technique": "Intellego",
+   "form": "Auram",
+   "level": 1,
+   "effect": "Make your senses unhindered by the air (for example, you can hear over a howling wind)."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Auram",
+   "level": 2,
+   "effect": "Sense one property of air (for example, determine if it is safe to breathe)."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Auram",
+   "level": 4,
+   "effect": "Learn all mundane properties of the air."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Auram",
+   "level": 4,
+   "effect": "Have an intuition about some fact regarding the air."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Auram",
+   "level": 15,
+   "effect": "Speak with air."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Auram",
+   "level": "General",
+   "effect": "Destroy sufficient matter to reduce an air elemental’s Might Score by the level of the spell +2 magnitudes."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Auram",
+   "level": 3,
+   "effect": "Make air stuffy and poor for breathing."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Auram",
+   "level": 4,
+   "effect": "Destroy still air."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Auram",
+   "level": 4,
+   "effect": "Destroy a minor weather phenomenon: a breeze, a mist, a light drizzle."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Auram",
+   "level": 4,
+   "effect": "Reduce the intensity of a weather phenomenon by one step (for example, from very severe to severe, or from normal to minor.)"
+  },
+  {
+   "technique": "Perdo",
+   "form": "Auram",
+   "level": 5,
+   "effect": "Destroy a normal weather phenomenon: a cloud, wind, fog, rain from a cloud that already exists."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Auram",
+   "level": 10,
+   "effect": "Destroy a severe weather phenomenon: deafening thunder, monsoon rain, impenetrable fog, gale force wind."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Auram",
+   "level": 10,
+   "effect": "Destroy a debilitating kind of air: noxious stench, mild poison, etc."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Auram",
+   "level": 15,
+   "effect": "Destroy a very severe weather phenomenon: hurricane force winds, lightning strike, tornado."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": "General",
+   "effect": "Ward against beings associated with Auram from one supernatural realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 2,
+   "effect": "Control a minor weather phenomenon."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 3,
+   "effect": "Control a normal weather phenomenon."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 3,
+   "effect": "Ward someone against a type of minor weather phenomenon."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 4,
+   "effect": "Control a severe weather phenomenon."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 4,
+   "effect": "Ward someone against a type of normal weather phenomenon."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 5,
+   "effect": "Control a very severe weather phenomenon."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 5,
+   "effect": "Control a disembodied spirit associated with Auram."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 5,
+   "effect": "Completely control an air elemental."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 5,
+   "effect": "Ward someone against a type of severe weather phenomenon."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 10,
+   "effect": "Ward someone against a type of very severe weather phenomenon."
+  },
+  {
+   "technique": "Rego",
+   "form": "Auram",
+   "level": 15,
+   "effect": "Summon a disembodied spirit associated with Auram."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 1,
+   "effect": "Give a character a +1 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 1,
+   "effect": "The target's wounds are treated as one category less serious for the purposes of activities while injured."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 2,
+   "effect": "Give a character a +3 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 2,
+   "effect": "Preserve a corpse from decay."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 3,
+   "effect": "Give a character a +6 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 3,
+   "effect": "Prevent all of a target's wounds from getting any worse."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 4,
+   "effect": "Give a character a +9 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Give a character a +12 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Create an entire human corpse"
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Give a character a +15 bonus to Recovery rolls"
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Heal a Light Wound."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Give a character a +18 bonus to Recovery rolls."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Resolve a minor aging crisis."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Heal a Medium Wound."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Heal the debilitating after-effects of a disease, poison, or injury."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Resolve a serious aging crisis."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 25,
+   "effect": "Heal a Heavy Wound."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 25,
+   "effect": "Improve all wounds by one level of severity."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 25,
+   "effect": "Restore a lost limb."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 25,
+   "effect": "Resolve a major aging crisis."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 30,
+   "effect": "Heal an Incapacitating Wound"
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 30,
+   "effect": "Increase one of a person's physical Characteristics by one point, to no more than 0."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 30,
+   "effect": "Cause a person to reach full physical maturity over the course of a single day or night. This accelerated maturation only applies during the spell's Duration, and thus full effect requires a Sun Duration spell cast early in the day or night. People do not learn under the influence of this spell, and for these purposes full maturity is reached around the age of twenty."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 30,
+   "effect": "Resolve a critical aging crisis"
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 35,
+   "effect": "Heal all wounds."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 35,
+   "effect": "Resolve a terminal aging crisis."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 35,
+   "effect": "Increase one of a person's physical Characteristics by one point, to no more than +1."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 40,
+   "effect": "Increase one of a person's physical Characteristics by one point, to no more than +2."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 45,
+   "effect": "Increase one of a person's physical Characteristics by one point, to no more than +3."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 50,
+   "effect": "Increase one of a person's physical Characteristics by one point, to no more than +4"
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 55,
+   "effect": "Increase one of a person's physical Characteristics by one point, to no more than +5. Further increases are not natural to human beings, and thus cannot be effected by Creo magic."
+  },
+  {
+   "technique": "Creo",
+   "form": "Corpus",
+   "level": 70,
+   "effect": "Raise the dead, to a point. (See The Shadow of Life Renewed.)"
+  },
+  {
+   "technique": "Intellego",
+   "form": "Corpus",
+   "level": 3,
+   "effect": "Locate a person."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Corpus",
+   "level": 4,
+   "effect": "Sense very general information about a body."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Sense a specific piece of information about a body."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Speak with a dead body."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Sense all useful information about a body."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 2,
+   "effect": "Change someone to give them a minor ability."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 3,
+   "effect": "Utterly change the appearance or size of a person (though they must still remain human in form)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 3,
+   "effect": "Change non-living human bone to have an unnatural property (requisites may be needed)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Make a body resistant to damage (+1 Soak)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Add or remove human body parts from the target in such a way that he no longer looks human. These parts are normally functional, although a spell may be deliberately designed so that they are not. The Target is Part, not Individual (although Group and higher Targets work as normal)"
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Turn a human into a land animal (with an Animal requisite)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Make a body resistant to damage (+2 Soak)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Make a body resistant to damage (+3 Soak)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Turn a human into a bird or a fish (Animal requisite)"
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Make a body resistant to damage (+4 Soak)"
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 25,
+   "effect": "Turn a human into a solid inanimate object (Terram requisite)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 25,
+   "effect": "Make a body resistant to damage (+5 Soak)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 25,
+   "effect": "Turn a human into a plant (Herbam requisite)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Corpus",
+   "level": 30,
+   "effect": "Turn a human into an insubstantial object (Auram requisite)."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 3,
+   "effect": "Do superficial damage to a body (for example, remove its hair)."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 4,
+   "effect": "Cause a person pain, but do no real damage."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Inflict a Light Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Destroy a corpse"
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Hamper a person without actually injuring them. For example, make them lame, blur their eyesight. Heals as a Light Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Inflict a Medium Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Cause the loss of a Fatigue level"
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Age someone by up to five years."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Cripple a limb, making it unusable (but still capable of healing). The damage heals as a Medium Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Destroy one of a person's minor senses. The damage heals as a Medium Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Inflict a Heavy Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Destroy one of a person's major senses. This damage heals as a Heavy Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Inflict a major disease."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Destroy or sever a limb, so that it cannot heal naturally."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Inflict an Incapacitating Wound."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 30,
+   "effect": "Kill a person."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Corpus",
+   "level": 40,
+   "effect": "Destroy one property of a person, such as their weight or solidity."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": "General",
+   "effect": "Ward against creatures associated with Corpus from one realm (Divine, Faerie, Infernal, or Magic) with a Might less than or equal to the level of the spell. Note that Hermetic magi have no Might, and thus are not affected by such spells. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 2,
+   "effect": "Make a target lose control of a body part."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 3,
+   "effect": "Move a target slowly in one direction, as long as the surface can support its weight."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 3,
+   "effect": "Invoke a minor symptom of a disease without creating any underlying malaise (e.g. rash, mild fever, cough)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 4,
+   "effect": "Control the large-scale physical movements of a target."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 4,
+   "effect": "Move a target slowly in any direction you please."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 4,
+   "effect": "Move a target slowly straight up, or in one direction over surfaces that cannot support it."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Hold a target's body motionless."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Invoke a major symptom of a disease without creating any underlying malaise (e.g. vomiting, boils, paralysis)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Move a target slowly in any direction you please, even if the target is unsupported."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Perform a trivial surgical procedure (inflicting a Fatigue level)."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 5,
+   "effect": "Control a disembodied spirit associated with Corpus."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Control a target's motions."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Eliminate the penalties of Fatigue and wounds."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Animate a corpse."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Transport the target instantly up to 5 paces."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 10,
+   "effect": "Perform a minor surgical procedure, inflicting a Light Wound or preventing a Light Wound from worsening"
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Direct the flow of bodily energy."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Move a target quickly in any direction you please, even if it is unsupported."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Summon a disembodied spirit associated with Corpus."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Transport the target instantly up to 50 paces."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Ward a target against other human beings. Remember that, to ward off a Hermetic magus, the ward must penetrate his Magic Resistance."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 15,
+   "effect": "Perform a major surgical procedure, inflicting a Medium Wound or preventing a Medium Wound from worsening."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Transport the target instantly up to 500 paces."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 20,
+   "effect": "Perform a critical surgical procedure, preventing a Heavy Wound from worsening."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 25,
+   "effect": "Transport the target instantly up to one league."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 25,
+   "effect": "Perform a life-saving surgical procedure, preventing an Incapacitating or Fatal Wound from worsening."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 30,
+   "effect": "Transport the target instantly up to seven leagues."
+  },
+  {
+   "technique": "Rego",
+   "form": "Corpus",
+   "level": 35,
+   "effect": "Transport the target instantly to a place you have an Arcane Connection to."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 1,
+   "effect": "Ensure that a plant grows well for the duration of the spell. This guideline can affect a plant up to ten paces in each direction; a large tree. (That is, this guideline includes a +3 Size enhancement.)"
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 1,
+   "effect": "Create a plant product (like a fruit or leaf)."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 1,
+   "effect": "Create a plant."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 1,
+   "effect": "Prevent a plant from becoming sick."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 1,
+   "effect": "Heal a Light Wound to a plant."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 2,
+   "effect": "Create a processed plant product, like a finished plank of wood."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 2,
+   "effect": "Preserve a dead plant from decay."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 2,
+   "effect": "Heal a Medium Wound to a plant."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 3,
+   "effect": "Create wood in an unnatural shape, such as a living wall or bridge."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 3,
+   "effect": "Heal a Heavy Wound to a plant."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 4,
+   "effect": "Heal an Incapacitating Wound to a plant."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 5,
+   "effect": "Heal all Wounds to a plant."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 10,
+   "effect": "Heal all damage to a plant, including wounds, disease, and poison."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 15,
+   "effect": "Bring a plant to maturity in a single day or night. The accelerated growth only happens during the duration of the spell, so full maturity requires a Sun duration spell cast soon after sunrise or sunset."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 15,
+   "effect": "Restore a manufactured wooden item that has been damaged to the peak of its capabilities. This spell can also restore decay, but the damage must be light."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 20,
+   "effect": "Bring a plant to maturity in about two hours."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 25,
+   "effect": "Bring a plant to maturity in about ten Diameters (twenty minutes)."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 30,
+   "effect": "Bring a plant to maturity in a single Diameter."
+  },
+  {
+   "technique": "Creo",
+   "form": "Herbam",
+   "level": 40,
+   "effect": "Bring a plant to maturity in a moment."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Herbam",
+   "level": 1,
+   "effect": "Gain an intuitive knowledge of a plant (for example, know whether a given action would harm a plant)."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Herbam",
+   "level": 2,
+   "effect": "Locate a plant."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Herbam",
+   "level": 3,
+   "effect": "Learn general information, or a single specific fact about a plant or an item made from plant products."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Herbam",
+   "level": 4,
+   "effect": "Learn all mundane properties of a plant or an item made from plant products."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Herbam",
+   "level": 15,
+   "effect": "Speak with a plant."
+  },
+  {
+   "technique": "Muto",
+   "form": "Herbam",
+   "level": 3,
+   "effect": "Change a plant or item made from plant products."
+  },
+  {
+   "technique": "Muto",
+   "form": "Herbam",
+   "level": 4,
+   "effect": "Change a plant or item made from plant products into metal or stone (Terram requisite)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Herbam",
+   "level": 4,
+   "effect": "Awaken the consciousness of a plant (Mentem requisite)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Herbam",
+   "level": 5,
+   "effect": "Cause a plant to bend or twist rapidly in place."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Herbam",
+   "level": 2,
+   "effect": "Cause the leaves to fall off a plant."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Herbam",
+   "level": 3,
+   "effect": "Spoil an amount of food."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Herbam",
+   "level": 4,
+   "effect": "Destroy an amount of dead wood."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Herbam",
+   "level": 5,
+   "effect": "Destroy a plant."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": "General",
+   "effect": "Ward against beings associated with Herbam from one supernatural realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 3,
+   "effect": "Control an amount of wood."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 3,
+   "effect": "Manipulate items made of plant products."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 4,
+   "effect": "Deflect a single attack by a wooden weapon."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 4,
+   "effect": "Control an entire plant, moving it around as you direct, although it remains rooted if it is a rooted plant."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 4,
+   "effect": "Treat items made of plant products."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 5,
+   "effect": "Control an entire plant, moving it around as you direct, and it need not remain rooted."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 5,
+   "effect": "Control a disembodied spirit associated with Herbam."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 5,
+   "effect": "Summon a mobile plant."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 5,
+   "effect": "Treat and process items made of plant products."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 5,
+   "effect": "Ward a plant against mundane plant diseases."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 10,
+   "effect": "Make a plant or thing made of plant products move with purpose and intelligence, without requiring your constant control."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 10,
+   "effect": "Transport a plant instantly up to 5 paces. Non-living plant products are transported with Rego Terram. Add 1 magnitude to increase the distance to 50 paces, 2 magnitudes for 500 paces, 3 magnitudes for 1 league, 4 magnitudes for seven leagues, and 5 magnitudes to a place for which you have an Arcane Connection."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 15,
+   "effect": "Ward someone against mundane plant products."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 15,
+   "effect": "Make a tree blossom out of season, in a moment."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 15,
+   "effect": "Weave thread into a tunic."
+  },
+  {
+   "technique": "Rego",
+   "form": "Herbam",
+   "level": 15,
+   "effect": "Summon a disembodied spirit associated with Herbam."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 1,
+   "effect": "Create light equivalent to moonlight."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 2,
+   "effect": "Create light equivalent to candlelight."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 2,
+   "effect": "Heat an object to be warm to the touch."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 2,
+   "effect": "Ignite something extremely flammable (like oil or a wick)."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Create light equivalent to torchlight."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Heat an object to be hot to the touch."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Ignite something very flammable (like parchment)."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Create a fire doing +5 damage."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Create light as bright as a cloudy day."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Ignite something flammable (like dry wood or charcoal)"
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Heat an object enough to boil water."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Create a fire doing +10 damage."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Create a fire doing +5 damage in an unnatural shape, such as in a ring or sheet, or covering an item. (Purely cosmetic shapes are free.)"
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Create light as bright as direct sunlight on a clear day."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Ignite something slightly flammable (like leather or damp wood)."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Heat an object enough to make it glow red-hot. This is hot enough to melt tin or lead."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 10,
+   "effect": "Create a fire doing +15 damage."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 10,
+   "effect": "Create a fire doing +10 damage in an unnatural shape."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 10,
+   "effect": "Ignite something barely flammable (like a human body)."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 10,
+   "effect": "Heat an object enough to make it glow white-hot. This is hot enough to melt almost all metals, and many rocks."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 15,
+   "effect": "Create a fire doing +20 damage."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 20,
+   "effect": "Create a fire doing +25 damage."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 20,
+   "effect": "Create a fire doing +20 damage in an unnatural shape."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 25,
+   "effect": "Create a fire doing +30 damage."
+  },
+  {
+   "technique": "Creo",
+   "form": "Ignem",
+   "level": 25,
+   "effect": "Create a fire elemental from a base amount of elemental matter. (Ritual)"
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 1,
+   "effect": "Sense one property of a fire."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 1,
+   "effect": "Locate a fire."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 2,
+   "effect": "Sense all mundane properties of a fire."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 2,
+   "effect": "Become aware of all fires within the target area."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 2,
+   "effect": "See a fire."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 2,
+   "effect": "Sense levels of heat."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Sense all mundane properties of ash."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Detect the traces of fires which burned within the last lunar month."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "See clearly through raging fire (an Auram requisite may be necessary if smoke is present as well)."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Learn the magical properties of a fire."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 10,
+   "effect": "See a fire and all things it illuminates (for example, see a campfire and everything within its circle of light)."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Ignem",
+   "level": 20,
+   "effect": "Speak with a fire."
+  },
+  {
+   "technique": "Muto",
+   "form": "Ignem",
+   "level": "General",
+   "effect": "Convert part of a fire elemental's body into another type of fire (clear to sooty flame, etc.), reducing the elemental's Might pool by the level of the spell +2 magnitudes. If the elemental is not destroyed by this effect, when the duration ends it can restore this Might by re-absorbing the matter."
+  },
+  {
+   "technique": "Muto",
+   "form": "Ignem",
+   "level": 1,
+   "effect": "Change one characteristic of a fire within the target area (for example, make a fire burn more brightly, or produce more smoke)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Ignem",
+   "level": 2,
+   "effect": "Totally change a fire into another natural fire (changing any or all of its characteristics)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Change a fire so that it is slightly unnatural (for example, make the flames colored, or make the smoke smell of roses). May require requisites."
+  },
+  {
+   "technique": "Muto",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Change a fire so that it is completely unnatural (for example, multicolored flames that form images while the popping of the fire plays music). Often requires requisites."
+  },
+  {
+   "technique": "Muto",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Change a fire into a natural example of another element, with an appropriate requisite."
+  },
+  {
+   "technique": "Muto",
+   "form": "Ignem",
+   "level": 10,
+   "effect": "Change a fire into an unnatural example of another element, with an appropriate requisite."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": "General",
+   "effect": "Destroy sufficient matter to reduce a fire elemental's Might Score by the level of the spell +2 magnitudes."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 2,
+   "effect": "Greatly reduce the amount of light in an area."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Completely extinguish all light in an area."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Reduce the size of a fire without destroying it completely."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Extinguish a fire, cooling the ashes to merely warm."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Chill an object."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Chill a person so that they lose a Fatigue level."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Strongly chill an object. (For example, freeze water.)"
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Chill a person so that they take +5 damage."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 10,
+   "effect": "Destroy one aspect of a fire (for example, heat or light)."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Ignem",
+   "level": 10,
+   "effect": "Chill a person so strongly that they take +10 damage."
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": "General",
+   "effect": "Ward against beings associated with Ignem from one supernatural realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Control a fire in a natural fashion (for example, control its direction of spread)."
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Move a fire quickly through space while leaving it burning naturally."
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 3,
+   "effect": "Transport a fire instantly up to 5 paces. Add 1 magnitude to increase the distance to 50 paces, 2 magnitudes for 500 paces, 3 magnitudes for 1 league, 4 magnitudes for seven leagues, and 5 magnitudes to a place for which you have an Arcane Connection."
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 4,
+   "effect": "Control a fire in a slightly unnatural fashion (for example, stop it from burning a person)."
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Control a disembodied spirit associated with Ignem."
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 5,
+   "effect": "Completely control a fire elemental."
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 10,
+   "effect": "Control a fire in a very unnatural fashion (for example, fashion into a dancing humanoid shape)."
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 15,
+   "effect": "Summon a disembodied spirit associated with Ignem."
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 15,
+   "effect": "Ward against fire doing up to +5 damage. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 20,
+   "effect": "Ward against fire doing up to +10 damage. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 25,
+   "effect": "Ward against fire doing up to +15 damage. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 30,
+   "effect": "Ward against fire doing up to +20 damage. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 35,
+   "effect": "Ward against fire doing up to +25 damage. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Ignem",
+   "level": 40,
+   "effect": "Ward against fire doing up to +30"
+  },
+  {
+   "technique": "Creo",
+   "form": "Imaginem",
+   "level": 1,
+   "effect": "Create an image that affects a single sense."
+  },
+  {
+   "technique": "Creo",
+   "form": "Imaginem",
+   "level": 2,
+   "effect": "Create an image that affects two senses."
+  },
+  {
+   "technique": "Creo",
+   "form": "Imaginem",
+   "level": 3,
+   "effect": "Create an image that affects three senses."
+  },
+  {
+   "technique": "Creo",
+   "form": "Imaginem",
+   "level": 4,
+   "effect": "Create an image that affects four senses."
+  },
+  {
+   "technique": "Creo",
+   "form": "Imaginem",
+   "level": 5,
+   "effect": "Create an image that affects five senses."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Imaginem",
+   "level": "General",
+   "effect": "Discern illusions caused by spells of equal or lower level than the level of this spell (Vision target)."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Imaginem",
+   "level": 1,
+   "effect": "Use one sense at a distance."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Imaginem",
+   "level": 1,
+   "effect": "Memorize or perfect your memory about an image you have encountered."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Imaginem",
+   "level": 1,
+   "effect": "Be able to discern your own false images."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Imaginem",
+   "level": 2,
+   "effect": "Use two senses at a distance."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Imaginem",
+   "level": 3,
+   "effect": "Use three senses at a distance."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Imaginem",
+   "level": 3,
+   "effect": "Enhance one of your senses in one way (to see clearly at a distance, to see small things, or to see in the dark, for example)."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Imaginem",
+   "level": 5,
+   "effect": "Use all senses at a distance."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Imaginem",
+   "level": 4,
+   "effect": "Use four senses at a distance."
+  },
+  {
+   "technique": "Muto",
+   "form": "Imaginem",
+   "level": 1,
+   "effect": "Change one sensation of an object (for example, make a leaf look like a coin), but not its type (i.e. not from sight to sound)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Imaginem",
+   "level": 2,
+   "effect": "Change two sensations of an object."
+  },
+  {
+   "technique": "Muto",
+   "form": "Imaginem",
+   "level": 2,
+   "effect": "Transform species that affect one sense into those that affect another. (For example, transform audible species into visual species, so that sounds can be seen.)"
+  },
+  {
+   "technique": "Muto",
+   "form": "Imaginem",
+   "level": 3,
+   "effect": "Change three sensations of an object."
+  },
+  {
+   "technique": "Muto",
+   "form": "Imaginem",
+   "level": 4,
+   "effect": "Change four sensations of an object."
+  },
+  {
+   "technique": "Muto",
+   "form": "Imaginem",
+   "level": 5,
+   "effect": "Change the appearance of an object completely, in all things except solidity."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Imaginem",
+   "level": 2,
+   "effect": "Destroy an object's ability to affect taste or touch."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Imaginem",
+   "level": 3,
+   "effect": "Destroy an object's ability to affect smell or hearing."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Imaginem",
+   "level": 3,
+   "effect": "Destroy an object's ability to affect taste and touch."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Imaginem",
+   "level": 4,
+   "effect": "Destroy an object's ability to affect sight."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Imaginem",
+   "level": 4,
+   "effect": "Destroy an object's ability to affect any three of taste, touch, smell, or hearing."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Imaginem",
+   "level": 5,
+   "effect": "Destroy an object's ability to affect any four senses."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Imaginem",
+   "level": 10,
+   "effect": "Destroy an object's ability to affect all five senses."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": "General",
+   "effect": "Ward against beings associated with Imaginem from one supernatural realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 2,
+   "effect": "Make an object appear (to one sense) to be up to one pace away from its actual position."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 3,
+   "effect": "Make an object appear (to one sense) to be up to five paces away from its actual position."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 3,
+   "effect": "Make objects appear to move rapidly in a disorientating way."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 4,
+   "effect": "Make an object appear (to one sense) to be up to fifteen paces from its actual position."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 4,
+   "effect": "Make an object appear (to one sense) to be contained in or attached to another object defined at the time of casting (for example, make someone's voice appear to come from within a bag)."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 5,
+   "effect": "Make an object appear (to one sense) to be up to one hundred paces from its actual position."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 5,
+   "effect": "Control a disembodied spirit associated with Imaginem."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 10,
+   "effect": "Make an object appear (to one sense) to be in Sight of its actual position."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 15,
+   "effect": "Make an object appear (to one sense) to be in a location that the caster has an Arcane Connection to."
+  },
+  {
+   "technique": "Rego",
+   "form": "Imaginem",
+   "level": 15,
+   "effect": "Summon a disembodied spirit associated with Imaginem."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 4,
+   "effect": "Sense the state of consciousness of one intelligent being (for example, asleep, awake, meditating, dead, drugged, insane, or comatose)."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 5,
+   "effect": "Sense a single emotion in a being."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 5,
+   "effect": "Understand the meaning behind spoken sounds."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 10,
+   "effect": "Sense all of the emotions in a being."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 10,
+   "effect": "Discover the truth of a statement."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Speak with any one human."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Read a person's surface thoughts."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Pick a single answer from the mind of a target."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 20,
+   "effect": "Read the last day's memories from one person."
+  },
+  {
+   "technique": "Intellego",
+   "form": "Mentem",
+   "level": 25,
+   "effect": "Learn all the information you wish from a person's mind."
+  },
+  {
+   "technique": "Muto",
+   "form": "Mentem",
+   "level": 1,
+   "effect": "Make a minor change in a person's memory of an event."
+  },
+  {
+   "technique": "Muto",
+   "form": "Mentem",
+   "level": 2,
+   "effect": "Make a major change to a person's memory of an event."
+  },
+  {
+   "technique": "Muto",
+   "form": "Mentem",
+   "level": 3,
+   "effect": "Make a major change to a person's memory of a series of events. Make a major change to a person's emotion."
+  },
+  {
+   "technique": "Muto",
+   "form": "Mentem",
+   "level": 4,
+   "effect": "Make major changes to a person's memory of a period of their life. Completely change a person's emotions."
+  },
+  {
+   "technique": "Muto",
+   "form": "Mentem",
+   "level": 5,
+   "effect": "Turn a single memory or emotion into a solid object. (Requisite of the Form of the shape.) The person whose memory or emotion was transformed must be touching the item to feel the emotion or recall the memory. Other people touching the object do not experience its mental aspects."
+  },
+  {
+   "technique": "Muto",
+   "form": "Mentem",
+   "level": 10,
+   "effect": "Completely rewrite a person's memories."
+  },
+  {
+   "technique": "Muto",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Make a mind or spirit visible. (Imaginem requisite)"
+  },
+  {
+   "technique": "Muto",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Utterly change a person's mind."
+  },
+  {
+   "technique": "Muto",
+   "form": "Mentem",
+   "level": 25,
+   "effect": "Make a mind or spirit solid. (Requisite of the Form of the shape.)"
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 3,
+   "effect": "Remove a minor detail from a person's memory."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 4,
+   "effect": "Remove an important detail from a person's memory."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 4,
+   "effect": "Diminish a single mental capability in a person."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 4,
+   "effect": "Reduce the intensity of all of a person's emotions."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 5,
+   "effect": "Quell an emotion in a person."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 10,
+   "effect": "Remove a minor or short memory from a person's mind."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 10,
+   "effect": "Reduce all of a person's mental capabilities."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Remove a major or long memory from a person's mind."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Remove all emotions from a person."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Drive a person insane."
+  },
+  {
+   "technique": "Perdo",
+   "form": "Mentem",
+   "level": 25,
+   "effect": "Leave a person a mindless husk."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": "General",
+   "effect": "Ward against beings associated with Mentem from one supernatural realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": "General",
+   "effect": "Ward against spirits belonging to one realm (Divine, Faerie, Infernal, or Magic) with a Might less than or equal to the level of the spell. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 3,
+   "effect": "Make a subtle difference to the target's mental state."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 4,
+   "effect": "Control a target's mental state (for example, awake, asleep, or confused)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 5,
+   "effect": "Control a natural emotion (for example, calm, fear). The target must feel the emotion before you can control it."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 5,
+   "effect": "Control a disembodied spirit associated with Mentem, such as most ghosts."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 5,
+   "effect": "Incline a person to a particular sort of response."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 10,
+   "effect": "Control an unnatural emotion (for example, cultivate a person's feelings of bravery where he is usually cowardly)."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 10,
+   "effect": "Imbue all of a person's responses with a particular emotion."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Control a person as long as you can see them."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 15,
+   "effect": "Summon a disembodied spirit associated with Mentem, such as a ghost."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 20,
+   "effect": "Give a person one complex command, which he tries to carry out to the best of his ability."
+  },
+  {
+   "technique": "Rego",
+   "form": "Mentem",
+   "level": 25,
+   "effect": "Completely control a person's mind and emotions."
+  },
+  {
+   "technique": "Creo",
+   "form": "Terram",
+   "level": 1,
+   "effect": "Create sand, dirt, mud, or clay."
+  },
+  {
+   "technique": "Creo",
+   "form": "Terram",
+   "level": 3,
+   "effect": "Create stone or glass."
+  },
+  {
+   "technique": "Creo",
+   "form": "Terram",
+   "level": 5,
+   "effect": "Create base metal."
+  },
+  {
+   "technique": "Creo",
+   "form": "Terram",
+   "level": 15,
+   "effect": "Create precious metal."
+  },
+  {
+   "technique": "Creo",
+   "form": "Terram",
+   "level": 15,
+   "effect": "Repair a crafted item, returning it to an “as new” state."
+  },
+  {
+   "technique": "Creo",
+   "form": "Terram",
+   "level": 25,
+   "effect": "Create gemstone."
+  },
+  {
+   "technique": "Creo",
+   "form": "Terram",
+   "level": 25,
+   "effect": "Create an earth elemental from a base amount of elemental matter. (Ritual)"
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": "General",
+   "effect": "Convert part of an earth elemental’s body into another type of earth (soil to dust, etc.), reducing the elemental’s Might pool by the level of the spell +2 magnitudes. If the elemental is not destroyed by this effect, when the duration ends it can restore this Might by reabsorbing the matter."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 1,
+   "effect": "Change one property of dirt."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 2,
+   "effect": "Change dirt to another type of natural earth (for example, sand to loam)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 3,
+   "effect": "Change dirt so that it is slightly unnatural (requisites may be required)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 3,
+   "effect": "Change dirt into a liquid or gas (with requisites)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 3,
+   "effect": "Change dirt to stone, or vice versa."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 4,
+   "effect": "Change dirt so that it is highly unnatural (requisites will often be required)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 4,
+   "effect": "Change dirt into a mixture of liquids, solids, and gases (with requisites)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 4,
+   "effect": "Change dirt into a plant (with requisites)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 4,
+   "effect": "Make something grow to ten times its previous volume."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 5,
+   "effect": "Change dirt into a slightly unnatural liquid or gas (with requisites)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 5,
+   "effect": "Change dirt into an animal (with requisites)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Terram",
+   "level": 10,
+   "effect": "Change dirt into a highly unnatural liquid or gas (with requisites)."
+  },
+  {
+   "technique": "Muto",
+   "form": "Vim",
+   "level": "General",
+   "effect": "Superficially change a spell of less than or equal to twice the (level + 1 magnitude) of the Vim spell. This may not change the primary effect of the spell, or its power."
+  },
+  {
+   "technique": "Muto",
+   "form": "Vim",
+   "level": "General",
+   "effect": "Significantly change a spell of less than or equal to the level + 1 magnitude of the Vim spell. This may not change either the Technique or Form of the target spell. A change in power of plus or minus one magnitude is a significant change, as is a change of target, if the target was possible for the original spell."
+  },
+  {
+   "technique": "Muto",
+   "form": "Vim",
+   "level": "General",
+   "effect": "Totally change a spell of less than or equal to half the (level + 1 magnitude) of the Vim spell. This may change the Technique, Form, or both of the target spell, and needs no requisites for those Arts. The Vim spell affects the structure of the spell, not the things that the spell targets. A change in power of up to two magnitudes is a total change. Any greater change requires either Creo or Perdo to create more magical energy or destroy some."
+  },
+  {
+   "technique": "Rego",
+   "form": "Vim",
+   "level": "General",
+   "effect": "Ward against all supernatural beings from one realm (Divine, Faerie, Infernal, or Magic) with Might less than or equal to the level of the spell. (Touch, Ring, Circle)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Vim",
+   "level": "General",
+   "effect": "Sustain or suppress a spell you have cast whose level is less than or equal to the level + 2 magnitudes of the Vim spell. This, and the similar guidelines below, cannot make a spell last longer than it could have naturally, and so the sustaining version is only useful with Concentration Duration, among the standard Hermetic Durations. Similarly, a spell that has been suppressed still ends when its original duration expires."
+  },
+  {
+   "technique": "Rego",
+   "form": "Vim",
+   "level": "General",
+   "effect": "Create a conduit or container for spells with level less than or equal to the level + 5 magnitudes of the Vim spell. A conduit puts you in mystical contact with the target (effective Touch range), while a container will hold a spell for a specific length of time before releasing it."
+  },
+  {
+   "technique": "Rego",
+   "form": "Vim",
+   "level": "General",
+   "effect": "Sustain or suppress a spell cast by another with level less than or equal to half the (level + 5 magnitudes) of the Vim spell. This guideline may be used to target the spell itself or the caster of the spells."
+  },
+  {
+   "technique": "Rego",
+   "form": "Vim",
+   "level": "General",
+   "effect": "Sustain or suppress a spell or spells of a specific type cast by another with level less than the level + 2 magnitudes of the Vim spell. Examples of specific types include Hermetic Terram magic and Shamanic spirit control magic. This guideline may be used to target the spell itself or the caster of the spells."
+  },
+  {
+   "technique": "Rego",
+   "form": "Vim",
+   "level": 5,
+   "effect": "Control any disembodied spirit associated with one of the four supernatural realms. (A different spell is needed for each realm.)"
+  },
+  {
+   "technique": "Rego",
+   "form": "Vim",
+   "level": 10,
+   "effect": "Move raw vis from one physical object to another, without needing a laboratory."
+  },
+  {
+   "technique": "Rego",
+   "form": "Vim",
+   "level": 15,
+   "effect": "Summon any disembodied spirit associated with one of the four supernatural realms. (A different spell is needed for each realm.)"
+  }
+ ],
+ "spellParams": {
+  "ranges": [
+   {
+    "code": "personal",
+    "label": "Personal",
+    "magnitude": 0
+   },
+   {
+    "code": "touch",
+    "label": "Touch",
+    "magnitude": 1
+   },
+   {
+    "code": "eye",
+    "label": "Eye",
+    "magnitude": 1
+   },
+   {
+    "code": "voice",
+    "label": "Voice",
+    "magnitude": 2
+   },
+   {
+    "code": "sight",
+    "label": "Sight",
+    "magnitude": 3
+   },
+   {
+    "code": "arc",
+    "label": "Arcane Connection",
+    "magnitude": 4
+   }
+  ],
+  "durations": [
+   {
+    "code": "moment",
+    "label": "Momentary",
+    "magnitude": 0
+   },
+   {
+    "code": "conc",
+    "label": "Concentration",
+    "magnitude": 1
+   },
+   {
+    "code": "diam",
+    "label": "Diameter",
+    "magnitude": 1
+   },
+   {
+    "code": "sun",
+    "label": "Sun",
+    "magnitude": 2
+   },
+   {
+    "code": "ring",
+    "label": "Ring",
+    "magnitude": 2
+   },
+   {
+    "code": "moon",
+    "label": "Moon",
+    "magnitude": 3
+   },
+   {
+    "code": "year",
+    "label": "Year",
+    "magnitude": 4
+   }
+  ],
+  "targets": [
+   {
+    "code": "ind",
+    "label": "Individual",
+    "magnitude": 0
+   },
+   {
+    "code": "circle",
+    "label": "Circle",
+    "magnitude": 0
+   },
+   {
+    "code": "part",
+    "label": "Part",
+    "magnitude": 1
+   },
+   {
+    "code": "group",
+    "label": "Group",
+    "magnitude": 2
+   },
+   {
+    "code": "room",
+    "label": "Room",
+    "magnitude": 2
+   },
+   {
+    "code": "struct",
+    "label": "Structure",
+    "magnitude": 3
+   },
+   {
+    "code": "bound",
+    "label": "Boundary",
+    "magnitude": 4
+   },
+   {
+    "code": "taste",
+    "label": "Taste",
+    "magnitude": 0
+   },
+   {
+    "code": "touch",
+    "label": "Touch",
+    "magnitude": 1
+   },
+   {
+    "code": "smell",
+    "label": "Smell",
+    "magnitude": 2
+   },
+   {
+    "code": "hearing",
+    "label": "Hearing",
+    "magnitude": 3
+   },
+   {
+    "code": "sight",
+    "label": "Vision",
+    "magnitude": 4
+   }
+  ]
+ }
 }

@@ -556,13 +556,27 @@ function wireArtRowsLY(el, artObj, upd){
 }
 
 let spellFilter={q:'',te:'',fo:''};
+let spellMode='pick';
+let design={te:'Creo',fo:'Ignem',gi:null,base:1,range:'Personal',duration:'Momentary',target:'Individual',size:0,complexity:0,ritual:false,name:''};
+/* ArM5 level scaling: each magnitude adds +1 below level 5, +5 thereafter. */
+function raiseLevel(base,mags){ let l=+base||0; for(let i=0;i<mags;i++){ l = l<5 ? l+1 : l+5; } return l; }
+function pmag(kind,label){ const r=(DATA.spellParams[kind]||[]).find(x=>x.label===label); return r?r.magnitude:0; }
+function designMags(){ return pmag('ranges',design.range)+pmag('durations',design.duration)+pmag('targets',design.target)+(+design.size||0)+(+design.complexity||0); }
+function designLevel(){ const g=design.gi!=null?guidelinesFor()[design.gi]:null;
+  const base=g? (g.level==='General'?(+design.base||1):g.level):(+design.base||1); return raiseLevel(base, designMags()); }
+function guidelinesFor(){ return (DATA.guidelines||[]).filter(g=>g.technique===design.te&&g.form===design.fo); }
+function spellModeToggle(){ return `<div class="searchbar" style="margin-bottom:10px">
+  <button class="btn ${spellMode==='pick'?'':'ghost'}" data-smode="pick" style="padding:6px 12px">Pick predefined</button>
+  <button class="btn ${spellMode==='design'?'':'ghost'}" data-smode="design" style="padding:6px 12px">Design from guidelines</button></div>`; }
+function wireSpellMode(el){ el.querySelectorAll('[data-smode]').forEach(b=>b.onclick=()=>{spellMode=b.dataset.smode;renderSpells($('#stepBody'));}); }
 async function renderSpells(el){
   if(!SPELLS){el.innerHTML='<div class="loading">Loading spells…</div>';
     try{SPELLS=(await (await fetch('./'+DATA.spellsFile,{cache:'no-store'})).json()).spells;}catch(e){el.innerHTML='<div class="warn">Could not load spells file.</div>';return;}}
+  if(spellMode==='design') return renderSpellDesign(el);
   const tech=[...new Set(SPELLS.map(s=>s.technique))].sort(), form=[...new Set(SPELLS.map(s=>s.form))].sort(), f=spellFilter;
   const items=SPELLS.filter(s=>(!f.te||s.technique===f.te)&&(!f.fo||s.form===f.fo)&&(!f.q||norm(s.name).includes(norm(f.q)))).slice(0,250);
   const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), budget=120+(+C.laterYears.spellLevels||0);
-  el.innerHTML=`<p class="step-help">Pick pre-defined formulaic spells. Total ≤ ${budget} levels; each ≤ Technique+Form+Int+Magic Theory+3.</p>
+  el.innerHTML=`${spellModeToggle()}<p class="step-help">Pick pre-defined formulaic spells. Total ≤ ${budget} levels; each ≤ Technique+Form+Int+Magic Theory+3.</p>
     <div class="alloc-pool ${lvls>budget?'bad':''}">Spell levels: ${lvls} / ${budget}</div>
     <div class="searchbar"><input type="text" id="spQ" placeholder="search…" value="${esc(f.q)}">
       <select id="spTe"><option value="">Technique</option>${tech.map(t=>`<option ${f.te===t?'selected':''}>${esc(t)}</option>`).join('')}</select>
@@ -578,6 +592,60 @@ async function renderSpells(el){
   el.querySelectorAll('[data-sprm]').forEach(b=>b.onclick=()=>{C.spells.splice(+b.dataset.sprm,1);save();renderSpells(el);renderBudget();});
   el.querySelectorAll('[data-spdesc]').forEach(s=>s.onclick=()=>{const sp=C.spells[+s.dataset.spdesc];
     $('#spDesc').innerHTML=`<div class="rules-note"><strong>${esc(sp.name)}</strong> <span class="mini">${esc(sp.technique)}/${esc(sp.form)} ${esc(String(sp.level))}${sp.ritual?' · Ritual':''}</span><br>${mdRules(sp.description||'—')}</div>`;});
+  wireSpellMode(el);
+}
+function renderSpellDesign(el){
+  const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), budget=120+(+C.laterYears.spellLevels||0);
+  const gls=guidelinesFor();
+  const g = design.gi!=null && gls[design.gi] ? gls[design.gi] : null;
+  const lvl=designLevel();
+  const cap=g?spellCap({technique:design.te,form:design.fo}):null;
+  const opt=(kind,cur)=>DATA.spellParams[kind].map(r=>`<option ${cur===r.label?'selected':''}>${esc(r.label)} (+${r.magnitude})</option>`).join('');
+  el.innerHTML=`${spellModeToggle()}<p class="step-help">Design a spell from the core guidelines. Level = base + magnitudes (Range + Duration + Target + size + complexity); each magnitude is +1 below level 5, +5 above.</p>
+    <div class="row2"><div><label class="fld">Technique</label><select id="dTe">${DATA.arts.techniques.map(t=>`<option ${design.te===t.name?'selected':''}>${esc(t.name)}</option>`).join('')}</select></div>
+      <div><label class="fld">Form</label><select id="dFo">${DATA.arts.forms.map(f=>`<option ${design.fo===f.name?'selected':''}>${esc(f.name)}</option>`).join('')}</select></div></div>
+    <label class="fld">Base guideline (${design.te} ${design.fo}) — ${gls.length} available</label>
+    <div class="list" style="max-height:200px">${gls.length?gls.map((x,i)=>`<div class="opt" data-gi="${i}" style="${design.gi==i?'background:rgba(198,155,63,.2)':''}"><span>${esc(x.effect)}</span><span class="sz">${x.level==='General'?'Gen':'Lvl '+x.level}</span></div>`).join(''):'<div class="opt mini">no guidelines for this Technique/Form</div>'}</div>
+    ${g&&g.level==='General'?`<label class="fld">Base level (General guideline)</label><input type="number" id="dBase" value="${design.base}">`:''}
+    <div class="row2"><div><label class="fld">Range</label><select id="dRange">${opt('ranges',design.range)}</select></div>
+      <div><label class="fld">Duration</label><select id="dDur">${opt('durations',design.duration)}</select></div></div>
+    <div class="row2"><div><label class="fld">Target</label><select id="dTgt">${opt('targets',design.target)}</select></div>
+      <div><label class="fld">Ritual</label><select id="dRit"><option value="no" ${!design.ritual?'selected':''}>No</option><option value="yes" ${design.ritual?'selected':''}>Yes</option></select></div></div>
+    <div class="row2"><div><label class="fld">Size (+magnitude)</label><input type="number" id="dSize" value="${design.size}"></div>
+      <div><label class="fld">Complexity (+magnitude)</label><input type="number" id="dCx" value="${design.complexity}"></div></div>
+    <div class="alloc-pool" style="font-size:14px;margin-top:10px">Computed level: <strong>${lvl}</strong>${cap!=null?` · your cap here is ${cap}${lvl>cap?' — over cap':''}`:''} · running total ${lvls}/${budget}</div>
+    ${g?`<div class="rules-note"><strong>Base ${g.level==='General'?design.base:g.level}:</strong> ${mdRules(g.effect)}</div>`:'<div class="warn">Pick a base guideline.</div>'}
+    <label class="fld">Spell name</label><input type="text" id="dName" value="${esc(design.name)}" placeholder="name your spell">
+    <div style="margin-top:10px"><button class="btn" id="dAdd" ${!g||!design.name.trim()?'disabled':''}>+ Add designed spell (level ${lvl})</button></div>`;
+  wireSpellMode(el);
+  const rr=()=>renderSpellDesign(el);
+  $('#dTe').onchange=e=>{design.te=e.target.value;design.gi=null;rr();};
+  $('#dFo').onchange=e=>{design.fo=e.target.value;design.gi=null;rr();};
+  el.querySelectorAll('[data-gi]').forEach(o=>o.onclick=()=>{design.gi=+o.dataset.gi;rr();});
+  if($('#dBase'))$('#dBase').oninput=e=>{design.base=+e.target.value||1;updateDesignLevel();};
+  $('#dRange').onchange=e=>{design.range=e.target.value.replace(/ \(.*\)$/,'');updateDesignLevel();};
+  $('#dDur').onchange=e=>{design.duration=e.target.value.replace(/ \(.*\)$/,'');updateDesignLevel();};
+  $('#dTgt').onchange=e=>{design.target=e.target.value.replace(/ \(.*\)$/,'');updateDesignLevel();};
+  $('#dRit').onchange=e=>{design.ritual=e.target.value==='yes';};
+  $('#dSize').oninput=e=>{design.size=+e.target.value||0;updateDesignLevel();};
+  $('#dCx').oninput=e=>{design.complexity=+e.target.value||0;updateDesignLevel();};
+  $('#dName').oninput=e=>{design.name=e.target.value;const b=$('#dAdd');if(b)b.disabled=!design.name.trim();};
+  $('#dAdd').onclick=()=>addDesignedSpell();
+}
+function updateDesignLevel(){ const el=$('#stepBody'); const line=el.querySelector('.alloc-pool'); const btn=$('#dAdd');
+  const lvl=designLevel(); if(line){const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0),budget=120+(+C.laterYears.spellLevels||0);
+    const cap=spellCap({technique:design.te,form:design.fo});
+    line.innerHTML=`Computed level: <strong>${lvl}</strong> · your cap here is ${cap}${lvl>cap?' — over cap':''} · running total ${lvls}/${budget}`;}
+  if(btn)btn.textContent=`+ Add designed spell (level ${lvl})`; }
+function addDesignedSpell(){
+  const g=guidelinesFor()[design.gi]; if(!g||!design.name.trim()) return;
+  const lvl=designLevel();
+  const base=g.level==='General'?(+design.base||1):g.level;
+  const summary=`(Base ${base}, R: ${design.range}, D: ${design.duration}, T: ${design.target}${+design.size?`, +${design.size} Size`:''}${+design.complexity?`, +${design.complexity} complexity`:''})`;
+  C.spells.push({name:design.name.trim(),technique:design.te,form:design.fo,level:lvl,
+    range:design.range,duration:design.duration,target:design.target,ritual:!!design.ritual,
+    description:`${g.effect} ${summary}`, designed:true, baseLevel:base});
+  design.name=''; save(); renderBudget(); renderSpells($('#stepBody'));
 }
 function addSpell(name){const sp=SPELLS.find(s=>s.name===name);if(!sp||C.spells.some(x=>x.name===name))return;
   C.spells.push({name:sp.name,technique:sp.technique,form:sp.form,level:sp.level,range:sp.range,duration:sp.duration,target:sp.target,ritual:sp.ritual,description:sp.text});
