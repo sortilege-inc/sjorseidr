@@ -143,14 +143,16 @@ let DATA=null, SPELLS=null, C=null, step=0, FMAP=null, advisory=false;
 
 function blankChar(){
   return {
-    name:'', type:'magus', concept:'', born:1198, age:25, apparentAge:null,
-    house:null, parens:'', sigil:'',
+    name:'', type:'magus', concept:'', born:1198, age:25, apparentAge:null, size:0,
+    house:null, parens:'', sigil:'', templateName:'',
     characteristics:{int:0,per:0,str:0,sta:0,pre:0,com:0,dex:0,qik:0},
     virtues:[], flaws:[],
-    childhood:{ nativeLang:'', spread:{} },
-    later:{ years:15, alloc:{} },
-    apprentice:{ arts:{}, abilities:{} },
-    laterYears:{ years:0, arts:{}, abilities:{}, spellLevels:0 },
+    childhood:{ nativeLang:'', spread:[] },
+    template:{ name:'', abilities:[] },
+    training:{ packageName:'', duration:'', grants:[] },
+    later:{ years:15, alloc:[] },
+    apprentice:{ arts:{}, abilities:[] },
+    laterYears:{ years:0, arts:{}, abilities:[], spellLevels:0 },
     specs:{},
     spells:[],
     personalityTraits:[], reputations:[], confidence:{score:1,points:3}, equipment:'', biography:''
@@ -175,25 +177,57 @@ function charCap(key){
   const poors =C.flaws.filter(f=>/Poor .*Characteristic/i.test(f.name) && f.detail===cname).length;
   return {max:3+greats, min:-(3+poors)};
 }
-function abilityTotals(){
-  const t={};
-  if(C.childhood.nativeLang) t[NATIVE]=75;
-  [C.childhood.spread, C.later.alloc, C.apprentice.abilities, C.laterYears.abilities]
-    .forEach(o=>{ for(const k in o) t[k]=(t[k]||0)+(+o[k]||0); });
-  return t;
+const AGG='␟';
+/* Every ability instance across all phases (not aggregated). Native Language is a
+   synthetic instance driven by C.childhood.nativeLang (its "parameter" is the language). */
+function abilInstances(){
+  const out=[];
+  if(C.childhood.nativeLang) out.push({name:NATIVE,param:C.childhood.nativeLang,spec:C.specs[NATIVE]||'',xp:75,native:true});
+  [C.template.abilities, C.childhood.spread, C.training.grants, C.later.alloc, C.apprentice.abilities, C.laterYears.abilities]
+    .forEach(arr=>(arr||[]).forEach(a=>out.push({name:a.name,param:a.param||'',spec:a.spec||'',xp:+a.xp||0})));
+  return out;
 }
+/* Aggregate by (name,param) — the same name with a different parameter is a distinct
+   ability for score/export; the same name+param across phases accumulates XP. */
+function abilityTotals(){
+  const map=new Map();
+  for(const a of abilInstances()){ const k=a.name+AGG+a.param;
+    if(map.has(k)){ const e=map.get(k); e.xp+=a.xp; if(!e.spec&&a.spec)e.spec=a.spec; }
+    else map.set(k,{name:a.name,param:a.param,spec:a.spec,xp:a.xp}); }
+  return [...map.values()];
+}
+function abilityXp(name,param=''){ let t=0; for(const a of abilInstances()) if(a.name===name&&(a.param||'')===param) t+=a.xp; return t; }
 function artTotals(){ const t={}; [C.apprentice.arts, C.laterYears.arts].forEach(o=>{for(const k in o)t[k]=(t[k]||0)+(+o[k]||0);}); return t; }
 const sumObj = o => Object.values(o).reduce((a,x)=>a+(+x||0),0);
+const abilSum = arr => (arr||[]).reduce((a,x)=>a+(+x.xp||0),0);
 function laterRate(){ return C.flaws.some(f=>/^Poor$/i.test(f.name))?10 : C.virtues.some(v=>/^Wealthy$/i.test(v.name))?20 : 15; }
 function artKey(name){ const a=[...DATA.arts.techniques,...DATA.arts.forms].find(x=>x.name===name); return a?a.key:null; }
 
+/* Which parameter control (if any) a Virtue/Flaw needs. The corpus carries no
+   explicit flag, so we key off the name: legacy fixed-name families (Puissant
+   Ability, Great Characteristic, Deficient Technique…) plus GENERIC placeholder
+   tokens in parentheses — "(Ability)", "(Form)", "(Realm)", "(Type)"… — while
+   deliberately NOT matching fixed variants like "(Bardic)", "(positive)",
+   "(Dove)" whose parens name a specific instance, not an open parameter. */
+const VF_PLACEHOLDERS='Ability|Art|Form|Technique|Realm|Characteristic|Beings?|Land|Type|Subject|Sin|Faculty|Commodity|Terrain|Substance|Source of Damage|Role|Area|Language|Speciali\\w*';
 function detailType(name){
   if(/^Deficient Technique$/i.test(name)) return 'technique';
   if(/^Deficient Form$/i.test(name)) return 'form';
   if(/\bArt\b/.test(name) && /Puissant|Affinity|Deficient|Method/i.test(name)) return 'art';
   if(/\bAbility\b/.test(name) && /Puissant|Affinity/i.test(name)) return 'ability';
-  if(/Characteristic/i.test(name) && /Great|Poor/i.test(name)) return 'characteristic';
-  if(/\((Area|Realm|Language|Speciali)/i.test(name)) return 'text';
+  if(/\bCharacteristics?\b/.test(name) && /Great|Poor|Mythic|Tragic/i.test(name)) return 'characteristic';
+  const re=new RegExp('\\((?:'+VF_PLACEHOLDERS+')\\)','gi');
+  const generic=name.match(re)||[];
+  if(generic.length>1) return 'text';                 // dual-parameter (e.g. "… (Realm) … (Ability)")
+  if(generic.length===1){ const t=generic[0].slice(1,-1);
+    if(/^Ability$/i.test(t)) return 'ability';
+    if(/^Art$/i.test(t)) return 'art';
+    if(/^Form$/i.test(t)) return 'form';
+    if(/^Technique$/i.test(t)) return 'technique';
+    if(/^Realm$/i.test(t)) return 'realm';
+    if(/^Characteristic$/i.test(t)) return 'characteristic';
+    return 'text';
+  }
   return null;
 }
 function detailOptions(type){
@@ -202,11 +236,41 @@ function detailOptions(type){
   if(type==='form') return DATA.arts.forms.map(a=>a.name);
   if(type==='art') return [...DATA.arts.techniques,...DATA.arts.forms].map(a=>a.name);
   if(type==='characteristic') return DATA.characteristics.map(c=>c.name);
+  if(type==='realm') return ['Magic','Faerie','Divine','Infernal'];
   return null;
+}
+/* Parameterized ABILITY (arm5e `option:true`: Area Lore, Craft, Profession,
+   Living/Dead Language, Organization Lore, Law, Theology…). FMAP is authoritative;
+   a name-pattern fallback covers the case where the Foundry map failed to load. */
+function isParamAbility(name){
+  if(FMAP && FMAP.abilities && FMAP.abilities[name]) return !!FMAP.abilities[name].option;
+  return /\((Area|Type|Living Language|Dead Language|Organization|Mystery Cult|Speciali)/i.test(name)
+    || /:\s/.test(name)
+    || /^(Area Lore|Craft|Profession|Organization Lore|Living Language|Dead Language|Civil and Canon Law|Common Law|Islamic Law|Rabbinic Law|Judaic Lore)$/i.test(name);
 }
 
 function save(){ try{ localStorage.setItem(LS_KEY, JSON.stringify({C,step,advisory})); }catch(e){} }
-function loadSaved(){ try{ const r=JSON.parse(localStorage.getItem(LS_KEY)); if(r&&r.C&&r.C.childhood){C=r.C;step=r.step||0;advisory=!!r.advisory;} }catch(e){} }
+function loadSaved(){ try{ const r=JSON.parse(localStorage.getItem(LS_KEY)); if(r&&r.C&&r.C.childhood){C=migrateChar(r.C);step=r.step||0;advisory=!!r.advisory;} }catch(e){} }
+/* Backward-compat: earlier builds keyed abilities by NAME in `{name:xp}` maps with a
+   parallel C.specs map. The v2 model stores each phase bucket as an array of instance
+   objects {name,param,spec,xp} so a parameterized ability can appear multiple times
+   with distinct parameters. Convert on load; leaves already-migrated data untouched. */
+function migrateChar(c){
+  const specs=c.specs||{};
+  const toArr=(bucket)=>{
+    if(Array.isArray(bucket)) return bucket.map(a=>({name:a.name,param:a.param||'',spec:a.spec||'',xp:+a.xp||0}));
+    if(bucket && typeof bucket==='object') return Object.entries(bucket).map(([name,xp])=>({name,param:'',spec:specs[name]||'',xp:+xp||0}));
+    return [];
+  };
+  c.childhood=c.childhood||{nativeLang:'',spread:[]}; c.childhood.spread=toArr(c.childhood.spread);
+  c.later=c.later||{years:15,alloc:[]}; c.later.alloc=toArr(c.later.alloc);
+  c.apprentice=c.apprentice||{arts:{},abilities:[]}; c.apprentice.abilities=toArr(c.apprentice.abilities); c.apprentice.arts=c.apprentice.arts||{};
+  c.laterYears=c.laterYears||{years:0,arts:{},abilities:[],spellLevels:0}; c.laterYears.abilities=toArr(c.laterYears.abilities); c.laterYears.arts=c.laterYears.arts||{};
+  c.training=c.training||{packageName:'',duration:'',grants:[]}; c.training.grants=toArr(c.training.grants).map(g=>({...g,auto:true}));
+  c.template=c.template||{name:'',abilities:[]}; c.template.abilities=toArr(c.template.abilities);
+  if(c.size==null) c.size=0;
+  return c;
+}
 
 const STEPS=[
   {id:'type',   title:'Concept & Type',  render:renderType,   valid:vType},
@@ -214,6 +278,7 @@ const STEPS=[
   {id:'vf',     title:'Virtues & Flaws', render:renderVF,     valid:vVF},
   {id:'chars',  title:'Characteristics', render:renderChars,  valid:vChars},
   {id:'child',  title:'Early Childhood', render:renderChild,  valid:vChild},
+  {id:'training',title:'Training Package',render:renderTraining,valid:()=>({ok:true,msgs:[]})},
   {id:'later',  title:'Later Life',      render:renderLater,  valid:vLater},
   {id:'appr',   title:'Apprenticeship',  render:renderAppr,   valid:vAppr,   magiOnly:true},
   {id:'lyears', title:'Later Years',     render:renderLYears, valid:vLYears, magiOnly:true},
@@ -262,23 +327,23 @@ function vChars(){
   return {ok,msgs:m};
 }
 function vChild(){
-  const spent=sumObj(C.childhood.spread); const m=[];
+  const spent=abilSum(C.childhood.spread); const m=[];
   if(!C.childhood.nativeLang) m.push({level:'warn',text:'Choose a Native Language (75 XP → score 5).'});
   m.push({level:spent>45?'warn':'ok',text:`Childhood spread: ${spent} / 45 XP.`});
   return {ok:spent<=45 && !!C.childhood.nativeLang, msgs:m};
 }
 function vLater(){
-  const pool=laterRate()*(+C.later.years||0), spent=sumObj(C.later.alloc);
+  const pool=laterRate()*(+C.later.years||0), spent=abilSum(C.later.alloc);
   return {ok:spent<=pool, msgs:[{level:spent>pool?'warn':'ok',text:`Later-life XP: ${spent} / ${pool} (${laterRate()}×${C.later.years} yrs).`}]};
 }
 function vAppr(){ if(!isMagus()) return {ok:true,msgs:[]};
-  const spent=sumObj(C.apprentice.arts)+sumObj(C.apprentice.abilities);
+  const spent=sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities);
   return {ok:spent<=240, msgs:[{level:spent>240?'warn':'ok',text:`Apprenticeship XP (Arts + Abilities): ${spent} / 240.`}]}; }
 function vLYears(){ if(!isMagus()) return {ok:true,msgs:[]};
-  const pool=30*(+C.laterYears.years||0), spent=sumObj(C.laterYears.arts)+sumObj(C.laterYears.abilities)+(+C.laterYears.spellLevels||0);
+  const pool=30*(+C.laterYears.years||0), spent=sumObj(C.laterYears.arts)+abilSum(C.laterYears.abilities)+(+C.laterYears.spellLevels||0);
   return {ok:spent<=pool, msgs:[{level:spent>pool?'warn':'ok',text:`Later-years points: ${spent} / ${pool} (30×${C.laterYears.years} yrs).`}]}; }
 function spellCap(sp){
-  const mt=abilityTotals()['Magic Theory']||0, at=artTotals();
+  const mt=abilityXp('Magic Theory'), at=artTotals();
   return scoreFromXp(at[artKey(sp.technique)]||0)+scoreFromXp(at[artKey(sp.form)]||0)+(C.characteristics.int||0)+scoreFromXp(mt)+3;
 }
 function vSpells(){ if(!isMagus()) return {ok:true,msgs:[]};
@@ -324,20 +389,61 @@ function renderBudget(){
   rows.push(['Virtue pts',`${b.virPts}${C.type!=='grog'?' / '+b.flawPts:''}`,b.virPts>b.flawPts]);
   rows.push(['Social Status',b.social,b.social!==1]);
   rows.push(['Char pts',`${cs} / ${bud}`,cs>bud]);
-  rows.push(['Childhood',`${sumObj(C.childhood.spread)} / 45`,sumObj(C.childhood.spread)>45]);
-  rows.push(['Later life',`${sumObj(C.later.alloc)} / ${laterRate()*(+C.later.years||0)}`,sumObj(C.later.alloc)>laterRate()*(+C.later.years||0)]);
+  rows.push(['Childhood',`${abilSum(C.childhood.spread)} / 45`,abilSum(C.childhood.spread)>45]);
+  if(C.training.grants.length) rows.push(['Training',`+${abilSum(C.training.grants)} XP · ${C.training.packageName}`]);
+  rows.push(['Later life',`${abilSum(C.later.alloc)} / ${laterRate()*(+C.later.years||0)}`,abilSum(C.later.alloc)>laterRate()*(+C.later.years||0)]);
   if(isMagus()){
-    rows.push(['Apprentice',`${sumObj(C.apprentice.arts)+sumObj(C.apprentice.abilities)} / 240`,(sumObj(C.apprentice.arts)+sumObj(C.apprentice.abilities))>240]);
+    rows.push(['Apprentice',`${sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities)} / 240`,(sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities))>240]);
     const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), sb=120+(+C.laterYears.spellLevels||0);
     rows.push(['Spell lvls',`${lvls} / ${sb}`,lvls>sb]);
   }
   $('#budgetBox').innerHTML=`<h4>Budget</h4>`+rows.map(r=>`<div class="brow ${r[2]?'bad':''}"><span>${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join('');
 }
 
+/* --- Full character templates (optional; loads a complete build) ----------- */
+let tplFilter={q:''};
+function vfDefLookup(side,name){ return (side==='virtue'?DATA.virtues:DATA.flaws).find(x=>x.name===name); }
+function tplVF(list, side){
+  return (list||[]).map(v=>{ const def=vfDefLookup(side,v.name)||{};
+    return {name:v.name, size:v.size||def.size||'Minor', category:def.category||'General', detail:v.detail||null, auto:false}; });
+}
+function clearTemplate(){ C.templateName=''; C.template={name:'',abilities:[]}; }
+/* Load a whole character from a book template into C, then the caller jumps to
+   Personality. Template Abilities carry SCORE → convert to XP. Native Language is
+   left to the Early-Childhood step (its fixed 75 XP is handled there). */
+function loadTemplate(name){
+  const t=(DATA.characterTemplates||[]).find(x=>x.name===name); if(!t) return;
+  C.type=t.type;
+  const ch={int:0,per:0,str:0,sta:0,pre:0,com:0,dex:0,qik:0};
+  for(const k in (t.characteristics||{})) ch[k]=t.characteristics[k];
+  C.characteristics=ch;
+  if(t.age!=null)C.age=t.age; if(t.apparentAge!=null)C.apparentAge=t.apparentAge; if(t.size!=null)C.size=t.size;
+  C.virtues=tplVF(t.virtues,'virtue'); C.flaws=tplVF(t.flaws,'flaw');
+  if(t.freeVirtue){ const fv=t.freeVirtue, def=vfDefLookup('virtue',fv.name)||{};
+    C.virtues.push({name:fv.name,size:'Free',category:def.category||'Special',detail:fv.detail||null,auto:true,free:true}); }
+  // fresh mechanical build: reset the phase buckets, load template abilities into the dedicated bucket
+  C.childhood={nativeLang:C.childhood.nativeLang||'',spread:[]};
+  C.later={years:C.later.years||15,alloc:[]}; C.apprentice={arts:{},abilities:[]};
+  C.laterYears={years:0,arts:{},abilities:[],spellLevels:0}; C.training={packageName:'',duration:'',grants:[]};
+  C.template={name:t.name, abilities:(t.abilities||[]).filter(a=>!/^Native Language$/i.test(a.name))
+    .map(a=>({name:a.name,param:'',spec:a.specialty||'',xp:xpForScore(a.score||0)}))};
+  C.templateName=t.name;
+  C.personalityTraits=(t.personalityTraits||[]).map(p=>({name:p.name,score:+p.score||0}));
+  C.equipment=(t.equipment||[]).join(', ');
+  if(t.type==='magus'){
+    if(t.house)C.house=t.house; if(t.sigil)C.sigil=t.sigil;
+    if(t.confidenceScore!=null)C.confidence={score:t.confidenceScore,points:t.confidencePoints||0};
+    for(const an in (t.arts||{})){ const k=artKey(an); if(k)C.apprentice.arts[k]=xpForScore(t.arts[an]); }
+    C.spells=(t.spells||[]).map(s=>({name:`${s.technique} ${s.form} ${s.level}`.trim(),technique:s.technique,form:s.form,level:+s.level||0,range:'',duration:'',target:'',ritual:false,description:''}));
+  } else { C.house=null; C.spells=[]; }
+  save();
+}
+
 function renderType(el){
   const types=[['magus','Magus','A Gifted, Hermetically-trained wizard — House, Arts, and spells.'],
     ['companion','Companion','A central non-magus — knight, scholar, hedge-wizard.'],
     ['grog','Grog','Supporting cast: soldier, sailor, servant. Simpler build.']];
+  const tpls=(DATA.characterTemplates||[]).filter(t=>t.type===C.type && (!tplFilter.q||norm(t.name).includes(norm(tplFilter.q))));
   el.innerHTML=`<p class="step-help">Choose the kind of character and sketch the concept. Magi get extra phases (House, Apprenticeship, Arts, Spells).</p>
     <div class="typecards">${types.map(t=>`<div class="tc ${C.type===t[0]?'sel':''}" data-t="${t[0]}"><h4>${t[1]}</h4><p>${t[2]}</p></div>`).join('')}</div>
     <div class="row2"><div><label class="fld">Name</label><input type="text" id="cName" value="${esc(C.name)}"></div>
@@ -345,11 +451,22 @@ function renderType(el){
     <div class="row2"><div><label class="fld">Born (year A.D.)</label><input type="number" id="cBorn" value="${C.born}"></div>
       <div><label class="fld">Age</label><input type="number" id="cAge" value="${C.age}"></div></div>
     ${isMagus()?`<div class="row2"><div><label class="fld">Parens</label><input type="text" id="cParens" value="${esc(C.parens)}"></div>
-      <div><label class="fld">Sigil</label><input type="text" id="cSigil" value="${esc(C.sigil)}"></div></div>`:''}`;
-  el.querySelectorAll('.tc').forEach(c=>c.onclick=()=>{C.type=c.dataset.t;if(C.type!=='magus')C.house=null;save();render();});
+      <div><label class="fld">Sigil</label><input type="text" id="cSigil" value="${esc(C.sigil)}"></div></div>`:''}
+    <div style="margin-top:16px">
+      <label class="fld">Load a full template — optional</label>
+      <p class="step-help" style="margin:0 0 8px">Pre-build a complete ${esc(C.type)} from a book template (characteristics, Virtues &amp; Flaws with parameters, Abilities, personality, equipment${isMagus()?', House, Arts &amp; spells':''}), then jump to <em>Personality &amp; Details</em> to finish. Use <em>← Back</em> to revisit and tweak any step.</p>
+      ${C.templateName?`<div class="good">Loaded template: <strong>${esc(C.templateName)}</strong> <button class="btn ghost" id="tplClear" style="padding:3px 10px;margin-left:8px">Clear</button></div>`:''}
+      <div class="searchbar"><input type="text" id="tplQ" placeholder="search ${esc(C.type)} templates…" value="${esc(tplFilter.q)}"></div>
+      <div class="list" style="max-height:180px">${tpls.map(t=>`<div class="opt" data-tpl="${esc(t.name)}" style="${C.templateName===t.name?'background:rgba(198,155,63,.18)':''}"><span>${esc(t.name)}${t.house?' <span class="mini">'+esc(t.house)+'</span>':''}</span><span class="mini">${esc(t.source||'')}</span></div>`).join('')||'<div class="opt mini">no templates for this type</div>'}</div>
+    </div>`;
+  el.querySelectorAll('.tc').forEach(c=>c.onclick=()=>{if(C.type!==c.dataset.t)clearTemplate();C.type=c.dataset.t;if(C.type!=='magus')C.house=null;save();render();});
   const bind=(id,fn)=>{const e=el.querySelector(id);if(e)e.oninput=()=>{fn(e.value);save();renderBudget();};};
   bind('#cName',v=>C.name=v);bind('#cConcept',v=>C.concept=v);bind('#cBorn',v=>C.born=+v||0);bind('#cAge',v=>C.age=+v||0);
   bind('#cParens',v=>C.parens=v);bind('#cSigil',v=>C.sigil=v);
+  $('#tplQ').oninput=e=>{tplFilter.q=e.target.value;renderType(el);};
+  if($('#tplClear'))$('#tplClear').onclick=()=>{clearTemplate();save();render();};
+  el.querySelectorAll('[data-tpl]').forEach(o=>o.onclick=()=>{ loadTemplate(o.dataset.tpl);
+    const fi=visibleSteps().findIndex(s=>s.id==='finish'); step=fi>=0?fi:step; save(); render(); });
 }
 
 function renderHouse(el){
@@ -455,68 +572,147 @@ function renderChars(el){
     $('#charDesc').innerHTML=ch&&ch.text?`<div class="rules-note"><strong>${esc(ch.name)}</strong><br>${mdRules(ch.text)}</div>`:`<div class="warn">No corpus rules text for ${esc(c.dataset.cdesc)} (data gap).</div>`;});
 }
 
-function specInput(name){ if(name===NATIVE) return '';
-  const a=DATA.abilities.find(x=>x.name===name);
-  if(!a||!a.specialties||!a.specialties.length) return '';
-  return `<input type="text" class="detail-in" data-spec="${esc(name)}" placeholder="specialty" value="${esc(C.specs[name]||'')}" list="spec_${cssId(name)}">
-    <datalist id="spec_${cssId(name)}">${a.specialties.map(s=>`<option>${esc(s)}</option>`).join('')}</datalist>`;
-}
 const cssId = s => s.replace(/[^a-z0-9]+/gi,'_');
-function abilAllocRows(allocObj){
-  const keys=Object.keys(allocObj);
-  if(!keys.length) return '<div class="mini">— none allocated —</div>';
-  return keys.map(name=>{const xp=allocObj[name]||0;
-    return `<div class="abil-row"><span class="an">${esc(name)} ${specInput(name)}</span>
-      <input type="number" data-alx="${esc(name)}" value="${xp}"><span class="mini">→ ${scoreFromXp(xp)}</span>
-      <button class="x" data-alrm="${esc(name)}">×</button></div>`;}).join('');
+/* An ability's Ability Type may be a single string or a JSON list of strings
+   (a few abilities, e.g. Faerie Magic, belong to several categories). */
+function abilCats(a){ let t=a&&a.abilityType; if(!t) return [];
+  if(Array.isArray(t)) return t; try{const v=JSON.parse(t); if(Array.isArray(v)) return v;}catch(e){} return [String(t)]; }
+const ABIL_CATS=['General','Academic','Arcane','Martial','Supernatural'];
+function specDatalist(name){ const a=DATA.abilities.find(x=>x.name===name);
+  const sp=(a&&a.specialties)||[]; if(!sp.length) return {id:'',html:''};
+  const id='spec_'+cssId(name);
+  return {id, html:`<datalist id="${id}">${sp.map(s=>`<option>${esc(s)}</option>`).join('')}</datalist>`}; }
+/* One allocated ability instance = one editable row. Parameterized abilities
+   (arm5e `option:true`, e.g. Area Lore / Craft / Profession) expose a parameter
+   field; the parameter makes the same ability a distinct instance for XP/score. */
+function abilAllocRow(arrId, a, i){
+  const dl=specDatalist(a.name), param=a.param||'', spec=a.spec||'', xp=+a.xp||0;
+  const paramUI = isParamAbility(a.name)
+    ? `<input type="text" class="detail-in" data-alparam="${arrId}:${i}" placeholder="parameter…" value="${esc(param)}"${dl.id?` list="${dl.id}"`:''}>` : '';
+  const specUI = `<input type="text" class="detail-in" data-alspec="${arrId}:${i}" placeholder="specialty" value="${esc(spec)}"${dl.id?` list="${dl.id}"`:''}>`;
+  return `<div class="abil-row"><span class="an">${esc(a.name)} ${paramUI} ${specUI}${dl.html}</span>
+    <input type="number" data-alx="${arrId}:${i}" value="${xp}"><span class="mini">→ ${scoreFromXp(xp)}</span>
+    <button class="x" data-alrm="${arrId}:${i}">×</button></div>`;
 }
-function wireAbilAlloc(el, allocObj, restrict, onchange){
+function abilAllocRows(arr, arrId){
+  if(!arr.length) return '<div class="mini">— none allocated —</div>';
+  return arr.map((a,i)=>abilAllocRow(arrId,a,i)).join('');
+}
+let abilFilter={q:'',cat:''};
+function wireAbilAlloc(el, arr, arrId, restrict, onchange){
   const addList=el.querySelector('.al-add'), q=el.querySelector('.al-q');
-  function fill(){const term=norm(q?q.value:'');
+  // inject a category filter beside the search box (mirrors the Virtue/Flaw filter)
+  const bar=q?q.closest('.searchbar'):null;
+  let cat=el.querySelector('.al-cat');
+  if(bar && !cat){ cat=document.createElement('select'); cat.className='al-cat';
+    cat.innerHTML=`<option value="">all types</option>${ABIL_CATS.map(c=>`<option ${abilFilter.cat===c?'selected':''}>${c}</option>`).join('')}`;
+    bar.appendChild(cat); }
+  if(q) q.value=abilFilter.q;
+  const hasName=n=>arr.some(x=>x.name===n);
+  function fill(){const term=norm(abilFilter.q), fc=abilFilter.cat;
     const src=(restrict?DATA.abilities.filter(a=>restrict.includes(a.name)):DATA.abilities)
-      .filter(a=>a.name!==NATIVE && !(a.name in allocObj) && (!term||norm(a.name).includes(term))).slice(0,200);
-    addList.innerHTML=src.map(a=>`<div class="opt" data-addab="${esc(a.name)}"><span>${esc(a.name)}</span><span class="mini">${esc(a.abilityType||'')}</span></div>`).join('')||'<div class="opt mini">no matches</div>';
-    addList.querySelectorAll('[data-addab]').forEach(o=>o.onclick=()=>{allocObj[o.dataset.addab]=0;save();onchange();});}
-  if(q) q.oninput=fill; fill();
-  el.querySelectorAll('[data-alx]').forEach(inp=>inp.oninput=()=>{allocObj[inp.dataset.alx]=+inp.value||0;
+      .filter(a=>a.name!==NATIVE && (isParamAbility(a.name)||!hasName(a.name))
+        && (!term||norm(a.name).includes(term)) && (!fc||abilCats(a).includes(fc))).slice(0,200);
+    addList.innerHTML=src.map(a=>`<div class="opt" data-addab="${esc(a.name)}"><span>${esc(a.name)}${isParamAbility(a.name)?' <span class="mini">(parameterized)</span>':''}</span><span class="mini">${esc(abilCats(a).join('/'))}</span></div>`).join('')||'<div class="opt mini">no matches</div>';
+    addList.querySelectorAll('[data-addab]').forEach(o=>o.onclick=()=>{arr.push({name:o.dataset.addab,param:'',spec:'',xp:0});save();onchange();});}
+  if(q) q.oninput=()=>{abilFilter.q=q.value;fill();};
+  if(cat) cat.onchange=()=>{abilFilter.cat=cat.value;fill();};
+  fill();
+  const inst=ref=>arr[+ref.split(':')[1]];
+  el.querySelectorAll('[data-alx]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alx).xp=+inp.value||0;
     inp.nextElementSibling.textContent='→ '+scoreFromXp(+inp.value||0);save();renderBudget();updatePoolLine();renderMsgs(visibleSteps()[step]);});
-  el.querySelectorAll('[data-alrm]').forEach(b=>b.onclick=()=>{delete allocObj[b.dataset.alrm];save();onchange();});
-  el.querySelectorAll('[data-spec]').forEach(inp=>inp.oninput=()=>{C.specs[inp.dataset.spec]=inp.value;save();});
+  el.querySelectorAll('[data-alparam]').forEach(inp=>{inp.oninput=()=>{inst(inp.dataset.alparam).param=inp.value;save();renderBudget();renderMsgs(visibleSteps()[step]);};});
+  el.querySelectorAll('[data-alspec]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alspec).spec=inp.value;save();});
+  el.querySelectorAll('[data-alrm]').forEach(b=>b.onclick=()=>{arr.splice(+b.dataset.alrm.split(':')[1],1);save();onchange();});
 }
 let updatePoolLine=()=>{};
 
 function renderChild(el){
   const childAbil=(DATA.budgets.earlyChildhood.childhoodAbilities||[]);
-  const spent=sumObj(C.childhood.spread);
+  const spent=abilSum(C.childhood.spread);
   el.innerHTML=`<p class="step-help">75 XP go to your Native Language (score 5). Spread 45 XP across childhood Abilities.</p>
     <label class="fld">Native language</label><input type="text" id="natLang" value="${esc(C.childhood.nativeLang)}" placeholder="e.g. Old Norse">
     <div class="alloc-pool ${spent>45?'bad':''}" id="poolLine">Childhood spread: ${spent} / 45 XP</div>
     <label class="fld">Add childhood ability</label>
     <div class="searchbar"><input type="text" class="al-q" placeholder="search…"></div>
     <div class="list al-add" style="max-height:140px"></div>
-    <h4 class="mini" style="margin-top:10px">Allocated</h4><div class="al-rows">${abilAllocRows(C.childhood.spread)}</div>
-    ${DATA.creationRules.detailedCharacterCreation?`<div class="rules-note">${mdRules(DATA.creationRules.detailedCharacterCreation.text)}</div>`:''}`;
+    <h4 class="mini" style="margin-top:10px">Allocated</h4><div class="al-rows">${abilAllocRows(C.childhood.spread,'child')}</div>`;
   $('#natLang').oninput=e=>{C.childhood.nativeLang=e.target.value;C.specs[NATIVE]=e.target.value;save();renderMsgs(STEPS.find(s=>s.id==='child'));};
-  updatePoolLine=()=>{const s=sumObj(C.childhood.spread);const p=$('#poolLine');if(p){p.textContent=`Childhood spread: ${s} / 45 XP`;p.classList.toggle('bad',s>45);}};
-  wireAbilAlloc(el, C.childhood.spread, childAbil, ()=>renderChild(el));
+  updatePoolLine=()=>{const s=abilSum(C.childhood.spread);const p=$('#poolLine');if(p){p.textContent=`Childhood spread: ${s} / 45 XP`;p.classList.toggle('bad',s>45);}};
+  wireAbilAlloc(el, C.childhood.spread, 'child', childAbil, ()=>renderChild(el));
+}
+
+/* --- Training Packages (optional step; Grogs partial templates) ------------- */
+let trainFilter={q:'',cat:''};
+/* A grant label may name a parameterized ability inline, e.g. "Craft: Type A" or
+   "Profession: Animal Trainer" -> split into base ability + parameter. "Native
+   Language" is the fixed 75-XP handled by the Early-Childhood step, so it's skipped. */
+function resolveGrant(label){
+  if(/^Native Language$/i.test(label)) return null;
+  const m=label.match(/^(.*?):\s+(.*)$/);
+  if(m){ const base=m[1].trim(), param=m[2].trim();
+    if(DATA.abilities.some(a=>a.name===base)||isParamAbility(base)) return {name:base,param,spec:'',xp:0,auto:true}; }
+  return {name:label,param:'',spec:'',xp:0,auto:true};
+}
+function applyTraining(pkgName, durLabel){
+  const pkg=(DATA.trainingPackages||[]).find(p=>p.name===pkgName); if(!pkg) return;
+  const dur=pkg.durations.find(d=>d.label===durLabel)||pkg.durations[0]; if(!dur) return;
+  const grants=[];
+  dur.grants.forEach(g=>{ const r=resolveGrant(g.ability); if(!r) return; r.xp=+g.xp||0; grants.push(r); });
+  C.training={packageName:pkg.name, duration:dur.label, grants}; save();
+}
+function renderTraining(el){
+  const pkgs=DATA.trainingPackages||[], cats=['Career','Non-Career','Childhood'], f=trainFilter;
+  const items=pkgs.filter(p=>(!f.cat||p.category===f.cat)&&(!f.q||norm(p.name).includes(norm(f.q))));
+  el.innerHTML=`<p class="step-help">Optional. A training package pre-allocates XP for a stretch of a grog's or companion's life — pick one and a duration, or skip straight to Later Life. Its XP is a separate, <em>attributed</em> bucket (it does not draw the Later-Life pool). Parameterized grants (e.g. “Craft: Type A”) become editable parameterized abilities.</p>
+    <div class="searchbar"><input type="text" id="tpQ" placeholder="search packages…" value="${esc(f.q)}">
+      <select id="tpCat"><option value="">all categories</option>${cats.map(c=>`<option ${f.cat===c?'selected':''}>${esc(c)}</option>`).join('')}</select>
+      ${C.training.packageName?`<button class="btn ghost" id="tpClear" style="padding:6px 12px">Clear package</button>`:''}</div>
+    <div class="list" style="max-height:220px">${items.map(p=>`<div class="opt" data-tp="${esc(p.name)}" style="${C.training.packageName===p.name?'background:rgba(198,155,63,.18)':''}"><span>${esc(p.name)}</span><span class="mini">${esc(p.category)}${p.source?' · '+esc(p.source)+(p.page?' p'+esc(String(p.page)):''):''}</span></div>`).join('')||'<div class="opt mini">no matches</div>'}</div>
+    <div id="tpDetail"></div>`;
+  $('#tpQ').oninput=e=>{trainFilter.q=e.target.value;renderTraining(el);};
+  $('#tpCat').onchange=e=>{trainFilter.cat=e.target.value;renderTraining(el);};
+  if($('#tpClear'))$('#tpClear').onclick=()=>{C.training={packageName:'',duration:'',grants:[]};save();renderTraining(el);renderBudget();};
+  el.querySelectorAll('[data-tp]').forEach(o=>o.onclick=()=>{ if(C.training.packageName!==o.dataset.tp) applyTraining(o.dataset.tp,null); renderTraining(el); renderBudget(); });
+  renderTrainingDetail($('#tpDetail'));
+}
+function renderTrainingDetail(box){
+  const pkg=C.training.packageName?(DATA.trainingPackages||[]).find(p=>p.name===C.training.packageName):null;
+  if(!pkg){ box.innerHTML='<p class="mini" style="margin-top:10px">No package selected — this step is optional.</p>'; return; }
+  const hasNative=pkg.durations.some(d=>d.grants.some(g=>/^Native Language$/i.test(g.ability)));
+  box.innerHTML=`<h4 class="mini" style="margin-top:14px">${esc(pkg.name)} — choose a duration</h4>
+    <div class="searchbar" style="flex-wrap:wrap">${pkg.durations.map(d=>`<button class="btn ${C.training.duration===d.label?'':'ghost'}" data-tpd="${esc(d.label)}" style="padding:6px 12px">${esc(d.label)} <span class="mini">(${d.grants.filter(g=>!/^Native Language$/i.test(g.ability)).reduce((a,g)=>a+(+g.xp||0),0)} XP)</span></button>`).join('')}</div>
+    ${hasNative?'<p class="mini">This package also grants Native Language (score 5) — name your language in the Early Childhood step.</p>':''}
+    <h4 class="mini" style="margin-top:10px">Granted abilities <span class="count-pill">attributed · ${esc(C.training.duration)}</span></h4>
+    <div class="al-rows">${abilAllocRows(C.training.grants,'train')}</div>
+    ${pkg.description?`<div class="rules-note">${mdRules(pkg.description)}</div>`:''}`;
+  box.querySelectorAll('[data-tpd]').forEach(b=>b.onclick=()=>{applyTraining(pkg.name,b.dataset.tpd);renderTraining($('#stepBody'));renderBudget();});
+  wireTrainingGrants(box);
+}
+function wireTrainingGrants(el){
+  const arr=C.training.grants, inst=ref=>arr[+ref.split(':')[1]];
+  el.querySelectorAll('[data-alx]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alx).xp=+inp.value||0;inp.nextElementSibling.textContent='→ '+scoreFromXp(+inp.value||0);save();renderBudget();});
+  el.querySelectorAll('[data-alparam]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alparam).param=inp.value;save();});
+  el.querySelectorAll('[data-alspec]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alspec).spec=inp.value;save();});
+  el.querySelectorAll('[data-alrm]').forEach(b=>b.onclick=()=>{arr.splice(+b.dataset.alrm.split(':')[1],1);save();renderTraining($('#stepBody'));renderBudget();});
 }
 
 function renderLater(el){
-  const pool=laterRate()*(+C.later.years||0), spent=sumObj(C.later.alloc);
+  const pool=laterRate()*(+C.later.years||0), spent=abilSum(C.later.alloc);
   el.innerHTML=`<p class="step-help">${laterRate()} XP/year until apprenticeship (Wealthy 20, Poor 10). Spread across any Abilities.</p>
     <div class="row2"><div><label class="fld">Years of later life</label><input type="number" id="llYears" value="${C.later.years}"></div>
       <div><label class="fld">Pool</label><input type="text" value="${pool} XP (${laterRate()}×${C.later.years})" disabled></div></div>
     <div class="alloc-pool ${spent>pool?'bad':''}" id="poolLine">Later-life XP: ${spent} / ${pool}</div>
     <label class="fld">Add ability</label><div class="searchbar"><input type="text" class="al-q" placeholder="search…"></div>
     <div class="list al-add" style="max-height:140px"></div>
-    <h4 class="mini" style="margin-top:10px">Allocated</h4><div class="al-rows">${abilAllocRows(C.later.alloc)}</div>`;
+    <h4 class="mini" style="margin-top:10px">Allocated</h4><div class="al-rows">${abilAllocRows(C.later.alloc,'later')}</div>`;
   $('#llYears').oninput=e=>{C.later.years=+e.target.value||0;save();renderLater(el);renderBudget();};
-  updatePoolLine=()=>{const p=laterRate()*(+C.later.years||0),s=sumObj(C.later.alloc),ln=$('#poolLine');if(ln){ln.textContent=`Later-life XP: ${s} / ${p}`;ln.classList.toggle('bad',s>p);}};
-  wireAbilAlloc(el, C.later.alloc, null, ()=>renderLater(el));
+  updatePoolLine=()=>{const p=laterRate()*(+C.later.years||0),s=abilSum(C.later.alloc),ln=$('#poolLine');if(ln){ln.textContent=`Later-life XP: ${s} / ${p}`;ln.classList.toggle('bad',s>p);}};
+  wireAbilAlloc(el, C.later.alloc, 'later', null, ()=>renderLater(el));
 }
 
 function renderAppr(el){
-  const spent=sumObj(C.apprentice.arts)+sumObj(C.apprentice.abilities);
+  const spent=sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities);
   el.innerHTML=`<p class="step-help">Divide 240 XP between Hermetic Arts and Abilities. (Spells come next; you have 120 spell-levels there.)</p>
     <div class="alloc-pool ${spent>240?'bad':''}" id="poolLine">Apprenticeship XP: ${spent} / 240</div>
     <div class="arts-wrap">
@@ -525,10 +721,10 @@ function renderAppr(el){
     <label class="fld" style="margin-top:12px">Abilities</label>
     <div class="searchbar"><input type="text" class="al-q" placeholder="search abilities…"></div>
     <div class="list al-add" style="max-height:130px"></div>
-    <div class="al-rows" style="margin-top:8px">${abilAllocRows(C.apprentice.abilities)}</div><div id="artDesc"></div>`;
-  updatePoolLine=()=>{const s=sumObj(C.apprentice.arts)+sumObj(C.apprentice.abilities),ln=$('#poolLine');if(ln){ln.textContent=`Apprenticeship XP: ${s} / 240`;ln.classList.toggle('bad',s>240);}};
+    <div class="al-rows" style="margin-top:8px">${abilAllocRows(C.apprentice.abilities,'appr')}</div><div id="artDesc"></div>`;
+  updatePoolLine=()=>{const s=sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities),ln=$('#poolLine');if(ln){ln.textContent=`Apprenticeship XP: ${s} / 240`;ln.classList.toggle('bad',s>240);}};
   wireArtRows(el, C.apprentice.arts, 'artxp');
-  wireAbilAlloc(el, C.apprentice.abilities, null, ()=>renderAppr(el));
+  wireAbilAlloc(el, C.apprentice.abilities, 'appr', null, ()=>renderAppr(el));
 }
 function artRows(list){ return list.map(a=>`<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
   <input type="number" data-artxp="${a.key}" value="${C.apprentice.arts[a.key]||0}"><span class="mini">→ ${scoreFromXp(C.apprentice.arts[a.key]||0)}</span></div>`).join(''); }
@@ -540,7 +736,7 @@ function wireArtRows(el, artObj, attr){
 }
 
 function renderLYears(el){
-  const pool=30*(+C.laterYears.years||0), spent=sumObj(C.laterYears.arts)+sumObj(C.laterYears.abilities)+(+C.laterYears.spellLevels||0);
+  const pool=30*(+C.laterYears.years||0), spent=sumObj(C.laterYears.arts)+abilSum(C.laterYears.abilities)+(+C.laterYears.spellLevels||0);
   el.innerHTML=`<p class="step-help">Optional. Years after apprenticeship give 30 points/year, split freely between Art XP, Ability XP, and spell levels.</p>
     <div class="row2"><div><label class="fld">Years after apprenticeship</label><input type="number" id="lyY" value="${C.laterYears.years}"></div>
       <div><label class="fld">Spell levels reserved</label><input type="number" id="lySpell" value="${C.laterYears.spellLevels}"></div></div>
@@ -550,13 +746,13 @@ function renderLYears(el){
     <label class="fld" style="margin-top:12px">Abilities</label>
     <div class="searchbar"><input type="text" class="al-q" placeholder="search abilities…"></div>
     <div class="list al-add" style="max-height:120px"></div>
-    <div class="al-rows" style="margin-top:8px">${abilAllocRows(C.laterYears.abilities)}</div><div id="artDesc"></div>`;
-  const upd=()=>{const p=30*(+C.laterYears.years||0),s=sumObj(C.laterYears.arts)+sumObj(C.laterYears.abilities)+(+C.laterYears.spellLevels||0),ln=$('#poolLine');if(ln){ln.textContent=`Later-years points: ${s} / ${p}`;ln.classList.toggle('bad',s>p);}};
+    <div class="al-rows" style="margin-top:8px">${abilAllocRows(C.laterYears.abilities,'lyears')}</div><div id="artDesc"></div>`;
+  const upd=()=>{const p=30*(+C.laterYears.years||0),s=sumObj(C.laterYears.arts)+abilSum(C.laterYears.abilities)+(+C.laterYears.spellLevels||0),ln=$('#poolLine');if(ln){ln.textContent=`Later-years points: ${s} / ${p}`;ln.classList.toggle('bad',s>p);}};
   updatePoolLine=upd;
   $('#lyY').oninput=e=>{C.laterYears.years=+e.target.value||0;save();renderLYears(el);renderBudget();};
   $('#lySpell').oninput=e=>{C.laterYears.spellLevels=+e.target.value||0;save();upd();renderBudget();renderMsgs(visibleSteps()[step]);};
   wireArtRowsLY(el, C.laterYears.arts, upd);
-  wireAbilAlloc(el, C.laterYears.abilities, null, ()=>renderLYears(el));
+  wireAbilAlloc(el, C.laterYears.abilities, 'lyears', null, ()=>renderLYears(el));
 }
 function lyArtRows(list){ return list.map(a=>`<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
   <input type="number" data-lyxp="${a.key}" value="${C.laterYears.arts[a.key]||0}"><span class="mini">→ ${scoreFromXp(C.laterYears.arts[a.key]||0)}</span></div>`).join(''); }
@@ -722,11 +918,12 @@ function fid(){ // 16-char Foundry-style id (deterministic per build, unique)
 const kebab = s => (s||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
 function abilDesc(name){ const a=DATA.abilities.find(x=>x.name===name); return a&&a.text?`<p>${esc(a.text)}</p>`:''; }
 function itemStats(){ return {compendiumSource:null,duplicateSource:null,coreVersion:"13.351",systemId:"arm5e",systemVersion:"3.0.1.14",createdTime:null,modifiedTime:null,lastModifiedBy:null,exportSource:null}; }
-function foundryAbilityItem(name, spec, xp){
-  const fm=FMAP.abilities[name]||{};
-  return { name, type:"ability", img:"", effects:[], flags:{}, folder:null, sort:0, ownership:{default:0}, _id:fid(), _stats:itemStats(),
+function foundryAbilityItem(name, spec, xp, param){
+  const fm=FMAP.abilities[name]||{};       // key stays the base arm5e key; the parameter goes in `option`
+  const opt=param?kebab(param):"";
+  return { name:name+(param?` (${param})`:''), type:"ability", img:"", effects:[], flags:{}, folder:null, sort:0, ownership:{default:0}, _id:fid(), _stats:itemStats(),
     system:{ description:abilDesc(name), source:"ArM5Def", page:0, defaultChaAb:fm.defaultChaAb||"int",
-      speciality:spec||"", xp:+xp||0, key:fm.key||"", option:"", realm:"mundane", indexKey:kebab(name),
+      speciality:spec||"", xp:+xp||0, key:fm.key||"", option:opt, realm:"mundane", indexKey:kebab(name)+(opt?'_'+opt:''),
       optionLinked:false, accelerated:false, credits:"" } };
 }
 function foundryVFItem(v, isFlaw){
@@ -748,11 +945,10 @@ function foundrySpellItem(s){
 }
 function buildFoundryActor(){
   const items=[];
-  // abilities (native language + phase allocations, aggregated)
-  const totals=abilityTotals();
-  for(const [name,xp] of Object.entries(totals)){
-    const spec = name===NATIVE ? C.childhood.nativeLang : (C.specs[name]||"");
-    items.push(foundryAbilityItem(name, spec, xp));
+  // abilities (native language + all phase instances, aggregated by name+parameter)
+  for(const t of abilityTotals()){
+    const spec = t.name===NATIVE ? C.childhood.nativeLang : (t.spec||"");
+    items.push(foundryAbilityItem(t.name, spec, t.xp, t.param));
   }
   C.virtues.forEach(v=>items.push(foundryVFItem(v,false)));
   C.flaws.forEach(f=>items.push(foundryVFItem(f,true)));
@@ -795,12 +991,12 @@ function buildFoundryActor(){
 function exportObject(){
   const at=artTotals(), artsObj={};
   [...DATA.arts.techniques,...DATA.arts.forms].forEach(a=>{const xp=at[a.key]||0;artsObj[a.key]={label:a.name,score:scoreFromXp(xp),xp};});
-  const abil=Object.entries(abilityTotals()).map(([name,xp])=>({name,speciality:name===NATIVE?C.childhood.nativeLang:(C.specs[name]||''),xp,score:scoreFromXp(xp)}));
+  const abil=abilityTotals().map(t=>({name:t.name,param:t.param||'',speciality:t.name===NATIVE?C.childhood.nativeLang:(t.spec||''),xp:t.xp,score:scoreFromXp(t.xp)}));
   return {
     key:(C.name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''),
     name:C.name, house:isMagus()?C.house:'', parens:C.parens||'', sigil:C.sigil||'',
     born:C.born, age:C.age, apparentAge:C.apparentAge||C.age, charType:C.type,
-    characteristics:{...C.characteristics}, size:0,
+    characteristics:{...C.characteristics}, size:+C.size||0,
     confidence:{label:'Confidence',score:C.confidence.score,points:C.confidence.points}, decrepitude:0, warping:0,
     arts:artsObj,
     virtues:C.virtues.map(v=>({name:v.name,impact:(v.size||'').toLowerCase(),description:vfText('virtue',v.name),detail:v.detail||null})),
@@ -810,7 +1006,8 @@ function exportObject(){
     personalityTraits:C.personalityTraits.filter(t=>t.name), reputations:C.reputations||[],
     sanctum:'', familiar:null, activeWounds:[], biography:C.biography||'',
     chargen:{createdWith:'sjorseidr chargen', edition:DATA.meta.edition, spec:DATA.meta.spec_version, concept:C.concept, type:C.type,
-      phases:{childhood:C.childhood, later:C.later, apprentice:C.apprentice, laterYears:C.laterYears}}
+      template:C.templateName||C.template.name||null,
+      phases:{template:C.template, childhood:C.childhood, training:C.training, later:C.later, apprentice:C.apprentice, laterYears:C.laterYears}}
   };
 }
 function vfText(side,name){const d=(side==='virtue'?DATA.virtues:DATA.flaws).find(x=>x.name===name);return d?d.text:'';}
@@ -818,6 +1015,7 @@ function vfText(side,name){const d=(side==='virtue'?DATA.virtues:DATA.flaws).fin
 async function boot(){
   try{ DATA=await (await fetch('./chargen.json',{cache:'no-store'})).json(); }
   catch(e){ $('#app').innerHTML=`<div class="warn">Could not load chargen.json — serve over http (not file://).<br>${esc(e.message)}</div>`; return; }
+  try{ await ensureFmap(); }catch(e){ /* parameterized-ability detection falls back to name patterns */ }
   loadSaved();
   if(!C) C=blankChar();
   render();

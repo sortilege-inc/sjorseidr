@@ -110,6 +110,53 @@ def prop(entity, name):
     return None
 
 
+def prop_obj(entity, name):
+    """Full property dict (for reading `nested` lists, e.g. Characteristics/Arts)."""
+    for p in entity.get("properties", []) or []:
+        if isinstance(p, dict) and p.get("name") == name:
+            return p
+    return None
+
+
+def cell(row, key):
+    """Value of a keyed cell in a table row; falls back to the first bare cell."""
+    cells = row.get("cells", []) or []
+    for c in cells:
+        if c.get("key") == key:
+            return c.get("value")
+    return None
+
+
+def _int(v, default=None):
+    try:
+        return int(str(v).replace("+", "").strip())
+    except (TypeError, ValueError):
+        return default
+
+
+import re as _re_tpl
+
+
+def parse_caret_list(val):
+    """Parse a Virtue/Flaw LIST value like
+    `[^"The Gift", ^"Greater Immunity"("Fire"), ^"Affinity with Art"(^"Creo")]`
+    into [{name, detail?|size?}]. A parenthesized Minor/Major/Free is a Size
+    qualifier; anything else is the parameter/detail."""
+    out = []
+    if not val:
+        return out
+    for m in _re_tpl.finditer(r'\^"([^"]+)"(?:\(\s*\^?"([^"]+)"\s*\))?', val):
+        item = {"name": m.group(1)}
+        arg = m.group(2)
+        if arg:
+            if arg in ("Minor", "Major", "Free"):
+                item["size"] = arg
+            else:
+                item["detail"] = arg
+        out.append(item)
+    return out
+
+
 def cite(entity):
     srcs = entity.get("sources") or []
     if not srcs:
@@ -215,6 +262,109 @@ def main():
             })
     abilities.sort(key=lambda x: x["name"])
 
+    # Training packages (Grogs): partial templates that pre-allocate XP without
+    # building a whole character. DURATIONS.text lists the duration options; each
+    # nested YEARS block carries the per-ability XP grants for that duration.
+    TRAINING_EXTENDS = {"Career Training Package": "Career",
+                        "Non-Career Training Package": "Non-Career",
+                        "Childhood Training Package": "Childhood"}
+    training = []
+    for e in ents:
+        cat = TRAINING_EXTENDS.get(ext(e))
+        if not cat:
+            continue
+        db = next((b for b in e.get("blocks", []) if b.get("keyword") == "DURATIONS"), None)
+        if not db:
+            continue
+        labels = db.get("text") or []
+        yblocks = [b for b in db.get("blocks", []) if b.get("keyword") == "YEARS"]
+        durations = []
+        for i, yb in enumerate(yblocks):
+            label = labels[i] if i < len(labels) else (yb.get("label") or "").split(" PRINTED")[0]
+            grants = []
+            for row in yb.get("rows", []):
+                cells = row.get("cells", []) or []
+                xpv = next((c.get("value") for c in cells if c.get("key") == "XP"), None)
+                if xpv is None:
+                    continue
+                grants.append({"ability": row.get("label", ""),
+                               "xp": int(xpv) if str(xpv).lstrip("-").isdigit() else xpv})
+            durations.append({"label": label, "grants": grants})
+        training.append({
+            "name": e["name"], "category": cat,
+            "source": prop(e, "Source"), "page": prop(e, "Page"),
+            "abilityTypes": parse_list(prop(e, "Ability Types")),
+            "durations": durations, "description": desc(e),
+        })
+    training.sort(key=lambda x: (x["category"], x["name"]))
+
+    # Full character templates (kind "template" — Grog/Companion/Magus). These
+    # pre-build a whole character: characteristics, V/F (with parameters), abilities
+    # (as SCORE, converted to XP in the UI), personality, equipment, and — for magi —
+    # House, Hermetic Arts, and spells. Covenant templates are excluded (not PCs).
+    TEMPLATE_TYPE = {"Grog": "grog", "Companion": "companion", "Magus": "magus"}
+    pres_key = {"Presence": "pre"}
+    templates = []
+    for e in ents:
+        if e.get("kind") != "template":
+            continue
+        ttype = TEMPLATE_TYPE.get(ext(e))
+        if not ttype:
+            continue
+        chars = {}
+        cp = prop_obj(e, "Characteristics")
+        if cp:
+            for n in cp.get("nested", []) or []:
+                k = CHAR_KEYS.get(n.get("name")) or pres_key.get(n.get("name"))
+                if k:
+                    chars[k] = _int(n.get("value"), 0)
+        arts = None
+        ap = prop_obj(e, "Hermetic Arts")
+        if ap and ap.get("nested"):
+            arts = {n.get("name"): _int(n.get("value"), 0) for n in ap["nested"]}
+        abils, spells, ptraits, choices = [], [], [], ""
+        for b in e.get("blocks", []) or []:
+            kw = b.get("keyword")
+            if kw == "ABILITIES":
+                for r in b.get("rows", []) or []:
+                    abils.append({"name": r.get("label", ""),
+                                  "score": _int(cell(r, "SCORE"), 0),
+                                  "specialty": cell(r, "SPECIALTY") or ""})
+            elif kw == "PERSONALITY_TRAITS":
+                for r in b.get("rows", []) or []:
+                    cells = r.get("cells", []) or []
+                    ptraits.append({"name": r.get("label", ""),
+                                    "score": _int(cells[0].get("value"), 0) if cells else 0})
+            elif kw == "SPELLS_KNOWN":
+                for r in b.get("rows", []) or []:
+                    spells.append({"technique": cell(r, "TECHNIQUE") or "",
+                                   "form": cell(r, "FORM") or "",
+                                   "level": _int(cell(r, "LEVEL"), 0)})
+            elif kw == "CHOICES":
+                choices = " ".join(b.get("text") or [])
+        fv = parse_caret_list(prop(e, "Free Virtue"))
+        templates.append({
+            "name": e["name"], "type": ttype, "source": prop(e, "Source"),
+            "description": desc(e) or (prop(e, "Description") or ""),
+            "characteristics": chars,
+            "size": _int(prop(e, "Size")), "age": _int(prop(e, "Age")),
+            "apparentAge": _int(prop(e, "Apparent Age")),
+            "decrepitude": _int(prop(e, "Decrepitude")),
+            "warpingScore": _int(prop(e, "Warping Score")),
+            "virtues": parse_caret_list(prop(e, "Virtues")),
+            "flaws": parse_caret_list(prop(e, "Flaws")),
+            "freeVirtue": fv[0] if fv else None,
+            "equipment": parse_list(prop(e, "Equipment")),
+            "abilities": abils, "personalityTraits": ptraits,
+            "arts": arts, "spells": spells or None,
+            "house": ("House " + e["name"]) if ttype == "magus" else None,
+            "sigil": prop(e, "Wizard's Sigil"),
+            "confidenceScore": _int(prop(e, "Confidence Score")),
+            "confidencePoints": _int(prop(e, "Confidence Points")),
+            "choices": choices,
+        })
+    templates.sort(key=lambda x: (x["type"], x["name"]))
+
     creation_rules = {}
     for key, ename in CREATION_RULE_ENTITIES.items():
         e = by_name.get(ename)
@@ -287,6 +437,8 @@ def main():
         "virtues": virtues,
         "flaws": flaws,
         "abilities": abilities,
+        "trainingPackages": training,
+        "characterTemplates": templates,
         "creationRules": creation_rules,
         "spellsFile": "chargen-spells.json",
         "spellCount": len(spells),
@@ -311,6 +463,14 @@ def main():
     print(f"  characteristics {len(characteristics)} | houses {len(houses)} | "
           f"arts {len(techniques)}+{len(forms)}")
     print(f"  virtues {len(virtues)} | flaws {len(flaws)} | abilities {len(abilities)}")
+    print(f"  training packages {len(training)} "
+          f"({sum(1 for t in training if t['category']=='Career')} Career / "
+          f"{sum(1 for t in training if t['category']=='Non-Career')} Non-Career / "
+          f"{sum(1 for t in training if t['category']=='Childhood')} Childhood)")
+    print(f"  character templates {len(templates)} "
+          f"({sum(1 for t in templates if t['type']=='grog')} grog / "
+          f"{sum(1 for t in templates if t['type']=='companion')} companion / "
+          f"{sum(1 for t in templates if t['type']=='magus')} magus)")
     print(f"  creation-rule passages {len(creation_rules)}/{len(CREATION_RULE_ENTITIES)}")
     print(f"  spell guidelines {len(guidelines)} rows across "
           f"{len(set((g['technique'],g['form']) for g in guidelines))} Te/Fo tables")
