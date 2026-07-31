@@ -1,0 +1,679 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sjórseiðr — Character Creator</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86;
+  --purple:#5b3a8a; --green:#3e6b35;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;min-height:100vh}
+a{color:var(--teal-bright)}
+.wrap{max-width:1080px;margin:0 auto;padding:24px 18px 90px}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:18px}
+.crumb{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(20px,3.4vw,27px);color:var(--rust-bright);margin:6px 0 3px}
+.subtitle{font-style:italic;color:var(--ink-soft);font-size:14px;margin:0}
+.layout{display:grid;grid-template-columns:220px 1fr;gap:20px}
+@media(max-width:760px){.layout{grid-template-columns:1fr}.rail{position:static!important}}
+.rail{position:sticky;top:14px;align-self:start}
+.steps{list-style:none;margin:0 0 14px;padding:0}
+.steps li{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.02em;padding:7px 10px;border-radius:7px;
+  cursor:pointer;color:var(--ink-soft);border:1px solid transparent;display:flex;gap:8px;align-items:center;margin-bottom:2px}
+.steps li:hover{background:rgba(120,90,40,.08)}
+.steps li.active{background:rgba(154,107,31,.14);border-color:rgba(154,107,31,.4);color:var(--ink)}
+.steps li.done .st-num{background:var(--green);color:#fff;border-color:var(--green)}
+.steps li.invalid .st-num{background:var(--rust);color:#fff;border-color:var(--rust)}
+.steps li.hidden{display:none}
+.st-num{flex:none;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);display:flex;
+  align-items:center;justify-content:center;font-size:11px;background:var(--parch)}
+.budget{background:rgba(244,235,213,.7);border:1px solid rgba(120,90,40,.35);border-radius:9px;padding:10px 12px;font-size:12.5px}
+.budget h4{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust-bright);margin:0 0 7px}
+.budget .brow{display:flex;justify-content:space-between;gap:8px;padding:2px 0}
+.budget .brow.bad{color:var(--rust);font-weight:600}
+.budget .brow.ok{color:var(--green)}
+.panel{background:rgba(245,238,220,.55);border:1px solid rgba(120,90,40,.35);border-radius:11px;padding:18px 20px;min-height:320px}
+.step-title{font-family:'Cinzel',serif;font-size:16px;color:var(--rust-bright);margin:0 0 4px}
+.step-help{font-size:14px;color:var(--ink-soft);margin:0 0 14px;line-height:1.5}
+label.fld{display:block;font-size:12px;font-family:'Cinzel',serif;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft);margin:12px 0 3px}
+input[type=text],input[type=number],select,textarea{width:100%;font-family:'EB Garamond',serif;font-size:14.5px;
+  padding:7px 9px;border:1px solid rgba(120,90,40,.4);border-radius:6px;background:rgba(255,252,244,.7);color:var(--ink)}
+textarea{min-height:64px;resize:vertical}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.row2{grid-template-columns:1fr}}
+.typecards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:8px}
+@media(max-width:560px){.typecards{grid-template-columns:1fr}}
+.tc{border:1px solid rgba(120,90,40,.4);border-radius:9px;padding:12px;cursor:pointer;background:rgba(255,252,244,.5)}
+.tc.sel{border-color:var(--gold);background:rgba(198,155,63,.14);box-shadow:0 0 0 1px var(--gold) inset}
+.tc h4{font-family:'Cinzel',serif;margin:0 0 4px;color:var(--rust)}
+.tc p{margin:0;font-size:12.5px;color:var(--ink-soft);line-height:1.4}
+.pick-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+@media(max-width:720px){.pick-grid{grid-template-columns:1fr}}
+.pick-col h4{font-family:'Cinzel',serif;font-size:13px;color:var(--rust-bright);margin:0 0 6px;display:flex;justify-content:space-between}
+.searchbar{display:flex;gap:6px;margin-bottom:6px}
+.searchbar select{flex:none;width:auto}
+.list{max-height:320px;overflow:auto;border:1px solid rgba(120,90,40,.3);border-radius:8px;background:rgba(255,252,244,.5)}
+.opt{padding:6px 9px;border-bottom:1px solid rgba(120,90,40,.14);cursor:pointer;font-size:13px;display:flex;justify-content:space-between;gap:8px}
+.opt:hover{background:rgba(198,155,63,.12)}
+.opt .sz{flex:none;font-size:10.5px;font-family:'Cinzel',serif;color:var(--ink-soft);text-transform:uppercase}
+.opt .sz.major{color:var(--rust)}
+.chosen{margin-top:8px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(244,235,213,.9);border:1px solid rgba(120,90,40,.4);
+  border-radius:20px;padding:3px 6px 3px 11px;margin:0 5px 5px 0;font-size:12.5px}
+.chip.virtue{border-left:4px solid var(--green)}
+.chip.flaw{border-left:4px solid var(--rust)}
+.chip .x{cursor:pointer;border:none;background:rgba(138,51,36,.15);color:var(--rust);border-radius:50%;width:17px;height:17px;line-height:1;font-size:12px}
+.chip .det{font-size:11px;color:var(--ink-soft)}
+.detail-in{border:1px dashed rgba(120,90,40,.5);border-radius:5px;font-size:11.5px;padding:1px 4px;width:110px;background:transparent}
+.desc-pop{font-size:12px;color:var(--ink-soft);line-height:1.45;margin:4px 0 0;padding:7px 10px;background:rgba(244,235,213,.55);border-left:3px solid var(--gold);border-radius:0 6px 6px 0}
+.char-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:10px}
+.char-cell{border:1px solid rgba(120,90,40,.35);border-radius:9px;padding:10px;background:rgba(255,252,244,.5);text-align:center}
+.char-cell .cn{font-family:'Cinzel',serif;font-size:12px;color:var(--rust);letter-spacing:.02em}
+.stepper{display:flex;align-items:center;justify-content:center;gap:10px;margin:6px 0 2px}
+.stepper button{width:28px;height:28px;border-radius:6px;border:1px solid var(--line);background:var(--parch);cursor:pointer;font-size:16px;color:var(--ink)}
+.stepper button:disabled{opacity:.3;cursor:not-allowed}
+.stepper .val{font-size:20px;font-weight:600;min-width:26px}
+.char-cell .cost{font-size:11px;color:var(--ink-soft)}
+.arts-wrap{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+@media(max-width:720px){.arts-wrap{grid-template-columns:1fr}}
+.art-row,.abil-row{display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid rgba(120,90,40,.14);font-size:13px}
+.art-row .an,.abil-row .an{flex:1}
+.art-row input,.abil-row input{width:64px;text-align:center}
+.mini{font-size:11px;color:var(--ink-soft)}
+.btn{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.03em;padding:8px 16px;border-radius:7px;border:1px solid var(--line);
+  background:var(--gold);color:#fff;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.rust{background:var(--rust)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.navbtns{display:flex;justify-content:space-between;margin-top:20px;gap:10px}
+.warn{background:rgba(138,51,36,.08);border:1px solid rgba(138,51,36,.3);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:13px;color:var(--rust)}
+.good{background:rgba(62,107,53,.08);border:1px solid rgba(62,107,53,.3);border-radius:8px;padding:8px 12px;margin:8px 0;font-size:13px;color:var(--green)}
+.rules-note{position:relative;margin:12px 0;padding:12px 14px;background:rgba(245,238,220,.75);border:1px solid rgba(120,90,40,.4);border-radius:8px;font-size:13px;line-height:1.5}
+.rules-note::before{content:"Rules — verbatim";position:absolute;top:-9px;left:12px;font-family:'Cinzel',serif;font-size:9.5px;
+  letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);background:var(--parch);padding:0 7px;border:1px solid rgba(120,90,40,.35);border-radius:10px}
+.export-area{width:100%;min-height:220px;font-family:ui-monospace,Menlo,monospace;font-size:11.5px}
+.loading{padding:60px 20px;text-align:center;color:var(--ink-soft);font-style:italic}
+.count-pill{font-size:11px;color:var(--ink-soft);font-weight:400}
+footer{text-align:center;margin-top:34px;font-size:12px;color:var(--ink-soft);opacity:.85;border-top:1px solid rgba(120,90,40,.3);padding-top:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="crumb"><a href="index.html">Sjórseiðr</a> · Character Creator</div>
+    <h1>Ars Magica Character Creator</h1>
+    <p class="subtitle">Guided creation for the Sjórseiðr covenant — rules &amp; text drawn live from the armdef 0.5 corpus.</p>
+  </header>
+  <div id="app"><div class="loading"><span style="font-size:26px">🜛</span><br>Loading the corpus…</div></div>
+  <footer>
+    Corpus-driven character creation · data from <code>chargen.json</code> (armdef 0.5) · character advancement rules are RAW.
+    <span id="metaVer"></span>
+  </footer>
+</div>
+<script>
+/* ============================================================
+   Sjórseiðr character creator — no-build, corpus-driven.
+   All rules text is verbatim from chargen.json (sliced from the
+   resolved armdef corpus by scripts/build_chargen.py).
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function mdRules(s){return esc(s).replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</strong>')
+  .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g,'$1<em>$2</em>').replace(/\n\s*\n/g,'<br><br>').replace(/\n/g,' ');}
+const norm = s => (s==null?'':String(s)).toLowerCase();
+const LS_KEY = 'sjorseidr_chargen_v1';
+
+let DATA = null;      // chargen.json
+let SPELLS = null;    // chargen-spells.json (lazy)
+let C = null;         // the character in progress
+let step = 0;
+
+/* ---- character skeleton ---- */
+function blankChar(){
+  return {
+    name:'', type:'magus', concept:'', born:1198, age:25, apparentAge:null,
+    house:null, parens:'', sigil:'',
+    characteristics:{int:0,per:0,str:0,sta:0,pre:0,com:0,dex:0,qik:0},
+    virtues:[], flaws:[],           // {name,size,category,detail}
+    abilities:[],                   // {name,speciality,xp}
+    arts:{},                        // key -> xp
+    spells:[],                      // {name,...}
+    laterLifeYears:15,
+    personalityTraits:[],           // {name,score}
+    reputations:[], confidence:{score:1,points:3}, equipment:'', biography:''
+  };
+}
+
+/* ---- cost math ---- */
+const charCost = n => (Math.abs(n)*(Math.abs(n)+1))/2 * (n<0?-1:1);      // points
+const xpForScore = s => 5*(s*(s+1))/2;                                    // ability/art xp for a score
+const scoreFromXp = xp => { let s=0; while(xpForScore(s+1)<=xp) s++; return s; };
+const vfPoints = vf => (vf.size==='Major'?3:vf.size==='Free'?0:1);
+const isMagus = () => C.type==='magus';
+
+/* ---- persistence ---- */
+function save(){ try{ localStorage.setItem(LS_KEY, JSON.stringify({C,step})); }catch(e){} }
+function load(){ try{ const r=JSON.parse(localStorage.getItem(LS_KEY)); if(r&&r.C){C=r.C; step=r.step||0;} }catch(e){} }
+
+/* ============================================================
+   STEPS
+   ============================================================ */
+const STEPS = [
+  {id:'type',   title:'Concept & Type',           render:renderType,   valid:vType},
+  {id:'house',  title:'House',                     render:renderHouse,  valid:vHouse,  magiOnly:true},
+  {id:'vf',     title:'Virtues & Flaws',           render:renderVF,     valid:vVF},
+  {id:'chars',  title:'Characteristics',           render:renderChars,  valid:vChars},
+  {id:'abil',   title:'Abilities',                 render:renderAbil,   valid:vAbil},
+  {id:'arts',   title:'Arts',                      render:renderArts,   valid:vArts,   magiOnly:true},
+  {id:'spells', title:'Spells',                    render:renderSpells, valid:vSpells, magiOnly:true},
+  {id:'finish', title:'Personality & Details',     render:renderFinish, valid:()=>({ok:true})},
+  {id:'review', title:'Review & Export',           render:renderReview, valid:()=>({ok:true})},
+];
+const visibleSteps = () => STEPS.filter(s=>!s.magiOnly || isMagus());
+
+/* ============================================================
+   VALIDATORS  -> {ok, msgs:[{level:'warn'|'ok', text}]}
+   ============================================================ */
+function vType(){ const m=[]; if(!C.name.trim()) m.push({level:'warn',text:'Give the character a name.'});
+  return {ok:!!C.name.trim(), msgs:m}; }
+function vHouse(){ if(!isMagus()) return {ok:true,msgs:[]};
+  return C.house?{ok:true,msgs:[{level:'ok',text:'House '+C.house+' chosen.'}]}
+    :{ok:false,msgs:[{level:'warn',text:'A magus must choose a House.'}]}; }
+
+function vfBudget(){
+  const flawPts = C.flaws.reduce((a,f)=>a+vfPoints(f),0);
+  const virPts  = C.virtues.filter(v=>v.size!=='Free').reduce((a,v)=>a+vfPoints(v),0);
+  const majV = C.virtues.filter(v=>v.size==='Major').length;
+  const majF = C.flaws.filter(f=>f.size==='Major').length;
+  const social = [...C.virtues,...C.flaws].filter(x=>/social status/i.test(x.category||'')).length;
+  return {flawPts,virPts,majV,majF,social};
+}
+function vVF(){
+  const b=vfBudget(); const m=[]; let ok=true;
+  if(C.type==='grog'){
+    const minF=C.flaws.filter(f=>f.size==='Minor').length, minV=C.virtues.filter(v=>v.size==='Minor').length;
+    if(b.majF||b.majV){m.push({level:'warn',text:'Grogs may not take Major Virtues or Flaws.'});ok=false;}
+    if(minF>3){m.push({level:'warn',text:'Grogs may take at most 3 Minor Flaws.'});ok=false;}
+    if(minV>minF){m.push({level:'warn',text:'A grog\'s Virtues may not exceed its Flaws in number.'});ok=false;}
+  }else{
+    if(b.flawPts>10){m.push({level:'warn',text:`Flaws total ${b.flawPts} points — the maximum is 10.`});ok=false;}
+    if(b.virPts>b.flawPts){m.push({level:'warn',text:`Virtue points (${b.virPts}) may not exceed Flaw points (${b.flawPts}).`});ok=false;}
+    if(b.majV>3){m.push({level:'warn',text:'At most 3 Major Virtues.'});ok=false;}
+    if(b.majF>3){m.push({level:'warn',text:'At most 3 Major Flaws.'});ok=false;}
+  }
+  if(isMagus() && !C.virtues.some(v=>v.name==='The Gift')) {m.push({level:'warn',text:'A magus must have The Gift (added with your House).'});ok=false;}
+  if(b.social!==1){m.push({level:'warn',text:`Every character needs exactly one Social Status (currently ${b.social}).`});ok=false;}
+  if(ok) m.push({level:'ok',text:'Virtue/Flaw balance is legal.'});
+  return {ok,msgs:m};
+}
+function vChars(){
+  const spent = Object.values(C.characteristics).reduce((a,n)=>a+charCost(n),0);
+  const m=[{level: spent>7?'warn':'ok', text:`Characteristic points spent: ${spent} / 7.`}];
+  return {ok:spent<=7, msgs:m};
+}
+function abilityPools(){
+  const later = (C.laterLifeYears||0) * (C.flaws.some(f=>/^Poor$/i.test(f.name))?10:C.virtues.some(v=>/^Wealthy$/i.test(v.name))?20:15);
+  return {childhoodNative:75, childhoodSpread:45, later, apprenticeship:isMagus()?240:0};
+}
+function abilitySpent(){ return C.abilities.reduce((a,ab)=>a+(+ab.xp||0),0); }
+function artSpent(){ return Object.values(C.arts).reduce((a,x)=>a+(+x||0),0); }
+function vAbil(){
+  const p=abilityPools();
+  const totalAbil = p.childhoodSpread + p.later + p.apprenticeship; // native (75) tracked separately as fixed
+  const nativeXp = C.abilities.filter(a=>a.native).reduce((a,b)=>a+(+b.xp||0),0);
+  const nonNative = abilitySpent()-nativeXp;
+  const artXp = artSpent();
+  const m=[{level:'ok',text:`Ability XP available (childhood 45 + later ${p.later}${isMagus()?' + apprenticeship shares 240 with Arts':''}).`}];
+  let ok=true;
+  if(isMagus()){
+    const shared = p.childhoodSpread + p.later + p.apprenticeship;
+    if(nonNative+artXp>shared){m.push({level:'warn',text:`Abilities+Arts spend ${nonNative+artXp} XP; the pool is ${shared} (45 + later ${p.later} + 240).`});ok=false;}
+  }else{
+    if(nonNative>totalAbil){m.push({level:'warn',text:`Abilities spend ${nonNative} XP; the pool is ${totalAbil}.`});ok=false;}
+  }
+  return {ok, msgs:m};
+}
+function vArts(){
+  if(!isMagus()) return {ok:true,msgs:[]};
+  return {ok:true, msgs:[{level:'ok',text:`Art XP spent ${artSpent()} (shares the 240 apprenticeship pool with Abilities).`}]};
+}
+function spellCap(sp){
+  const te = C.arts[artKey(sp.technique)]||0, fo = C.arts[artKey(sp.form)]||0;
+  const mt = (C.abilities.find(a=>/^Magic Theory$/i.test(a.name))||{}); const mtScore = scoreFromXp(+mt.xp||0);
+  return artScore(te)+artScore(fo)+ (C.characteristics.int||0) + mtScore + 3;
+}
+function vSpells(){
+  if(!isMagus()) return {ok:true,msgs:[]};
+  const lvls = C.spells.reduce((a,s)=>a+(+s.level||0),0);
+  const over = C.spells.filter(s=>+s.level>spellCap(s));
+  const m=[{level: lvls>120?'warn':'ok', text:`Spell levels: ${lvls} / 120.`}];
+  let ok = lvls<=120;
+  if(over.length){m.push({level:'warn',text:`${over.length} spell(s) exceed the Te+Fo+Int+Magic Theory+3 cap.`});ok=false;}
+  return {ok,msgs:m};
+}
+const artScore = xp => scoreFromXp(xp); // arts use the same xp table
+function artKey(name){ const t=[...DATA.arts.techniques,...DATA.arts.forms].find(a=>a.name===name); return t?t.key:null; }
+
+/* ============================================================
+   RENDER SHELL
+   ============================================================ */
+function render(){
+  const vis = visibleSteps();
+  if(step>=vis.length) step=vis.length-1;
+  const cur = vis[step];
+  const railSteps = vis.map((s,i)=>{
+    const v = s.valid(); const cls = i===step?'active':(i<step? (v.ok?'done':'invalid'):'');
+    return `<li class="${cls}" data-i="${i}"><span class="st-num">${i+1}</span>${esc(s.title)}</li>`;
+  }).join('');
+  $('#app').innerHTML = `
+   <div class="layout">
+     <div class="rail">
+       <ul class="steps">${railSteps}</ul>
+       <div class="budget" id="budgetBox"></div>
+     </div>
+     <div>
+       <div class="panel">
+         <div class="step-title">${esc(cur.title)}</div>
+         <div id="stepBody"></div>
+         <div id="stepMsgs"></div>
+       </div>
+       <div class="navbtns">
+         <button class="btn ghost" id="prevBtn" ${step===0?'disabled':''}>← Back</button>
+         <div>
+           <button class="btn ghost" id="resetBtn" title="Start over">Reset</button>
+           <button class="btn" id="nextBtn" ${step===vis.length-1?'disabled':''}>Next →</button>
+         </div>
+       </div>
+     </div>
+   </div>`;
+  cur.render($('#stepBody'));
+  renderMsgs(cur);
+  renderBudget();
+  $('#metaVer').textContent = DATA.meta ? ` · ${DATA.meta.edition} ${DATA.meta.spec_version}` : '';
+  document.querySelectorAll('.steps li').forEach(li=>li.onclick=()=>{step=+li.dataset.i;save();render();});
+  $('#prevBtn').onclick=()=>{if(step>0){step--;save();render();}};
+  $('#nextBtn').onclick=()=>{const v=visibleSteps(); if(step<v.length-1){step++;save();render();}};
+  $('#resetBtn').onclick=()=>{ if(confirm('Discard this character and start over?')){C=blankChar();step=0;save();render();} };
+  save();
+}
+function renderMsgs(cur){
+  const v=cur.valid();
+  $('#stepMsgs').innerHTML = (v.msgs||[]).map(m=>`<div class="${m.level==='warn'?'warn':'good'}">${esc(m.text)}</div>`).join('');
+}
+function renderBudget(){
+  const b=vfBudget(); const cs=Object.values(C.characteristics).reduce((a,n)=>a+charCost(n),0);
+  const rows=[];
+  rows.push(['Type', C.type]);
+  if(isMagus()&&C.house) rows.push(['House', C.house]);
+  rows.push(['Flaw pts', `${b.flawPts}${C.type!=='grog'?' / 10':''}`, b.flawPts>10]);
+  rows.push(['Virtue pts', `${b.virPts}${C.type!=='grog'?' / '+b.flawPts:''}`, b.virPts>b.flawPts]);
+  rows.push(['Social Status', b.social, b.social!==1]);
+  rows.push(['Char pts', `${cs} / 7`, cs>7]);
+  if(isMagus()){
+    const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0);
+    rows.push(['Art XP', artSpent()]);
+    rows.push(['Spell lvls', `${lvls} / 120`, lvls>120]);
+  }
+  $('#budgetBox').innerHTML = `<h4>Budget</h4>`+rows.map(r=>
+    `<div class="brow ${r[2]?'bad':''}"><span>${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join('');
+}
+
+/* ============================================================
+   STEP: TYPE / CONCEPT
+   ============================================================ */
+function renderType(el){
+  const types=[['magus','Magus','A Gifted, Hermetically-trained wizard. Picks a House, Arts, and spells.'],
+    ['companion','Companion','A central non-magus character — knight, scholar, hedge-wizard.'],
+    ['grog','Grog','A supporting cast member: soldier, sailor, servant. Simpler build.']];
+  el.innerHTML = `
+    <p class="step-help">Choose the kind of character and sketch the concept. Magi get extra steps (House, Arts, Spells).</p>
+    <div class="typecards">${types.map(t=>`<div class="tc ${C.type===t[0]?'sel':''}" data-t="${t[0]}"><h4>${t[1]}</h4><p>${t[2]}</p></div>`).join('')}</div>
+    <div class="row2">
+      <div><label class="fld">Name</label><input type="text" id="cName" value="${esc(C.name)}"></div>
+      <div><label class="fld">Concept</label><input type="text" id="cConcept" value="${esc(C.concept)}" placeholder="e.g. storm-chasing Flambeau"></div>
+    </div>
+    <div class="row2">
+      <div><label class="fld">Born (year A.D.)</label><input type="number" id="cBorn" value="${C.born}"></div>
+      <div><label class="fld">Age</label><input type="number" id="cAge" value="${C.age}"></div>
+    </div>
+    ${isMagus()?`<div class="row2">
+      <div><label class="fld">Parens (teacher)</label><input type="text" id="cParens" value="${esc(C.parens)}"></div>
+      <div><label class="fld">Sigil</label><input type="text" id="cSigil" value="${esc(C.sigil)}" placeholder="magical signature"></div>
+    </div>`:''}`;
+  el.querySelectorAll('.tc').forEach(c=>c.onclick=()=>{C.type=c.dataset.t; if(C.type!=='magus'){C.house=null;} step=Math.min(step,0); render();});
+  const bind=(id,fn)=>{const e=el.querySelector(id); if(e) e.oninput=()=>{fn(e.value);save();renderBudget();};};
+  bind('#cName',v=>C.name=v); bind('#cConcept',v=>C.concept=v);
+  bind('#cBorn',v=>C.born=+v||0); bind('#cAge',v=>C.age=+v||0);
+  bind('#cParens',v=>C.parens=v); bind('#cSigil',v=>C.sigil=v);
+  el.querySelector('#cName').addEventListener('blur',()=>renderMsgs(STEPS[0]));
+}
+
+/* ============================================================
+   STEP: HOUSE
+   ============================================================ */
+function renderHouse(el){
+  el.innerHTML = `<p class="step-help">Pick a Hermetic House. Its free House Virtue is added automatically.</p>
+    <div class="list" style="max-height:none">${DATA.houses.map(h=>`
+      <div class="opt" data-h="${esc(h.name)}" style="${C.house===h.name?'background:rgba(198,155,63,.18)':''}">
+        <span><strong>${esc(h.name)}</strong> <span class="mini">${esc(h.houseType||'')}</span></span>
+        <span class="mini">${esc((h.benefit||'').slice(0,42))}</span></div>`).join('')}</div>
+    <div id="houseDesc"></div>`;
+  el.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{setHouse(o.dataset.h);render();});
+  const h=DATA.houses.find(x=>x.name===C.house);
+  if(h) el.querySelector('#houseDesc').innerHTML =
+    `<div class="rules-note">${mdRules(h.text)}</div>
+     <p class="mini">Free House Virtue: <strong>${esc(freeVirtueLabel(h.freeVirtue))}</strong></p>`;
+}
+function freeVirtueLabel(fv){ if(!fv) return '—';
+  return String(fv).replace(/\[|\]|\^|"/g,'').replace(/\(/,' (').trim(); }
+function setHouse(name){
+  const h=DATA.houses.find(x=>x.name===name); if(!h) return;
+  // remove old auto virtues
+  C.virtues = C.virtues.filter(v=>!v.auto);
+  C.house = name;
+  // The Gift (Free, Special) for magi
+  ensureVirtue({name:'The Gift', auto:true});
+  // Hermetic Magus (Social Status) — the defining status for magi
+  ensureVirtue({name:'Hermetic Magus', auto:true});
+  // Free House Virtue
+  const fvName = parseFreeVirtue(h.freeVirtue);
+  if(fvName) ensureVirtue({name:fvName.name, detail:fvName.detail, auto:true, free:true});
+  save();
+}
+function parseFreeVirtue(fv){
+  if(!fv) return null;
+  // formats: [^"Puissant Art"(^"Ignem")] | [^"Puissant Ability"(^"Magic Theory")]
+  // Lists (e.g. House Ex Miscellanea) are left for the player to add manually.
+  let s = String(fv).trim().replace(/^\[/,'').replace(/\]$/,'').trim();
+  if(s.includes(',')) return null;
+  const m = s.match(/^\^?"([^"]+)"(?:\s*\(\s*\^?"([^"]+)"\s*\))?/) || s.match(/^([^(]+?)(?:\(([^)]+)\))?$/);
+  if(!m) return null;
+  return {name:m[1].trim(), detail:(m[2]||'').trim()||null};
+}
+function ensureVirtue(o){
+  const def = DATA.virtues.find(v=>v.name===o.name) || {name:o.name,size:o.free?'Free':'Minor',category:'Special'};
+  if(C.virtues.some(v=>v.name===o.name)) return;
+  C.virtues.push({name:def.name, size:o.free?'Free':def.size, category:def.category, detail:o.detail||null, auto:!!o.auto});
+}
+
+/* ============================================================
+   STEP: VIRTUES & FLAWS
+   ============================================================ */
+let vfFilter={q:'',cat:'',side:'virtue'};
+function renderVF(el){
+  el.innerHTML = `
+    <p class="step-help">${esc(DATA.budgets.virtueFlaw.minorPoints)} pt per Minor, ${esc(DATA.budgets.virtueFlaw.majorPoints)} per Major.
+      ${C.type==='grog'?'Grogs: up to 3 Minor Flaws + equal Minor Virtues, no Majors.':'Companions &amp; Magi: up to 10 points of Flaws, matched by up to 10 points of Virtues.'}
+      Every character needs exactly one Social Status.</p>
+    <div class="pick-grid">
+      ${vfCol('virtue')}
+      ${vfCol('flaw')}
+    </div>
+    <div class="chosen">
+      <h4 class="mini">Chosen Virtues</h4>${chipList('virtue')}
+      <h4 class="mini" style="margin-top:8px">Chosen Flaws</h4>${chipList('flaw')}
+    </div>
+    <div id="vfDesc"></div>`;
+  wireVF(el);
+}
+function vfCol(side){
+  const src = side==='virtue'?DATA.virtues:DATA.flaws;
+  const cats=[...new Set(src.map(x=>x.category).filter(Boolean))].sort();
+  const f = vfFilter[side]||{q:'',cat:''}; vfFilter[side]=f;
+  const items = src.filter(x=>(!f.cat||x.category===f.cat) && (!f.q||norm(x.name).includes(norm(f.q)))).slice(0,400);
+  return `<div class="pick-col" data-side="${side}">
+    <h4>Add ${side==='virtue'?'Virtue':'Flaw'} <span class="count-pill">${src.length}</span></h4>
+    <div class="searchbar">
+      <input type="text" class="vfq" data-side="${side}" placeholder="search…" value="${esc(f.q)}">
+      <select class="vfcat" data-side="${side}"><option value="">all categories</option>
+        ${cats.map(c=>`<option ${f.cat===c?'selected':''}>${esc(c)}</option>`).join('')}</select>
+    </div>
+    <div class="list">${items.map(x=>`<div class="opt" data-add="${side}" data-name="${esc(x.name)}">
+      <span>${esc(x.name)}</span><span class="sz ${x.size==='Major'?'major':''}">${esc(x.size||'')}</span></div>`).join('')||'<div class="opt mini">no matches</div>'}</div>
+  </div>`;
+}
+function chipList(side){
+  const arr = side==='virtue'?C.virtues:C.flaws;
+  if(!arr.length) return '<span class="mini">— none —</span>';
+  return arr.map((x,i)=>`<span class="chip ${side}">
+    <span data-desc="${side}:${i}" style="cursor:help">${esc(x.name)}</span>${x.size==='Free'?' <span class="det">(free)</span>':''}
+    ${needsDetail(x)?`<input class="detail-in" data-detail="${side}:${i}" placeholder="specify…" value="${esc(x.detail||'')}">`:(x.detail?`<span class="det">(${esc(x.detail)})</span>`:'')}
+    ${x.auto?'':`<button class="x" data-rm="${side}:${i}">×</button>`}</span>`).join('');
+}
+function needsDetail(x){ return /\((Ability|Art|Area|Realm|Characteristic)\)/i.test(x.name) || /^(Puissant|Affinity with|Great|Poor|Improved) /.test(x.name); }
+function wireVF(el){
+  el.querySelectorAll('.vfq').forEach(inp=>inp.oninput=()=>{vfFilter[inp.dataset.side].q=inp.value; refreshVFcol(inp.dataset.side);});
+  el.querySelectorAll('.vfcat').forEach(sel=>sel.onchange=()=>{vfFilter[sel.dataset.side].cat=sel.value; refreshVFcol(sel.dataset.side);});
+  el.querySelectorAll('[data-add]').forEach(o=>o.onclick=()=>addVF(o.dataset.add,o.dataset.name));
+  el.querySelectorAll('[data-rm]').forEach(b=>b.onclick=()=>{const[s,i]=b.dataset.rm.split(':');(s==='virtue'?C.virtues:C.flaws).splice(+i,1);save();render();});
+  el.querySelectorAll('[data-detail]').forEach(inp=>inp.oninput=()=>{const[s,i]=inp.dataset.detail.split(':');(s==='virtue'?C.virtues:C.flaws)[+i].detail=inp.value;save();});
+  el.querySelectorAll('[data-desc]').forEach(sp=>sp.onclick=()=>{const[s,i]=sp.dataset.desc.split(':');showVFDesc(s,+i);});
+}
+function refreshVFcol(side){
+  const col=document.querySelector(`.pick-col[data-side="${side}"]`); if(!col)return;
+  const tmp=document.createElement('div'); tmp.innerHTML=vfCol(side); col.replaceWith(tmp.firstElementChild);
+  wireVF($('#stepBody'));
+}
+function addVF(side,name){
+  const src=side==='virtue'?DATA.virtues:DATA.flaws;
+  const def=src.find(x=>x.name===name); if(!def) return;
+  const arr=side==='virtue'?C.virtues:C.flaws;
+  if(arr.some(x=>x.name===name)) return;
+  arr.push({name:def.name,size:def.size==='Free'?'Free':(def.size&&def.size.startsWith('[')?'Minor':def.size),category:def.category,detail:null});
+  save(); render();
+}
+function showVFDesc(side,i){
+  const x=(side==='virtue'?C.virtues:C.flaws)[i];
+  const def=(side==='virtue'?DATA.virtues:DATA.flaws).find(d=>d.name===x.name)||{};
+  $('#vfDesc').innerHTML = `<div class="rules-note"><strong>${esc(x.name)}</strong> <span class="mini">(${esc(x.size)}, ${esc(x.category||'')})</span><br>${mdRules(def.text||'—')}</div>`;
+}
+
+/* ============================================================
+   STEP: CHARACTERISTICS
+   ============================================================ */
+function renderChars(el){
+  const cr = DATA.creationRules.characteristicBuying;
+  el.innerHTML = `<p class="step-help">Start with 7 points. A score of ±n costs (or returns) n(n+1)/2 points.</p>
+    <div class="char-grid">${DATA.characteristics.map(ch=>{
+      const k=ch.key, val=C.characteristics[k]||0;
+      return `<div class="char-cell"><div class="cn" data-cdesc="${esc(ch.name)}" title="rules" style="cursor:help">${esc(ch.name)}</div>
+        <div class="stepper"><button data-dec="${k}" ${val<=-3?'disabled':''}>−</button><span class="val">${val>0?'+':''}${val}</span><button data-inc="${k}" ${val>=3?'disabled':''}>+</button></div>
+        <div class="cost">cost ${charCost(val)}</div></div>`;}).join('')}</div>
+    ${cr?`<div class="rules-note">${mdRules(cr.text)}</div>`:''}
+    <div id="charDesc"></div>`;
+  el.querySelectorAll('[data-inc]').forEach(b=>b.onclick=()=>{C.characteristics[b.dataset.inc]=Math.min(3,(C.characteristics[b.dataset.inc]||0)+1);save();render();});
+  el.querySelectorAll('[data-dec]').forEach(b=>b.onclick=()=>{C.characteristics[b.dataset.dec]=Math.max(-3,(C.characteristics[b.dataset.dec]||0)-1);save();render();});
+  el.querySelectorAll('[data-cdesc]').forEach(c=>c.onclick=()=>{const ch=DATA.characteristics.find(x=>x.name===c.dataset.cdesc);
+    $('#charDesc').innerHTML = ch&&ch.text?`<div class="rules-note"><strong>${esc(ch.name)}</strong><br>${mdRules(ch.text)}</div>`:'';});
+}
+
+/* ============================================================
+   STEP: ABILITIES
+   ============================================================ */
+let abilFilter='';
+function renderAbil(el){
+  const p=abilityPools();
+  const opts=DATA.abilities.filter(a=>!abilFilter||norm(a.name).includes(norm(abilFilter))).slice(0,300);
+  el.innerHTML = `<p class="step-help">Early childhood: 75 XP Native Language (score 5) + 45 XP across childhood Abilities.
+    Later life: ${p.later} XP (${C.laterLifeYears} yrs). ${isMagus()?'Apprenticeship: 240 XP shared between Abilities and Arts.':''}
+    A score of n needs 5·n(n+1)/2 XP.</p>
+    <div class="row2">
+      <div><label class="fld">Later-life years</label><input type="number" id="llYears" value="${C.laterLifeYears}"></div>
+      <div><label class="fld">Ability XP spent</label><input type="text" value="${abilitySpent()} XP" disabled></div>
+    </div>
+    <label class="fld">Add ability</label>
+    <div class="searchbar"><input type="text" id="abilQ" placeholder="search abilities…" value="${esc(abilFilter)}"></div>
+    <div class="list" style="max-height:150px">${opts.map(a=>`<div class="opt" data-addab="${esc(a.name)}">
+      <span>${esc(a.name)}</span><span class="mini">${esc(a.abilityType||'')}</span></div>`).join('')}</div>
+    <h4 class="mini" style="margin-top:12px">Chosen abilities</h4>
+    ${C.abilities.length?C.abilities.map((ab,i)=>`<div class="abil-row">
+      <span class="an">${esc(ab.name)}${ab.native?' <span class="mini">(native)</span>':''}
+        ${hasSpecialty(ab.name)?`<input type="text" class="detail-in" data-abspec="${i}" placeholder="specialty" value="${esc(ab.speciality||'')}">`:''}</span>
+      <input type="number" data-abxp="${i}" value="${ab.xp||0}"> <span class="mini">xp → score ${scoreFromXp(+ab.xp||0)}</span>
+      <button class="x" data-abrm="${i}">×</button></div>`).join(''):'<span class="mini">— none —</span>'}`;
+  $('#llYears').oninput=e=>{C.laterLifeYears=+e.target.value||0;save();renderMsgs(STEPS.find(s=>s.id==='abil'));};
+  $('#abilQ').oninput=e=>{abilFilter=e.target.value;renderAbil(el);};
+  el.querySelectorAll('[data-addab]').forEach(o=>o.onclick=()=>{addAbility(o.dataset.addab);});
+  el.querySelectorAll('[data-abxp]').forEach(inp=>inp.oninput=()=>{C.abilities[+inp.dataset.abxp].xp=+inp.value||0;save();renderBudget();
+    inp.nextElementSibling.textContent=`xp → score ${scoreFromXp(+inp.value||0)}`;});
+  el.querySelectorAll('[data-abspec]').forEach(inp=>inp.oninput=()=>{C.abilities[+inp.dataset.abspec].speciality=inp.value;save();});
+  el.querySelectorAll('[data-abrm]').forEach(b=>b.onclick=()=>{C.abilities.splice(+b.dataset.abrm,1);save();renderAbil(el);renderBudget();});
+}
+function hasSpecialty(name){ const a=DATA.abilities.find(x=>x.name===name); return a && a.specialties && a.specialties.length; }
+function addAbility(name){ if(C.abilities.some(a=>a.name===name)) return;
+  C.abilities.push({name,speciality:'',xp:0}); save(); renderAbil($('#stepBody')); renderBudget(); }
+function ensureNativeLanguage(){ if(!C.abilities.some(a=>a.native)) C.abilities.unshift({name:'Native Language',speciality:'',xp:75,native:true}); }
+
+/* ============================================================
+   STEP: ARTS (magi)
+   ============================================================ */
+function renderArts(el){
+  el.innerHTML = `<p class="step-help">Assign Art XP (shares the 240 apprenticeship pool with Abilities). A score of n needs 5·n(n+1)/2 XP.</p>
+    <div class="arts-wrap">
+      <div><h4 class="mini">Techniques</h4>${artRows(DATA.arts.techniques)}</div>
+      <div><h4 class="mini">Forms</h4>${artRows(DATA.arts.forms)}</div>
+    </div><div id="artDesc"></div>`;
+  el.querySelectorAll('[data-artxp]').forEach(inp=>inp.oninput=()=>{C.arts[inp.dataset.artxp]=+inp.value||0;save();renderBudget();
+    inp.nextElementSibling.textContent=`→ ${scoreFromXp(+inp.value||0)}`;});
+  el.querySelectorAll('[data-artdesc]').forEach(s=>s.onclick=()=>{const a=[...DATA.arts.techniques,...DATA.arts.forms].find(x=>x.name===s.dataset.artdesc);
+    $('#artDesc').innerHTML=a&&a.text?`<div class="rules-note"><strong>${esc(a.name)}</strong><br>${mdRules(a.text)}</div>`:'';});
+}
+function artRows(list){
+  return list.map(a=>`<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
+    <input type="number" data-artxp="${a.key}" value="${C.arts[a.key]||0}"><span class="mini">→ ${scoreFromXp(C.arts[a.key]||0)}</span></div>`).join('');
+}
+
+/* ============================================================
+   STEP: SPELLS (magi)
+   ============================================================ */
+let spellFilter={q:'',te:'',fo:''};
+async function renderSpells(el){
+  if(!SPELLS){ el.innerHTML='<div class="loading">Loading spells…</div>';
+    try{ SPELLS=(await (await fetch('./'+DATA.spellsFile,{cache:'no-store'})).json()).spells; }
+    catch(e){ el.innerHTML='<div class="warn">Could not load spells file.</div>'; return; } }
+  const tech=[...new Set(SPELLS.map(s=>s.technique))].sort(), form=[...new Set(SPELLS.map(s=>s.form))].sort();
+  const f=spellFilter;
+  const items=SPELLS.filter(s=>(!f.te||s.technique===f.te)&&(!f.fo||s.form===f.fo)&&(!f.q||norm(s.name).includes(norm(f.q)))).slice(0,250);
+  const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0);
+  el.innerHTML = `<p class="step-help">Pick pre-defined spells. Total ≤ 120 levels; each ≤ Technique+Form+Int+Magic Theory+3.
+    Spent: <strong>${lvls}/120</strong> levels.</p>
+    <div class="searchbar">
+      <input type="text" id="spQ" placeholder="search spells…" value="${esc(f.q)}">
+      <select id="spTe"><option value="">Technique</option>${tech.map(t=>`<option ${f.te===t?'selected':''}>${esc(t)}</option>`).join('')}</select>
+      <select id="spFo"><option value="">Form</option>${form.map(t=>`<option ${f.fo===t?'selected':''}>${esc(t)}</option>`).join('')}</select>
+    </div>
+    <div class="list">${items.map(s=>{const cap=spellCap(s);const over=+s.level>cap;
+      return `<div class="opt" data-addsp="${esc(s.name)}"><span>${esc(s.name)} <span class="mini">${esc(s.technique).slice(0,2)}${esc(s.form).slice(0,2)} ${esc(String(s.level))}</span></span>
+      <span class="sz ${over?'major':''}">${over?'over cap '+cap:'lvl '+esc(String(s.level))}</span></div>`;}).join('')||'<div class="opt mini">no matches</div>'}</div>
+    <h4 class="mini" style="margin-top:12px">Chosen spells (${C.spells.length})</h4>
+    ${C.spells.length?C.spells.map((s,i)=>`<span class="chip virtue"><span data-spdesc="${i}" style="cursor:help">${esc(s.name)}</span> <span class="det">${esc(String(s.level))}</span><button class="x" data-sprm="${i}">×</button></span>`).join(''):'<span class="mini">— none —</span>'}
+    <div id="spDesc"></div>`;
+  $('#spQ').oninput=e=>{spellFilter.q=e.target.value;renderSpells(el);};
+  $('#spTe').onchange=e=>{spellFilter.te=e.target.value;renderSpells(el);};
+  $('#spFo').onchange=e=>{spellFilter.fo=e.target.value;renderSpells(el);};
+  el.querySelectorAll('[data-addsp]').forEach(o=>o.onclick=()=>{addSpell(o.dataset.addsp);});
+  el.querySelectorAll('[data-sprm]').forEach(b=>b.onclick=()=>{C.spells.splice(+b.dataset.sprm,1);save();renderSpells(el);renderBudget();});
+  el.querySelectorAll('[data-spdesc]').forEach(s=>s.onclick=()=>{const sp=C.spells[+s.dataset.spdesc];
+    $('#spDesc').innerHTML=`<div class="rules-note"><strong>${esc(sp.name)}</strong> <span class="mini">${esc(sp.technique)}/${esc(sp.form)} ${esc(String(sp.level))}${sp.ritual?' · Ritual':''}</span><br>${mdRules(sp.text||'—')}</div>`;});
+}
+function addSpell(name){ const sp=SPELLS.find(s=>s.name===name); if(!sp||C.spells.some(x=>x.name===name)) return;
+  C.spells.push({name:sp.name,technique:sp.technique,form:sp.form,level:sp.level,range:sp.range,duration:sp.duration,target:sp.target,ritual:sp.ritual,description:sp.text});
+  save(); renderSpells($('#stepBody')); renderBudget(); }
+
+/* ============================================================
+   STEP: PERSONALITY & DETAILS
+   ============================================================ */
+function renderFinish(el){
+  el.innerHTML = `<p class="step-help">Personality traits (−3…+3), reputations, Confidence, and equipment.</p>
+    <label class="fld">Personality traits</label>
+    <div id="ptList">${(C.personalityTraits||[]).map((t,i)=>`<div class="abil-row"><input type="text" class="an" data-ptn="${i}" value="${esc(t.name)}" placeholder="trait">
+      <input type="number" data-pts="${i}" value="${t.score||0}" style="width:64px"><button class="x" data-ptrm="${i}">×</button></div>`).join('')}</div>
+    <button class="btn ghost" id="addPt" style="margin-top:6px">+ trait</button>
+    ${isMagus()||C.type==='companion'?`<div class="row2"><div><label class="fld">Confidence score</label><input type="number" id="confS" value="${C.confidence.score}"></div>
+      <div><label class="fld">Confidence points</label><input type="number" id="confP" value="${C.confidence.points}"></div></div>`:''}
+    <label class="fld">Equipment</label><textarea id="equip">${esc(C.equipment)}</textarea>
+    <label class="fld">Biography / notes</label><textarea id="bio">${esc(C.biography)}</textarea>
+    ${DATA.creationRules.personality?`<div class="rules-note">${mdRules(DATA.creationRules.personality.text)}</div>`:''}`;
+  $('#addPt').onclick=()=>{C.personalityTraits.push({name:'',score:0});save();renderFinish(el);};
+  el.querySelectorAll('[data-ptn]').forEach(i=>i.oninput=()=>{C.personalityTraits[+i.dataset.ptn].name=i.value;save();});
+  el.querySelectorAll('[data-pts]').forEach(i=>i.oninput=()=>{C.personalityTraits[+i.dataset.pts].score=+i.value||0;save();});
+  el.querySelectorAll('[data-ptrm]').forEach(b=>b.onclick=()=>{C.personalityTraits.splice(+b.dataset.ptrm,1);save();renderFinish(el);});
+  if($('#confS'))$('#confS').oninput=e=>{C.confidence.score=+e.target.value||0;save();};
+  if($('#confP'))$('#confP').oninput=e=>{C.confidence.points=+e.target.value||0;save();};
+  $('#equip').oninput=e=>{C.equipment=e.target.value;save();};
+  $('#bio').oninput=e=>{C.biography=e.target.value;save();};
+}
+
+/* ============================================================
+   STEP: REVIEW & EXPORT
+   ============================================================ */
+function renderReview(el){
+  const problems=[];
+  visibleSteps().forEach(s=>{const v=s.valid(); if(!v.ok)(v.msgs||[]).forEach(m=>{if(m.level==='warn')problems.push(s.title+': '+m.text);});});
+  const obj=exportObject();
+  el.innerHTML = `
+    ${problems.length?`<div class="warn"><strong>RAW issues (${problems.length}):</strong><ul style="margin:6px 0 0">${problems.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`
+      :'<div class="good">All RAW checks pass. Ready to export.</div>'}
+    <p class="step-help">Export is a superset of the site\'s <code>magi.json</code> shape — paste the object into <code>magi.json</code>\'s
+      <code>magi</code> map (keyed by the character name) to view it in <a href="ships.html">Fleet &amp; Crew</a>. A Foundry export is planned.</p>
+    <div class="navbtns" style="justify-content:flex-start">
+      <button class="btn" id="dlBtn">⬇ Download JSON</button>
+      <button class="btn ghost" id="copyBtn">Copy to clipboard</button>
+    </div>
+    <textarea class="export-area" id="exp" readonly>${esc(JSON.stringify(obj,null,2))}</textarea>`;
+  $('#dlBtn').onclick=()=>{const blob=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=(C.name||'character').replace(/\s+/g,'_')+'.json';a.click();};
+  $('#copyBtn').onclick=()=>{navigator.clipboard.writeText(JSON.stringify(obj,null,2)).then(()=>{$('#copyBtn').textContent='Copied ✓';});};
+}
+function exportObject(){
+  const artsObj={};
+  [...DATA.arts.techniques,...DATA.arts.forms].forEach(a=>{const xp=C.arts[a.key]||0;artsObj[a.key]={label:a.name,score:scoreFromXp(xp),xp};});
+  return {
+    key:(C.name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''),
+    name:C.name, house:isMagus()?C.house:'', parens:C.parens||'', sigil:C.sigil||'',
+    born:C.born, age:C.age, apparentAge:C.apparentAge||C.age,
+    charType:C.type,
+    characteristics:{...C.characteristics},
+    size:0, confidence:{label:'Confidence',score:C.confidence.score,points:C.confidence.points},
+    decrepitude:0, warping:0,
+    arts:artsObj,
+    virtues:C.virtues.map(v=>({name:v.name,impact:(v.size||'').toLowerCase(),description:vfText('virtue',v.name),detail:v.detail||null})),
+    flaws:C.flaws.map(v=>({name:v.name,impact:(v.size||'').toLowerCase(),description:vfText('flaw',v.name),detail:v.detail||null})),
+    abilities:C.abilities.map(a=>({name:a.name,speciality:a.speciality||'',xp:+a.xp||0,score:scoreFromXp(+a.xp||0)})),
+    spells:C.spells.map(s=>({name:s.name,technique:s.technique,form:s.form,level:+s.level||0,range:s.range,duration:s.duration,target:s.target,ritual:!!s.ritual,description:s.description})),
+    personalityTraits:C.personalityTraits.filter(t=>t.name), reputations:C.reputations||[],
+    sanctum:'', familiar:null, activeWounds:[], biography:C.biography||'',
+    chargen:{ createdWith:'sjorseidr chargen', edition:DATA.meta.edition, spec:DATA.meta.spec_version,
+      concept:C.concept, laterLifeYears:C.laterLifeYears, type:C.type }
+  };
+}
+function vfText(side,name){const d=(side==='virtue'?DATA.virtues:DATA.flaws).find(x=>x.name===name);return d?d.text:'';}
+
+/* ============================================================
+   BOOT
+   ============================================================ */
+async function boot(){
+  try{
+    DATA = await (await fetch('./chargen.json',{cache:'no-store'})).json();
+  }catch(e){ $('#app').innerHTML=`<div class="warn">Could not load chargen.json — serve this page over http (not file://).<br>${esc(e.message)}</div>`; return; }
+  load();
+  if(!C) C=blankChar();
+  ensureNativeLanguage();
+  render();
+}
+boot();
+</script>
+</body>
+</html>
