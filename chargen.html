@@ -148,7 +148,7 @@ function blankChar(){
     realm:'', might:0, season:'',                        // realm modifier: '' | 'magic' | 'faerie'
     magic:{ qualities:[], inferiorities:[], powers:[], beingName:'', loadedPowers:[] },
     faerie:{ powers:[], wizardry:[], blood:[], cognizance:'', beingName:'', loadedPowers:[], pretenses:[], avgAge:21 },
-    young:{ enabled:false, xp:[], beingName:'' },
+    young:{ enabled:false, xp:[], beingName:'', apprenticeYears:15 },
     characteristics:{int:0,per:0,str:0,sta:0,pre:0,com:0,dex:0,qik:0},
     virtues:[], flaws:[],
     childhood:{ nativeLang:'', spread:[] },
@@ -214,6 +214,15 @@ function agingFor(age){
   return row?{charMod:+row.charMod||0, sizeMod:+row.sizeMod||0, label:row.age}:{charMod:0,sizeMod:0,label:''};
 }
 function youthXpBudget(){ return laterRate()*Math.max(0,(+C.age||0)-5); }
+const isYoungApprentice = () => isYoung() && isMagus();
+/* Apprenticeship XP by years completed (Apprentices Ch2): 19 XP/yr (Abilities+Arts)
+   for the first 12 years, then 6 XP + 40 spell levels/yr for the final 3. */
+function apprenticeshipXpFor(years){
+  const y=Math.max(0,Math.min(15,+years||0));
+  return { abilityArts: Math.min(y,12)*19 + Math.max(0,y-12)*6, spells: Math.max(0,y-12)*40 };
+}
+function apprBudget(){ return isYoungApprentice()?apprenticeshipXpFor(C.young.apprenticeYears).abilityArts:240; }
+function spellBudget(){ return (isYoungApprentice()?apprenticeshipXpFor(C.young.apprenticeYears).spells:120)+(+C.laterYears.spellLevels||0); }
 function artKey(name){ const a=[...DATA.arts.techniques,...DATA.arts.forms].find(x=>x.name===name); return a?a.key:null; }
 
 /* Which parameter control (if any) a Virtue/Flaw needs. The corpus carries no
@@ -292,9 +301,10 @@ function migrateChar(c){
   ['powers','wizardry','blood','loadedPowers','pretenses'].forEach(k=>{ if(!Array.isArray(c.faerie[k])) c.faerie[k]=[]; });
   if(c.faerie.beingName==null) c.faerie.beingName='';
   if(c.faerie.avgAge==null) c.faerie.avgAge=21;
-  c.young=c.young||{enabled:false,xp:[],beingName:''};
+  c.young=c.young||{enabled:false,xp:[],beingName:'',apprenticeYears:15};
   if(!Array.isArray(c.young.xp)) c.young.xp=[];
   if(c.young.beingName==null) c.young.beingName='';
+  if(c.young.apprenticeYears==null) c.young.apprenticeYears=15;
   return c;
 }
 
@@ -316,9 +326,15 @@ const STEPS=[
 ];
 /* Faeries buy Pretenses (in the realm step) instead of the mundane childhood/later
    ability phases, so those steps are hidden for a Faerie-realm character. */
-const visibleSteps = () => STEPS.filter(s=>(!s.magiOnly || isMagus()) && (!s.realmOnly || !!C.realm) && (!s.youngOnly || isYoung())
-  && !(C.realm==='faerie' && ['child','training','later'].includes(s.id))
-  && !(isYoung() && ['child','training','later'].includes(s.id)));
+const visibleSteps = () => STEPS.filter(s=>{
+  if(s.magiOnly && !isMagus()) return false;
+  if(s.realmOnly && !C.realm) return false;
+  if(s.youngOnly && !(isYoung() && !isMagus())) return false;          // Youth step: young non-magi only
+  if(C.realm==='faerie' && ['child','training','later'].includes(s.id)) return false;
+  if(isYoung() && !isMagus() && ['child','training','later'].includes(s.id)) return false;  // youth replaces these
+  if(isYoung() && isMagus() && ['training','later','lyears'].includes(s.id)) return false;   // apprentice mid-training
+  return true;
+});
 
 function vType(){ return {ok:!!C.name.trim(), msgs: C.name.trim()?[]:[{level:'warn',text:'Give the character a name.'}]}; }
 function vHouse(){ if(!isMagus()) return {ok:true,msgs:[]};
@@ -371,7 +387,7 @@ function vLater(){
 }
 function vAppr(){ if(!isMagus()) return {ok:true,msgs:[]};
   const spent=sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities);
-  return {ok:spent<=240, msgs:[{level:spent>240?'warn':'ok',text:`Apprenticeship XP (Arts + Abilities): ${spent} / 240.`}]}; }
+  const bud=apprBudget(); return {ok:spent<=bud, msgs:[{level:spent>bud?'warn':'ok',text:`Apprenticeship XP (Arts + Abilities): ${spent} / ${bud}.`}]}; }
 function vLYears(){ if(!isMagus()) return {ok:true,msgs:[]};
   const pool=30*(+C.laterYears.years||0), spent=sumObj(C.laterYears.arts)+abilSum(C.laterYears.abilities)+(+C.laterYears.spellLevels||0);
   return {ok:spent<=pool, msgs:[{level:spent>pool?'warn':'ok',text:`Later-years points: ${spent} / ${pool} (30×${C.laterYears.years} yrs).`}]}; }
@@ -380,7 +396,7 @@ function spellCap(sp){
   return scoreFromXp(at[artKey(sp.technique)]||0)+scoreFromXp(at[artKey(sp.form)]||0)+(C.characteristics.int||0)+scoreFromXp(mt)+3;
 }
 function vSpells(){ if(!isMagus()) return {ok:true,msgs:[]};
-  const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), budget=120+(+C.laterYears.spellLevels||0);
+  const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), budget=spellBudget();
   const over=C.spells.filter(s=>+s.level>spellCap(s)); const m=[{level:lvls>budget?'warn':'ok',text:`Spell levels: ${lvls} / ${budget}.`}];
   let ok=lvls<=budget;
   if(over.length){m.push({level:'warn',text:`${over.length} spell(s) exceed the Te+Fo+Int+Magic Theory+3 cap.`});ok=false;}
@@ -426,11 +442,13 @@ function renderBudget(){
   if(C.training.grants.length) rows.push(['Training',`+${abilSum(C.training.grants)} XP · ${C.training.packageName}`]);
   if(C.realm==='magic'){ const mb=magicBudget(); rows.push(['Magic Might',`${+C.might||0}`]); rows.push(['Quality pts',`${mb.qpts} / ${mb.budget}`,mb.qpts>mb.budget]); }
   if(C.realm==='faerie'){ rows.push(['Faerie Might',`${+C.might||0}`]); const ps=abilSum(C.faerie.pretenses),pb=faeriePretenseBudget(); rows.push(['Pretense pts',`${ps} / ${pb}`,ps>pb]); }
-  if(isYoung()){ const a=agingFor(+C.age||0), s=abilSum(C.young.xp), yb=youthXpBudget(); rows.push(['Age',`${+C.age||0} (${a.label})`]); rows.push(['Aging',`Ch ${a.charMod}, Sz ${a.sizeMod}`]); rows.push(['Youth XP',`${s} / ${yb}`,s>yb]); }
+  if(isYoung()){ const a=agingFor(+C.age||0); rows.push(['Age',`${+C.age||0} (${a.label})`]); rows.push(['Aging',`Ch ${a.charMod}, Sz ${a.sizeMod}`]);
+    if(isMagus()){ rows.push(['Appr. years',`${C.young.apprenticeYears} / 15`]); }
+    else { const s=abilSum(C.young.xp), yb=youthXpBudget(); rows.push(['Youth XP',`${s} / ${yb}`,s>yb]); } }
   rows.push(['Later life',`${abilSum(C.later.alloc)} / ${laterRate()*(+C.later.years||0)}`,abilSum(C.later.alloc)>laterRate()*(+C.later.years||0)]);
   if(isMagus()){
-    rows.push(['Apprentice',`${sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities)} / 240`,(sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities))>240]);
-    const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), sb=120+(+C.laterYears.spellLevels||0);
+    const _ab=apprBudget(); rows.push(['Apprentice',`${sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities)} / ${_ab}`,(sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities))>_ab]);
+    const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), sb=spellBudget();
     rows.push(['Spell lvls',`${lvls} / ${sb}`,lvls>sb]);
   }
   $('#budgetBox').innerHTML=`<h4>Budget</h4>`+rows.map(r=>`<div class="brow ${r[2]?'bad':''}"><span>${esc(r[0])}</span><span>${esc(r[1])}</span></div>`).join('');
@@ -626,8 +644,12 @@ function renderVF(el){
     Exactly one Social Status. Parameterized picks (Puissant, Affinity, …) offer a dropdown of valid Abilities/Arts/Characteristics.</p>
     <div class="pick-grid">${vfCol('virtue')}${vfCol('flaw')}</div>
     <div class="chosen"><h4 class="mini">Chosen Virtues</h4>${chipList('virtue')}
-      <h4 class="mini" style="margin-top:8px">Chosen Flaws</h4>${chipList('flaw')}</div><div id="vfDesc"></div>`;
+      <h4 class="mini" style="margin-top:8px">Chosen Flaws</h4>${chipList('flaw')}</div>
+    ${isYoung()?`<label class="fld" style="margin-top:14px">Child Virtues &amp; Flaws <span class="mini">(age ≤20; must be swapped at a Transition of Maturation)</span></label>
+      <div class="pick-grid">${childVfPickerHtml('cv','Child Virtues',(DATA.apprentices&&DATA.apprentices.childVirtues)||[],'virtue')}${childVfPickerHtml('cf','Child Flaws',(DATA.apprentices&&DATA.apprentices.childFlaws)||[],'flaw')}</div>`:''}
+    <div id="vfDesc"></div>`;
   wireVF(el);
+  if(isYoung()){ wireChildVf(el,'cv',(DATA.apprentices&&DATA.apprentices.childVirtues)||[],'virtue'); wireChildVf(el,'cf',(DATA.apprentices&&DATA.apprentices.childFlaws)||[],'flaw'); }
 }
 function vfCol(side){
   const src=side==='virtue'?DATA.virtues:DATA.flaws;
@@ -822,14 +844,15 @@ function childVfPickerHtml(key,label,src,side){
     <div class="list" style="max-height:120px">${src.map(x=>`<div class="opt" data-cadd="${key}" data-name="${esc(x.name)}"><span>${esc(x.name)}</span><span class="sz ${x.size==='Major'?'major':''}">${esc(x.size||'')}</span></div>`).join('')||'<div class="opt mini">none</div>'}</div>
     <div class="chosen">${chosen.length?chosen.map(x=>`<span class="chip ${side}"><span data-cdesc2="${key}:${esc(x.name)}" style="cursor:help">${esc(x.name)}</span><button class="x" data-crm="${side}:${esc(x.name)}">×</button></span>`).join(''):'<span class="mini">— none —</span>'}</div></div>`;
 }
-function wireChildVf(el,key,src,side){
+function wireChildVf(el,key,src,side,descSel){
+  const dsel=descSel||'#vfDesc';
   el.querySelectorAll(`[data-cadd="${key}"]`).forEach(o=>o.onclick=()=>{const def=src.find(y=>y.name===o.dataset.name);if(!def)return;
     const arr=side==='virtue'?C.virtues:C.flaws;
     if(!arr.some(x=>x.name===def.name)) arr.push({name:def.name,size:def.size||'Minor',category:def.category||'Child',detail:null,child:true});
-    save();renderYouth($('#stepBody'));renderBudget();});
-  el.querySelectorAll(`[data-crm="${side}"]`).forEach(b=>b.onclick=()=>{const nm=b.dataset.crm.split(':').slice(1).join(':');const arr=side==='virtue'?C.virtues:C.flaws;const i=arr.findIndex(x=>x.name===nm);if(i>=0)arr.splice(i,1);save();renderYouth($('#stepBody'));renderBudget();});
+    save();render();});
+  el.querySelectorAll(`[data-crm="${side}"]`).forEach(b=>b.onclick=()=>{const nm=b.dataset.crm.split(':').slice(1).join(':');const arr=side==='virtue'?C.virtues:C.flaws;const i=arr.findIndex(x=>x.name===nm);if(i>=0)arr.splice(i,1);save();render();});
   el.querySelectorAll(`[data-cdesc2="${key}"]`).forEach(s=>s.onclick=()=>{const nm=s.dataset.cdesc2.split(':').slice(1).join(':');const def=src.find(y=>y.name===nm)||{};
-    $('#youthDesc').innerHTML=`<div class="rules-note"><strong>${esc(nm)}</strong> <span class="mini">(${esc(def.size||'')}, Child — swap at a Transition of Maturation)</span><br>${mdRules(def.text||'—')}</div>`;});
+    const d=$(dsel); if(d) d.innerHTML=`<div class="rules-note"><strong>${esc(nm)}</strong> <span class="mini">(${esc(def.size||'')}, Child — swap at a Transition of Maturation)</span><br>${mdRules(def.text||'—')}</div>`;});
 }
 function renderYouth(el){
   const age=+C.age||0, aging=agingFor(age), bud=youthXpBudget(), spent=abilSum(C.young.xp);
@@ -842,13 +865,10 @@ function renderYouth(el){
     <div class="searchbar"><input type="text" class="al-q" placeholder="search abilities…"></div>
     <div class="list al-add" style="max-height:130px"></div>
     <div class="al-rows" style="margin-top:6px">${abilAllocRows(C.young.xp,'young')}</div>
-    <div class="pick-grid">${childVfPickerHtml('cv','Child Virtues',A.childVirtues||[],'virtue')}${childVfPickerHtml('cf','Child Flaws',A.childFlaws||[],'flaw')}</div>
-    <div id="youthDesc"></div>`;
+    <p class="mini" style="margin-top:8px">Child Virtues &amp; Flaws are chosen in the Virtues &amp; Flaws step.</p>`;
   $('#yAge').oninput=e=>{C.age=+e.target.value||0;save();renderYouth(el);renderBudget();};
   updatePoolLine=()=>{const s=abilSum(C.young.xp),p=youthXpBudget(),ln=$('#poolLine');if(ln){ln.textContent=`Youth ability XP: ${s} / ${p}`;ln.classList.toggle('bad',s>p);}};
   wireAbilAlloc(el, C.young.xp, 'young', null, ()=>renderYouth(el));
-  wireChildVf(el,'cv',A.childVirtues||[],'virtue');
-  wireChildVf(el,'cf',A.childFlaws||[],'flaw');
 }
 function loadYoungCharacter(name){
   const c=((DATA.apprentices&&DATA.apprentices.youngCharacters)||[]).find(x=>x.name===name); if(!c) return;
@@ -869,9 +889,12 @@ function loadYoungCharacter(name){
     else if(vd) C.virtues.push({name:vd.name,size:vd.size||'Minor',category:vd.category||'General',detail,auto:false});
     else if(fd) C.flaws.push({name:fd.name,size:fd.size||'Minor',category:fd.category||'General',detail,auto:false});
     else C.virtues.push({name:base,size:'Free',category:'Special',detail,auto:false}); });
-  C.young.xp=(c.abilities||[]).filter(a=>!/^Native Language$/i.test(a.name)).map(a=>({name:a.name,param:'',spec:a.specialty||'',xp:xpForScore(a.score||0)}));
+  const abilInsts=(c.abilities||[]).filter(a=>!/^Native Language$/i.test(a.name)).map(a=>({name:a.name,param:'',spec:a.specialty||'',xp:xpForScore(a.score||0)}));
   C.childhood={nativeLang:C.childhood.nativeLang||'',spread:[]}; C.later={years:15,alloc:[]}; C.template={name:'',abilities:[]}; C.training={packageName:'',duration:'',grants:[]};
-  C.apprentice={arts:{},abilities:[]}; C.laterYears={years:0,arts:{},abilities:[],spellLevels:0}; C.spells=[];
+  C.laterYears={years:0,arts:{},abilities:[],spellLevels:0}; C.spells=[];
+  if(C.type==='magus'){ C.apprentice={arts:{},abilities:abilInsts}; C.young.xp=[];
+    const loadedXP=abilInsts.reduce((a,x)=>a+(+x.xp||0),0); let yrs=0; while(yrs<15 && apprenticeshipXpFor(yrs).abilityArts<loadedXP) yrs++; C.young.apprenticeYears=yrs; }
+  else { C.apprentice={arts:{},abilities:[]}; C.young.xp=abilInsts; }
   C.personalityTraits=(c.personalityTraits||[]).map(t=>({name:t.name,score:+t.score||0}));
   if(c.description||c.appearance) C.biography=[c.appearance,c.description].filter(Boolean).join('\n\n');
   C.equipment=c.equipment||C.equipment||'';
@@ -1020,8 +1043,8 @@ function renderLater(el){
 
 function renderAppr(el){
   const spent=sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities);
-  el.innerHTML=`<p class="step-help">Divide 240 XP between Hermetic Arts and Abilities. (Spells come next; you have 120 spell-levels there.)</p>
-    <div class="alloc-pool ${spent>240?'bad':''}" id="poolLine">Apprenticeship XP: ${spent} / 240</div>
+  el.innerHTML=`<p class="step-help">${isYoungApprentice()?`Apprentice mid-training: ${C.young.apprenticeYears} of 15 years completed. Budget scales — ${apprBudget()} XP (Arts + Abilities) and ${apprenticeshipXpFor(C.young.apprenticeYears).spells} spell levels.`:`Divide 240 XP between Hermetic Arts and Abilities. (Spells come next; you have 120 spell-levels there.)`}</p>${isYoungApprentice()?`<label class="fld">Apprenticeship years completed</label><input type="number" id="apprYears" min="0" max="15" value="${C.young.apprenticeYears}">`:``}
+    <div class="alloc-pool ${spent>apprBudget()?'bad':''}" id="poolLine">Apprenticeship XP: ${spent} / ${apprBudget()}</div>
     <div class="arts-wrap">
       <div><h4 class="mini">Techniques</h4>${artRows(DATA.arts.techniques)}</div>
       <div><h4 class="mini">Forms</h4>${artRows(DATA.arts.forms)}</div></div>
@@ -1029,8 +1052,9 @@ function renderAppr(el){
     <div class="searchbar"><input type="text" class="al-q" placeholder="search abilities…"></div>
     <div class="list al-add" style="max-height:130px"></div>
     <div class="al-rows" style="margin-top:8px">${abilAllocRows(C.apprentice.abilities,'appr')}</div><div id="artDesc"></div>`;
-  updatePoolLine=()=>{const s=sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities),ln=$('#poolLine');if(ln){ln.textContent=`Apprenticeship XP: ${s} / 240`;ln.classList.toggle('bad',s>240);}};
+  updatePoolLine=()=>{const s=sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities),bud=apprBudget(),ln=$('#poolLine');if(ln){ln.textContent=`Apprenticeship XP: ${s} / ${bud}`;ln.classList.toggle('bad',s>bud);}};
   wireArtRows(el, C.apprentice.arts, 'artxp');
+  if($('#apprYears'))$('#apprYears').oninput=e=>{C.young.apprenticeYears=Math.max(0,Math.min(15,+e.target.value||0));save();renderAppr(el);renderBudget();};
   wireAbilAlloc(el, C.apprentice.abilities, 'appr', null, ()=>renderAppr(el));
 }
 function artRows(list){ return list.map(a=>`<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
@@ -1089,7 +1113,7 @@ async function renderSpells(el){
   if(spellMode==='design') return renderSpellDesign(el);
   const tech=[...new Set(SPELLS.map(s=>s.technique))].sort(), form=[...new Set(SPELLS.map(s=>s.form))].sort(), f=spellFilter;
   const items=SPELLS.filter(s=>(!f.te||s.technique===f.te)&&(!f.fo||s.form===f.fo)&&(!f.q||norm(s.name).includes(norm(f.q)))).slice(0,250);
-  const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), budget=120+(+C.laterYears.spellLevels||0);
+  const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), budget=spellBudget();
   el.innerHTML=`${spellModeToggle()}<p class="step-help">Pick pre-defined formulaic spells. Total ≤ ${budget} levels; each ≤ Technique+Form+Int+Magic Theory+3.</p>
     <div class="alloc-pool ${lvls>budget?'bad':''}">Spell levels: ${lvls} / ${budget}</div>
     <div class="searchbar"><input type="text" id="spQ" placeholder="search…" value="${esc(f.q)}">
@@ -1109,7 +1133,7 @@ async function renderSpells(el){
   wireSpellMode(el);
 }
 function renderSpellDesign(el){
-  const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), budget=120+(+C.laterYears.spellLevels||0);
+  const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), budget=spellBudget();
   const gls=guidelinesFor();
   const g = design.gi!=null && gls[design.gi] ? gls[design.gi] : null;
   const lvl=designLevel();
@@ -1147,7 +1171,7 @@ function renderSpellDesign(el){
   $('#dAdd').onclick=()=>addDesignedSpell();
 }
 function updateDesignLevel(){ const el=$('#stepBody'); const line=el.querySelector('.alloc-pool'); const btn=$('#dAdd');
-  const lvl=designLevel(); if(line){const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0),budget=120+(+C.laterYears.spellLevels||0);
+  const lvl=designLevel(); if(line){const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0),budget=spellBudget();
     const cap=spellCap({technique:design.te,form:design.fo});
     line.innerHTML=`Computed level: <strong>${lvl}</strong> · your cap here is ${cap}${lvl>cap?' — over cap':''} · running total ${lvls}/${budget}`;}
   if(btn)btn.textContent=`+ Add designed spell (level ${lvl})`; }
