@@ -487,6 +487,24 @@ def main():
             "blood": toolkit("Faerie Blood", {"Stock": "stock", "RoP Faerie Note": "note"}),
         },
     }
+    # Faerie point-buy budget — the structured "Faerie Character Creation" entity
+    # (RoP:Faerie Ch3; added to the corpus so the numbers are read, not re-parsed).
+    fc = by_name.get("Faerie Character Creation")
+    if fc:
+        realm_toolkits["faerie"]["creation"] = {
+            "startingMight": _int(prop(fc, "Starting Might")),
+            "characteristicPoints": _int(prop(fc, "Characteristic Points")),
+            "pretensePointsPerYear": _int(prop(fc, "Pretense Points Per Year")),
+            "pretenseReferenceAge": _int(prop(fc, "Pretense Reference Age")),
+            "pretensePointsBase": _int(prop(fc, "Pretense Points Base")),
+            "defaultMagusAge": _int(prop(fc, "Default Magus Age")),
+            "defaultPretensePoints": _int(prop(fc, "Default Pretense Points")),
+            "companionVirtuePoints": _int(prop(fc, "Companion Virtue Points")),
+            "magusFreeVirtues": _int(prop(fc, "Magus Free Virtues")),
+            "magusVirtuePoints": _int(prop(fc, "Magus Virtue Points")),
+            "magusVirtuesPerFlaw": _int(prop(fc, "Magus Virtues Per Flaw")),
+            "text": desc(fc), "source": prop(fc, "Source"), "page": _int(prop(fc, "Page")),
+        }
 
     # Pre-defined beings (Creature entities) — realm-tagged statblocks used by the
     # realm "load a defined being" pickers. Fully structured: characteristics, V&F,

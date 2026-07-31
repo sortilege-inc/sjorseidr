@@ -19740,7 +19740,23 @@
      "stock": "Undine",
      "note": "In addition, this Virtue raises the maximum score to which the character may increase Sympathy Traits by 1. Thus, a character with Faerie Blood and a Warping Score of 2 could increase a Sympathy Trait to +3."
     }
-   ]
+   ],
+   "creation": {
+    "startingMight": 5,
+    "characteristicPoints": 7,
+    "pretensePointsPerYear": 15,
+    "pretenseReferenceAge": 5,
+    "pretensePointsBase": 120,
+    "defaultMagusAge": 21,
+    "defaultPretensePoints": 360,
+    "companionVirtuePoints": 10,
+    "magusFreeVirtues": 1,
+    "magusVirtuePoints": 20,
+    "magusVirtuesPerFlaw": 2,
+    "text": "Faeries designed as player characters use values from the following formula. Replacing a Companion: up to 10 points of Virtues balanced by Flaws. Replacing a Magus: 1 free, then up to 20 points of Virtues paid for with Flaws at 2 Virtues per Flaw. The character has a number of Pretense points figured as follows: Pretense Points = 15 × (average age of magus player characters – 5) + 120 points. This multiplier may be changed by the Pretentious or Ostentatious Virtues, or Aloof Flaw. If the character’s physical form has any inherent Abilities, you must purchase Pretenses for those first. In Chapter 4: Faerie Bestiary, faeries designed for use as player characters assume that the magi in the campaign are 21 years old, which gives 360 points of Pretences. Player characters begin with a Faerie Might score of 5, which may be varied by selecting appropriate Virtues or Flaws during character creation. A character must have a Might score, a physical form, a level of cognizance, a Social Interaction Virtue, and a taboo.",
+    "source": "Realms of Power: Faerie",
+    "page": 45
+   }
   }
  },
  "creatures": [

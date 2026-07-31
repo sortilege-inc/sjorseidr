@@ -147,7 +147,7 @@ function blankChar(){
     house:null, parens:'', sigil:'', templateName:'',
     realm:'', might:0, season:'',                        // realm modifier: '' | 'magic' | 'faerie'
     magic:{ qualities:[], inferiorities:[], powers:[], beingName:'', loadedPowers:[] },
-    faerie:{ powers:[], wizardry:[], blood:[], cognizance:'', beingName:'', loadedPowers:[] },
+    faerie:{ powers:[], wizardry:[], blood:[], cognizance:'', beingName:'', loadedPowers:[], pretenses:[], avgAge:21 },
     characteristics:{int:0,per:0,str:0,sta:0,pre:0,com:0,dex:0,qik:0},
     virtues:[], flaws:[],
     childhood:{ nativeLang:'', spread:[] },
@@ -186,7 +186,7 @@ const AGG='␟';
 function abilInstances(){
   const out=[];
   if(C.childhood.nativeLang) out.push({name:NATIVE,param:C.childhood.nativeLang,spec:C.specs[NATIVE]||'',xp:75,native:true});
-  [C.template.abilities, C.childhood.spread, C.training.grants, C.later.alloc, C.apprentice.abilities, C.laterYears.abilities]
+  [C.template.abilities, C.childhood.spread, C.training.grants, C.later.alloc, C.apprentice.abilities, C.laterYears.abilities, C.faerie.pretenses]
     .forEach(arr=>(arr||[]).forEach(a=>out.push({name:a.name,param:a.param||'',spec:a.spec||'',xp:+a.xp||0})));
   return out;
 }
@@ -278,9 +278,10 @@ function migrateChar(c){
   c.magic=c.magic||{qualities:[],inferiorities:[],powers:[],beingName:'',loadedPowers:[]};
   ['qualities','inferiorities','powers','loadedPowers'].forEach(k=>{ if(!Array.isArray(c.magic[k])) c.magic[k]=[]; });
   if(c.magic.beingName==null) c.magic.beingName='';
-  c.faerie=c.faerie||{powers:[],wizardry:[],blood:[],cognizance:'',beingName:'',loadedPowers:[]};
-  ['powers','wizardry','blood','loadedPowers'].forEach(k=>{ if(!Array.isArray(c.faerie[k])) c.faerie[k]=[]; });
+  c.faerie=c.faerie||{powers:[],wizardry:[],blood:[],cognizance:'',beingName:'',loadedPowers:[],pretenses:[],avgAge:21};
+  ['powers','wizardry','blood','loadedPowers','pretenses'].forEach(k=>{ if(!Array.isArray(c.faerie[k])) c.faerie[k]=[]; });
   if(c.faerie.beingName==null) c.faerie.beingName='';
+  if(c.faerie.avgAge==null) c.faerie.avgAge=21;
   return c;
 }
 
@@ -299,7 +300,10 @@ const STEPS=[
   {id:'finish', title:'Personality & Details', render:renderFinish, valid:()=>({ok:true,msgs:[]})},
   {id:'review', title:'Review & Export', render:renderReview, valid:()=>({ok:true,msgs:[]})},
 ];
-const visibleSteps = () => STEPS.filter(s=>(!s.magiOnly || isMagus()) && (!s.realmOnly || !!C.realm));
+/* Faeries buy Pretenses (in the realm step) instead of the mundane childhood/later
+   ability phases, so those steps are hidden for a Faerie-realm character. */
+const visibleSteps = () => STEPS.filter(s=>(!s.magiOnly || isMagus()) && (!s.realmOnly || !!C.realm)
+  && !(C.realm==='faerie' && ['child','training','later'].includes(s.id)));
 
 function vType(){ return {ok:!!C.name.trim(), msgs: C.name.trim()?[]:[{level:'warn',text:'Give the character a name.'}]}; }
 function vHouse(){ if(!isMagus()) return {ok:true,msgs:[]};
@@ -405,7 +409,7 @@ function renderBudget(){
   rows.push(['Childhood',`${abilSum(C.childhood.spread)} / 45`,abilSum(C.childhood.spread)>45]);
   if(C.training.grants.length) rows.push(['Training',`+${abilSum(C.training.grants)} XP · ${C.training.packageName}`]);
   if(C.realm==='magic'){ const mb=magicBudget(); rows.push(['Magic Might',`${+C.might||0}`]); rows.push(['Quality pts',`${mb.qpts} / ${mb.budget}`,mb.qpts>mb.budget]); }
-  if(C.realm==='faerie'){ rows.push(['Faerie Might',`${+C.might||0}`]); rows.push(['Faerie Powers',`${C.faerie.powers.length}`]); }
+  if(C.realm==='faerie'){ rows.push(['Faerie Might',`${+C.might||0}`]); const ps=abilSum(C.faerie.pretenses),pb=faeriePretenseBudget(); rows.push(['Pretense pts',`${ps} / ${pb}`,ps>pb]); }
   rows.push(['Later life',`${abilSum(C.later.alloc)} / ${laterRate()*(+C.later.years||0)}`,abilSum(C.later.alloc)>laterRate()*(+C.later.years||0)]);
   if(isMagus()){
     rows.push(['Apprentice',`${sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities)} / 240`,(sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities))>240]);
@@ -529,7 +533,10 @@ function renderType(el){
       <div class="list" style="max-height:180px">${tpls.map(t=>`<div class="opt" data-tpl="${esc(t.name)}" style="${C.templateName===t.name?'background:rgba(198,155,63,.18)':''}"><span>${esc(t.name)}${t.house?' <span class="mini">'+esc(t.house)+'</span>':''}</span><span class="mini">${esc(t.source||'')}</span></div>`).join('')||'<div class="opt mini">no templates for this type</div>'}</div>
     </div>`;
   el.querySelectorAll('[data-t]').forEach(c=>c.onclick=()=>{if(C.type!==c.dataset.t)clearTemplate();C.type=c.dataset.t;if(C.type!=='magus')C.house=null;save();render();});
-  el.querySelectorAll('[data-realm]').forEach(c=>c.onclick=()=>{C.realm=c.dataset.realm;C.mightRealm=C.realm==='magic'?'Magic':C.realm==='faerie'?'Faerie':'';if(!C.realm)C.might=0;save();render();});
+  el.querySelectorAll('[data-realm]').forEach(c=>c.onclick=()=>{C.realm=c.dataset.realm;C.mightRealm=C.realm==='magic'?'Magic':C.realm==='faerie'?'Faerie':'';
+    if(!C.realm)C.might=0;
+    else if(C.realm==='faerie'&&!C.might)C.might=(DATA.realmToolkits.faerie.creation||{}).startingMight||5;
+    save();render();});
   const bind=(id,fn)=>{const e=el.querySelector(id);if(e)e.oninput=()=>{fn(e.value);save();renderBudget();};};
   bind('#cName',v=>C.name=v);bind('#cConcept',v=>C.concept=v);bind('#cBorn',v=>C.born=+v||0);bind('#cAge',v=>C.age=+v||0);
   bind('#cParens',v=>C.parens=v);bind('#cSigil',v=>C.sigil=v);
@@ -652,12 +659,18 @@ function magicBudget(){
   const i=C.magic.inferiorities.reduce((a,c)=>a+magPts(toolkitMag(T.inferiorities,c.name))*(c.count||1),0);
   return {qpts:q, ipts:i, budget:(+C.might||0)+i};
 }
+function faeriePretenseBudget(){
+  const fc=DATA.realmToolkits.faerie.creation||{};
+  const age=+C.faerie.avgAge||fc.defaultMagusAge||21;
+  return (fc.pretensePointsPerYear||15)*(age-(fc.pretenseReferenceAge||5))+(fc.pretensePointsBase||120);
+}
 function vRealm(){
   if(!C.realm) return {ok:true,msgs:[]};
   if(C.realm==='faerie'){
-    const m=[]; if(!C.might) m.push({level:'warn',text:'Set a Faerie Might score.'});
-    m.push({level:'ok',text:`Faerie: ${C.faerie.powers.length} Power(s), ${C.faerie.wizardry.length} Wizardry, ${C.faerie.blood.length} Blood.`});
-    return {ok:!!C.might, msgs:m};
+    const m=[]; const sp=abilSum(C.faerie.pretenses), bud=faeriePretenseBudget();
+    if(!C.might) m.push({level:'warn',text:'Set a Faerie Might score.'});
+    m.push({level:sp>bud?'warn':'ok',text:`Pretense points: ${sp} / ${bud} (Pretenses replace Abilities).`});
+    return {ok:!!C.might && sp<=bud, msgs:m};
   }
   const b=magicBudget(); const m=[];
   if(!C.might) m.push({level:'warn',text:'Set a Magic Might score.'});
@@ -727,6 +740,13 @@ function renderFaerie(el){
     <div class="list" style="max-height:150px">${beings.map(b=>`<div class="opt" data-being="${esc(b.name)}" style="${C.faerie.beingName===b.name?'background:rgba(198,155,63,.18)':''}"><span>${esc(b.name)}</span><span class="mini">Might ${b.might==null?'?':esc(String(b.might))}${b.form?' · '+esc(String(b.form)):''}</span></div>`).join('')||'<div class="opt mini">no matches</div>'}</div>
     <div class="row2" style="margin-top:12px"><div><label class="fld">Faerie Might</label><input type="number" id="fMight" value="${+C.might||0}"></div>
       <div><label class="fld">Cognizance</label><select id="fCog"><option value="">—</option>${['Incognizant','Narrowly Cognizant','Cognizant'].map(c=>`<option ${C.faerie.cognizance===c?'selected':''}>${c}</option>`).join('')}</select></div></div>
+    <div class="row2"><div><label class="fld">Avg. magus age <span class="mini">(sets Pretense pool)</span></label><input type="number" id="fAge" value="${+C.faerie.avgAge||21}"></div>
+      <div><label class="fld">Pretense points</label><input type="text" value="${faeriePretenseBudget()} = 15×(${+C.faerie.avgAge||21}−5)+120" disabled></div></div>
+    <div class="alloc-pool ${abilSum(C.faerie.pretenses)>faeriePretenseBudget()?'bad':''}" id="poolLine">Pretense points: ${abilSum(C.faerie.pretenses)} / ${faeriePretenseBudget()}</div>
+    <label class="fld">Pretenses <span class="mini">— faeries buy Pretenses in place of Abilities (spend like Ability points)</span></label>
+    <div class="searchbar"><input type="text" class="al-q" placeholder="search Pretenses…"></div>
+    <div class="list al-add" style="max-height:130px"></div>
+    <div class="al-rows" style="margin-top:6px">${abilAllocRows(C.faerie.pretenses,'pret')}</div>
     ${C.faerie.loadedPowers.length?`<h4 class="mini" style="margin-top:12px">${esc(C.faerie.beingName)}'s Powers <span class="count-pill">from statblock</span></h4>${C.faerie.loadedPowers.map((pw,i)=>`<div class="rules-note"><button class="x" data-lprm="${i}" style="float:right">×</button><strong>${esc(pw.name)}</strong>${pw.cost?` <span class="mini">(${esc(pw.cost)}${pw.initiative?', Init '+esc(pw.initiative):''}${pw.form?', '+esc(pw.form):''})</span>`:''}<br>${mdRules(pw.text||'—')}</div>`).join('')}`:''}
     ${realmPickerHtml('fpowers','Faerie Powers (toolkit)',F.powers,C.faerie.powers,'mightCostValue')}
     ${realmPickerHtml('wizardry','Faerie Wizardry',F.wizardry,C.faerie.wizardry,null)}
@@ -738,6 +758,9 @@ function renderFaerie(el){
   el.querySelectorAll('[data-lprm]').forEach(b=>b.onclick=()=>{C.faerie.loadedPowers.splice(+b.dataset.lprm,1);save();renderFaerie(el);});
   $('#fMight').oninput=e=>{C.might=+e.target.value||0;save();renderBudget();};
   $('#fCog').onchange=e=>{C.faerie.cognizance=e.target.value;save();};
+  $('#fAge').oninput=e=>{C.faerie.avgAge=+e.target.value||21;save();renderFaerie(el);renderBudget();};
+  updatePoolLine=()=>{const s=abilSum(C.faerie.pretenses),p=faeriePretenseBudget(),ln=$('#poolLine');if(ln){ln.textContent=`Pretense points: ${s} / ${p}`;ln.classList.toggle('bad',s>p);}};
+  wireAbilAlloc(el, C.faerie.pretenses, 'pret', null, ()=>renderFaerie(el));
   wireRealmPicker(el,'fpowers',F.powers,C.faerie.powers,'mightCostValue');
   wireRealmPicker(el,'wizardry',F.wizardry,C.faerie.wizardry,null);
   wireRealmPicker(el,'blood',F.blood,C.faerie.blood,null);
