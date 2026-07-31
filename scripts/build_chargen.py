@@ -202,9 +202,13 @@ def _paren_split(s, seps=";,"):
     return [x for x in out if x]
 
 
+def _endash(s):
+    return (s or "").replace("–", "-").replace("—", "-")
+
+
 def parse_chars_prose(s):
     out = {}
-    for seg in (s or "").split(","):
+    for seg in _endash(s).split(","):
         m = _re_tpl.match(r"\s*([A-Za-z]{3})\s*([+\-]?\d+)", seg)
         if m and m.group(1) in _CHAR_ABBR:
             out[_CHAR_ABBR[m.group(1)]] = int(m.group(2))
@@ -212,13 +216,13 @@ def parse_chars_prose(s):
 
 
 def parse_might_prose(s):
-    m = _re_tpl.match(r"\s*(\d+)\s*(?:\(([^)]+)\))?", s or "")
+    m = _re_tpl.match(r"\s*(\d+)\s*(?:\(([^)]+)\))?", _endash(s))
     return (int(m.group(1)) if m else None, (m.group(2).strip() if m and m.group(2) else None))
 
 
 def parse_abilities_prose(s):
     out = []
-    for seg in _paren_split(s or "", ","):
+    for seg in _paren_split(_endash(s), ","):
         m = _re_tpl.match(r"^(.*?)\s+(\d+)\s*(?:\(([^)]*)\))?$", seg.strip())
         if m:
             out.append({"name": m.group(1).strip(), "score": int(m.group(2)),
@@ -228,7 +232,7 @@ def parse_abilities_prose(s):
 
 def parse_personality_prose(s):
     out = []
-    for seg in (s or "").split(","):
+    for seg in _endash(s).split(","):
         m = _re_tpl.match(r"\s*(.+?)\*?\s*([+\-]\d+)\s*$", seg.strip())
         if m:
             out.append({"name": m.group(1).strip().rstrip("*").strip(), "score": int(m.group(2))})
@@ -589,6 +593,76 @@ def main():
         })
     magic_beings.sort(key=lambda x: x["name"])
 
+    # Apprentices — young-character creation (Ch2): the budget entity, the Aging
+    # Chart (age -> Characteristic/Size modifiers), Child Virtues/Flaws, and the
+    # young-character example statblocks (flat prose, parsed for the loader).
+    yc_ent = by_name.get("Young Character Creation")
+    young_creation = None
+    if yc_ent:
+        _keys = [("Characteristic Points", "characteristicPoints"), ("XP Per Year", "xpPerYear"),
+                 ("XP Per Year Wealthy", "xpPerYearWealthy"), ("XP Per Year Poor", "xpPerYearPoor"),
+                 ("XP Start Age", "xpStartAge"), ("Ability Max Score", "abilityMaxScore"),
+                 ("Grog Virtue Flaw Points", "grogVFPoints"), ("Companion Virtue Flaw Points", "companionVFPoints"),
+                 ("Child Virtue Flaw Max Age", "childVFMaxAge"), ("Apprenticeship Years", "apprenticeshipYears"),
+                 ("Apprenticeship XP", "apprenticeshipXP"), ("Apprenticeship Spell Levels", "apprenticeshipSpellLevels"),
+                 ("Apprenticeship XP Per Year Early", "apprenticeshipXPPerYearEarly"),
+                 ("Apprenticeship XP Per Year Late", "apprenticeshipXPPerYearLate")]
+        young_creation = {k2: _int(prop(yc_ent, k1)) for k1, k2 in _keys}
+        young_creation.update({"transitionAges": prop(yc_ent, "Transition Ages"), "text": desc(yc_ent),
+                               "source": prop(yc_ent, "Source"), "page": _int(prop(yc_ent, "Page"))})
+
+    def _age_range(lbl):
+        nums = _re_tpl.findall(r"\d+", lbl or "")
+        if "<" in (lbl or ""):
+            return (0, 0)
+        if "+" in (lbl or ""):
+            return (int(nums[0]), 999) if nums else (0, 999)
+        if len(nums) >= 2:
+            return (int(nums[0]), int(nums[1]))
+        return (int(nums[0]), int(nums[0])) if nums else (0, 0)
+    aging_chart = []
+    ac = by_name.get("Aging Chart")
+    if ac:
+        tb = next((b for b in ac.get("blocks", []) if b.get("keyword") == "TABLE"), None)
+        for row in (tb.get("rows", []) if tb else []):
+            age = row.get("label")
+            cells = [c.get("value") for c in row.get("cells", []) or []]
+            if age and len(cells) >= 2:
+                lo, hi = _age_range(age)
+                aging_chart.append({"age": age, "ageMin": lo, "ageMax": hi,
+                                    "charMod": _int(_endash(cells[0])), "sizeMod": _int(_endash(cells[1]))})
+
+    def _child_vf(ext_name):
+        out = [{"name": x["name"], "size": prop(x, "Size"), "category": prop(x, "Category"),
+                "text": desc(x), "source": prop(x, "Source")} for x in ents if ext(x) == ext_name]
+        out.sort(key=lambda z: z["name"])
+        return out
+    child_virtues, child_flaws = _child_vf("Child Virtue"), _child_vf("Child Flaw")
+
+    young_characters = []
+    for ye in ents:
+        if ext(ye) != "Example Character" or prop(ye, "Source") != "Apprentices":
+            continue
+        ap = prop(ye, "Age")
+        young_characters.append({
+            "name": ye["name"], "house": prop(ye, "House"),
+            "age": _int(ap.split()[0]) if ap else None,
+            "size": _int(_endash(prop(ye, "Size") or "")),
+            "characteristics": parse_chars_prose(prop(ye, "Characteristics")),
+            "abilities": parse_abilities_prose(prop(ye, "Abilities")),
+            "personalityTraits": parse_personality_prose(prop(ye, "Personality Trait")),
+            "virtuesFlaws": parse_named_list_prose(prop(ye, "Virtues and Flaws")),
+            "combat": prop(ye, "Combat"), "soak": prop(ye, "Soak"),
+            "equipment": prop(ye, "Equipment"), "confidence": prop(ye, "Confidence Score"),
+            "appearance": prop(ye, "Appearance"),
+            "description": next((b.get("value") for b in ye.get("blocks", []) if b.get("keyword") == "DESCRIPTION"), "") or "",
+            "source": prop(ye, "Source"),
+        })
+    young_characters.sort(key=lambda x: x["name"])
+    apprentices = {"creation": young_creation, "agingChart": aging_chart,
+                   "childVirtues": child_virtues, "childFlaws": child_flaws,
+                   "youngCharacters": young_characters}
+
     creation_rules = {}
     for key, ename in CREATION_RULE_ENTITIES.items():
         e = by_name.get(ename)
@@ -666,6 +740,7 @@ def main():
         "realmToolkits": realm_toolkits,
         "creatures": creatures,
         "magicBeings": magic_beings,
+        "apprentices": apprentices,
         "creationRules": creation_rules,
         "spellsFile": "chargen-spells.json",
         "spellCount": len(spells),
@@ -709,6 +784,9 @@ def main():
     print(f"  magic beings (Magic Character, parsed) {len(magic_beings)} | "
           f"{sum(len(b['powers']) for b in magic_beings)} powers, "
           f"{sum(len(b['abilities']) for b in magic_beings)} abilities parsed")
+    print(f"  apprentices: creation {'ok' if young_creation else 'MISSING'} | "
+          f"aging chart {len(aging_chart)} rows | child V/F {len(child_virtues)}/{len(child_flaws)} | "
+          f"young characters {len(young_characters)}")
     print(f"  creation-rule passages {len(creation_rules)}/{len(CREATION_RULE_ENTITIES)}")
     print(f"  spell guidelines {len(guidelines)} rows across "
           f"{len(set((g['technique'],g['form']) for g in guidelines))} Te/Fo tables")

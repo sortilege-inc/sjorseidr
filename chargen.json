@@ -29674,7 +29674,9 @@
     "pre": 2,
     "com": 2,
     "str": 3,
-    "sta": 2
+    "sta": 2,
+    "dex": -1,
+    "qik": -2
    },
    "abilities": [
     {
@@ -29892,6 +29894,7 @@
     "com": 1,
     "str": 4,
     "sta": 3,
+    "dex": -2,
     "qik": 2
    },
    "abilities": [
@@ -30082,12 +30085,14 @@
    "size": null,
    "season": "Summer",
    "characteristics": {
+    "int": -1,
     "per": 2,
     "pre": 1,
     "com": 1,
     "str": 2,
     "sta": 2,
-    "dex": 2
+    "dex": 2,
+    "qik": -2
    },
    "abilities": [
     {
@@ -30274,8 +30279,11 @@
    "size": null,
    "season": "Spring",
    "characteristics": {
+    "int": -2,
     "per": 1,
     "pre": 3,
+    "com": -3,
+    "str": -2,
     "sta": 3,
     "dex": 2,
     "qik": 1
@@ -30672,8 +30680,10 @@
    "size": 2,
    "season": "Summer",
    "characteristics": {
+    "int": -2,
     "per": 0,
     "pre": 1,
+    "com": -2,
     "str": 6,
     "sta": 2,
     "dex": 2,
@@ -30826,6 +30836,8 @@
    "characteristics": {
     "int": 0,
     "per": 1,
+    "pre": -2,
+    "com": -2,
     "str": 6,
     "sta": 5,
     "dex": 0,
@@ -30899,6 +30911,10 @@
     {
      "name": "Brave",
      "score": 3
+    },
+    {
+     "name": "Curious",
+     "score": -1
     }
    ],
    "virtuesFlaws": [
@@ -31063,6 +31079,7 @@
     "int": 0,
     "per": 1,
     "pre": 0,
+    "com": -1,
     "str": 4,
     "sta": 3,
     "dex": 1,
@@ -31517,6 +31534,8 @@
    "characteristics": {
     "per": 2,
     "pre": 1,
+    "com": -2,
+    "str": -4,
     "sta": 3,
     "dex": 1,
     "qik": 2
@@ -31680,6 +31699,7 @@
     "per": 2,
     "pre": 2,
     "com": 0,
+    "str": -6,
     "sta": 0,
     "dex": 2,
     "qik": 4
@@ -31823,6 +31843,7 @@
     "int": 0,
     "per": 1,
     "pre": 1,
+    "com": -3,
     "str": 5,
     "sta": 3,
     "dex": 1,
@@ -32022,9 +32043,13 @@
    "season": null,
    "characteristics": {
     "int": 2,
+    "per": -2,
     "pre": 5,
+    "com": -1,
     "str": 1,
-    "sta": 2
+    "sta": 2,
+    "dex": -1,
+    "qik": -1
    },
    "abilities": [
     {
@@ -32279,6 +32304,8 @@
    "season": "Spring",
    "characteristics": {
     "per": 2,
+    "pre": -3,
+    "com": -2,
     "str": 1,
     "sta": 0,
     "dex": 4,
@@ -32332,6 +32359,10 @@
     {
      "name": "Reclusive",
      "score": 2
+    },
+    {
+     "name": "Brave",
+     "score": -1
     }
    ],
    "virtuesFlaws": [
@@ -32441,6 +32472,7 @@
     "int": 1,
     "per": 0,
     "pre": 3,
+    "com": -2,
     "str": 6,
     "sta": 2,
     "dex": 2,
@@ -32726,7 +32758,8 @@
     "com": 3,
     "str": 12,
     "sta": 8,
-    "dex": 3
+    "dex": 3,
+    "qik": -4
    },
    "abilities": [
     {
@@ -33064,7 +33097,9 @@
    "characteristics": {
     "int": 1,
     "per": 2,
+    "pre": -2,
     "com": 0,
+    "str": -7,
     "sta": 0,
     "dex": 1,
     "qik": 5
@@ -33431,11 +33466,14 @@
    "size": 4,
    "season": "Summer",
    "characteristics": {
+    "int": -2,
     "per": 0,
     "pre": 2,
+    "com": -2,
     "str": 10,
     "sta": 2,
-    "dex": 1
+    "dex": 1,
+    "qik": -2
    },
    "abilities": [
     {
@@ -33622,6 +33660,9 @@
    "season": null,
    "characteristics": {
     "per": 1,
+    "pre": -3,
+    "com": -3,
+    "str": -13,
     "sta": 3,
     "dex": 2,
     "qik": 10
@@ -33794,6 +33835,8 @@
    "size": 0,
    "season": "Summer",
    "characteristics": {
+    "int": -1,
+    "per": -1,
     "pre": 1,
     "com": 0,
     "str": 2,
@@ -34013,6 +34056,7 @@
    "characteristics": {
     "per": 2,
     "pre": 2,
+    "com": -3,
     "str": 4,
     "sta": 3,
     "dex": 1,
@@ -34213,6 +34257,9 @@
    "season": null,
    "characteristics": {
     "per": 1,
+    "pre": -4,
+    "com": -5,
+    "str": -7,
     "sta": 0,
     "dex": 3,
     "qik": 4
@@ -34301,6 +34348,7 @@
    "season": null,
    "characteristics": {
     "per": 2,
+    "pre": -4,
     "com": 0,
     "str": 0,
     "sta": 2,
@@ -34389,6 +34437,8 @@
     "per": 2,
     "pre": 2,
     "com": 2,
+    "str": -1,
+    "sta": -1,
     "dex": 2,
     "qik": 0
    },
@@ -34493,6 +34543,9 @@
    "season": null,
    "characteristics": {
     "per": 1,
+    "pre": -3,
+    "com": -4,
+    "str": -18,
     "sta": 1,
     "dex": 3,
     "qik": 8
@@ -34726,7 +34779,10 @@
    "size": 1,
    "season": "Summer",
    "characteristics": {
+    "int": -2,
     "per": 1,
+    "pre": -2,
+    "com": -2,
     "str": 4,
     "sta": 2,
     "dex": 2,
@@ -34797,6 +34853,10 @@
     {
      "name": "Lonely",
      "score": 2
+    },
+    {
+     "name": "Brave",
+     "score": -1
     }
    ],
    "virtuesFlaws": [
@@ -34911,6 +34971,7 @@
     "int": 0,
     "per": 2,
     "pre": 2,
+    "com": -3,
     "str": 4,
     "sta": 2,
     "dex": 1,
@@ -35167,6 +35228,7 @@
     "per": 2,
     "pre": 1,
     "com": 1,
+    "str": -6,
     "sta": 2,
     "dex": 1,
     "qik": 6
@@ -35378,8 +35440,10 @@
    "characteristics": {
     "int": 0,
     "per": 0,
+    "pre": -1,
     "com": 4,
     "str": 0,
+    "sta": -1,
     "dex": 0,
     "qik": 3
    },
@@ -35515,6 +35579,7 @@
     "com": 1,
     "str": 0,
     "sta": 3,
+    "dex": -1,
     "qik": 1
    },
    "abilities": [
@@ -35731,6 +35796,1062 @@
    "source": "Realms of Power: Magic"
   }
  ],
+ "apprentices": {
+  "creation": {
+   "characteristicPoints": 7,
+   "xpPerYear": 15,
+   "xpPerYearWealthy": 20,
+   "xpPerYearPoor": 10,
+   "xpStartAge": 5,
+   "abilityMaxScore": 5,
+   "grogVFPoints": 3,
+   "companionVFPoints": 10,
+   "childVFMaxAge": 20,
+   "apprenticeshipYears": 15,
+   "apprenticeshipXP": 240,
+   "apprenticeshipSpellLevels": 120,
+   "apprenticeshipXPPerYearEarly": 19,
+   "apprenticeshipXPPerYearLate": 46,
+   "transitionAges": "8, 15, 21",
+   "text": "Younger characters have 7 points allocated toward Characteristics, with Virtues and Flaws adding or subtracting points from that total. A score of 0 represents an average Characteristic for the character’s age group. Characteristics for young characters are negatively adjusted because of age; use the Aging Chart to determine a character’s Characteristic Modifier and Size Modifier. Young grogs can have up to three points of Virtues and Flaws, and young companions and apprentices can have up to ten. At character generation, the number of Virtues must equal the number of Flaws (the exception is an apprentice who has acquired the Free House Virtue). Each character gains a number of experience points for Abilities depending on the character’s starting age. After 5 years of age, the character gains 15 experience points a year; those with the Wealthy Virtue receive 20 experience points per year, and a character with the Poor Flaw receives 10. Young characters have a maximum Ability score of 5; Hermetic Arts are not limited by age. For a standard apprenticeship, the player receives 240 experience points to spend on Abilities and Arts, and 120 levels of spells, over 15 years. There are three Transitions of Maturation — between ages 7 and 8, between 14 and 15, and at 21 — during which the player may change Virtues and Flaws of equal value; Child Virtues and Flaws must be changed by the final transition. Only magus and companion characters may take Inherited Virtues and Flaws.",
+   "source": "Apprentices",
+   "page": 7
+  },
+  "agingChart": [
+   {
+    "age": "<1 yr",
+    "ageMin": 0,
+    "ageMax": 0,
+    "charMod": -10,
+    "sizeMod": -3
+   },
+   {
+    "age": "1 yr",
+    "ageMin": 1,
+    "ageMax": 1,
+    "charMod": -9,
+    "sizeMod": -3
+   },
+   {
+    "age": "2 yrs",
+    "ageMin": 2,
+    "ageMax": 2,
+    "charMod": -8,
+    "sizeMod": -3
+   },
+   {
+    "age": "3 yrs",
+    "ageMin": 3,
+    "ageMax": 3,
+    "charMod": -7,
+    "sizeMod": -2
+   },
+   {
+    "age": "4 yrs",
+    "ageMin": 4,
+    "ageMax": 4,
+    "charMod": -6,
+    "sizeMod": -2
+   },
+   {
+    "age": "5 yrs",
+    "ageMin": 5,
+    "ageMax": 5,
+    "charMod": -5,
+    "sizeMod": -2
+   },
+   {
+    "age": "6–7 yrs",
+    "ageMin": 6,
+    "ageMax": 7,
+    "charMod": -4,
+    "sizeMod": -2
+   },
+   {
+    "age": "8–9 yrs",
+    "ageMin": 8,
+    "ageMax": 9,
+    "charMod": -3,
+    "sizeMod": -2
+   },
+   {
+    "age": "10–11 yrs",
+    "ageMin": 10,
+    "ageMax": 11,
+    "charMod": -2,
+    "sizeMod": -2
+   },
+   {
+    "age": "12–13 yrs",
+    "ageMin": 12,
+    "ageMax": 13,
+    "charMod": -1,
+    "sizeMod": -1
+   },
+   {
+    "age": "14+ yrs",
+    "ageMin": 14,
+    "ageMax": 999,
+    "charMod": 0,
+    "sizeMod": 0
+   }
+  ],
+  "childVirtues": [
+   {
+    "name": "Boundless Energy",
+    "size": "Minor",
+    "category": "Child",
+    "text": "Youthful vigor surges through the character, giving him a +3 bonus to Fatigue rolls.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Deft Characteristic",
+    "size": "Minor",
+    "category": "Child",
+    "text": "The character has a natural affinity for a specific Characteristic and only suffers half the normal Characteristic Modifier penalty (rounded down) due to his age.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Grows Quickly",
+    "size": "Minor",
+    "category": "Child",
+    "text": "The character grows much more quickly than other children. Treat her as if she were one age category higher on the Aging Chart when determining her Size.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Inconspicuous",
+    "size": "Minor",
+    "category": "Child",
+    "text": "Due to demeanor, disposition, or supernatural meddling, the character is easily overlooked and unnoticed. She gains a +3 bonus on rolls that help her hide and avoid attention.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Protection from Diseases",
+    "size": "Major",
+    "category": "Child, Supernatural",
+    "text": "Some supernatural agent — Divine, Infernal, Faerie, or Magic — has granted the character immunity from all diseases. The character can still suffer wounds and other damage, but diseases do not affect him. The reason for such protection could be benevolent, malicious, or accidental, depending on the creature bestowing the protection and its future plans.",
+    "source": "Apprentices"
+   }
+  ],
+  "childFlaws": [
+   {
+    "name": "Bully",
+    "size": "Minor",
+    "category": "Child, Personality",
+    "text": "The character feels compelled to pick on others who are smaller, weaker, or generally less confident. He is likely physically intimidating and relatively unpopular with his peer group because of this. The character has a Personality Trait: Bully +3.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Dependence",
+    "size": "Minor",
+    "category": "Child, Personality",
+    "text": "The character does not feel comfortable without a mentor or someone he trusts watching over him, and is extremely shy of strangers. When completely alone, he suffers a –3 penalty to everything he tries to do, and feels intensely abandoned and fearful.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Infatuation",
+    "size": "Major or Minor",
+    "category": "Child, Story",
+    "text": "The character is romantically attracted to someone (not a player character) with whom he has no chance of a relationship, whether because it would be inappropriate or simply because it is unrequited. As a Minor Flaw, the character is infatuated with someone who likes him, just not in that way, and is willing to assist him on occasion. As a Major Flaw, the character is infatuated with someone who doesn’t like him, and who uses this emotional advantage to order the character around.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Know-It-All",
+    "size": "Major or Minor",
+    "category": "Child, Personality",
+    "text": "The character has a deep-seated need to show off her experience and knowledge to others. She cannot resist demonstrating her superiority, and often fails to impress or convince because of her self-centered attitude.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Late Bloomer",
+    "size": "Minor",
+    "category": "Child",
+    "text": "The character is slow to mature. Treat him as if he were one age category lower on the Aging Chart. For example, a child of 12 would have a Characteristics penalty of –2 and a of Size –2.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Turbulence Prone",
+    "size": "Major",
+    "category": "Child",
+    "text": "This Flaw is only available for Gifted characters. Whenever you roll a potential botch on a magical activity, whether or not you actually botch, you must also check for turbulence (explained in the next chapter). The character cannot attempt to control this turbulence, as he focuses on preventing the potential calamity represented by the botch dice. The effects of turbulence are always bad. Decide at what age the character was abandoned. Create the character as a regular apprentice up until that age, and then give him experience points based on his age and other Virtues for his life past being abandoned. If the character knows the Parma Magica, he must join the Order or be slain. Even if the character joins the Order, his background continues to cause problems for him.",
+    "source": "Apprentices"
+   }
+  ],
+  "youngCharacters": [
+   {
+    "name": "Apprentice of House Bonisagus",
+    "house": null,
+    "age": 8,
+    "size": -2,
+    "characteristics": {
+     "int": 1,
+     "per": 1,
+     "pre": 1,
+     "com": -2,
+     "str": -1,
+     "sta": 3,
+     "dex": 1,
+     "qik": 1
+    },
+    "abilities": [
+     {
+      "name": "Area Lore",
+      "score": 1,
+      "specialty": "deer paths"
+     },
+     {
+      "name": "Athletics",
+      "score": 1,
+      "specialty": "jumping"
+     },
+     {
+      "name": "Awareness",
+      "score": 1,
+      "specialty": "alertness"
+     },
+     {
+      "name": "Brawl",
+      "score": 1,
+      "specialty": "dodge"
+     },
+     {
+      "name": "Latin",
+      "score": 2,
+      "specialty": "Hermetic usage"
+     },
+     {
+      "name": "Native Language",
+      "score": 5,
+      "specialty": "storytelling"
+     },
+     {
+      "name": "Profession: Forester",
+      "score": 1,
+      "specialty": "gathering wood"
+     },
+     {
+      "name": "Stealth",
+      "score": 2,
+      "specialty": "hiding"
+     },
+     {
+      "name": "Survival",
+      "score": 3,
+      "specialty": "forest"
+     }
+    ],
+    "personalityTraits": [
+     {
+      "name": "Obedient",
+      "score": 3
+     },
+     {
+      "name": "Generous",
+      "score": 2
+     },
+     {
+      "name": "Agreeable",
+      "score": 1
+     }
+    ],
+    "virtuesFlaws": [
+     {
+      "name": "The Gift",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Apprentice",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Apt Student",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Soft-Hearted",
+      "count": 1,
+      "param": null
+     }
+    ],
+    "combat": "Dodge:* Init –2, Attack n/a, Defense 0, Damage n/a",
+    "soak": "0",
+    "equipment": "Apprentice robes",
+    "confidence": "1 (3)",
+    "appearance": "A happy looking girl, with braided hair and a wide smile.",
+    "description": "The character has just been accepted into House Bonisagus, starting play after her first year of apprenticeship. Prior to her discovery, she lived in the woods with her parents. The character started with the Wilderness sample childhood, received 30 experience points for the two years before being accepted as an apprentice, and 19 experience points for her first year with the Bonisagus magus.\n\nThe character does not begin play with any Hermetic Virtues and hopes to learn them from her parens. The Apt Student Virtue adds to the Teaching Source Quality when her parens teaches her.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Apprentice of House Verditius",
+    "house": null,
+    "age": 12,
+    "size": -1,
+    "characteristics": {
+     "int": 1,
+     "per": 1,
+     "pre": -1,
+     "com": 0,
+     "str": 1,
+     "sta": 2,
+     "dex": 1,
+     "qik": 1
+    },
+    "abilities": [
+     {
+      "name": "Artes Liberales",
+      "score": 1,
+      "specialty": "rhetoric"
+     },
+     {
+      "name": "Brawl",
+      "score": 2,
+      "specialty": "dagger"
+     },
+     {
+      "name": "Craft: Goldsmith",
+      "score": 3,
+      "specialty": "fine details"
+     },
+     {
+      "name": "Guile",
+      "score": 2,
+      "specialty": "women"
+     },
+     {
+      "name": "Latin",
+      "score": 2,
+      "specialty": "Hermetic usage"
+     },
+     {
+      "name": "Magic Theory",
+      "score": 2,
+      "specialty": "enchanting items"
+     },
+     {
+      "name": "Native Language",
+      "score": 5,
+      "specialty": "metalworking terminology"
+     }
+    ],
+    "personalityTraits": [
+     {
+      "name": "Loyal",
+      "score": 3
+     },
+     {
+      "name": "Jealous",
+      "score": 2
+     },
+     {
+      "name": "Indecisive",
+      "score": 1
+     }
+    ],
+    "virtuesFlaws": [
+     {
+      "name": "The Gift",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Apprentice",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Major Magical Focus",
+      "count": 1,
+      "param": "Metal"
+     },
+     {
+      "name": "Affinity with Craft: Goldsmith",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Cautious Sorcerer",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Verditius Magic*",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Weak Spontaneous Magic",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Hunchback",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Slow Caster *Free House Virtue",
+      "count": 1,
+      "param": null
+     }
+    ],
+    "combat": "Dagger: *Init 0, Attack +5, Defense +3, Damage +3 *Dodge*: Init 0, Attack n/a, Defense +2, Damage n/a",
+    "soak": "0",
+    "equipment": "Robe, heavy leather apron, and a pouch containing the casting tokens for his cantations",
+    "confidence": "1 (3)",
+    "appearance": "Vile-looking and di- sheveled, the apprentice wears craftsman’s clothes appropriate for the forge.",
+    "description": "The Verditius apprentice has spent five years in apprenticeship. The character used the Mischievous Childhood as a starting point, received 30 experience points for the two years before apprenticeship, and received 95 experience points (19 x 5) for the five years spent as a Verditius apprentice. His parens has already initiated him into the Outer Mystery of the Cult (Verditius Magic Virtue).\n\nExperience points have been spent on Abilities, Arts, and spells, deviating slightly from the standard model of apprenticeship. The character is not limited to cantations, and has bought a higher level spell.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Apprentice: Foundling Child",
+    "house": null,
+    "age": 7,
+    "size": -2,
+    "characteristics": {
+     "int": 3,
+     "per": 0,
+     "pre": 1,
+     "com": 2,
+     "str": 0,
+     "sta": 1,
+     "dex": -2,
+     "qik": -1
+    },
+    "abilities": [
+     {
+      "name": "Artes Liberales",
+      "score": 1,
+      "specialty": "psalms"
+     },
+     {
+      "name": "Brawl",
+      "score": 1,
+      "specialty": "dodge"
+     },
+     {
+      "name": "Charm",
+      "score": 2,
+      "specialty": "clergy"
+     },
+     {
+      "name": "Church Lore",
+      "score": 2,
+      "specialty": "religious holidays"
+     },
+     {
+      "name": "Folk Ken",
+      "score": 2,
+      "specialty": "clergy"
+     },
+     {
+      "name": "Guile",
+      "score": 2,
+      "specialty": "lying to superiors"
+     },
+     {
+      "name": "Latin",
+      "score": 1,
+      "specialty": "church usage"
+     },
+     {
+      "name": "Native Language",
+      "score": 5,
+      "specialty": "Bible quotes"
+     },
+     {
+      "name": "Sense Holiness and Unholiness",
+      "score": 1,
+      "specialty": "good"
+     }
+    ],
+    "personalityTraits": [
+     {
+      "name": "Outspoken",
+      "score": 3
+     },
+     {
+      "name": "Brave",
+      "score": 1
+     },
+     {
+      "name": "Devoted",
+      "score": 1
+     }
+    ],
+    "virtuesFlaws": [
+     {
+      "name": "The Gift",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Orphan",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Inherited Flexible Formulaic Magic",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Book Learner",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Puissant Latin",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Sense Holiness and Unholiness",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Blatant Gift",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Plagued by Supernatural Entity",
+      "count": 1,
+      "param": null
+     }
+    ],
+    "combat": "Dodge:* Init –5, Attack n/a, Defense –4, Damage n/a",
+    "soak": "–3",
+    "equipment": "Homespun tunic and wool leggings.",
+    "confidence": "1 (3)",
+    "appearance": "The foundling looks like an ordinary child wearing simple, clean clothing. While he isn’t particularly ugly, many folks think he is due to the child’s Blatant Gift.",
+    "description": "The foundling was deposited on the priest’s doorstep mere days after his birth. The kindly priest raised the boy, despite the child’s Blatant Gift, viewing it as an act of Christian charity. Because of the foundling’s adoptive father’s profession, the character is allowed to put starting experience points in Artes Liberales and Latin.\n\nThe foundling has a knack for books and reading, making him an ideal future apprentice. As of yet, he hasn’t been noticed by the Order of Hermes.\n\nThe foundling used the Social Childhood as a starting base. He has an Inherited Hermetic Virtue, which means that Flexible Formulaic Magic will materialize sometime during apprenticeship. Further, it supposes that the character will eventually be found and trained by a magus. The character can still learn other Hermetic Virtues (see the next chapter), but does not have to use that system for acquiring the preselected Inherited Virtue.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Companion: Merchant’s Son",
+    "house": null,
+    "age": 13,
+    "size": -1,
+    "characteristics": {
+     "int": 1,
+     "per": 0,
+     "pre": 1,
+     "com": 3,
+     "str": 0,
+     "sta": 0,
+     "dex": -1,
+     "qik": 0
+    },
+    "abilities": [
+     {
+      "name": "Area Lore: Area A",
+      "score": 1,
+      "specialty": "people"
+     },
+     {
+      "name": "Area Lore: Area B",
+      "score": 1,
+      "specialty": "history"
+     },
+     {
+      "name": "Animal Handling",
+      "score": 2,
+      "specialty": "pack mules"
+     },
+     {
+      "name": "Bargain",
+      "score": 2,
+      "specialty": "best price"
+     },
+     {
+      "name": "Brawl",
+      "score": 2,
+      "specialty": "dagger"
+     },
+     {
+      "name": "Church Lore",
+      "score": 3,
+      "specialty": "saints’ days"
+     },
+     {
+      "name": "Folk Ken",
+      "score": 2,
+      "specialty": "merchants"
+     },
+     {
+      "name": "Leadership",
+      "score": 3,
+      "specialty": "teamsters"
+     },
+     {
+      "name": "Living Language",
+      "score": 3,
+      "specialty": "merchant terminology"
+     },
+     {
+      "name": "Native Language",
+      "score": 5,
+      "specialty": "merchant terminology"
+     },
+     {
+      "name": "Profession: Merchant",
+      "score": 2,
+      "specialty": "exchange rates"
+     },
+     {
+      "name": "Ride",
+      "score": 2,
+      "specialty": "long distances"
+     },
+     {
+      "name": "Survival",
+      "score": 2,
+      "specialty": "roads"
+     }
+    ],
+    "personalityTraits": [
+     {
+      "name": "Bully",
+      "score": 3
+     },
+     {
+      "name": "Brave",
+      "score": 2
+     },
+     {
+      "name": "Loyal",
+      "score": 1
+     }
+    ],
+    "virtuesFlaws": [
+     {
+      "name": "Son of Merchant",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Wealthy",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Inherited True Faith",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Luck",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Relic",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Dark Secret",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Overconfident",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Obsessed",
+      "count": 1,
+      "param": "with saint’s lives"
+     },
+     {
+      "name": "Short of Breath",
+      "count": 1,
+      "param": null
+     }
+    ],
+    "combat": "Dodge:* Init –1, Attack n/a, Defense +1, Damage n/a *Dagger: *Init +2, Attack +1, Defense +2, Damage +2",
+    "soak": "–1",
+    "equipment": "Fine merchant clothes",
+    "confidence": null,
+    "appearance": "The merchant’s son is of average build and height, with features and color common to the area of his birth. Dressed in fine clothes, he looks uncomfortable, and continually shifts and picks at his clothing.",
+    "description": "The merchant’s son is a good example of a character designed to develop according to a predestined plan. The player ultimately wants the character to forsake his mercantile ways and become a preaching friar, much like St Francis of Assisi. Growing up, the merchant’s son is fascinated with Saints’ Lives, both in collecting the stories and visiting the saints’ places of martyrdom. During one such excursion, he found a holy relic, and the player assumes that veneration of the relic and the associated saint will lead to the character gaining True Faith. Lucky since birth, the character has a measure of overconfidence that could lead to trouble.\n\nAt some point, the merchant’s son discovered his father’s illegal business practices, and he is fearful that public knowledge will lead to his family’s ruin. While he is starting to detest business, he loves his family. The player hopes that the ensuing tension between keeping his family’s secret and his repulsion of merchant life will trigger that life-changing event that leads to True Faith.\n\nThe merchant’s son is based on the Traveling Childhood sample childhood. Because he is Wealthy he received 20 experience points for each year past five, 160 in total.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Companion: Noble Child",
+    "house": null,
+    "age": 6,
+    "size": -2,
+    "characteristics": {
+     "int": 1,
+     "per": -1,
+     "pre": 0,
+     "com": -3,
+     "str": 1,
+     "sta": 2,
+     "dex": 3,
+     "qik": 2
+    },
+    "abilities": [
+     {
+      "name": "Athletics",
+      "score": 2,
+      "specialty": "running"
+     },
+     {
+      "name": "Brawl",
+      "score": 2,
+      "specialty": "kick"
+     },
+     {
+      "name": "Native Language",
+      "score": 5,
+      "specialty": "courtly terms"
+     },
+     {
+      "name": "Ride",
+      "score": 2,
+      "specialty": "galloping"
+     },
+     {
+      "name": "Swim",
+      "score": 2,
+      "specialty": "diving"
+     }
+    ],
+    "personalityTraits": [
+     {
+      "name": "Know-It-All",
+      "score": 3
+     },
+     {
+      "name": "Reckless",
+      "score": 3
+     },
+     {
+      "name": "Brave",
+      "score": 2
+     }
+    ],
+    "virtuesFlaws": [
+     {
+      "name": "Son of Landed Noble",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Death Prophecy",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Inherited Great Dexterity",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Inherited Skinchanger",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Improved Characteristics",
+      "count": 2,
+      "param": null
+     },
+     {
+      "name": "Feud",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Know-It-All",
+      "count": 1,
+      "param": "major"
+     },
+     {
+      "name": "Ability Block",
+      "count": 1,
+      "param": "Academic"
+     },
+     {
+      "name": "Poor Hearing",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Poor Student",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Reckless",
+      "count": 1,
+      "param": null
+     }
+    ],
+    "combat": "Dodge: *Init –2, Attack n/a, Defense +0, Damage n/a *Kick: *Init –3, Attack +2, Defense +0, Damage +0 *Kick, Mounted:* Init –3, Attack +4, Defense +2, Damage +0",
+    "soak": "–2",
+    "equipment": "Good clothes",
+    "confidence": "1 (5)",
+    "appearance": "The noble’s son is a richly clad, clean scrubbed boy of average height and weight. He has a devilish look in his eye, a hint at the trouble to come.",
+    "description": "The noble’s son is a handful. It was prophesied at birth that he would die by fire, and he has led a reckless life. He has learned to ride from his father’s grooms and is a proficient horseman. The character has two inherited Virtues, Skinchanger and Great Dexterity, that will manifest in the future.\n\nThis character also uses the Athletic Childhood given earlier as a starting base.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Grog: Blacksmith’s Son",
+    "house": null,
+    "age": 7,
+    "size": -2,
+    "characteristics": {
+     "int": 1,
+     "per": -1,
+     "pre": -1,
+     "com": -1,
+     "str": 3,
+     "sta": 2,
+     "dex": 2,
+     "qik": -2
+    },
+    "abilities": [
+     {
+      "name": "Area Lore",
+      "score": 1,
+      "specialty": "hidden places"
+     },
+     {
+      "name": "Athletics",
+      "score": 2,
+      "specialty": "running"
+     },
+     {
+      "name": "Brawl",
+      "score": 2,
+      "specialty": "fist"
+     },
+     {
+      "name": "Charm",
+      "score": 1,
+      "specialty": "mothers"
+     },
+     {
+      "name": "Craft: Blacksmith 2 +",
+      "score": 2,
+      "specialty": "small items"
+     },
+     {
+      "name": "Folk Ken",
+      "score": 1,
+      "specialty": "parents"
+     },
+     {
+      "name": "Magic Sensitivity",
+      "score": 1,
+      "specialty": "auras"
+     },
+     {
+      "name": "Native Language",
+      "score": 5,
+      "specialty": "rhyming slang"
+     },
+     {
+      "name": "Swim",
+      "score": 2,
+      "specialty": "ponds"
+     }
+    ],
+    "personalityTraits": [
+     {
+      "name": "Bully",
+      "score": 3
+     },
+     {
+      "name": "Brave",
+      "score": 2
+     },
+     {
+      "name": "Loyal",
+      "score": 1
+     }
+    ],
+    "virtuesFlaws": [
+     {
+      "name": "Son of Craftsman",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Intuition",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Puissant Craft: Blacksmith",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Magic Sensitivity",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Bully",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "No Sense of Direction",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Slow Reflexes",
+      "count": 1,
+      "param": null
+     }
+    ],
+    "combat": "Dodge:* Init –6, Attack n/a, Defense –4, Damage n/a *Fist:* Init –6, Attack +1, Defense –3, Damage –1",
+    "soak": "–2",
+    "equipment": "Clothing similar to his father’s: homespun shirt and trousers, leather apron.",
+    "confidence": null,
+    "appearance": "A broad-shouldered boy with blue eyes and a gaptoothed sneer.",
+    "description": "The blacksmith’s son is a bully. He is stronger than his peers and knows it. He is not looking forward to a life spent as a blacksmith in the village, which might explain why he bullies the other children. His Magic Sensitivity inexplicably draws him toward magic regiones and auras, and his No Sense of Direction means that he invariably can’t find his way home.\n\nThis character uses the Athletic Childhood as a starting base.",
+    "source": "Apprentices"
+   },
+   {
+    "name": "Grog: Urchin",
+    "house": null,
+    "age": 11,
+    "size": -3,
+    "characteristics": {
+     "int": -1,
+     "per": -2,
+     "pre": 3,
+     "com": 3,
+     "str": -2,
+     "sta": 0,
+     "dex": 1,
+     "qik": 1
+    },
+    "abilities": [
+     {
+      "name": "Area Lore",
+      "score": 2,
+      "specialty": "secondary streets"
+     },
+     {
+      "name": "Athletics",
+      "score": 1,
+      "specialty": "avoiding pursuit"
+     },
+     {
+      "name": "Awareness",
+      "score": 1,
+      "specialty": "city guards"
+     },
+     {
+      "name": "Brawl",
+      "score": 1,
+      "specialty": "dodge"
+     },
+     {
+      "name": "Charm",
+      "score": 1,
+      "specialty": "city guards"
+     },
+     {
+      "name": "Folk Ken",
+      "score": 1,
+      "specialty": "adults"
+     },
+     {
+      "name": "Guile",
+      "score": 2,
+      "specialty": "city guards"
+     },
+     {
+      "name": "Leadership",
+      "score": 3,
+      "specialty": "peers"
+     },
+     {
+      "name": "Legerdemain",
+      "score": 2,
+      "specialty": "picking pockets"
+     },
+     {
+      "name": "Music",
+      "score": 2,
+      "specialty": "singing"
+     },
+     {
+      "name": "Native Language",
+      "score": 5,
+      "specialty": "thieves’ slang"
+     },
+     {
+      "name": "Stealth",
+      "score": 1,
+      "specialty": "following people"
+     },
+     {
+      "name": "Survival",
+      "score": 2,
+      "specialty": "finding fresh water"
+     }
+    ],
+    "personalityTraits": [
+     {
+      "name": "Mischievous",
+      "score": 3
+     },
+     {
+      "name": "Determined",
+      "score": 2
+     },
+     {
+      "name": "Loyal",
+      "score": -1
+     }
+    ],
+    "virtuesFlaws": [
+     {
+      "name": "Daughter of Branded Criminal",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Inconspicuous",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Inspirational",
+      "count": 1,
+      "param": null
+     },
+     {
+      "name": "Small Frame",
+      "count": 1,
+      "param": null
+     }
+    ],
+    "combat": "Dodge:* Init –1, Attack n/a, Defense +1, Damage n/a",
+    "soak": "–2",
+    "equipment": "Ratty clothes, shabby cloak, and a hidden dagger",
+    "confidence": null,
+    "appearance": "The urchin is a small, freckled-face, dirty girl, with quick fingers and ferretlike eyes.",
+    "description": "The urchin is the daughter of a branded outlaw, who fled her abusive home and lives on the streets of a large city. She has made friends through her inventive songs, which usually poke fun at some local dignitary or market celebrity. Her immediate goal is to lead a gang of child thieves. The urchin started with the Exploring Childhood sample childhood. The character has room for another Minor Virtue and Flaw.",
+    "source": "Apprentices"
+   }
+  ]
+ },
  "creationRules": {
   "detailedCharacterCreation": {
    "name": "Detailed Character Creation",
