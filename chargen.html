@@ -38,6 +38,10 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(20px,3.4vw,27px);c
 .steps li.invalid .st-num{background:var(--rust);color:#fff;border-color:var(--rust)}
 .st-num{flex:none;width:20px;height:20px;border-radius:50%;border:1px solid var(--line);display:flex;
   align-items:center;justify-content:center;font-size:11px;background:var(--parch)}
+.mode-box{background:rgba(44,107,102,.08);border:1px solid rgba(44,107,102,.3);border-radius:9px;padding:8px 10px;margin-bottom:10px;text-align:center}
+.mode-lbl{display:block;font-family:'Cinzel',serif;font-size:12px;color:var(--teal);letter-spacing:.03em;margin-bottom:5px}
+.mode-sw{font-family:'EB Garamond',serif;font-size:11.5px;color:var(--ink-soft);background:transparent;border:1px solid rgba(120,90,40,.4);border-radius:6px;padding:3px 8px;cursor:pointer}
+.mode-sw:hover{background:rgba(120,90,40,.1)}
 .budget{background:rgba(244,235,213,.7);border:1px solid rgba(120,90,40,.35);border-radius:9px;padding:10px 12px;font-size:12.5px}
 .budget h4{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust-bright);margin:0 0 7px}
 .budget .brow{display:flex;justify-content:space-between;gap:8px;padding:2px 0}
@@ -135,7 +139,7 @@ function mdRules(s){return esc(s).replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</stro
 const norm = s => (s==null?'':String(s)).toLowerCase();
 const LS_KEY = 'sjorseidr_chargen_v2';
 
-let DATA=null, SPELLS=null, C=null, step=0, FMAP=null;
+let DATA=null, SPELLS=null, C=null, step=0, FMAP=null, advisory=false;
 
 function blankChar(){
   return {
@@ -165,6 +169,7 @@ const NATIVE='Native Language';
 
 function charBudget(){ return 7 + 3*C.virtues.filter(v=>/^Improved Characteristics$/i.test(v.name)).length; }
 function charCap(key){
+  if(advisory) return {max:10, min:-10};
   const cname=(DATA.characteristics.find(c=>c.key===key)||{}).name;
   const greats=C.virtues.filter(v=>/Great .*Characteristic/i.test(v.name) && v.detail===cname).length;
   const poors =C.flaws.filter(f=>/Poor .*Characteristic/i.test(f.name) && f.detail===cname).length;
@@ -200,8 +205,8 @@ function detailOptions(type){
   return null;
 }
 
-function save(){ try{ localStorage.setItem(LS_KEY, JSON.stringify({C,step})); }catch(e){} }
-function loadSaved(){ try{ const r=JSON.parse(localStorage.getItem(LS_KEY)); if(r&&r.C&&r.C.childhood){C=r.C;step=r.step||0;} }catch(e){} }
+function save(){ try{ localStorage.setItem(LS_KEY, JSON.stringify({C,step,advisory})); }catch(e){} }
+function loadSaved(){ try{ const r=JSON.parse(localStorage.getItem(LS_KEY)); if(r&&r.C&&r.C.childhood){C=r.C;step=r.step||0;advisory=!!r.advisory;} }catch(e){} }
 
 const STEPS=[
   {id:'type',   title:'Concept & Type',  render:renderType,   valid:vType},
@@ -290,7 +295,12 @@ function render(){
   const rail=vis.map((s,i)=>{const v=s.valid();const cls=i===step?'active':(i<step?(v.ok?'done':'invalid'):'');
     return `<li class="${cls}" data-i="${i}"><span class="st-num">${i+1}</span>${esc(s.title)}</li>`;}).join('');
   $('#app').innerHTML=`<div class="layout">
-     <div class="rail"><ul class="steps">${rail}</ul><div class="budget" id="budgetBox"></div></div>
+     <div class="rail"><ul class="steps">${rail}</ul>
+       <div class="mode-box" title="Strict enforces RAW limits (characteristic caps); Advisory lets you exceed them — warnings become informational.">
+         <span class="mode-lbl">${advisory?'✎ Advisory':'⚖ Strict RAW'}</span>
+         <button class="mode-sw" id="modeSw">${advisory?'switch to Strict':'switch to Advisory'}</button>
+       </div>
+       <div class="budget" id="budgetBox"></div></div>
      <div><div class="panel"><div class="step-title">${esc(cur.title)}</div><div id="stepBody"></div><div id="stepMsgs"></div></div>
        <div class="navbtns"><button class="btn ghost" id="prevBtn" ${step===0?'disabled':''}>← Back</button>
          <div><button class="btn ghost" id="resetBtn">Reset</button>
@@ -301,6 +311,7 @@ function render(){
   $('#prevBtn').onclick=()=>{if(step>0){step--;save();render();}};
   $('#nextBtn').onclick=()=>{if(step<visibleSteps().length-1){step++;save();render();}};
   $('#resetBtn').onclick=()=>{if(confirm('Discard this character and start over?')){C=blankChar();step=0;save();render();}};
+  $('#modeSw').onclick=()=>{advisory=!advisory;save();render();};
   save();
 }
 function renderMsgs(cur){ const v=cur.valid();
@@ -674,7 +685,7 @@ function renderFinish(el){
 function renderReview(el){
   const problems=[]; visibleSteps().forEach(s=>{const v=s.valid();if(!v.ok)(v.msgs||[]).forEach(m=>{if(m.level==='warn')problems.push(s.title+': '+m.text);});});
   const obj=exportObject();
-  el.innerHTML=`${problems.length?`<div class="warn"><strong>RAW issues (${problems.length}):</strong><ul style="margin:6px 0 0">${problems.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`:'<div class="good">All RAW checks pass. Ready to export.</div>'}
+  el.innerHTML=`${problems.length?`<div class="${advisory?'good':'warn'}"><strong>${advisory?'Advisory notes':'RAW issues'} (${problems.length})${advisory?' — informational, export allowed':''}:</strong><ul style="margin:6px 0 0">${problems.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`:'<div class="good">All RAW checks pass. Ready to export.</div>'}
     <p class="step-help">Export is a superset of the site's <code>magi.json</code> shape — paste it into <code>magi.json</code>'s <code>magi</code> map to view in <a href="ships.html">Fleet &amp; Crew</a>. Foundry export is planned.</p>
     <div class="navbtns" style="justify-content:flex-start;flex-wrap:wrap">
       <button class="btn" id="dlBtn">⬇ Download JSON</button>
