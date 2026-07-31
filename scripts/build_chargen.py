@@ -394,6 +394,55 @@ def main():
         },
     }
 
+    # Pre-defined beings (Creature entities) — realm-tagged statblocks used by the
+    # realm "load a defined being" pickers. Fully structured: characteristics, V&F,
+    # abilities, combat, personality, and powers (each a nested DEF with Cost/Init/Form).
+    creatures = []
+    for ce in ents:
+        if ce.get("extends") != "Creature":
+            continue
+        chars = {}
+        cp = prop_obj(ce, "Characteristics")
+        if cp:
+            for n in cp.get("nested", []) or []:
+                k = CHAR_KEYS.get(n.get("name")) or pres_key.get(n.get("name"))
+                if k:
+                    chars[k] = _int(n.get("value"), 0)
+        abils, ptraits, powers, combat = [], [], [], []
+        for b in ce.get("blocks", []) or []:
+            kw = b.get("keyword")
+            if kw == "ABILITIES":
+                for r in b.get("rows", []) or []:
+                    abils.append({"name": r.get("label", ""), "score": _int(cell(r, "SCORE"), 0),
+                                  "specialty": cell(r, "SPECIALTY") or ""})
+            elif kw == "PERSONALITY_TRAITS":
+                for r in b.get("rows", []) or []:
+                    cells = r.get("cells", []) or []
+                    ptraits.append({"name": r.get("label", ""),
+                                    "score": _int(cells[0].get("value"), 0) if cells else 0})
+            elif kw == "COMBAT":
+                for r in b.get("rows", []) or []:
+                    combat.append({"label": r.get("label", ""),
+                                   "cells": [{"key": c.get("key"), "value": c.get("value")} for c in (r.get("cells") or [])]})
+            elif kw == "POWERS":
+                for pe in b.get("entities", []) or []:
+                    pdesc = next((pb.get("value") for pb in pe.get("blocks", []) if pb.get("keyword") == "DESCRIPTION"), "")
+                    powers.append({"name": pe.get("name", ""), "cost": prop(pe, "Cost"),
+                                   "initiative": prop(pe, "Initiative"), "form": prop(pe, "Form"),
+                                   "text": pdesc or ""})
+        creatures.append({
+            "name": ce["name"], "realm": prop(ce, "Might Realm"), "form": prop(ce, "Form"),
+            "might": _int(prop(ce, "Might")), "size": _int(prop(ce, "Size")),
+            "characteristics": chars, "virtuesFlaws": parse_list(prop(ce, "Virtues and Flaws")),
+            "abilities": abils, "personalityTraits": ptraits, "combat": combat, "powers": powers,
+            "soak": prop(ce, "Soak"), "fatigueLevels": prop(ce, "Fatigue Levels"),
+            "woundPenalties": prop(ce, "Wound Penalties"), "vis": prop(ce, "Vis"),
+            "appearance": prop(ce, "Appearance"),
+            "description": next((b.get("value") for b in ce.get("blocks", []) if b.get("keyword") == "DESCRIPTION"), "") or "",
+            "source": prop(ce, "Source"),
+        })
+    creatures.sort(key=lambda x: (str(x["realm"]), x["name"]))
+
     creation_rules = {}
     for key, ename in CREATION_RULE_ENTITIES.items():
         e = by_name.get(ename)
@@ -469,6 +518,7 @@ def main():
         "trainingPackages": training,
         "characterTemplates": templates,
         "realmToolkits": realm_toolkits,
+        "creatures": creatures,
         "creationRules": creation_rules,
         "spellsFile": "chargen-spells.json",
         "spellCount": len(spells),
@@ -506,6 +556,9 @@ def main():
           f"{len(rm['magic']['inferiorities'])}I/{len(rm['magic']['powers'])}P | "
           f"faerie {len(rm['faerie']['powers'])}P/{len(rm['faerie']['wizardry'])}W/"
           f"{len(rm['faerie']['blood'])}B")
+    import collections as _c
+    cbr = _c.Counter(str(c['realm']) for c in creatures)
+    print(f"  pre-defined beings (Creature) {len(creatures)}: " + ", ".join(f"{k} {v}" for k, v in sorted(cbr.items())))
     print(f"  creation-rule passages {len(creation_rules)}/{len(CREATION_RULE_ENTITIES)}")
     print(f"  spell guidelines {len(guidelines)} rows across "
           f"{len(set((g['technique'],g['form']) for g in guidelines))} Te/Fo tables")
