@@ -119,10 +119,17 @@ drive the wizard end-to-end — budgets validate, House free-Virtue applies, exp
 round-trips into `ships.html`; zero console errors; share proof. Document
 regenerating the derived JSON after any corpus update.
 
-## Known later-stage work (blockers / follow-ups)
-- Advisory-mode toggle (decision 2, phase 2).
-- Foundry export (decision 3, later).
-- Guideline-based spell *design* (decision 4 — predefined first).
-- Deeper XP-allocation automation and post-apprenticeship years (decision 5).
-- Parameterized-virtue UX polish; finer RAW caps (Story-Flaw cap, one Major
-  Personality Flaw, etc.) beyond the core budget rules.
+## Status of the later-stage work
+- ✅ **Advisory-mode toggle** (decision 2) — Strict RAW vs Advisory switch in the
+  rail; Advisory relaxes the characteristic caps and reframes RAW issues as
+  informational. (commit eb39519)
+- ✅ **Foundry (arm5e) export** (decision 3) — `scripts/build_foundry_map.py` +
+  `buildFoundryActor()`; importable Actor JSON for magi/companions/grogs.
+  ⚠ verified structurally, not yet by a live Foundry import. (commit 4e5d3ce)
+- ✅ **Guideline-based spell design** (decision 4) — "Design from guidelines" mode
+  with RAW level math (verified: Pilum of Flame → level 20). (commit 26f4332)
+- ✅ **Corpus gaps fixed** — Presence Characteristic (name collision) + Great/Poor
+  Characteristic added to arm5e & armdef DSL, re-merged. (DSL 85cd0e0)
+- Remaining: deeper XP-allocation automation / post-apprenticeship (decision 5);
+  a full Foundry round-trip import test; parameterized-virtue UX polish; finer RAW
+  caps (Story-Flaw cap, one Major Personality Flaw) beyond the core budget rules.
