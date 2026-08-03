@@ -97,6 +97,13 @@ select.detail-sel{width:auto;font-size:11.5px;padding:1px 4px;border:1px dashed 
 .art-row,.abil-row{display:flex;align-items:center;gap:8px;padding:4px 0;border-bottom:1px solid rgba(120,90,40,.14);font-size:13px}
 .art-row .an,.abil-row .an{flex:1;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
 .art-row input[type=number],.abil-row input[type=number]{width:64px;text-align:center}
+.lvlstep{display:inline-flex;align-items:center;gap:4px;flex:none}
+.lvlstep button{width:20px;height:20px;border-radius:4px;border:1px solid var(--line);background:var(--parch);cursor:pointer;font-size:13px;line-height:1;color:var(--ink);padding:0}
+.lvlstep button:disabled{opacity:.3;cursor:not-allowed}
+.lvlstep .lvlval{min-width:16px;text-align:center;font-weight:600;font-size:14px}
+.freevf{margin-top:10px}
+.freevf .fv-opt{display:inline-block;font-family:'EB Garamond',serif;font-size:12.5px;padding:5px 11px;margin:0 6px 6px 0;border:1px solid rgba(120,90,40,.45);border-radius:18px;background:rgba(255,252,244,.6);cursor:pointer}
+.freevf .fv-opt.sel{border-color:var(--gold);background:rgba(198,155,63,.18);box-shadow:0 0 0 1px var(--gold) inset}
 .mini{font-size:11px;color:var(--ink-soft)}
 .btn{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.03em;padding:8px 16px;border-radius:7px;border:1px solid var(--line);
   background:var(--gold);color:#fff;cursor:pointer}
@@ -317,7 +324,7 @@ const STEPS=[
   {id:'youth',  title:'Youth (Age & XP)', render:renderYouth, valid:vYouth, youngOnly:true},
   {id:'child',  title:'Early Childhood', render:renderChild,  valid:vChild},
   {id:'training',title:'Training Package',render:renderTraining,valid:()=>({ok:true,msgs:[]})},
-  {id:'later',  title:'Later Life',      render:renderLater,  valid:vLater},
+  {id:'later',  title:'Later Life (optional)', render:renderLater,  valid:vLater},
   {id:'appr',   title:'Apprenticeship',  render:renderAppr,   valid:vAppr,   magiOnly:true},
   {id:'lyears', title:'Later Years',     render:renderLYears, valid:vLYears, magiOnly:true},
   {id:'spells', title:'Spells',          render:renderSpells, valid:vSpells, magiOnly:true},
@@ -328,6 +335,7 @@ const STEPS=[
    ability phases, so those steps are hidden for a Faerie-realm character. */
 const visibleSteps = () => STEPS.filter(s=>{
   if(s.magiOnly && !isMagus()) return false;
+  if(s.id==='training' && isMagus()) return false;   // training packages are for grogs/companions only
   if(s.realmOnly && !C.realm) return false;
   if(s.youngOnly && !(isYoung() && !isMagus())) return false;          // Youth step: young non-magi only
   if(C.realm==='faerie' && ['child','training','later'].includes(s.id)) return false;
@@ -338,7 +346,11 @@ const visibleSteps = () => STEPS.filter(s=>{
 
 function vType(){ return {ok:!!C.name.trim(), msgs: C.name.trim()?[]:[{level:'warn',text:'Give the character a name.'}]}; }
 function vHouse(){ if(!isMagus()) return {ok:true,msgs:[]};
-  return C.house?{ok:true,msgs:[{level:'ok',text:'House '+C.house+' chosen.'}]}:{ok:false,msgs:[{level:'warn',text:'A magus must choose a House.'}]}; }
+  if(!C.house) return {ok:false,msgs:[{level:'warn',text:'A magus must choose a House.'}]};
+  const h=DATA.houses.find(x=>x.name===C.house)||{};
+  if((h.freeVirtueMode||'Fixed')==='Choice' && !C.virtues.some(v=>v.houseFree))
+    return {ok:false,msgs:[{level:'warn',text:'Choose '+C.house+"'s free House Virtue."}]};
+  return {ok:true,msgs:[{level:'ok',text:'House '+C.house+' chosen.'}]}; }
 function vfBudget(){
   const flawPts=C.flaws.reduce((a,f)=>a+vfPoints(f),0);
   const virPts=C.virtues.filter(v=>v.size!=='Free').reduce((a,v)=>a+vfPoints(v),0);
@@ -604,32 +616,57 @@ function renderType(el){
 }
 
 function renderHouse(el){
-  el.innerHTML=`<p class="step-help">Pick a Hermetic House. Its free House Virtue is added automatically (multi-item traditions, e.g. Ex Miscellanea, are listed for you to add manually).</p>
+  el.innerHTML=`<p class="step-help">Pick a Hermetic House. Fixed House Virtues are added automatically; a House that grants a <em>choice</em> of Virtue lets you pick below, and tradition Houses (Ex Miscellanea) list their package for you to add in Virtues &amp; Flaws.</p>
     <div class="list" style="max-height:none">${DATA.houses.map(h=>`<div class="opt" data-h="${esc(h.name)}" style="${C.house===h.name?'background:rgba(198,155,63,.18)':''}">
       <span><strong>${esc(h.name)}</strong> <span class="mini">${esc(h.houseType||'')}</span></span><span class="mini">${esc((h.benefit||'').slice(0,42))}</span></div>`).join('')}</div>
     <div id="houseDesc"></div>`;
   el.querySelectorAll('.opt').forEach(o=>o.onclick=()=>{setHouse(o.dataset.h);render();});
   const h=DATA.houses.find(x=>x.name===C.house);
-  if(h) el.querySelector('#houseDesc').innerHTML=`<div class="rules-note">${mdRules(h.text)}</div><p class="mini">Free House Virtue: <strong>${esc(freeVirtueLabel(h.freeVirtue))}</strong></p>`;
+  if(h){ el.querySelector('#houseDesc').innerHTML=`<div class="rules-note">${mdRules(h.text)}</div>${freeVirtueUI(h)}`;
+    el.querySelectorAll('[data-fvpick]').forEach(sp=>sp.onclick=()=>chooseFreeVirtue(+sp.dataset.fvpick)); }
+}
+/* Mode-aware free-Virtue UI. Fixed → shown (auto-added); Choice → pick one;
+   Open → a qualifying Minor Virtue the player adds; Package → an example tradition. */
+function freeVirtueUI(h){
+  const mode=h.freeVirtueMode||'Fixed', opts=h.freeVirtueOptions||[];
+  const lbl=o=>esc(o.name)+(o.detail?` (${esc(o.detail)})`:'');
+  if(mode==='Choice'){
+    const chosen=C.virtues.find(v=>v.houseFree);
+    return `<div class="freevf"><p class="mini">This House grants a <strong>choice</strong> of free Virtue — pick one:</p>
+      ${opts.map((o,i)=>{const sel=chosen&&chosen.name===o.name&&(chosen.detail||null)===(o.detail||null);
+        return `<span class="fv-opt ${sel?'sel':''}" data-fvpick="${i}">${lbl(o)}</span>`;}).join('')}</div>`;
+  }
+  if(mode==='Open')
+    return `<div class="freevf"><p class="mini"><strong>Free House Virtue:</strong> ${esc(h.benefit||'')}<br>Choose a qualifying Minor Virtue and add it in the <em>Virtues &amp; Flaws</em> step.</p></div>`;
+  if(mode==='Package')
+    return `<div class="freevf"><p class="mini">This House grants a <strong>tradition package</strong> that varies by tradition (a free Minor Hermetic Virtue, a free Major non-Hermetic Virtue, and a compulsory Major Hermetic Flaw). Example: ${opts.map(lbl).join(', ')}. Add your tradition's Virtues &amp; Flaws in the <em>Virtues &amp; Flaws</em> step.</p></div>`;
+  return `<p class="mini">Free House Virtue: <strong>${opts.length?lbl(opts[0]):esc(freeVirtueLabel(h.freeVirtue))}</strong></p>`;
 }
 function freeVirtueLabel(fv){ if(!fv) return '—'; return String(fv).replace(/[\[\]^"]/g,'').replace(/\(/,' (').trim(); }
+/* The House free Virtue is marked `houseFree` so it can be swapped when a Choice
+   is (re)made without disturbing The Gift / Hermetic Magus (also auto). */
+function addHouseFree(o){
+  if(C.virtues.some(v=>v.name===o.name && (v.detail||null)===(o.detail||null))) return;
+  const def=DATA.virtues.find(v=>v.name===o.name)||{name:o.name,size:'Free',category:'Special'};
+  C.virtues.push({name:def.name,size:'Free',category:def.category||'Special',detail:o.detail||null,auto:true,free:true,houseFree:true});
+}
 function setHouse(name){
   const h=DATA.houses.find(x=>x.name===name); if(!h) return;
   C.virtues=C.virtues.filter(v=>!v.auto);
   C.house=name;
   ensureVirtue({name:'The Gift',auto:true});
   ensureVirtue({name:'Hermetic Magus',auto:true});
-  const fv=parseFreeVirtue(h.freeVirtue);
-  if(fv) ensureVirtue({name:fv.name,detail:fv.detail,auto:true,free:true});
+  const mode=h.freeVirtueMode||'Fixed', opts=h.freeVirtueOptions||[];
+  if(mode==='Fixed' && opts[0]) addHouseFree(opts[0]);
+  // Choice/Open/Package: the player resolves the free Virtue (no silent first-pick).
   save();
 }
-function parseFreeVirtue(fv){
-  if(!fv) return null;
-  let s=String(fv).trim().replace(/^\[/,'').replace(/\]$/,'').trim();
-  if(s.includes(',')) return null;
-  const m=s.match(/^\^?"([^"]+)"(?:\s*\(\s*\^?"([^"]+)"\s*\))?/)||s.match(/^([^(]+?)(?:\(([^)]+)\))?$/);
-  if(!m) return null;
-  return {name:m[1].trim(), detail:(m[2]||'').trim()||null};
+function chooseFreeVirtue(idx){
+  const h=DATA.houses.find(x=>x.name===C.house); if(!h) return;
+  C.virtues=C.virtues.filter(v=>!v.houseFree);
+  const o=(h.freeVirtueOptions||[])[idx];
+  if(o) addHouseFree(o);
+  save(); render();
 }
 function ensureVirtue(o){
   if(C.virtues.some(v=>v.name===o.name)) return;
@@ -691,7 +728,11 @@ function addVF(side,name){
   save(); render();
 }
 function showVFDesc(side,i){const x=(side==='virtue'?C.virtues:C.flaws)[i];
-  const def=(side==='virtue'?DATA.virtues:DATA.flaws).find(d=>d.name===x.name)||{};
+  let def=(side==='virtue'?DATA.virtues:DATA.flaws).find(d=>d.name===x.name);
+  // Some House free "Virtues" are corpus Abilities (e.g. Faerie Magic) — fall back
+  // to the Abilities table so their description resolves instead of showing "—".
+  if(!def || !def.text){ const ab=(DATA.abilities||[]).find(a=>a.name===x.name); if(ab && ab.text) def={...(def||{}),text:ab.text}; }
+  def=def||{};
   $('#vfDesc').innerHTML=`<div class="rules-note"><strong>${esc(x.name)}</strong> <span class="mini">(${esc(x.size)}, ${esc(x.category||'')})</span><br>${mdRules(def.text||'—')}</div>`;}
 
 function renderChars(el){
@@ -920,13 +961,31 @@ function abilAllocRow(arrId, a, i){
   const paramUI = isParamAbility(a.name)
     ? `<input type="text" class="detail-in" data-alparam="${arrId}:${i}" placeholder="parameter…" value="${esc(param)}"${dl.id?` list="${dl.id}"`:''}>` : '';
   const specUI = `<input type="text" class="detail-in" data-alspec="${arrId}:${i}" placeholder="specialty" value="${esc(spec)}"${dl.id?` list="${dl.id}"`:''}>`;
+  const sc=scoreFromXp(xp);
   return `<div class="abil-row"><span class="an">${esc(a.name)} ${paramUI} ${specUI}${dl.html}</span>
-    <input type="number" data-alx="${arrId}:${i}" value="${xp}"><span class="mini">→ ${scoreFromXp(xp)}</span>
+    <span class="lvlstep"><button data-aldec="${arrId}:${i}" ${sc<=0?'disabled':''}>−</button><span class="lvlval">${sc}</span><button data-alinc="${arrId}:${i}">+</button></span>
+    <input type="number" data-alx="${arrId}:${i}" value="${xp}"><span class="mini">xp</span>
     <button class="x" data-alrm="${arrId}:${i}">×</button></div>`;
 }
 function abilAllocRows(arr, arrId){
   if(!arr.length) return '<div class="mini">— none allocated —</div>';
   return arr.map((a,i)=>abilAllocRow(arrId,a,i)).join('');
+}
+/* Wire the editable rows of ONE allocation bucket (arrId), scoped so several
+   buckets can share a step. Typing XP updates in place (keeps focus); the ±
+   level steppers snap XP to that level's exact total (score 2 → 15 XP) — a level
+   bump and an XP edit stay in sync — then re-render. */
+function wireAllocRows(el, arr, arrId, rerender){
+  const inst=ref=>arr[+ref.split(':')[1]], done=rerender||function(){};
+  const bump=(ref,d)=>{const a=inst(ref); a.xp=xpForScore(Math.max(0,scoreFromXp(a.xp)+d)); save(); renderBudget(); done();};
+  el.querySelectorAll(`[data-alx^="${arrId}:"]`).forEach(inp=>inp.oninput=()=>{const a=inst(inp.dataset.alx); a.xp=+inp.value||0;
+    const lv=inp.closest('.abil-row').querySelector('.lvlval'); if(lv) lv.textContent=scoreFromXp(a.xp);
+    save();renderBudget();updatePoolLine();renderMsgs(visibleSteps()[step]);});
+  el.querySelectorAll(`[data-alinc^="${arrId}:"]`).forEach(b=>b.onclick=()=>bump(b.dataset.alinc,1));
+  el.querySelectorAll(`[data-aldec^="${arrId}:"]`).forEach(b=>b.onclick=()=>bump(b.dataset.aldec,-1));
+  el.querySelectorAll(`[data-alparam^="${arrId}:"]`).forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alparam).param=inp.value;save();renderBudget();renderMsgs(visibleSteps()[step]);});
+  el.querySelectorAll(`[data-alspec^="${arrId}:"]`).forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alspec).spec=inp.value;save();});
+  el.querySelectorAll(`[data-alrm^="${arrId}:"]`).forEach(b=>b.onclick=()=>{arr.splice(+b.dataset.alrm.split(':')[1],1);save();done();});
 }
 let abilFilter={q:'',cat:''};
 function wireAbilAlloc(el, arr, arrId, restrict, onchange){
@@ -948,12 +1007,7 @@ function wireAbilAlloc(el, arr, arrId, restrict, onchange){
   if(q) q.oninput=()=>{abilFilter.q=q.value;fill();};
   if(cat) cat.onchange=()=>{abilFilter.cat=cat.value;fill();};
   fill();
-  const inst=ref=>arr[+ref.split(':')[1]];
-  el.querySelectorAll('[data-alx]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alx).xp=+inp.value||0;
-    inp.nextElementSibling.textContent='→ '+scoreFromXp(+inp.value||0);save();renderBudget();updatePoolLine();renderMsgs(visibleSteps()[step]);});
-  el.querySelectorAll('[data-alparam]').forEach(inp=>{inp.oninput=()=>{inst(inp.dataset.alparam).param=inp.value;save();renderBudget();renderMsgs(visibleSteps()[step]);};});
-  el.querySelectorAll('[data-alspec]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alspec).spec=inp.value;save();});
-  el.querySelectorAll('[data-alrm]').forEach(b=>b.onclick=()=>{arr.splice(+b.dataset.alrm.split(':')[1],1);save();onchange();});
+  wireAllocRows(el, arr, arrId, onchange);
 }
 let updatePoolLine=()=>{};
 
@@ -966,10 +1020,14 @@ function renderChild(el){
     <label class="fld">Add childhood ability</label>
     <div class="searchbar"><input type="text" class="al-q" placeholder="search…"></div>
     <div class="list al-add" style="max-height:140px"></div>
-    <h4 class="mini" style="margin-top:10px">Allocated</h4><div class="al-rows">${abilAllocRows(C.childhood.spread,'child')}</div>`;
+    <h4 class="mini" style="margin-top:10px">Allocated</h4><div class="al-rows">${abilAllocRows(C.childhood.spread,'child')}</div>
+    ${(C.template.abilities&&C.template.abilities.length)?`<h4 class="mini" style="margin-top:16px">From template “${esc(C.templateName||C.template.name||'')}” <span class="count-pill">editable</span></h4>
+      <p class="mini">Abilities loaded from your template live here (not the 45-XP childhood pool). Adjust or remove them — going back to this step no longer hides them.</p>
+      <div class="al-rows" id="tplRows">${abilAllocRows(C.template.abilities,'template')}</div>`:''}`;
   $('#natLang').oninput=e=>{C.childhood.nativeLang=e.target.value;C.specs[NATIVE]=e.target.value;save();renderMsgs(STEPS.find(s=>s.id==='child'));};
   updatePoolLine=()=>{const s=abilSum(C.childhood.spread);const p=$('#poolLine');if(p){p.textContent=`Childhood spread: ${s} / 45 XP`;p.classList.toggle('bad',s>45);}};
   wireAbilAlloc(el, C.childhood.spread, 'child', childAbil, ()=>renderChild(el));
+  if(C.template.abilities&&C.template.abilities.length) wireAllocRows(el, C.template.abilities, 'template', ()=>renderChild(el));
 }
 
 /* --- Training Packages (optional step; Grogs partial templates) ------------- */
@@ -1020,16 +1078,12 @@ function renderTrainingDetail(box){
   wireTrainingGrants(box);
 }
 function wireTrainingGrants(el){
-  const arr=C.training.grants, inst=ref=>arr[+ref.split(':')[1]];
-  el.querySelectorAll('[data-alx]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alx).xp=+inp.value||0;inp.nextElementSibling.textContent='→ '+scoreFromXp(+inp.value||0);save();renderBudget();});
-  el.querySelectorAll('[data-alparam]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alparam).param=inp.value;save();});
-  el.querySelectorAll('[data-alspec]').forEach(inp=>inp.oninput=()=>{inst(inp.dataset.alspec).spec=inp.value;save();});
-  el.querySelectorAll('[data-alrm]').forEach(b=>b.onclick=()=>{arr.splice(+b.dataset.alrm.split(':')[1],1);save();renderTraining($('#stepBody'));renderBudget();});
+  wireAllocRows(el, C.training.grants, 'train', ()=>{renderTraining($('#stepBody'));renderBudget();});
 }
 
 function renderLater(el){
   const pool=laterRate()*(+C.later.years||0), spent=abilSum(C.later.alloc);
-  el.innerHTML=`<p class="step-help">${laterRate()} XP/year until apprenticeship (Wealthy 20, Poor 10). Spread across any Abilities.</p>
+  el.innerHTML=`<p class="step-help"><strong>Optional.</strong> ${laterRate()} XP/year until apprenticeship (Wealthy 20, Poor 10), spread across any Abilities. Set 0 years to skip.</p>
     <div class="row2"><div><label class="fld">Years of later life</label><input type="number" id="llYears" value="${C.later.years}"></div>
       <div><label class="fld">Pool</label><input type="text" value="${pool} XP (${laterRate()}×${C.later.years})" disabled></div></div>
     <div class="alloc-pool ${spent>pool?'bad':''}" id="poolLine">Later-life XP: ${spent} / ${pool}</div>
@@ -1053,18 +1107,27 @@ function renderAppr(el){
     <div class="list al-add" style="max-height:130px"></div>
     <div class="al-rows" style="margin-top:8px">${abilAllocRows(C.apprentice.abilities,'appr')}</div><div id="artDesc"></div>`;
   updatePoolLine=()=>{const s=sumObj(C.apprentice.arts)+abilSum(C.apprentice.abilities),bud=apprBudget(),ln=$('#poolLine');if(ln){ln.textContent=`Apprenticeship XP: ${s} / ${bud}`;ln.classList.toggle('bad',s>bud);}};
-  wireArtRows(el, C.apprentice.arts, 'artxp');
+  wireArtRows(el, C.apprentice.arts, 'artxp', ()=>renderAppr(el));
   if($('#apprYears'))$('#apprYears').oninput=e=>{C.young.apprenticeYears=Math.max(0,Math.min(15,+e.target.value||0));save();renderAppr(el);renderBudget();};
   wireAbilAlloc(el, C.apprentice.abilities, 'appr', null, ()=>renderAppr(el));
 }
-function artRows(list){ return list.map(a=>`<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
-  <input type="number" data-artxp="${a.key}" value="${C.apprentice.arts[a.key]||0}"><span class="mini">→ ${scoreFromXp(C.apprentice.arts[a.key]||0)}</span></div>`).join(''); }
-function wireArtRows(el, artObj, attr){
+function artRow(a, xp){ const sc=scoreFromXp(xp);
+  return `<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
+  <span class="lvlstep"><button data-artdec="${a.key}" ${sc<=0?'disabled':''}>−</button><span class="lvlval">${sc}</span><button data-artinc="${a.key}">+</button></span>
+  <input type="number" data-artxp="${a.key}" value="${xp}"><span class="mini">xp</span></div>`; }
+function artRows(list){ return list.map(a=>artRow(a, C.apprentice.arts[a.key]||0)).join(''); }
+/* Art rows mirror the ability steppers: ± snaps Art XP to the exact level total. */
+function wireArtObj(el, artObj, attr, rerender){
+  const done=rerender||function(){};
   el.querySelectorAll(`[data-${attr}]`).forEach(inp=>inp.oninput=()=>{artObj[inp.dataset[attr]]=+inp.value||0;
-    inp.nextElementSibling.textContent='→ '+scoreFromXp(+inp.value||0);save();renderBudget();updatePoolLine();renderMsgs(visibleSteps()[step]);});
+    const lv=inp.closest('.art-row').querySelector('.lvlval'); if(lv) lv.textContent=scoreFromXp(+inp.value||0);
+    save();renderBudget();updatePoolLine();renderMsgs(visibleSteps()[step]);});
+  el.querySelectorAll('[data-artinc]').forEach(b=>b.onclick=()=>{const k=b.dataset.artinc;artObj[k]=xpForScore(scoreFromXp(artObj[k]||0)+1);save();renderBudget();done();});
+  el.querySelectorAll('[data-artdec]').forEach(b=>b.onclick=()=>{const k=b.dataset.artdec;artObj[k]=xpForScore(Math.max(0,scoreFromXp(artObj[k]||0)-1));save();renderBudget();done();});
   el.querySelectorAll('[data-artdesc]').forEach(s=>s.onclick=()=>{const a=[...DATA.arts.techniques,...DATA.arts.forms].find(x=>x.name===s.dataset.artdesc);
     $('#artDesc').innerHTML=a&&a.text?`<div class="rules-note"><strong>${esc(a.name)}</strong><br>${mdRules(a.text)}</div>`:'';});
 }
+function wireArtRows(el, artObj, attr, rerender){ wireArtObj(el, artObj, attr, rerender); }
 
 function renderLYears(el){
   const pool=30*(+C.laterYears.years||0), spent=sumObj(C.laterYears.arts)+abilSum(C.laterYears.abilities)+(+C.laterYears.spellLevels||0);
@@ -1082,16 +1145,15 @@ function renderLYears(el){
   updatePoolLine=upd;
   $('#lyY').oninput=e=>{C.laterYears.years=+e.target.value||0;save();renderLYears(el);renderBudget();};
   $('#lySpell').oninput=e=>{C.laterYears.spellLevels=+e.target.value||0;save();upd();renderBudget();renderMsgs(visibleSteps()[step]);};
-  wireArtRowsLY(el, C.laterYears.arts, upd);
+  wireArtRowsLY(el, C.laterYears.arts, upd, ()=>renderLYears(el));
   wireAbilAlloc(el, C.laterYears.abilities, 'lyears', null, ()=>renderLYears(el));
 }
-function lyArtRows(list){ return list.map(a=>`<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
-  <input type="number" data-lyxp="${a.key}" value="${C.laterYears.arts[a.key]||0}"><span class="mini">→ ${scoreFromXp(C.laterYears.arts[a.key]||0)}</span></div>`).join(''); }
-function wireArtRowsLY(el, artObj, upd){
-  el.querySelectorAll('[data-lyxp]').forEach(inp=>inp.oninput=()=>{artObj[inp.dataset.lyxp]=+inp.value||0;inp.nextElementSibling.textContent='→ '+scoreFromXp(+inp.value||0);save();renderBudget();upd();renderMsgs(visibleSteps()[step]);});
-  el.querySelectorAll('[data-artdesc]').forEach(s=>s.onclick=()=>{const a=[...DATA.arts.techniques,...DATA.arts.forms].find(x=>x.name===s.dataset.artdesc);
-    $('#artDesc').innerHTML=a&&a.text?`<div class="rules-note"><strong>${esc(a.name)}</strong><br>${mdRules(a.text)}</div>`:'';});
-}
+function lyArtRows(list){ return list.map(a=>{const a2={name:a.name,key:a.key};
+  const xp=C.laterYears.arts[a.key]||0, sc=scoreFromXp(xp);
+  return `<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
+  <span class="lvlstep"><button data-artdec="${a.key}" ${sc<=0?'disabled':''}>−</button><span class="lvlval">${sc}</span><button data-artinc="${a.key}">+</button></span>
+  <input type="number" data-lyxp="${a.key}" value="${xp}"><span class="mini">xp</span></div>`;}).join(''); }
+function wireArtRowsLY(el, artObj, upd, rerender){ wireArtObj(el, artObj, 'lyxp', rerender); }
 
 let spellFilter={q:'',te:'',fo:''};
 let spellMode='pick';

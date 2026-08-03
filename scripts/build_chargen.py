@@ -103,6 +103,34 @@ def desc(entity):
     return ""
 
 
+import re as _re_desc
+
+# Parenthetical cross-references and page citations that clutter the player-facing
+# chargen descriptions: "(see Faith & Flame, page 67)", "(see page 233)", "(page 85)",
+# "(pages 29 and 64)". These are editorial pointers, not rules text. We strip ONLY
+# these parentheticals and tidy the surrounding whitespace — pronunciations like
+# "(BOH-neeSAH-goos)" or "(KWAEsee-tor)" don't start with see/page/chapter, so they
+# are preserved. The verbatim source remains untouched in the corpus; this cleans
+# only the chargen slice. (Owner request, 2026-08-02.)
+_REF_PARENS = _re_desc.compile(
+    r"\s*\((?:see|See)\b[^)]*\)|\s*\((?:pages?|Chapters?|chapters?)\b[^)]*\)")
+# Inline (non-parenthetical) cross-reference clauses, e.g.
+# "…, described in Guardians of the Forests, page 92" — drop the whole clause.
+_REF_INLINE = _re_desc.compile(
+    r",?\s*(?:as\s+)?described in [^.]+?,\s*pages?\s+\d+(?:\s+and\s+\d+)?", _re_desc.I)
+
+
+def clean_desc(s):
+    """Strip page/cross-book reference clutter from a player-facing description."""
+    if not s:
+        return s
+    t = _REF_PARENS.sub("", s)
+    t = _REF_INLINE.sub("", t)
+    t = _re_desc.sub(r"\s+([,.;:])", r"\1", t)   # no space left before punctuation
+    t = _re_desc.sub(r"[ \t]{2,}", " ", t)        # collapse doubled spaces
+    return t.strip()
+
+
 def prop(entity, name):
     for p in entity.get("properties", []) or []:
         if isinstance(p, dict) and p.get("name") == name:
@@ -308,9 +336,19 @@ def main():
                 "houseType": prop(e, "House Type"),
                 "prima": prop(e, "Prima"),
                 "domusMagna": prop(e, "Domus Magna"),
-                "benefit": prop(e, "Benefit"),
+                "benefit": clean_desc(prop(e, "Benefit")),
                 "freeVirtue": prop(e, "Free Virtue"),
-                "text": desc(e),
+                # Structured free-Virtue options + how they apply: Fixed (grant the
+                # one), Choice (pick one), Open (pick a qualifier per Benefit), or
+                # Package (grant all — one example tradition, e.g. Ex Miscellanea).
+                "freeVirtueOptions": parse_caret_list(prop(e, "Free Virtue")),
+                # Houses that don't override the base ENUM report its options list
+                # (as a "[...]" string); only a real singular value is a mode.
+                "freeVirtueMode": (prop(e, "Free Virtue Mode")
+                                   if prop(e, "Free Virtue Mode")
+                                   in ("Fixed", "Choice", "Open", "Package")
+                                   else "Fixed"),
+                "text": clean_desc(desc(e)),
                 "source": cite(e),
             })
     houses.sort(key=lambda h: h["name"])
@@ -319,10 +357,10 @@ def main():
     for e in ents:
         if ext(e) == "Hermetic Technique":
             techniques.append({"name": e["name"], "key": ART_KEYS.get(e["name"]),
-                               "text": desc(e), "source": cite(e)})
+                               "text": clean_desc(desc(e)), "source": cite(e)})
         elif ext(e) == "Hermetic Form":
             forms.append({"name": e["name"], "key": ART_KEYS.get(e["name"]),
-                          "text": desc(e), "source": cite(e)})
+                          "text": clean_desc(desc(e)), "source": cite(e)})
 
     def parse_list(val):
         if not val:
@@ -338,11 +376,11 @@ def main():
         kind = ext(e)
         if kind == "Virtue":
             virtues.append({"name": e["name"], "size": prop(e, "Size"),
-                            "category": prop(e, "Category"), "text": desc(e),
+                            "category": prop(e, "Category"), "text": clean_desc(desc(e)),
                             "source": cite(e)})
         elif kind == "Flaw":
             flaws.append({"name": e["name"], "size": prop(e, "Size"),
-                          "category": prop(e, "Category"), "text": desc(e),
+                          "category": prop(e, "Category"), "text": clean_desc(desc(e)),
                           "source": cite(e)})
     virtues.sort(key=lambda x: x["name"])
     flaws.sort(key=lambda x: x["name"])
@@ -355,7 +393,7 @@ def main():
                 "abilityType": prop(e, "Ability Type"),
                 "specialties": parse_list(prop(e, "Specialties")),
                 "cannotUseUntrained": prop(e, "Cannot Use Untrained"),
-                "text": desc(e),
+                "text": clean_desc(desc(e)),
                 "source": cite(e),
             })
     abilities.sort(key=lambda x: x["name"])
