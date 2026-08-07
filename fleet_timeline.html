@@ -157,6 +157,31 @@ function prevPlace(kind,id,uptoIdx){
     const e=p&&p[kind]&&p[kind][id]; if(e) return e.to||e.at||null; }
   return null;
 }
+/* Coastal routing: a course between two places follows any named sea waypoints
+   defined for that leg (so ships hug the coast); legs with no route draw straight
+   (open-water crossings). Reverse direction reuses the same waypoints, flipped. */
+function wpXY(id){ const w=(DATA.waypoints||{})[id]; return w?[w[0]/100*baseW, w[1]/100*baseH]:null; }
+function routeWaypoints(fromId,toId){
+  const R=DATA.routes||{};
+  if(R[fromId+'>'+toId]) return R[fromId+'>'+toId].map(wpXY).filter(Boolean);
+  if(R[toId+'>'+fromId]) return R[toId+'>'+fromId].slice().reverse().map(wpXY).filter(Boolean);
+  return [];
+}
+/* Catmull-Rom → cubic-bezier path so the coastal course reads as a smooth curve. */
+function smoothD(pts){
+  if(pts.length<3) return 'M'+pts.map(p=>p[0]+' '+p[1]).join(' L ');
+  let d='M'+pts[0][0]+' '+pts[0][1];
+  for(let i=0;i<pts.length-1;i++){ const p0=pts[i-1]||pts[i],p1=pts[i],p2=pts[i+1],p3=pts[i+2]||pts[i+1];
+    d+=' C '+(p1[0]+(p2[0]-p0[0])/6)+' '+(p1[1]+(p2[1]-p0[1])/6)+' '+
+            (p2[0]-(p3[0]-p1[0])/6)+' '+(p2[1]-(p3[1]-p1[1])/6)+' '+p2[0]+' '+p2[1]; }
+  return d;
+}
+function drawCourse(pts,color,thin){ pts=pts.filter(Boolean); if(pts.length<2) return;
+  const path=document.createElementNS(SVGNS,'path'); path.setAttribute('d',smoothD(pts));
+  path.setAttribute('fill','none'); path.setAttribute('stroke',color); path.setAttribute('stroke-width',thin?2:3);
+  path.setAttribute('stroke-dasharray',thin?'2 6':'2 8'); path.setAttribute('stroke-linecap','round');
+  path.setAttribute('stroke-linejoin','round'); path.setAttribute('opacity',.85); svg.appendChild(path);
+}
 
 /* ---------- render a season ---------- */
 function renderSeason(){
@@ -188,8 +213,11 @@ function renderSeason(){
       let dx=0,dy=0;
       if(n>1){ dx=(k-(n-1)/2)*STEPX; dy=(k-(n-1)/2)*STEPY; }
       const dest=[anchor[0]+dx, anchor[1]+dy];
-      if(it.from){ const o=px(it.from);
-        if(o){ drawCircle(o, it.kind==='ship'?5.5:4.5, it.sh.color); drawDash(o,dest,it.sh.color,it.kind==='magus'); } }
+      // Only ships draw a course (hugging the coast via route waypoints); a magus
+      // ashore just appears as a hat — the ship that carried them shows the voyage.
+      if(it.kind==='ship' && it.from){ const o=px(it.from);
+        if(o){ drawCircle(o, 5.5, it.sh.color);
+          drawCourse([o, ...routeWaypoints(it.from,it.destId), dest], it.sh.color, false); } }
       if(it.kind==='ship'){ used.add(it.id); tokenShip(it.id,it.sh,dest,it.destId,!!it.from,it.note); }
       else tokenMagus(it.id,it.sh,dest,it.note);
     });

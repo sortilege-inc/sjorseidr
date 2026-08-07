@@ -145,6 +145,94 @@
    ]
   }
  },
+ "waypoints": {
+  "dover": [
+   37.5,
+   40.0
+  ],
+  "e-england": [
+   33.0,
+   29.0
+  ],
+  "channel": [
+   31.0,
+   43.0
+  ],
+  "ushant": [
+   21.5,
+   50.0
+  ],
+  "loire": [
+   26.5,
+   54.0
+  ],
+  "biscay-n": [
+   25.0,
+   55.5
+  ],
+  "scot-n": [
+   26.0,
+   12.0
+  ],
+  "minch": [
+   22.0,
+   17.5
+  ],
+  "irish-sea": [
+   21.0,
+   25.0
+  ],
+  "lands-end": [
+   20.0,
+   38.5
+  ],
+  "st-georges": [
+   18.5,
+   33.5
+  ]
+ },
+ "routes": {
+  "boulogne>hebrides": [
+   "dover",
+   "e-england",
+   "scot-n",
+   "minch"
+  ],
+  "hebrides>north-sea": [
+   "minch",
+   "scot-n",
+   "e-england"
+  ],
+  "north-sea>isle-of-man": [
+   "scot-n",
+   "minch",
+   "irish-sea"
+  ],
+  "north-sea>le-mans": [
+   "dover",
+   "channel",
+   "ushant",
+   "loire"
+  ],
+  "north-sea>oleron": [
+   "dover",
+   "channel",
+   "ushant",
+   "biscay-n"
+  ],
+  "north-sea>dublin": [
+   "dover",
+   "channel",
+   "lands-end",
+   "st-georges"
+  ],
+  "north-sea>boulogne": [
+   "dover"
+  ],
+  "oleron>carnac": [
+   "biscay-n"
+  ]
+ },
  "seasons": [
   {
    "id": "1219-winter",
