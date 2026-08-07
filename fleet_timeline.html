@@ -94,7 +94,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(17px,2.6vw,22px);c
   <div class="main">
     <div class="mapwrap" id="mapwrap">
       <div class="viewport" id="viewport">
-        <img id="mapimg" src="Normandy_Tribunal.webp" alt="The Normandy Tribunal, 1220 A.D.">
+        <img id="mapimg" alt="Mythic Europe, 1220 A.D.">
         <svg id="travel"></svg>
         <div id="tokens"></div>
       </div>
@@ -150,6 +150,13 @@ const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt
 const place=id=>DATA.places[id];
 const px=id=>{const p=place(id);return p?[p.xy[0]/100*baseW, p.xy[1]/100*baseH]:null;};
 const ship=id=>DATA.ships[id]||{name:id,color:'#555'};
+/* The place an entity (ships/magi) occupied in the most recent earlier season —
+   used to auto-draw the dotted course into the current season. */
+function prevPlace(kind,id,uptoIdx){
+  for(let i=uptoIdx-1;i>=0;i--){ const p=DATA.positions[DATA.seasons[i].id];
+    const e=p&&p[kind]&&p[kind][id]; if(e) return e.to||e.at||null; }
+  return null;
+}
 
 /* ---------- render a season ---------- */
 function renderSeason(){
@@ -167,10 +174,12 @@ function renderSeason(){
   const items=[];
   Object.entries(pos.ships||{}).forEach(([sid,mv])=>{
     const destId=mv.to||mv.at; if(!place(destId))return;
-    items.push({kind:'ship',id:sid,sh:ship(sid),destId,from:mv.from,note:mv.note}); });
+    const from=mv.from||prevPlace('ships',sid,cur);   // course auto-derived from the previous season
+    items.push({kind:'ship',id:sid,sh:ship(sid),destId,from:(from&&from!==destId)?from:null,note:mv.note}); });
   Object.entries(pos.magi||{}).forEach(([name,mv])=>{
     const destId=mv.to||mv.at; if(!place(destId))return;
-    items.push({kind:'magus',id:name,sh:ship(mv.ship),destId,from:mv.from,note:mv.note}); });
+    const from=mv.from||prevPlace('magi',name,cur);
+    items.push({kind:'magus',id:name,sh:ship(mv.ship),destId,from:(from&&from!==destId)?from:null,note:mv.note}); });
   const groups={}; items.forEach(it=>(groups[it.destId]=groups[it.destId]||[]).push(it));
   const STEPX=11, STEPY=9, used=new Set();   // small diagonal cascade for co-located tokens
   Object.values(groups).forEach(g=>{
@@ -250,7 +259,8 @@ async function boot(){
     fit();
     // start at the first season that has data
     const first=DATA.seasons.findIndex(s=>s.hasData); go(first<0?0:first); };
-  if(img.complete && img.naturalWidth) start(); else img.addEventListener('load',start);
+  img.addEventListener('load',start,{once:true});
+  img.src=(DATA.meta&&DATA.meta.basemap)||'mythic_europe.png';   // basemap is data-driven
 }
 boot();
 </script>
