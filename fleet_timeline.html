@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sjórseiðr — Fleet Voyages by Season</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;}
+a{color:var(--teal-bright)}
+.app{display:flex;flex-direction:column;height:100vh}
+header{padding:10px 16px 9px;border-bottom:2px solid var(--line);flex:none}
+.crumb{font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(17px,2.6vw,22px);color:var(--rust-bright);margin:3px 0 0}
+.sub{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin:1px 0 0}
+.main{flex:1;display:flex;min-height:0}
+.mapwrap{position:relative;flex:1;min-width:0;overflow:hidden;cursor:grab;
+  background:linear-gradient(180deg,#e9dcbb,#dccaa0);touch-action:none}
+.mapwrap.grabbing{cursor:grabbing}
+.viewport{position:absolute;top:0;left:0;transform-origin:0 0;will-change:transform}
+#mapimg{display:block;user-select:none;-webkit-user-drag:none;filter:sepia(.12) contrast(1.02)}
+#travel{position:absolute;top:0;left:0;pointer-events:none;overflow:visible}
+#tokens{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
+.stoken,.mtoken{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;cursor:pointer;z-index:5}
+.glyph{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(255,251,242,.95);box-shadow:0 2px 6px var(--shadow);border:2.5px solid var(--tc,#555)}
+.glyph i{display:block;background:var(--tc,#555);
+  -webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+  -webkit-mask-size:contain;mask-size:contain}
+.stoken .glyph i{width:21px;height:21px;-webkit-mask-image:url(icon-ship.svg);mask-image:url(icon-ship.svg)}
+.mtoken .glyph{width:27px;height:27px}
+.mtoken .glyph i{width:19px;height:19px;-webkit-mask-image:url(icon-hat.svg);mask-image:url(icon-hat.svg)}
+.stoken.edgearrow .glyph::after{content:"↑";position:absolute;top:-11px;left:50%;transform:translateX(-50%);
+  font-size:13px;font-weight:700;color:var(--tc,#555);text-shadow:0 1px 1px rgba(255,251,242,.9)}
+.tlabel{position:absolute;left:50%;top:32px;transform:translateX(-50%);white-space:nowrap;font-size:10.5px;
+  font-family:'Cinzel',serif;color:var(--ink);background:rgba(245,238,220,.92);padding:1px 5px;border-radius:3px;
+  border:1px solid rgba(120,90,40,.35);box-shadow:0 1px 2px var(--shadow);
+  opacity:0;pointer-events:none;transition:opacity .12s}      /* names show on hover only */
+.stoken:hover .tlabel,.mtoken:hover .tlabel{opacity:1}
+.mtoken .tlabel{top:26px;font-style:italic}
+.edgearrow .glyph{border-radius:6px;font-size:15px}
+.stoken:hover,.mtoken:hover{z-index:9}
+.stoken:hover .glyph,.mtoken:hover .glyph{outline:2px solid var(--gold-bright);outline-offset:2px}
+/* origin circle + travel line drawn in SVG */
+.legend{position:absolute;right:12px;top:12px;z-index:20;background:rgba(245,238,220,.92);
+  border:1px solid rgba(120,90,40,.4);border-radius:9px;padding:9px 11px;font-size:12px;max-width:210px;box-shadow:0 3px 9px var(--shadow)}
+.legend h4{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust-bright);margin:0 0 6px}
+.legrow{display:flex;align-items:center;gap:7px;margin:3px 0;line-height:1.2}
+.legrow .sw{flex:none;width:14px;height:14px;border-radius:50%;border:2px solid #555}
+.legend .mini{font-size:10.5px;color:var(--ink-soft);line-height:1.35;margin-top:6px;border-top:1px solid rgba(120,90,40,.25);padding-top:6px}
+.zoomctl{position:absolute;left:12px;bottom:12px;display:flex;flex-direction:column;gap:6px;z-index:20}
+.zoomctl button{width:34px;height:34px;border-radius:8px;border:1px solid var(--line);cursor:pointer;font-size:18px;
+  background:linear-gradient(180deg,#f3e8cd,#e2d0a8);box-shadow:0 2px 5px var(--shadow);display:grid;place-items:center;line-height:1;color:var(--ink)}
+.zoomctl button:hover{background:#f8eed4}
+/* timeline */
+.timeline{flex:none;border-top:2px solid var(--line);background:rgba(244,235,213,.7);padding:8px 10px 6px}
+.tlhead{display:flex;align-items:center;gap:10px;margin-bottom:4px}
+.tlhead .now{font-family:'Cinzel',serif;font-size:14px;color:var(--rust-bright);font-weight:600}
+.tlhead .note{font-size:12.5px;color:var(--ink-soft);font-style:italic;flex:1;min-width:0}
+.navb{width:26px;height:26px;border-radius:6px;border:1px solid var(--line);background:var(--parch);cursor:pointer;font-size:14px;color:var(--ink);flex:none}
+.navb:disabled{opacity:.35;cursor:not-allowed}
+.track{position:relative;overflow-x:auto;padding:14px 6px 4px}
+.track .rail{position:absolute;left:10px;right:10px;top:20px;height:2px;background:linear-gradient(90deg,transparent,var(--line) 6%,var(--line) 94%,transparent)}
+.dots{display:flex;gap:0;min-width:max-content;position:relative}
+.dot{flex:none;width:66px;text-align:center;cursor:pointer;position:relative}
+.dot .pip{width:13px;height:13px;border-radius:50%;background:var(--parch-deep);border:2px solid var(--line);margin:0 auto 5px;transition:transform .12s}
+.dot.has .pip{background:var(--gold-bright)}
+.dot.active .pip{background:var(--rust-bright);border-color:var(--rust);transform:scale(1.5);box-shadow:0 0 0 3px rgba(181,74,50,.25)}
+.dot .dl{font-size:9.5px;font-family:'Cinzel',serif;color:var(--ink-soft);line-height:1.15;letter-spacing:.01em}
+.dot.has .dl{color:var(--ink)}
+.dot:not(.has){opacity:.5}
+@media(max-width:640px){.legend{max-width:150px;font-size:11px}.dot{width:58px}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="crumb"><a href="index.html">Sjórseiðr</a> · <a href="normandy_tribunal_1223.html">Tribunal Map</a> · Fleet Voyages</div>
+    <h1>Fleet Voyages of Sjórseiðr</h1>
+    <p class="sub">Where the ships and magi sail, season by season. Travel begins at a small circle and follows a dotted course.</p>
+  </header>
+  <div class="main">
+    <div class="mapwrap" id="mapwrap">
+      <div class="viewport" id="viewport">
+        <img id="mapimg" src="Normandy_Tribunal.webp" alt="The Normandy Tribunal, 1220 A.D.">
+        <svg id="travel"></svg>
+        <div id="tokens"></div>
+      </div>
+      <div class="legend" id="legend"></div>
+      <div class="zoomctl">
+        <button id="zin" title="Zoom in">＋</button>
+        <button id="zout" title="Zoom out">－</button>
+        <button id="zreset" title="Fit">⤢</button>
+      </div>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="tlhead">
+      <button class="navb" id="prev" title="Previous season">‹</button>
+      <button class="navb" id="next" title="Next season">›</button>
+      <span class="now" id="nowLabel">—</span>
+      <span class="note" id="nowNote"></span>
+    </div>
+    <div class="track" id="track"><div class="rail"></div><div class="dots" id="dots"></div></div>
+  </div>
+</div>
+<script>
+const SVGNS='http://www.w3.org/2000/svg';
+let DATA=null, cur=0, baseW=1098, baseH=0;
+const wrap=document.getElementById('mapwrap'), vp=document.getElementById('viewport'),
+      img=document.getElementById('mapimg'), svg=document.getElementById('travel'),
+      tokens=document.getElementById('tokens');
+let scale=1, tx=0, ty=0;
+
+/* ---------- pan / zoom (ported from the Tribunal map) ---------- */
+function applyT(){vp.style.transform=`translate(${tx}px,${ty}px) scale(${scale})`;}
+function clamp(){const ww=wrap.clientWidth,wh=wrap.clientHeight,cw=baseW*scale,ch=baseH*scale;
+  if(cw<=ww)tx=(ww-cw)/2;else tx=Math.min(0,Math.max(ww-cw,tx));
+  if(ch<=wh)ty=(wh-ch)/2;else ty=Math.min(0,Math.max(wh-ch,ty));}
+function fit(){const ww=wrap.clientWidth,wh=wrap.clientHeight,s=Math.min(ww/baseW,wh/baseH);
+  scale=s;tx=(ww-baseW*scale)/2;ty=(wh-baseH*scale)/2;applyT();}
+function zoomAt(cx,cy,f){const ns=Math.min(6,Math.max(0.35,scale*f)),r=ns/scale;
+  tx=cx-(cx-tx)*r;ty=cy-(cy-ty)*r;scale=ns;clamp();applyT();}
+wrap.addEventListener('wheel',e=>{e.preventDefault();const r=wrap.getBoundingClientRect();
+  zoomAt(e.clientX-r.left,e.clientY-r.top,e.deltaY<0?1.18:1/1.18);},{passive:false});
+let drag=false,sx,sy;
+wrap.addEventListener('pointerdown',e=>{if(e.target.closest('.stoken,.mtoken'))return;
+  drag=true;sx=e.clientX;sy=e.clientY;wrap.classList.add('grabbing');wrap.setPointerCapture(e.pointerId);});
+wrap.addEventListener('pointermove',e=>{if(!drag)return;tx+=e.clientX-sx;ty+=e.clientY-sy;sx=e.clientX;sy=e.clientY;clamp();applyT();});
+wrap.addEventListener('pointerup',()=>{drag=false;wrap.classList.remove('grabbing');});
+document.getElementById('zin').onclick=()=>zoomAt(wrap.clientWidth/2,wrap.clientHeight/2,1.3);
+document.getElementById('zout').onclick=()=>zoomAt(wrap.clientWidth/2,wrap.clientHeight/2,1/1.3);
+document.getElementById('zreset').onclick=fit;
+window.addEventListener('resize',()=>{clamp();applyT();});
+
+/* ---------- helpers ---------- */
+const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const place=id=>DATA.places[id];
+const px=id=>{const p=place(id);return p?[p.xy[0]/100*baseW, p.xy[1]/100*baseH]:null;};
+const ship=id=>DATA.ships[id]||{name:id,color:'#555'};
+
+/* ---------- render a season ---------- */
+function renderSeason(){
+  const s=DATA.seasons[cur];
+  document.getElementById('nowLabel').textContent=s.label;
+  document.querySelectorAll('.dot').forEach((d,i)=>d.classList.toggle('active',i===cur));
+  const pos=DATA.positions[s.id];
+  tokens.innerHTML=''; while(svg.firstChild)svg.removeChild(svg.firstChild);
+  svg.setAttribute('width',baseW); svg.setAttribute('height',baseH);
+  svg.setAttribute('viewBox',`0 0 ${baseW} ${baseH}`);
+  if(!pos){ document.getElementById('nowNote').textContent='No fleet positions authored for this season yet.'; buildLegend([]); return; }
+  document.getElementById('nowNote').textContent=pos.note||'';
+  // Build a unified item list, then fan out anything sharing a destination so
+  // co-located ships/magi don't stack invisibly on the same point.
+  const items=[];
+  Object.entries(pos.ships||{}).forEach(([sid,mv])=>{
+    const destId=mv.to||mv.at; if(!place(destId))return;
+    items.push({kind:'ship',id:sid,sh:ship(sid),destId,from:mv.from,note:mv.note}); });
+  Object.entries(pos.magi||{}).forEach(([name,mv])=>{
+    const destId=mv.to||mv.at; if(!place(destId))return;
+    items.push({kind:'magus',id:name,sh:ship(mv.ship),destId,from:mv.from,note:mv.note}); });
+  const groups={}; items.forEach(it=>(groups[it.destId]=groups[it.destId]||[]).push(it));
+  const STEPX=11, STEPY=9, used=new Set();   // small diagonal cascade for co-located tokens
+  Object.values(groups).forEach(g=>{
+    const anchor=px(g[0].destId), n=g.length;
+    g.forEach((it,k)=>{
+      let dx=0,dy=0;
+      if(n>1){ dx=(k-(n-1)/2)*STEPX; dy=(k-(n-1)/2)*STEPY; }
+      const dest=[anchor[0]+dx, anchor[1]+dy];
+      if(it.from){ const o=px(it.from);
+        if(o){ drawCircle(o, it.kind==='ship'?5.5:4.5, it.sh.color); drawDash(o,dest,it.sh.color,it.kind==='magus'); } }
+      if(it.kind==='ship'){ used.add(it.id); tokenShip(it.id,it.sh,dest,it.destId,!!it.from,it.note); }
+      else tokenMagus(it.id,it.sh,dest,it.note);
+    });
+  });
+  buildLegend([...used]);
+}
+function drawCircle([x,y],r,color){
+  const c=document.createElementNS(SVGNS,'circle');
+  c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',r);
+  c.setAttribute('fill','rgba(255,251,242,.9)');c.setAttribute('stroke',color);c.setAttribute('stroke-width',2.5);
+  svg.appendChild(c);
+}
+function drawDash([x1,y1],[x2,y2],color,thin){
+  const l=document.createElementNS(SVGNS,'line');
+  l.setAttribute('x1',x1);l.setAttribute('y1',y1);l.setAttribute('x2',x2);l.setAttribute('y2',y2);
+  l.setAttribute('stroke',color);l.setAttribute('stroke-width',thin?2:3);
+  l.setAttribute('stroke-dasharray',thin?'2 6':'2 8');l.setAttribute('stroke-linecap','round');
+  l.setAttribute('opacity',.85);
+  svg.appendChild(l);
+}
+function tokenShip(sid,sh,[x,y],destId,moved,note){
+  const p=place(destId), off=p&&p.kind==='offmap';
+  const d=document.createElement('div');
+  d.className='stoken'+(moved?' moved':'')+(off?' edgearrow':'');
+  d.style.left=x+'px'; d.style.top=y+'px'; d.style.setProperty('--tc',sh.color);
+  d.innerHTML=`<div class="glyph"><i></i></div><div class="tlabel">${esc(sh.name)}${off?' → '+esc(p.name):''}</div>`;
+  d.title=(sh.name)+(note?' — '+note:'')+(p?'  ·  '+p.name:'');
+  tokens.appendChild(d);
+}
+function tokenMagus(name,sh,[x,y],note){
+  const d=document.createElement('div');
+  d.className='mtoken'; d.style.left=x+'px'; d.style.top=y+'px'; d.style.setProperty('--tc',sh.color);
+  d.innerHTML=`<div class="glyph"><i></i></div><div class="tlabel">${esc(name)}</div>`;
+  d.title=name+' (ashore / separated from '+sh.name+')'+(note?' — '+note:'');
+  tokens.appendChild(d);
+}
+function buildLegend(usedShipIds){
+  const rows=usedShipIds.map(id=>{const sh=ship(id);
+    return `<div class="legrow"><span class="sw" style="border-color:${sh.color}"></span>${esc(sh.name)}</div>`;}).join('')
+    || '<div class="mini">—</div>';
+  document.getElementById('legend').innerHTML=`<h4>Ships this season</h4>${rows}
+    <div class="mini">Ship icon = a vessel; hat icon = a magus ashore (separated from their ship), coloured to match. A course begins at the small circle and follows the dashes; ↑ marks a voyage off the map's edge.</div>`;
+}
+
+/* ---------- timeline strip ---------- */
+function buildTimeline(){
+  const dots=document.getElementById('dots');
+  dots.innerHTML=DATA.seasons.map((s,i)=>`<div class="dot${s.hasData?' has':''}" data-i="${i}">
+    <div class="pip"></div><div class="dl">${esc(s.label)}</div></div>`).join('');
+  dots.querySelectorAll('.dot').forEach(d=>d.onclick=()=>go(+d.dataset.i));
+  document.getElementById('prev').onclick=()=>go(cur-1);
+  document.getElementById('next').onclick=()=>go(cur+1);
+}
+function go(i){ if(i<0||i>=DATA.seasons.length) return; cur=i;
+  document.getElementById('prev').disabled=cur===0;
+  document.getElementById('next').disabled=cur===DATA.seasons.length-1;
+  renderSeason();
+  const dot=document.querySelector(`.dot[data-i="${i}"]`); if(dot) dot.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
+}
+
+async function boot(){
+  try{ DATA=await (await fetch('./fleet_timeline.json',{cache:'no-store'})).json(); }
+  catch(e){ document.querySelector('.mapwrap').innerHTML='<p style="padding:30px">Could not load fleet_timeline.json (serve over http).</p>'; return; }
+  buildTimeline();
+  const start=()=>{ baseH=baseW*(img.naturalHeight/img.naturalWidth);
+    img.style.width=baseW+'px'; img.style.height=baseH+'px';   // lock display size to the coordinate base
+    fit();
+    // start at the first season that has data
+    const first=DATA.seasons.findIndex(s=>s.hasData); go(first<0?0:first); };
+  if(img.complete && img.naturalWidth) start(); else img.addEventListener('load',start);
+}
+boot();
+</script>
+</body>
+</html>

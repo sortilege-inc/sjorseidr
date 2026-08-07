@@ -1,0 +1,245 @@
+{
+ "meta": {
+  "title": "Sjórseiðr Fleet — Voyages by Season",
+  "basemap": "Normandy_Tribunal.webp",
+  "basemap_size": [
+   2196,
+   2684
+  ],
+  "note": "Positions are % of the basemap image (x,y from top-left). Draft PILOT covers Winter 1219-20 and Spring 1220; other seasons pending authoring.",
+  "coords_status": "approximate — refine against the basemap"
+ },
+ "ships": {
+  "tide-of-memory": {
+   "name": "Tide of Memory",
+   "owner": "Dagmar",
+   "magus": "Dagmar",
+   "color": "#2c6b66"
+  },
+  "brineborn": {
+   "name": "Brineborn",
+   "owner": "Éogan Dobhartha",
+   "magus": "Éogan Dobhartha",
+   "color": "#3e6b35"
+  },
+  "scholars-wake": {
+   "name": "The Scholar's Wake",
+   "owner": "Dustin Page",
+   "magus": "Dustin Page",
+   "color": "#3a5ba0"
+  },
+  "maelstroms-maw": {
+   "name": "Maelstrom's Maw",
+   "owner": "Nequam of Tytalus",
+   "magus": "Nequam of Tytalus",
+   "color": "#7a3fb0"
+  },
+  "storm-dragon": {
+   "name": "Veðrdreki",
+   "owner": "Valdemar Bjornsson",
+   "magus": "Valdemar Bjornsson",
+   "color": "#4a6b8a"
+  },
+  "adamant": {
+   "name": "Adamant",
+   "owner": "Valerian de Castellane",
+   "magus": "Valerian de Castellane",
+   "color": "#9a8250"
+  },
+  "hound-of-cassel": {
+   "name": "Hound of Cassel",
+   "owner": "Wilhelm Stienauer",
+   "magus": "Wilhelm Stienauer",
+   "color": "#8a3324"
+  },
+  "the-gloaming": {
+   "name": "The Gloaming",
+   "owner": "unclear",
+   "magus": null,
+   "color": "#7a6a5a"
+  }
+ },
+ "places": {
+  "boulogne": {
+   "name": "Boulogne",
+   "xy": [
+    58.0,
+    15.2
+   ],
+   "kind": "port"
+  },
+  "bruges": {
+   "name": "Bruges",
+   "xy": [
+    72.5,
+    12.0
+   ],
+   "kind": "port",
+   "home": true
+  },
+  "hebrides-edge": {
+   "name": "Hebrides & Orkney",
+   "xy": [
+    40.0,
+    2.4
+   ],
+   "kind": "offmap",
+   "bearing": "north",
+   "hint": "off the northern edge — north around Scotland to the Isles"
+  }
+ },
+ "seasons": [
+  {
+   "id": "1219-winter",
+   "label": "❄️ Winter 1219-20",
+   "iso": "1219-12-20T00:00",
+   "hasData": true
+  },
+  {
+   "id": "1220-spring",
+   "label": "🌺 Spring 1220",
+   "iso": "1220-04-20T03:00",
+   "hasData": true
+  },
+  {
+   "id": "1220-summer",
+   "label": "☀️ Summer 1220",
+   "iso": "1220-06-20T00:00",
+   "hasData": false
+  },
+  {
+   "id": "1220-fall",
+   "label": "🍂 Fall 1220",
+   "iso": "1220-09-20T01:00",
+   "hasData": false
+  },
+  {
+   "id": "1220-winter",
+   "label": "❄️ Winter 1220-21",
+   "iso": "1220-12-20T00:00",
+   "hasData": false
+  },
+  {
+   "id": "1221-spring",
+   "label": "🌺 Spring 1221",
+   "iso": "1221-04-20T05:00",
+   "hasData": false
+  },
+  {
+   "id": "1221-summer",
+   "label": "☀️ Summer 1221",
+   "iso": "1221-06-20T00:00",
+   "hasData": false
+  },
+  {
+   "id": "1221-fall",
+   "label": "🍂 Fall 1221",
+   "iso": "1221-09-20T02:00",
+   "hasData": false
+  },
+  {
+   "id": "1221-winter",
+   "label": "❄️ Winter 1221-22",
+   "iso": "1221-12-20T04:00",
+   "hasData": false
+  },
+  {
+   "id": "1222-spring",
+   "label": "🌺 Spring 1222",
+   "iso": "1222-04-20T02:00",
+   "hasData": false
+  },
+  {
+   "id": "1222-summer",
+   "label": "☀️ Summer 1222",
+   "iso": "1222-06-20T00:00",
+   "hasData": false
+  },
+  {
+   "id": "1222-fall",
+   "label": "🍂 Fall 1222",
+   "iso": "1222-09-20T00:00",
+   "hasData": false
+  },
+  {
+   "id": "1222-winter",
+   "label": "❄️ Winter 1222-23",
+   "iso": "1222-12-20T02:00",
+   "hasData": false
+  },
+  {
+   "id": "1223-spring",
+   "label": "🌺 Spring 1223",
+   "iso": "1223-04-20T01:00",
+   "hasData": false
+  },
+  {
+   "id": "1223-summer",
+   "label": "☀️ Summer 1223",
+   "iso": "1223-06-15T12:00",
+   "hasData": false
+  },
+  {
+   "id": "1223-fall",
+   "label": "🍂 Fall 1223",
+   "iso": "1223-10-10T12:00",
+   "hasData": false
+  },
+  {
+   "id": "1223-winter",
+   "label": "❄️ Winter 1223-24",
+   "iso": "1223-11-05T12:00",
+   "hasData": false
+  },
+  {
+   "id": "1224-spring",
+   "label": "🌼 Spring 1224",
+   "iso": "1224-03-20T12:00",
+   "hasData": false
+  }
+ ],
+ "positions": {
+  "1219-winter": {
+   "note": "The young covenant winters its ships together in Boulogne.",
+   "ships": {
+    "tide-of-memory": {
+     "at": "boulogne"
+    },
+    "brineborn": {
+     "at": "boulogne"
+    },
+    "scholars-wake": {
+     "at": "boulogne"
+    },
+    "maelstroms-maw": {
+     "at": "boulogne"
+    }
+   }
+  },
+  "1220-spring": {
+   "note": "After Solving's disappearance Dagmar summons the covenant to Bruges; the Maelstrom's Maw sails north on Nequam's exploratory voyage.",
+   "ships": {
+    "tide-of-memory": {
+     "from": "boulogne",
+     "to": "bruges",
+     "note": "Summoned to the Bruges meeting."
+    },
+    "brineborn": {
+     "from": "boulogne",
+     "to": "bruges"
+    },
+    "scholars-wake": {
+     "from": "boulogne",
+     "to": "bruges",
+     "note": "Dustin's trade circuit re-bases at Bruges."
+    },
+    "maelstroms-maw": {
+     "from": "boulogne",
+     "to": "hebrides-edge",
+     "note": "Nequam's voyage north — the Hebrides regio."
+    }
+   },
+   "magi": {}
+  }
+ }
+}
