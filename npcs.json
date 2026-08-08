@@ -2,7 +2,7 @@
   "meta": {
     "title": "Crew & Companion Sheets",
     "source": "Foundry VTT REST API (arm5e system), pulled 2026-07-13",
-    "note": "Covers grogs, companions, and NPC magi with real Foundry actor sheets. Hilda, Karl, and Rody have no Foundry sheet and keep the lightweight note card from ships.json."
+    "note": "Covers grogs, companions, and NPC magi with real Foundry actor sheets. Hilda, Karl, and Rody have no Foundry sheet and keep the lightweight note card from ships.json. Tormente, Mímormr, and the Capricorn are GM-prep magical-creature statblocks (added 2026-08-08), not Foundry-pulled sheets."
   },
   "npcs": {
     "Adam Smith": {
@@ -8218,6 +8218,769 @@
       "familiar": null,
       "activeWounds": [],
       "biography": "A Flemish boatswain with two decades at sea, Willem is a hard-bitten sailor who has seen it all. Serving as crew chief, logistics officer, and the fleet's most reliable voice of reason, he's responsible for keeping the crew in line and making sure the ship doesn't sink. He respects magic well enough, but prefers a solid rope and a sharp knife to solve most problems. Blunt, pragmatic, and grumpy — but deeply loyal once respect is earned."
+    },
+    "Tormente": {
+      "name": "Tormente",
+      "foundryName": null,
+      "charType": "entity",
+      "portrait": null,
+      "house": "gen",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 4,
+        "per": 4,
+        "str": 8,
+        "sta": 8,
+        "pre": 7,
+        "com": 2,
+        "dex": 3,
+        "qik": 0
+      },
+      "size": 8,
+      "confidence": {
+        "label": "Confidence",
+        "score": 4,
+        "points": 12
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "Second Sight",
+          "impact": "minor",
+          "description": "Can see through magical invisibility and perceive regio boundaries and the cords of familiars."
+        },
+        {
+          "name": "Magic Monster",
+          "impact": "special",
+          "description": "A Magic-realm dragon; its Might resists hostile magic (Magic Resistance 50)."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Essential Flaw: Capricious",
+          "impact": "major",
+          "description": "Its whims override its interests; it torments and tests where a straight course would serve it better."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "(Area) Lore: Brittany",
+          "speciality": "Carnac & its regio",
+          "xp": 25,
+          "score": 5
+        },
+        {
+          "name": "Awareness",
+          "speciality": "intruders",
+          "xp": 40,
+          "score": 8
+        },
+        {
+          "name": "Brawl",
+          "speciality": "claws",
+          "xp": 35,
+          "score": 7
+        },
+        {
+          "name": "Guile",
+          "speciality": "testing seekers",
+          "xp": 30,
+          "score": 6
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "dragons & regiones",
+          "xp": 40,
+          "score": 8
+        },
+        {
+          "name": "Second Sight",
+          "speciality": "magical invisibility",
+          "xp": 40,
+          "score": 8
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "seekers",
+          "xp": 20,
+          "score": 4
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Criamon",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Proud",
+        "Mischievous",
+        "Cruel",
+        "Capricious"
+      ],
+      "reputations": [
+        {
+          "name": "Warden of Jeffrey the First's Quest of Learning (within the regio) 4",
+          "description": "Tests seekers in the name of a long-dead king of Brittany."
+        }
+      ],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": 50,
+      "mightRealm": "Magic",
+      "form": "Auram",
+      "soak": 20,
+      "combat": [
+        {
+          "name": "Claws",
+          "init": 3,
+          "attack": 22,
+          "defense": 18,
+          "damage": 20
+        }
+      ],
+      "powers": [
+        {
+          "name": "The Silent Colloquy",
+          "cost": "1 point",
+          "init": "+0",
+          "form": "Mentem",
+          "description": "Speaks mind-to-mind and is understood in any tongue (it parleyed with Dagmar in Latin). It hears a reply from any mind that answers it."
+        },
+        {
+          "name": "Tempest Breath",
+          "cost": "1 point",
+          "init": "+5",
+          "form": "Auram",
+          "description": "A battering cone of briny gale and blue lightning out to 20 paces — the Auram-attuned regio made flesh. Dodge Qik+Athletics vs EF 9; a full hit is +45 damage."
+        },
+        {
+          "name": "The Staying Word",
+          "cost": "5 points",
+          "init": "+0",
+          "form": "Vim/Rego",
+          "description": "Its trickster signature and the engine of the plot: Tormente can bind a being to a single place with a curse that only lifts on a set release-condition. This is the curse laid on its kin MÍMORMR — broken only when the jewelled Roman crown is delivered to it freely, by another hand (see t066/t072)."
+        },
+        {
+          "name": "Human Seeming",
+          "cost": "1 point",
+          "init": "+0",
+          "form": "Imaginem",
+          "description": "Can wrap itself in the seeming of a man, or make cave-rubble look like a hoard of gold — a trickster deals with intruders by illusion before it deals with them by claw."
+        }
+      ],
+      "vis": "5 pawns of Auram vis in each eye.",
+      "appearance": "A wall of cobalt-blue scales that flash like dozens of little mirrors, filling the only passage deeper into the Carnac sea-cave: roughly 45 feet of visible flank, 25 feet high, one great leg trailing down into the black water. Slumped as if part of the cavern until it shudders and exhales.",
+      "source": "GM prep (2026-08-08). Built on Stellatus, the Dragon (Ars Magica core bestiary, Might 50 Magic) — Fiery Breath reskinned to Auram, plus the Staying-Word curse and trickster Mentem/Imaginem powers.",
+      "shortDescription": "Trickster guardian-dragon of the Carnac sea-cave regio — magnitude 10 (Might 50).",
+      "biography": "Tormente is the guardian posted at the first threshold of the Carnac sea-cave regio, barring the only way deeper. It is a trickster to the bone — mischievous, and capable of real cruelty — and it guards a \"quest of learning\" in the name of Jeffrey the First, a long-dead king of Brittany, testing any seeker who comes for a great deed or a worthy purpose.\n\nSTATBLOCK — Might 50 (Magic, Auram); Magic Resistance 50; Size +8; Soak +20. Int 4, Per 4, Pre 7, Com 2, Str 8, Sta 8, Dex 3, Qik 0. Claws: Init +3, Attack +22, Defense +18, Damage +20. Vis: 5 pawns Auram in each eye.\n\nPOWERS — The Silent Colloquy (mind-speech, any language); Tempest Breath (Auram cone, +45); The Staying Word (the place-binding curse that cages its kin, broken only by the crown freely delivered); Human Seeming (illusion/disguise).\n\nTHE TRAP (see t066, t072): Tormente set Dagmar the errand of carrying a jewelled Roman crown to its \"estranged kin\" as a peace-offering. It is a lie. The crown is the release-token for Tormente's own Staying Word, and delivering it unbinds MÍMORMR — a jailbreak that looses a regional threat, with Dagmar as the unwitting hand. Foxglove's theft from its hoard (c026) may sour its goodwill if noticed."
+    },
+    "Mímormr": {
+      "name": "Mímormr",
+      "foundryName": null,
+      "charType": "entity",
+      "portrait": null,
+      "house": "gen",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 5,
+        "per": 4,
+        "str": 12,
+        "sta": 8,
+        "pre": 8,
+        "com": 3,
+        "dex": 3,
+        "qik": -4
+      },
+      "size": 7,
+      "confidence": {
+        "label": "Confidence",
+        "score": 3,
+        "points": 9
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "Magic Animal",
+          "impact": "special",
+          "description": "A magical beast, built on the Magic Animal rules."
+        },
+        {
+          "name": "Magical Monster",
+          "impact": "special",
+          "description": "Great size and Might; Magic Resistance 41."
+        },
+        {
+          "name": "Educated",
+          "impact": "minor",
+          "description": "Reads and writes Latin and Greek; a true scholar."
+        },
+        {
+          "name": "Arcane Lore",
+          "impact": "minor",
+          "description": "Deep knowledge of magic and the hidden orders of the world."
+        },
+        {
+          "name": "Second Sight",
+          "impact": "minor",
+          "description": "Perceives invisible and hidden things — and the residues of the dead."
+        },
+        {
+          "name": "Greater Immunity: cold & drowning",
+          "impact": "major",
+          "description": "A creature of the cold northern sea; unharmed by cold and by drowning."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Essential Flaw: Avaricious (for knowledge)",
+          "impact": "major",
+          "description": "Its dragon-avarice is not for gold but for KNOWLEDGE; it cannot leave a mystery, a grave, or an ancient bone alone."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "(Area) Lore: the ancient world",
+          "speciality": "history",
+          "xp": 25,
+          "score": 5
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "ancient magic",
+          "xp": 30,
+          "score": 6
+        },
+        {
+          "name": "Philosophiae",
+          "speciality": "metaphysics",
+          "xp": 30,
+          "score": 6
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "rhetoric",
+          "xp": 25,
+          "score": 5
+        },
+        {
+          "name": "Latin",
+          "speciality": "academic",
+          "xp": 25,
+          "score": 5
+        },
+        {
+          "name": "Greek",
+          "speciality": "academic",
+          "xp": 20,
+          "score": 4
+        },
+        {
+          "name": "Second Sight",
+          "speciality": "the dead",
+          "xp": 25,
+          "score": 5
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "scholars",
+          "xp": 20,
+          "score": 4
+        },
+        {
+          "name": "Guile",
+          "speciality": "concealing intentions",
+          "xp": 25,
+          "score": 5
+        },
+        {
+          "name": "Concentration",
+          "speciality": "reading",
+          "xp": 20,
+          "score": 4
+        },
+        {
+          "name": "Brawl",
+          "speciality": "claws",
+          "xp": 30,
+          "score": 6
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Avaricious (for knowledge)",
+        "Inquisitive",
+        "Grandiose",
+        "Frustrated"
+      ],
+      "reputations": [
+        {
+          "name": "The Worm in the Cliff (local, NE England) 3",
+          "description": "Half-remembered in the coastal worm-legends of Northumbria (the Lambton, Sockburn, and Laidly Worms)."
+        }
+      ],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": 41,
+      "mightRealm": "Magic",
+      "form": "Aquam",
+      "soak": 24,
+      "combat": [
+        {
+          "name": "Large Claws",
+          "init": 4,
+          "attack": 23,
+          "defense": 20,
+          "damage": 22
+        },
+        {
+          "name": "Large Teeth",
+          "init": 4,
+          "attack": 21,
+          "defense": 17,
+          "damage": 21
+        }
+      ],
+      "powers": [
+        {
+          "name": "Speak With Bones",
+          "cost": "1–3 points",
+          "init": "+0",
+          "form": "Intellego (Corpus/Mentem)",
+          "description": "Its signature and the root of its error: it questions the dead and the ancient remains it hoards, drawing out memory and history from bone. This is how it found REAL traces of Jörmungandr — and over-read genuine scholarship into a personal genealogy it now sincerely, wrongly, believes."
+        },
+        {
+          "name": "Peering Into the Mortal Mind",
+          "cost": "2 points",
+          "init": "+3",
+          "form": "Mentem",
+          "description": "Reads the mind of anyone it can see, with no eye contact needed (InMe 40). It reads the living and the memory-residue in bone alike."
+        },
+        {
+          "name": "Breath of the Briny North Wind",
+          "cost": "2 points",
+          "init": "+3",
+          "form": "Auram/Perdo",
+          "description": "A cone of briny north wind that chills to the bone — the killing cold of the northern sea, out to 50 paces. Where Tormente burns and batters, Mímormr freezes."
+        },
+        {
+          "name": "Poisonous Blood",
+          "cost": "0 points",
+          "init": "n/a",
+          "form": "Aquam",
+          "description": "Its spilled blood stays a deadly poison for nine days; a wounding blow that then botches spatters a drop — Stamina 12+ or die."
+        }
+      ],
+      "vis": "9 pawns of Intellego vis in the heart.",
+      "appearance": "A long, serpentine sea-wyrm — a squat body some 25 feet from shoulder to rump, a sinuous neck and a whip-like tail of like length — sheathed in SILVER scales hard as iron, shot through with hints of AQUAMARINE. It lairs in a sea-cliff cave above the waves off the English northeast coast, near Scarborough / Newcastle, and cannot leave it.",
+      "source": "GM prep (2026-08-08). Built on Polymathes, the Draconic Librarian (Realms of Power: Magic p.76, Might 41 Animal) — the knowledge-hoard reskinned to bones, Master of Illusion replaced by Speak With Bones, Fiery Breath reskinned to the briny north wind, and a silver/aquamarine sea-wyrm body.",
+      "shortDescription": "Cursed bone-speaking sea-wyrm off NE England; believes itself a child of Jörmungandr (magnitude ~8).",
+      "biography": "Mímormr is a scholar-wyrm: a researcher of ancient things that speaks with bones, curious to the point of recklessness, and — for many, many years — a prisoner. Its kin TORMENTE cursed it to stay put (The Staying Word), and it cannot leave its sea-cliff hole. It styles itself a CHILD OF JÖRMUNGANDR, the greatest magical being that ever was. That is false — but Jörmungandr did exist (Rán may know a rumor of it, c022), and Mímormr believes the descent utterly, because its own bone-divination turned up real traces and it wanted them to mean kinship. Genuine scholarship, wrong conclusion; the magi cannot easily disprove it.\n\nSTATBLOCK — Might 41 (Magic, Aquam); Magic Resistance 41; Size +7; Soak +24. Int +5, Per +4, Pre +8, Com +3, Str +12, Sta +8, Dex +3, Qik –4. Large Claws: Init +4, Attack +23, Defense +20, Damage +22. Large Teeth: Init +4, Attack +21, Defense +17, Damage +21. Vis: 9 pawns Intellego in the heart.\n\nPOWERS — Speak With Bones (Intellego; questions the dead); Peering Into the Mortal Mind (reads any mind in sight); Breath of the Briny North Wind (Auram cold cone); Poisonous Blood (Aquam).\n\nIF FREED (see t066, t072): sits below Tormente (Might 41 vs 50), which is why Tormente could cage it. The Roman crown breaks the curse. Loose, its Size +7 bulk and restless, grave-cracking curiosity are an environmental catastrophe for the Northumbrian coast — sunk hulls, flooded shores, barrows torn open for bones, a killing cold in its wake — not necessarily hostile to the magi, but ruinous to be near. It is the seed of the region's worm-legends."
+    },
+    "Capricorn": {
+      "name": "Capricorn",
+      "foundryName": null,
+      "charType": "entity",
+      "portrait": null,
+      "house": "gen",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 3,
+        "str": 1,
+        "sta": 2,
+        "pre": 1,
+        "com": 1,
+        "dex": 1,
+        "qik": 2
+      },
+      "size": 1,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "Magic Animal",
+          "impact": "special",
+          "description": "A Magic-realm beast; Magic Resistance 14."
+        },
+        {
+          "name": "Gift of Speech",
+          "impact": "minor",
+          "description": "Can speak and understand language — a familiar you can actually converse with."
+        },
+        {
+          "name": "Second Sight",
+          "impact": "minor",
+          "description": "Sees the invisible, and the seams of magic regiones."
+        },
+        {
+          "name": "Ways of the (Sea)",
+          "impact": "minor",
+          "description": "At home on and under the water; unhindered by sea and shore alike."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Shy / Skittish",
+          "impact": "minor",
+          "description": "It courts on its own terms; it will not be caught, only won over."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Awareness",
+          "speciality": "regio boundaries",
+          "xp": 20,
+          "score": 4
+        },
+        {
+          "name": "Athletics",
+          "speciality": "swimming",
+          "xp": 20,
+          "score": 4
+        },
+        {
+          "name": "Survival",
+          "speciality": "the open sea",
+          "xp": 15,
+          "score": 3
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "regiones",
+          "xp": 15,
+          "score": 3
+        },
+        {
+          "name": "Second Sight",
+          "speciality": "thresholds",
+          "xp": 20,
+          "score": 4
+        },
+        {
+          "name": "Guile",
+          "speciality": "slipping away",
+          "xp": 15,
+          "score": 3
+        },
+        {
+          "name": "(Living Language)",
+          "speciality": "a large vocabulary",
+          "xp": 15,
+          "score": 3
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Curious",
+        "Aloof",
+        "Loyal once won"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": 14,
+      "mightRealm": "Magic",
+      "form": "Aquam",
+      "soak": 4,
+      "combat": [
+        {
+          "name": "Horns (butt)",
+          "init": 2,
+          "attack": 6,
+          "defense": 6,
+          "damage": 5
+        }
+      ],
+      "powers": [
+        {
+          "name": "Threshold-Walker",
+          "cost": "2 points",
+          "init": "+0",
+          "form": "Vim (Intellego/Rego)",
+          "description": "Its SIGNATURE: it senses the boundaries of magic regiones and can step across them at will — and, once bonded, carry or lead its magus across a regio threshold that would otherwise resist him. The reason a regio-probing covenant would prize it."
+        },
+        {
+          "name": "Walk Upon the Waves",
+          "cost": "1 point",
+          "init": "+0",
+          "form": "Aquam (Rego)",
+          "description": "Treads open water as though it were solid ground, and can bear a rider so."
+        },
+        {
+          "name": "Breath of the Tide",
+          "cost": "0 points",
+          "init": "n/a",
+          "form": "Aquam (Muto)",
+          "description": "It, and one it touches, may breathe and see clearly underwater."
+        },
+        {
+          "name": "Weather-Wit",
+          "cost": "1 point",
+          "init": "+2",
+          "form": "Auram (Intellego)",
+          "description": "Senses the coming of storms and the safe passage through them — the sea-goat as living barometer (a quiet gift toward the covenant's maritime magic, t009)."
+        }
+      ],
+      "vis": "2 pawns of Vim in the horns.",
+      "appearance": "A sea-goat: the shaggy grey-green forequarters and curling, spiralled horns of a mountain goat giving way to a long, scaled fish-tail that flashes aquamarine in the water. It paces ships at the tide-line, keeping just off the rail, and singles out Éogan.",
+      "source": "GM prep (2026-08-08). Built fresh as a familiar-scale Magic beast (Might 14, cf. the caladrius model in the magical bestiary), per t070. Draw on Éogan is independent of the t068 faerie affinity; what it wants for a bond is still open.",
+      "shortDescription": "A Magic sea-goat (capricorn) — threshold-crosser and would-be familiar for Éogan. Unnamed until bonded.",
+      "biography": "On the sea-voyage home from Ireland, a capricorn — a Magic-realm sea-goat — singles Éogan out and paces his ship, keeping just off the rail. It is not the small faerie folk of t068 following him; this is a Might-bearing creature come on its own account, and it would be the first familiar prospect for any Sjórseiðr magus (t037). Courting it, and the binding lab-work after, are the real task — it will not be caught, only won over, and what it wants in exchange is not yet known.\n\nSTATBLOCK — Might 14 (Magic, Aquam); Magic Resistance 14; Size +1; Soak +4. Int 0, Per +3, Pre +1, Com +1, Str +1, Sta +2, Dex +1, Qik +2. Horns: Init +2, Attack +6, Defense +6, Damage +5. Vis: 2 pawns Vim in the horns.\n\nPOWERS — Threshold-Walker (senses and crosses regio boundaries, and carries its magus across); Walk Upon the Waves; Breath of the Tide (water-breathing); Weather-Wit (storm-sense).\n\nLORE — the sea-goat is one of the oldest monsters recorded: the Babylonian Goat-Fish sacred to Enki/Ea, god of fresh water, wisdom and magic; and, via Macrobius, Capricorn is the Gate of the Gods, the solstitial gate — a threshold-creature by its very nature, which is why it walks between water, shore, and regio."
     }
   }
 }
