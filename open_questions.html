@@ -43,6 +43,15 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .subtitle{font-style:italic;color:var(--ink-soft);font-size:14.5px;margin:0}
 .status{font-family:'Cinzel',serif;font-size:11.5px;color:var(--ink-soft);text-align:right;white-space:nowrap}
 
+/* sections */
+.qsection{margin-bottom:30px}
+.qsection+.qsection{padding-top:22px;border-top:2px solid var(--line)}
+.qsection-head{font-family:'Cinzel',serif;font-weight:600;font-size:19px;color:var(--rust-bright);margin:0 0 2px;
+  display:flex;align-items:baseline;gap:8px}
+.qsection-head .n{font-size:14px;color:var(--ink-soft);font-weight:400}
+.qsection-sub{font-style:italic;color:var(--ink-soft);font-size:13px;margin:0 0 14px}
+.qsection-sub code{font-style:normal;font-size:12px}
+
 /* type tabs */
 .typetabs{display:flex;gap:4px;margin-bottom:6px;border-bottom:1px solid var(--line);flex-wrap:wrap}
 .typetab{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.03em;padding:9px 16px;cursor:pointer;
@@ -165,8 +174,9 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
   <div class="qlist" id="qlist"></div>
 
   <footer>
-    <button class="btn ghost" id="saveBtn">⬇ Save JSON</button>
-    Changes autosave to this browser only — use Save to keep a copy.
+    <button class="btn ghost" id="saveBtn">⬇ Save Open Questions</button>
+    <button class="btn ghost" id="saveResolvedBtn">⬇ Save Resolved</button>
+    Changes autosave to this browser only — use Save to keep a copy. Open items save to <code>open_questions.json</code>, resolved to <code>resolved_questions.json</code>.
   </footer>
 </div>
 
@@ -185,8 +195,18 @@ let activeRefTab = 'roster';
 
 async function load(){
   try{
-    const r = await fetch('./open_questions.json', {cache:'no-store'});
-    STATE = await r.json();
+    const [openRes, resolvedRes] = await Promise.all([
+      fetch('./open_questions.json', {cache:'no-store'}),
+      fetch('./resolved_questions.json', {cache:'no-store'}),
+    ]);
+    const openData = await openRes.json();
+    const resolvedData = await resolvedRes.json();
+    // Unresolved file owns meta + gmReference; merge the two item sets.
+    STATE = {
+      meta: openData.meta,
+      gmReference: openData.gmReference,
+      items: [...(openData.items||[]), ...(resolvedData.items||[])],
+    };
     const cached = localStorage.getItem(LS_KEY);
     if(cached){
       try{
@@ -197,10 +217,11 @@ async function load(){
         });
       }catch(_){}
     }
-    $('#status').textContent = `${STATE.items.length} items loaded`;
+    const nOpen = STATE.items.filter(q=>q.status!=='Resolved').length;
+    $('#status').textContent = `${nOpen} open · ${STATE.items.length-nOpen} resolved`;
     render();
   }catch(e){
-    $('#qlist').innerHTML = `<div class="empty">Could not load open_questions.json — open this page via a local server, not file://.<br>${esc(e.message)}</div>`;
+    $('#qlist').innerHTML = `<div class="empty">Could not load open_questions.json / resolved_questions.json — open this page via a local server, not file://.<br>${esc(e.message)}</div>`;
     $('#status').textContent = 'Load failed';
   }
 }
@@ -362,32 +383,47 @@ function render(){
     if(filter.status!=='all' && (q.status||'Open')!==filter.status) return false;
     return true;
   });
-  $('#qlist').innerHTML = list.length
-    ? list.map(qCard).join('')
-    : `<div class="empty">Nothing matches this filter.</div>`;
+  const openItems = list.filter(q=>q.status!=='Resolved');
+  const resolvedItems = list.filter(q=>q.status==='Resolved');
+  const section = (title, sub, items) => items.length
+    ? `<div class="qsection"><h2 class="qsection-head">${title} <span class="n">(${items.length})</span></h2>
+       <p class="qsection-sub">${sub}</p>${items.map(qCard).join('')}</div>`
+    : '';
+  const html = section('Open &amp; In-Play', 'Threads, questions, and to-dos still live — <code>open_questions.json</code>.', openItems)
+    + section('Resolved', 'Archived rulings and picked-up threads — <code>resolved_questions.json</code>.', resolvedItems);
+  $('#qlist').innerHTML = html || `<div class="empty">Nothing matches this filter.</div>`;
 
   $$('.qcard').forEach(card=>{
     const id = card.dataset.id;
     const q = STATE.items.find(x=>x.id===id);
     const chk = card.querySelector('input[type=checkbox]');
-    const box = card.querySelector('.qanswer-box');
     const ta = card.querySelector('textarea');
     chk.onchange = ()=>{
       q.status = chk.checked ? 'Resolved' : 'Open';
-      box.style.display = chk.checked ? '' : 'none';
-      card.classList.toggle('resolved', chk.checked);
       autosave();
+      render(); // relocate the card between the Open and Resolved sections
     };
     ta.oninput = ()=>{ q.resolution = ta.value; autosave(); };
   });
 }
 
-$('#saveBtn').onclick = ()=>{
-  const blob = new Blob([JSON.stringify(STATE, null, 2)], {type:'application/json'});
+function download(obj, filename){
+  const blob = new Blob([JSON.stringify(obj, null, 2) + '\n'], {type:'application/json'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url; a.download = 'open_questions.json'; a.click();
+  a.href = url; a.download = filename; a.click();
   URL.revokeObjectURL(url);
+}
+
+$('#saveBtn').onclick = ()=>{
+  const unresolved = STATE.items.filter(q=>q.status!=='Resolved');
+  download({meta: STATE.meta, items: unresolved, gmReference: STATE.gmReference}, 'open_questions.json');
+};
+
+$('#saveResolvedBtn').onclick = ()=>{
+  const resolved = STATE.items.filter(q=>q.status==='Resolved');
+  const rmeta = {...STATE.meta, title: 'Resolved Questions — Archive'};
+  download({meta: rmeta, items: resolved}, 'resolved_questions.json');
 };
 
 load();
