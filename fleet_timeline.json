@@ -887,5 +887,295 @@
       ],
       "note": "Hoarfrost forming inside a Norman barrow's burial chamber on the winter solstice is Corpus vis, scraped free before dawn. Tribunal 1223 prize. Barrow location approximate."
     }
+  ],
+  "covenants": [
+    {
+      "id": "cov-sjorseiðr",
+      "name": "Sjórseiðr",
+      "role": "player",
+      "region": "North Sea (ship-based)",
+      "rank": 1,
+      "blurb": "YOUR COVENANT. A ship-based, independent covenant of the North Sea. Attending its first Tribunal as gauntleted magi.",
+      "xy": [
+        39.0,
+        22.0
+      ]
+    },
+    {
+      "id": "cov-spiders-palace",
+      "name": "Spider's Palace",
+      "role": "vassal",
+      "region": "Flanders",
+      "rank": 12,
+      "blurb": "Florum vassal and known Lotharingian sympathizer.",
+      "xy": [
+        43.7,
+        37.6
+      ]
+    },
+    {
+      "id": "cov-florum",
+      "name": "Florum",
+      "role": "liege",
+      "region": "Flanders",
+      "rank": 21,
+      "blurb": "Flanders liege. Its own vassals lean Lotharingian, making it a fault line in the Tribunal's simmering separatist tensions.",
+      "xy": [
+        43.7,
+        38.2
+      ]
+    },
+    {
+      "id": "cov-merces-aurea",
+      "name": "Merces Aurea",
+      "role": "independent",
+      "region": "Bruges, Flanders",
+      "rank": 3,
+      "blurb": "Mercantile trade covenant and Lotharingian separatist — and the runaway Certamen champion / overall winner of the 1223 Tourney.",
+      "xy": [
+        43.5,
+        39.9
+      ]
+    },
+    {
+      "id": "cov-scarem-montem",
+      "name": "Scarem Montem",
+      "role": "vassal",
+      "region": "Dunkirk",
+      "rank": 12,
+      "blurb": "Lotharingian separatist covenant — an awkward vassal for the host liege to hold.",
+      "xy": [
+        39.2,
+        41.1
+      ]
+    },
+    {
+      "id": "cov-requies-aeterna",
+      "name": "Requies Aeterna",
+      "role": "vassal",
+      "region": "Flanders & Picardy",
+      "rank": 12,
+      "blurb": "Florum vassal straddling Flanders and Picardy.",
+      "xy": [
+        41.2,
+        42.9
+      ]
+    },
+    {
+      "id": "cov-umbra-silvae",
+      "name": "Umbra Silvae",
+      "role": "vassal-of-vassal",
+      "region": "Champagne forests",
+      "rank": 5,
+      "blurb": "Merinita faerie specialists; vassal-of-vassal under Cunfin. Won a surprise hastiludium podium (4th) in 1223.",
+      "xy": [
+        46.6,
+        43.5
+      ]
+    },
+    {
+      "id": "cov-turris-vigilans",
+      "name": "Turris Vigilans",
+      "role": "vassal",
+      "region": "near Amiens, Picardy",
+      "rank": 5,
+      "blurb": "Border-security covenant. Surprise dimicatio semifinalist at the 1223 Tourney.",
+      "xy": [
+        38.8,
+        44.7
+      ]
+    },
+    {
+      "id": "cov-cunfin",
+      "name": "Cunfin",
+      "role": "vassal",
+      "region": "Champagne & Burgundy",
+      "rank": null,
+      "blurb": "Confluensis vassal in the wine country. Quietly excellent at certamen (semifinalist, 1223).",
+      "xy": [
+        45.3,
+        45.1
+      ]
+    },
+    {
+      "id": "cov-eboris",
+      "name": "Eboris",
+      "role": "independent",
+      "region": "Paris",
+      "rank": 12,
+      "blurb": "Young Paris covenant; allegiance and status unclear.",
+      "xy": [
+        39.8,
+        46.1
+      ]
+    },
+    {
+      "id": "cov-dragons-rest",
+      "name": "Dragon's Rest",
+      "role": "vassal",
+      "region": "Mouth of the Seine",
+      "rank": 12,
+      "blurb": "Mercere House and portal hub; the Tribunal's logistical artery. The target of Montverte's poaching scheme.",
+      "xy": [
+        35.9,
+        46.3
+      ]
+    },
+    {
+      "id": "cov-lapis-crudus",
+      "name": "Lapis Crudus",
+      "role": "independent",
+      "region": "Forest of Fontainebleau",
+      "rank": 12,
+      "blurb": "Independent. Recently freed after an 80-year faerie imprisonment — and back in the brackets this Tourney.",
+      "xy": [
+        39.8,
+        47.6
+      ]
+    },
+    {
+      "id": "cov-bellum-iocari",
+      "name": "Bellum Iocari",
+      "role": "vassal",
+      "region": "Norman–Maine border",
+      "rank": null,
+      "blurb": "The Tytalus \"war college.\" A certamen powerhouse — runner-up overall at the 1223 Tourney.",
+      "xy": [
+        34.5,
+        48.3
+      ]
+    },
+    {
+      "id": "cov-confluensis",
+      "name": "Confluensis",
+      "role": "liege",
+      "region": "Cotentin Peninsula",
+      "rank": 13,
+      "blurb": "House Guernicus liege on the Cotentin. Traditional guardian of Tribunal law — and the covenant Montverte hopes to weaken at this Tribunal.",
+      "xy": [
+        30.8,
+        49.7
+      ]
+    },
+    {
+      "id": "cov-semita-errabunda",
+      "name": "Semita Errabunda",
+      "role": "independent",
+      "region": "Unclear",
+      "rank": 9,
+      "blurb": "\"The Wandering Path.\" Location and status unclear — yet it placed in the melee at the 1223 Tourney.",
+      "xy": [
+        38.3,
+        51.0
+      ]
+    },
+    {
+      "id": "cov-atramentum-renatus",
+      "name": "Atramentum Renatus",
+      "role": "vassal-of-vassal",
+      "region": "Champagne & Burgundy",
+      "rank": 12,
+      "blurb": "Vassal-of-vassal under Exspectatio (and thus the Fudarus line). Born from the founders of the dissolved Atramentum.",
+      "xy": [
+        42.6,
+        51.4
+      ]
+    },
+    {
+      "id": "cov-montverte",
+      "name": "Montverte",
+      "role": "liege",
+      "region": "Normandy",
+      "rank": 4,
+      "blurb": "Normandy liege and host of the 1223 Tourney. Flambeau-heavy and ambitious; quietly maneuvering to poach Confluensis's vassals.",
+      "xy": [
+        31.25,
+        51.8
+      ]
+    },
+    {
+      "id": "cov-carnac",
+      "name": "Carnac",
+      "role": "vassal",
+      "region": "Brittany",
+      "rank": 12,
+      "blurb": "On a rocky Breton promontory; investigates shifting magical auras.",
+      "xy": [
+        25.75,
+        53.9
+      ]
+    },
+    {
+      "id": "cov-atsingani",
+      "name": "Atsingani",
+      "role": "vassal",
+      "region": "Anjou",
+      "rank": 12,
+      "blurb": "Montverte vassal in Anjou. Traditionally seated at the Siege of Alms in the source material.",
+      "xy": [
+        38.5,
+        55.1
+      ]
+    },
+    {
+      "id": "cov-exspectatio",
+      "name": "Exspectatio",
+      "role": "vassal",
+      "region": "Brittany",
+      "rank": 12,
+      "blurb": "Tytalus vassal of Fudarus, raised on ground prepared by the short-lived Atramentum.",
+      "xy": [
+        24.0,
+        56.1
+      ]
+    },
+    {
+      "id": "cov-arx-argentea",
+      "name": "Arx Argentea",
+      "role": "independent",
+      "region": "Loire Valley",
+      "rank": 12,
+      "blurb": "Verditius metallurgists built atop a silver mine.",
+      "xy": [
+        33.5,
+        57.4
+      ]
+    },
+    {
+      "id": "cov-fudarus",
+      "name": "Fudarus",
+      "role": "liege",
+      "region": "Brittany",
+      "rank": 7,
+      "blurb": "Domus Magna of House Tytalus and the senior liege covenant of the Tribunal. Ancient, formidable, and politically central. Lords over four vassals.",
+      "xy": [
+        20.8,
+        57.7
+      ]
+    },
+    {
+      "id": "cov-oleron",
+      "name": "Oleron",
+      "role": "liege",
+      "region": "Aquitaine (island)",
+      "rank": 2,
+      "blurb": "Aquitaine island liege, the youngest of the five great lieges. Strong showing in the joust this Tourney.",
+      "xy": [
+        28.75,
+        60.6
+      ]
+    },
+    {
+      "id": "cov-nidi",
+      "name": "Nidi",
+      "role": "vassal",
+      "region": "Aquitaine",
+      "rank": 12,
+      "blurb": "Oleron's sole vassal, deep in Aquitaine.",
+      "xy": [
+        32.4,
+        61.3
+      ]
+    }
   ]
 }

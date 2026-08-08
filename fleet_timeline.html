@@ -53,13 +53,29 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(17px,2.6vw,22px);c
 .vtoken .tlabel{top:26px}
 .vtoken:hover{z-index:9}
 .vtoken:hover .vgem{outline:2px solid var(--gold-bright);outline-offset:2px}
+/* covenant markers (a teal rook; the player covenant is gold-ringed rust) */
+#covlayer{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
+#covlayer.off{display:none}
+.ctoken{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;cursor:pointer;z-index:2}
+.ckeep{width:21px;height:21px;border-radius:6px;display:grid;place-items:center;
+  background:rgba(245,238,220,.95);box-shadow:0 2px 5px var(--shadow);border:2px solid var(--cc,var(--teal))}
+.ckeep b{font-size:12px;line-height:1;color:var(--cc,var(--teal))}
+.ctoken.player .ckeep{border-color:var(--rust-bright);box-shadow:0 0 0 2px var(--gold-bright),0 2px 5px var(--shadow)}
+.ctoken.player .ckeep b{color:var(--rust-bright)}
+.ctoken .tlabel{top:24px}
+.ctoken:hover{z-index:9}
+.ctoken:hover .ckeep{outline:2px solid var(--gold-bright);outline-offset:2px}
+.layerctl{position:absolute;left:12px;top:12px;z-index:20;display:flex;align-items:center;gap:6px;cursor:pointer;
+  background:rgba(245,238,220,.92);border:1px solid rgba(120,90,40,.4);border-radius:9px;padding:6px 10px;
+  font-family:'Cinzel',serif;font-size:11.5px;color:var(--ink);box-shadow:0 3px 9px var(--shadow);user-select:none}
+.layerctl input{accent-color:var(--teal);cursor:pointer;margin:0}
 .stoken.edgearrow .glyph::after{content:"↑";position:absolute;top:-11px;left:50%;transform:translateX(-50%);
   font-size:13px;font-weight:700;color:var(--tc,#555);text-shadow:0 1px 1px rgba(255,251,242,.9)}
 .tlabel{position:absolute;left:50%;top:32px;transform:translateX(-50%);white-space:nowrap;font-size:10.5px;
   font-family:'Cinzel',serif;color:var(--ink);background:rgba(245,238,220,.92);padding:1px 5px;border-radius:3px;
   border:1px solid rgba(120,90,40,.35);box-shadow:0 1px 2px var(--shadow);
   opacity:0;pointer-events:none;transition:opacity .12s}      /* names show on hover only */
-.stoken:hover .tlabel,.mtoken:hover .tlabel,.vtoken:hover .tlabel{opacity:1}
+.stoken:hover .tlabel,.mtoken:hover .tlabel,.vtoken:hover .tlabel,.ctoken:hover .tlabel{opacity:1}
 .mtoken .tlabel{top:26px;font-style:italic}
 .edgearrow .glyph{border-radius:6px;font-size:15px}
 .stoken:hover,.mtoken:hover{z-index:9}
@@ -110,8 +126,10 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(17px,2.6vw,22px);c
       <div class="viewport" id="viewport">
         <img id="mapimg" alt="Mythic Europe, 1220 A.D.">
         <svg id="travel"></svg>
+        <div id="covlayer"></div>
         <div id="tokens"></div>
       </div>
+      <label class="layerctl" id="layerctl"><input type="checkbox" id="covToggle" checked> Show covenants</label>
       <div class="legend" id="legend"></div>
       <div class="zoomctl">
         <button id="zin" title="Zoom in">＋</button>
@@ -135,7 +153,7 @@ const SVGNS='http://www.w3.org/2000/svg';
 let DATA=null, cur=0, baseW=1098, baseH=0;
 const wrap=document.getElementById('mapwrap'), vp=document.getElementById('viewport'),
       img=document.getElementById('mapimg'), svg=document.getElementById('travel'),
-      tokens=document.getElementById('tokens');
+      tokens=document.getElementById('tokens'), covlayer=document.getElementById('covlayer');
 let scale=1, tx=0, ty=0;
 
 /* ---------- pan / zoom (ported from the Tribunal map) ---------- */
@@ -269,6 +287,22 @@ function renderVis(seasonId){
   });
   return list;
 }
+/* ---------- covenant layer (static; drawn once, toggled with the checkbox) ---------- */
+function renderCovenants(){
+  covlayer.innerHTML='';
+  (DATA.covenants||[]).forEach(c=>{
+    const x=c.xy[0]/100*baseW, y=c.xy[1]/100*baseH;
+    const player=c.role==='player';
+    const glyph=player?'★':'♜';
+    const meta=[c.role,c.region].filter(Boolean).join(' · ')+(c.rank?`  ·  rank ${c.rank}`:'');
+    const d=document.createElement('div');
+    d.className='ctoken'+(player?' player':'');
+    d.style.left=x+'px'; d.style.top=y+'px';
+    d.innerHTML=`<div class="ckeep"><b>${glyph}</b></div><div class="tlabel">${esc(c.name)}</div>`;
+    d.title=c.name+' — '+meta+(c.blurb?'\n'+c.blurb:'');
+    covlayer.appendChild(d);
+  });
+}
 function drawCircle([x,y],r,color){
   const c=document.createElementNS(SVGNS,'circle');
   c.setAttribute('cx',x);c.setAttribute('cy',y);c.setAttribute('r',r);
@@ -308,7 +342,7 @@ function buildLegend(usedShipIds,visList){
         `<div class="legrow"><span class="vsw${v.kind==='prize'?' prize':''}"></span>${esc(v.name)} <span class="vart">(${esc(v.art||'vis')})</span></div>`).join('')
     : '';
   document.getElementById('legend').innerHTML=`<h4>Ships this season</h4>${rows}${vis}
-    <div class="mini">Ship icon = a vessel; hat icon = a magus ashore, coloured to match. A course begins at the small circle and follows the dashes; ↑ marks a voyage off the map's edge. ◆ = a vis harvest available that season (gold ring = Tribunal prize).</div>`;
+    <div class="mini">Ship icon = a vessel; hat icon = a magus ashore, coloured to match. A course begins at the small circle and follows the dashes; ↑ marks a voyage off the map's edge. ◆ = a vis harvest available that season (gold ring = Tribunal prize). ♜ = a Normandy Tribunal covenant (toggle top-left; ★ gold = yours).</div>`;
 }
 
 /* ---------- timeline strip ---------- */
@@ -331,9 +365,13 @@ async function boot(){
   try{ DATA=await (await fetch('./fleet_timeline.json',{cache:'no-store'})).json(); }
   catch(e){ document.querySelector('.mapwrap').innerHTML='<p style="padding:30px">Could not load fleet_timeline.json (serve over http).</p>'; return; }
   buildTimeline();
+  const covToggle=document.getElementById('covToggle');
+  covToggle.onchange=()=>covlayer.classList.toggle('off',!covToggle.checked);
   const start=()=>{ baseH=baseW*(img.naturalHeight/img.naturalWidth);
     img.style.width=baseW+'px'; img.style.height=baseH+'px';   // lock display size to the coordinate base
     fit();
+    renderCovenants();                                         // static covenant layer
+    covlayer.classList.toggle('off',!covToggle.checked);
     // start at the first season that has data
     const first=DATA.seasons.findIndex(s=>s.hasData); go(first<0?0:first); };
   img.addEventListener('load',start,{once:true});
