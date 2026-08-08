@@ -13,6 +13,7 @@
   --gold:#9a6b1f; --gold-bright:#c69b3f;
   --rust:#8a3324; --rust-bright:#b54a32;
   --teal:#2c6b66; --teal-bright:#3f8f86;
+  --vis:#6d3fa0; --vis-bright:#9a6ad0;
   --line:#6b5436; --shadow:rgba(50,32,12,.45);
 }
 *{box-sizing:border-box}
@@ -43,13 +44,22 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(17px,2.6vw,22px);c
 .stoken .glyph i{width:21px;height:21px;-webkit-mask-image:url(icon-ship.svg);mask-image:url(icon-ship.svg)}
 .mtoken .glyph{width:27px;height:27px}
 .mtoken .glyph i{width:19px;height:19px;-webkit-mask-image:url(icon-hat.svg);mask-image:url(icon-hat.svg)}
+/* vis-harvest markers (a violet diamond bearing the Art's two-letter code) */
+.vtoken{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;cursor:pointer;z-index:3}
+.vgem{width:23px;height:23px;transform:rotate(45deg);display:grid;place-items:center;
+  background:rgba(245,238,220,.96);box-shadow:0 2px 6px var(--shadow);border:2.5px solid var(--vis);border-radius:5px}
+.vgem b{transform:rotate(-45deg);font-family:'Cinzel',serif;font-size:9px;font-weight:600;color:var(--vis);letter-spacing:.02em;line-height:1}
+.vtoken.prize .vgem{border-color:var(--vis-bright);box-shadow:0 0 0 2px var(--gold-bright),0 2px 6px var(--shadow)}
+.vtoken .tlabel{top:26px}
+.vtoken:hover{z-index:9}
+.vtoken:hover .vgem{outline:2px solid var(--gold-bright);outline-offset:2px}
 .stoken.edgearrow .glyph::after{content:"↑";position:absolute;top:-11px;left:50%;transform:translateX(-50%);
   font-size:13px;font-weight:700;color:var(--tc,#555);text-shadow:0 1px 1px rgba(255,251,242,.9)}
 .tlabel{position:absolute;left:50%;top:32px;transform:translateX(-50%);white-space:nowrap;font-size:10.5px;
   font-family:'Cinzel',serif;color:var(--ink);background:rgba(245,238,220,.92);padding:1px 5px;border-radius:3px;
   border:1px solid rgba(120,90,40,.35);box-shadow:0 1px 2px var(--shadow);
   opacity:0;pointer-events:none;transition:opacity .12s}      /* names show on hover only */
-.stoken:hover .tlabel,.mtoken:hover .tlabel{opacity:1}
+.stoken:hover .tlabel,.mtoken:hover .tlabel,.vtoken:hover .tlabel{opacity:1}
 .mtoken .tlabel{top:26px;font-style:italic}
 .edgearrow .glyph{border-radius:6px;font-size:15px}
 .stoken:hover,.mtoken:hover{z-index:9}
@@ -60,6 +70,9 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(17px,2.6vw,22px);c
 .legend h4{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust-bright);margin:0 0 6px}
 .legrow{display:flex;align-items:center;gap:7px;margin:3px 0;line-height:1.2}
 .legrow .sw{flex:none;width:14px;height:14px;border-radius:50%;border:2px solid #555}
+.legrow .vsw{flex:none;width:11px;height:11px;transform:rotate(45deg);border:2px solid var(--vis);border-radius:3px;background:rgba(245,238,220,.9);margin:2px}
+.legrow .vsw.prize{border-color:var(--vis-bright);box-shadow:0 0 0 1.5px var(--gold-bright)}
+.legrow .vart{color:var(--ink-soft);font-size:11px}
 .legend .mini{font-size:10.5px;color:var(--ink-soft);line-height:1.35;margin-top:6px;border-top:1px solid rgba(120,90,40,.25);padding-top:6px}
 .zoomctl{position:absolute;left:12px;bottom:12px;display:flex;flex-direction:column;gap:6px;z-index:20}
 .zoomctl button{width:34px;height:34px;border-radius:8px;border:1px solid var(--line);cursor:pointer;font-size:18px;
@@ -193,7 +206,8 @@ function renderSeason(){
   tokens.innerHTML=''; while(svg.firstChild)svg.removeChild(svg.firstChild);
   svg.setAttribute('width',baseW); svg.setAttribute('height',baseH);
   svg.setAttribute('viewBox',`0 0 ${baseW} ${baseH}`);
-  if(!pos){ document.getElementById('nowNote').textContent='No fleet positions authored for this season yet.'; buildLegend([]); return; }
+  const visList=renderVis(s.id);   // vis-harvest markers for the current season
+  if(!pos){ document.getElementById('nowNote').textContent='No fleet positions authored for this season yet.'; buildLegend([],visList); return; }
   document.getElementById('nowNote').textContent=pos.note||'';
   // Build a unified item list, then fan out anything sharing a destination so
   // co-located ships/magi don't stack invisibly on the same point.
@@ -223,7 +237,37 @@ function renderSeason(){
       else tokenMagus(it.id,it.sh,dest,it.note);
     });
   });
-  buildLegend([...used]);
+  buildLegend([...used],visList);
+}
+/* ---------- vis-harvest markers ---------- */
+const ART_CODE={Creo:'Cr',Intellego:'In',Muto:'Mu',Perdo:'Pe',Rego:'Re',Animal:'An',Aquam:'Aq',
+  Auram:'Au',Corpus:'Co',Herbam:'He',Ignem:'Ig',Imaginem:'Im',Mentem:'Me',Terram:'Te',Vim:'Vi'};
+const seasonOf=id=>id.split('-')[1];
+const vXY=v=>[v.xy[0]/100*baseW, v.xy[1]/100*baseH];
+/* Which vis sources are harvestable in the current season: the season's four Arts,
+   with the Tribunal-prize sources only appearing once their `from` season is reached. */
+function visForSeason(seasonId){
+  return (DATA.vis_sources||[]).filter(v=>{
+    if(v.season!==seasonOf(seasonId)) return false;
+    if(!v.from) return true;
+    const fi=DATA.seasons.findIndex(x=>x.id===v.from);
+    return fi<0 || cur>=fi;
+  });
+}
+function renderVis(seasonId){
+  const list=visForSeason(seasonId);
+  list.forEach(v=>{
+    const [x,y]=vXY(v);
+    const code=ART_CODE[v.art]||'✦';
+    const meta=[v.art?v.art+' vis':'vis', v.yield].filter(Boolean).join(' · ');
+    const d=document.createElement('div');
+    d.className='vtoken'+(v.kind==='prize'?' prize':'');
+    d.style.left=x+'px'; d.style.top=y+'px';
+    d.innerHTML=`<div class="vgem"><b>${esc(code)}</b></div><div class="tlabel">${esc(v.name)} — ${esc(meta)}</div>`;
+    d.title=v.name+' — '+meta+(v.note?'\n'+v.note:'');
+    tokens.appendChild(d);
+  });
+  return list;
 }
 function drawCircle([x,y],r,color){
   const c=document.createElementNS(SVGNS,'circle');
@@ -255,12 +299,16 @@ function tokenMagus(name,sh,[x,y],note){
   d.title=name+' (ashore / separated from '+sh.name+')'+(note?' — '+note:'');
   tokens.appendChild(d);
 }
-function buildLegend(usedShipIds){
+function buildLegend(usedShipIds,visList){
   const rows=usedShipIds.map(id=>{const sh=ship(id);
     return `<div class="legrow"><span class="sw" style="border-color:${sh.color}"></span>${esc(sh.name)}</div>`;}).join('')
     || '<div class="mini">—</div>';
-  document.getElementById('legend').innerHTML=`<h4>Ships this season</h4>${rows}
-    <div class="mini">Ship icon = a vessel; hat icon = a magus ashore (separated from their ship), coloured to match. A course begins at the small circle and follows the dashes; ↑ marks a voyage off the map's edge.</div>`;
+  const vis=(visList&&visList.length)
+    ? `<h4 style="margin-top:9px">Vis this season</h4>`+visList.map(v=>
+        `<div class="legrow"><span class="vsw${v.kind==='prize'?' prize':''}"></span>${esc(v.name)} <span class="vart">(${esc(v.art||'vis')})</span></div>`).join('')
+    : '';
+  document.getElementById('legend').innerHTML=`<h4>Ships this season</h4>${rows}${vis}
+    <div class="mini">Ship icon = a vessel; hat icon = a magus ashore, coloured to match. A course begins at the small circle and follows the dashes; ↑ marks a voyage off the map's edge. ◆ = a vis harvest available that season (gold ring = Tribunal prize).</div>`;
 }
 
 /* ---------- timeline strip ---------- */

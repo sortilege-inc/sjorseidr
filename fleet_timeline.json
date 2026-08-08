@@ -1,777 +1,891 @@
 {
- "meta": {
-  "title": "Sjórseiðr Fleet — Voyages by Season",
-  "basemap": "mythic_europe.png",
-  "basemap_size": [
-   2837,
-   2670
+  "meta": {
+    "title": "Sjórseiðr Fleet — Voyages by Season",
+    "basemap": "mythic_europe.png",
+    "basemap_size": [
+      2837,
+      2670
+    ],
+    "note": "Ship/magus positions are % of the Mythic Europe basemap. The fleet's default home is the North Sea; Bruges is the winter base. Coordinates approximate.",
+    "coords_status": "approximate"
+  },
+  "ships": {
+    "tide-of-memory": {
+      "name": "Tide of Memory",
+      "owner": "Dagmar",
+      "magus": "Dagmar",
+      "color": "#2c6b66"
+    },
+    "brineborn": {
+      "name": "Brineborn",
+      "owner": "Éogan Dobhartha",
+      "magus": "Éogan Dobhartha",
+      "color": "#3e6b35"
+    },
+    "scholars-wake": {
+      "name": "The Scholar's Wake",
+      "owner": "Dustin Page",
+      "magus": "Dustin Page",
+      "color": "#3a5ba0"
+    },
+    "maelstroms-maw": {
+      "name": "Maelstrom's Maw",
+      "owner": "Nequam→Kor",
+      "magus": "Kor Ex Flambeau",
+      "color": "#7a3fb0"
+    },
+    "storm-dragon": {
+      "name": "Veðrdreki (Storm Dragon)",
+      "owner": "Valdemar Bjornsson",
+      "magus": "Valdemar Bjornsson",
+      "color": "#4a6b8a"
+    },
+    "adamant": {
+      "name": "Adamant",
+      "owner": "Valerian de Castellane",
+      "magus": "Valerian de Castellane",
+      "color": "#9a8250"
+    },
+    "hound-of-cassel": {
+      "name": "Hound of Cassel",
+      "owner": "Wilhelm Stienauer",
+      "magus": "Wilhelm Stienauer",
+      "color": "#8a3324"
+    }
+  },
+  "places": {
+    "boulogne": {
+      "name": "Boulogne",
+      "xy": [
+        40.0,
+        42.8
+      ],
+      "kind": "port"
+    },
+    "bruges": {
+      "name": "Bruges (winter base)",
+      "xy": [
+        43.5,
+        39.9
+      ],
+      "kind": "port",
+      "home": true
+    },
+    "north-sea": {
+      "name": "The North Sea (the fleet's home waters)",
+      "xy": [
+        39.0,
+        22.0
+      ],
+      "kind": "sea"
+    },
+    "hebrides": {
+      "name": "The Hebrides",
+      "xy": [
+        20.3,
+        15.9
+      ]
+    },
+    "bergen": {
+      "name": "Bergen (Norway)",
+      "xy": [
+        46.5,
+        8.5
+      ]
+    },
+    "norwegian-sea": {
+      "name": "Norwegian waters",
+      "xy": [
+        48.0,
+        9.6
+      ],
+      "kind": "sea"
+    },
+    "isle-of-man": {
+      "name": "Isle of Man",
+      "xy": [
+        23.5,
+        27.1
+      ]
+    },
+    "dublin": {
+      "name": "Dublin",
+      "xy": [
+        18.0,
+        31.3
+      ],
+      "kind": "port"
+    },
+    "ireland-cruachan": {
+      "name": "Cruachan / Carrick (inland Ireland)",
+      "xy": [
+        15.0,
+        32.4
+      ]
+    },
+    "le-mans": {
+      "name": "Le Mans (Montverte — the 1223 Tribunal)",
+      "xy": [
+        31.25,
+        51.8
+      ]
+    },
+    "oleron": {
+      "name": "Île d'Oléron",
+      "xy": [
+        28.75,
+        60.6
+      ]
+    },
+    "carnac": {
+      "name": "Carnac (Brittany coast)",
+      "xy": [
+        25.75,
+        53.9
+      ]
+    }
+  },
+  "waypoints": {
+    "dover": [
+      37.5,
+      40.0
+    ],
+    "e-england": [
+      33.0,
+      29.0
+    ],
+    "channel": [
+      31.0,
+      43.0
+    ],
+    "ushant": [
+      21.5,
+      50.0
+    ],
+    "loire": [
+      26.5,
+      54.0
+    ],
+    "biscay-n": [
+      25.0,
+      55.5
+    ],
+    "scot-n": [
+      26.0,
+      12.0
+    ],
+    "minch": [
+      22.0,
+      17.5
+    ],
+    "irish-sea": [
+      21.0,
+      25.0
+    ],
+    "lands-end": [
+      20.0,
+      38.5
+    ],
+    "st-georges": [
+      18.5,
+      33.5
+    ]
+  },
+  "routes": {
+    "boulogne>hebrides": [
+      "dover",
+      "e-england",
+      "scot-n",
+      "minch"
+    ],
+    "hebrides>north-sea": [
+      "minch",
+      "scot-n",
+      "e-england"
+    ],
+    "north-sea>isle-of-man": [
+      "scot-n",
+      "minch",
+      "irish-sea"
+    ],
+    "north-sea>le-mans": [
+      "dover",
+      "channel",
+      "ushant",
+      "loire"
+    ],
+    "north-sea>oleron": [
+      "dover",
+      "channel",
+      "ushant",
+      "biscay-n"
+    ],
+    "north-sea>dublin": [
+      "dover",
+      "channel",
+      "lands-end",
+      "st-georges"
+    ],
+    "north-sea>boulogne": [
+      "dover"
+    ],
+    "oleron>carnac": [
+      "biscay-n"
+    ]
+  },
+  "seasons": [
+    {
+      "id": "1219-winter",
+      "label": "❄️ Winter 1219-20",
+      "iso": "1219-12-20",
+      "hasData": true
+    },
+    {
+      "id": "1220-spring",
+      "label": "🌺 Spring 1220",
+      "iso": "1220-04-20",
+      "hasData": true
+    },
+    {
+      "id": "1220-summer",
+      "label": "☀️ Summer 1220",
+      "iso": "1220-06-20",
+      "hasData": true
+    },
+    {
+      "id": "1220-fall",
+      "label": "🍂 Fall 1220",
+      "iso": "1220-09-20",
+      "hasData": true
+    },
+    {
+      "id": "1220-winter",
+      "label": "❄️ Winter 1220-21",
+      "iso": "1220-12-20",
+      "hasData": true
+    },
+    {
+      "id": "1221-spring",
+      "label": "🌺 Spring 1221",
+      "iso": "1221-04-20",
+      "hasData": true
+    },
+    {
+      "id": "1221-summer",
+      "label": "☀️ Summer 1221",
+      "iso": "1221-06-20",
+      "hasData": true
+    },
+    {
+      "id": "1221-fall",
+      "label": "🍂 Fall 1221",
+      "iso": "1221-09-20",
+      "hasData": true
+    },
+    {
+      "id": "1221-winter",
+      "label": "❄️ Winter 1221-22",
+      "iso": "1221-12-20",
+      "hasData": true
+    },
+    {
+      "id": "1222-spring",
+      "label": "🌺 Spring 1222",
+      "iso": "1222-04-20",
+      "hasData": true
+    },
+    {
+      "id": "1222-summer",
+      "label": "☀️ Summer 1222",
+      "iso": "1222-06-20",
+      "hasData": true
+    },
+    {
+      "id": "1222-fall",
+      "label": "🍂 Fall 1222",
+      "iso": "1222-09-20",
+      "hasData": true
+    },
+    {
+      "id": "1222-winter",
+      "label": "❄️ Winter 1222-23",
+      "iso": "1222-12-20",
+      "hasData": true
+    },
+    {
+      "id": "1223-spring",
+      "label": "🌺 Spring 1223",
+      "iso": "1223-04-20",
+      "hasData": true
+    },
+    {
+      "id": "1223-summer",
+      "label": "☀️ Summer 1223",
+      "iso": "1223-06-15",
+      "hasData": true
+    },
+    {
+      "id": "1223-fall",
+      "label": "🍂 Fall 1223",
+      "iso": "1223-10-10",
+      "hasData": true
+    },
+    {
+      "id": "1223-winter",
+      "label": "❄️ Winter 1223-24",
+      "iso": "1223-11-05",
+      "hasData": true
+    },
+    {
+      "id": "1224-spring",
+      "label": "🌼 Spring 1224",
+      "iso": "1224-03-20",
+      "hasData": true
+    }
   ],
-  "note": "Ship/magus positions are % of the Mythic Europe basemap. The fleet's default home is the North Sea; Bruges is the winter base. Coordinates approximate.",
-  "coords_status": "approximate"
- },
- "ships": {
-  "tide-of-memory": {
-   "name": "Tide of Memory",
-   "owner": "Dagmar",
-   "magus": "Dagmar",
-   "color": "#2c6b66"
+  "positions": {
+    "1219-winter": {
+      "note": "The young covenant winters its ships together in Boulogne.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "boulogne"
+        },
+        "brineborn": {
+          "at": "boulogne"
+        },
+        "scholars-wake": {
+          "at": "boulogne"
+        },
+        "maelstroms-maw": {
+          "at": "boulogne"
+        }
+      }
+    },
+    "1220-spring": {
+      "note": "Dagmar summons the covenant to Bruges after Solving's disappearance; Nequam takes the Maelstrom's Maw north to the Hebrides.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "bruges"
+        },
+        "brineborn": {
+          "at": "bruges"
+        },
+        "scholars-wake": {
+          "at": "bruges"
+        },
+        "maelstroms-maw": {
+          "at": "hebrides"
+        }
+      }
+    },
+    "1220-summer": {
+      "note": "Back to the covenant's North Sea grounds; the Maelstrom's Maw returns from the Hebrides and Nequam hands it to Kor ex Flambeau.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "north-sea"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "north-sea"
+        },
+        "maelstroms-maw": {
+          "at": "north-sea"
+        }
+      }
+    },
+    "1220-fall": {
+      "note": "A season at sea — trade, study, and Dagmar's hunt for sky-regiones for a meteor vis-harvest.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "north-sea"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "north-sea"
+        },
+        "maelstroms-maw": {
+          "at": "north-sea"
+        }
+      }
+    },
+    "1220-winter": {
+      "note": "'Fire from the Sky' in the North Sea, then home to Bruges to winter and settle finances; Valdemar Bjornsson joins with the Storm Dragon.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "bruges"
+        },
+        "brineborn": {
+          "at": "bruges"
+        },
+        "scholars-wake": {
+          "at": "bruges"
+        },
+        "maelstroms-maw": {
+          "at": "bruges"
+        },
+        "storm-dragon": {
+          "at": "bruges"
+        }
+      }
+    },
+    "1221-spring": {
+      "note": "Out to the North Sea grounds; Valdemar works the annual Kraken's Egg.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "north-sea"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "north-sea"
+        },
+        "maelstroms-maw": {
+          "at": "north-sea"
+        },
+        "storm-dragon": {
+          "at": "north-sea"
+        }
+      }
+    },
+    "1221-summer": {
+      "note": "Summer trade and Valdemar's piracy in the North Sea (the raid that takes the Hound of Cassel).",
+      "ships": {
+        "tide-of-memory": {
+          "at": "north-sea"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "north-sea"
+        },
+        "maelstroms-maw": {
+          "at": "north-sea"
+        },
+        "storm-dragon": {
+          "at": "north-sea"
+        }
+      }
+    },
+    "1221-fall": {
+      "note": "Dagmar (hunting sea-wrecks) and Valdemar (with his prize) cross paths off Bergen; the rest keep the North Sea grounds.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "bergen"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "north-sea"
+        },
+        "maelstroms-maw": {
+          "at": "north-sea"
+        },
+        "storm-dragon": {
+          "at": "bergen"
+        }
+      }
+    },
+    "1221-winter": {
+      "note": "Home to Bruges for winter, planning the coming Tribunal. (The Maelstrom's Maw goes on sabbatical.)",
+      "ships": {
+        "tide-of-memory": {
+          "at": "bruges"
+        },
+        "brineborn": {
+          "at": "bruges"
+        },
+        "scholars-wake": {
+          "at": "bruges"
+        },
+        "storm-dragon": {
+          "at": "bruges"
+        }
+      }
+    },
+    "1222-spring": {
+      "note": "Dagmar explores Scandinavian waters (a faerie-aura shipwreck); Valerian de Castellane arrives with the Adamant.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "norwegian-sea"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "north-sea"
+        },
+        "storm-dragon": {
+          "at": "north-sea"
+        },
+        "adamant": {
+          "at": "north-sea"
+        }
+      }
+    },
+    "1222-summer": {
+      "note": "Valdemar establishes the covenant's secret dock on the Isle of Man and lays up the captured Hound of Cassel there.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "north-sea"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "north-sea"
+        },
+        "storm-dragon": {
+          "at": "isle-of-man"
+        },
+        "adamant": {
+          "at": "north-sea"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        }
+      }
+    },
+    "1222-fall": {
+      "note": "A season at sea; Dustin puts in at Boulogne chasing the recurring 'Black Horse'.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "north-sea"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "boulogne"
+        },
+        "storm-dragon": {
+          "at": "north-sea"
+        },
+        "adamant": {
+          "at": "north-sea"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        }
+      }
+    },
+    "1222-winter": {
+      "note": "'Fire from the Sky', then home to Bruges: the year in review and negotiating Guillaume's favours.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "bruges"
+        },
+        "brineborn": {
+          "at": "bruges"
+        },
+        "scholars-wake": {
+          "at": "bruges"
+        },
+        "storm-dragon": {
+          "at": "bruges"
+        },
+        "adamant": {
+          "at": "bruges"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        }
+      }
+    },
+    "1223-spring": {
+      "note": "Out to the North Sea grounds; shipboard study and final Tribunal preparations.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "north-sea"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "north-sea"
+        },
+        "storm-dragon": {
+          "at": "north-sea"
+        },
+        "adamant": {
+          "at": "north-sea"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        }
+      }
+    },
+    "1223-summer": {
+      "note": "The Tribunal. The party sails up the Sarthe aboard the Storm Dragon to Le Mans, then overland to Montverte; their own ships stay trading the North Sea. Wilhelm Stienauer joins the covenant.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "north-sea"
+        },
+        "brineborn": {
+          "at": "north-sea"
+        },
+        "scholars-wake": {
+          "at": "north-sea"
+        },
+        "adamant": {
+          "at": "north-sea"
+        },
+        "storm-dragon": {
+          "at": "le-mans"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        }
+      },
+      "magi": {
+        "Dagmar": {
+          "at": "le-mans",
+          "ship": "tide-of-memory"
+        },
+        "Éogan Dobhartha": {
+          "at": "le-mans",
+          "ship": "brineborn"
+        },
+        "Dustin Page": {
+          "at": "le-mans",
+          "ship": "scholars-wake"
+        },
+        "Valerian de Castellane": {
+          "at": "le-mans",
+          "ship": "adamant"
+        },
+        "Wilhelm Stienauer": {
+          "at": "le-mans",
+          "ship": "hound-of-cassel"
+        }
+      }
+    },
+    "1223-fall": {
+      "note": "The fleet meets near Harfleur for the annual Aegis, then splits: Dagmar sails for Oleron; the Brineborn and Scholar's Wake carry Éogan, Dustin and Wilhelm to Ireland; the Storm Dragon and Adamant work the North Sea.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "oleron"
+        },
+        "brineborn": {
+          "at": "dublin"
+        },
+        "scholars-wake": {
+          "at": "dublin"
+        },
+        "storm-dragon": {
+          "at": "north-sea"
+        },
+        "adamant": {
+          "at": "north-sea"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        }
+      },
+      "magi": {
+        "Éogan Dobhartha": {
+          "at": "ireland-cruachan",
+          "ship": "brineborn"
+        },
+        "Dustin Page": {
+          "at": "ireland-cruachan",
+          "ship": "scholars-wake"
+        },
+        "Wilhelm Stienauer": {
+          "at": "ireland-cruachan",
+          "ship": "hound-of-cassel"
+        }
+      }
+    },
+    "1223-winter": {
+      "note": "Dagmar winters at Oleron; the Storm Dragon and Adamant lay up at the Isle of Man with the rest of the fleet, while Éogan, Dustin and Wilhelm winter inland at Carrick.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "oleron"
+        },
+        "brineborn": {
+          "at": "isle-of-man"
+        },
+        "scholars-wake": {
+          "at": "isle-of-man"
+        },
+        "storm-dragon": {
+          "at": "isle-of-man"
+        },
+        "adamant": {
+          "at": "isle-of-man"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        }
+      },
+      "magi": {
+        "Éogan Dobhartha": {
+          "at": "ireland-cruachan",
+          "ship": "brineborn"
+        },
+        "Dustin Page": {
+          "at": "ireland-cruachan",
+          "ship": "scholars-wake"
+        },
+        "Wilhelm Stienauer": {
+          "at": "ireland-cruachan",
+          "ship": "hound-of-cassel"
+        }
+      }
+    },
+    "1224-spring": {
+      "note": "Dagmar works north from Oleron (the Falcon's Cliff harvest, then a regio survey near Carnac); the Ireland party reconvenes at Dublin as the ice breaks (the changeling boy Rody at Cruachan).",
+      "ships": {
+        "tide-of-memory": {
+          "at": "carnac"
+        },
+        "brineborn": {
+          "at": "dublin"
+        },
+        "scholars-wake": {
+          "at": "dublin"
+        },
+        "storm-dragon": {
+          "at": "isle-of-man"
+        },
+        "adamant": {
+          "at": "isle-of-man"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        }
+      },
+      "magi": {
+        "Éogan Dobhartha": {
+          "at": "ireland-cruachan",
+          "ship": "brineborn"
+        },
+        "Dustin Page": {
+          "at": "ireland-cruachan",
+          "ship": "scholars-wake"
+        }
+      }
+    }
   },
-  "brineborn": {
-   "name": "Brineborn",
-   "owner": "Éogan Dobhartha",
-   "magus": "Éogan Dobhartha",
-   "color": "#3e6b35"
-  },
-  "scholars-wake": {
-   "name": "The Scholar's Wake",
-   "owner": "Dustin Page",
-   "magus": "Dustin Page",
-   "color": "#3a5ba0"
-  },
-  "maelstroms-maw": {
-   "name": "Maelstrom's Maw",
-   "owner": "Nequam→Kor",
-   "magus": "Kor Ex Flambeau",
-   "color": "#7a3fb0"
-  },
-  "storm-dragon": {
-   "name": "Veðrdreki (Storm Dragon)",
-   "owner": "Valdemar Bjornsson",
-   "magus": "Valdemar Bjornsson",
-   "color": "#4a6b8a"
-  },
-  "adamant": {
-   "name": "Adamant",
-   "owner": "Valerian de Castellane",
-   "magus": "Valerian de Castellane",
-   "color": "#9a8250"
-  },
-  "hound-of-cassel": {
-   "name": "Hound of Cassel",
-   "owner": "Wilhelm Stienauer",
-   "magus": "Wilhelm Stienauer",
-   "color": "#8a3324"
-  }
- },
- "places": {
-  "boulogne": {
-   "name": "Boulogne",
-   "xy": [
-    40.0,
-    42.8
-   ],
-   "kind": "port"
-  },
-  "bruges": {
-   "name": "Bruges (winter base)",
-   "xy": [
-    43.5,
-    39.9
-   ],
-   "kind": "port",
-   "home": true
-  },
-  "north-sea": {
-   "name": "The North Sea (the fleet's home waters)",
-   "xy": [
-    39.0,
-    22.0
-   ],
-   "kind": "sea"
-  },
-  "hebrides": {
-   "name": "The Hebrides",
-   "xy": [
-    20.3,
-    15.9
-   ]
-  },
-  "bergen": {
-   "name": "Bergen (Norway)",
-   "xy": [
-    46.5,
-    8.5
-   ]
-  },
-  "norwegian-sea": {
-   "name": "Norwegian waters",
-   "xy": [
-    48.0,
-    9.6
-   ],
-   "kind": "sea"
-  },
-  "isle-of-man": {
-   "name": "Isle of Man",
-   "xy": [
-    23.5,
-    27.1
-   ]
-  },
-  "dublin": {
-   "name": "Dublin",
-   "xy": [
-    18.0,
-    31.3
-   ],
-   "kind": "port"
-  },
-  "ireland-cruachan": {
-   "name": "Cruachan / Carrick (inland Ireland)",
-   "xy": [
-    15.0,
-    32.4
-   ]
-  },
-  "le-mans": {
-   "name": "Le Mans (Montverte — the 1223 Tribunal)",
-   "xy": [
-    31.25,
-    51.8
-   ]
-  },
-  "oleron": {
-   "name": "Île d'Oléron",
-   "xy": [
-    28.75,
-    60.6
-   ]
-  },
-  "carnac": {
-   "name": "Carnac (Brittany coast)",
-   "xy": [
-    25.75,
-    53.9
-   ]
-  }
- },
- "waypoints": {
-  "dover": [
-   37.5,
-   40.0
-  ],
-  "e-england": [
-   33.0,
-   29.0
-  ],
-  "channel": [
-   31.0,
-   43.0
-  ],
-  "ushant": [
-   21.5,
-   50.0
-  ],
-  "loire": [
-   26.5,
-   54.0
-  ],
-  "biscay-n": [
-   25.0,
-   55.5
-  ],
-  "scot-n": [
-   26.0,
-   12.0
-  ],
-  "minch": [
-   22.0,
-   17.5
-  ],
-  "irish-sea": [
-   21.0,
-   25.0
-  ],
-  "lands-end": [
-   20.0,
-   38.5
-  ],
-  "st-georges": [
-   18.5,
-   33.5
+  "vis_sources": [
+    {
+      "id": "vis-kraken",
+      "name": "The Kraken's Egg",
+      "art": "Animal",
+      "yield": "annual",
+      "season": "spring",
+      "from": null,
+      "kind": "seisin",
+      "xy": [
+        33.5,
+        13.0
+      ],
+      "note": "A kraken surfaces in the North Sea between Norway and Scotland each spring and lays a single egg; retrieved in time, the egg is vis. Art inferred from the egg (the chronicle names Muto/Animal/Aquam around the 1221 harvest). Point in the open sea is approximate."
+    },
+    {
+      "id": "vis-fog",
+      "name": "The Summer Fog",
+      "art": "Mentem",
+      "yield": "annual",
+      "season": "summer",
+      "from": null,
+      "kind": "seisin",
+      "xy": [
+        41.5,
+        35.0
+      ],
+      "note": "A cursed fog haunts a coastal village every summer; the mist is Mentem vis, netted before it can invade dreams. Coastal-village location approximate."
+    },
+    {
+      "id": "vis-blackhorse",
+      "name": "The Black Horse of Boulogne",
+      "art": "Rego",
+      "yield": "annual",
+      "season": "fall",
+      "from": null,
+      "kind": "seisin",
+      "xy": [
+        38.8,
+        44.0
+      ],
+      "note": "An annual Rego vis harvest at Boulogne."
+    },
+    {
+      "id": "vis-firesky",
+      "name": "Fire from the Sky",
+      "art": "Terram",
+      "yield": "annual",
+      "season": "winter",
+      "from": null,
+      "kind": "seisin",
+      "xy": [
+        37.0,
+        18.0
+      ],
+      "note": "A hailstorm drops burning granite spheres into the northern sea each winter; the stones are Terram vis if collected before dawn."
+    },
+    {
+      "id": "vis-msm",
+      "name": "Mont-Saint-Michel Tide Pools",
+      "art": "Aquam",
+      "yield": "5 pawns/yr",
+      "season": "fall",
+      "from": "1223-fall",
+      "kind": "prize",
+      "xy": [
+        28.2,
+        50.2
+      ],
+      "note": "Salt crystals that crystallize in the tide pools at the foot of the mount during the great spring tides (a tidal event, not the spring season). Tribunal 1223 prize (first pick). Placed in Fall per the season table. Location approximate."
+    },
+    {
+      "id": "vis-diedne",
+      "name": "The Diedne Garden",
+      "art": "Herbam",
+      "yield": "3 pawns/yr",
+      "season": "spring",
+      "from": "1223-fall",
+      "kind": "prize",
+      "xy": [
+        28.5,
+        56.0
+      ],
+      "note": "An overgrown garden at a ruined Diedne covenant site yields three unusual herbs each spring; politically contested (multiple covenants claim historical rights). Tribunal 1223 prize. Location approximate."
+    },
+    {
+      "id": "vis-falcon",
+      "name": "The Falcon's Cliff",
+      "art": "Animal",
+      "yield": "annual",
+      "season": "spring",
+      "from": "1223-fall",
+      "kind": "prize",
+      "xy": [
+        33.0,
+        46.5
+      ],
+      "note": "A falcon nests on a cliff ledge; a serpent tries to steal an egg the same day. Prevent it and the egg is Animal vis; if the serpent wins, Vim (if the serpent is caught). Tribunal 1223 prize; Dagmar harvested it in Spring 1224. Cliff location approximate."
+    },
+    {
+      "id": "vis-barrow",
+      "name": "Norman Barrow Frost",
+      "art": "Corpus",
+      "yield": "2 pawns/yr",
+      "season": "winter",
+      "from": "1223-fall",
+      "kind": "prize",
+      "xy": [
+        35.5,
+        47.5
+      ],
+      "note": "Hoarfrost forming inside a Norman barrow's burial chamber on the winter solstice is Corpus vis, scraped free before dawn. Tribunal 1223 prize. Barrow location approximate."
+    }
   ]
- },
- "routes": {
-  "boulogne>hebrides": [
-   "dover",
-   "e-england",
-   "scot-n",
-   "minch"
-  ],
-  "hebrides>north-sea": [
-   "minch",
-   "scot-n",
-   "e-england"
-  ],
-  "north-sea>isle-of-man": [
-   "scot-n",
-   "minch",
-   "irish-sea"
-  ],
-  "north-sea>le-mans": [
-   "dover",
-   "channel",
-   "ushant",
-   "loire"
-  ],
-  "north-sea>oleron": [
-   "dover",
-   "channel",
-   "ushant",
-   "biscay-n"
-  ],
-  "north-sea>dublin": [
-   "dover",
-   "channel",
-   "lands-end",
-   "st-georges"
-  ],
-  "north-sea>boulogne": [
-   "dover"
-  ],
-  "oleron>carnac": [
-   "biscay-n"
-  ]
- },
- "seasons": [
-  {
-   "id": "1219-winter",
-   "label": "❄️ Winter 1219-20",
-   "iso": "1219-12-20",
-   "hasData": true
-  },
-  {
-   "id": "1220-spring",
-   "label": "🌺 Spring 1220",
-   "iso": "1220-04-20",
-   "hasData": true
-  },
-  {
-   "id": "1220-summer",
-   "label": "☀️ Summer 1220",
-   "iso": "1220-06-20",
-   "hasData": true
-  },
-  {
-   "id": "1220-fall",
-   "label": "🍂 Fall 1220",
-   "iso": "1220-09-20",
-   "hasData": true
-  },
-  {
-   "id": "1220-winter",
-   "label": "❄️ Winter 1220-21",
-   "iso": "1220-12-20",
-   "hasData": true
-  },
-  {
-   "id": "1221-spring",
-   "label": "🌺 Spring 1221",
-   "iso": "1221-04-20",
-   "hasData": true
-  },
-  {
-   "id": "1221-summer",
-   "label": "☀️ Summer 1221",
-   "iso": "1221-06-20",
-   "hasData": true
-  },
-  {
-   "id": "1221-fall",
-   "label": "🍂 Fall 1221",
-   "iso": "1221-09-20",
-   "hasData": true
-  },
-  {
-   "id": "1221-winter",
-   "label": "❄️ Winter 1221-22",
-   "iso": "1221-12-20",
-   "hasData": true
-  },
-  {
-   "id": "1222-spring",
-   "label": "🌺 Spring 1222",
-   "iso": "1222-04-20",
-   "hasData": true
-  },
-  {
-   "id": "1222-summer",
-   "label": "☀️ Summer 1222",
-   "iso": "1222-06-20",
-   "hasData": true
-  },
-  {
-   "id": "1222-fall",
-   "label": "🍂 Fall 1222",
-   "iso": "1222-09-20",
-   "hasData": true
-  },
-  {
-   "id": "1222-winter",
-   "label": "❄️ Winter 1222-23",
-   "iso": "1222-12-20",
-   "hasData": true
-  },
-  {
-   "id": "1223-spring",
-   "label": "🌺 Spring 1223",
-   "iso": "1223-04-20",
-   "hasData": true
-  },
-  {
-   "id": "1223-summer",
-   "label": "☀️ Summer 1223",
-   "iso": "1223-06-15",
-   "hasData": true
-  },
-  {
-   "id": "1223-fall",
-   "label": "🍂 Fall 1223",
-   "iso": "1223-10-10",
-   "hasData": true
-  },
-  {
-   "id": "1223-winter",
-   "label": "❄️ Winter 1223-24",
-   "iso": "1223-11-05",
-   "hasData": true
-  },
-  {
-   "id": "1224-spring",
-   "label": "🌼 Spring 1224",
-   "iso": "1224-03-20",
-   "hasData": true
-  }
- ],
- "positions": {
-  "1219-winter": {
-   "note": "The young covenant winters its ships together in Boulogne.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "boulogne"
-    },
-    "brineborn": {
-     "at": "boulogne"
-    },
-    "scholars-wake": {
-     "at": "boulogne"
-    },
-    "maelstroms-maw": {
-     "at": "boulogne"
-    }
-   }
-  },
-  "1220-spring": {
-   "note": "Dagmar summons the covenant to Bruges after Solving's disappearance; Nequam takes the Maelstrom's Maw north to the Hebrides.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "bruges"
-    },
-    "brineborn": {
-     "at": "bruges"
-    },
-    "scholars-wake": {
-     "at": "bruges"
-    },
-    "maelstroms-maw": {
-     "at": "hebrides"
-    }
-   }
-  },
-  "1220-summer": {
-   "note": "Back to the covenant's North Sea grounds; the Maelstrom's Maw returns from the Hebrides and Nequam hands it to Kor ex Flambeau.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "north-sea"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "north-sea"
-    },
-    "maelstroms-maw": {
-     "at": "north-sea"
-    }
-   }
-  },
-  "1220-fall": {
-   "note": "A season at sea — trade, study, and Dagmar's hunt for sky-regiones for a meteor vis-harvest.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "north-sea"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "north-sea"
-    },
-    "maelstroms-maw": {
-     "at": "north-sea"
-    }
-   }
-  },
-  "1220-winter": {
-   "note": "'Fire from the Sky' in the North Sea, then home to Bruges to winter and settle finances; Valdemar Bjornsson joins with the Storm Dragon.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "bruges"
-    },
-    "brineborn": {
-     "at": "bruges"
-    },
-    "scholars-wake": {
-     "at": "bruges"
-    },
-    "maelstroms-maw": {
-     "at": "bruges"
-    },
-    "storm-dragon": {
-     "at": "bruges"
-    }
-   }
-  },
-  "1221-spring": {
-   "note": "Out to the North Sea grounds; Valdemar works the annual Kraken's Egg.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "north-sea"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "north-sea"
-    },
-    "maelstroms-maw": {
-     "at": "north-sea"
-    },
-    "storm-dragon": {
-     "at": "north-sea"
-    }
-   }
-  },
-  "1221-summer": {
-   "note": "Summer trade and Valdemar's piracy in the North Sea (the raid that takes the Hound of Cassel).",
-   "ships": {
-    "tide-of-memory": {
-     "at": "north-sea"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "north-sea"
-    },
-    "maelstroms-maw": {
-     "at": "north-sea"
-    },
-    "storm-dragon": {
-     "at": "north-sea"
-    }
-   }
-  },
-  "1221-fall": {
-   "note": "Dagmar (hunting sea-wrecks) and Valdemar (with his prize) cross paths off Bergen; the rest keep the North Sea grounds.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "bergen"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "north-sea"
-    },
-    "maelstroms-maw": {
-     "at": "north-sea"
-    },
-    "storm-dragon": {
-     "at": "bergen"
-    }
-   }
-  },
-  "1221-winter": {
-   "note": "Home to Bruges for winter, planning the coming Tribunal. (The Maelstrom's Maw goes on sabbatical.)",
-   "ships": {
-    "tide-of-memory": {
-     "at": "bruges"
-    },
-    "brineborn": {
-     "at": "bruges"
-    },
-    "scholars-wake": {
-     "at": "bruges"
-    },
-    "storm-dragon": {
-     "at": "bruges"
-    }
-   }
-  },
-  "1222-spring": {
-   "note": "Dagmar explores Scandinavian waters (a faerie-aura shipwreck); Valerian de Castellane arrives with the Adamant.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "norwegian-sea"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "north-sea"
-    },
-    "storm-dragon": {
-     "at": "north-sea"
-    },
-    "adamant": {
-     "at": "north-sea"
-    }
-   }
-  },
-  "1222-summer": {
-   "note": "Valdemar establishes the covenant's secret dock on the Isle of Man and lays up the captured Hound of Cassel there.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "north-sea"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "north-sea"
-    },
-    "storm-dragon": {
-     "at": "isle-of-man"
-    },
-    "adamant": {
-     "at": "north-sea"
-    },
-    "hound-of-cassel": {
-     "at": "isle-of-man"
-    }
-   }
-  },
-  "1222-fall": {
-   "note": "A season at sea; Dustin puts in at Boulogne chasing the recurring 'Black Horse'.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "north-sea"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "boulogne"
-    },
-    "storm-dragon": {
-     "at": "north-sea"
-    },
-    "adamant": {
-     "at": "north-sea"
-    },
-    "hound-of-cassel": {
-     "at": "isle-of-man"
-    }
-   }
-  },
-  "1222-winter": {
-   "note": "'Fire from the Sky', then home to Bruges: the year in review and negotiating Guillaume's favours.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "bruges"
-    },
-    "brineborn": {
-     "at": "bruges"
-    },
-    "scholars-wake": {
-     "at": "bruges"
-    },
-    "storm-dragon": {
-     "at": "bruges"
-    },
-    "adamant": {
-     "at": "bruges"
-    },
-    "hound-of-cassel": {
-     "at": "isle-of-man"
-    }
-   }
-  },
-  "1223-spring": {
-   "note": "Out to the North Sea grounds; shipboard study and final Tribunal preparations.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "north-sea"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "north-sea"
-    },
-    "storm-dragon": {
-     "at": "north-sea"
-    },
-    "adamant": {
-     "at": "north-sea"
-    },
-    "hound-of-cassel": {
-     "at": "isle-of-man"
-    }
-   }
-  },
-  "1223-summer": {
-   "note": "The Tribunal. The party sails up the Sarthe aboard the Storm Dragon to Le Mans, then overland to Montverte; their own ships stay trading the North Sea. Wilhelm Stienauer joins the covenant.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "north-sea"
-    },
-    "brineborn": {
-     "at": "north-sea"
-    },
-    "scholars-wake": {
-     "at": "north-sea"
-    },
-    "adamant": {
-     "at": "north-sea"
-    },
-    "storm-dragon": {
-     "at": "le-mans"
-    },
-    "hound-of-cassel": {
-     "at": "isle-of-man"
-    }
-   },
-   "magi": {
-    "Dagmar": {
-     "at": "le-mans",
-     "ship": "tide-of-memory"
-    },
-    "Éogan Dobhartha": {
-     "at": "le-mans",
-     "ship": "brineborn"
-    },
-    "Dustin Page": {
-     "at": "le-mans",
-     "ship": "scholars-wake"
-    },
-    "Valerian de Castellane": {
-     "at": "le-mans",
-     "ship": "adamant"
-    },
-    "Wilhelm Stienauer": {
-     "at": "le-mans",
-     "ship": "hound-of-cassel"
-    }
-   }
-  },
-  "1223-fall": {
-   "note": "The fleet meets near Harfleur for the annual Aegis, then splits: Dagmar sails for Oleron; the Brineborn and Scholar's Wake carry Éogan, Dustin and Wilhelm to Ireland; the Storm Dragon and Adamant work the North Sea.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "oleron"
-    },
-    "brineborn": {
-     "at": "dublin"
-    },
-    "scholars-wake": {
-     "at": "dublin"
-    },
-    "storm-dragon": {
-     "at": "north-sea"
-    },
-    "adamant": {
-     "at": "north-sea"
-    },
-    "hound-of-cassel": {
-     "at": "isle-of-man"
-    }
-   },
-   "magi": {
-    "Éogan Dobhartha": {
-     "at": "ireland-cruachan",
-     "ship": "brineborn"
-    },
-    "Dustin Page": {
-     "at": "ireland-cruachan",
-     "ship": "scholars-wake"
-    },
-    "Wilhelm Stienauer": {
-     "at": "ireland-cruachan",
-     "ship": "hound-of-cassel"
-    }
-   }
-  },
-  "1223-winter": {
-   "note": "Dagmar winters at Oleron; the Storm Dragon and Adamant lay up at the Isle of Man with the rest of the fleet, while Éogan, Dustin and Wilhelm winter inland at Carrick.",
-   "ships": {
-    "tide-of-memory": {
-     "at": "oleron"
-    },
-    "brineborn": {
-     "at": "isle-of-man"
-    },
-    "scholars-wake": {
-     "at": "isle-of-man"
-    },
-    "storm-dragon": {
-     "at": "isle-of-man"
-    },
-    "adamant": {
-     "at": "isle-of-man"
-    },
-    "hound-of-cassel": {
-     "at": "isle-of-man"
-    }
-   },
-   "magi": {
-    "Éogan Dobhartha": {
-     "at": "ireland-cruachan",
-     "ship": "brineborn"
-    },
-    "Dustin Page": {
-     "at": "ireland-cruachan",
-     "ship": "scholars-wake"
-    },
-    "Wilhelm Stienauer": {
-     "at": "ireland-cruachan",
-     "ship": "hound-of-cassel"
-    }
-   }
-  },
-  "1224-spring": {
-   "note": "Dagmar works north from Oleron (the Falcon's Cliff harvest, then a regio survey near Carnac); the Ireland party reconvenes at Dublin as the ice breaks (the changeling boy Rody at Cruachan).",
-   "ships": {
-    "tide-of-memory": {
-     "at": "carnac"
-    },
-    "brineborn": {
-     "at": "dublin"
-    },
-    "scholars-wake": {
-     "at": "dublin"
-    },
-    "storm-dragon": {
-     "at": "isle-of-man"
-    },
-    "adamant": {
-     "at": "isle-of-man"
-    },
-    "hound-of-cassel": {
-     "at": "isle-of-man"
-    }
-   },
-   "magi": {
-    "Éogan Dobhartha": {
-     "at": "ireland-cruachan",
-     "ship": "brineborn"
-    },
-    "Dustin Page": {
-     "at": "ireland-cruachan",
-     "ship": "scholars-wake"
-    }
-   }
-  }
- }
 }
