@@ -53,22 +53,31 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(17px,2.6vw,22px);c
 .vtoken .tlabel{top:26px}
 .vtoken:hover{z-index:9}
 .vtoken:hover .vgem{outline:2px solid var(--gold-bright);outline-offset:2px}
-/* covenant markers (a teal rook; the player covenant is gold-ringed rust) */
+/* covenant markers — shape+glyph by role, colour by feudal bloc */
 #covlayer{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none}
 #covlayer.off{display:none}
 .ctoken{position:absolute;transform:translate(-50%,-50%);pointer-events:auto;cursor:pointer;z-index:2}
-.ckeep{width:21px;height:21px;border-radius:6px;display:grid;place-items:center;
+.ckeep{width:18px;height:18px;border-radius:50%;display:grid;place-items:center;      /* vassal/independent: circle */
   background:rgba(245,238,220,.95);box-shadow:0 2px 5px var(--shadow);border:2px solid var(--cc,var(--teal))}
-.ckeep b{font-size:12px;line-height:1;color:var(--cc,var(--teal))}
+.ckeep b{font-size:11px;line-height:1;color:var(--cc,var(--teal))}
+.ctoken.liege .ckeep,.ctoken.player .ckeep{width:23px;height:23px;border-radius:5px;border-width:2.5px}  /* liege/player: keep */
+.ctoken.liege .ckeep b{font-size:13px}
 .ctoken.player .ckeep{border-color:var(--rust-bright);box-shadow:0 0 0 2px var(--gold-bright),0 2px 5px var(--shadow)}
-.ctoken.player .ckeep b{color:var(--rust-bright)}
-.ctoken .tlabel{top:24px}
+.ctoken .tlabel{top:23px}
 .ctoken:hover{z-index:9}
 .ctoken:hover .ckeep{outline:2px solid var(--gold-bright);outline-offset:2px}
 .layerctl{position:absolute;left:12px;top:12px;z-index:20;display:flex;align-items:center;gap:6px;cursor:pointer;
   background:rgba(245,238,220,.92);border:1px solid rgba(120,90,40,.4);border-radius:9px;padding:6px 10px;
   font-family:'Cinzel',serif;font-size:11.5px;color:var(--ink);box-shadow:0 3px 9px var(--shadow);user-select:none}
 .layerctl input{accent-color:var(--teal);cursor:pointer;margin:0}
+.covkey{position:absolute;left:12px;top:48px;z-index:19;background:rgba(245,238,220,.92);
+  border:1px solid rgba(120,90,40,.4);border-radius:9px;padding:8px 10px;max-width:190px;
+  box-shadow:0 3px 9px var(--shadow);font-size:11.5px}
+.covkey.off{display:none}
+.covkey h4{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust-bright);margin:0 0 5px}
+.covkey .krow{display:flex;align-items:center;gap:6px;margin:2px 0;line-height:1.2}
+.covkey .ksw{flex:none;width:12px;height:12px;border-radius:3px;border:2px solid #555;background:rgba(245,238,220,.9)}
+.covkey .kmini{font-size:10px;color:var(--ink-soft);line-height:1.35;margin-top:6px;border-top:1px solid rgba(120,90,40,.25);padding-top:5px}
 .stoken.edgearrow .glyph::after{content:"↑";position:absolute;top:-11px;left:50%;transform:translateX(-50%);
   font-size:13px;font-weight:700;color:var(--tc,#555);text-shadow:0 1px 1px rgba(255,251,242,.9)}
 .tlabel{position:absolute;left:50%;top:32px;transform:translateX(-50%);white-space:nowrap;font-size:10.5px;
@@ -130,6 +139,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(17px,2.6vw,22px);c
         <div id="tokens"></div>
       </div>
       <label class="layerctl" id="layerctl"><input type="checkbox" id="covToggle" checked> Show covenants</label>
+      <div class="covkey" id="covkey"></div>
       <div class="legend" id="legend"></div>
       <div class="zoomctl">
         <button id="zin" title="Zoom in">＋</button>
@@ -288,20 +298,44 @@ function renderVis(seasonId){
   return list;
 }
 /* ---------- covenant layer (static; drawn once, toggled with the checkbox) ---------- */
+const COV_GLYPH={liege:'♜',vassal:'⚑','vassal-of-vassal':'⚑',independent:'✦',player:'★'};
+const COV_ROLECLASS={liege:'liege',player:'player',independent:'indep'};
 function renderCovenants(){
   covlayer.innerHTML='';
   (DATA.covenants||[]).forEach(c=>{
     const x=c.xy[0]/100*baseW, y=c.xy[1]/100*baseH;
-    const player=c.role==='player';
-    const glyph=player?'★':'♜';
-    const meta=[c.role,c.region].filter(Boolean).join(' · ')+(c.rank?`  ·  rank ${c.rank}`:'');
+    const glyph=COV_GLYPH[c.role]||'♜';
+    const roleClass=COV_ROLECLASS[c.role]||'vassal';
+    const bloc=(c.faction && c.faction!=='independent' && c.faction!=='player' && c.faction!==c.name)
+      ? ` · ${c.faction} bloc` : '';
+    const meta=[c.role.replace(/-/g,' '),c.region].filter(Boolean).join(' · ')+bloc+(c.rank?`  ·  rank ${c.rank}`:'');
     const d=document.createElement('div');
-    d.className='ctoken'+(player?' player':'');
+    d.className='ctoken '+roleClass;
     d.style.left=x+'px'; d.style.top=y+'px';
+    if(c.color) d.style.setProperty('--cc',c.color);
     d.innerHTML=`<div class="ckeep"><b>${glyph}</b></div><div class="tlabel">${esc(c.name)}</div>`;
     d.title=c.name+' — '+meta+(c.blurb?'\n'+c.blurb:'');
     covlayer.appendChild(d);
   });
+  buildCovKey();
+}
+function buildCovKey(){
+  const cov=DATA.covenants||[];
+  // one swatch per liege bloc (colour shared with its vassals), in map order
+  const blocs=[];
+  ['Fudarus','Confluensis','Florum','Montverte','Oleron'].forEach(f=>{
+    const members=cov.filter(c=>c.faction===f);
+    const liege=members.find(c=>c.role==='liege')||members[0];
+    if(liege) blocs.push({label:`${f} + vassals`, color:liege.color, n:members.length});
+  });
+  const rows=blocs.map(b=>
+    `<div class="krow"><span class="ksw" style="border-color:${b.color};background:${b.color}44"></span>♜ ${esc(b.label)} <span style="color:var(--ink-soft)">(${b.n})</span></div>`).join('');
+  const player=cov.find(c=>c.role==='player');
+  const playerRow=player?`<div class="krow"><span class="ksw" style="border-color:${player.color};box-shadow:0 0 0 1.5px var(--gold-bright)"></span>★ ${esc(player.name)} (you)</div>`:'';
+  const indeps=cov.filter(c=>c.role==='independent');
+  const indRow=indeps.length?`<div class="krow"><span class="ksw" style="border-color:#888;background:repeating-linear-gradient(45deg,#96792b44,#96792b44 3px,#6d7a8244 3px,#6d7a8244 6px)"></span>✦ Independents <span style="color:var(--ink-soft)">(${indeps.length}, own colours)</span></div>`:'';
+  document.getElementById('covkey').innerHTML=`<h4>Covenant blocs</h4>${rows}${indRow}${playerRow}
+    <div class="kmini">♜ liege · ⚑ vassal · ✦ independent. Colour = feudal bloc.</div>`;
 }
 function drawCircle([x,y],r,color){
   const c=document.createElementNS(SVGNS,'circle');
@@ -342,7 +376,7 @@ function buildLegend(usedShipIds,visList){
         `<div class="legrow"><span class="vsw${v.kind==='prize'?' prize':''}"></span>${esc(v.name)} <span class="vart">(${esc(v.art||'vis')})</span></div>`).join('')
     : '';
   document.getElementById('legend').innerHTML=`<h4>Ships this season</h4>${rows}${vis}
-    <div class="mini">Ship icon = a vessel; hat icon = a magus ashore, coloured to match. A course begins at the small circle and follows the dashes; ↑ marks a voyage off the map's edge. ◆ = a vis harvest available that season (gold ring = Tribunal prize). ♜ = a Normandy Tribunal covenant (toggle top-left; ★ gold = yours).</div>`;
+    <div class="mini">Ship icon = a vessel; hat icon = a magus ashore, coloured to match. A course begins at the small circle and follows the dashes; ↑ marks a voyage off the map's edge. ◆ = a vis harvest available that season (gold ring = Tribunal prize). Covenants toggle top-left (see the bloc key).</div>`;
 }
 
 /* ---------- timeline strip ---------- */
@@ -365,13 +399,14 @@ async function boot(){
   try{ DATA=await (await fetch('./fleet_timeline.json',{cache:'no-store'})).json(); }
   catch(e){ document.querySelector('.mapwrap').innerHTML='<p style="padding:30px">Could not load fleet_timeline.json (serve over http).</p>'; return; }
   buildTimeline();
-  const covToggle=document.getElementById('covToggle');
-  covToggle.onchange=()=>covlayer.classList.toggle('off',!covToggle.checked);
+  const covToggle=document.getElementById('covToggle'), covkey=document.getElementById('covkey');
+  const syncCov=()=>{ const off=!covToggle.checked; covlayer.classList.toggle('off',off); covkey.classList.toggle('off',off); };
+  covToggle.onchange=syncCov;
   const start=()=>{ baseH=baseW*(img.naturalHeight/img.naturalWidth);
     img.style.width=baseW+'px'; img.style.height=baseH+'px';   // lock display size to the coordinate base
     fit();
     renderCovenants();                                         // static covenant layer
-    covlayer.classList.toggle('off',!covToggle.checked);
+    syncCov();
     // start at the first season that has data
     const first=DATA.seasons.findIndex(s=>s.hasData); go(first<0?0:first); };
   img.addEventListener('load',start,{once:true});
