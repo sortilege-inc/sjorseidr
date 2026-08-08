@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "title": "Next Session — Candidate Scenes",
+    "subtitle": "The GM's working slate for the session after Spring 1224. The party is split: Wilhelm & Éogan making their way home from Ireland; Dagmar running north from the half-opened Carnac regio. Derived from the Open Questions prep hub (q027) — that page stays the source of truth.",
+    "as_of": "End of Spring 1224",
+    "source": "open_questions.json → q027 \"What are we preparing for next session?\" (+ the Rody hand-off, t023/q026)",
+    "schema_version": 1,
+    "magi_roster": ["Éogan", "Dagmar", "Wilhelm", "Valdemar", "Valerian", "Dustin"],
+    "status_note": "Developed = prepped and ready to stage · Deferred = deliberately left to improvise · Needs prep = flagged but not yet developed"
+  },
+  "scenes": [
+    {
+      "id": "s1",
+      "title": "What Wilhelm's assistants bring back — and can it break the thesis?",
+      "seasons": ["Spring 1224", "Summer 1224"],
+      "magi": ["Wilhelm"],
+      "npcs": [],
+      "thread": "Folk-magic integration",
+      "status": "Developed",
+      "hook": "Wilhelm's research assistants return from the winter gathering (sent west and south, paid in grain and silver). The live beat is whether any of it FALSIFIES the folk-magic thesis rather than confirming it.",
+      "detail": "A negative result — a tradition that works without leaning on the environment, or the missing open-ocean storm-prediction / current-finding citation turning out not to exist — forces Wilhelm to revise before he can deliver to Scarem Montem (see s6). Developed: the negation is a MADNESS failure rate that breaks the scalable / vis-factory case without disproving the magic itself; the assistants also flag a temporal hedge mage who beat the Limit of Time, leaving Wilhelm an origin-less brass egg.",
+      "refs": ["t009", "t019", "t020", "q028", "t071"]
+    },
+    {
+      "id": "s2",
+      "title": "Where does Foxglove get off the ship?",
+      "seasons": ["Spring 1224"],
+      "magi": ["Dagmar"],
+      "npcs": ["Foxglove", "Tormente"],
+      "thread": "Tormente's errand / the stolen hoard",
+      "status": "Developed",
+      "hook": "Foxglove is aboard the Tide of Memory with roughly five bags of stolen Roman dragon-gold — lifted the same night Dagmar agreed to run Tormente's peace-errand. She has every reason to vanish with the hoard before the theft surfaces, and the ship is already running north toward a Stonehenge-Tribunal port.",
+      "detail": "Where she gets off (and whether she deserts outright), and the fallout if she is still aboard when Dagmar returns to Tormente and the missing hoard is noticed, are player calls. What got prepped is the WORLD constraint: a GM reference on converting Roman gold c.1224 — no gold coinage on a silver standard, so bullion by weight only (melt, goldsmiths, moneylenders, Flanders/Lombard bankers, worked goods, the Church), plus treasure-trove and provenance friction and no collector market yet.",
+      "refs": ["c026", "t066"]
+    },
+    {
+      "id": "s3",
+      "title": "Does Valdemar join Dagmar for the dragon leg?",
+      "seasons": ["Spring 1224"],
+      "magi": ["Valdemar", "Dagmar"],
+      "npcs": ["Llewellyn ex Miscellanea", "Rán"],
+      "thread": "Tormente's errand / familiars",
+      "status": "Deferred",
+      "hook": "The northbound errand — carry the jewelled crown to Tormente's estranged kin off Scarborough / Newcastle — is a two-magus job. Valdemar (no familiar yet, and tied to the sea-fae Rán) is a natural companion for dragon diplomacy against a wyrm claiming Norse descent.",
+      "detail": "Dagmar has already invited Llewellyn ex Miscellanea by Redcap. Deferred: Valdemar's player has been absent, so the GM will improvise whether he signs on rather than pre-stage it. His Rán connection is worth watching against the kin-dragon's claim (s4).",
+      "refs": ["t066", "t037", "c022"]
+    },
+    {
+      "id": "s4",
+      "title": "The kin-dragon claims descent from Jörmungandr — the Mímormr reveal",
+      "seasons": ["Spring 1224", "Summer 1224"],
+      "magi": ["Dagmar"],
+      "npcs": ["Tormente", "Mímormr"],
+      "thread": "Tormente's errand",
+      "status": "Developed",
+      "hook": "The reveal behind the errand: the estranged dragon claims descent from Jörmungandr, the Midgard Serpent, styling itself the greatest magical being that ever was. For a Norse-seiðr saga this is a cosmological escalation.",
+      "detail": "Developed: the claim is FALSE but sincerely believed by Mímormr, a cursed bone-speaking scholar-wyrm. Tormente (a trickster) is using Dagmar to break Mímormr's curse — and freeing it looses a regional threat. Full build in t072; recontextualizes the Carnac regio's guardianship and frames Tormente's magnitude-10 Might as merely the lesser sibling's.",
+      "refs": ["t066", "t072"]
+    },
+    {
+      "id": "s5",
+      "title": "Éogan and the capricorn",
+      "seasons": ["Spring 1224", "Summer 1224"],
+      "magi": ["Éogan"],
+      "npcs": [],
+      "thread": "Familiars / the sea voyage home",
+      "status": "Developed",
+      "hook": "On the voyage home from Ireland a Magic-realm capricorn (sea-goat) singles Éogan out and paces his ship — offered as his first familiar prospect. The work is courting it and the binding lab-work, not an instant bond.",
+      "detail": "Developed: the draw is independent of the 'small fae drawn to Éogan/Stijntje' affinity; its signature specialty is CROSSING THRESHOLDS INTO REGIONES (mythic grounding in Enki's Goat-Fish and Macrobius's Gate of the Gods). Corpus build/bind references and a suggested Might ~12–16 Magic build are recorded. What it wants in exchange remains open.",
+      "refs": ["t070", "t068", "t037"]
+    },
+    {
+      "id": "s6",
+      "title": "Does Wilhelm sail to Scarem Montem? — and the three sealed chests",
+      "seasons": ["Summer 1224"],
+      "magi": ["Wilhelm"],
+      "npcs": [],
+      "thread": "Folk-magic integration / the ship-for-book swap",
+      "status": "Developed",
+      "hook": "The ship-for-book swap is in motion — the Hound of Cassel is under Wilhelm's control and headed back to Scarem Montem, and what he owes them is the folk-magic thesis. Whether he arrives with a finished thesis or one still short its maritime example hinges on s1.",
+      "detail": "Developed: the three sealed chests aboard the Hound of Cassel are intercepted Bishopric-of-Liège ↔ Scarem Montem cipher letters exposing a Church/State suborning — a Code violation tied to the Brabant conspiracy. Ring-based public/private-key crypto lets the covenant PROVE the correspondents but mostly not read the content. Wilhelm may be carrying Scarem Montem's own incriminating mail back to them: return it, keep it, or weaponise it in the swap?",
+      "refs": ["t002", "t009", "c012", "t028"]
+    },
+    {
+      "id": "s7",
+      "title": "The Rody hand-off at Uisneach",
+      "seasons": ["Spring 1224"],
+      "magi": ["Wilhelm", "Éogan"],
+      "npcs": ["Rody"],
+      "thread": "The changeling delivery",
+      "status": "Needs prep",
+      "hook": "The Connacht → Hermetic delivery custom passed the party a Fae changeling — Rody — as an 'owed' Gifted-child delivery, while a real Gifted child is still missing, taken by the Fae. The party chose not to interrogate or trade with the changeling directly.",
+      "detail": "Their plan was to quietly brief the receiving Hermetic magi near the Hill of Uisneach once the delivery completes. The open beats: does that briefing actually happen on the way home, and how did a Fae changeling come to be treated as a Gifted-child delivery in the first place? Flagged as a live thread but not yet developed.",
+      "refs": ["t023", "q026"]
+    }
+  ]
+}
