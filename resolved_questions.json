@@ -295,6 +295,28 @@
       "raised_event": "",
       "status": "Resolved",
       "resolution": "Answered (2026-07-25) from ArM5e core: the Boundary target forces a spell to be a Ritual (the enchantment rules note \"no other reason for the spell to be a ritual, such as Year duration, Boundary target, or major effect\"), and Ritual magic cannot be cast spontaneously. Therefore spontaneous magic cannot use the Boundary target at all."
+    },
+    {
+      "id": "q004",
+      "type": "Question",
+      "category": "Covenant Business",
+      "title": "Who staffs which vis-harvesting season now that the resource list has grown?",
+      "context": "Explicitly deferred at the table as \"too much to think about right now.\" With a much larger prize/resource footprint post-Tribunal, the covenant needs a real delegation plan.\n\nUpdate (2026-07-25): folded in from the removed '1224 look-ahead' event — with a much larger prize/resource footprint the covenant must decide who staffs which vis-harvesting season and where (deferred at the table as 'too much to think about right now'). Harvesting conventions vary: some sources (e.g. Fire From the Sky) require presence for a specific trigger event; others accumulate and can be harvested later, Hibernian-hedge-tradition style. (Wilhelm's 1224 Scarem Montem thesis-retrieval trip is tracked under t002/t019.)",
+      "raised_in": "Session 7 (2026-06-20)",
+      "raised_event": "Looking to 1224: back to Scarem Montem, and a still-unfinished prize list",
+      "status": "Resolved",
+      "resolution": "Archived 2026-08-08 (session): the GM set the seasonal harvest load — spring is the busiest season and summer the lightest — and left the covenant to divvy the sources up season by season rather than fix a standing rota. This session's assignments: Valerian took the Kraken's Egg and the northern group handled Fire from the Sky over winter (both off-camera); Valdemar took the Diedne Garden; Dagmar took the Falcon's Cliff in spring; Dustin is collecting the Summer Fog in summer; Éogan/Owen volunteers for the Mont-Saint-Michel tide pools in fall (not a full season's activity). No fixed rota needed — staffing is decided per season."
+    },
+    {
+      "id": "t066",
+      "type": "Thread",
+      "category": "Plot",
+      "title": "Tormente's errand: carry the golden crown to the estranged dragon-kin off NE England to earn passage into the Carnac regio.",
+      "context": "Raised session 2026-07-25 (proposed_events p052). The Carnac sea-cave regio's first threshold is guarded by TORMENTE, a magnitude-10 dragon (magic resistance in the 50s) blocking the only way deeper. Rather than fight, Dagmar parleyed a PRICE: Tormente handed him a heavy jewelled golden crown (Roman in style) to carry as an OFFERING OF PEACE to its estranged kin — another dragon that 'will not speak to me,' dwelling in a sea-cliff cave ABOVE the waves off the English northeast coast, near Scarborough / Newcastle, just short of Scotland. Reconcile the two, and Tormente will deem Dagmar worthy of passing deeper into the regio. Dagmar accepted and gave orders to sail NORTH — probably via Stonehenge to collect Llewellyn and finally cash in the time-crystal en route (see t018). OPEN QUESTIONS TO DEVELOP: (a) the kin's disposition — why the estrangement, and whether a crown actually mends it or the kin is hostile; (b) 'Jeffrey the First' — Tormente asked whether Dagmar served this long-dead king of Brittany, whose 'quest of learning' it seems to guard; who he was and why the regio's guardian tests seekers in his name is unexplained; (c) the wrinkle that Foxglove robbed Tormente's hoard the same night (c026), which could sour the goodwill this errand depends on. This is Dagmar's active quest; t025 (the regio proper) stays gated behind it.\n\nDEVELOPED (session prep 2026-08-08, q027 #4): the 'estranged kin' is MÍMORMR, a cursed bone-speaking scholar-wyrm off the NE English coast (full detail in the new t072). The errand is not what it looks like: Tormente is a TRICKSTER, the Roman crown is the KEY that BREAKS a curse Tormente itself laid, and carrying it 'in peace' actually UNBINDS Mímormr — who becomes a regional environmental threat once loose. Dagmar is an unwitting cat's-paw; completing the errand earns passage into the regio (t025) at the region's expense. Mímormr's false-but-sincere claim to descend from Jörmungandr, and the NE-England worm-legend tie, are in t072.",
+      "raised_in": "Session 2026-07-25 (Carnac regio)",
+      "raised_event": "Into the Carnac regio: the dragon Tormente",
+      "status": "Resolved",
+      "resolution": "Resolved (2026-08-08): Dagmar carried the crown north and delivered it to the estranged kin — the worm Mímormr, in a cliff-cave NE of York. The crown was a name-release, not a gift: it FREED Mímormr, whom Tormente had bound. Mímormr gave Dagmar a token to return to Tormente as proof. Regio passage is now owed by Tormente; the fallout (a loosed wyrm) is tracked in c027, and the return to Tormente in t073."
     }
   ]
 }
