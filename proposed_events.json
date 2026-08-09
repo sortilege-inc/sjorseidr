@@ -1,612 +1,552 @@
 [
-  {
-    "id": "p047",
-    "file": "047_2026-07-25_the-augury-lesson.md",
-    "sort_iso": "1223-10-06T12:00",
-    "session": "2026-07-25",
-    "scene": "Fall 1223 — drill-in at the Hill of Uisneach",
-    "title": "The augury lesson: the art is choosing the signal",
-    "icon": "🐦",
-    "timeline": "🍂 Fall 1223",
-    "date": "Fall 1223",
-    "cast": [
-      "Wilhelm Stienauer",
-      "Éogan Dobhartha"
-    ],
-    "activity_type": "Research",
-    "status": "Proposed",
-    "notes": "Detailing the Hill of Uisneach stop from the Overland to Carrick leg: Wilhelm gets his first concrete field-insight for the folk-magic thesis — the load-bearing skill in local bird-flight augury is not the spell but the reading.",
-    "source": "Session recap 2026-07-25 (Ars Magica transcript), fall-1223 travel drill-in.",
-    "body_text": "At the **Hill of Uisneach** — the old fire-festival and bird-flight divination site the party detoured to on the overland road — Wilhelm and Éogan arrive just after a **divination ritual** has wrapped. Cleaning up after it is a roughly **twelve-year-old apprentice** to one of the local hedge-magi, doing busy-work but willing to describe, imperfectly, what the rite involved.\nWilhelm reads the process with **Magic Theory** (his strong suit — a comfortable, non-stress success) and comes away underwhelmed by the *spell* and fascinated by everything around it. The working itself is mechanical and straightforward. The true art of the **auguri** is in **choosing the correct signal**: the birds are doing fifteen things fifteen times, three of which might answer the question asked *this* time, three others another time, one just there for its own sake and never yet pulled out. Selecting *which* reading, and *when* it is auspicious to ask, is at least as load-bearing as the incantation.\nWilhelm clocks the shape of what he's after: this is magic that **leans on the inherent power of the environment** — the full moon, the turn to autumn, the land underfoot — rather than on the individual sorcerer. Where **Hermetic theory strips the context out** for a formulaic effect that works anywhere and anytime, this tradition insists the environment and the time of year *matter* — and that, to Wilhelm, is the point: *if I can make this subset of magic easier by leaning on something else, fantastic.*\nHe spends the following days probing people they meet and taking notes, folding the augury insight toward his thesis (see t009) and the folk-magic system he means to formalize (t019). His scribe not being present, he keeps his own record."
-  },
-  {
-    "id": "p048",
-    "file": "048_2026-07-25_small-gods-on-the-shoulder.md",
-    "sort_iso": "1223-10-07T12:00",
-    "session": "2026-07-25",
-    "scene": "Fall 1223 — the road into Connacht, near Samhain",
-    "title": "Small gods on the shoulder: the fae that follow Éogan and Stijntje",
-    "icon": "🧚",
-    "timeline": "🍂 Fall 1223",
-    "date": "Fall 1223",
-    "cast": [
-      "Wilhelm Stienauer",
-      "Éogan Dobhartha",
-      "Stijntje Kuiper"
-    ],
-    "activity_type": "Atmosphere",
-    "status": "Proposed",
-    "notes": "Only Wilhelm's Awareness catches it: small fae keep gathering on Éogan and Stijntje as the party nears Connacht. The locals treat it as nothing; Wilhelm, tactful, says nothing either.",
-    "source": "Session recap 2026-07-25 (Ars Magica transcript), fall-1223 travel drill-in.",
-    "body_text": "As the party moves deeper toward **Connacht** around Samhain, an Awareness check goes round the table. Éogan (a near-miss) and Stijntje are **completely unaware**; only **Wilhelm** notices — and what he notices is that the two of them keep collecting **small fae** the way some people attract butterflies.\nA little **brownie** riding a shoulder, gone the instant he looks straight at it. A **pixie-light** settling on Éogan's head and winking out. A gnome half-clambering out of a backpack. The first few times Wilhelm assumes he's seeing things; after half a dozen sightings in different contexts — the creatures behaving as if this is entirely normal, everyone else simply *ignoring* them — he realizes it isn't him.\nThe GM's read: **Éogan** draws them by virtue of a Connacht upbringing that respected the land where it **bleeds in and out of faerie regiones**; **Stijntje** by simple virtue of still being a child. To the locals, the presence of these **small gods** is unremarkable — you leave a bowl of milk out at night and get on with it.\nWilhelm, who has done enough fieldwork to know that pointing such things out tends to give offense, keeps it to himself and files it away. Éogan, for his part, assumes any odd behavior of Wilhelm's is just a foreigner reacting to ordinary warding customs. **New character note:** small fae are demonstrably drawn to Éogan and Stijntje (see t068)."
-  },
-  {
-    "id": "p062",
-    "file": "",
-    "sort_iso": "1223-10-15T12:00",
-    "session": "2026-08-08",
-    "scene": "Fall 1223 — Mont-Saint-Michel",
-    "title": "Valerian works the Mont-Saint-Michel tide pools",
-    "icon": "🕯️",
-    "timeline": "🍂 Fall 1223",
-    "date": "Fall 1223",
-    "cast": [
-      "Valerian"
-    ],
-    "activity_type": "Vis harvest",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-    "body_text": "Valerian works the covenant's new Tribunal prize, the Mont-Saint-Michel tide pools, gathering the season's Aquam vis (5 pawns/year) from the salt crystals thrown up by the great tides."
-  },
-  {
-    "id": "p049",
-    "file": "049_2026-07-25_wilhelm-cracks-the-ritual-integration.md",
-    "sort_iso": "1223-11-20T12:00",
-    "session": "2026-07-25",
-    "scene": "Winter 1223-24 — Carrick",
-    "title": "Wilhelm cracks the ritual integration over the winter",
-    "icon": "📐",
-    "timeline": "❄️ Winter 1223-24",
-    "date": "Winter 1223-24",
-    "cast": [
-      "Wilhelm Stienauer"
-    ],
-    "activity_type": "Research",
-    "status": "Proposed",
-    "notes": "Wilhelm's winter work at Carrick: the folk system stops being spontaneous-only. He judges the formulaic-ritual step 'really easy — someone just needed to point it out'; the remaining work is formalizing the Artes Liberales / Philosophiae contribution.",
-    "source": "Session recap 2026-07-25 (Ars Magica transcript), winter-1223 downtime.",
-    "body_text": "Wintering at **Carrick** while his research assistants are out gathering material, Wilhelm spends the season on **integration and research** — turning his folk system from a curiosity into something with proper mechanics.\n**The breakthrough he's most confident about:** his current system knows only **spontaneous, ritual-style casting** (roll halved). Proper **formulaic** magic would let a caster add **Artes Liberales** and **Philosophiae** to the effort *and* drop the divide-by-two — roughly tripling the effective pool. Over the winter he works out that this ritual integration is, in his own estimate, **\"really easy — someone just needed to point it out\"**: give a caster the finished formula rather than making them improvise it each time.\n**The Artes Liberales angle** is the part still taking his time: the obvious-once-said refinements a folk caster never bothered to name. If a ceremony wants a circle, it helps to know **geometry** enough to draw a true one; if it wants words of power, it helps to know **rhetoric** enough to project the voice. Formalizing how Artes Liberales and Philosophiae feed the working is the winter's real labor.\n**Logistics.** His assistants are sent west and south to gather hedge-magic insight, carrying **sacks of grain and silver** as payment for anyone willing to teach the \"easy stuff.\" Wilhelm writes letters — to the loose **wizard-circle** he keeps looped in on the project, to his family, and to **Dietrich** (his brother/scribe, back at his teaching post), whom he promises a **tractatus of the generated folk-magic spells** once it's finished. He intends to set up a **lab on shore** (he is chronically seasick and will not stay aboard ship an hour longer than he must), and has arranged for his research materials to be relocated from home toward wherever the covenant next bases itself. Feeds t019, t009, and the mundane vis-factory pitch (t020)."
-  },
-  {
-    "id": "p063",
-    "file": "",
-    "sort_iso": "1223-12-10T12:00",
-    "session": "2026-08-08",
-    "scene": "Winter 1223-24 — the Isle of Man",
-    "title": "Valdemar studies Legends of Brittany",
-    "icon": "📖",
-    "timeline": "❄️ Winter 1223-24",
-    "date": "Winter 1223-24",
-    "cast": [
-      "Valdemar"
-    ],
-    "activity_type": "Study",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-    "body_text": "Over winter Valdemar studies Legends of Brittany, the Faerie Lore summa he took as his share of the tribunal prizes."
-  },
-  {
-    "id": "p050",
-    "file": "050_2026-07-25_brussel-the-puca.md",
-    "sort_iso": "1224-04-12T12:00",
-    "session": "2026-07-25",
-    "scene": "Spring 1224 — the return road, far west",
-    "title": "Brussel the púca asks to be taught",
-    "icon": "🐴",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Wilhelm Stienauer",
-      "Éogan Dobhartha",
-      "Dustin Page"
-    ],
-    "activity_type": "Encounter",
-    "status": "Proposed",
-    "notes": "A talking black horse — a púca — hails Wilhelm in Latin to be taught folk magic, and parts with a rowan-wood horseshoe. Wilhelm's first genuinely eager student in the wild.",
-    "source": "Session recap 2026-07-25 (Ars Magica transcript), spring-1224 return leg.",
-    "body_text": "On the spring road back east — \"past the edge of the world,\" as Éogan puts it — the party pauses at a stream, and Wilhelm hears a voice in **Latin** from twenty paces off: *are you the one teaching magic to all?* Without looking he says yes, then turns to find a **black horse** addressing him.\nÉogan, via **Ireland / Fairy Lore**, identifies it: a **púca** — a trickster fae given to inconveniencing travelers greatly but rarely to lasting harm, and *not* the kind that steals children or spoils milk. It gives its use-name as **Brussel** (Wilhelm notes, correctly, that a wizard's by-name is at best a **weak Arcane Connection**, not the true name).\nWilhelm teaches it the folk basics — a **circle** to bind and protect energies — and the horse traces one with a hoof, imperfectly but earnestly (*\"you might make it slightly better by dragging your hoof in one continuous line\"*). Brussel offers to let Wilhelm **ride it** in exchange for instruction; Wilhelm declines with great courtesy — he is an unskilled rider and gets violently seasick on anything that moves, and *\"would not be a good teacher if I were vomiting on your head every twenty steps.\"* Brussel, it transpires, is no fonder of being ridden either.\nAt parting the delighted púca gifts Wilhelm a **horseshoe of rowan wood**. Wilhelm accepts it as a treasured gift and files it in the **covenant treasury** — moved that Brussel is the **first entity outside his own research staff** to take real interest in his work and agree to be taught. First wild student of the folk system; see t069."
-  },
-  {
-    "id": "p055",
-    "file": "",
-    "sort_iso": "1224-04-14T12:00",
-    "session": "2026-08-08",
-    "scene": "Spring 1224 — the return road, meeting the assistants",
-    "title": "The assistants return: the madness cost, and the brass acorn",
-    "icon": "🧠",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Wilhelm",
-      "Carl",
-      "Isaac"
-    ],
-    "activity_type": "Report",
-    "status": "Proposed",
-    "source": "Session transcript, 2026-08-08.",
-    "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-    "body_text": "On the return road after leaving Carrick, Wilhelm's two research assistants intercept the party — Carl hale, Isaac on a crutch and healing from a beating. Their report: they taught Wilhelm's folk techniques to twelve-to-fifteen people, and the method worked — but for a minority it pushed the mind past breaking. One student killed themselves; another killed two others. The local lord, down several field-hands, had the pair beaten and thrown out (not charged with murder, but no longer welcome). Reviewing their competent notes, Wilhelm judges it no defect in the teaching: the madness is a cost of the magic itself.\n\nThe assistants also carry stranger news. A hedge mage they encountered claims to have travelled through time, and said Wilhelm should find a brass acorn in his luggage — a memento “from a previous future visit.” Wilhelm finds it, exactly so. A later Intēllego Vim check turns up no magical residue at all, ruling out a teleported plant and leaving the temporal claim unexplained."
-  },
-  {
-    "id": "p051",
-    "file": "051_2026-07-25_a-ward-drawn-around-rody.md",
-    "sort_iso": "1224-04-16T12:00",
-    "session": "2026-07-25",
-    "scene": "Spring 1224 — camp, the delivery road east",
-    "title": "A ward drawn around Rody, and a test left hanging",
-    "icon": "⭕",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Wilhelm Stienauer",
-      "Éogan Dobhartha",
-      "Dustin Page"
-    ],
-    "activity_type": "Intrigue",
-    "status": "Proposed",
-    "notes": "Continues 'The changeling boy: Rody.' Wilhelm is brought in on the changeling, and his casual folk-ward demonstration doubles as a test — will Rody be able to cross a Ward against Faeries? Cliffhanger for next session.",
-    "source": "Session recap 2026-07-25 (Ars Magica transcript), spring-1224 return leg.",
-    "body_text": "With the changeling confirmed, Éogan and Dustin **bring Wilhelm in** — partly because none of them has magic that could actually *hold* a fae, and Wilhelm's folk wards handle only low-magnitude sprites and brownies, nothing strong enough to be wearing a Gifted boy's shape convincingly.\nOver a day of the march east (Rody having a little rudimentary Latin, and Wilhelm practicing his teaching), Wilhelm uses the boy as a live audience for the folk basics, then **demonstrates a set of protective wards** drawn as circles: a **ward against the spirits of the land**, a **ward against the infernal**, and — casually, drawing it around the group as he casts — a **ward against fairies**. He steps out of the fairy-ward ring himself and then invites Rody across, to see whether the boy can pass it.\n**The mechanics, as the GM laid them out:** a folk **Ward against Faeries** at roughly **base level 10** — inefficient the way ward magic always is, in that it only binds a creature it can \"get through,\" i.e. one of low enough Might. It is *highly unlikely* to hold a changeling powerful enough to counterfeit a Gifted child, but the test costs nothing and might reveal something. Wilhelm's cast lands well over the level.\n**Cliffhanger:** whether **Rody steps out of the circle** resolves at the top of next session. Either way, the party still means to complete the delivery east — toward the **Hill of Tara**, where they'll rendezvous with Wilhelm's returning research assistants and hand the boy on to the receiving Hermetic magi — and to brief those magi on the deception. The real Gifted child Rody replaced is still out there (t023, q026)."
-  },
-  {
-    "id": "p052",
-    "file": "052_2026-07-25_into-the-carnac-regio-the-dragon-tormente.md",
-    "sort_iso": "1224-04-21T12:00",
-    "session": "2026-07-25",
-    "scene": "Spring 1224 — the Carnac sea-cave regio",
-    "title": "Into the Carnac regio: the dragon Tormente",
-    "icon": "🐉",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Dagmar"
-    ],
-    "activity_type": "Exploration",
-    "status": "Proposed",
-    "notes": "Resolves the 'hidden regio near Carnac' cliffhanger. The sea-cave regio's first layer is guarded by a magnitude-10 dragon, Tormente, who bars the way deeper — and sets Dagmar an errand to earn passage.",
-    "source": "Session recap 2026-07-25 (Ars Magica transcript), Dagmar's Carnac regio scene.",
-    "body_text": "Dagmar rows into the **Carnac sea-cave** with three grogs — **Angus** (helmsman, pirate, and reliable if boastful storyteller), **Foxglove** (scout, rogue, and acquirer of useful objects), and **Peter** — his **Eyes of the Eagle** and **Clear Sight of the Naiad** still up (the spells that found the place; he can see through water, fog, and dark).\n**Probing in.** He casts a spontaneous **Intēllego Mentem** \"is anyone around\" — modelled on the smell-silver spell, reading minds like a sense, stronger signal meaning nearer — and picks up the faint edges of the **Carnac covenant**, a small **parasitic village** beside it, one or two people on the shore, and, deeper in, **one signal unlike anything he has ever felt before**. A quick tarot draw (Knight of Cups reversed, Eight of Wands reversed) foreshadows what's coming. **Piercing the Magical Veil** confirms a clear **onion-layer** structure — and that the strange thing ahead is *barring the way forward*.\n**Crossing the first threshold**, Dagmar's over-tuned vision catches cobalt-blue flashes off what looks like **dozens of little mirrors** — then the wall *shudders and exhales*. The mirrors are **scales**. It is a **dragon**, slumped into the water and rising above it, filling the passage — roughly 45 feet of visible flank, 25 feet high, a leg going deep into the water. Only **Foxglove** glimpses its head lift and turn; to the others it stays a wall of scales. Magical Lore reads its resistance in the **50s — a magnitude-10 creature** — and the regio, oddly, as **more attuned to Auram than Aquam** despite all the water. Dagmar's read: this is a **guardian**, posted to protect an otherwise-defensible threshold; the way deeper is unobstructed *except* for the dragon in it.\n**The parley.** Speaking mind-to-mind in Latin (**Posing the Silent Question**, **Words of the Unbroken Silence**), Dagmar rouses it. The dragon — **Tormente** — asks whether he serves **\"Jeffrey the First,\"** a long-dead king of Brittany whose *\"quest of learning\"* it seems to guard; Dagmar (House Criamon, Covenant of Sjórseiðr — all names Tormente has never heard) disclaims any royal commission and professes to seek knowledge for its own sake. Pressed for a **great deed or a quest**, Dagmar boasts of the covenant's Tribunal victory — champion of the magical contests of all Normandy — and demonstrates his Intēllego on request, penetrating with a burst of confidence.\n**The price.** Satisfied, Tormente raises an arm from the water and deposits on the boat a **heavy jewelled golden crown**, Roman in style, dazzling and far too heavy to wear long. It is an **offering of peace** for Tormente's **estranged kin** — a dragon that *\"will not speak to me\"* — dwelling in a **sea-cliff cave above the waves off the English northeast coast, near Scarborough / Newcastle, just short of Scotland.** Carry the crown to the kin and reconcile them, and Tormente will **deem Dagmar worthy of passing deeper** into the regio. Dagmar accepts, and gives orders to head **north** to find the kin — possibly by way of **Stonehenge**, to collect Llewellyn and finally cash in the time-crystal (t018, t066). The Carnac regio itself stays only half-opened (t025)."
-  },
-  {
-    "id": "p053",
-    "file": "053_2026-07-25_foxglove-robs-the-dragon.md",
-    "sort_iso": "1224-04-21T20:00",
-    "session": "2026-07-25",
-    "scene": "Spring 1224 — that night, aboard ship",
-    "title": "Foxglove robs the dragon",
-    "icon": "💰",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Dagmar"
-    ],
-    "activity_type": "Consequence",
-    "status": "Proposed",
-    "notes": "A covenant grog quietly robs Tormente's hoard the same night — while Dagmar is trying to stay in the dragon's good graces to earn passage deeper. Consequence seed.",
-    "source": "Session recap 2026-07-25 (Ars Magica transcript), Carnac regio aftermath.",
-    "body_text": "Back at the ship, **Angus** gathers the sixteen crew and spins a **broadly honest** account of the dragon for a night of bought drinks (*\"the creepy wizard made us go, he spoke spells at it, and it gave us treasure\"*) — **Peter** adding embellishments that aren't quite true, **Foxglove** conspicuously **downplaying the treasure**.\nBecause Foxglove — avaricious to the marrow — has other plans. That night she quietly takes the rowboat **back into the cave alone**, anchors it, and dives the twenty-odd feet to the cave floor, where **gold and trinkets have spilled forward** from the hoard. She gathers all she can carry, smuggles roughly **five bags of it** aboard, and hides it for herself, brushing past **Peter** with a caught-red-handed lie about running a late errand for Dagmar (a clean Guile success). Examined later, the coin is mostly **Roman** in style — priceless, and useless as currency; she means to keep every piece.\n**The wrinkle:** this is an **unsanctioned theft from Tormente's hoard**, committed the very night Dagmar has agreed to run the dragon's errand and is depending on its goodwill to pass deeper into the regio. Neither Dagmar nor the dragon knows yet (c026)."
-  },
-  {
-    "id": "p054",
-    "file": "",
-    "sort_iso": "1224-04-22T09:00",
-    "session": "2026-08-07",
-    "scene": "Spring 1224 — after the Carnac regio, plotting the next leg",
-    "title": "Dagmar's next leg: north to England, and messages by Redcap",
-    "icon": "🧭",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Dagmar"
-    ],
-    "activity_type": "Planning",
-    "status": "Proposed",
-    "source": "Dagmar's forward-plan notes (owner, 2026-08-07).",
-    "notes": "Dagmar's stated forward plan following 'Foxglove robs the dragon': the next leg heads north to England (a town within the Stonehenge Tribunal), sending Redcap messages to Llewellyn ex Miscellanea (a regio-exploration invite, ~X weeks out per the captain's estimate) and to Paulus ex Merinita (ward status). Deliberately NOT sent from near Carnac. Map/GM seed: the Tide of Memory leaves Carnac northbound up the English coast toward a second dragon, watching for regios and taking easy trade only incidentally.",
-    "body_text": "Dagmar's plan for the next leg, set after the Carnac regio.\n\n**North to England, and word ahead by Redcap.** Having knocked on the regio's door — and found a **dragon** behind it — Dagmar means to head **north to England**. He will put in at a town within the bounds of the **Stonehenge Tribunal** and commission the **Redcaps** to carry two messages:\n\n- To **Llewellyn ex Miscellanea**: that Dagmar will be passing back through in **X weeks** (X set by the captain's estimate for the next leg), with an offer for Llewellyn to join him in exploring a regio.\n- To **Paulus ex Merinita**: asking after the **ward** — how it comes along, and when it might be ready.\n\nNotably, he will **not** send these messages from the vicinity of **Carnac**.\n\n**Up the English coast, at speed.** With his mail away, Dagmar takes the **Tide of Memory** up the coast of England toward the **second dragon's** reported location. He keeps an eye out for regios along the way, and the ship may take on a little easy trade when it resupplies — but the Tide is making the passage with all speed, so neither the regio-watching nor the trading is likely to come to much."
-  },
-  {
-    "id": "p064",
-    "file": "",
-    "sort_iso": "1224-04-25T12:00",
-    "session": "2026-08-08",
-    "scene": "Spring 1224 — the North Sea",
-    "title": "Valerian runs for the Kraken's Egg",
-    "icon": "🥚",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Valerian"
-    ],
-    "activity_type": "Vis harvest",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-    "body_text": "Off-camera, Valerian makes the annual run for the Kraken's Egg, retrieved from the sea between Norway and Scotland when the kraken surfaces and lays."
-  },
-  {
-    "id": "p065",
-    "file": "",
-    "sort_iso": "1224-05-05T12:00",
-    "session": "2026-08-08",
-    "scene": "Spring 1224 — a ruined Diedne site",
-    "title": "Valdemar harvests the Diedne Garden",
-    "icon": "🌿",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Valdemar"
-    ],
-    "activity_type": "Vis harvest",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-    "body_text": "Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen."
-  },
-  {
-    "id": "p056",
-    "file": "",
-    "sort_iso": "1224-05-25T19:00",
-    "session": "2026-08-08",
-    "scene": "Spring 1224 — the covenant at Cruachan",
-    "title": "The feast at Cruachan: Rody delivered, and the matching necklaces",
-    "icon": "🍽️",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Éogan",
-      "Dustin",
-      "Wilhelm",
-      "Stijntje",
-      "Gráinne",
-      "Tadhg",
-      "Rody"
-    ],
-    "activity_type": "Diplomacy",
-    "status": "Proposed",
-    "source": "Session transcript, 2026-08-08.",
-    "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-    "body_text": "The party reaches the covenant at Cruachan and briefs its magi before bringing the changeling inside. Gráinne and Tadhg — versed in Faerie magic — receive them warmly, hear that “Rody” is Fae and may lead to the real, taken child, and agree to help: come to a feast the next night after dusk, and bring Rody carrying a knotted-wood token so he can pass the Aegis.\n\nAt the feast, Tadhg has Rody swear a preliminary apprentice's oath. Dustin notices Rody and Stijntje wearing matching necklaces (“we made them for each other”) — faerie-associated but not magical objects — and, fearing Stijntje had been swapped too, checks; to his relief she has not. Rody is left in the covenant's keeping, their Fae specialists to hold and question him and, with luck, trace the child he replaced."
-  },
-  {
-    "id": "p057",
-    "file": "",
-    "sort_iso": "1224-06-05T10:00",
-    "session": "2026-08-08",
-    "scene": "Spring 1224 — the river-mouth near Drogheda",
-    "title": "The capricorn at the river-mouth",
-    "icon": "🐐",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Éogan"
-    ],
-    "activity_type": "Encounter",
-    "status": "Proposed",
-    "source": "Session transcript, 2026-08-08.",
-    "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-    "body_text": "Heading for the ships near Drogheda, Éogan hangs back — a horned head breaks the water at the river's mouth, taken at first for a sea-serpent until he sees the goat's beard and slotted eyes, then a dorsal fin and a flippered tail: a capricorn, a Magic-realm sea-goat, playing where salt water meets fresh. Éogan takes a river-water sample in a vial and casts a spell to let him return to the spot later, then rejoins the crew at the Brineborn."
-  },
-  {
-    "id": "p061",
-    "file": "",
-    "sort_iso": "1224-06-15T12:00",
-    "session": "2026-08-08",
-    "scene": "Spring 1224 — the Isle of Man",
-    "title": "The Hound of Cassel and the three sealed chests",
-    "icon": "📦",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Wilhelm"
-    ],
-    "activity_type": "Discovery",
-    "status": "Proposed",
-    "source": "Session transcript, 2026-08-08.",
-    "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-    "body_text": "Set up with the Hound of Cassel as his ship at the Isle of Man, Wilhelm searches her over — a plain merchantman, no lab — and turns up three small, magically-sealed boxes. They are spoils of Valdemar's raid on a Scarem Montem vessel: Normandy law let him take the non-magical cargo, but magical goods fall under the Code's bar on depriving a magus of magical power, so the boxes have sat in trust, meant for return and never returned — awkward now that Scarem Montem has walked out of the Tribunal in the schism. Their contents stay sealed. Wilhelm lays a month-long Vim ward on the hull, making the boat “technically magical,” as both deterrent and legal fig-leaf."
-  },
-  {
-    "id": "p066",
-    "file": "",
-    "sort_iso": "1224-06-18T12:00",
-    "session": "2026-08-08",
-    "scene": "Spring 1224 — the Isle of Man",
-    "title": "Wilhelm writes up two folk-magic integrations",
-    "icon": "⚗️",
-    "timeline": "🌼 Spring 1224",
-    "date": "Spring 1224",
-    "cast": [
-      "Wilhelm"
-    ],
-    "activity_type": "Research",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-    "body_text": "Newly set up on the Hound of Cassel, Wilhelm begins writing two integrations of his folk system — one to add Artes Liberales, one to let spells be cast 'virtually' — aiming to finish them as a Factus by year's end and send them out."
-  },
-  {
-    "id": "p067",
-    "file": "",
-    "sort_iso": "1224-07-01T12:00",
-    "session": "2026-08-08",
-    "scene": "Summer 1224 — the Isle of Man & the sea-lanes",
-    "title": "Éogan trades, builds his lab, and bottles fruit",
-    "icon": "⚗️",
-    "timeline": "☀️ Summer 1224",
-    "date": "Summer 1224",
-    "cast": [
-      "Éogan"
-    ],
-    "activity_type": "Lab work",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-    "body_text": "Éogan's crew returns to summer trade (wool out of the Isle of Man) while he sets up his new laboratory and develops a spell to draw the juice from fruit."
-  },
-  {
-    "id": "p058",
-    "file": "",
-    "sort_iso": "1224-07-05T12:00",
-    "session": "2026-08-08",
-    "scene": "Summer 1224 — London",
-    "title": "Foxglove fences the dragon's gold in London",
-    "icon": "💰",
-    "timeline": "☀️ Summer 1224",
-    "date": "Summer 1224",
-    "cast": [
-      "Foxglove"
-    ],
-    "activity_type": "Adventure",
-    "status": "Proposed",
-    "source": "Session transcript, 2026-08-08.",
-    "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-    "body_text": "The Tide of Memory calls at London with trade out of Ghent. Foxglove — who took five bags of Tormente's hoard on impulse, with no plan — finds the gold near-worthless as spendable coin in a silver-standard economy. Through a fence she converts only a little (three coins), at a punishing one-for-one: a silver pound per gold piece, but legal tender at least. She keeps the bulk and, being wanted elsewhere, resolves to stay close to the covenant for cover while she holds it."
-  },
-  {
-    "id": "p068",
-    "file": "",
-    "sort_iso": "1224-07-10T12:00",
-    "session": "2026-08-08",
-    "scene": "Summer 1224 — a haunted coastal village",
-    "title": "Dustin gathers the Summer Fog, teaching as he goes",
-    "icon": "🌫️",
-    "timeline": "☀️ Summer 1224",
-    "date": "Summer 1224",
-    "cast": [
-      "Dustin",
-      "Stijntje"
-    ],
-    "activity_type": "Vis harvest",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-    "body_text": "Dustin collects the Summer Fog (Mentem vis) from its haunted coastal village, bringing Stijntje along to learn Aquam by doing — hands-on, and suitably terrifying."
-  },
-  {
-    "id": "p069",
-    "file": "",
-    "sort_iso": "1224-07-15T12:00",
-    "session": "2026-08-08",
-    "scene": "Summer 1224 — the Isle of Man",
-    "title": "Valdemar builds the base and copies Legends of Brittany",
-    "icon": "⚖️",
-    "timeline": "☀️ Summer 1224",
-    "date": "Summer 1224",
-    "cast": [
-      "Valdemar",
-      "Valerian"
-    ],
-    "activity_type": "Trade",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-    "body_text": "Valdemar builds up the Isle of Man as the covenant's base — raiding lightly, trading mostly — and, with Valerian's help, makes a surreptitious copy of Legends of Brittany to keep, exploiting cross-tribunal copy-law so the original can be returned while the covenant keeps the copy (see t076)."
-  },
-  {
-    "id": "p059",
-    "file": "",
-    "sort_iso": "1224-07-20T12:00",
-    "session": "2026-08-08",
-    "scene": "Summer 1224 — a cove on the English coast",
-    "title": "Llewellyn joins: Zeno's bargain and the time-crystal",
-    "icon": "⏳",
-    "timeline": "☀️ Summer 1224",
-    "date": "Summer 1224",
-    "cast": [
-      "Dagmar",
-      "Llewellyn"
-    ],
-    "activity_type": "Travel",
-    "status": "Proposed",
-    "source": "Session transcript, 2026-08-08.",
-    "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-    "body_text": "Redcap messages sent from Ghent bring a reply at London: Llewellyn ex Miscellanea will meet the ship in a cove a fortnight on. He comes aboard for the northward leg, drawn by the promise of a Magic-aligned regio (Aquam-tinged) and “a safe place to catch my breath.”\n\nOn the voyage he confides his secret: captured by Zeno's paradox, he has extended his life by only ever living half his remaining span — a working grown so onerous, and maintained so long, that a sudden failure could be catastrophic. He hopes a regio of irregular time-flow will let him “catch the tide going out.” His time-quartz crystal, he says, reads those flows; Dagmar's cursory study finds it innately, naturally magical — a found object, not a made artifact, and not Llewellyn's own discovery."
-  },
-  {
-    "id": "p060",
-    "file": "",
-    "sort_iso": "1224-08-05T14:00",
-    "session": "2026-08-08",
-    "scene": "Summer 1224 — a cliff-cave northeast of York",
-    "title": "The crown delivered: Mímormr freed",
-    "icon": "🐉",
-    "timeline": "☀️ Summer 1224",
-    "date": "Summer 1224",
-    "cast": [
-      "Dagmar",
-      "Valdemar",
-      "Llewellyn",
-      "Foxglove"
-    ],
-    "activity_type": "Adventure",
-    "status": "Proposed",
-    "source": "Session transcript, 2026-08-08.",
-    "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-    "body_text": "Meeting Valdemar's ship off Northumbria, Dagmar explains Tormente's quest, and the crew rows to a cliff-cave northeast of York, silver-shimmered within. The occupant is no drake like Tormente but a vast silver-and-aquamarine worm who names itself Mímormr, great-grandchild of Jörmungandr and a speaker with the bones of the dead — bound in the cave for ages by Tormente, who (it says) calls its ancestry false and its deeds wicked.\n\nThe crown proves a pardon: a name-release that undoes the binding. Mímormr takes it and emerges, freed. Offered a boon, Dagmar — through Valdemar, who parses the garbled speech with his Ansuz rune — asks only for a token to carry back to Tormente as proof the task is done. Mímormr reaches for Dagmar's mind, seemingly to leave a readable mark but in truth to crush his skull; Dagmar treats it as an attack, slips it with his Parma, and takes no effect — while Mímormr believes it succeeded. Told of a relative's bones basking in power out in the North Sea, it means to finish its work here and then make east to meet that ancestor, and climbs away into the countryside, loosed upon the world.\n\nExamining the empty cave, the magi (Dagmar's premonitions; Valdemar and Llewellyn on the stone) find the binding was never Hermetic: a Muto-Terram-scale warping of the rock against its grain, plus an Adamic name-binding — power that would tax a trained magus to match."
-  },
-  {
-    "id": "p070",
-    "file": "",
-    "sort_iso": "1224-09-20T12:00",
-    "session": "2026-08-08",
-    "scene": "Fall 1224 — the Carnac regio",
-    "title": "Dagmar returns to Tormente (declared)",
-    "icon": "🐉",
-    "timeline": "🍂 Fall 1224",
-    "date": "Fall 1224",
-    "cast": [
-      "Dagmar"
-    ],
-    "activity_type": "Exploration",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Declared seasonal plan; not yet played.",
-    "body_text": "Declared: Dagmar means to carry Mímormr's token back to Tormente and, the debt paid, finally enter the Carnac regio (see t073, scene s8)."
-  },
-  {
-    "id": "p071",
-    "file": "",
-    "sort_iso": "1224-09-25T12:00",
-    "session": "2026-08-08",
-    "scene": "Fall 1224 — Scarem Montem",
-    "title": "Wilhelm sails to Scarem Montem (declared)",
-    "icon": "🧭",
-    "timeline": "🍂 Fall 1224",
-    "date": "Fall 1224",
-    "cast": [
-      "Wilhelm"
-    ],
-    "activity_type": "Travel",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Declared seasonal plan; not yet played.",
-    "body_text": "Declared: in late summer / early fall Wilhelm sails the Hound of Cassel to Scarem Montem to deliver the folk-magic thesis and settle the ship-for-book swap — carrying the three sealed chests, and hoping to retrieve his original manuscript (see scene s6, t075, c012)."
-  },
-  {
-    "id": "p072",
-    "file": "",
-    "sort_iso": "1224-10-01T12:00",
-    "session": "2026-08-08",
-    "scene": "Fall 1224 — Mont-Saint-Michel",
-    "title": "Éogan claims the Mont-Saint-Michel lease (declared)",
-    "icon": "🕯️",
-    "timeline": "🍂 Fall 1224",
-    "date": "Fall 1224",
-    "cast": [
-      "Éogan"
-    ],
-    "activity_type": "Vis harvest",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Declared seasonal plan; not yet played.",
-    "body_text": "Declared: Éogan volunteers for the fall claim on the Mont-Saint-Michel tide pools — not a full season's work, leaving him time for other study."
-  },
-  {
-    "id": "p073",
-    "file": "",
-    "sort_iso": "1224-10-05T12:00",
-    "session": "2026-08-08",
-    "scene": "Fall 1224 — Oleron",
-    "title": "Dustin fetches the Terram summa from Oleron (declared)",
-    "icon": "📖",
-    "timeline": "🍂 Fall 1224",
-    "date": "Fall 1224",
-    "cast": [
-      "Dustin"
-    ],
-    "activity_type": "Study",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Declared seasonal plan; not yet played.",
-    "body_text": "Declared: Dustin returns to Oleron to collect the Terram summa won at Tribunal and settle in to study it."
-  },
-  {
-    "id": "p074",
-    "file": "",
-    "sort_iso": "1224-12-05T12:00",
-    "session": "2026-08-08",
-    "scene": "Winter 1224-25 — the Isle of Man",
-    "title": "Dagmar studies Finesse (declared)",
-    "icon": "📖",
-    "timeline": "❄️ Winter 1224-25",
-    "date": "Winter 1224-25",
-    "cast": [
-      "Dagmar"
-    ],
-    "activity_type": "Study",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Declared seasonal plan; not yet played.",
-    "body_text": "Declared: wintering at the Isle of Man, Dagmar studies a Finesse tractatus — a skill he can improve without needing an Art present."
-  },
-  {
-    "id": "p075",
-    "file": "",
-    "sort_iso": "1224-12-06T12:00",
-    "session": "2026-08-08",
-    "scene": "Winter 1224-25 — the Isle of Man",
-    "title": "Wilhelm gets his integrations running (declared)",
-    "icon": "⚗️",
-    "timeline": "❄️ Winter 1224-25",
-    "date": "Winter 1224-25",
-    "cast": [
-      "Wilhelm"
-    ],
-    "activity_type": "Lab work",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Declared seasonal plan; not yet played.",
-    "body_text": "Declared: Wilhelm winters at the Isle of Man, getting his integrations up and running and setting the research assistants (Carl & Isaac) back to gathering."
-  },
-  {
-    "id": "p076",
-    "file": "",
-    "sort_iso": "1224-12-07T12:00",
-    "session": "2026-08-08",
-    "scene": "Winter 1224-25 — the Isle of Man",
-    "title": "Éogan borrows Henry to study Magic Theory (declared)",
-    "icon": "📖",
-    "timeline": "❄️ Winter 1224-25",
-    "date": "Winter 1224-25",
-    "cast": [
-      "Éogan"
-    ],
-    "activity_type": "Study",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Declared seasonal plan; not yet played.",
-    "body_text": "Declared: Éogan borrows Henry as a personal tutor to raise his Magic Theory toward the talisman he wants — trading Aquam instruction for Stijntje and Dustin in return."
-  },
-  {
-    "id": "p077",
-    "file": "",
-    "sort_iso": "1224-12-08T12:00",
-    "session": "2026-08-08",
-    "scene": "Winter 1224-25 — Oleron / the Isle of Man",
-    "title": "Dustin studies the Terram summa and learns Aquam (declared)",
-    "icon": "📖",
-    "timeline": "❄️ Winter 1224-25",
-    "date": "Winter 1224-25",
-    "cast": [
-      "Dustin"
-    ],
-    "activity_type": "Study",
-    "status": "Proposed",
-    "source": "Seasonal activities, 2026-08-08 session.",
-    "notes": "Declared seasonal plan; not yet played.",
-    "body_text": "Declared: Dustin continues with the Terram summa and takes Aquam instruction from Éogan."
-  }
+ {
+  "id": "p049",
+  "file": "049_2026-07-25_wilhelm-cracks-the-ritual-integration.md",
+  "sort_iso": "1223-11-20T12:00",
+  "session": "2026-07-25",
+  "scene": "Winter 1223-24 — Carrick",
+  "title": "Wilhelm cracks the ritual integration over the winter",
+  "icon": "📐",
+  "timeline": "❄️ Winter 1223-24",
+  "date": "Winter 1223-24",
+  "cast": [
+   "Wilhelm Stienauer"
+  ],
+  "activity_type": "Research",
+  "status": "Proposed",
+  "notes": "Wilhelm's winter work at Carrick: the folk system stops being spontaneous-only. He judges the formulaic-ritual step 'really easy — someone just needed to point it out'; the remaining work is formalizing the Artes Liberales / Philosophiae contribution.",
+  "source": "Session recap 2026-07-25 (Ars Magica transcript), winter-1223 downtime.",
+  "body_text": "Wintering at **Carrick** while his research assistants are out gathering material, Wilhelm spends the season on **integration and research** — turning his folk system from a curiosity into something with proper mechanics.\n**The breakthrough he's most confident about:** his current system knows only **spontaneous, ritual-style casting** (roll halved). Proper **formulaic** magic would let a caster add **Artes Liberales** and **Philosophiae** to the effort *and* drop the divide-by-two — roughly tripling the effective pool. Over the winter he works out that this ritual integration is, in his own estimate, **\"really easy — someone just needed to point it out\"**: give a caster the finished formula rather than making them improvise it each time.\n**The Artes Liberales angle** is the part still taking his time: the obvious-once-said refinements a folk caster never bothered to name. If a ceremony wants a circle, it helps to know **geometry** enough to draw a true one; if it wants words of power, it helps to know **rhetoric** enough to project the voice. Formalizing how Artes Liberales and Philosophiae feed the working is the winter's real labor.\n**Logistics.** His assistants are sent west and south to gather hedge-magic insight, carrying **sacks of grain and silver** as payment for anyone willing to teach the \"easy stuff.\" Wilhelm writes letters — to the loose **wizard-circle** he keeps looped in on the project, to his family, and to **Dietrich** (his brother/scribe, back at his teaching post), whom he promises a **tractatus of the generated folk-magic spells** once it's finished. He intends to set up a **lab on shore** (he is chronically seasick and will not stay aboard ship an hour longer than he must), and has arranged for his research materials to be relocated from home toward wherever the covenant next bases itself. Feeds t019, t009, and the mundane vis-factory pitch (t020)."
+ },
+ {
+  "id": "p063",
+  "file": "",
+  "sort_iso": "1223-12-10T12:00",
+  "session": "2026-08-08",
+  "scene": "Winter 1223-24 — the Isle of Man",
+  "title": "Valdemar studies Legends of Brittany",
+  "icon": "📖",
+  "timeline": "❄️ Winter 1223-24",
+  "date": "Winter 1223-24",
+  "cast": [
+   "Valdemar"
+  ],
+  "activity_type": "Study",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
+  "body_text": "Over winter Valdemar studies Legends of Brittany, the Faerie Lore summa he took as his share of the tribunal prizes."
+ },
+ {
+  "id": "p050",
+  "file": "050_2026-07-25_brussel-the-puca.md",
+  "sort_iso": "1224-04-12T12:00",
+  "session": "2026-07-25",
+  "scene": "Spring 1224 — the return road, far west",
+  "title": "Brussel the púca asks to be taught",
+  "icon": "🐴",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Wilhelm Stienauer",
+   "Éogan Dobhartha",
+   "Dustin Page"
+  ],
+  "activity_type": "Encounter",
+  "status": "Proposed",
+  "notes": "A talking black horse — a púca — hails Wilhelm in Latin to be taught folk magic, and parts with a rowan-wood horseshoe. Wilhelm's first genuinely eager student in the wild.",
+  "source": "Session recap 2026-07-25 (Ars Magica transcript), spring-1224 return leg.",
+  "body_text": "On the spring road back east — \"past the edge of the world,\" as Éogan puts it — the party pauses at a stream, and Wilhelm hears a voice in **Latin** from twenty paces off: *are you the one teaching magic to all?* Without looking he says yes, then turns to find a **black horse** addressing him.\nÉogan, via **Ireland / Fairy Lore**, identifies it: a **púca** — a trickster fae given to inconveniencing travelers greatly but rarely to lasting harm, and *not* the kind that steals children or spoils milk. It gives its use-name as **Brussel** (Wilhelm notes, correctly, that a wizard's by-name is at best a **weak Arcane Connection**, not the true name).\nWilhelm teaches it the folk basics — a **circle** to bind and protect energies — and the horse traces one with a hoof, imperfectly but earnestly (*\"you might make it slightly better by dragging your hoof in one continuous line\"*). Brussel offers to let Wilhelm **ride it** in exchange for instruction; Wilhelm declines with great courtesy — he is an unskilled rider and gets violently seasick on anything that moves, and *\"would not be a good teacher if I were vomiting on your head every twenty steps.\"* Brussel, it transpires, is no fonder of being ridden either.\nAt parting the delighted púca gifts Wilhelm a **horseshoe of rowan wood**. Wilhelm accepts it as a treasured gift and files it in the **covenant treasury** — moved that Brussel is the **first entity outside his own research staff** to take real interest in his work and agree to be taught. First wild student of the folk system; see t069."
+ },
+ {
+  "id": "p055",
+  "file": "",
+  "sort_iso": "1224-04-14T12:00",
+  "session": "2026-08-08",
+  "scene": "Spring 1224 — the return road, meeting the assistants",
+  "title": "The assistants return: the madness cost, and the brass acorn",
+  "icon": "🧠",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Wilhelm",
+   "Carl",
+   "Isaac"
+  ],
+  "activity_type": "Report",
+  "status": "Proposed",
+  "source": "Session transcript, 2026-08-08.",
+  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
+  "body_text": "On the return road after leaving Carrick, Wilhelm's two research assistants intercept the party — Carl hale, Isaac on a crutch and healing from a beating. Their report: they taught Wilhelm's folk techniques to twelve-to-fifteen people, and the method worked — but for a minority it pushed the mind past breaking. One student killed themselves; another killed two others. The local lord, down several field-hands, had the pair beaten and thrown out (not charged with murder, but no longer welcome). Reviewing their competent notes, Wilhelm judges it no defect in the teaching: the madness is a cost of the magic itself.\n\nThe assistants also carry stranger news. A hedge mage they encountered claims to have travelled through time, and said Wilhelm should find a brass acorn in his luggage — a memento “from a previous future visit.” Wilhelm finds it, exactly so. A later Intēllego Vim check turns up no magical residue at all, ruling out a teleported plant and leaving the temporal claim unexplained."
+ },
+ {
+  "id": "p051",
+  "file": "051_2026-07-25_a-ward-drawn-around-rody.md",
+  "sort_iso": "1224-04-16T12:00",
+  "session": "2026-07-25",
+  "scene": "Spring 1224 — camp, the delivery road east",
+  "title": "A ward drawn around Rody, and a test left hanging",
+  "icon": "⭕",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Wilhelm Stienauer",
+   "Éogan Dobhartha",
+   "Dustin Page"
+  ],
+  "activity_type": "Intrigue",
+  "status": "Proposed",
+  "notes": "Continues 'The changeling boy: Rody.' Wilhelm is brought in on the changeling, and his casual folk-ward demonstration doubles as a test — will Rody be able to cross a Ward against Faeries? Cliffhanger for next session.",
+  "source": "Session recap 2026-07-25 (Ars Magica transcript), spring-1224 return leg.",
+  "body_text": "With the changeling confirmed, Éogan and Dustin **bring Wilhelm in** — partly because none of them has magic that could actually *hold* a fae, and Wilhelm's folk wards handle only low-magnitude sprites and brownies, nothing strong enough to be wearing a Gifted boy's shape convincingly.\nOver a day of the march east (Rody having a little rudimentary Latin, and Wilhelm practicing his teaching), Wilhelm uses the boy as a live audience for the folk basics, then **demonstrates a set of protective wards** drawn as circles: a **ward against the spirits of the land**, a **ward against the infernal**, and — casually, drawing it around the group as he casts — a **ward against fairies**. He steps out of the fairy-ward ring himself and then invites Rody across, to see whether the boy can pass it.\n**The mechanics, as the GM laid them out:** a folk **Ward against Faeries** at roughly **base level 10** — inefficient the way ward magic always is, in that it only binds a creature it can \"get through,\" i.e. one of low enough Might. It is *highly unlikely* to hold a changeling powerful enough to counterfeit a Gifted child, but the test costs nothing and might reveal something. Wilhelm's cast lands well over the level.\n**Cliffhanger:** whether **Rody steps out of the circle** resolves at the top of next session. Either way, the party still means to complete the delivery east — toward the **Hill of Tara**, where they'll rendezvous with Wilhelm's returning research assistants and hand the boy on to the receiving Hermetic magi — and to brief those magi on the deception. The real Gifted child Rody replaced is still out there (t023, q026)."
+ },
+ {
+  "id": "p052",
+  "file": "052_2026-07-25_into-the-carnac-regio-the-dragon-tormente.md",
+  "sort_iso": "1224-04-21T12:00",
+  "session": "2026-07-25",
+  "scene": "Spring 1224 — the Carnac sea-cave regio",
+  "title": "Into the Carnac regio: the dragon Tormente",
+  "icon": "🐉",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Dagmar"
+  ],
+  "activity_type": "Exploration",
+  "status": "Proposed",
+  "notes": "Resolves the 'hidden regio near Carnac' cliffhanger. The sea-cave regio's first layer is guarded by a magnitude-10 dragon, Tormente, who bars the way deeper — and sets Dagmar an errand to earn passage.",
+  "source": "Session recap 2026-07-25 (Ars Magica transcript), Dagmar's Carnac regio scene.",
+  "body_text": "Dagmar rows into the **Carnac sea-cave** with three grogs — **Angus** (helmsman, pirate, and reliable if boastful storyteller), **Foxglove** (scout, rogue, and acquirer of useful objects), and **Peter** — his **Eyes of the Eagle** and **Clear Sight of the Naiad** still up (the spells that found the place; he can see through water, fog, and dark).\n**Probing in.** He casts a spontaneous **Intēllego Mentem** \"is anyone around\" — modelled on the smell-silver spell, reading minds like a sense, stronger signal meaning nearer — and picks up the faint edges of the **Carnac covenant**, a small **parasitic village** beside it, one or two people on the shore, and, deeper in, **one signal unlike anything he has ever felt before**. A quick tarot draw (Knight of Cups reversed, Eight of Wands reversed) foreshadows what's coming. **Piercing the Magical Veil** confirms a clear **onion-layer** structure — and that the strange thing ahead is *barring the way forward*.\n**Crossing the first threshold**, Dagmar's over-tuned vision catches cobalt-blue flashes off what looks like **dozens of little mirrors** — then the wall *shudders and exhales*. The mirrors are **scales**. It is a **dragon**, slumped into the water and rising above it, filling the passage — roughly 45 feet of visible flank, 25 feet high, a leg going deep into the water. Only **Foxglove** glimpses its head lift and turn; to the others it stays a wall of scales. Magical Lore reads its resistance in the **50s — a magnitude-10 creature** — and the regio, oddly, as **more attuned to Auram than Aquam** despite all the water. Dagmar's read: this is a **guardian**, posted to protect an otherwise-defensible threshold; the way deeper is unobstructed *except* for the dragon in it.\n**The parley.** Speaking mind-to-mind in Latin (**Posing the Silent Question**, **Words of the Unbroken Silence**), Dagmar rouses it. The dragon — **Tormente** — asks whether he serves **\"Jeffrey the First,\"** a long-dead king of Brittany whose *\"quest of learning\"* it seems to guard; Dagmar (House Criamon, Covenant of Sjórseiðr — all names Tormente has never heard) disclaims any royal commission and professes to seek knowledge for its own sake. Pressed for a **great deed or a quest**, Dagmar boasts of the covenant's Tribunal victory — champion of the magical contests of all Normandy — and demonstrates his Intēllego on request, penetrating with a burst of confidence.\n**The price.** Satisfied, Tormente raises an arm from the water and deposits on the boat a **heavy jewelled golden crown**, Roman in style, dazzling and far too heavy to wear long. It is an **offering of peace** for Tormente's **estranged kin** — a dragon that *\"will not speak to me\"* — dwelling in a **sea-cliff cave above the waves off the English northeast coast, near Scarborough / Newcastle, just short of Scotland.** Carry the crown to the kin and reconcile them, and Tormente will **deem Dagmar worthy of passing deeper** into the regio. Dagmar accepts, and gives orders to head **north** to find the kin — possibly by way of **Stonehenge**, to collect Llewellyn and finally cash in the time-crystal (t018, t066). The Carnac regio itself stays only half-opened (t025)."
+ },
+ {
+  "id": "p053",
+  "file": "053_2026-07-25_foxglove-robs-the-dragon.md",
+  "sort_iso": "1224-04-21T20:00",
+  "session": "2026-07-25",
+  "scene": "Spring 1224 — that night, aboard ship",
+  "title": "Foxglove robs the dragon",
+  "icon": "💰",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Dagmar"
+  ],
+  "activity_type": "Consequence",
+  "status": "Proposed",
+  "notes": "A covenant grog quietly robs Tormente's hoard the same night — while Dagmar is trying to stay in the dragon's good graces to earn passage deeper. Consequence seed.",
+  "source": "Session recap 2026-07-25 (Ars Magica transcript), Carnac regio aftermath.",
+  "body_text": "Back at the ship, **Angus** gathers the sixteen crew and spins a **broadly honest** account of the dragon for a night of bought drinks (*\"the creepy wizard made us go, he spoke spells at it, and it gave us treasure\"*) — **Peter** adding embellishments that aren't quite true, **Foxglove** conspicuously **downplaying the treasure**.\nBecause Foxglove — avaricious to the marrow — has other plans. That night she quietly takes the rowboat **back into the cave alone**, anchors it, and dives the twenty-odd feet to the cave floor, where **gold and trinkets have spilled forward** from the hoard. She gathers all she can carry, smuggles roughly **five bags of it** aboard, and hides it for herself, brushing past **Peter** with a caught-red-handed lie about running a late errand for Dagmar (a clean Guile success). Examined later, the coin is mostly **Roman** in style — priceless, and useless as currency; she means to keep every piece.\n**The wrinkle:** this is an **unsanctioned theft from Tormente's hoard**, committed the very night Dagmar has agreed to run the dragon's errand and is depending on its goodwill to pass deeper into the regio. Neither Dagmar nor the dragon knows yet (c026)."
+ },
+ {
+  "id": "p054",
+  "file": "",
+  "sort_iso": "1224-04-22T09:00",
+  "session": "2026-08-07",
+  "scene": "Spring 1224 — after the Carnac regio, plotting the next leg",
+  "title": "Dagmar's next leg: north to England, and messages by Redcap",
+  "icon": "🧭",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Dagmar"
+  ],
+  "activity_type": "Planning",
+  "status": "Proposed",
+  "source": "Dagmar's forward-plan notes (owner, 2026-08-07).",
+  "notes": "Dagmar's stated forward plan following 'Foxglove robs the dragon': the next leg heads north to England (a town within the Stonehenge Tribunal), sending Redcap messages to Llewellyn ex Miscellanea (a regio-exploration invite, ~X weeks out per the captain's estimate) and to Paulus ex Merinita (ward status). Deliberately NOT sent from near Carnac. Map/GM seed: the Tide of Memory leaves Carnac northbound up the English coast toward a second dragon, watching for regios and taking easy trade only incidentally.",
+  "body_text": "Dagmar's plan for the next leg, set after the Carnac regio.\n\n**North to England, and word ahead by Redcap.** Having knocked on the regio's door — and found a **dragon** behind it — Dagmar means to head **north to England**. He will put in at a town within the bounds of the **Stonehenge Tribunal** and commission the **Redcaps** to carry two messages:\n\n- To **Llewellyn ex Miscellanea**: that Dagmar will be passing back through in **X weeks** (X set by the captain's estimate for the next leg), with an offer for Llewellyn to join him in exploring a regio.\n- To **Paulus ex Merinita**: asking after the **ward** — how it comes along, and when it might be ready.\n\nNotably, he will **not** send these messages from the vicinity of **Carnac**.\n\n**Up the English coast, at speed.** With his mail away, Dagmar takes the **Tide of Memory** up the coast of England toward the **second dragon's** reported location. He keeps an eye out for regios along the way, and the ship may take on a little easy trade when it resupplies — but the Tide is making the passage with all speed, so neither the regio-watching nor the trading is likely to come to much."
+ },
+ {
+  "id": "p064",
+  "file": "",
+  "sort_iso": "1224-04-25T12:00",
+  "session": "2026-08-08",
+  "scene": "Spring 1224 — the North Sea",
+  "title": "Valerian runs for the Kraken's Egg",
+  "icon": "🥚",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Valerian"
+  ],
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
+  "body_text": "Off-camera, Valerian makes the annual run for the Kraken's Egg, retrieved from the sea between Norway and Scotland when the kraken surfaces and lays."
+ },
+ {
+  "id": "p065",
+  "file": "",
+  "sort_iso": "1224-05-05T12:00",
+  "session": "2026-08-08",
+  "scene": "Spring 1224 — a ruined Diedne site",
+  "title": "Valdemar harvests the Diedne Garden",
+  "icon": "🌿",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Valdemar"
+  ],
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
+  "body_text": "Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen."
+ },
+ {
+  "id": "p056",
+  "file": "",
+  "sort_iso": "1224-05-25T19:00",
+  "session": "2026-08-08",
+  "scene": "Spring 1224 — the covenant at Cruachan",
+  "title": "The feast at Cruachan: Rody delivered, and the matching necklaces",
+  "icon": "🍽️",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Éogan",
+   "Dustin",
+   "Wilhelm",
+   "Stijntje",
+   "Gráinne",
+   "Tadhg",
+   "Rody"
+  ],
+  "activity_type": "Diplomacy",
+  "status": "Proposed",
+  "source": "Session transcript, 2026-08-08.",
+  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
+  "body_text": "The party reaches the covenant at Cruachan and briefs its magi before bringing the changeling inside. Gráinne and Tadhg — versed in Faerie magic — receive them warmly, hear that “Rody” is Fae and may lead to the real, taken child, and agree to help: come to a feast the next night after dusk, and bring Rody carrying a knotted-wood token so he can pass the Aegis.\n\nAt the feast, Tadhg has Rody swear a preliminary apprentice's oath. Dustin notices Rody and Stijntje wearing matching necklaces (“we made them for each other”) — faerie-associated but not magical objects — and, fearing Stijntje had been swapped too, checks; to his relief she has not. Rody is left in the covenant's keeping, their Fae specialists to hold and question him and, with luck, trace the child he replaced."
+ },
+ {
+  "id": "p057",
+  "file": "",
+  "sort_iso": "1224-06-05T10:00",
+  "session": "2026-08-08",
+  "scene": "Spring 1224 — the river-mouth near Drogheda",
+  "title": "The capricorn at the river-mouth",
+  "icon": "🐐",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Éogan"
+  ],
+  "activity_type": "Encounter",
+  "status": "Proposed",
+  "source": "Session transcript, 2026-08-08.",
+  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
+  "body_text": "Heading for the ships near Drogheda, Éogan hangs back — a horned head breaks the water at the river's mouth, taken at first for a sea-serpent until he sees the goat's beard and slotted eyes, then a dorsal fin and a flippered tail: a capricorn, a Magic-realm sea-goat, playing where salt water meets fresh. Éogan takes a river-water sample in a vial and casts a spell to let him return to the spot later, then rejoins the crew at the Brineborn."
+ },
+ {
+  "id": "p061",
+  "file": "",
+  "sort_iso": "1224-06-15T12:00",
+  "session": "2026-08-08",
+  "scene": "Spring 1224 — the Isle of Man",
+  "title": "The Hound of Cassel and the three sealed chests",
+  "icon": "📦",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Wilhelm"
+  ],
+  "activity_type": "Discovery",
+  "status": "Proposed",
+  "source": "Session transcript, 2026-08-08.",
+  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
+  "body_text": "Set up with the Hound of Cassel as his ship at the Isle of Man, Wilhelm searches her over — a plain merchantman, no lab — and turns up three small, magically-sealed boxes. They are spoils of Valdemar's raid on a Scarem Montem vessel: Normandy law let him take the non-magical cargo, but magical goods fall under the Code's bar on depriving a magus of magical power, so the boxes have sat in trust, meant for return and never returned — awkward now that Scarem Montem has walked out of the Tribunal in the schism. Their contents stay sealed. Wilhelm lays a month-long Vim ward on the hull, making the boat “technically magical,” as both deterrent and legal fig-leaf."
+ },
+ {
+  "id": "p066",
+  "file": "",
+  "sort_iso": "1224-06-18T12:00",
+  "session": "2026-08-08",
+  "scene": "Spring 1224 — the Isle of Man",
+  "title": "Wilhelm writes up two folk-magic integrations",
+  "icon": "⚗️",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Wilhelm"
+  ],
+  "activity_type": "Research",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
+  "body_text": "Newly set up on the Hound of Cassel, Wilhelm begins writing two integrations of his folk system — one to add Artes Liberales, one to let spells be cast 'virtually' — aiming to finish them as a Factus by year's end and send them out."
+ },
+ {
+  "id": "p067",
+  "file": "",
+  "sort_iso": "1224-07-01T12:00",
+  "session": "2026-08-08",
+  "scene": "Summer 1224 — the Isle of Man & the sea-lanes",
+  "title": "Éogan trades, builds his lab, and bottles fruit",
+  "icon": "⚗️",
+  "timeline": "☀️ Summer 1224",
+  "date": "Summer 1224",
+  "cast": [
+   "Éogan"
+  ],
+  "activity_type": "Lab work",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
+  "body_text": "Éogan's crew returns to summer trade (wool out of the Isle of Man) while he sets up his new laboratory and develops a spell to draw the juice from fruit."
+ },
+ {
+  "id": "p058",
+  "file": "",
+  "sort_iso": "1224-07-05T12:00",
+  "session": "2026-08-08",
+  "scene": "Summer 1224 — London",
+  "title": "Foxglove fences the dragon's gold in London",
+  "icon": "💰",
+  "timeline": "☀️ Summer 1224",
+  "date": "Summer 1224",
+  "cast": [
+   "Foxglove"
+  ],
+  "activity_type": "Adventure",
+  "status": "Proposed",
+  "source": "Session transcript, 2026-08-08.",
+  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
+  "body_text": "The Tide of Memory calls at London with trade out of Ghent. Foxglove — who took five bags of Tormente's hoard on impulse, with no plan — finds the gold near-worthless as spendable coin in a silver-standard economy. Through a fence she converts only a little (three coins), at a punishing one-for-one: a silver pound per gold piece, but legal tender at least. She keeps the bulk and, being wanted elsewhere, resolves to stay close to the covenant for cover while she holds it."
+ },
+ {
+  "id": "p068",
+  "file": "",
+  "sort_iso": "1224-07-10T12:00",
+  "session": "2026-08-08",
+  "scene": "Summer 1224 — a haunted coastal village",
+  "title": "Dustin gathers the Summer Fog, teaching as he goes",
+  "icon": "🌫️",
+  "timeline": "☀️ Summer 1224",
+  "date": "Summer 1224",
+  "cast": [
+   "Dustin",
+   "Stijntje"
+  ],
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
+  "body_text": "Dustin collects the Summer Fog (Mentem vis) from its haunted coastal village, bringing Stijntje along to learn Aquam by doing — hands-on, and suitably terrifying."
+ },
+ {
+  "id": "p069",
+  "file": "",
+  "sort_iso": "1224-07-15T12:00",
+  "session": "2026-08-08",
+  "scene": "Summer 1224 — the Isle of Man",
+  "title": "Valdemar builds the base and copies Legends of Brittany",
+  "icon": "⚖️",
+  "timeline": "☀️ Summer 1224",
+  "date": "Summer 1224",
+  "cast": [
+   "Valdemar",
+   "Valerian"
+  ],
+  "activity_type": "Trade",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
+  "body_text": "Valdemar builds up the Isle of Man as the covenant's base — raiding lightly, trading mostly — and, with Valerian's help, makes a surreptitious copy of Legends of Brittany to keep, exploiting cross-tribunal copy-law so the original can be returned while the covenant keeps the copy (see t076)."
+ },
+ {
+  "id": "p059",
+  "file": "",
+  "sort_iso": "1224-07-20T12:00",
+  "session": "2026-08-08",
+  "scene": "Summer 1224 — a cove on the English coast",
+  "title": "Llewellyn joins: Zeno's bargain and the time-crystal",
+  "icon": "⏳",
+  "timeline": "☀️ Summer 1224",
+  "date": "Summer 1224",
+  "cast": [
+   "Dagmar",
+   "Llewellyn"
+  ],
+  "activity_type": "Travel",
+  "status": "Proposed",
+  "source": "Session transcript, 2026-08-08.",
+  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
+  "body_text": "Redcap messages sent from Ghent bring a reply at London: Llewellyn ex Miscellanea will meet the ship in a cove a fortnight on. He comes aboard for the northward leg, drawn by the promise of a Magic-aligned regio (Aquam-tinged) and “a safe place to catch my breath.”\n\nOn the voyage he confides his secret: captured by Zeno's paradox, he has extended his life by only ever living half his remaining span — a working grown so onerous, and maintained so long, that a sudden failure could be catastrophic. He hopes a regio of irregular time-flow will let him “catch the tide going out.” His time-quartz crystal, he says, reads those flows; Dagmar's cursory study finds it innately, naturally magical — a found object, not a made artifact, and not Llewellyn's own discovery."
+ },
+ {
+  "id": "p060",
+  "file": "",
+  "sort_iso": "1224-08-05T14:00",
+  "session": "2026-08-08",
+  "scene": "Summer 1224 — a cliff-cave northeast of York",
+  "title": "The crown delivered: Mímormr freed",
+  "icon": "🐉",
+  "timeline": "☀️ Summer 1224",
+  "date": "Summer 1224",
+  "cast": [
+   "Dagmar",
+   "Valdemar",
+   "Llewellyn",
+   "Foxglove"
+  ],
+  "activity_type": "Adventure",
+  "status": "Proposed",
+  "source": "Session transcript, 2026-08-08.",
+  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
+  "body_text": "Meeting Valdemar's ship off Northumbria, Dagmar explains Tormente's quest, and the crew rows to a cliff-cave northeast of York, silver-shimmered within. The occupant is no drake like Tormente but a vast silver-and-aquamarine worm who names itself Mímormr, great-grandchild of Jörmungandr and a speaker with the bones of the dead — bound in the cave for ages by Tormente, who (it says) calls its ancestry false and its deeds wicked.\n\nThe crown proves a pardon: a name-release that undoes the binding. Mímormr takes it and emerges, freed. Offered a boon, Dagmar — through Valdemar, who parses the garbled speech with his Ansuz rune — asks only for a token to carry back to Tormente as proof the task is done. Mímormr reaches for Dagmar's mind, seemingly to leave a readable mark but in truth to crush his skull; Dagmar treats it as an attack, slips it with his Parma, and takes no effect — while Mímormr believes it succeeded. Told of a relative's bones basking in power out in the North Sea, it means to finish its work here and then make east to meet that ancestor, and climbs away into the countryside, loosed upon the world.\n\nExamining the empty cave, the magi (Dagmar's premonitions; Valdemar and Llewellyn on the stone) find the binding was never Hermetic: a Muto-Terram-scale warping of the rock against its grain, plus an Adamic name-binding — power that would tax a trained magus to match."
+ },
+ {
+  "id": "p070",
+  "file": "",
+  "sort_iso": "1224-09-20T12:00",
+  "session": "2026-08-08",
+  "scene": "Fall 1224 — the Carnac regio",
+  "title": "Dagmar returns to Tormente (declared)",
+  "icon": "🐉",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Dagmar"
+  ],
+  "activity_type": "Exploration",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Declared seasonal plan; not yet played.",
+  "body_text": "Declared: Dagmar means to carry Mímormr's token back to Tormente and, the debt paid, finally enter the Carnac regio (see t073, scene s8)."
+ },
+ {
+  "id": "p071",
+  "file": "",
+  "sort_iso": "1224-09-25T12:00",
+  "session": "2026-08-08",
+  "scene": "Fall 1224 — Scarem Montem",
+  "title": "Wilhelm sails to Scarem Montem (declared)",
+  "icon": "🧭",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Wilhelm"
+  ],
+  "activity_type": "Travel",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Declared seasonal plan; not yet played.",
+  "body_text": "Declared: in late summer / early fall Wilhelm sails the Hound of Cassel to Scarem Montem to deliver the folk-magic thesis and settle the ship-for-book swap — carrying the three sealed chests, and hoping to retrieve his original manuscript (see scene s6, t075, c012)."
+ },
+ {
+  "id": "p072",
+  "file": "",
+  "sort_iso": "1224-10-01T12:00",
+  "session": "2026-08-08",
+  "scene": "Fall 1224 — Mont-Saint-Michel",
+  "title": "Éogan claims the Mont-Saint-Michel lease (declared)",
+  "icon": "🕯️",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Éogan"
+  ],
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Declared seasonal plan; not yet played.",
+  "body_text": "Declared: Éogan volunteers for the fall claim on the Mont-Saint-Michel tide pools — not a full season's work, leaving him time for other study."
+ },
+ {
+  "id": "p073",
+  "file": "",
+  "sort_iso": "1224-10-05T12:00",
+  "session": "2026-08-08",
+  "scene": "Fall 1224 — Oleron",
+  "title": "Dustin fetches the Terram summa from Oleron (declared)",
+  "icon": "📖",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Dustin"
+  ],
+  "activity_type": "Study",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Declared seasonal plan; not yet played.",
+  "body_text": "Declared: Dustin returns to Oleron to collect the Terram summa won at Tribunal and settle in to study it."
+ },
+ {
+  "id": "p074",
+  "file": "",
+  "sort_iso": "1224-12-05T12:00",
+  "session": "2026-08-08",
+  "scene": "Winter 1224-25 — the Isle of Man",
+  "title": "Dagmar studies Finesse (declared)",
+  "icon": "📖",
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "cast": [
+   "Dagmar"
+  ],
+  "activity_type": "Study",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Declared seasonal plan; not yet played.",
+  "body_text": "Declared: wintering at the Isle of Man, Dagmar studies a Finesse tractatus — a skill he can improve without needing an Art present."
+ },
+ {
+  "id": "p075",
+  "file": "",
+  "sort_iso": "1224-12-06T12:00",
+  "session": "2026-08-08",
+  "scene": "Winter 1224-25 — the Isle of Man",
+  "title": "Wilhelm gets his integrations running (declared)",
+  "icon": "⚗️",
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "cast": [
+   "Wilhelm"
+  ],
+  "activity_type": "Lab work",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Declared seasonal plan; not yet played.",
+  "body_text": "Declared: Wilhelm winters at the Isle of Man, getting his integrations up and running and setting the research assistants (Carl & Isaac) back to gathering."
+ },
+ {
+  "id": "p076",
+  "file": "",
+  "sort_iso": "1224-12-07T12:00",
+  "session": "2026-08-08",
+  "scene": "Winter 1224-25 — the Isle of Man",
+  "title": "Éogan borrows Henry to study Magic Theory (declared)",
+  "icon": "📖",
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "cast": [
+   "Éogan"
+  ],
+  "activity_type": "Study",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Declared seasonal plan; not yet played.",
+  "body_text": "Declared: Éogan borrows Henry as a personal tutor to raise his Magic Theory toward the talisman he wants — trading Aquam instruction for Stijntje and Dustin in return."
+ },
+ {
+  "id": "p077",
+  "file": "",
+  "sort_iso": "1224-12-08T12:00",
+  "session": "2026-08-08",
+  "scene": "Winter 1224-25 — Oleron / the Isle of Man",
+  "title": "Dustin studies the Terram summa and learns Aquam (declared)",
+  "icon": "📖",
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "cast": [
+   "Dustin"
+  ],
+  "activity_type": "Study",
+  "status": "Proposed",
+  "source": "Seasonal activities, 2026-08-08 session.",
+  "notes": "Declared seasonal plan; not yet played.",
+  "body_text": "Declared: Dustin continues with the Terram summa and takes Aquam instruction from Éogan."
+ }
 ]

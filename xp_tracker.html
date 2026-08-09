@@ -83,6 +83,14 @@ table.xp td.cov::before{content:"";position:absolute;top:2px;right:2px;width:6px
 /* Foundry-confirmed marker: a small teal wedge in the bottom-left corner */
 table.xp td.fdry{background-image:radial-gradient(circle at bottom left, var(--teal) 0 4px, transparent 4px)}
 tr.yr-alt td{background:rgba(120,90,40,.05)}
+/* season with two activities: stacked */
+table.xp td.multi{padding:0;background:rgba(62,107,53,.14)}
+table.xp td.multi::after{content:none}
+.stack{display:flex;flex-direction:column}
+.stack .sub{font-size:9px;line-height:1.15;padding:2px 2px;border-bottom:1px solid rgba(120,90,40,.18)}
+.stack .sub:last-child{border-bottom:none}
+.stack .sub b{font-size:10.5px;color:var(--ink)}
+.stack .sub.off{color:var(--ink-soft);font-style:italic;opacity:.8}
 .legend{margin-top:14px;font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .legend b{color:var(--ink);font-style:normal}
 .chip{display:inline-flex;align-items:center;gap:5px}
@@ -170,8 +178,28 @@ function renderFilters(){
   document.querySelectorAll('#yearbar .fbtn').forEach(b=>b.onclick=()=>{filter.year=b.dataset.year;renderFilters();render();});
 }
 function shownSeasons(){ return DATA.seasons.filter(s=>filter.year==='all'||s.year==filter.year); }
+function cellMulti(member,season,entries){
+  if(!entries.length) return '<td class="empty"></td>';
+  const base=`${member.name} — ${season.label}`;
+  const fdry=entries.some(e=>e.source==='foundry');
+  const cov=member.type==='magus'&&entries.some(e=>e.covenant);
+  const parts=entries.map(e=>{
+    const hasXp=e.xp!=null&&e.xp!==0&&!e.deferred;
+    return hasXp?`<span class="sub"><b>+${e.xp}</b> ${esc(abbr(e.xpType||e.act))}</span>`
+                :`<span class="sub off">${esc(abbr(e.act||''))}</span>`;
+  }).join('');
+  const tips=entries.map(e=>{
+    const brk=(e.targets&&e.targets.length)?e.targets.map(x=>`${x.type} +${x.xp}`).join(', '):(e.xpType?`${e.xpType} +${e.xp}`:'');
+    return `${e.act?e.act+': ':''}${brk||e.act||''}`;
+  });
+  const cls=['act','multi']; if(cov)cls.push('cov'); if(fdry)cls.push('fdry');
+  const tip=base+'\n'+tips.join('\n')+(member.type==='magus'?`\nCovenant: ${cov?'yes':'—'}`:'')+(fdry?'\n(confirmed in Foundry)':'');
+  return `<td class="${cls.join(' ')}" title="${esc(tip)}"><div class="stack">${parts}</div></td>`;
+}
 function cell(member,season){
-  const e=(DATA.entries||{})[member.id+'::'+season.id];
+  const raw=(DATA.entries||{})[member.id+'::'+season.id];
+  if(Array.isArray(raw)) return cellMulti(member,season,raw.filter(e=>e&&e.activity));
+  const e=raw;
   if(!e || !e.activity) return '<td class="empty"></td>';
   const cov = (member.type==='magus' && e.covenant);
   const base=`${member.name} — ${season.label}`;

@@ -549,22 +549,35 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Dagmar::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 11,
-   "xpType": "Terram",
-   "targets": [
-    {
-     "type": "Terram",
-     "xp": 11
-    }
-   ],
-   "detail": "reading: Terram+11",
-   "covenant": null,
-   "source": "foundry"
-  },
+  "Dagmar::1221-summer": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "reading",
+    "xp": 11,
+    "xpType": "Terram",
+    "targets": [
+     {
+      "type": "Terram",
+      "xp": 11
+     }
+    ],
+    "detail": "reading: Terram+11",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "recovery",
+    "xp": 0,
+    "xpType": "Recovery",
+    "targets": [],
+    "detail": "recovery",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
   "Dagmar::1222-winter": {
    "activity": true,
    "deferred": false,
@@ -856,22 +869,40 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Éogan Dobhartha::1220-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "learnSpell",
-   "xp": 15,
-   "xpType": "Spell: Push of the Gentle Wave",
-   "targets": [
-    {
-     "type": "Spell: Push of the Gentle Wave",
-     "xp": 15
-    }
-   ],
-   "detail": "learnSpell: Spell: Push of the Gentle Wave+15",
-   "covenant": null,
-   "source": "foundry"
-  },
+  "Éogan Dobhartha::1220-winter": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "learnSpell",
+    "xp": 15,
+    "xpType": "Spell: Push of the Gentle Wave",
+    "targets": [
+     {
+      "type": "Spell: Push of the Gentle Wave",
+      "xp": 15
+     }
+    ],
+    "detail": "learnSpell: Spell: Push of the Gentle Wave+15",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "exposure",
+    "xp": 2,
+    "xpType": "Teaching",
+    "targets": [
+     {
+      "type": "Teaching",
+      "xp": 2
+     }
+    ],
+    "detail": "exposure: Teaching+2",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
   "Éogan Dobhartha::1220-fall": {
    "activity": true,
    "deferred": false,
@@ -1013,7 +1044,7 @@
    "activity": true,
    "deferred": false,
    "act": "adventuring",
-   "xp": 7,
+   "xp": 12,
    "xpType": "Adventuring",
    "targets": [
     {
@@ -1023,9 +1054,13 @@
     {
      "type": "Code of Hermes",
      "xp": 2
+    },
+    {
+     "type": "Spell Mastery: Mighty Torrent of Water",
+     "xp": 5
     }
    ],
-   "detail": "adventuring: Aquam+5, Code of Hermes+2",
+   "detail": "adventuring: Aquam+5, Code of Hermes+2, Spell Mastery: Mighty Torrent of Water+5",
    "covenant": null,
    "source": "foundry"
   },
@@ -1182,17 +1217,39 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Garrat Coffin::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "recovery",
-   "xp": 0,
-   "xpType": "Recovery",
-   "targets": [],
-   "detail": "recovery",
-   "covenant": null,
-   "source": "foundry"
-  },
+  "Garrat Coffin::1221-summer": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "adventuring",
+    "xp": 10,
+    "xpType": "Adventuring",
+    "targets": [
+     {
+      "type": "Brawl",
+      "xp": 5
+     },
+     {
+      "type": "Survival",
+      "xp": 5
+     }
+    ],
+    "detail": "adventuring: Brawl+5, Survival+5",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "recovery",
+    "xp": 0,
+    "xpType": "Recovery",
+    "targets": [],
+    "detail": "recovery",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
   "Garrat Coffin::1221-fall": {
    "activity": true,
    "deferred": false,
@@ -1312,22 +1369,44 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Ka'wa'ill::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (English)",
-   "targets": [
-    {
-     "type": "Language: (English)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (English)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
+  "Ka'wa'ill::1221-summer": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "adventuring",
+    "xp": 10,
+    "xpType": "Adventuring",
+    "targets": [
+     {
+      "type": "Brawl",
+      "xp": 5
+     },
+     {
+      "type": "Athletics",
+      "xp": 5
+     }
+    ],
+    "detail": "adventuring: Brawl+5, Athletics+5",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "practice",
+    "xp": 3,
+    "xpType": "Language: (English)",
+    "targets": [
+     {
+      "type": "Language: (English)",
+      "xp": 3
+     }
+    ],
+    "detail": "practice: Language: (English)+3",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
   "Ka'wa'ill::1221-fall": {
    "activity": true,
    "deferred": false,
@@ -1416,6 +1495,362 @@
    "xpType": "",
    "targets": [],
    "detail": "none",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dagmar::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Intrigue",
+     "xp": 5
+    },
+    {
+     "type": "Guile",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Intrigue+5, Guile+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dagmar::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Faerie Lore",
+   "targets": [
+    {
+     "type": "Faerie Lore",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Faerie Lore+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dagmar::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 12,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Intellego",
+     "xp": 5
+    },
+    {
+     "type": "Muto",
+     "xp": 2
+    },
+    {
+     "type": "Code of Hermes",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Intellego+5, Muto+2, Code of Hermes+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Swim",
+   "targets": [
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Leadership",
+     "xp": 5
+    },
+    {
+     "type": "Athletics",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Leadership+5, Athletics+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Leadership",
+   "targets": [
+    {
+     "type": "Leadership",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Leadership+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Intrigue",
+     "xp": 5
+    },
+    {
+     "type": "Stealth",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Intrigue+5, Stealth+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Language: Gaelic",
+   "targets": [
+    {
+     "type": "Language: Gaelic",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Language: Gaelic+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Wilhelm Stienauer::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Teaching+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Garrat Coffin::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Swim",
+   "targets": [
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Garrat Coffin::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Brawl",
+     "xp": 5
+    },
+    {
+     "type": "Athletics",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Brawl+5, Athletics+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Leofwin::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Hunt",
+   "targets": [
+    {
+     "type": "Hunt",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Hunt+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Leofwin::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Brawl",
+     "xp": 5
+    },
+    {
+     "type": "Survival",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Brawl+5, Survival+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Giden::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Athletics",
+     "xp": 5
+    },
+    {
+     "type": "Survival",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Athletics+5, Survival+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Athletics",
+     "xp": 5
+    },
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Athletics+5, Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Athletics",
+     "xp": 5
+    },
+    {
+     "type": "Brawl",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Athletics+5, Brawl+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Drest::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Brawl",
+     "xp": 5
+    },
+    {
+     "type": "Athletics",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Brawl+5, Athletics+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Adam Smith::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Intrigue",
+     "xp": 5
+    },
+    {
+     "type": "Guile",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Intrigue+5, Guile+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Father Lachlan::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Guile",
+     "xp": 5
+    },
+    {
+     "type": "Intrigue",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Guile+5, Intrigue+5",
    "covenant": null,
    "source": "foundry"
   }
