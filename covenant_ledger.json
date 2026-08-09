@@ -407,18 +407,6 @@
       "lab": "The Maelstrom's Maw Laboratory",
       "note": "Handed from Nequam to Kor in Summer 1220.",
       "crew": 14
-     },
-     {
-      "id": "storm-dragon",
-      "name": "Veðrdreki",
-      "aka": "Storm Dragon",
-      "kind": "Longship (drakar)",
-      "owner": "Valdemar Bjornsson",
-      "captain": "",
-      "status": "Active",
-      "lab": "",
-      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet.",
-      "crew": 14
      }
     ],
     "inhabitants": [
@@ -861,17 +849,6 @@
       "captain": "",
       "status": "Active",
       "lab": "The Brineborn's Laboratory (10 pts)",
-      "note": ""
-     },
-     {
-      "id": "gloaming",
-      "name": "The Gloaming",
-      "aka": "",
-      "kind": "Ketch",
-      "owner": "—",
-      "captain": "",
-      "status": "Active",
-      "lab": "The Gloaming's Laboratory (10 pts)",
       "note": ""
      },
      {
@@ -1617,15 +1594,6 @@
       "yearBorn": 1200,
       "qty": 1,
       "actorId": null
-     },
-     {
-      "name": "Valerian de Castellane",
-      "category": "magi",
-      "job": "House Guernicus",
-      "points": 5,
-      "yearBorn": 1197,
-      "qty": 1,
-      "actorId": "K52pPLw2Krc49aVy"
      },
      {
       "name": "Rán",
@@ -4000,12 +3968,12 @@
    "refs": []
   },
   {
-   "season": "Winter 1220-21",
-   "sort_iso": "1220-12-20",
+   "season": "Early 1222",
+   "sort_iso": "1222-04-01",
    "facet": "ships",
    "kind": "add",
    "summary": "Veðrdreki (the Storm Dragon) joins the fleet",
-   "detail": "Valdemar Bjornsson's personal Viking drakar — a shallow-draft longship for river and inland transit.",
+   "detail": "Valdemar's personal Viking drakar — with him since he joined in Winter 1220-21 — is brought into the counted covenant fleet at the start of 1222.",
    "refs": []
   },
   {
@@ -4014,7 +3982,7 @@
    "facet": "inhabitants",
    "kind": "add",
    "summary": "Valdemar Bjornsson (Diedne) joins the covenant",
-   "detail": "A skyclad Viking war-magus and centuries-old regio survivor; brings the Veðrdreki.",
+   "detail": "A skyclad Viking war-magus and centuries-old regio survivor; sails his own drakar, the Veðrdreki (brought into the counted fleet at the start of 1222).",
    "refs": []
   },
   {

@@ -160,11 +160,14 @@ const SHIP_NAMES={'tide-of-memory':'Tide of Memory','brineborn':'The Brineborn',
  'adamant':'Adamant','hound-of-cassel':'Hound of Cassel'};
 const ABSENT=['twilight','sabbatical'];
 // Inhabitants tab badge: contributing headcount for by-ship nodes, else raw total.
+// Upkeep inhabitant count: crew of every hull EXCEPT sabbatical ones (prize crews count),
+// plus contributing non-crew members (active magi, apprentices, companions, familiars — not absent magi or NPCs).
 function inhabCount(){const st=s();const useShip=st.inhabitants.some(i=>i.ship||i.standing);
   if(!useShip) return st.inhabitants.length;
-  const NONC=['magi','companions','familiars','npc'];
-  const pool=(st.ships||[]).reduce((a,sh)=>a+(sh.crew||0),0);
-  return pool + st.inhabitants.filter(i=>NONC.includes(i.category)).length;}
+  const crew=(st.ships||[]).filter(sh=>!/sabbatical/i.test(sh.status||'')).reduce((a,sh)=>a+(sh.crew||0),0);
+  const NONC=['magi','companions','familiars'];
+  const members=st.inhabitants.filter(i=>NONC.includes(i.category)&&!ABSENT.includes(i.standing)).length;
+  return crew+members;}
 
 function render(){
   const n=N(), st=s(), id=D.meta.identity, dash=v=>(v==null?'—':v);
@@ -247,16 +250,17 @@ const PANELS={
     const shipOrder=(st.ships||[]).map(sh=>sh.id).filter(k=>groups[k]);
     const otherKeys=Object.keys(groups).filter(k=>k!=='__none__'&&!shipOrder.includes(k));
     const keys=[...shipOrder,...otherKeys,...(groups['__none__']?['__none__']:[])];
-    let html=`<p class="section-sub">Grouped by ship. Each hull carries a pool of 14 crew — named grogs fill slots, the rest shows as “additional crew”. Magi, apprentices, companions, familiars and guests don't count against a ship's crew.${absent.length?` ${absent.length} member${absent.length===1?'':'s'} in the covenant but not contributing, below.`:''}</p>`;
+    let html=`<p class="section-sub">Grouped by ship. Each hull carries a pool of 14 crew — named grogs fill slots, the rest shows as “additional crew”. Magi, apprentices, companions, familiars and guests don't count against a ship's crew. Sabbatical crews are tracked but excluded from upkeep; prize crews count.${absent.length?` ${absent.length} member${absent.length===1?'':'s'} in the covenant but not contributing, below.`:''}</p>`;
     html+=keys.map(k=>{
       const list=groups[k]; const sh=(st.ships||[]).find(x=>x.id===k);
       const title=k==='__none__'?'Covenant household':shipName(k);
       const meta=k==='__none__'?'':shipMeta(k);
+      const sabbatical=sh&&/sabbatical/i.test(sh.status||'');
       const counting=list.filter(i=>COUNT_CATS.includes(i.category)).reduce((a,i)=>a+(i.qty||1),0);
       const pool=sh?(sh.crew||0):0; const add=Math.max(0,pool-counting);
       const named=list.reduce((a,i)=>a+(i.qty||1),0); const head=k==='__none__'?named:named+add;
       const statusTag= sh&&/sabbatical|prize|route|no longer|left|depart|laid/i.test(sh.status||'') ? chip(sh.status,'#8a3324') : '';
-      const addRow=(k!=='__none__'&&add>0)?`<div class="row" style="color:var(--ink-soft);font-style:italic">＋${add} additional crew</div>`:'';
+      const addRow=(k!=='__none__'&&add>0)?`<div class="row" style="color:var(--ink-soft);font-style:italic">＋${add} additional crew${sabbatical?' — not counted toward upkeep':''}</div>`:'';
       return `<div class="catblock"><h3 style="text-transform:none">${k==='__none__'?'⚑ ':'⛵ '}${esc(title)} <span class="n">(${head})</span>${meta?` <span class="n">— ${meta}</span>`:''}${statusTag}</h3>
         <div class="cols">${list.map(row).join('')}${addRow}</div></div>`;
     }).join('');
