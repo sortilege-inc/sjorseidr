@@ -1,0 +1,1287 @@
+{
+  "meta": {
+    "title": "XP & Season Activity Tracker",
+    "schema_version": 1,
+    "note": "Per-member, per-season log of covenant activity and XP. Filter by type (magi / companions / grogs) and by current ship. Cells are empty until filled in a follow-up pass. For magi, a season also records whether the activity was a covenant service; every member records whether a season activity was undertaken and any XP (type + amount).",
+    "as_of": "Summer 1224"
+  },
+  "ships": {
+    "tide-of-memory": {
+      "name": "Tide of Memory",
+      "aka": "",
+      "status": "Active"
+    },
+    "brineborn": {
+      "name": "Brineborn",
+      "aka": "",
+      "status": "Active"
+    },
+    "adamant": {
+      "name": "Adamant",
+      "aka": "",
+      "status": "Active"
+    },
+    "storm-dragon": {
+      "name": "Veðrdreki",
+      "aka": "Storm Dragon",
+      "status": "Active"
+    },
+    "scholars-wake": {
+      "name": "The Scholar's Wake",
+      "aka": "",
+      "status": "Active"
+    },
+    "the-gloaming": {
+      "name": "The Gloaming",
+      "aka": "",
+      "status": "No longer part of the covenant"
+    },
+    "maelstroms-maw": {
+      "name": "Maelstrom's Maw",
+      "aka": "",
+      "status": "On sabbatical"
+    },
+    "hound-of-cassel": {
+      "name": "Hound of Cassel",
+      "aka": "the Tremere ship, formerly Scarem Montem's",
+      "status": "En route to Scarem Montem"
+    },
+    "covenfolk": {
+      "name": "Covenfolk",
+      "aka": "",
+      "status": "Covenant staff (ashore)"
+    }
+  },
+  "seasons": [
+    {
+      "id": "1219-winter",
+      "label": "❄️ Winter 1219-20",
+      "year": 1219
+    },
+    {
+      "id": "1220-spring",
+      "label": "🌼 Spring 1220",
+      "year": 1220
+    },
+    {
+      "id": "1220-summer",
+      "label": "☀️ Summer 1220",
+      "year": 1220
+    },
+    {
+      "id": "1220-fall",
+      "label": "🍂 Fall 1220",
+      "year": 1220
+    },
+    {
+      "id": "1220-winter",
+      "label": "❄️ Winter 1220-21",
+      "year": 1220
+    },
+    {
+      "id": "1221-spring",
+      "label": "🌼 Spring 1221",
+      "year": 1221
+    },
+    {
+      "id": "1221-summer",
+      "label": "☀️ Summer 1221",
+      "year": 1221
+    },
+    {
+      "id": "1221-fall",
+      "label": "🍂 Fall 1221",
+      "year": 1221
+    },
+    {
+      "id": "1221-winter",
+      "label": "❄️ Winter 1221-22",
+      "year": 1221
+    },
+    {
+      "id": "1222-spring",
+      "label": "🌼 Spring 1222",
+      "year": 1222
+    },
+    {
+      "id": "1222-summer",
+      "label": "☀️ Summer 1222",
+      "year": 1222
+    },
+    {
+      "id": "1222-fall",
+      "label": "🍂 Fall 1222",
+      "year": 1222
+    },
+    {
+      "id": "1222-winter",
+      "label": "❄️ Winter 1222-23",
+      "year": 1222
+    },
+    {
+      "id": "1223-spring",
+      "label": "🌼 Spring 1223",
+      "year": 1223
+    },
+    {
+      "id": "1223-summer",
+      "label": "☀️ Summer 1223",
+      "year": 1223
+    },
+    {
+      "id": "1223-fall",
+      "label": "🍂 Fall 1223",
+      "year": 1223
+    },
+    {
+      "id": "1223-winter",
+      "label": "❄️ Winter 1223-24",
+      "year": 1223
+    },
+    {
+      "id": "1224-spring",
+      "label": "🌼 Spring 1224",
+      "year": 1224
+    },
+    {
+      "id": "1224-summer",
+      "label": "☀️ Summer 1224",
+      "year": 1224
+    }
+  ],
+  "members": [
+    {
+      "id": "Dagmar",
+      "name": "Dagmar",
+      "type": "magus",
+      "role": "Magus (Criamon)",
+      "ship": "tide-of-memory",
+      "house": "Criamon"
+    },
+    {
+      "id": "Dustin Page",
+      "name": "Dustin Page",
+      "type": "magus",
+      "role": "Magus (Bonisagus)",
+      "ship": "scholars-wake",
+      "house": "Bonisagus"
+    },
+    {
+      "id": "Éogan Dobhartha",
+      "name": "Éogan Dobhartha",
+      "type": "magus",
+      "role": "Magus (Ex Miscellanea)",
+      "ship": "brineborn",
+      "house": "Ex Miscellanea"
+    },
+    {
+      "id": "Valdemar Bjornsson",
+      "name": "Valdemar Bjornsson",
+      "type": "magus",
+      "role": "Magus (Diedne)",
+      "ship": "storm-dragon",
+      "house": "Diedne"
+    },
+    {
+      "id": "Wilhelm Stienauer",
+      "name": "Wilhelm Stienauer",
+      "type": "magus",
+      "role": "Magus (Bonisagus), guest",
+      "ship": "hound-of-cassel",
+      "house": "Bonisagus), guest"
+    },
+    {
+      "id": "Valerian de Castellane",
+      "name": "Valerian de Castellane",
+      "type": "magus",
+      "role": "Magus (House Guernicus, Quaesitor)",
+      "ship": "adamant",
+      "house": "House Guernicus, Quaesitor"
+    },
+    {
+      "id": "Rán",
+      "name": "Rán",
+      "type": "companion",
+      "role": "Companion",
+      "ship": "storm-dragon",
+      "house": ""
+    },
+    {
+      "id": "Stijntje Kuiper",
+      "name": "Stijntje Kuiper",
+      "type": "companion",
+      "role": "Apprentice",
+      "ship": "scholars-wake",
+      "house": ""
+    },
+    {
+      "id": "Rosie",
+      "name": "Rosie",
+      "type": "companion",
+      "role": "Companion",
+      "ship": "scholars-wake",
+      "house": ""
+    },
+    {
+      "id": "Hilda",
+      "name": "Hilda",
+      "type": "companion",
+      "role": "Companion",
+      "ship": "hound-of-cassel",
+      "house": ""
+    },
+    {
+      "id": "Isaac",
+      "name": "Isaac",
+      "type": "companion",
+      "role": "Companion",
+      "ship": "hound-of-cassel",
+      "house": ""
+    },
+    {
+      "id": "Carl",
+      "name": "Carl",
+      "type": "companion",
+      "role": "Companion",
+      "ship": "hound-of-cassel",
+      "house": ""
+    },
+    {
+      "id": "Dietrich",
+      "name": "Dietrich",
+      "type": "companion",
+      "role": "Companion",
+      "ship": "covenfolk",
+      "house": ""
+    },
+    {
+      "id": "Drest",
+      "name": "Drest",
+      "type": "grog",
+      "role": "Grog",
+      "ship": "brineborn",
+      "house": ""
+    },
+    {
+      "id": "Erc",
+      "name": "Erc",
+      "type": "grog",
+      "role": "Grog",
+      "ship": "brineborn",
+      "house": ""
+    },
+    {
+      "id": "Rembrant de Wees",
+      "name": "Rembrant de Wees",
+      "type": "grog",
+      "role": "Sailing captain",
+      "ship": "brineborn",
+      "house": ""
+    },
+    {
+      "id": "Angus McPeterson",
+      "name": "Angus McPeterson",
+      "type": "grog",
+      "role": "Grog",
+      "ship": "storm-dragon",
+      "house": ""
+    },
+    {
+      "id": "Garrat Coffin",
+      "name": "Garrat Coffin",
+      "type": "companion",
+      "role": "Companion",
+      "ship": "storm-dragon",
+      "house": ""
+    },
+    {
+      "id": "Giden",
+      "name": "Giden",
+      "type": "grog",
+      "role": "Grog",
+      "ship": "storm-dragon",
+      "house": ""
+    },
+    {
+      "id": "Ka'wa'ill",
+      "name": "Ka'wa'ill",
+      "type": "companion",
+      "role": "Companion, merfolk",
+      "ship": "storm-dragon",
+      "house": ""
+    },
+    {
+      "id": "Leofwin",
+      "name": "Leofwin",
+      "type": "grog",
+      "role": "Grog",
+      "ship": "storm-dragon",
+      "house": ""
+    },
+    {
+      "id": "Reinier",
+      "name": "Reinier",
+      "type": "grog",
+      "role": "Crew",
+      "ship": "tide-of-memory",
+      "house": ""
+    },
+    {
+      "id": "Willem 'Sour' Jensen",
+      "name": "Willem 'Sour' Jensen",
+      "type": "grog",
+      "role": "Crew",
+      "ship": "tide-of-memory",
+      "house": ""
+    },
+    {
+      "id": "Isabeau (aka Foxglove)",
+      "name": "Isabeau (aka Foxglove)",
+      "type": "grog",
+      "role": "Crew",
+      "ship": "tide-of-memory",
+      "house": ""
+    },
+    {
+      "id": "Gerard \"The Mule\"",
+      "name": "Gerard \"The Mule\"",
+      "type": "grog",
+      "role": "Grog",
+      "ship": "tide-of-memory",
+      "house": ""
+    },
+    {
+      "id": "Pieter van Dijk",
+      "name": "Pieter van Dijk",
+      "type": "companion",
+      "role": "Surgeon",
+      "ship": "tide-of-memory",
+      "house": ""
+    },
+    {
+      "id": "Heynric the Merchant",
+      "name": "Heynric the Merchant",
+      "type": "companion",
+      "role": "Merchant-agent",
+      "ship": "scholars-wake",
+      "house": ""
+    },
+    {
+      "id": "Udo Ironhand",
+      "name": "Udo Ironhand",
+      "type": "grog",
+      "role": "Crew",
+      "ship": "scholars-wake",
+      "house": ""
+    },
+    {
+      "id": "Runi the Moody",
+      "name": "Runi the Moody",
+      "type": "grog",
+      "role": "Crew",
+      "ship": "scholars-wake",
+      "house": ""
+    },
+    {
+      "id": "Adam Smith",
+      "name": "Adam Smith",
+      "type": "grog",
+      "role": "Grog / companion",
+      "ship": "scholars-wake",
+      "house": ""
+    },
+    {
+      "id": "Henri (failed apprentice)",
+      "name": "Henri (failed apprentice)",
+      "type": "companion",
+      "role": "Companion",
+      "ship": "scholars-wake",
+      "house": ""
+    },
+    {
+      "id": "Leonhardt Ansgar Von Hahn",
+      "name": "Leonhardt Ansgar Von Hahn",
+      "type": "grog",
+      "role": "Crew",
+      "ship": "scholars-wake",
+      "house": ""
+    },
+    {
+      "id": "Father Lachlan",
+      "name": "Father Lachlan",
+      "type": "companion",
+      "role": "Companion, priest",
+      "ship": "brineborn",
+      "house": ""
+    },
+    {
+      "id": "Absalom",
+      "name": "Absalom",
+      "type": "grog",
+      "role": "Sailing captain",
+      "ship": "tide-of-memory",
+      "house": ""
+    },
+    {
+      "id": "Hob",
+      "name": "Hob",
+      "type": "grog",
+      "role": "Grog",
+      "ship": "maelstroms-maw",
+      "house": ""
+    },
+    {
+      "id": "Cy",
+      "name": "Cy",
+      "type": "grog",
+      "role": "Crew",
+      "ship": "maelstroms-maw",
+      "house": ""
+    },
+    {
+      "id": "Galan",
+      "name": "Galan",
+      "type": "grog",
+      "role": "Grog",
+      "ship": "maelstroms-maw",
+      "house": ""
+    },
+    {
+      "id": "Rostan",
+      "name": "Rostan",
+      "type": "grog",
+      "role": "Crew",
+      "ship": "maelstroms-maw",
+      "house": ""
+    }
+  ],
+  "entries": {
+    "Dagmar::1221-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "learnSpell",
+      "xp": 30,
+      "xpType": "Spell: Aegis of the Hearth",
+      "targets": [
+        {
+          "type": "Spell: Aegis of the Hearth",
+          "xp": 30
+        }
+      ],
+      "detail": "learnSpell: Spell: Aegis of the Hearth+30",
+      "covenant": null
+    },
+    "Dagmar::1221-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 11,
+      "xpType": "Terram",
+      "targets": [
+        {
+          "type": "Terram",
+          "xp": 11
+        }
+      ],
+      "detail": "reading: Terram+11",
+      "covenant": null
+    },
+    "Dagmar::1222-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 14,
+      "xpType": "Finesse",
+      "targets": [
+        {
+          "type": "Finesse",
+          "xp": 14
+        }
+      ],
+      "detail": "reading: Finesse+14",
+      "covenant": null
+    },
+    "Dagmar::1223-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "learnSpell",
+      "xp": 10,
+      "xpType": "Spell: Unseen Porter",
+      "targets": [
+        {
+          "type": "Spell: Unseen Porter",
+          "xp": 10
+        }
+      ],
+      "detail": "learnSpell: Spell: Unseen Porter+10",
+      "covenant": null
+    },
+    "Dagmar::1223-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 11,
+      "xpType": "Mentem",
+      "targets": [
+        {
+          "type": "Mentem",
+          "xp": 11
+        }
+      ],
+      "detail": "reading: Mentem+11",
+      "covenant": null
+    },
+    "Dagmar::1223-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "exposure",
+      "xp": 5,
+      "xpType": "Enigmatic Wisdom",
+      "targets": [
+        {
+          "type": "Enigmatic Wisdom",
+          "xp": 5
+        }
+      ],
+      "detail": "exposure: Enigmatic Wisdom+5",
+      "covenant": null
+    },
+    "Dustin Page::1220-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 14,
+      "xpType": "Imaginem",
+      "targets": [
+        {
+          "type": "Imaginem",
+          "xp": 14
+        }
+      ],
+      "detail": "reading: Imaginem+14",
+      "covenant": null
+    },
+    "Dustin Page::1220-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 14,
+      "xpType": "Creo",
+      "targets": [
+        {
+          "type": "Creo",
+          "xp": 14
+        }
+      ],
+      "detail": "reading: Creo+14",
+      "covenant": null
+    },
+    "Dustin Page::1220-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 14,
+      "xpType": "Vim",
+      "targets": [
+        {
+          "type": "Vim",
+          "xp": 14
+        }
+      ],
+      "detail": "reading: Vim+14",
+      "covenant": null
+    },
+    "Dustin Page::1220-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "none",
+      "xp": 0,
+      "xpType": "",
+      "targets": [],
+      "detail": "none",
+      "covenant": null
+    },
+    "Dustin Page::1221-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 14,
+      "xpType": "Animal",
+      "targets": [
+        {
+          "type": "Animal",
+          "xp": 14
+        }
+      ],
+      "detail": "reading: Animal+14",
+      "covenant": null
+    },
+    "Dustin Page::1221-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 14,
+      "xpType": "Corpus",
+      "targets": [
+        {
+          "type": "Corpus",
+          "xp": 14
+        }
+      ],
+      "detail": "reading: Corpus+14",
+      "covenant": null
+    },
+    "Dustin Page::1221-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 14,
+      "xpType": "Herbam",
+      "targets": [
+        {
+          "type": "Herbam",
+          "xp": 14
+        }
+      ],
+      "detail": "reading: Herbam+14",
+      "covenant": null
+    },
+    "Dustin Page::1222-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 15,
+      "xpType": "Mentem",
+      "targets": [
+        {
+          "type": "Mentem",
+          "xp": 15
+        }
+      ],
+      "detail": "reading: Mentem+15",
+      "covenant": null
+    },
+    "Dustin Page::1223-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "adventuring",
+      "xp": 12,
+      "xpType": "Adventuring",
+      "targets": [
+        {
+          "type": "Creo",
+          "xp": 4
+        },
+        {
+          "type": "Terram",
+          "xp": 4
+        },
+        {
+          "type": "Magic Theory",
+          "xp": 4
+        }
+      ],
+      "detail": "adventuring: Creo+4, Terram+4, Magic Theory+4",
+      "covenant": null
+    },
+    "Dustin Page::1223-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "exposure",
+      "xp": 2,
+      "xpType": "Teaching",
+      "targets": [
+        {
+          "type": "Teaching",
+          "xp": 2
+        }
+      ],
+      "detail": "exposure: Teaching+2",
+      "covenant": null
+    },
+    "Dustin Page::1223-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "teaching",
+      "xp": 21,
+      "xpType": "Teaching",
+      "targets": [
+        {
+          "type": "Teaching",
+          "xp": 21
+        }
+      ],
+      "detail": "teaching: Teaching+21",
+      "covenant": null
+    },
+    "Dustin Page::1224-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "exposure",
+      "xp": 2,
+      "xpType": "Teaching",
+      "targets": [
+        {
+          "type": "Teaching",
+          "xp": 2
+        }
+      ],
+      "detail": "exposure: Teaching+2",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1220-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "adventuring",
+      "xp": 5,
+      "xpType": "Auram",
+      "targets": [
+        {
+          "type": "Auram",
+          "xp": 5
+        }
+      ],
+      "detail": "adventuring: Auram+5",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1220-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "teaching",
+      "xp": 19,
+      "xpType": "Dead language (Latin)",
+      "targets": [
+        {
+          "type": "Dead language (Latin)",
+          "xp": 19
+        }
+      ],
+      "detail": "teaching: Dead language (Latin)+19",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1220-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "learnSpell",
+      "xp": 15,
+      "xpType": "Spell: Push of the Gentle Wave",
+      "targets": [
+        {
+          "type": "Spell: Push of the Gentle Wave",
+          "xp": 15
+        }
+      ],
+      "detail": "learnSpell: Spell: Push of the Gentle Wave+15",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1220-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "exposure",
+      "xp": 2,
+      "xpType": "Profession: Sailor",
+      "targets": [
+        {
+          "type": "Profession: Sailor",
+          "xp": 2
+        }
+      ],
+      "detail": "exposure: Profession: Sailor+2",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1221-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "teaching",
+      "xp": 14,
+      "xpType": "Dead language (Latin)",
+      "targets": [
+        {
+          "type": "Dead language (Latin)",
+          "xp": 14
+        }
+      ],
+      "detail": "teaching: Dead language (Latin)+14",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1221-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "minorEnchantment",
+      "xp": 0,
+      "xpType": "Minorenchantment",
+      "targets": [],
+      "detail": "minorEnchantment",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1221-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 10,
+      "xpType": "Intellego",
+      "targets": [
+        {
+          "type": "Intellego",
+          "xp": 10
+        }
+      ],
+      "detail": "reading: Intellego+10",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1221-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 13,
+      "xpType": "Corpus",
+      "targets": [
+        {
+          "type": "Corpus",
+          "xp": 13
+        }
+      ],
+      "detail": "reading: Corpus+13",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1222-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "minorEnchantment",
+      "xp": 0,
+      "xpType": "Minorenchantment",
+      "targets": [],
+      "detail": "minorEnchantment",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1222-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "none",
+      "xp": 0,
+      "xpType": "",
+      "targets": [],
+      "detail": "none",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1222-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 13,
+      "xpType": "Perdo",
+      "targets": [
+        {
+          "type": "Perdo",
+          "xp": 13
+        }
+      ],
+      "detail": "reading: Perdo+13",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1222-winter": {
+      "activity": true,
+      "deferred": true,
+      "act": "inventSpell",
+      "detail": "inventSpell: Spell: Grip of Ice+15",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1223-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "inventSpell",
+      "xp": 15,
+      "xpType": "Spell: Grip of Ice",
+      "targets": [
+        {
+          "type": "Spell: Grip of Ice",
+          "xp": 15
+        }
+      ],
+      "detail": "inventSpell: Spell: Grip of Ice+15",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1223-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "adventuring",
+      "xp": 7,
+      "xpType": "Adventuring",
+      "targets": [
+        {
+          "type": "Aquam",
+          "xp": 5
+        },
+        {
+          "type": "Code of Hermes",
+          "xp": 2
+        }
+      ],
+      "detail": "adventuring: Aquam+5, Code of Hermes+2",
+      "covenant": null
+    },
+    "Éogan Dobhartha::1224-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "none",
+      "xp": 0,
+      "xpType": "",
+      "targets": [],
+      "detail": "none",
+      "covenant": null
+    },
+    "Valdemar Bjornsson::1222-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "reading",
+      "xp": 15,
+      "xpType": "Magic Theory",
+      "targets": [
+        {
+          "type": "Magic Theory",
+          "xp": 15
+        }
+      ],
+      "detail": "reading: Magic Theory+15",
+      "covenant": null
+    },
+    "Valerian de Castellane::1222-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "copying",
+      "xp": 0,
+      "xpType": "Copying",
+      "targets": [],
+      "detail": "copying",
+      "covenant": null
+    },
+    "Stijntje Kuiper::1220-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "teaching",
+      "xp": 20,
+      "xpType": "Language: Latin",
+      "targets": [
+        {
+          "type": "Language: Latin",
+          "xp": 20
+        }
+      ],
+      "detail": "teaching: Language: Latin+20",
+      "covenant": null
+    },
+    "Stijntje Kuiper::1220-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "teaching",
+      "xp": 20,
+      "xpType": "Artes Liberales",
+      "targets": [
+        {
+          "type": "Artes Liberales",
+          "xp": 20
+        }
+      ],
+      "detail": "teaching: Artes Liberales+20",
+      "covenant": null
+    },
+    "Stijntje Kuiper::1220-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "teaching",
+      "xp": 20,
+      "xpType": "Philosophiae",
+      "targets": [
+        {
+          "type": "Philosophiae",
+          "xp": 20
+        }
+      ],
+      "detail": "teaching: Philosophiae+20",
+      "covenant": null
+    },
+    "Stijntje Kuiper::1221-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "none",
+      "xp": 0,
+      "xpType": "",
+      "targets": [],
+      "detail": "none",
+      "covenant": null
+    },
+    "Stijntje Kuiper::1223-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "teaching",
+      "xp": 14,
+      "xpType": "Magic Theory",
+      "targets": [
+        {
+          "type": "Magic Theory",
+          "xp": 14
+        }
+      ],
+      "detail": "teaching: Magic Theory+14",
+      "covenant": null
+    },
+    "Stijntje Kuiper::1223-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "adventuring",
+      "xp": 12,
+      "xpType": "Adventuring",
+      "targets": [
+        {
+          "type": "Code of Hermes",
+          "xp": 5
+        },
+        {
+          "type": "Animal Handling",
+          "xp": 5
+        },
+        {
+          "type": "Magic Theory",
+          "xp": 2
+        }
+      ],
+      "detail": "adventuring: Code of Hermes+5, Animal Handling+5, Magic Theory+2",
+      "covenant": null
+    },
+    "Stijntje Kuiper::1223-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "teaching",
+      "xp": 14,
+      "xpType": "Ignem",
+      "targets": [
+        {
+          "type": "Ignem",
+          "xp": 14
+        }
+      ],
+      "detail": "teaching: Ignem+14",
+      "covenant": null
+    },
+    "Garrat Coffin::1221-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "recovery",
+      "xp": 0,
+      "xpType": "Recovery",
+      "targets": [],
+      "detail": "recovery",
+      "covenant": null
+    },
+    "Garrat Coffin::1221-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "recovery",
+      "xp": 0,
+      "xpType": "Recovery",
+      "targets": [],
+      "detail": "recovery",
+      "covenant": null
+    },
+    "Garrat Coffin::1221-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "recovery",
+      "xp": 0,
+      "xpType": "Recovery",
+      "targets": [],
+      "detail": "recovery",
+      "covenant": null
+    },
+    "Garrat Coffin::1222-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "recovery",
+      "xp": 0,
+      "xpType": "Recovery",
+      "targets": [],
+      "detail": "recovery",
+      "covenant": null
+    },
+    "Garrat Coffin::1223-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "none",
+      "xp": 0,
+      "xpType": "",
+      "targets": [],
+      "detail": "none",
+      "covenant": null
+    },
+    "Ka'wa'ill::1220-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "adventuring",
+      "xp": 0,
+      "xpType": "Adventuring",
+      "targets": [],
+      "detail": "adventuring",
+      "covenant": null
+    },
+    "Ka'wa'ill::1220-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (English)",
+      "targets": [
+        {
+          "type": "Language: (English)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (English)+3",
+      "covenant": null
+    },
+    "Ka'wa'ill::1220-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (Norwegian)",
+      "targets": [
+        {
+          "type": "Language: (Norwegian)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (Norwegian)+3",
+      "covenant": null
+    },
+    "Ka'wa'ill::1220-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (Flemish)",
+      "targets": [
+        {
+          "type": "Language: (Flemish)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (Flemish)+3",
+      "covenant": null
+    },
+    "Ka'wa'ill::1221-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (English)",
+      "targets": [
+        {
+          "type": "Language: (English)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (English)+3",
+      "covenant": null
+    },
+    "Ka'wa'ill::1221-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (English)",
+      "targets": [
+        {
+          "type": "Language: (English)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (English)+3",
+      "covenant": null
+    },
+    "Ka'wa'ill::1221-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (English)",
+      "targets": [
+        {
+          "type": "Language: (English)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (English)+3",
+      "covenant": null
+    },
+    "Ka'wa'ill::1221-winter": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (Flemish)",
+      "targets": [
+        {
+          "type": "Language: (Flemish)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (Flemish)+3",
+      "covenant": null
+    },
+    "Ka'wa'ill::1222-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (Flemish)",
+      "targets": [
+        {
+          "type": "Language: (Flemish)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (Flemish)+3",
+      "covenant": null
+    },
+    "Ka'wa'ill::1222-summer": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (Norwegian)",
+      "targets": [
+        {
+          "type": "Language: (Norwegian)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (Norwegian)+3",
+      "covenant": null
+    },
+    "Ka'wa'ill::1222-fall": {
+      "activity": true,
+      "deferred": false,
+      "act": "practice",
+      "xp": 3,
+      "xpType": "Language: (Norwegian)",
+      "targets": [
+        {
+          "type": "Language: (Norwegian)",
+          "xp": 3
+        }
+      ],
+      "detail": "practice: Language: (Norwegian)+3",
+      "covenant": null
+    },
+    "Adam Smith::1220-spring": {
+      "activity": true,
+      "deferred": false,
+      "act": "none",
+      "xp": 0,
+      "xpType": "",
+      "targets": [],
+      "detail": "none",
+      "covenant": null
+    }
+  }
+}

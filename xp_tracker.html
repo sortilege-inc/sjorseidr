@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XP &amp; Season Tracker — Sjórseiðr</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,500;0,600;1,400;1,500&display=swap');
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --green:#3e6b35;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+  --head:#efe3c6;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;min-height:100vh}
+.wrap{max-width:1280px;margin:0 auto;padding:26px 18px 70px}
+a{color:var(--teal)}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:16px}
+.crumb{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(21px,3.5vw,28px);color:var(--rust-bright);margin:4px 0 2px}
+.subtitle{font-style:italic;color:var(--ink-soft);font-size:13.5px;margin:0;max-width:760px}
+
+.filterbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:14px 0 6px;padding:8px 10px;
+  background:rgba(120,90,40,.08);border:1px solid rgba(120,90,40,.18);border-radius:8px}
+.filterbar .label{font-family:'Cinzel',serif;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);margin-right:2px;flex:none}
+.fbtn{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.03em;cursor:pointer;
+  border:1px solid rgba(120,90,40,.3);background:rgba(244,235,213,.6);color:var(--ink-soft);
+  padding:4px 10px;border-radius:14px;transition:all .12s;display:inline-flex;align-items:center;gap:5px}
+.fbtn:hover{background:rgba(244,235,213,.95);color:var(--ink)}
+.fbtn.on{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:#fff6df;border-color:#7a5318;font-weight:600}
+.fbtn .dot{width:9px;height:9px;border-radius:50%;flex:none}
+.fbtn .n{font-style:italic;font-size:11px;opacity:.75}
+.count{font-size:12.5px;color:var(--ink-soft);font-style:italic;margin:4px 2px 12px}
+
+.scroller{overflow:auto;max-height:74vh;border:1px solid rgba(120,90,40,.4);border-radius:8px;box-shadow:0 2px 8px var(--shadow);background:var(--parch)}
+table.xp{border-collapse:separate;border-spacing:0;font-size:12px}
+table.xp th,table.xp td{border-right:1px solid rgba(120,90,40,.18);border-bottom:1px solid rgba(120,90,40,.18)}
+/* season header */
+table.xp thead th{position:sticky;top:0;z-index:3;background:var(--head);
+  font-family:'Cinzel',serif;font-weight:600;font-size:10.5px;letter-spacing:.02em;color:var(--ink-soft);
+  padding:6px 4px;text-align:center;white-space:nowrap;vertical-align:bottom}
+table.xp thead th .yr{display:block;font-size:12px;color:var(--rust-bright)}
+table.xp thead th .se{display:block;font-size:9.5px;text-transform:uppercase;letter-spacing:.06em}
+/* member column (sticky left) */
+table.xp th.rowhead, table.xp th.corner{position:sticky;left:0;z-index:2;background:var(--head);text-align:left}
+table.xp th.corner{z-index:4;top:0;min-width:186px;padding:6px 10px;font-family:'Cinzel',serif;font-size:11px;color:var(--ink-soft)}
+table.xp th.rowhead{min-width:186px;max-width:186px;padding:5px 10px;line-height:1.15}
+.mname{font-weight:600;font-size:12.5px;color:var(--ink);display:flex;align-items:center;gap:6px}
+.mname .sdot{width:9px;height:9px;border-radius:50%;flex:none;border:1px solid rgba(0,0,0,.2)}
+.msub{font-size:10.5px;color:var(--ink-soft);font-style:italic}
+tr.t-magus th.rowhead{border-left:4px solid var(--rust-bright)}
+tr.t-companion th.rowhead{border-left:4px solid var(--teal)}
+tr.t-grog th.rowhead{border-left:4px solid var(--ink-soft)}
+/* cells */
+table.xp td{width:52px;min-width:52px;height:38px;text-align:center;vertical-align:middle;padding:1px;
+  background:rgba(255,251,242,.35);position:relative}
+table.xp tbody tr:hover td{background:rgba(198,155,63,.10)}
+table.xp td.empty::after{content:"·";color:rgba(120,90,40,.35)}
+table.xp td.ong{background:rgba(120,90,40,.07)}
+table.xp td.ong::after{content:"—";color:rgba(120,90,40,.6)}
+table.xp td.act{background:rgba(62,107,53,.14)}
+table.xp td.act .xp{font-weight:600;font-size:12px;color:var(--ink);line-height:1.05}
+table.xp td.act .xt{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-soft)}
+table.xp td.cov{box-shadow:inset 3px 0 0 var(--gold-bright)}
+table.xp td.cov::before{content:"";position:absolute;top:2px;right:2px;width:6px;height:6px;border-radius:50%;background:var(--gold-bright)}
+tr.yr-alt td{background:rgba(120,90,40,.05)}
+.legend{margin-top:14px;font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.legend b{color:var(--ink);font-style:normal}
+.chip{display:inline-flex;align-items:center;gap:5px}
+.sw{width:15px;height:15px;border-radius:3px;border:1px solid rgba(120,90,40,.4);display:inline-block;position:relative}
+.sw.act{background:rgba(62,107,53,.28)}
+.sw.cov{box-shadow:inset 3px 0 0 var(--gold-bright)}
+.sw.cov::before{content:"";position:absolute;top:1px;right:1px;width:5px;height:5px;border-radius:50%;background:var(--gold-bright)}
+.empty-note{text-align:center;color:var(--ink-soft);font-style:italic;padding:30px}
+footer{margin-top:22px;font-size:12px;color:var(--ink-soft);font-style:italic}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="crumb"><a href="index.html">Sjórseiðr</a> · Covenant · XP &amp; Season Tracker</div>
+    <h1>XP &amp; Season Activity Tracker</h1>
+    <p class="subtitle" id="subtitle">—</p>
+  </header>
+
+  <div class="filterbar" id="typebar"></div>
+  <div class="filterbar" id="shipbar"></div>
+  <div class="count" id="count"></div>
+
+  <div class="scroller"><table class="xp" id="grid"></table></div>
+
+  <div class="legend" id="legend"></div>
+  <footer id="foot"></footer>
+</div>
+
+<script src="nav.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const SHIP_COLOR={
+  'tide-of-memory':'#6d3fa0','brineborn':'#35722f','scholars-wake':'#275f85','storm-dragon':'#b05a1a',
+  'adamant':'#6d6a55','hound-of-cassel':'#8a3324','maelstroms-maw':'#7a7a7a'
+};
+const ART={Creo:'Cr',Intellego:'In',Muto:'Mu',Perdo:'Pe',Rego:'Re',Animal:'An',Aquam:'Aq',Auram:'Au',
+  Corpus:'Co',Herbam:'He',Ignem:'Ig',Imaginem:'Im',Mentem:'Me',Terram:'Te',Vim:'Vi'};
+function abbr(t){ if(!t) return ''; if(ART[t]) return ART[t];
+  if(/^Spell/.test(t)) return 'Spell';
+  const map={'Magic Theory':'MT','Exposure':'Exp','Adventure':'Adv','Adventuring':'Adv','Teaching':'Teach',
+    'Practice':'Prac','Reading':'Read','Learnspell':'Lrn'};
+  if(map[t]) return map[t];
+  return t.length<=4 ? t : t.slice(0,4); }
+let DATA=null;
+let filter={type:'all',ship:'all'};
+
+async function load(){
+  try{ DATA=await (await fetch('./xp_tracker.json',{cache:'no-store'})).json(); }
+  catch(e){ $('#grid').outerHTML=`<div class="empty-note">Could not load xp_tracker.json — serve over http.<br>${esc(e.message)}</div>`; return; }
+  $('#subtitle').textContent=DATA.meta.note||'';
+  $('#foot').innerHTML=`As of <b>${esc(DATA.meta.as_of||'')}</b>. `
+    +`${DATA.members.length} members · ${DATA.seasons.length} seasons. Cells populate from <code>xp_tracker.json</code> — empty for now.`;
+  renderFilters(); render();
+}
+function renderFilters(){
+  const types=[['all','All'],['magus','Magi'],['companion','Companions'],['grog','Grogs']];
+  $('#typebar').innerHTML='<span class="label">Type</span>'+types.map(([v,l])=>{
+    const n=v==='all'?DATA.members.length:DATA.members.filter(m=>m.type===v).length;
+    return `<button class="fbtn ${filter.type===v?'on':''}" data-type="${v}">${l} <span class="n">${n}</span></button>`;}).join('');
+  const ships=Object.keys(DATA.ships).filter(id=>DATA.members.some(m=>m.ship===id));
+  $('#shipbar').innerHTML='<span class="label">Ship</span>'
+    +`<button class="fbtn ${filter.ship==='all'?'on':''}" data-ship="all">All ships <span class="n">${DATA.members.length}</span></button>`
+    +ships.map(id=>{
+      const n=DATA.members.filter(m=>m.ship===id).length;
+      const sm=DATA.ships[id];
+      return `<button class="fbtn ${filter.ship===id?'on':''}" data-ship="${id}"><span class="dot" style="background:${SHIP_COLOR[id]||'#888'}"></span>${esc(sm.name)} <span class="n">${n}</span></button>`;
+    }).join('');
+  document.querySelectorAll('#typebar .fbtn').forEach(b=>b.onclick=()=>{filter.type=b.dataset.type;renderFilters();render();});
+  document.querySelectorAll('#shipbar .fbtn').forEach(b=>b.onclick=()=>{filter.ship=b.dataset.ship;renderFilters();render();});
+}
+function cell(member,season){
+  const e=(DATA.entries||{})[member.id+'::'+season.id];
+  if(!e || !e.activity) return '<td class="empty"></td>';
+  const cov = (member.type==='magus' && e.covenant);
+  const base=`${member.name} — ${season.label}`;
+  const hasXp = e.xp!=null && e.xp!==0 && !e.deferred;
+  if(!hasXp){                                 // activity underway; XP credited in the culmination season
+    const cls=['ong']; if(cov) cls.push('cov');
+    const t=`${base}\n${e.detail||e.act||'activity'}`+(e.deferred?' (XP credited in a later season)':'');
+    return `<td class="${cls.join(' ')}" title="${esc(t)}"></td>`;
+  }
+  const cls=['act']; if(cov) cls.push('cov');
+  const xt = e.xpType?`<span class="xt">${esc(abbr(e.xpType))}</span>`:'';
+  const brk = (e.targets&&e.targets.length) ? e.targets.map(x=>`${x.type} +${x.xp}`).join(', ')
+            : (e.xpType?`${e.xpType} +${e.xp}`:'');
+  const t=`${base}\n${e.act?e.act+': ':''}${brk}`+(member.type==='magus'?`\nCovenant: ${e.covenant?'yes':'—'}`:'');
+  return `<td class="${cls.join(' ')}" title="${esc(t)}"><span class="xp">+${e.xp}</span>${xt}</td>`;
+}
+function render(){
+  const members=DATA.members.filter(m=>
+    (filter.type==='all'||m.type===filter.type) && (filter.ship==='all'||m.ship===filter.ship));
+  $('#count').textContent = `Showing ${members.length} of ${DATA.members.length} members`
+    + (filter.type!=='all'||filter.ship!=='all' ? ` — ${[filter.type!=='all'?filter.type:null, filter.ship!=='all'?(DATA.ships[filter.ship]?.name):null].filter(Boolean).join(' · ')}` : '');
+  const head='<thead><tr><th class="corner">Member</th>'
+    + DATA.seasons.map(s=>{
+        const [em,...rest]=s.label.split(' ');
+        return `<th><span class="se">${esc(em)}</span><span class="yr">${esc(rest.join(' '))}</span></th>`;
+      }).join('') + '</tr></thead>';
+  const rows=members.map(m=>{
+    const color=SHIP_COLOR[m.ship]||'#888';
+    const sub = m.type==='magus' ? esc(m.house||'Magus')
+      : esc((m.role||'').replace(/,.*$/,''));
+    const rh=`<th class="rowhead"><div class="mname"><span class="sdot" style="background:${color}" title="${esc(DATA.ships[m.ship]?.name||'')}"></span>${esc(m.name)}</div><div class="msub">${sub}</div></th>`;
+    return `<tr class="t-${m.type}">${rh}${DATA.seasons.map(s=>cell(m,s)).join('')}</tr>`;
+  }).join('');
+  $('#grid').innerHTML = head + '<tbody>'+ (rows||'') +'</tbody>';
+  if(!members.length) $('#grid').innerHTML = head+'<tbody><tr><td class="empty-note" colspan="'+(DATA.seasons.length+1)+'">No members match this filter.</td></tr></tbody>';
+  $('#legend').innerHTML =
+    `<span class="chip"><span class="sw act"></span> season activity + XP (hover for the breakdown)</span>`
+   +`<span class="chip"><span class="sw act cov"></span> <b>magi:</b> covenant activity</span>`
+   +`<span class="chip"><span class="sw">—</span> activity underway / XP credited a later season</span>`
+   +`<span class="chip"><span class="sw">·</span> not yet recorded</span>`
+   +`<span class="chip" style="color:var(--ink-soft)">Row border &amp; dot = type &amp; ship.</span>`;
+}
+load();
+</script>
+</body>
+</html>

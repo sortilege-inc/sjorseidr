@@ -16,7 +16,7 @@
   // which home section each page belongs to (for the active highlight)
   var PAGE_SECTION = {
     'sjorseidr_chronicle.html': 'chronicle', 'fleet_timeline.html': 'chronicle',
-    'covenant.html': 'covenant', 'ships.html': 'covenant',
+    'covenant.html': 'covenant', 'ships.html': 'covenant', 'xp_tracker.html': 'covenant',
     'normandy_tribunal_1223.html': 'tribunal', 'tribunal_workbook.html': 'tribunal',
     'normandy_tribunal_reference.html': 'tribunal',
     'hiberian.html': 'reference', 'reference.html': 'reference', 'integrating_magic.html': 'reference',
