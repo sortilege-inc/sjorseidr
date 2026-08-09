@@ -492,6 +492,44 @@
    "ship": "maelstroms-maw",
    "house": "",
    "firstYear": 1219
+  },
+  {
+   "id": "Solving Epicurusson",
+   "name": "Solving Epicurusson",
+   "type": "magus",
+   "role": "Magus (Criamon), founder",
+   "ship": "tide-of-memory",
+   "house": "Criamon",
+   "firstYear": 1219
+  },
+  {
+   "id": "Kor Ex Flambeau",
+   "name": "Kor Ex Flambeau",
+   "type": "magus",
+   "role": "Magus (Flambeau)",
+   "ship": "maelstroms-maw",
+   "house": "Flambeau",
+   "firstYear": 1220
+  },
+  {
+   "id": "Nequam of Tytalus",
+   "name": "Nequam of Tytalus",
+   "type": "magus",
+   "role": "Magus (Tytalus)",
+   "ship": "maelstroms-maw",
+   "house": "Tytalus",
+   "firstYear": 1219,
+   "lastYear": 1220
+  },
+  {
+   "id": "Marina",
+   "name": "Marina",
+   "type": "magus",
+   "role": "Magus (Merinita)",
+   "ship": "the-gloaming",
+   "house": "Merinita",
+   "firstYear": 1219,
+   "lastYear": 1219
   }
  ],
  "entries": {
