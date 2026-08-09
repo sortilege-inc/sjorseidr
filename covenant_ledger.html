@@ -143,6 +143,18 @@ function buildNodebar(){
 const N=()=>D.nodes.find(n=>n.id===node);
 const s=()=>N().state;
 const ledgerUpTo=()=>{ const cut=N().cutoff||'9999'; return D.ledger.filter(l=>(l.sort_iso||'')<=cut); };
+// A facet counts as reconstructed for a populated node when it holds data.
+// Early nodes reconstruct ships + magi only; other facets gate until filled in.
+function facetReady(t){
+  const st=s();
+  if(t==='overview'||t==='ledger') return true;
+  if(t==='ships') return (st.ships||[]).length>0;
+  if(t==='inhabitants') return (st.inhabitants||[]).length>0;
+  if(t==='library') return ((st.library.books||[]).length+(st.library.labTexts||[]).length+(st.vis.stock||[]).length+(st.vis.sources||[]).length)>0;
+  if(t==='economics') return st.economics && Object.keys(st.economics).length>0;
+  return true;
+}
+const hasEcon=()=>{const e=s().economics;return e&&Object.keys(e).length>0;};
 
 function render(){
   const n=N(), st=s(), id=D.meta.identity, dash=v=>(v==null?'—':v);
@@ -153,7 +165,7 @@ function render(){
   $('#tabs').innerHTML=TABS.map(([k,l])=>{
     let cnt='';
     if(k==='ledger') cnt=ledgerUpTo().length;
-    else if(n.populated) cnt = k==='ships'?st.ships.length : k==='inhabitants'?st.inhabitants.length
+    else if(n.populated && facetReady(k)) cnt = k==='ships'?st.ships.length : k==='inhabitants'?st.inhabitants.length
       : k==='library'?(st.library.books.length+st.library.labTexts.length) : '';
     return `<div class="tab ${tab===k?'on':''}" data-tab="${k}">${l}${cnt!==''?` <span class="n">${cnt}</span>`:''}</div>`;}).join('');
   document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;render();});
@@ -161,33 +173,38 @@ function render(){
   if(tab!=='ledger' && !n.populated){
     html=`<div class="notpop">The <b>${esc(n.label)}</b> snapshot (${esc(n.sub)}) hasn't been reconstructed yet.<br>`
       +`The actor's early data is unreliable, so these fill in as we sort them out. See <b>Current</b> for the live state, or open the <b>Ledger</b> for changes up to this point.</div>`;
+  } else if(tab!=='ledger' && n.populated && !facetReady(tab)){
+    const tl=(TABS.find(t=>t[0]===tab)||['',tab])[1];
+    html=`<div class="notpop">The <b>${esc(tl)}</b> facet for <b>${esc(n.label)}</b> hasn't been reconstructed yet.<br>`
+      +`Ships and magi are done for this node; the remaining facets fill in as we sort them out. See the <b>Ledger</b> for dated changes, or <b>Current</b> for the live state.</div>`;
   } else html=PANELS[tab]();
   $('#panels').innerHTML=`<div class="panel on">${html}</div>`;
   if(tab==='ledger') wireLedger();
 }
 const PANELS={
-  overview(){ const e=s().economics;
+  overview(){ const e=s().economics; const na='<span style="color:var(--ink-soft);font-style:italic">not yet reconstructed</span>';
+    const libReady=facetReady('library');
     return `<p class="section-sub">The covenant at a glance. Detailed facets are on the tabs above; changes over time are in the Ledger.</p>
      <div class="grid">
       <div class="card"><h2 class="sh" style="margin-top:0">Standing</h2>
         <div class="econ-row"><span>Ships</span><b>${s().ships.length}</b></div>
         <div class="econ-row"><span>Inhabitants</span><b>${s().inhabitants.length}</b></div>
-        <div class="econ-row"><span>Library (books · lab texts)</span><b>${s().library.books.length} · ${s().library.labTexts.length}</b></div>
-        <div class="econ-row"><span>Vis (stocks · sources)</span><b>${s().vis.stock.length} · ${s().vis.sources.length}</b></div>
-        <div class="econ-row"><span>Income · Expenditure</span><b>${e.totalIncome} · ${e.totalExpenditure} £</b></div>
+        <div class="econ-row"><span>Library (books · lab texts)</span><b>${libReady?`${s().library.books.length} · ${s().library.labTexts.length}`:na}</b></div>
+        <div class="econ-row"><span>Vis (stocks · sources)</span><b>${libReady?`${s().vis.stock.length} · ${s().vis.sources.length}`:na}</b></div>
+        <div class="econ-row"><span>Income · Expenditure</span><b>${hasEcon()?`${e.totalIncome} · ${e.totalExpenditure} £`:na}</b></div>
       </div>
       <div class="card"><h2 class="sh" style="margin-top:0">Boons &amp; Hooks</h2>
-        <div><b style="font-family:Cinzel">Virtues</b><br>${s().virtues.map(v=>`<span class="pill">${esc(v)}</span>`).join('')}</div>
-        <div style="margin-top:8px"><b style="font-family:Cinzel">Flaws</b><br>${s().flaws.map(v=>`<span class="pill">${esc(v)}</span>`).join('')}</div>
+        <div><b style="font-family:Cinzel">Virtues</b><br>${s().virtues.length?s().virtues.map(v=>`<span class="pill">${esc(v)}</span>`).join(''):na}</div>
+        <div style="margin-top:8px"><b style="font-family:Cinzel">Flaws</b><br>${s().flaws.length?s().flaws.map(v=>`<span class="pill">${esc(v)}</span>`).join(''):na}</div>
       </div>
       <div class="card"><h2 class="sh" style="margin-top:0">Notable possessions</h2>
-        ${s().possessions.map(p=>`<div>· ${esc(p)}</div>`).join('')}</div>
+        ${s().possessions.length?s().possessions.map(p=>`<div>· ${esc(p)}</div>`).join(''):na}</div>
      </div>`;
   },
   ships(){
     return `<p class="section-sub">Each ship is a covenant asset; most carry a magus's laboratory. The Hound of Cassel is a plain merchantman (no lab).</p>
      <div class="grid">${s().ships.map(sh=>{
-       const inactive=/no longer|sabbatical|route/i.test(sh.status||'');
+       const inactive=/no longer|sabbatical|route|left|depart/i.test(sh.status||'');
        return `<div class="card ship"><span class="st ${inactive?'inactive':''}">${esc(sh.status||'')}</span>
         <h3>${esc(sh.name)}${sh.aka?` <small style="color:var(--ink-soft)">(${esc(sh.aka)})</small>`:''}</h3>
         <div class="meta">${esc(sh.kind||'')} · owner <b>${esc(sh.owner||'—')}</b>${sh.captain?` · captain ${esc(sh.captain)}`:''}</div>

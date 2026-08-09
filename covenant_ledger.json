@@ -18,14 +18,126 @@
    "label": "1219",
    "sub": "Foundation / start",
    "cutoff": "1220-03-20",
-   "populated": false,
+   "populated": true,
+   "reconNote": "Ships and magi reconstructed from the chronicle (verified_events cast lists) and the fleet timeline; other facets not yet reconstructed. Membership follows the 'present at any point in the game-year' rule.",
    "state": {
     "aegis": null,
     "penetration": null,
     "regio": null,
     "economics": {},
-    "ships": [],
-    "inhabitants": [],
+    "ships": [
+     {
+      "id": "tide-of-memory",
+      "name": "Tide of Memory",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Solving Epicurusson",
+      "captain": "",
+      "status": "Active",
+      "lab": "Solving's Laboratory",
+      "note": "The founder's flagship. Dagmar inherits it in 1220 after Solving vanishes into Twilight."
+     },
+     {
+      "id": "brineborn",
+      "name": "The Brineborn",
+      "aka": "",
+      "kind": "Hulk",
+      "owner": "Éogan Dobhartha",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Brineborn's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "scholars-wake",
+      "name": "The Scholar's Wake",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dustin Page",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Scholar's Wake's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "maelstroms-maw",
+      "name": "The Maelstrom's Maw",
+      "aka": "",
+      "kind": "Knarr",
+      "owner": "Nequam of Tytalus",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Maelstrom's Maw Laboratory",
+      "note": "Nequam hands it to Kor Ex Flambeau in Summer 1220."
+     },
+     {
+      "id": "gloaming",
+      "name": "The Gloaming",
+      "aka": "",
+      "kind": "Ketch",
+      "owner": "Marina",
+      "captain": "",
+      "status": "Left before Winter 1219-20",
+      "lab": "The Gloaming's Laboratory",
+      "note": "Departs the covenant with its magus Marina at some point in 1219, before the fleet winters at Boulogne; exact season not recorded. Never rejoins."
+     }
+    ],
+    "inhabitants": [
+     {
+      "name": "Solving Epicurusson",
+      "category": "magi",
+      "job": "Founder (House Criamon)",
+      "points": 5,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "Dagmar",
+      "category": "magi",
+      "job": "House Criamon",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "9ek4ZhrnGmHO5n2b"
+     },
+     {
+      "name": "Dustin Page",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1198,
+      "qty": 1,
+      "actorId": "9b2XTpOahvmgWfO5"
+     },
+     {
+      "name": "Éogan Dobhartha",
+      "category": "magi",
+      "job": "House Ex Miscellanea",
+      "points": 5,
+      "yearBorn": 1199,
+      "qty": 1,
+      "actorId": "UyYejPuGyj67Xq9J"
+     },
+     {
+      "name": "Nequam of Tytalus",
+      "category": "magi",
+      "job": "House Tytalus",
+      "points": 5,
+      "yearBorn": 1196,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "Marina",
+      "category": "magi",
+      "job": "House Merinita",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": null
+     }
+    ],
     "library": {
      "books": [],
      "labTexts": []
@@ -1292,6 +1404,24 @@
    "kind": "add",
    "summary": "Wilhelm Stienauer (Bonisagus, Rhine guest) arrives",
    "detail": "Joins the covenant as a guest magus in Summer 1223 — not present in the 1221 anchor snapshot.",
+   "refs": []
+  },
+  {
+   "season": "1219 (before Winter)",
+   "sort_iso": "1219-12-19",
+   "facet": "ships",
+   "kind": "remove",
+   "summary": "The Gloaming leaves the covenant",
+   "detail": "The Ketch departs during 1219, before the fleet winters at Boulogne (Winter 1219-20); the exact season isn't recorded. It never rejoins the fleet.",
+   "refs": []
+  },
+  {
+   "season": "1219 (before Winter)",
+   "sort_iso": "1219-12-19",
+   "facet": "inhabitants",
+   "kind": "remove",
+   "summary": "Marina (Merinita) departs with the Gloaming",
+   "detail": "The Gloaming's resident magus, Marina of House Merinita, leaves the covenant when the ship does, during 1219 (before Winter 1219-20). Counted in the 1219 roster; absent thereafter.",
    "refs": []
   }
  ]
