@@ -155,6 +155,13 @@ function facetReady(t){
   return true;
 }
 const hasEcon=()=>{const e=s().economics;return e&&Object.keys(e).length>0;};
+const SHIP_NAMES={'tide-of-memory':'Tide of Memory','brineborn':'The Brineborn','scholars-wake':"The Scholar's Wake",
+ 'maelstroms-maw':"The Maelstrom's Maw",'gloaming':'The Gloaming','storm-dragon':'Veðrdreki (Storm Dragon)',
+ 'adamant':'Adamant','hound-of-cassel':'Hound of Cassel'};
+const ABSENT=['twilight','sabbatical'];
+// Inhabitants tab badge: contributing headcount for by-ship nodes, else raw total.
+function inhabCount(){const st=s();const useShip=st.inhabitants.some(i=>i.ship||i.standing);
+  return useShip ? st.inhabitants.filter(i=>!ABSENT.includes(i.standing)).length : st.inhabitants.length;}
 
 function render(){
   const n=N(), st=s(), id=D.meta.identity, dash=v=>(v==null?'—':v);
@@ -165,7 +172,7 @@ function render(){
   $('#tabs').innerHTML=TABS.map(([k,l])=>{
     let cnt='';
     if(k==='ledger') cnt=ledgerUpTo().length;
-    else if(n.populated && facetReady(k)) cnt = k==='ships'?st.ships.length : k==='inhabitants'?st.inhabitants.length
+    else if(n.populated && facetReady(k)) cnt = k==='ships'?st.ships.length : k==='inhabitants'?inhabCount()
       : k==='library'?(st.library.books.length+st.library.labTexts.length) : '';
     return `<div class="tab ${tab===k?'on':''}" data-tab="${k}">${l}${cnt!==''?` <span class="n">${cnt}</span>`:''}</div>`;}).join('');
   document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;render();});
@@ -204,21 +211,50 @@ const PANELS={
   ships(){
     return `<p class="section-sub">Each ship is a covenant asset; most carry a magus's laboratory. The Hound of Cassel is a plain merchantman (no lab).</p>
      <div class="grid">${s().ships.map(sh=>{
-       const inactive=/no longer|sabbatical|route|left|depart/i.test(sh.status||'');
+       const inactive=/no longer|sabbatical|route|left|depart|laid|prize/i.test(sh.status||'');
        return `<div class="card ship"><span class="st ${inactive?'inactive':''}">${esc(sh.status||'')}</span>
         <h3>${esc(sh.name)}${sh.aka?` <small style="color:var(--ink-soft)">(${esc(sh.aka)})</small>`:''}</h3>
         <div class="meta">${esc(sh.kind||'')} · owner <b>${esc(sh.owner||'—')}</b>${sh.captain?` · captain ${esc(sh.captain)}`:''}</div>
         <div class="lab ${sh.lab?'':'none'}">⚗ ${sh.lab?esc(sh.lab):'no laboratory'}</div></div>`;}).join('')}</div>`;
   },
   inhabitants(){
-    const cats={}; s().inhabitants.forEach(i=>(cats[i.category]=cats[i.category]||[]).push(i));
-    const order=['magi','companions','specialists','craftsmen','turbula','servants'];
-    return `<p class="section-sub">The covenant's people as recorded in the actor (${s().inhabitants.length} total). Counts include grouped servants/turbula.</p>`
-      + order.filter(c=>cats[c]).map(c=>{
-        const list=cats[c];
-        return `<div class="catblock"><h3>${esc(c)} <span class="n">(${list.reduce((a,i)=>a+(i.qty||1),0)})</span></h3>
-          <div class="cols">${list.map(i=>`<div class="row">${esc(i.name)}${i.qty>1?` ×${i.qty}`:''}${i.job?` <small>— ${esc(i.job)}</small>`:''}${i.yearBorn?` <small>(b. ${esc(i.yearBorn)})</small>`:''}</div>`).join('')}</div></div>`;
-      }).join('');
+    const st=s();
+    const STAND={apprentice:['apprentice','#5b3a8a'],guest:['guest','#2c6b66'],
+      twilight:['in Twilight','#8a3324'],sabbatical:['on sabbatical','#8a3324']};
+    const tagOf=i=>(i.standing&&STAND[i.standing])
+      ? ` <span style="font-family:Cinzel;font-size:9.5px;letter-spacing:.03em;padding:1px 6px;border-radius:8px;background:${STAND[i.standing][1]}22;color:${STAND[i.standing][1]};border:1px solid ${STAND[i.standing][1]}66">${STAND[i.standing][0]}</span>` : '';
+    const row=i=>`<div class="row">${esc(i.name)}${i.qty>1?` ×${i.qty}`:''}${i.job?` <small>— ${esc(i.job)}</small>`:''}${i.yearBorn?` <small>(b. ${esc(i.yearBorn)})</small>`:''}${tagOf(i)}</div>`;
+    const useShip = st.inhabitants.some(i=>i.ship||i.standing);
+    if(!useShip){
+      const cats={}; st.inhabitants.forEach(i=>(cats[i.category]=cats[i.category]||[]).push(i));
+      const order=['magi','companions','specialists','craftsmen','turbula','servants'];
+      return `<p class="section-sub">The covenant's people as recorded in the actor (${st.inhabitants.length} total). Counts include grouped servants/turbula.</p>`
+        + order.filter(c=>cats[c]).map(c=>{const list=cats[c];
+          return `<div class="catblock"><h3>${esc(c)} <span class="n">(${list.reduce((a,i)=>a+(i.qty||1),0)})</span></h3>
+            <div class="cols">${list.map(row).join('')}</div></div>`;}).join('');
+    }
+    const shipName=id=>{const sh=(st.ships||[]).find(x=>x.id===id);return sh?sh.name:(SHIP_NAMES[id]||id);};
+    const shipMeta=id=>{const sh=(st.ships||[]).find(x=>x.id===id);return sh?`${esc(sh.kind||'')}${sh.owner?`${sh.kind?' · ':''}${esc(sh.owner)}`:''}`:'';};
+    const present=st.inhabitants.filter(i=>!ABSENT.includes(i.standing));
+    const absent=st.inhabitants.filter(i=>ABSENT.includes(i.standing));
+    const groups={}; present.forEach(i=>{const k=i.ship||'__none__';(groups[k]=groups[k]||[]).push(i);});
+    const shipOrder=(st.ships||[]).map(sh=>sh.id).filter(k=>groups[k]);
+    const otherKeys=Object.keys(groups).filter(k=>k!=='__none__'&&!shipOrder.includes(k));
+    const keys=[...shipOrder,...otherKeys,...(groups['__none__']?['__none__']:[])];
+    let html=`<p class="section-sub">The covenant's people, grouped by ship — ${present.length} contributing member${present.length===1?'':'s'}${absent.length?`, plus ${absent.length} in the covenant but not contributing`:''}.</p>`;
+    html+=keys.map(k=>{
+      const list=groups[k]; const title=k==='__none__'?'Covenant household':shipName(k);
+      const meta=k==='__none__'?'':shipMeta(k); const n=list.reduce((a,i)=>a+(i.qty||1),0);
+      return `<div class="catblock"><h3 style="text-transform:none">${k==='__none__'?'⚑ ':'⛵ '}${esc(title)} <span class="n">(${n})</span>${meta?` <span class="n">— ${meta}</span>`:''}</h3>
+        <div class="cols">${list.map(row).join('')}</div></div>`;
+    }).join('');
+    if(absent.length){
+      html+=`<div class="catblock" style="margin-top:14px;border-top:1px dashed rgba(120,90,40,.4);padding-top:10px">
+        <h3 style="color:var(--ink-soft);text-transform:none">⧗ In the covenant, not contributing <span class="n">(${absent.length})</span></h3>
+        <p class="section-sub" style="margin:0 0 6px">Still of the covenant, but absent — no upkeep, no vote, no seasonal service.</p>
+        <div class="cols">${absent.map(row).join('')}</div></div>`;
+    }
+    return html;
   },
   library(){
     const L=s().library, V=s().vis;

@@ -90,7 +90,9 @@
       "points": 5,
       "yearBorn": null,
       "qty": 1,
-      "actorId": null
+      "actorId": null,
+      "ship": "tide-of-memory",
+      "standing": "active"
      },
      {
       "name": "Dagmar",
@@ -99,7 +101,9 @@
       "points": 5,
       "yearBorn": 1195,
       "qty": 1,
-      "actorId": "9ek4ZhrnGmHO5n2b"
+      "actorId": "9ek4ZhrnGmHO5n2b",
+      "ship": "tide-of-memory",
+      "standing": "active"
      },
      {
       "name": "Dustin Page",
@@ -108,7 +112,9 @@
       "points": 5,
       "yearBorn": 1198,
       "qty": 1,
-      "actorId": "9b2XTpOahvmgWfO5"
+      "actorId": "9b2XTpOahvmgWfO5",
+      "ship": "scholars-wake",
+      "standing": "active"
      },
      {
       "name": "Éogan Dobhartha",
@@ -117,7 +123,9 @@
       "points": 5,
       "yearBorn": 1199,
       "qty": 1,
-      "actorId": "UyYejPuGyj67Xq9J"
+      "actorId": "UyYejPuGyj67Xq9J",
+      "ship": "brineborn",
+      "standing": "active"
      },
      {
       "name": "Nequam of Tytalus",
@@ -126,7 +134,9 @@
       "points": 5,
       "yearBorn": 1196,
       "qty": 1,
-      "actorId": null
+      "actorId": null,
+      "ship": "maelstroms-maw",
+      "standing": "active"
      },
      {
       "name": "Marina",
@@ -135,7 +145,9 @@
       "points": 5,
       "yearBorn": 1195,
       "qty": 1,
-      "actorId": null
+      "actorId": null,
+      "ship": "gloaming",
+      "standing": "active"
      }
     ],
     "library": {
@@ -156,14 +168,159 @@
    "label": "1220",
    "sub": "end of Winter 1220-21",
    "cutoff": "1221-03-20",
-   "populated": false,
+   "populated": true,
    "state": {
     "aegis": null,
     "penetration": null,
     "regio": null,
     "economics": {},
-    "ships": [],
-    "inhabitants": [],
+    "ships": [
+     {
+      "id": "tide-of-memory",
+      "name": "Tide of Memory",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dagmar (inherited from Solving)",
+      "captain": "",
+      "status": "Active",
+      "lab": "Solving's Laboratory",
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+     },
+     {
+      "id": "brineborn",
+      "name": "The Brineborn",
+      "aka": "",
+      "kind": "Hulk",
+      "owner": "Éogan Dobhartha",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Brineborn's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "scholars-wake",
+      "name": "The Scholar's Wake",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dustin Page",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Scholar's Wake's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "maelstroms-maw",
+      "name": "The Maelstrom's Maw",
+      "aka": "",
+      "kind": "Knarr",
+      "owner": "Kor Ex Flambeau",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Maelstrom's Maw Laboratory",
+      "note": "Handed from Nequam to Kor in Summer 1220."
+     },
+     {
+      "id": "storm-dragon",
+      "name": "Veðrdreki",
+      "aka": "Storm Dragon",
+      "kind": "Longship (drakar)",
+      "owner": "Valdemar Bjornsson",
+      "captain": "",
+      "status": "Active",
+      "lab": "",
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+     }
+    ],
+    "inhabitants": [
+     {
+      "name": "Solving Epicurusson",
+      "category": "magi",
+      "job": "Founder (House Criamon)",
+      "points": 5,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": null,
+      "standing": "twilight"
+     },
+     {
+      "name": "Dagmar",
+      "category": "magi",
+      "job": "House Criamon",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "9ek4ZhrnGmHO5n2b",
+      "ship": "tide-of-memory",
+      "standing": "active"
+     },
+     {
+      "name": "Dustin Page",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1198,
+      "qty": 1,
+      "actorId": "9b2XTpOahvmgWfO5",
+      "ship": "scholars-wake",
+      "standing": "active"
+     },
+     {
+      "name": "Éogan Dobhartha",
+      "category": "magi",
+      "job": "House Ex Miscellanea",
+      "points": 5,
+      "yearBorn": 1199,
+      "qty": 1,
+      "actorId": "UyYejPuGyj67Xq9J",
+      "ship": "brineborn",
+      "standing": "active"
+     },
+     {
+      "name": "Nequam of Tytalus",
+      "category": "magi",
+      "job": "House Tytalus",
+      "points": 5,
+      "yearBorn": 1196,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw",
+      "standing": "active"
+     },
+     {
+      "name": "Kor Ex Flambeau",
+      "category": "magi",
+      "job": "Magus House Flambeau",
+      "points": 5,
+      "yearBorn": 1191,
+      "qty": 1,
+      "actorId": "G1QY9Em2kcgQkv0u",
+      "ship": "maelstroms-maw",
+      "standing": "active"
+     },
+     {
+      "name": "Valdemar Bjornsson",
+      "category": "magi",
+      "job": "House Diedne",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "hcg6lMEwPcmXuxzo",
+      "ship": "storm-dragon",
+      "standing": "active"
+     },
+     {
+      "name": "Stijntje Kuiper",
+      "category": "magi",
+      "job": "Apprentice (to Dustin Page)",
+      "points": 5,
+      "yearBorn": 1211,
+      "qty": 1,
+      "actorId": "y7SZJxNgAR0HPaxL",
+      "ship": "scholars-wake",
+      "standing": "apprentice"
+     }
+    ],
     "library": {
      "books": [],
      "labTexts": []
@@ -175,7 +332,8 @@
     "possessions": [],
     "virtues": [],
     "flaws": []
-   }
+   },
+   "reconNote": "Ships and magi reconstructed from the chronicle (verified_events cast lists) and the fleet timeline; other facets not yet reconstructed. Members who are in the covenant but not contributing — in Twilight (Solving) or on sabbatical (Kor) — are listed separately and excluded from working strength. Membership follows the 'present at any point in the game-year' rule."
   },
   {
    "id": "1221",
@@ -1241,14 +1399,181 @@
    "label": "1222",
    "sub": "end of Winter 1222-23",
    "cutoff": "1223-03-20",
-   "populated": false,
+   "populated": true,
    "state": {
     "aegis": null,
     "penetration": null,
     "regio": null,
     "economics": {},
-    "ships": [],
-    "inhabitants": [],
+    "ships": [
+     {
+      "id": "tide-of-memory",
+      "name": "Tide of Memory",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dagmar (inherited from Solving)",
+      "captain": "",
+      "status": "Active",
+      "lab": "Solving's Laboratory",
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+     },
+     {
+      "id": "brineborn",
+      "name": "The Brineborn",
+      "aka": "",
+      "kind": "Hulk",
+      "owner": "Éogan Dobhartha",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Brineborn's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "scholars-wake",
+      "name": "The Scholar's Wake",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dustin Page",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Scholar's Wake's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "storm-dragon",
+      "name": "Veðrdreki",
+      "aka": "Storm Dragon",
+      "kind": "Longship (drakar)",
+      "owner": "Valdemar Bjornsson",
+      "captain": "",
+      "status": "Active",
+      "lab": "",
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+     },
+     {
+      "id": "adamant",
+      "name": "Adamant",
+      "aka": "",
+      "kind": "",
+      "owner": "Valerian de Castellane",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Adamant's Laboratory",
+      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival."
+     },
+     {
+      "id": "maelstroms-maw",
+      "name": "The Maelstrom's Maw",
+      "aka": "",
+      "kind": "Knarr",
+      "owner": "Kor Ex Flambeau",
+      "captain": "",
+      "status": "On sabbatical",
+      "lab": "The Maelstrom's Maw Laboratory",
+      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it."
+     },
+     {
+      "id": "hound-of-cassel",
+      "name": "Hound of Cassel",
+      "aka": "formerly Scarem Montem's",
+      "kind": "Cog",
+      "owner": "— (captured prize)",
+      "captain": "",
+      "status": "Laid-up prize (Isle of Man)",
+      "lab": "",
+      "note": "Captured from Scarem Montem (Summer 1221); berthed at the Isle of Man. No lab."
+     }
+    ],
+    "inhabitants": [
+     {
+      "name": "Solving Epicurusson",
+      "category": "magi",
+      "job": "Founder (House Criamon)",
+      "points": 5,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": null,
+      "standing": "twilight"
+     },
+     {
+      "name": "Dagmar",
+      "category": "magi",
+      "job": "House Criamon",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "9ek4ZhrnGmHO5n2b",
+      "ship": "tide-of-memory",
+      "standing": "active"
+     },
+     {
+      "name": "Dustin Page",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1198,
+      "qty": 1,
+      "actorId": "9b2XTpOahvmgWfO5",
+      "ship": "scholars-wake",
+      "standing": "active"
+     },
+     {
+      "name": "Éogan Dobhartha",
+      "category": "magi",
+      "job": "House Ex Miscellanea",
+      "points": 5,
+      "yearBorn": 1199,
+      "qty": 1,
+      "actorId": "UyYejPuGyj67Xq9J",
+      "ship": "brineborn",
+      "standing": "active"
+     },
+     {
+      "name": "Valdemar Bjornsson",
+      "category": "magi",
+      "job": "House Diedne",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "hcg6lMEwPcmXuxzo",
+      "ship": "storm-dragon",
+      "standing": "active"
+     },
+     {
+      "name": "Valerian de Castellane",
+      "category": "magi",
+      "job": "House Guernicus",
+      "points": 5,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": "K52pPLw2Krc49aVy",
+      "ship": "adamant",
+      "standing": "active"
+     },
+     {
+      "name": "Kor Ex Flambeau",
+      "category": "magi",
+      "job": "Magus House Flambeau",
+      "points": 5,
+      "yearBorn": 1191,
+      "qty": 1,
+      "actorId": "G1QY9Em2kcgQkv0u",
+      "ship": "maelstroms-maw",
+      "standing": "sabbatical"
+     },
+     {
+      "name": "Stijntje Kuiper",
+      "category": "magi",
+      "job": "Apprentice (to Dustin Page)",
+      "points": 5,
+      "yearBorn": 1211,
+      "qty": 1,
+      "actorId": "y7SZJxNgAR0HPaxL",
+      "ship": "scholars-wake",
+      "standing": "apprentice"
+     }
+    ],
     "library": {
      "books": [],
      "labTexts": []
@@ -1260,21 +1585,200 @@
     "possessions": [],
     "virtues": [],
     "flaws": []
-   }
+   },
+   "reconNote": "Ships and magi reconstructed from the chronicle (verified_events cast lists) and the fleet timeline; other facets not yet reconstructed. Members who are in the covenant but not contributing — in Twilight (Solving) or on sabbatical (Kor) — are listed separately and excluded from working strength. Membership follows the 'present at any point in the game-year' rule."
   },
   {
    "id": "1223",
    "label": "1223",
    "sub": "end of Winter 1223-24",
    "cutoff": "1224-03-20",
-   "populated": false,
+   "populated": true,
    "state": {
     "aegis": null,
     "penetration": null,
     "regio": null,
     "economics": {},
-    "ships": [],
-    "inhabitants": [],
+    "ships": [
+     {
+      "id": "tide-of-memory",
+      "name": "Tide of Memory",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dagmar (inherited from Solving)",
+      "captain": "",
+      "status": "Active",
+      "lab": "Solving's Laboratory",
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+     },
+     {
+      "id": "brineborn",
+      "name": "The Brineborn",
+      "aka": "",
+      "kind": "Hulk",
+      "owner": "Éogan Dobhartha",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Brineborn's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "scholars-wake",
+      "name": "The Scholar's Wake",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dustin Page",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Scholar's Wake's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "storm-dragon",
+      "name": "Veðrdreki",
+      "aka": "Storm Dragon",
+      "kind": "Longship (drakar)",
+      "owner": "Valdemar Bjornsson",
+      "captain": "",
+      "status": "Active",
+      "lab": "",
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+     },
+     {
+      "id": "adamant",
+      "name": "Adamant",
+      "aka": "",
+      "kind": "",
+      "owner": "Valerian de Castellane",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Adamant's Laboratory",
+      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival."
+     },
+     {
+      "id": "maelstroms-maw",
+      "name": "The Maelstrom's Maw",
+      "aka": "",
+      "kind": "Knarr",
+      "owner": "Kor Ex Flambeau",
+      "captain": "",
+      "status": "On sabbatical",
+      "lab": "The Maelstrom's Maw Laboratory",
+      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it."
+     },
+     {
+      "id": "hound-of-cassel",
+      "name": "Hound of Cassel",
+      "aka": "formerly Scarem Montem's",
+      "kind": "Cog",
+      "owner": "— (captured prize)",
+      "captain": "",
+      "status": "Laid-up prize (Isle of Man)",
+      "lab": "",
+      "note": "Captured from Scarem Montem (Summer 1221); berthed at the Isle of Man. No lab."
+     }
+    ],
+    "inhabitants": [
+     {
+      "name": "Solving Epicurusson",
+      "category": "magi",
+      "job": "Founder (House Criamon)",
+      "points": 5,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": null,
+      "standing": "twilight"
+     },
+     {
+      "name": "Dagmar",
+      "category": "magi",
+      "job": "House Criamon",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "9ek4ZhrnGmHO5n2b",
+      "ship": "tide-of-memory",
+      "standing": "active"
+     },
+     {
+      "name": "Dustin Page",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1198,
+      "qty": 1,
+      "actorId": "9b2XTpOahvmgWfO5",
+      "ship": "scholars-wake",
+      "standing": "active"
+     },
+     {
+      "name": "Éogan Dobhartha",
+      "category": "magi",
+      "job": "House Ex Miscellanea",
+      "points": 5,
+      "yearBorn": 1199,
+      "qty": 1,
+      "actorId": "UyYejPuGyj67Xq9J",
+      "ship": "brineborn",
+      "standing": "active"
+     },
+     {
+      "name": "Valdemar Bjornsson",
+      "category": "magi",
+      "job": "House Diedne",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "hcg6lMEwPcmXuxzo",
+      "ship": "storm-dragon",
+      "standing": "active"
+     },
+     {
+      "name": "Valerian de Castellane",
+      "category": "magi",
+      "job": "House Guernicus",
+      "points": 5,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": "K52pPLw2Krc49aVy",
+      "ship": "adamant",
+      "standing": "active"
+     },
+     {
+      "name": "Wilhelm Stienauer",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn",
+      "standing": "guest"
+     },
+     {
+      "name": "Kor Ex Flambeau",
+      "category": "magi",
+      "job": "Magus House Flambeau",
+      "points": 5,
+      "yearBorn": 1191,
+      "qty": 1,
+      "actorId": "G1QY9Em2kcgQkv0u",
+      "ship": "maelstroms-maw",
+      "standing": "sabbatical"
+     },
+     {
+      "name": "Stijntje Kuiper",
+      "category": "magi",
+      "job": "Apprentice (to Dustin Page)",
+      "points": 5,
+      "yearBorn": 1211,
+      "qty": 1,
+      "actorId": "y7SZJxNgAR0HPaxL",
+      "ship": "scholars-wake",
+      "standing": "apprentice"
+     }
+    ],
     "library": {
      "books": [],
      "labTexts": []
@@ -1286,21 +1790,200 @@
     "possessions": [],
     "virtues": [],
     "flaws": []
-   }
+   },
+   "reconNote": "Ships and magi reconstructed from the chronicle (verified_events cast lists) and the fleet timeline; other facets not yet reconstructed. Members who are in the covenant but not contributing — in Twilight (Solving) or on sabbatical (Kor) — are listed separately and excluded from working strength. Membership follows the 'present at any point in the game-year' rule."
   },
   {
    "id": "1224",
    "label": "1224",
    "sub": "end of Winter 1224-25",
    "cutoff": "1225-03-20",
-   "populated": false,
+   "populated": true,
    "state": {
     "aegis": null,
     "penetration": null,
     "regio": null,
     "economics": {},
-    "ships": [],
-    "inhabitants": [],
+    "ships": [
+     {
+      "id": "tide-of-memory",
+      "name": "Tide of Memory",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dagmar (inherited from Solving)",
+      "captain": "",
+      "status": "Active",
+      "lab": "Solving's Laboratory",
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+     },
+     {
+      "id": "brineborn",
+      "name": "The Brineborn",
+      "aka": "",
+      "kind": "Hulk",
+      "owner": "Éogan Dobhartha",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Brineborn's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "scholars-wake",
+      "name": "The Scholar's Wake",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dustin Page",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Scholar's Wake's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "storm-dragon",
+      "name": "Veðrdreki",
+      "aka": "Storm Dragon",
+      "kind": "Longship (drakar)",
+      "owner": "Valdemar Bjornsson",
+      "captain": "",
+      "status": "Active",
+      "lab": "",
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+     },
+     {
+      "id": "adamant",
+      "name": "Adamant",
+      "aka": "",
+      "kind": "",
+      "owner": "Valerian de Castellane",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Adamant's Laboratory",
+      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival."
+     },
+     {
+      "id": "maelstroms-maw",
+      "name": "The Maelstrom's Maw",
+      "aka": "",
+      "kind": "Knarr",
+      "owner": "Kor Ex Flambeau",
+      "captain": "",
+      "status": "On sabbatical",
+      "lab": "The Maelstrom's Maw Laboratory",
+      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it."
+     },
+     {
+      "id": "hound-of-cassel",
+      "name": "Hound of Cassel",
+      "aka": "formerly Scarem Montem's",
+      "kind": "Cog",
+      "owner": "Wilhelm Stienauer",
+      "captain": "",
+      "status": "En route to Scarem Montem",
+      "lab": "",
+      "note": "Now Wilhelm's; sailing back to Scarem Montem as the trade chip for his stolen thesis. No lab."
+     }
+    ],
+    "inhabitants": [
+     {
+      "name": "Solving Epicurusson",
+      "category": "magi",
+      "job": "Founder (House Criamon)",
+      "points": 5,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": null,
+      "standing": "twilight"
+     },
+     {
+      "name": "Dagmar",
+      "category": "magi",
+      "job": "House Criamon",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "9ek4ZhrnGmHO5n2b",
+      "ship": "tide-of-memory",
+      "standing": "active"
+     },
+     {
+      "name": "Dustin Page",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1198,
+      "qty": 1,
+      "actorId": "9b2XTpOahvmgWfO5",
+      "ship": "scholars-wake",
+      "standing": "active"
+     },
+     {
+      "name": "Éogan Dobhartha",
+      "category": "magi",
+      "job": "House Ex Miscellanea",
+      "points": 5,
+      "yearBorn": 1199,
+      "qty": 1,
+      "actorId": "UyYejPuGyj67Xq9J",
+      "ship": "brineborn",
+      "standing": "active"
+     },
+     {
+      "name": "Valdemar Bjornsson",
+      "category": "magi",
+      "job": "House Diedne",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "hcg6lMEwPcmXuxzo",
+      "ship": "storm-dragon",
+      "standing": "active"
+     },
+     {
+      "name": "Valerian de Castellane",
+      "category": "magi",
+      "job": "House Guernicus",
+      "points": 5,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": "K52pPLw2Krc49aVy",
+      "ship": "adamant",
+      "standing": "active"
+     },
+     {
+      "name": "Wilhelm Stienauer",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel",
+      "standing": "guest"
+     },
+     {
+      "name": "Kor Ex Flambeau",
+      "category": "magi",
+      "job": "Magus House Flambeau",
+      "points": 5,
+      "yearBorn": 1191,
+      "qty": 1,
+      "actorId": "G1QY9Em2kcgQkv0u",
+      "ship": "maelstroms-maw",
+      "standing": "sabbatical"
+     },
+     {
+      "name": "Stijntje Kuiper",
+      "category": "magi",
+      "job": "Apprentice (to Dustin Page)",
+      "points": 5,
+      "yearBorn": 1211,
+      "qty": 1,
+      "actorId": "y7SZJxNgAR0HPaxL",
+      "ship": "scholars-wake",
+      "standing": "apprentice"
+     }
+    ],
     "library": {
      "books": [],
      "labTexts": []
@@ -1312,21 +1995,200 @@
     "possessions": [],
     "virtues": [],
     "flaws": []
-   }
+   },
+   "reconNote": "Ships and magi reconstructed from the chronicle (verified_events cast lists) and the fleet timeline; other facets not yet reconstructed. Members who are in the covenant but not contributing — in Twilight (Solving) or on sabbatical (Kor) — are listed separately and excluded from working strength. Membership follows the 'present at any point in the game-year' rule."
   },
   {
    "id": "current",
    "label": "Current",
-   "sub": "Summer 1224 (to reconstruct)",
+   "sub": "Summer 1224 (live)",
    "cutoff": "9999",
-   "populated": false,
+   "populated": true,
    "state": {
     "aegis": null,
     "penetration": null,
     "regio": null,
     "economics": {},
-    "ships": [],
-    "inhabitants": [],
+    "ships": [
+     {
+      "id": "tide-of-memory",
+      "name": "Tide of Memory",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dagmar (inherited from Solving)",
+      "captain": "",
+      "status": "Active",
+      "lab": "Solving's Laboratory",
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+     },
+     {
+      "id": "brineborn",
+      "name": "The Brineborn",
+      "aka": "",
+      "kind": "Hulk",
+      "owner": "Éogan Dobhartha",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Brineborn's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "scholars-wake",
+      "name": "The Scholar's Wake",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dustin Page",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Scholar's Wake's Laboratory",
+      "note": ""
+     },
+     {
+      "id": "storm-dragon",
+      "name": "Veðrdreki",
+      "aka": "Storm Dragon",
+      "kind": "Longship (drakar)",
+      "owner": "Valdemar Bjornsson",
+      "captain": "",
+      "status": "Active",
+      "lab": "",
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+     },
+     {
+      "id": "adamant",
+      "name": "Adamant",
+      "aka": "",
+      "kind": "",
+      "owner": "Valerian de Castellane",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Adamant's Laboratory",
+      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival."
+     },
+     {
+      "id": "maelstroms-maw",
+      "name": "The Maelstrom's Maw",
+      "aka": "",
+      "kind": "Knarr",
+      "owner": "Kor Ex Flambeau",
+      "captain": "",
+      "status": "On sabbatical",
+      "lab": "The Maelstrom's Maw Laboratory",
+      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it."
+     },
+     {
+      "id": "hound-of-cassel",
+      "name": "Hound of Cassel",
+      "aka": "formerly Scarem Montem's",
+      "kind": "Cog",
+      "owner": "Wilhelm Stienauer",
+      "captain": "",
+      "status": "En route to Scarem Montem",
+      "lab": "",
+      "note": "Now Wilhelm's; sailing back to Scarem Montem as the trade chip for his stolen thesis. No lab."
+     }
+    ],
+    "inhabitants": [
+     {
+      "name": "Solving Epicurusson",
+      "category": "magi",
+      "job": "Founder (House Criamon)",
+      "points": 5,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": null,
+      "standing": "twilight"
+     },
+     {
+      "name": "Dagmar",
+      "category": "magi",
+      "job": "House Criamon",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "9ek4ZhrnGmHO5n2b",
+      "ship": "tide-of-memory",
+      "standing": "active"
+     },
+     {
+      "name": "Dustin Page",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1198,
+      "qty": 1,
+      "actorId": "9b2XTpOahvmgWfO5",
+      "ship": "scholars-wake",
+      "standing": "active"
+     },
+     {
+      "name": "Éogan Dobhartha",
+      "category": "magi",
+      "job": "House Ex Miscellanea",
+      "points": 5,
+      "yearBorn": 1199,
+      "qty": 1,
+      "actorId": "UyYejPuGyj67Xq9J",
+      "ship": "brineborn",
+      "standing": "active"
+     },
+     {
+      "name": "Valdemar Bjornsson",
+      "category": "magi",
+      "job": "House Diedne",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "hcg6lMEwPcmXuxzo",
+      "ship": "storm-dragon",
+      "standing": "active"
+     },
+     {
+      "name": "Valerian de Castellane",
+      "category": "magi",
+      "job": "House Guernicus",
+      "points": 5,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": "K52pPLw2Krc49aVy",
+      "ship": "adamant",
+      "standing": "active"
+     },
+     {
+      "name": "Wilhelm Stienauer",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel",
+      "standing": "guest"
+     },
+     {
+      "name": "Kor Ex Flambeau",
+      "category": "magi",
+      "job": "Magus House Flambeau",
+      "points": 5,
+      "yearBorn": 1191,
+      "qty": 1,
+      "actorId": "G1QY9Em2kcgQkv0u",
+      "ship": "maelstroms-maw",
+      "standing": "sabbatical"
+     },
+     {
+      "name": "Stijntje Kuiper",
+      "category": "magi",
+      "job": "Apprentice (to Dustin Page)",
+      "points": 5,
+      "yearBorn": 1211,
+      "qty": 1,
+      "actorId": "y7SZJxNgAR0HPaxL",
+      "ship": "scholars-wake",
+      "standing": "apprentice"
+     }
+    ],
     "library": {
      "books": [],
      "labTexts": []
@@ -1338,7 +2200,8 @@
     "possessions": [],
     "virtues": [],
     "flaws": []
-   }
+   },
+   "reconNote": "Ships and magi reconstructed from the chronicle (verified_events cast lists) and the fleet timeline; other facets not yet reconstructed. Members who are in the covenant but not contributing — in Twilight (Solving) or on sabbatical (Kor) — are listed separately and excluded from working strength. Membership follows the 'present at any point in the game-year' rule."
   }
  ],
  "ledger": [
@@ -1379,9 +2242,9 @@
    "season": "Spring 1224",
    "sort_iso": "1224-05-01",
    "facet": "ships",
-   "kind": "add",
-   "summary": "Acquired the Hound of Cassel",
-   "detail": "Taken in Valdemar's raid on a Scarem Montem vessel (non-magical goods, legal under Normandy law); now Wilhelm's ship. A mundane cog, no lab. Carries three sealed chests held in trust.",
+   "kind": "note",
+   "summary": "The Hound of Cassel becomes Wilhelm's ship",
+   "detail": "The hull pirated from Scarem Montem in Summer 1221 is handed to Wilhelm, who sails it back to Scarem Montem as the trade chip for his stolen thesis. A mundane cog, no lab. Carries three sealed chests held in trust.",
    "refs": [
     "c012"
    ]
@@ -1422,6 +2285,123 @@
    "kind": "remove",
    "summary": "Marina (Merinita) departs with the Gloaming",
    "detail": "The Gloaming's resident magus, Marina of House Merinita, leaves the covenant when the ship does, during 1219 (before Winter 1219-20). Counted in the 1219 roster; absent thereafter.",
+   "refs": []
+  },
+  {
+   "season": "Spring 1220",
+   "sort_iso": "1220-04-20",
+   "facet": "inhabitants",
+   "kind": "note",
+   "summary": "Solving Epicurusson vanishes into Twilight",
+   "detail": "The founder enters Twilight and does not return in play. He remains nominally of the covenant (a 'Famous Resident') but is thereafter an absent, non-contributing member — no upkeep, votes, or seasonal service. Dagmar assumes de facto leadership.",
+   "refs": []
+  },
+  {
+   "season": "Spring 1220",
+   "sort_iso": "1220-04-20",
+   "facet": "ships",
+   "kind": "note",
+   "summary": "Tide of Memory passes to Dagmar",
+   "detail": "Dagmar inherits the founder's flagship — with its summoning bell, astrolabe and the Master Chart — after Solving's disappearance.",
+   "refs": []
+  },
+  {
+   "season": "Spring 1220",
+   "sort_iso": "1220-04-20",
+   "facet": "inhabitants",
+   "kind": "add",
+   "summary": "Stijntje Kuiper apprenticed to Dustin Page",
+   "detail": "Recruited aboard the Scholar's Wake as Dustin's apprentice. (Her Arts are opened in Summer 1222.)",
+   "refs": []
+  },
+  {
+   "season": "Summer 1220",
+   "sort_iso": "1220-06-20",
+   "facet": "inhabitants",
+   "kind": "add",
+   "summary": "Kor Ex Flambeau joins the covenant",
+   "detail": "Meets Nequam in the Hebrides and takes over his ship and covenant obligations; a wandering, justice-driven knight-errant.",
+   "refs": []
+  },
+  {
+   "season": "Summer 1220",
+   "sort_iso": "1220-06-20",
+   "facet": "ships",
+   "kind": "note",
+   "summary": "The Maelstrom's Maw passes to Kor",
+   "detail": "Nequam of Tytalus hands the Knarr to Kor Ex Flambeau in exchange for a vague promise of future partnership.",
+   "refs": []
+  },
+  {
+   "season": "Fall 1220",
+   "sort_iso": "1220-09-20",
+   "facet": "inhabitants",
+   "kind": "remove",
+   "summary": "Nequam of Tytalus leaves the covenant",
+   "detail": "Divested himself of covenant obligations when he handed off the Maelstrom's Maw (Summer 1220); last attested Fall 1220. Departed — not a member thereafter.",
+   "refs": []
+  },
+  {
+   "season": "Winter 1220-21",
+   "sort_iso": "1220-12-20",
+   "facet": "ships",
+   "kind": "add",
+   "summary": "Veðrdreki (the Storm Dragon) joins the fleet",
+   "detail": "Valdemar Bjornsson's personal Viking drakar — a shallow-draft longship for river and inland transit.",
+   "refs": []
+  },
+  {
+   "season": "Winter 1220-21",
+   "sort_iso": "1220-12-20",
+   "facet": "inhabitants",
+   "kind": "add",
+   "summary": "Valdemar Bjornsson (Diedne) joins the covenant",
+   "detail": "A skyclad Viking war-magus and centuries-old regio survivor; brings the Veðrdreki.",
+   "refs": []
+  },
+  {
+   "season": "Summer 1221",
+   "sort_iso": "1221-06-20",
+   "facet": "ships",
+   "kind": "add",
+   "summary": "The Hound of Cassel captured",
+   "detail": "Valdemar's crew raids the Scarem Montem merchantman (mundane goods, legal under Normandy law), taking three magically-sealed chests and the letter that exposed the imprisoned Valerian de Castellane. A laid-up prize berthed at the Isle of Man; no lab. Becomes Wilhelm's ship in Spring 1224.",
+   "refs": []
+  },
+  {
+   "season": "Winter 1221-22",
+   "sort_iso": "1221-12-20",
+   "facet": "inhabitants",
+   "kind": "note",
+   "summary": "Kor Ex Flambeau goes on sabbatical",
+   "detail": "Kor departs on his hovering-stone-platform project with the Maelstrom's Maw. He remains a covenant member in good standing but is thereafter an absent, non-contributing member — no upkeep, votes, or seasonal service — until his return.",
+   "refs": []
+  },
+  {
+   "season": "Winter 1221-22",
+   "sort_iso": "1221-12-20",
+   "facet": "ships",
+   "kind": "note",
+   "summary": "The Maelstrom's Maw goes on sabbatical",
+   "detail": "Off the active roster with Kor; a held asset, not lost — the Master Chart simply no longer tracks it while he is away.",
+   "refs": []
+  },
+  {
+   "season": "Spring 1222",
+   "sort_iso": "1222-04-20",
+   "facet": "ships",
+   "kind": "add",
+   "summary": "The Adamant joins the fleet",
+   "detail": "The fleet's fifth hull, commissioned at Bergen and earmarked (per Solving's notes) for the Guernicus mage; given to Valerian on his arrival.",
+   "refs": []
+  },
+  {
+   "season": "Spring 1222",
+   "sort_iso": "1222-04-20",
+   "facet": "inhabitants",
+   "kind": "add",
+   "summary": "Valerian de Castellane (Guernicus) arrives",
+   "detail": "Rescued from imprisonment; joins as an uneasy ally, bringing the Adamant. (The 1221 actor anchor lists him a season early; his true arrival is Spring 1222.)",
    "refs": []
   }
  ]
