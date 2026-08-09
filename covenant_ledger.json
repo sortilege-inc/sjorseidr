@@ -1751,16 +1751,29 @@
      ],
      "sources": [
       {
-       "name": "Fire From the Sky"
+       "name": "Fire From the Sky",
+       "art": "te",
+       "expected": 10,
+       "received": 10
       },
       {
-       "name": "The Kragen's Egg"
+       "name": "The Kraken's Egg",
+       "art": "an",
+       "expected": 5,
+       "received": 5,
+       "note": "+3 Aquam vis, fae-touched (one-off)"
       },
       {
-       "name": "The Summer Fog"
+       "name": "The Summer Fog",
+       "art": "me",
+       "expected": 5,
+       "received": 5
       },
       {
-       "name": "The Black Horse of Boulogne"
+       "name": "The Black Horse of Boulogne",
+       "art": "re",
+       "expected": 4,
+       "received": 4
       }
      ]
     },
