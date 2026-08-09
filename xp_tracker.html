@@ -73,6 +73,8 @@ table.xp td{width:52px;min-width:52px;height:38px;text-align:center;vertical-ali
   background:rgba(255,251,242,.35);position:relative}
 table.xp tbody tr:hover td{background:rgba(198,155,63,.10)}
 table.xp td.empty::after{content:"·";color:rgba(120,90,40,.35)}
+table.xp td.noxp{background:rgba(74,60,44,.16)}
+table.xp tbody tr:hover td.noxp{background:rgba(74,60,44,.22)}
 table.xp td.ong{background:rgba(120,90,40,.07)}
 table.xp td.ong::after{content:"—";color:rgba(120,90,40,.6)}
 table.xp td.act{background:rgba(62,107,53,.14)}
@@ -96,6 +98,7 @@ table.xp td.multi::after{content:none}
 .chip{display:inline-flex;align-items:center;gap:5px}
 .sw{width:15px;height:15px;border-radius:3px;border:1px solid rgba(120,90,40,.4);display:inline-block;position:relative}
 .sw.act{background:rgba(62,107,53,.28)}
+.sw.noxp{background:rgba(74,60,44,.28)}
 .sw.cov{box-shadow:inset 3px 0 0 var(--gold-bright)}
 .sw.cov::before{content:"";position:absolute;top:1px;right:1px;width:5px;height:5px;border-radius:50%;background:var(--gold-bright)}
 .sw.fdry{background-image:radial-gradient(circle at bottom left, var(--teal) 0 5px, transparent 5px)}
@@ -143,13 +146,26 @@ function abbr(t){ if(!t) return ''; if(ART[t]) return ART[t];
     'Practice':'Prac','Reading':'Read','Learnspell':'Lrn'};
   if(map[t]) return map[t];
   return t.length<=4 ? t : t.slice(0,4); }
-let DATA=null;
+let DATA=null, SEASON_IDX={}, ASOF_IDX=0;
 let filter={type:'all',ship:'all',year:'all'};
+// A blank cell is "no XP earned" (grey) when the character was in the covenant that
+// season and it's at/before the current game edge (meta.as_of); otherwise just "not recorded".
+function greyEmpty(m,s){
+  if(m.type==='magus') return false;   // magi always advance — a blank magus season is an omission, not "no XP"
+  const y=s.year;
+  if(m.firstYear!=null && y<m.firstYear) return false;
+  if(m.lastYear!=null && y>m.lastYear) return false;
+  return (SEASON_IDX[s.id]??1e9) <= ASOF_IDX;
+}
+const emptyCell=(m,s)=>greyEmpty(m,s)?'<td class="noxp"></td>':'<td class="empty"></td>';
 
 async function load(){
   try{ DATA=await (await fetch('./xp_tracker.json',{cache:'no-store'})).json(); }
   catch(e){ $('#grid').outerHTML=`<div class="empty-note">Could not load xp_tracker.json — serve over http.<br>${esc(e.message)}</div>`; return; }
   $('#subtitle').textContent=DATA.meta.note||'';
+  SEASON_IDX={}; DATA.seasons.forEach((s,i)=>SEASON_IDX[s.id]=i);
+  ASOF_IDX=DATA.seasons.findIndex(s=>(s.label||'').includes(DATA.meta.as_of||' '));
+  if(ASOF_IDX<0) ASOF_IDX=DATA.seasons.length-1;
   $('#foot').innerHTML=`As of <b>${esc(DATA.meta.as_of||'')}</b>. `
     +`${DATA.members.length} members · ${DATA.seasons.length} seasons. Cells populate from <code>xp_tracker.json</code> — empty for now.`;
   const head=$('#filtersHead'), body=$('#filtersBody'), box=head.parentElement;
@@ -179,7 +195,7 @@ function renderFilters(){
 }
 function shownSeasons(){ return DATA.seasons.filter(s=>filter.year==='all'||s.year==filter.year); }
 function cellMulti(member,season,entries){
-  if(!entries.length) return '<td class="empty"></td>';
+  if(!entries.length) return emptyCell(member,season);
   const base=`${member.name} — ${season.label}`;
   const fdry=entries.some(e=>e.source==='foundry');
   const cov=member.type==='magus'&&entries.some(e=>e.covenant);
@@ -200,7 +216,7 @@ function cell(member,season){
   const raw=(DATA.entries||{})[member.id+'::'+season.id];
   if(Array.isArray(raw)) return cellMulti(member,season,raw.filter(e=>e&&e.activity));
   const e=raw;
-  if(!e || !e.activity) return '<td class="empty"></td>';
+  if(!e || !e.activity) return emptyCell(member,season);
   const cov = (member.type==='magus' && e.covenant);
   const base=`${member.name} — ${season.label}`;
   const hasXp = e.xp!=null && e.xp!==0 && !e.deferred;
@@ -247,7 +263,8 @@ function render(){
    +`<span class="chip"><span class="sw act cov"></span> <b>magi:</b> covenant activity</span>`
    +`<span class="chip"><span class="sw act fdry"></span> confirmed in Foundry${fc?` <span style="color:var(--ink-soft)">(last pull ${esc(fc)})</span>`:''}</span>`
    +`<span class="chip"><span class="sw">—</span> activity underway / XP credited a later season</span>`
-   +`<span class="chip"><span class="sw">·</span> not yet recorded</span>`
+   +`<span class="chip"><span class="sw noxp"></span> in covenant, no XP that season</span>`
+   +`<span class="chip"><span class="sw">·</span> not recorded / not in covenant</span>`
    +`<span class="chip" style="color:var(--ink-soft)">Row border &amp; dot = type &amp; ship.</span>`;
 }
 load();

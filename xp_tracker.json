@@ -148,6 +148,16 @@
    "id": "1224-summer",
    "label": "☀️ Summer 1224",
    "year": 1224
+  },
+  {
+   "id": "1224-fall",
+   "label": "🍂 Fall 1224",
+   "year": 1224
+  },
+  {
+   "id": "1224-winter",
+   "label": "❄️ Winter 1224-25",
+   "year": 1224
   }
  ],
  "members": [
@@ -494,34 +504,6 @@
    "firstYear": 1219
   },
   {
-   "id": "Solving Epicurusson",
-   "name": "Solving Epicurusson",
-   "type": "magus",
-   "role": "Magus (Criamon), founder",
-   "ship": "tide-of-memory",
-   "house": "Criamon",
-   "firstYear": 1219
-  },
-  {
-   "id": "Kor Ex Flambeau",
-   "name": "Kor Ex Flambeau",
-   "type": "magus",
-   "role": "Magus (Flambeau)",
-   "ship": "maelstroms-maw",
-   "house": "Flambeau",
-   "firstYear": 1220
-  },
-  {
-   "id": "Nequam of Tytalus",
-   "name": "Nequam of Tytalus",
-   "type": "magus",
-   "role": "Magus (Tytalus)",
-   "ship": "maelstroms-maw",
-   "house": "Tytalus",
-   "firstYear": 1219,
-   "lastYear": 1220
-  },
-  {
    "id": "Marina",
    "name": "Marina",
    "type": "magus",
@@ -549,35 +531,22 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Dagmar::1221-summer": [
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "reading",
-    "xp": 11,
-    "xpType": "Terram",
-    "targets": [
-     {
-      "type": "Terram",
-      "xp": 11
-     }
-    ],
-    "detail": "reading: Terram+11",
-    "covenant": null,
-    "source": "foundry"
-   },
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "recovery",
-    "xp": 0,
-    "xpType": "Recovery",
-    "targets": [],
-    "detail": "recovery",
-    "covenant": null,
-    "source": "foundry"
-   }
-  ],
+  "Dagmar::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 11,
+   "xpType": "Terram",
+   "targets": [
+    {
+     "type": "Terram",
+     "xp": 11
+    }
+   ],
+   "detail": "reading: Terram+11",
+   "covenant": null,
+   "source": "foundry"
+  },
   "Dagmar::1222-winter": {
    "activity": true,
    "deferred": false,
@@ -642,552 +611,6 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Éogan Dobhartha::1220-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 5,
-   "xpType": "Auram",
-   "targets": [
-    {
-     "type": "Auram",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Auram+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1220-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 19,
-   "xpType": "Dead language (Latin)",
-   "targets": [
-    {
-     "type": "Dead language (Latin)",
-     "xp": 19
-    }
-   ],
-   "detail": "teaching: Dead language (Latin)+19",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1220-winter": [
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "learnSpell",
-    "xp": 15,
-    "xpType": "Spell: Push of the Gentle Wave",
-    "targets": [
-     {
-      "type": "Spell: Push of the Gentle Wave",
-      "xp": 15
-     }
-    ],
-    "detail": "learnSpell: Spell: Push of the Gentle Wave+15",
-    "covenant": null,
-    "source": "foundry"
-   },
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "exposure",
-    "xp": 2,
-    "xpType": "Teaching",
-    "targets": [
-     {
-      "type": "Teaching",
-      "xp": 2
-     }
-    ],
-    "detail": "exposure: Teaching+2",
-    "covenant": null,
-    "source": "foundry"
-   }
-  ],
-  "Éogan Dobhartha::1220-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "exposure",
-   "xp": 2,
-   "xpType": "Profession: Sailor",
-   "targets": [
-    {
-     "type": "Profession: Sailor",
-     "xp": 2
-    }
-   ],
-   "detail": "exposure: Profession: Sailor+2",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 14,
-   "xpType": "Dead language (Latin)",
-   "targets": [
-    {
-     "type": "Dead language (Latin)",
-     "xp": 14
-    }
-   ],
-   "detail": "teaching: Dead language (Latin)+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1221-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "minorEnchantment",
-   "xp": 0,
-   "xpType": "Minorenchantment",
-   "targets": [],
-   "detail": "minorEnchantment",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1221-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 10,
-   "xpType": "Intellego",
-   "targets": [
-    {
-     "type": "Intellego",
-     "xp": 10
-    }
-   ],
-   "detail": "reading: Intellego+10",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1221-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 13,
-   "xpType": "Corpus",
-   "targets": [
-    {
-     "type": "Corpus",
-     "xp": 13
-    }
-   ],
-   "detail": "reading: Corpus+13",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1222-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "minorEnchantment",
-   "xp": 0,
-   "xpType": "Minorenchantment",
-   "targets": [],
-   "detail": "minorEnchantment",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1222-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "none",
-   "xp": 0,
-   "xpType": "",
-   "targets": [],
-   "detail": "none",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1222-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 13,
-   "xpType": "Perdo",
-   "targets": [
-    {
-     "type": "Perdo",
-     "xp": 13
-    }
-   ],
-   "detail": "reading: Perdo+13",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1222-winter": {
-   "activity": true,
-   "deferred": true,
-   "act": "inventSpell",
-   "detail": "inventSpell: Spell: Grip of Ice+15",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1223-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "inventSpell",
-   "xp": 15,
-   "xpType": "Spell: Grip of Ice",
-   "targets": [
-    {
-     "type": "Spell: Grip of Ice",
-     "xp": 15
-    }
-   ],
-   "detail": "inventSpell: Spell: Grip of Ice+15",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1223-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 12,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Aquam",
-     "xp": 5
-    },
-    {
-     "type": "Code of Hermes",
-     "xp": 2
-    },
-    {
-     "type": "Spell Mastery: Mighty Torrent of Water",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Aquam+5, Code of Hermes+2, Spell Mastery: Mighty Torrent of Water+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1224-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "none",
-   "xp": 0,
-   "xpType": "",
-   "targets": [],
-   "detail": "none",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Valdemar Bjornsson::1222-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 15,
-   "xpType": "Magic Theory",
-   "targets": [
-    {
-     "type": "Magic Theory",
-     "xp": 15
-    }
-   ],
-   "detail": "reading: Magic Theory+15",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Valerian de Castellane::1222-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "copying",
-   "xp": 0,
-   "xpType": "Copying",
-   "targets": [],
-   "detail": "copying",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Garrat Coffin::1221-summer": [
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "adventuring",
-    "xp": 10,
-    "xpType": "Adventuring",
-    "targets": [
-     {
-      "type": "Brawl",
-      "xp": 5
-     },
-     {
-      "type": "Survival",
-      "xp": 5
-     }
-    ],
-    "detail": "adventuring: Brawl+5, Survival+5",
-    "covenant": null,
-    "source": "foundry"
-   },
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "recovery",
-    "xp": 0,
-    "xpType": "Recovery",
-    "targets": [],
-    "detail": "recovery",
-    "covenant": null,
-    "source": "foundry"
-   }
-  ],
-  "Garrat Coffin::1221-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "recovery",
-   "xp": 0,
-   "xpType": "Recovery",
-   "targets": [],
-   "detail": "recovery",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Garrat Coffin::1221-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "recovery",
-   "xp": 0,
-   "xpType": "Recovery",
-   "targets": [],
-   "detail": "recovery",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Garrat Coffin::1222-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "recovery",
-   "xp": 0,
-   "xpType": "Recovery",
-   "targets": [],
-   "detail": "recovery",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Garrat Coffin::1223-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "none",
-   "xp": 0,
-   "xpType": "",
-   "targets": [],
-   "detail": "none",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1220-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 0,
-   "xpType": "Adventuring",
-   "targets": [],
-   "detail": "adventuring",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1220-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (English)",
-   "targets": [
-    {
-     "type": "Language: (English)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (English)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1220-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (Norwegian)",
-   "targets": [
-    {
-     "type": "Language: (Norwegian)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (Norwegian)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1220-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (Flemish)",
-   "targets": [
-    {
-     "type": "Language: (Flemish)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (Flemish)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1221-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (English)",
-   "targets": [
-    {
-     "type": "Language: (English)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (English)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1221-summer": [
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "adventuring",
-    "xp": 10,
-    "xpType": "Adventuring",
-    "targets": [
-     {
-      "type": "Brawl",
-      "xp": 5
-     },
-     {
-      "type": "Athletics",
-      "xp": 5
-     }
-    ],
-    "detail": "adventuring: Brawl+5, Athletics+5",
-    "covenant": null,
-    "source": "foundry"
-   },
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "practice",
-    "xp": 3,
-    "xpType": "Language: (English)",
-    "targets": [
-     {
-      "type": "Language: (English)",
-      "xp": 3
-     }
-    ],
-    "detail": "practice: Language: (English)+3",
-    "covenant": null,
-    "source": "foundry"
-   }
-  ],
-  "Ka'wa'ill::1221-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (English)",
-   "targets": [
-    {
-     "type": "Language: (English)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (English)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1221-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (Flemish)",
-   "targets": [
-    {
-     "type": "Language: (Flemish)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (Flemish)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1222-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (Flemish)",
-   "targets": [
-    {
-     "type": "Language: (Flemish)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (Flemish)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1222-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (Norwegian)",
-   "targets": [
-    {
-     "type": "Language: (Norwegian)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (Norwegian)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Ka'wa'ill::1222-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (Norwegian)",
-   "targets": [
-    {
-     "type": "Language: (Norwegian)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (Norwegian)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Adam Smith::1220-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "none",
-   "xp": 0,
-   "xpType": "",
-   "targets": [],
-   "detail": "none",
-   "covenant": null,
-   "source": "foundry"
-  },
   "Dagmar::1221-winter": {
    "activity": true,
    "deferred": false,
@@ -1245,406 +668,6 @@
     }
    ],
    "detail": "adventuring: Intellego+5, Muto+2, Code of Hermes+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Valdemar Bjornsson::1221-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 5,
-   "xpType": "Swim",
-   "targets": [
-    {
-     "type": "Swim",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Swim+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Valdemar Bjornsson::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Leadership",
-     "xp": 5
-    },
-    {
-     "type": "Athletics",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Leadership+5, Athletics+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Éogan Dobhartha::1223-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 5,
-   "xpType": "Leadership",
-   "targets": [
-    {
-     "type": "Leadership",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Leadership+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Wilhelm Stienauer::1223-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 5,
-   "xpType": "Teaching",
-   "targets": [
-    {
-     "type": "Teaching",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Teaching+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Garrat Coffin::1221-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 5,
-   "xpType": "Swim",
-   "targets": [
-    {
-     "type": "Swim",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Swim+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Garrat Coffin::1223-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Brawl",
-     "xp": 5
-    },
-    {
-     "type": "Athletics",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Brawl+5, Athletics+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Leofwin::1221-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 5,
-   "xpType": "Hunt",
-   "targets": [
-    {
-     "type": "Hunt",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Hunt+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Leofwin::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Brawl",
-     "xp": 5
-    },
-    {
-     "type": "Survival",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Brawl+5, Survival+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Giden::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Athletics",
-     "xp": 5
-    },
-    {
-     "type": "Survival",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Athletics+5, Survival+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Angus McPeterson::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Athletics",
-     "xp": 5
-    },
-    {
-     "type": "Swim",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Athletics+5, Swim+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Angus McPeterson::1223-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Athletics",
-     "xp": 5
-    },
-    {
-     "type": "Brawl",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Athletics+5, Brawl+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Drest::1223-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Brawl",
-     "xp": 5
-    },
-    {
-     "type": "Athletics",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Brawl+5, Athletics+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Adam Smith::1221-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Intrigue",
-     "xp": 5
-    },
-    {
-     "type": "Guile",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Intrigue+5, Guile+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Father Lachlan::1221-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Guile",
-     "xp": 5
-    },
-    {
-     "type": "Intrigue",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Guile+5, Intrigue+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1220-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 20,
-   "xpType": "Language: Latin",
-   "targets": [
-    {
-     "type": "Language: Latin",
-     "xp": 20
-    }
-   ],
-   "detail": "teaching: Language: Latin+20",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1220-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 20,
-   "xpType": "Artes Liberales",
-   "targets": [
-    {
-     "type": "Artes Liberales",
-     "xp": 20
-    }
-   ],
-   "detail": "teaching: Artes Liberales+20",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1220-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 20,
-   "xpType": "Philosophiae",
-   "targets": [
-    {
-     "type": "Philosophiae",
-     "xp": 20
-    }
-   ],
-   "detail": "teaching: Philosophiae+20",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1223-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 14,
-   "xpType": "Magic Theory",
-   "targets": [
-    {
-     "type": "Magic Theory",
-     "xp": 14
-    }
-   ],
-   "detail": "teaching: Magic Theory+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1223-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 12,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Code of Hermes",
-     "xp": 5
-    },
-    {
-     "type": "Animal Handling",
-     "xp": 5
-    },
-    {
-     "type": "Magic Theory",
-     "xp": 2
-    }
-   ],
-   "detail": "adventuring: Code of Hermes+5, Animal Handling+5, Magic Theory+2",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1223-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 14,
-   "xpType": "Ignem",
-   "targets": [
-    {
-     "type": "Ignem",
-     "xp": 14
-    }
-   ],
-   "detail": "teaching: Ignem+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1221-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Intrigue",
-     "xp": 5
-    },
-    {
-     "type": "Stealth",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Intrigue+5, Stealth+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1223-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 5,
-   "xpType": "Language: Gaelic",
-   "targets": [
-    {
-     "type": "Language: Gaelic",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Language: Gaelic+5",
    "covenant": null,
    "source": "foundry"
   },
@@ -1829,6 +852,1240 @@
     }
    ],
    "detail": "exposure: Teaching+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Teaching+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Auram",
+   "targets": [
+    {
+     "type": "Auram",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Auram+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 19,
+   "xpType": "Dead language (Latin)",
+   "targets": [
+    {
+     "type": "Dead language (Latin)",
+     "xp": 19
+    }
+   ],
+   "detail": "teaching: Dead language (Latin)+19",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1220-winter": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "learnSpell",
+    "xp": 15,
+    "xpType": "Spell: Push of the Gentle Wave",
+    "targets": [
+     {
+      "type": "Spell: Push of the Gentle Wave",
+      "xp": 15
+     }
+    ],
+    "detail": "learnSpell: Spell: Push of the Gentle Wave+15",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "exposure",
+    "xp": 2,
+    "xpType": "Teaching",
+    "targets": [
+     {
+      "type": "Teaching",
+      "xp": 2
+     }
+    ],
+    "detail": "exposure: Teaching+2",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
+  "Éogan Dobhartha::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 14,
+   "xpType": "Dead language (Latin)",
+   "targets": [
+    {
+     "type": "Dead language (Latin)",
+     "xp": 14
+    }
+   ],
+   "detail": "teaching: Dead language (Latin)+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 10,
+   "xpType": "Intellego",
+   "targets": [
+    {
+     "type": "Intellego",
+     "xp": 10
+    }
+   ],
+   "detail": "reading: Intellego+10",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 13,
+   "xpType": "Corpus",
+   "targets": [
+    {
+     "type": "Corpus",
+     "xp": 13
+    }
+   ],
+   "detail": "reading: Corpus+13",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 13,
+   "xpType": "Perdo",
+   "targets": [
+    {
+     "type": "Perdo",
+     "xp": 13
+    }
+   ],
+   "detail": "reading: Perdo+13",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "inventSpell",
+   "xp": 15,
+   "xpType": "Spell: Grip of Ice",
+   "targets": [
+    {
+     "type": "Spell: Grip of Ice",
+     "xp": 15
+    }
+   ],
+   "detail": "inventSpell: Spell: Grip of Ice+15",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "inventSpell",
+   "xp": 15,
+   "xpType": "Spell: Grip of Ice",
+   "targets": [
+    {
+     "type": "Spell: Grip of Ice",
+     "xp": 15
+    }
+   ],
+   "detail": "inventSpell: Spell: Grip of Ice+15",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 12,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Aquam",
+     "xp": 5
+    },
+    {
+     "type": "Code of Hermes",
+     "xp": 2
+    },
+    {
+     "type": "Spell Mastery: Mighty Torrent of Water",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Aquam+5, Code of Hermes+2, Spell Mastery: Mighty Torrent of Water+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Leadership",
+   "targets": [
+    {
+     "type": "Leadership",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Leadership+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 15,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 15
+    }
+   ],
+   "detail": "reading: Magic Theory+15",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Swim",
+   "targets": [
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Leadership",
+     "xp": 5
+    },
+    {
+     "type": "Athletics",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Leadership+5, Athletics+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 12,
+   "xpType": "Adventuring",
+   "targets": [],
+   "detail": "adventuring",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Wilhelm Stienauer::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 12,
+   "xpType": "Adventuring",
+   "targets": [],
+   "detail": "adventuring",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Wilhelm Stienauer::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Teaching+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 20,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 20
+    }
+   ],
+   "detail": "teaching: Language: Latin+20",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 20,
+   "xpType": "Artes Liberales",
+   "targets": [
+    {
+     "type": "Artes Liberales",
+     "xp": 20
+    }
+   ],
+   "detail": "teaching: Artes Liberales+20",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1220-winter": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "teaching",
+    "xp": 20,
+    "xpType": "Philosophiae",
+    "targets": [
+     {
+      "type": "Philosophiae",
+      "xp": 20
+     }
+    ],
+    "detail": "teaching: Philosophiae+20",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "exposure",
+    "xp": 2,
+    "xpType": "Magic Lore",
+    "targets": [
+     {
+      "type": "Magic Lore",
+      "xp": 2
+     }
+    ],
+    "detail": "exposure: Magic Lore+2",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
+  "Stijntje Kuiper::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 14,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 14
+    }
+   ],
+   "detail": "teaching: Magic Theory+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 12,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Code of Hermes",
+     "xp": 5
+    },
+    {
+     "type": "Animal Handling",
+     "xp": 5
+    },
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "adventuring: Code of Hermes+5, Animal Handling+5, Magic Theory+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 14,
+   "xpType": "Ignem",
+   "targets": [
+    {
+     "type": "Ignem",
+     "xp": 14
+    }
+   ],
+   "detail": "teaching: Ignem+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Intrigue",
+     "xp": 5
+    },
+    {
+     "type": "Stealth",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Intrigue+5, Stealth+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Language: Gaelic",
+   "targets": [
+    {
+     "type": "Language: Gaelic",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Language: Gaelic+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 14,
+   "xpType": "Auram",
+   "targets": [
+    {
+     "type": "Auram",
+     "xp": 14
+    }
+   ],
+   "detail": "teaching: Auram+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Guile",
+   "targets": [
+    {
+     "type": "Guile",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Guile+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Drest::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Brawl",
+     "xp": 5
+    },
+    {
+     "type": "Athletics",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Brawl+5, Athletics+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Drest::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Swim",
+   "targets": [
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Erc::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Swim",
+   "targets": [
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Athletics",
+     "xp": 5
+    },
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Athletics+5, Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Athletics",
+     "xp": 5
+    },
+    {
+     "type": "Brawl",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Athletics+5, Brawl+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Garrat Coffin::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Swim",
+   "targets": [
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Garrat Coffin::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Brawl",
+     "xp": 5
+    },
+    {
+     "type": "Survival",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Brawl+5, Survival+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Garrat Coffin::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Brawl",
+     "xp": 5
+    },
+    {
+     "type": "Athletics",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Brawl+5, Athletics+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Garrat Coffin::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Survival",
+     "xp": 5
+    },
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Survival+5, Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Giden::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Athletics",
+     "xp": 5
+    },
+    {
+     "type": "Survival",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Athletics+5, Survival+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Ka'wa'ill::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 3,
+   "xpType": "Language: (English)",
+   "targets": [
+    {
+     "type": "Language: (English)",
+     "xp": 3
+    }
+   ],
+   "detail": "practice: Language: (English)+3",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Ka'wa'ill::1220-fall": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "adventuring",
+    "xp": 7,
+    "xpType": "Adventuring",
+    "targets": [
+     {
+      "type": "Charm",
+      "xp": 2
+     },
+     {
+      "type": "Carouse",
+      "xp": 5
+     }
+    ],
+    "detail": "adventuring: Charm+2, Carouse+5",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "practice",
+    "xp": 3,
+    "xpType": "Language: (Norwegian)",
+    "targets": [
+     {
+      "type": "Language: (Norwegian)",
+      "xp": 3
+     }
+    ],
+    "detail": "practice: Language: (Norwegian)+3",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
+  "Ka'wa'ill::1220-winter": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "adventuring",
+    "xp": 10,
+    "xpType": "Adventuring",
+    "targets": [
+     {
+      "type": "Swim",
+      "xp": 5
+     },
+     {
+      "type": "Leadership",
+      "xp": 5
+     }
+    ],
+    "detail": "adventuring: Swim+5, Leadership+5",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "practice",
+    "xp": 3,
+    "xpType": "Language: (Flemish)",
+    "targets": [
+     {
+      "type": "Language: (Flemish)",
+      "xp": 3
+     }
+    ],
+    "detail": "practice: Language: (Flemish)+3",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
+  "Ka'wa'ill::1221-spring": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "adventuring",
+    "xp": 5,
+    "xpType": "Awareness",
+    "targets": [
+     {
+      "type": "Awareness",
+      "xp": 5
+     }
+    ],
+    "detail": "adventuring: Awareness+5",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "practice",
+    "xp": 3,
+    "xpType": "Language: (English)",
+    "targets": [
+     {
+      "type": "Language: (English)",
+      "xp": 3
+     }
+    ],
+    "detail": "practice: Language: (English)+3",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
+  "Ka'wa'ill::1221-summer": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "adventuring",
+    "xp": 10,
+    "xpType": "Adventuring",
+    "targets": [
+     {
+      "type": "Brawl",
+      "xp": 5
+     },
+     {
+      "type": "Athletics",
+      "xp": 5
+     }
+    ],
+    "detail": "adventuring: Brawl+5, Athletics+5",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "practice",
+    "xp": 3,
+    "xpType": "Language: (English)",
+    "targets": [
+     {
+      "type": "Language: (English)",
+      "xp": 3
+     }
+    ],
+    "detail": "practice: Language: (English)+3",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
+  "Ka'wa'ill::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 3,
+   "xpType": "Language: (English)",
+   "targets": [
+    {
+     "type": "Language: (English)",
+     "xp": 3
+    }
+   ],
+   "detail": "practice: Language: (English)+3",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Ka'wa'ill::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 3,
+   "xpType": "Language: (Flemish)",
+   "targets": [
+    {
+     "type": "Language: (Flemish)",
+     "xp": 3
+    }
+   ],
+   "detail": "practice: Language: (Flemish)+3",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Ka'wa'ill::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 3,
+   "xpType": "Language: (Flemish)",
+   "targets": [
+    {
+     "type": "Language: (Flemish)",
+     "xp": 3
+    }
+   ],
+   "detail": "practice: Language: (Flemish)+3",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Ka'wa'ill::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 3,
+   "xpType": "Language: (Norwegian)",
+   "targets": [
+    {
+     "type": "Language: (Norwegian)",
+     "xp": 3
+    }
+   ],
+   "detail": "practice: Language: (Norwegian)+3",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Ka'wa'ill::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 3,
+   "xpType": "Language: (Norwegian)",
+   "targets": [
+    {
+     "type": "Language: (Norwegian)",
+     "xp": 3
+    }
+   ],
+   "detail": "practice: Language: (Norwegian)+3",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Leofwin::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Hunt",
+   "targets": [
+    {
+     "type": "Hunt",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Hunt+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Leofwin::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Brawl",
+     "xp": 5
+    },
+    {
+     "type": "Survival",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Brawl+5, Survival+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Leofwin::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Carouse",
+   "targets": [
+    {
+     "type": "Carouse",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Carouse+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Reinier::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Carouse",
+   "targets": [
+    {
+     "type": "Carouse",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Carouse+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Willem 'Sour' Jensen::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Carouse",
+   "targets": [
+    {
+     "type": "Carouse",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Carouse+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Pieter van Dijk::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Carouse",
+   "targets": [
+    {
+     "type": "Carouse",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Carouse+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Heynric the Merchant::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 7,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Profession: Merchant",
+     "xp": 5
+    },
+    {
+     "type": "Charm",
+     "xp": 2
+    }
+   ],
+   "detail": "adventuring: Profession: Merchant+5, Charm+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Heynric the Merchant::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 7,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Code of Hermes",
+     "xp": 2
+    },
+    {
+     "type": "Language: Latin",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Code of Hermes+2, Language: Latin+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Heynric the Merchant::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 7,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Code of Hermes",
+     "xp": 3
+    },
+    {
+     "type": "Profession: Merchant",
+     "xp": 4
+    }
+   ],
+   "detail": "adventuring: Code of Hermes+3, Profession: Merchant+4",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Heynric the Merchant::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Intrigue",
+   "targets": [
+    {
+     "type": "Intrigue",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Intrigue+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Udo Ironhand::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Swim",
+     "xp": 5
+    },
+    {
+     "type": "Survival",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Swim+5, Survival+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Adam Smith::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Intrigue",
+     "xp": 5
+    },
+    {
+     "type": "Guile",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Intrigue+5, Guile+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Adam Smith::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Profession: Sailor+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Henri (failed apprentice)::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 5
+    },
+    {
+     "type": "Profession: Scribe",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Teaching+5, Profession: Scribe+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Father Lachlan::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Guile",
+     "xp": 5
+    },
+    {
+     "type": "Intrigue",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Guile+5, Intrigue+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Father Lachlan::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Dead language (Latin)",
+   "targets": [
+    {
+     "type": "Dead language (Latin)",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Dead language (Latin)+2",
    "covenant": null,
    "source": "foundry"
   }
