@@ -190,8 +190,10 @@ function cell(member,season){
   return `<td class="${cls.join(' ')}" title="${esc(t)}"><span class="xp">+${e.xp}</span>${xt}</td>`;
 }
 function render(){
+  const inCovenant=(m,y)=> m.firstYear==null || (+y>=m.firstYear && (m.lastYear==null || +y<=m.lastYear));
   const members=DATA.members.filter(m=>
-    (filter.type==='all'||m.type===filter.type) && (filter.ship==='all'||m.ship===filter.ship));
+    (filter.type==='all'||m.type===filter.type) && (filter.ship==='all'||m.ship===filter.ship)
+    && (filter.year==='all' || inCovenant(m,filter.year)));
   const seasons=shownSeasons();
   $('#count').textContent = `Showing ${members.length} of ${DATA.members.length} members`
     + `, ${seasons.length} seasons`

@@ -477,17 +477,6 @@
       "standing": "active"
      },
      {
-      "name": "Valdemar Bjornsson",
-      "category": "magi",
-      "job": "House Diedne",
-      "points": 5,
-      "yearBorn": 1195,
-      "qty": 1,
-      "actorId": "hcg6lMEwPcmXuxzo",
-      "ship": "storm-dragon",
-      "standing": "active"
-     },
-     {
       "name": "Stijntje Kuiper",
       "category": "magi",
       "job": "Apprentice (to Dustin Page)",
@@ -872,6 +861,17 @@
       "status": "Active",
       "lab": "The Maelstrom's Maw Laboratory (30 pts)",
       "note": ""
+     },
+     {
+      "id": "storm-dragon",
+      "name": "Veðrdreki",
+      "aka": "",
+      "kind": "Drakar",
+      "owner": "Valdemar Bjornsson",
+      "captain": "",
+      "status": "Active",
+      "lab": "",
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
      }
     ],
     "inhabitants": [
@@ -1843,8 +1843,8 @@
      {
       "id": "storm-dragon",
       "name": "Veðrdreki",
-      "aka": "Storm Dragon",
-      "kind": "Longship (drakar)",
+      "aka": "",
+      "kind": "Drakar",
       "owner": "Valdemar Bjornsson",
       "captain": "",
       "status": "Active",
@@ -1856,7 +1856,7 @@
       "id": "adamant",
       "name": "Adamant",
       "aka": "",
-      "kind": "",
+      "kind": "Hulk",
       "owner": "Valerian de Castellane",
       "captain": "",
       "status": "Active",
@@ -2314,8 +2314,8 @@
      {
       "id": "storm-dragon",
       "name": "Veðrdreki",
-      "aka": "Storm Dragon",
-      "kind": "Longship (drakar)",
+      "aka": "",
+      "kind": "Drakar",
       "owner": "Valdemar Bjornsson",
       "captain": "",
       "status": "Active",
@@ -2327,7 +2327,7 @@
       "id": "adamant",
       "name": "Adamant",
       "aka": "",
-      "kind": "",
+      "kind": "Hulk",
       "owner": "Valerian de Castellane",
       "captain": "",
       "status": "Active",
@@ -2836,8 +2836,8 @@
      {
       "id": "storm-dragon",
       "name": "Veðrdreki",
-      "aka": "Storm Dragon",
-      "kind": "Longship (drakar)",
+      "aka": "",
+      "kind": "Drakar",
       "owner": "Valdemar Bjornsson",
       "captain": "",
       "status": "Active",
@@ -2849,7 +2849,7 @@
       "id": "adamant",
       "name": "Adamant",
       "aka": "",
-      "kind": "",
+      "kind": "Hulk",
       "owner": "Valerian de Castellane",
       "captain": "",
       "status": "Active",
@@ -3358,8 +3358,8 @@
      {
       "id": "storm-dragon",
       "name": "Veðrdreki",
-      "aka": "Storm Dragon",
-      "kind": "Longship (drakar)",
+      "aka": "",
+      "kind": "Drakar",
       "owner": "Valdemar Bjornsson",
       "captain": "",
       "status": "Active",
@@ -3371,7 +3371,7 @@
       "id": "adamant",
       "name": "Adamant",
       "aka": "",
-      "kind": "",
+      "kind": "Hulk",
       "owner": "Valerian de Castellane",
       "captain": "",
       "status": "Active",
@@ -3968,21 +3968,21 @@
    "refs": []
   },
   {
-   "season": "Early 1222",
-   "sort_iso": "1222-04-01",
+   "season": "1221",
+   "sort_iso": "1221-04-01",
    "facet": "ships",
    "kind": "add",
    "summary": "Veðrdreki (the Storm Dragon) joins the fleet",
-   "detail": "Valdemar's personal Viking drakar — with him since he joined in Winter 1220-21 — is brought into the counted covenant fleet at the start of 1222.",
+   "detail": "Valdemar's personal Viking drakar, the Veðrdreki, is counted as a covenant hull from 1221 (Valdemar joined in Winter 1220-21).",
    "refs": []
   },
   {
-   "season": "Winter 1220-21",
-   "sort_iso": "1220-12-20",
+   "season": "1221",
+   "sort_iso": "1221-04-02",
    "facet": "inhabitants",
    "kind": "add",
    "summary": "Valdemar Bjornsson (Diedne) joins the covenant",
-   "detail": "A skyclad Viking war-magus and centuries-old regio survivor; sails his own drakar, the Veðrdreki (brought into the counted fleet at the start of 1222).",
+   "detail": "A skyclad Viking war-magus and centuries-old regio survivor; brings the Veðrdreki. Joined in Winter 1220-21; counted toward the covenant from 1221.",
    "refs": []
   },
   {
