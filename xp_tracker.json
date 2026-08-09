@@ -642,201 +642,6 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Dustin Page::1220-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 14,
-   "xpType": "Imaginem",
-   "targets": [
-    {
-     "type": "Imaginem",
-     "xp": 14
-    }
-   ],
-   "detail": "reading: Imaginem+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1220-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 14,
-   "xpType": "Creo",
-   "targets": [
-    {
-     "type": "Creo",
-     "xp": 14
-    }
-   ],
-   "detail": "reading: Creo+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1220-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 14,
-   "xpType": "Vim",
-   "targets": [
-    {
-     "type": "Vim",
-     "xp": 14
-    }
-   ],
-   "detail": "reading: Vim+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1220-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "none",
-   "xp": 0,
-   "xpType": "",
-   "targets": [],
-   "detail": "none",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1221-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 14,
-   "xpType": "Animal",
-   "targets": [
-    {
-     "type": "Animal",
-     "xp": 14
-    }
-   ],
-   "detail": "reading: Animal+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 14,
-   "xpType": "Corpus",
-   "targets": [
-    {
-     "type": "Corpus",
-     "xp": 14
-    }
-   ],
-   "detail": "reading: Corpus+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1221-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 14,
-   "xpType": "Herbam",
-   "targets": [
-    {
-     "type": "Herbam",
-     "xp": 14
-    }
-   ],
-   "detail": "reading: Herbam+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1222-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "reading",
-   "xp": 15,
-   "xpType": "Mentem",
-   "targets": [
-    {
-     "type": "Mentem",
-     "xp": 15
-    }
-   ],
-   "detail": "reading: Mentem+15",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1223-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 12,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Creo",
-     "xp": 4
-    },
-    {
-     "type": "Terram",
-     "xp": 4
-    },
-    {
-     "type": "Magic Theory",
-     "xp": 4
-    }
-   ],
-   "detail": "adventuring: Creo+4, Terram+4, Magic Theory+4",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1223-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "exposure",
-   "xp": 2,
-   "xpType": "Teaching",
-   "targets": [
-    {
-     "type": "Teaching",
-     "xp": 2
-    }
-   ],
-   "detail": "exposure: Teaching+2",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1223-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 21,
-   "xpType": "Teaching",
-   "targets": [
-    {
-     "type": "Teaching",
-     "xp": 21
-    }
-   ],
-   "detail": "teaching: Teaching+21",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Dustin Page::1224-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "exposure",
-   "xp": 2,
-   "xpType": "Teaching",
-   "targets": [
-    {
-     "type": "Teaching",
-     "xp": 2
-    }
-   ],
-   "detail": "exposure: Teaching+2",
-   "covenant": null,
-   "source": "foundry"
-  },
   "Éogan Dobhartha::1220-spring": {
    "activity": true,
    "deferred": false,
@@ -1099,121 +904,6 @@
    "xpType": "Copying",
    "targets": [],
    "detail": "copying",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1220-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 20,
-   "xpType": "Language: Latin",
-   "targets": [
-    {
-     "type": "Language: Latin",
-     "xp": 20
-    }
-   ],
-   "detail": "teaching: Language: Latin+20",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1220-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 20,
-   "xpType": "Artes Liberales",
-   "targets": [
-    {
-     "type": "Artes Liberales",
-     "xp": 20
-    }
-   ],
-   "detail": "teaching: Artes Liberales+20",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1220-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 20,
-   "xpType": "Philosophiae",
-   "targets": [
-    {
-     "type": "Philosophiae",
-     "xp": 20
-    }
-   ],
-   "detail": "teaching: Philosophiae+20",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1221-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "none",
-   "xp": 0,
-   "xpType": "",
-   "targets": [],
-   "detail": "none",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1223-spring": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 14,
-   "xpType": "Magic Theory",
-   "targets": [
-    {
-     "type": "Magic Theory",
-     "xp": 14
-    }
-   ],
-   "detail": "teaching: Magic Theory+14",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1223-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 12,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Code of Hermes",
-     "xp": 5
-    },
-    {
-     "type": "Animal Handling",
-     "xp": 5
-    },
-    {
-     "type": "Magic Theory",
-     "xp": 2
-    }
-   ],
-   "detail": "adventuring: Code of Hermes+5, Animal Handling+5, Magic Theory+2",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1223-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 14,
-   "xpType": "Ignem",
-   "targets": [
-    {
-     "type": "Ignem",
-     "xp": 14
-    }
-   ],
-   "detail": "teaching: Ignem+14",
    "covenant": null,
    "source": "foundry"
   },
@@ -1610,42 +1300,6 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Stijntje Kuiper::1221-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 10,
-   "xpType": "Adventuring",
-   "targets": [
-    {
-     "type": "Intrigue",
-     "xp": 5
-    },
-    {
-     "type": "Stealth",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Intrigue+5, Stealth+5",
-   "covenant": null,
-   "source": "foundry"
-  },
-  "Stijntje Kuiper::1223-fall": {
-   "activity": true,
-   "deferred": false,
-   "act": "adventuring",
-   "xp": 5,
-   "xpType": "Language: Gaelic",
-   "targets": [
-    {
-     "type": "Language: Gaelic",
-     "xp": 5
-    }
-   ],
-   "detail": "adventuring: Language: Gaelic+5",
-   "covenant": null,
-   "source": "foundry"
-  },
   "Wilhelm Stienauer::1223-fall": {
    "activity": true,
    "deferred": false,
@@ -1851,6 +1505,330 @@
     }
    ],
    "detail": "adventuring: Guile+5, Intrigue+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 20,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 20
+    }
+   ],
+   "detail": "teaching: Language: Latin+20",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 20,
+   "xpType": "Artes Liberales",
+   "targets": [
+    {
+     "type": "Artes Liberales",
+     "xp": 20
+    }
+   ],
+   "detail": "teaching: Artes Liberales+20",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 20,
+   "xpType": "Philosophiae",
+   "targets": [
+    {
+     "type": "Philosophiae",
+     "xp": 20
+    }
+   ],
+   "detail": "teaching: Philosophiae+20",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 14,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 14
+    }
+   ],
+   "detail": "teaching: Magic Theory+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 12,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Code of Hermes",
+     "xp": 5
+    },
+    {
+     "type": "Animal Handling",
+     "xp": 5
+    },
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "adventuring: Code of Hermes+5, Animal Handling+5, Magic Theory+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 14,
+   "xpType": "Ignem",
+   "targets": [
+    {
+     "type": "Ignem",
+     "xp": 14
+    }
+   ],
+   "detail": "teaching: Ignem+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Intrigue",
+     "xp": 5
+    },
+    {
+     "type": "Stealth",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Intrigue+5, Stealth+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Stijntje Kuiper::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Language: Gaelic",
+   "targets": [
+    {
+     "type": "Language: Gaelic",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Language: Gaelic+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 14,
+   "xpType": "Imaginem",
+   "targets": [
+    {
+     "type": "Imaginem",
+     "xp": 14
+    }
+   ],
+   "detail": "reading: Imaginem+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 14,
+   "xpType": "Creo",
+   "targets": [
+    {
+     "type": "Creo",
+     "xp": 14
+    }
+   ],
+   "detail": "reading: Creo+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 14,
+   "xpType": "Vim",
+   "targets": [
+    {
+     "type": "Vim",
+     "xp": 14
+    }
+   ],
+   "detail": "reading: Vim+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 14,
+   "xpType": "Animal",
+   "targets": [
+    {
+     "type": "Animal",
+     "xp": 14
+    }
+   ],
+   "detail": "reading: Animal+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 14,
+   "xpType": "Corpus",
+   "targets": [
+    {
+     "type": "Corpus",
+     "xp": 14
+    }
+   ],
+   "detail": "reading: Corpus+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 14,
+   "xpType": "Herbam",
+   "targets": [
+    {
+     "type": "Herbam",
+     "xp": 14
+    }
+   ],
+   "detail": "reading: Herbam+14",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 15,
+   "xpType": "Mentem",
+   "targets": [
+    {
+     "type": "Mentem",
+     "xp": 15
+    }
+   ],
+   "detail": "reading: Mentem+15",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 12,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Creo",
+     "xp": 4
+    },
+    {
+     "type": "Terram",
+     "xp": 4
+    },
+    {
+     "type": "Magic Theory",
+     "xp": 4
+    }
+   ],
+   "detail": "adventuring: Creo+4, Terram+4, Magic Theory+4",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Teaching+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 26,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 26
+    }
+   ],
+   "detail": "teaching: Teaching+26",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Teaching+2",
    "covenant": null,
    "source": "foundry"
   }
