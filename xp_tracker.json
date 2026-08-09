@@ -56,11 +56,6 @@
  },
  "seasons": [
   {
-   "id": "1219-winter",
-   "label": "❄️ Winter 1219-20",
-   "year": 1219
-  },
-  {
    "id": "1220-spring",
    "label": "🌼 Spring 1220",
    "year": 1220
