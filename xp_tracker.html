@@ -155,6 +155,9 @@ function greyEmpty(m,s){
   const y=s.year;
   if(m.firstYear!=null && y<m.firstYear) return false;
   if(m.lastYear!=null && y>m.lastYear) return false;
+  // only years we've actually reviewed can be asserted as "confirmed no XP"; unreviewed years stay "not recorded"
+  const reviewed = DATA.meta.reviewedThrough;
+  if(reviewed==null || y>reviewed) return false;
   return (SEASON_IDX[s.id]??1e9) <= ASOF_IDX;
 }
 const emptyCell=(m,s)=>greyEmpty(m,s)?'<td class="noxp"></td>':'<td class="empty"></td>';

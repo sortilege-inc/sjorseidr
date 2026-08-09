@@ -4,7 +4,8 @@
   "schema_version": 1,
   "note": "Per-member, per-season log of covenant activity and XP. Filter by type (magi / companions / grogs) and by current ship. Cells are empty until filled in a follow-up pass. For magi, a season also records whether the activity was a covenant service; every member records whether a season activity was undertaken and any XP (type + amount).",
   "as_of": "Summer 1224",
-  "foundryConfirmed": "2026-08-09"
+  "foundryConfirmed": "2026-08-09",
+  "reviewedThrough": 1221
  },
  "ships": {
   "tide-of-memory": {
@@ -1065,11 +1066,11 @@
      "xp": 2
     },
     {
-     "type": "Spell Mastery: Mighty Torrent of Water",
+     "type": "Spell: Mighty Torrent of Water",
      "xp": 5
     }
    ],
-   "detail": "adventuring: Aquam+5, Code of Hermes+2, Spell Mastery: Mighty Torrent of Water+5",
+   "detail": "adventuring: Aquam+5, Code of Hermes+2, Spell: Mighty Torrent of Water+5",
    "covenant": null,
    "source": "foundry"
   },
