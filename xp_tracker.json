@@ -3,7 +3,8 @@
     "title": "XP & Season Activity Tracker",
     "schema_version": 1,
     "note": "Per-member, per-season log of covenant activity and XP. Filter by type (magi / companions / grogs) and by current ship. Cells are empty until filled in a follow-up pass. For magi, a season also records whether the activity was a covenant service; every member records whether a season activity was undertaken and any XP (type + amount).",
-    "as_of": "Summer 1224"
+    "as_of": "Summer 1224",
+    "foundryConfirmed": "2026-08-09"
   },
   "ships": {
     "tide-of-memory": {
@@ -217,8 +218,8 @@
     {
       "id": "Rosie",
       "name": "Rosie",
-      "type": "companion",
-      "role": "Companion",
+      "type": "familiar",
+      "role": "Familiar",
       "ship": "scholars-wake",
       "house": ""
     },
@@ -469,7 +470,8 @@
         }
       ],
       "detail": "learnSpell: Spell: Aegis of the Hearth+30",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dagmar::1221-summer": {
       "activity": true,
@@ -484,7 +486,8 @@
         }
       ],
       "detail": "reading: Terram+11",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dagmar::1222-winter": {
       "activity": true,
@@ -499,7 +502,8 @@
         }
       ],
       "detail": "reading: Finesse+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dagmar::1223-spring": {
       "activity": true,
@@ -514,7 +518,8 @@
         }
       ],
       "detail": "learnSpell: Spell: Unseen Porter+10",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dagmar::1223-fall": {
       "activity": true,
@@ -529,7 +534,8 @@
         }
       ],
       "detail": "reading: Mentem+11",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dagmar::1223-winter": {
       "activity": true,
@@ -544,7 +550,8 @@
         }
       ],
       "detail": "exposure: Enigmatic Wisdom+5",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1220-summer": {
       "activity": true,
@@ -559,7 +566,8 @@
         }
       ],
       "detail": "reading: Imaginem+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1220-fall": {
       "activity": true,
@@ -574,7 +582,8 @@
         }
       ],
       "detail": "reading: Creo+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1220-winter": {
       "activity": true,
@@ -589,7 +598,8 @@
         }
       ],
       "detail": "reading: Vim+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1220-spring": {
       "activity": true,
@@ -599,7 +609,8 @@
       "xpType": "",
       "targets": [],
       "detail": "none",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1221-spring": {
       "activity": true,
@@ -614,7 +625,8 @@
         }
       ],
       "detail": "reading: Animal+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1221-summer": {
       "activity": true,
@@ -629,7 +641,8 @@
         }
       ],
       "detail": "reading: Corpus+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1221-winter": {
       "activity": true,
@@ -644,7 +657,8 @@
         }
       ],
       "detail": "reading: Herbam+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1222-spring": {
       "activity": true,
@@ -659,7 +673,8 @@
         }
       ],
       "detail": "reading: Mentem+15",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1223-summer": {
       "activity": true,
@@ -682,7 +697,8 @@
         }
       ],
       "detail": "adventuring: Creo+4, Terram+4, Magic Theory+4",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1223-winter": {
       "activity": true,
@@ -697,7 +713,8 @@
         }
       ],
       "detail": "exposure: Teaching+2",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1223-fall": {
       "activity": true,
@@ -712,7 +729,8 @@
         }
       ],
       "detail": "teaching: Teaching+21",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Dustin Page::1224-spring": {
       "activity": true,
@@ -727,7 +745,8 @@
         }
       ],
       "detail": "exposure: Teaching+2",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1220-spring": {
       "activity": true,
@@ -742,7 +761,8 @@
         }
       ],
       "detail": "adventuring: Auram+5",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1220-summer": {
       "activity": true,
@@ -757,7 +777,8 @@
         }
       ],
       "detail": "teaching: Dead language (Latin)+19",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1220-winter": {
       "activity": true,
@@ -772,7 +793,8 @@
         }
       ],
       "detail": "learnSpell: Spell: Push of the Gentle Wave+15",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1220-fall": {
       "activity": true,
@@ -787,7 +809,8 @@
         }
       ],
       "detail": "exposure: Profession: Sailor+2",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1221-summer": {
       "activity": true,
@@ -802,7 +825,8 @@
         }
       ],
       "detail": "teaching: Dead language (Latin)+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1221-spring": {
       "activity": true,
@@ -812,7 +836,8 @@
       "xpType": "Minorenchantment",
       "targets": [],
       "detail": "minorEnchantment",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1221-fall": {
       "activity": true,
@@ -827,7 +852,8 @@
         }
       ],
       "detail": "reading: Intellego+10",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1221-winter": {
       "activity": true,
@@ -842,7 +868,8 @@
         }
       ],
       "detail": "reading: Corpus+13",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1222-spring": {
       "activity": true,
@@ -852,7 +879,8 @@
       "xpType": "Minorenchantment",
       "targets": [],
       "detail": "minorEnchantment",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1222-summer": {
       "activity": true,
@@ -862,7 +890,8 @@
       "xpType": "",
       "targets": [],
       "detail": "none",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1222-fall": {
       "activity": true,
@@ -877,14 +906,16 @@
         }
       ],
       "detail": "reading: Perdo+13",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1222-winter": {
       "activity": true,
       "deferred": true,
       "act": "inventSpell",
       "detail": "inventSpell: Spell: Grip of Ice+15",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1223-spring": {
       "activity": true,
@@ -899,7 +930,8 @@
         }
       ],
       "detail": "inventSpell: Spell: Grip of Ice+15",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1223-summer": {
       "activity": true,
@@ -918,7 +950,8 @@
         }
       ],
       "detail": "adventuring: Aquam+5, Code of Hermes+2",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Éogan Dobhartha::1224-spring": {
       "activity": true,
@@ -928,7 +961,8 @@
       "xpType": "",
       "targets": [],
       "detail": "none",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Valdemar Bjornsson::1222-fall": {
       "activity": true,
@@ -943,7 +977,8 @@
         }
       ],
       "detail": "reading: Magic Theory+15",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Valerian de Castellane::1222-fall": {
       "activity": true,
@@ -953,7 +988,8 @@
       "xpType": "Copying",
       "targets": [],
       "detail": "copying",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Stijntje Kuiper::1220-summer": {
       "activity": true,
@@ -968,7 +1004,8 @@
         }
       ],
       "detail": "teaching: Language: Latin+20",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Stijntje Kuiper::1220-fall": {
       "activity": true,
@@ -983,7 +1020,8 @@
         }
       ],
       "detail": "teaching: Artes Liberales+20",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Stijntje Kuiper::1220-winter": {
       "activity": true,
@@ -998,7 +1036,8 @@
         }
       ],
       "detail": "teaching: Philosophiae+20",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Stijntje Kuiper::1221-summer": {
       "activity": true,
@@ -1008,7 +1047,8 @@
       "xpType": "",
       "targets": [],
       "detail": "none",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Stijntje Kuiper::1223-spring": {
       "activity": true,
@@ -1023,7 +1063,8 @@
         }
       ],
       "detail": "teaching: Magic Theory+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Stijntje Kuiper::1223-summer": {
       "activity": true,
@@ -1046,7 +1087,8 @@
         }
       ],
       "detail": "adventuring: Code of Hermes+5, Animal Handling+5, Magic Theory+2",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Stijntje Kuiper::1223-winter": {
       "activity": true,
@@ -1061,7 +1103,8 @@
         }
       ],
       "detail": "teaching: Ignem+14",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Garrat Coffin::1221-summer": {
       "activity": true,
@@ -1071,7 +1114,8 @@
       "xpType": "Recovery",
       "targets": [],
       "detail": "recovery",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Garrat Coffin::1221-fall": {
       "activity": true,
@@ -1081,7 +1125,8 @@
       "xpType": "Recovery",
       "targets": [],
       "detail": "recovery",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Garrat Coffin::1221-winter": {
       "activity": true,
@@ -1091,7 +1136,8 @@
       "xpType": "Recovery",
       "targets": [],
       "detail": "recovery",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Garrat Coffin::1222-spring": {
       "activity": true,
@@ -1101,7 +1147,8 @@
       "xpType": "Recovery",
       "targets": [],
       "detail": "recovery",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Garrat Coffin::1223-spring": {
       "activity": true,
@@ -1111,7 +1158,8 @@
       "xpType": "",
       "targets": [],
       "detail": "none",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1220-spring": {
       "activity": true,
@@ -1121,7 +1169,8 @@
       "xpType": "Adventuring",
       "targets": [],
       "detail": "adventuring",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1220-summer": {
       "activity": true,
@@ -1136,7 +1185,8 @@
         }
       ],
       "detail": "practice: Language: (English)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1220-fall": {
       "activity": true,
@@ -1151,7 +1201,8 @@
         }
       ],
       "detail": "practice: Language: (Norwegian)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1220-winter": {
       "activity": true,
@@ -1166,7 +1217,8 @@
         }
       ],
       "detail": "practice: Language: (Flemish)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1221-spring": {
       "activity": true,
@@ -1181,7 +1233,8 @@
         }
       ],
       "detail": "practice: Language: (English)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1221-summer": {
       "activity": true,
@@ -1196,7 +1249,8 @@
         }
       ],
       "detail": "practice: Language: (English)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1221-fall": {
       "activity": true,
@@ -1211,7 +1265,8 @@
         }
       ],
       "detail": "practice: Language: (English)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1221-winter": {
       "activity": true,
@@ -1226,7 +1281,8 @@
         }
       ],
       "detail": "practice: Language: (Flemish)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1222-spring": {
       "activity": true,
@@ -1241,7 +1297,8 @@
         }
       ],
       "detail": "practice: Language: (Flemish)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1222-summer": {
       "activity": true,
@@ -1256,7 +1313,8 @@
         }
       ],
       "detail": "practice: Language: (Norwegian)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Ka'wa'ill::1222-fall": {
       "activity": true,
@@ -1271,7 +1329,8 @@
         }
       ],
       "detail": "practice: Language: (Norwegian)+3",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     },
     "Adam Smith::1220-spring": {
       "activity": true,
@@ -1281,7 +1340,8 @@
       "xpType": "",
       "targets": [],
       "detail": "none",
-      "covenant": null
+      "covenant": null,
+      "source": "foundry"
     }
   }
 }

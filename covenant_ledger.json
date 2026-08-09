@@ -7,8 +7,8 @@
    "founded": 1209,
    "tribunal": "Normandy"
   },
-  "baseline": "The state below is the covenant's current baseline, imported from the Foundry covenant actor (pulled 2026-08-09). Treat it as roughly 'as of' the 1224 play state, NOT a reconstructed 1209 origin — the Foundry actor lags the table (e.g. it still lists 5 ships) and its early history is incomplete. The ledger records dated changes from here.",
-  "asOf": "1224 (approx.)",
+  "baseline": "The 1221 node is the covenant's reliable anchor, imported from the Foundry covenant actor (which reads as end of Winter 1221). Earlier nodes and Current are reconstructed from it via the Ledger. Known data caveats: Wilhelm Stienauer is a Summer-1223 arrival (removed from 1221); Ka'wa'ill's recorded birth year (1220) is an error; vis stock is under review.",
+  "asOf": "1221 (anchor)",
   "caveat": "Pre-baseline history is approximate; the actor's early data is known to be wrong/incomplete.",
   "nodesNote": "Each node is the covenant's state at the end of Winter that year; 'Current' is the live state. Selecting a node re-renders every tab. Year nodes are empty skeletons until reconstructed — early data is known to be unreliable."
  },
@@ -68,112 +68,8 @@
   {
    "id": "1221",
    "label": "1221",
-   "sub": "end of Winter 1221-22",
+   "sub": "end of Winter 1221-22 (actor anchor)",
    "cutoff": "1222-03-20",
-   "populated": false,
-   "state": {
-    "aegis": null,
-    "penetration": null,
-    "regio": null,
-    "economics": {},
-    "ships": [],
-    "inhabitants": [],
-    "library": {
-     "books": [],
-     "labTexts": []
-    },
-    "vis": {
-     "stock": [],
-     "sources": []
-    },
-    "possessions": [],
-    "virtues": [],
-    "flaws": []
-   }
-  },
-  {
-   "id": "1222",
-   "label": "1222",
-   "sub": "end of Winter 1222-23",
-   "cutoff": "1223-03-20",
-   "populated": false,
-   "state": {
-    "aegis": null,
-    "penetration": null,
-    "regio": null,
-    "economics": {},
-    "ships": [],
-    "inhabitants": [],
-    "library": {
-     "books": [],
-     "labTexts": []
-    },
-    "vis": {
-     "stock": [],
-     "sources": []
-    },
-    "possessions": [],
-    "virtues": [],
-    "flaws": []
-   }
-  },
-  {
-   "id": "1223",
-   "label": "1223",
-   "sub": "end of Winter 1223-24",
-   "cutoff": "1224-03-20",
-   "populated": false,
-   "state": {
-    "aegis": null,
-    "penetration": null,
-    "regio": null,
-    "economics": {},
-    "ships": [],
-    "inhabitants": [],
-    "library": {
-     "books": [],
-     "labTexts": []
-    },
-    "vis": {
-     "stock": [],
-     "sources": []
-    },
-    "possessions": [],
-    "virtues": [],
-    "flaws": []
-   }
-  },
-  {
-   "id": "1224",
-   "label": "1224",
-   "sub": "end of Winter 1224-25",
-   "cutoff": "1225-03-20",
-   "populated": false,
-   "state": {
-    "aegis": null,
-    "penetration": null,
-    "regio": null,
-    "economics": {},
-    "ships": [],
-    "inhabitants": [],
-    "library": {
-     "books": [],
-     "labTexts": []
-    },
-    "vis": {
-     "stock": [],
-     "sources": []
-    },
-    "possessions": [],
-    "virtues": [],
-    "flaws": []
-   }
-  },
-  {
-   "id": "current",
-   "label": "Current",
-   "sub": "Summer 1224 (live)",
-   "cutoff": "9999",
    "populated": true,
    "state": {
     "aegis": 0,
@@ -246,28 +142,6 @@
     },
     "ships": [
      {
-      "id": "tide-of-memory",
-      "name": "Tide of Memory",
-      "aka": "",
-      "kind": "Cog",
-      "owner": "Dagmar",
-      "captain": "Absalom",
-      "status": "Active",
-      "lab": "Tide of Memory's Laboratory (30 pts)",
-      "note": "Originally covenant founder Solving Epicurusson's ship; inherited by Dagmar after Solving vanished into Twilight (1220). Carries Solving's summoning bell and astrolabe, and the cov"
-     },
-     {
-      "id": "brineborn",
-      "name": "Brineborn",
-      "aka": "",
-      "kind": "Hulk",
-      "owner": "Éogan Dobhartha",
-      "captain": "Rembrant de Wees",
-      "status": "Active",
-      "lab": "The Brineborn's Laboratory (10 pts)",
-      "note": "Éogan's ship, under sailing-captain Rembrant de Wees. As of Fall 1223, the vessel carrying the party's Ireland expedition."
-     },
-     {
       "id": "scholars-wake",
       "name": "The Scholar's Wake",
       "aka": "",
@@ -276,62 +150,51 @@
       "captain": "",
       "status": "Active",
       "lab": "The Scholar's Wake's Laboratory (10 pts)",
-      "note": "Dustin's ship and the covenant's main trade vessel — recruited Stijntje aboard in 1220; worked with merchant-agent Heynric the Merchant. Home to Rosie the pig and Dustin's apprenti"
+      "note": ""
      },
      {
-      "id": "storm-dragon",
-      "name": "Veðrdreki",
-      "aka": "Storm Dragon",
-      "kind": "Longship",
-      "owner": "Valdemar Bjornsson",
+      "id": "brineborn",
+      "name": "The Brineborn",
+      "aka": "",
+      "kind": "Hulk",
+      "owner": "Éogan Dobhartha",
       "captain": "",
       "status": "Active",
-      "lab": "Veðrdreki Laboratory (10 pts)",
-      "note": "Valdemar's personal Viking drakar — distinct from the main covenant fleet, used mainly for river/inland transit (e.g. up the Sarthe to Le Mans in Summer 1223)."
+      "lab": "The Brineborn's Laboratory (10 pts)",
+      "note": ""
      },
      {
-      "id": "adamant",
-      "name": "Adamant",
-      "aka": "",
-      "kind": "—",
-      "owner": "Valerian de Castellane",
-      "captain": "",
-      "status": "Active",
-      "lab": "The Adamant's Laboratory (10 pts)",
-      "note": "Valerian's ship — confirmed to be the fleet's fifth hull, commissioned at Bergen and given to Valerian on his arrival in 1222. Per Solving's own notes, the hull was earmarked from "
-     },
-     {
-      "id": "hound-of-cassel",
-      "name": "Hound of Cassel",
-      "aka": "the Tremere ship, formerly Scarem Montem's",
-      "kind": "Cog (mundane)",
-      "owner": "Wilhelm Stienauer",
-      "captain": "",
-      "status": "En route to Scarem Montem",
-      "lab": null,
-      "note": "Confirmed: this is the ship pirated from Scarem Montem — a Tremere-crewed vessel, raided by Valdemar's crew in Summer 1221. Yielded three magically-sealed chests and the letter tha"
-     },
-     {
-      "id": "maelstroms-maw",
-      "name": "Maelstrom's Maw",
-      "aka": "",
-      "kind": "Knarr",
-      "owner": "formerly Nequam of Tytalus, then Kor Ex Flambeau",
-      "captain": "",
-      "status": "On sabbatical",
-      "lab": "The Maelstrom's Maw's Laboratory (30 pts)",
-      "note": "Nequam's ship, handed to Kor Ex Flambeau in Summer 1220. Survived a sky-ship crash during a meteor storm (Winter 1220-21). Kor is currently on sabbatical — a covenant member in goo"
-     },
-     {
-      "id": "the-gloaming",
+      "id": "gloaming",
       "name": "The Gloaming",
       "aka": "",
       "kind": "Ketch",
-      "owner": "unclear",
+      "owner": "—",
       "captain": "",
-      "status": "No longer part of the covenant",
+      "status": "Active",
       "lab": "The Gloaming's Laboratory (10 pts)",
-      "note": "A former covenant ship, no longer with the fleet. Circumstances of its departure not yet recorded."
+      "note": ""
+     },
+     {
+      "id": "tide-of-memory",
+      "name": "Tide of Memory",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dagmar (inherited from Solving)",
+      "captain": "",
+      "status": "Active",
+      "lab": "Solving's Laboratory (30 pts)",
+      "note": ""
+     },
+     {
+      "id": "maelstroms-maw",
+      "name": "The Maelstrom's Maw",
+      "aka": "",
+      "kind": "Knarr",
+      "owner": "Kor Ex Flambeau",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Maelstrom's Maw Laboratory (30 pts)",
+      "note": ""
      }
     ],
     "inhabitants": [
@@ -1074,15 +937,6 @@
       "actorId": "Z1ke2ojytKqpYosh"
      },
      {
-      "name": "Willhelm Stienauer (old)",
-      "category": "magi",
-      "job": "House N/A",
-      "points": 5,
-      "yearBorn": 1198,
-      "qty": 1,
-      "actorId": "dhDSBRm7QhdhKenS"
-     },
-     {
       "name": "Éogan Dobhartha",
       "category": "magi",
       "job": "House Ex Miscellanea",
@@ -1269,6 +1123,110 @@
      "Poverty"
     ]
    }
+  },
+  {
+   "id": "1222",
+   "label": "1222",
+   "sub": "end of Winter 1222-23",
+   "cutoff": "1223-03-20",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
+  },
+  {
+   "id": "1223",
+   "label": "1223",
+   "sub": "end of Winter 1223-24",
+   "cutoff": "1224-03-20",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
+  },
+  {
+   "id": "1224",
+   "label": "1224",
+   "sub": "end of Winter 1224-25",
+   "cutoff": "1225-03-20",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
+  },
+  {
+   "id": "current",
+   "label": "Current",
+   "sub": "Summer 1224 (to reconstruct)",
+   "cutoff": "9999",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
   }
  ],
  "ledger": [
@@ -1326,6 +1284,15 @@
    "refs": [
     "c026"
    ]
+  },
+  {
+   "season": "Summer 1223",
+   "sort_iso": "1223-06-24",
+   "facet": "inhabitants",
+   "kind": "add",
+   "summary": "Wilhelm Stienauer (Bonisagus, Rhine guest) arrives",
+   "detail": "Joins the covenant as a guest magus in Summer 1223 — not present in the 1221 anchor snapshot.",
+   "refs": []
   }
  ]
 }

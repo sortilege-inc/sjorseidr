@@ -131,6 +131,7 @@ async function load(){
   $('#cname').textContent=`${esc(D.meta.identity.name)} — Covenant Ledger`;
   $('#caveat').textContent=D.meta.baseline;
   $('#foot').innerHTML=`Baseline from the Foundry covenant actor (~${esc(D.meta.asOf)}). Each node is the covenant at that year's end of Winter; <b>Current</b> is live. Year nodes fill in as we reconstruct them.`;
+  if(!N().populated){ const pop=D.nodes.filter(n=>n.populated); if(pop.length) node=pop[pop.length-1].id; } // open on latest populated node
   buildNodebar(); render();
 }
 function buildNodebar(){

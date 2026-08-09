@@ -59,6 +59,15 @@ table.xp th.rowhead{min-width:186px;max-width:186px;padding:5px 10px;line-height
 tr.t-magus th.rowhead{border-left:4px solid var(--rust-bright)}
 tr.t-companion th.rowhead{border-left:4px solid var(--teal)}
 tr.t-grog th.rowhead{border-left:4px solid var(--ink-soft)}
+tr.t-familiar th.rowhead{border-left:4px solid #6d3fa0}
+/* collapsible filter group */
+.filters{margin:14px 0 6px;border:1px solid rgba(120,90,40,.22);border-radius:8px;background:rgba(120,90,40,.05);overflow:hidden}
+.filters-head{width:100%;text-align:left;cursor:pointer;font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-soft);background:rgba(120,90,40,.1);border:none;padding:7px 12px}
+.filters-head:hover{color:var(--ink)}
+.filters-body{padding:6px 8px 2px}
+.filters-body .filterbar{margin:0 0 6px;background:transparent;border:none;padding:2px 2px}
+.filters.collapsed .filters-body{display:none}
 /* cells */
 table.xp td{width:52px;min-width:52px;height:38px;text-align:center;vertical-align:middle;padding:1px;
   background:rgba(255,251,242,.35);position:relative}
@@ -71,6 +80,8 @@ table.xp td.act .xp{font-weight:600;font-size:12px;color:var(--ink);line-height:
 table.xp td.act .xt{display:block;font-size:9px;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-soft)}
 table.xp td.cov{box-shadow:inset 3px 0 0 var(--gold-bright)}
 table.xp td.cov::before{content:"";position:absolute;top:2px;right:2px;width:6px;height:6px;border-radius:50%;background:var(--gold-bright)}
+/* Foundry-confirmed marker: a small teal wedge in the bottom-left corner */
+table.xp td.fdry{background-image:radial-gradient(circle at bottom left, var(--teal) 0 4px, transparent 4px)}
 tr.yr-alt td{background:rgba(120,90,40,.05)}
 .legend{margin-top:14px;font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:14px;align-items:center}
 .legend b{color:var(--ink);font-style:normal}
@@ -79,6 +90,7 @@ tr.yr-alt td{background:rgba(120,90,40,.05)}
 .sw.act{background:rgba(62,107,53,.28)}
 .sw.cov{box-shadow:inset 3px 0 0 var(--gold-bright)}
 .sw.cov::before{content:"";position:absolute;top:1px;right:1px;width:5px;height:5px;border-radius:50%;background:var(--gold-bright)}
+.sw.fdry{background-image:radial-gradient(circle at bottom left, var(--teal) 0 5px, transparent 5px)}
 .empty-note{text-align:center;color:var(--ink-soft);font-style:italic;padding:30px}
 footer{margin-top:22px;font-size:12px;color:var(--ink-soft);font-style:italic}
 </style>
@@ -91,8 +103,14 @@ footer{margin-top:22px;font-size:12px;color:var(--ink-soft);font-style:italic}
     <p class="subtitle" id="subtitle">—</p>
   </header>
 
-  <div class="filterbar" id="typebar"></div>
-  <div class="filterbar" id="shipbar"></div>
+  <div class="filters">
+    <button class="filters-head" id="filtersHead" aria-expanded="true">▾ Filters</button>
+    <div class="filters-body" id="filtersBody">
+      <div class="filterbar" id="typebar"></div>
+      <div class="filterbar" id="shipbar"></div>
+      <div class="filterbar" id="yearbar"></div>
+    </div>
+  </div>
   <div class="count" id="count"></div>
 
   <div class="scroller"><table class="xp" id="grid"></table></div>
@@ -118,7 +136,7 @@ function abbr(t){ if(!t) return ''; if(ART[t]) return ART[t];
   if(map[t]) return map[t];
   return t.length<=4 ? t : t.slice(0,4); }
 let DATA=null;
-let filter={type:'all',ship:'all'};
+let filter={type:'all',ship:'all',year:'all'};
 
 async function load(){
   try{ DATA=await (await fetch('./xp_tracker.json',{cache:'no-store'})).json(); }
@@ -126,10 +144,12 @@ async function load(){
   $('#subtitle').textContent=DATA.meta.note||'';
   $('#foot').innerHTML=`As of <b>${esc(DATA.meta.as_of||'')}</b>. `
     +`${DATA.members.length} members · ${DATA.seasons.length} seasons. Cells populate from <code>xp_tracker.json</code> — empty for now.`;
+  const head=$('#filtersHead'), body=$('#filtersBody'), box=head.parentElement;
+  head.onclick=()=>{ const c=box.classList.toggle('collapsed'); head.setAttribute('aria-expanded',!c); head.textContent=(c?'▸':'▾')+' Filters'; };
   renderFilters(); render();
 }
 function renderFilters(){
-  const types=[['all','All'],['magus','Magi'],['companion','Companions'],['grog','Grogs']];
+  const types=[['all','All'],['magus','Magi'],['companion','Companions'],['familiar','Familiars'],['grog','Grogs']];
   $('#typebar').innerHTML='<span class="label">Type</span>'+types.map(([v,l])=>{
     const n=v==='all'?DATA.members.length:DATA.members.filter(m=>m.type===v).length;
     return `<button class="fbtn ${filter.type===v?'on':''}" data-type="${v}">${l} <span class="n">${n}</span></button>`;}).join('');
@@ -141,34 +161,44 @@ function renderFilters(){
       const sm=DATA.ships[id];
       return `<button class="fbtn ${filter.ship===id?'on':''}" data-ship="${id}"><span class="dot" style="background:${SHIP_COLOR[id]||'#888'}"></span>${esc(sm.name)} <span class="n">${n}</span></button>`;
     }).join('');
+  const years=[...new Set(DATA.seasons.map(s=>s.year))].sort();
+  $('#yearbar').innerHTML='<span class="label">Year</span>'
+    +`<button class="fbtn ${filter.year==='all'?'on':''}" data-year="all">All years</button>`
+    +years.map(y=>`<button class="fbtn ${filter.year==y?'on':''}" data-year="${y}">${y} <span class="n">${DATA.seasons.filter(s=>s.year==y).length}</span></button>`).join('');
   document.querySelectorAll('#typebar .fbtn').forEach(b=>b.onclick=()=>{filter.type=b.dataset.type;renderFilters();render();});
   document.querySelectorAll('#shipbar .fbtn').forEach(b=>b.onclick=()=>{filter.ship=b.dataset.ship;renderFilters();render();});
+  document.querySelectorAll('#yearbar .fbtn').forEach(b=>b.onclick=()=>{filter.year=b.dataset.year;renderFilters();render();});
 }
+function shownSeasons(){ return DATA.seasons.filter(s=>filter.year==='all'||s.year==filter.year); }
 function cell(member,season){
   const e=(DATA.entries||{})[member.id+'::'+season.id];
   if(!e || !e.activity) return '<td class="empty"></td>';
   const cov = (member.type==='magus' && e.covenant);
   const base=`${member.name} — ${season.label}`;
   const hasXp = e.xp!=null && e.xp!==0 && !e.deferred;
+  const fdry = e.source==='foundry';
   if(!hasXp){                                 // activity underway; XP credited in the culmination season
-    const cls=['ong']; if(cov) cls.push('cov');
-    const t=`${base}\n${e.detail||e.act||'activity'}`+(e.deferred?' (XP credited in a later season)':'');
+    const cls=['ong']; if(cov) cls.push('cov'); if(fdry) cls.push('fdry');
+    const t=`${base}\n${e.detail||e.act||'activity'}`+(e.deferred?' (XP credited in a later season)':'')+(fdry?'\n(confirmed in Foundry)':'');
     return `<td class="${cls.join(' ')}" title="${esc(t)}"></td>`;
   }
-  const cls=['act']; if(cov) cls.push('cov');
+  const cls=['act']; if(cov) cls.push('cov'); if(fdry) cls.push('fdry');
   const xt = e.xpType?`<span class="xt">${esc(abbr(e.xpType))}</span>`:'';
   const brk = (e.targets&&e.targets.length) ? e.targets.map(x=>`${x.type} +${x.xp}`).join(', ')
             : (e.xpType?`${e.xpType} +${e.xp}`:'');
-  const t=`${base}\n${e.act?e.act+': ':''}${brk}`+(member.type==='magus'?`\nCovenant: ${e.covenant?'yes':'—'}`:'');
+  const t=`${base}\n${e.act?e.act+': ':''}${brk}`+(member.type==='magus'?`\nCovenant: ${e.covenant?'yes':'—'}`:'')+(fdry?'\n(confirmed in Foundry)':'');
   return `<td class="${cls.join(' ')}" title="${esc(t)}"><span class="xp">+${e.xp}</span>${xt}</td>`;
 }
 function render(){
   const members=DATA.members.filter(m=>
     (filter.type==='all'||m.type===filter.type) && (filter.ship==='all'||m.ship===filter.ship));
+  const seasons=shownSeasons();
   $('#count').textContent = `Showing ${members.length} of ${DATA.members.length} members`
-    + (filter.type!=='all'||filter.ship!=='all' ? ` — ${[filter.type!=='all'?filter.type:null, filter.ship!=='all'?(DATA.ships[filter.ship]?.name):null].filter(Boolean).join(' · ')}` : '');
+    + `, ${seasons.length} seasons`
+    + ([filter.type!=='all'?filter.type:null, filter.ship!=='all'?(DATA.ships[filter.ship]?.name):null, filter.year!=='all'?filter.year:null].filter(Boolean).length
+       ? ` — ${[filter.type!=='all'?filter.type:null, filter.ship!=='all'?(DATA.ships[filter.ship]?.name):null, filter.year!=='all'?filter.year:null].filter(Boolean).join(' · ')}` : '');
   const head='<thead><tr><th class="corner">Member</th>'
-    + DATA.seasons.map(s=>{
+    + seasons.map(s=>{
         const [em,...rest]=s.label.split(' ');
         return `<th><span class="se">${esc(em)}</span><span class="yr">${esc(rest.join(' '))}</span></th>`;
       }).join('') + '</tr></thead>';
@@ -177,13 +207,15 @@ function render(){
     const sub = m.type==='magus' ? esc(m.house||'Magus')
       : esc((m.role||'').replace(/,.*$/,''));
     const rh=`<th class="rowhead"><div class="mname"><span class="sdot" style="background:${color}" title="${esc(DATA.ships[m.ship]?.name||'')}"></span>${esc(m.name)}</div><div class="msub">${sub}</div></th>`;
-    return `<tr class="t-${m.type}">${rh}${DATA.seasons.map(s=>cell(m,s)).join('')}</tr>`;
+    return `<tr class="t-${m.type}">${rh}${seasons.map(s=>cell(m,s)).join('')}</tr>`;
   }).join('');
   $('#grid').innerHTML = head + '<tbody>'+ (rows||'') +'</tbody>';
   if(!members.length) $('#grid').innerHTML = head+'<tbody><tr><td class="empty-note" colspan="'+(DATA.seasons.length+1)+'">No members match this filter.</td></tr></tbody>';
+  const fc=DATA.meta.foundryConfirmed;
   $('#legend').innerHTML =
     `<span class="chip"><span class="sw act"></span> season activity + XP (hover for the breakdown)</span>`
    +`<span class="chip"><span class="sw act cov"></span> <b>magi:</b> covenant activity</span>`
+   +`<span class="chip"><span class="sw act fdry"></span> confirmed in Foundry${fc?` <span style="color:var(--ink-soft)">(last pull ${esc(fc)})</span>`:''}</span>`
    +`<span class="chip"><span class="sw">—</span> activity underway / XP credited a later season</span>`
    +`<span class="chip"><span class="sw">·</span> not yet recorded</span>`
    +`<span class="chip" style="color:var(--ink-soft)">Row border &amp; dot = type &amp; ship.</span>`;
