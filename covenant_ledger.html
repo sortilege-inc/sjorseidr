@@ -96,6 +96,28 @@ tr:hover td{background:rgba(198,155,63,.08)}
 .levent p{margin:0;font-size:13px;color:var(--ink-soft);line-height:1.5}
 .f-ships{background:var(--teal)} .f-economics{background:var(--gold)} .f-vis{background:var(--purple)}
 .f-library{background:var(--green)} .f-inhabitants{background:var(--rust-bright)} .f-note{background:var(--ink-soft)}
+/* vis — pawn rows */
+.viewtoggle{display:flex;gap:4px;margin:2px 0 12px}
+.viewtoggle .fbtn{font-family:'Cinzel',serif;font-size:11px;cursor:pointer;border:1px solid rgba(120,90,40,.3);
+  background:rgba(244,235,213,.6);color:var(--ink-soft);padding:3px 12px;border-radius:13px}
+.viewtoggle .fbtn.on{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:#fff6df;border-color:#7a5318;font-weight:600}
+.visrow{display:flex;align-items:center;gap:10px;padding:6px 2px;border-bottom:1px dashed rgba(120,90,40,.22)}
+.visrow:last-of-type{border-bottom:none}
+.visrow .vislabel{flex:0 0 148px;font-family:'Cinzel',serif;font-size:12.5px;color:var(--ink);display:flex;align-items:center;gap:7px}
+.visrow .vislabel .sw{width:11px;height:11px;border-radius:50%;flex:none;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.visrow .vislabel .q{font-family:'EB Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-soft);font-weight:400}
+.pawns{display:flex;flex-wrap:wrap;gap:0 1px;align-items:center;line-height:1}
+.pawn{font-size:19px;line-height:1.15;filter:drop-shadow(0 1px 0 rgba(255,250,240,.5))}
+.pawn.ghost{opacity:.26} .pawn.surplus{filter:drop-shadow(0 0 2px rgba(181,74,50,.7))}
+.vis-none{color:var(--ink-soft);font-style:italic;font-size:12.5px;padding:4px 0}
+.leg{display:flex;flex-wrap:wrap;gap:5px 11px;margin:11px 0 2px;font-size:11px;color:var(--ink-soft)}
+.leg .chip{display:inline-flex;align-items:center;gap:3px}
+.leg .pawn{font-size:15px}
+.srcrow{display:flex;align-items:center;gap:10px;padding:7px 2px;border-bottom:1px dashed rgba(120,90,40,.22)}
+.srcrow:last-child{border-bottom:none}
+.srcrow .nm{flex:0 0 200px;font-size:13px;color:var(--ink)}
+.srcrow .cmp{font-family:'Cinzel',serif;font-size:12px;color:var(--ink-soft);white-space:nowrap;margin-left:auto}
+.srcrow .cmp .short{color:var(--rust-bright);font-weight:600} .srcrow .cmp .met{color:var(--green);font-weight:600}
 footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);font-size:12px;color:var(--ink-soft);font-style:italic}
 @media(max-width:640px){.cols{columns:1}}
 </style>
@@ -123,7 +145,17 @@ const $=s=>document.querySelector(s);
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let D=null, tab='overview', ledgerFilter='all', node='current';
 const TABS=[['overview','Overview'],['ships','Ships & Labs'],['inhabitants','Inhabitants'],
-  ['library','Library & Vis'],['economics','Economics'],['ledger','Ledger']];
+  ['library','Library'],['vis','Vis'],['economics','Economics'],['ledger','Ledger']];
+let visStockView='type';
+// The Fifteen Arts, in canonical order, each a distinct rainbow hue tuned to sit on parchment.
+const PAWN='♟︎';   // ♟ forced to text (not emoji) so `color` applies
+const ART_ORDER=['cr','in','mu','pe','re','an','aq','au','co','he','ig','im','me','te','vi'];
+const ART_NAME={cr:'Creo',in:'Intellego',mu:'Muto',pe:'Perdo',re:'Rego',an:'Animal',aq:'Aquam',au:'Auram',
+  co:'Corpus',he:'Herbam',ig:'Ignem',im:'Imaginem',me:'Mentem',te:'Terram',vi:'Vim'};
+const ART_ABBR={cr:'Cr',in:'In',mu:'Mu',pe:'Pe',re:'Re',an:'An',aq:'Aq',au:'Au',co:'Co',he:'He',ig:'Ig',im:'Im',me:'Me',te:'Te',vi:'Vi'};
+const artColor=a=>{const i=ART_ORDER.indexOf(a);return i<0?'#6b5436':`hsl(${Math.round(i*360/15)} 54% 43%)`;};
+const pawnSpan=(a,cls)=>`<span class="pawn${cls?' '+cls:''}" style="color:${artColor(a)}">${PAWN}</span>`;
+const pawnRun=(a,n)=>pawnSpan(a).repeat(Math.max(0,n|0));
 
 async function load(){
   try{ D=await (await fetch('./covenant_ledger.json',{cache:'no-store'})).json(); }
@@ -150,7 +182,8 @@ function facetReady(t){
   if(t==='overview'||t==='ledger') return true;
   if(t==='ships') return (st.ships||[]).length>0;
   if(t==='inhabitants') return (st.inhabitants||[]).length>0;
-  if(t==='library') return ((st.library.books||[]).length+(st.library.labTexts||[]).length+(st.vis.stock||[]).length+(st.vis.sources||[]).length)>0;
+  if(t==='library') return ((st.library.books||[]).length+(st.library.labTexts||[]).length)>0;
+  if(t==='vis') return ((st.vis.stock||[]).length+(st.vis.sources||[]).length)>0;
   if(t==='economics') return st.economics && Object.keys(st.economics).length>0;
   return true;
 }
@@ -179,7 +212,8 @@ function render(){
     let cnt='';
     if(k==='ledger') cnt=ledgerUpTo().length;
     else if(n.populated && facetReady(k)) cnt = k==='ships'?st.ships.length : k==='inhabitants'?inhabCount()
-      : k==='library'?(st.library.books.length+st.library.labTexts.length) : '';
+      : k==='library'?(st.library.books.length+st.library.labTexts.length)
+      : k==='vis'?st.vis.stock.length : '';
     return `<div class="tab ${tab===k?'on':''}" data-tab="${k}">${l}${cnt!==''?` <span class="n">${cnt}</span>`:''}</div>`;}).join('');
   document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;render();});
   let html;
@@ -193,17 +227,18 @@ function render(){
   } else html=PANELS[tab]();
   $('#panels').innerHTML=`<div class="panel on">${html}</div>`;
   if(tab==='ledger') wireLedger();
+  if(tab==='vis') wireVis();
 }
 const PANELS={
   overview(){ const e=s().economics; const na='<span style="color:var(--ink-soft);font-style:italic">not yet reconstructed</span>';
-    const libReady=facetReady('library');
+    const libReady=facetReady('library'), visReady=facetReady('vis');
     return `<p class="section-sub">The covenant at a glance. Detailed facets are on the tabs above; changes over time are in the Ledger.</p>
      <div class="grid">
       <div class="card"><h2 class="sh" style="margin-top:0">Standing</h2>
         <div class="econ-row"><span>Ships</span><b>${s().ships.length}</b></div>
         <div class="econ-row"><span>Inhabitants</span><b>${s().inhabitants.length}</b></div>
         <div class="econ-row"><span>Library (books · lab texts)</span><b>${libReady?`${s().library.books.length} · ${s().library.labTexts.length}`:na}</b></div>
-        <div class="econ-row"><span>Vis (stocks · sources)</span><b>${libReady?`${s().vis.stock.length} · ${s().vis.sources.length}`:na}</b></div>
+        <div class="econ-row"><span>Vis (stocks · sources)</span><b>${visReady?`${s().vis.stock.length} · ${s().vis.sources.length}`:na}</b></div>
         <div class="econ-row"><span>Income · Expenditure</span><b>${hasEcon()?`${e.totalIncome} · ${e.totalExpenditure} £`:na}</b></div>
       </div>
       <div class="card"><h2 class="sh" style="margin-top:0">Boons &amp; Hooks</h2>
@@ -273,15 +308,66 @@ const PANELS={
     return html;
   },
   library(){
-    const L=s().library, V=s().vis;
+    const L=s().library;
     return `<h2 class="sh" style="margin-top:0">Library <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${L.books.length} books, ${L.labTexts.length} lab texts</span></h2>
       <div class="cols">${L.books.map(b=>`<div class="row">📖 ${esc(b)}</div>`).join('')}</div>
       <h2 class="sh">Laboratory texts <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${L.labTexts.length}</span></h2>
-      <div class="cols">${L.labTexts.map(b=>`<div class="row">📜 ${esc(b)}</div>`).join('')}</div>
-      <h2 class="sh">Vis</h2>
-      <p class="section-sub" style="margin-bottom:6px">${V.stock.length} stocks · ${V.sources.length} sources <span style="color:var(--rust-bright)">(the 1224 prize sources are in the Ledger; the actor predates them)</span></p>
-      <div><b style="font-family:Cinzel">Sources</b><br>${V.sources.map(x=>`<span class="pill">${esc(x.name)}</span>`).join('')||'—'}</div>
-      <div style="margin-top:8px"><b style="font-family:Cinzel">Stock</b><br>${V.stock.map(x=>`<span class="pill">${esc(x.name)}${x.q?` ×${esc(x.q)}`:''}</span>`).join('')||'—'}</div>`;
+      <div class="cols">${L.labTexts.map(b=>`<div class="row">📜 ${esc(b)}</div>`).join('')}</div>`;
+  },
+  vis(){
+    const V=s().vis, stock=V.stock||[], sources=V.sources||[];
+    const totalPawns=stock.reduce((a,x)=>a+(x.q||0),0);
+    const view=visStockView;
+    let stockHtml;
+    if(!stock.length) stockHtml='<p class="vis-none">No vis in stock at this node.</p>';
+    else if(view==='type'){
+      const byArt={}; stock.forEach(x=>{const a=x.art||'?';(byArt[a]=byArt[a]||[]).push(x);});
+      const arts=ART_ORDER.filter(a=>byArt[a]).concat(Object.keys(byArt).filter(a=>!ART_ORDER.includes(a)))
+        .filter(a=>byArt[a].reduce((t,x)=>t+(x.q||0),0)>0);
+      stockHtml=arts.map(a=>{
+        const items=byArt[a]; const q=items.reduce((t,x)=>t+(x.q||0),0);
+        const tip=items.map(x=>`${x.name} ×${x.q||0}`).join(', ');
+        return `<div class="visrow"><span class="vislabel"><span class="sw" style="background:${artColor(a)}"></span>${esc(ART_NAME[a]||a)} <span class="q">${q}</span></span><span class="pawns" title="${esc(tip)}">${pawnRun(a,q)}</span></div>`;
+      }).join('');
+    } else {
+      const bySrc={}; stock.forEach(x=>{const k=x.source||'__un';(bySrc[k]=bySrc[k]||[]).push(x);});
+      const keys=Object.keys(bySrc).sort((a,b)=>a==='__un'?1:b==='__un'?-1:a.localeCompare(b));
+      stockHtml=keys.map(k=>{
+        const items=bySrc[k]; const q=items.reduce((t,x)=>t+(x.q||0),0);
+        const pawns=items.map(x=>pawnRun(x.art,x.q||0)).join('');
+        const tip=items.map(x=>`${x.name} — ${ART_NAME[x.art]||x.art||'?'} ×${x.q||0}`).join(', ');
+        const nm=k==='__un'?'Unattributed':k;
+        return `<div class="visrow"><span class="vislabel">${esc(nm)} <span class="q">${q}</span></span><span class="pawns" title="${esc(tip)}">${pawns}</span></div>`;
+      }).join('');
+      if(stock.every(x=>!x.source)) stockHtml+=`<p class="vis-none">No per-lot source attribution recorded yet — tag stock lots with a <code>source</code> to split this view.</p>`;
+    }
+    const legend=`<div class="leg">${ART_ORDER.map(a=>`<span class="chip">${pawnSpan(a)}${ART_ABBR[a]}</span>`).join('')}</div>`;
+    let srcHtml;
+    if(!sources.length) srcHtml='<p class="vis-none">No vis sources recorded at this node.</p>';
+    else srcHtml=sources.map(src=>{
+      const art=src.art, exp=src.expected, rec=src.received;
+      const hasNums = exp!=null || rec!=null;
+      let pawns='', cmp;
+      if(hasNums){
+        const r=rec==null?0:rec;
+        const base=exp==null?r:Math.min(r,exp);
+        const surplus=(exp!=null&&r>exp)?pawnSpan(art,'surplus').repeat(r-exp):'';
+        const ghosts=(exp!=null&&r<exp)?pawnSpan(art,'ghost').repeat(exp-r):'';
+        pawns=pawnRun(art,base)+surplus+ghosts;
+        const cls=exp==null?'':(r>=exp?'met':'short');
+        cmp=`<span class="cmp"><span class="${cls}">${rec==null?'—':r}</span> / ${exp==null?'—':exp}${art?` · ${ART_ABBR[art]||art}`:''}</span>`;
+      } else {
+        cmp=`<span class="cmp">received — / expected — <em>(not recorded)</em></span>`;
+      }
+      return `<div class="srcrow"><span class="nm">${esc(src.name)}</span><span class="pawns">${pawns}</span>${cmp}</div>`;
+    }).join('');
+    return `<p class="section-sub">The covenant's raw vis — what's in the vaults, and what each source yielded this year against expectation.</p>
+      <h2 class="sh" style="margin-top:4px">Stock <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${totalPawns} pawn${totalPawns===1?'':'s'} in ${stock.length} lot${stock.length===1?'':'s'}</span></h2>
+      <div class="viewtoggle"><button class="fbtn ${view==='type'?'on':''}" data-view="type">By type</button><button class="fbtn ${view==='source'?'on':''}" data-view="source">By source</button></div>
+      ${stockHtml}
+      ${stock.length?legend:''}
+      <h2 class="sh">Sources <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— pawns received this year vs. expected</span></h2>
+      ${srcHtml}`;
   },
   economics(){
     const e=s().economics;
@@ -315,6 +401,7 @@ const PANELS={
   }
 };
 function wireLedger(){ document.querySelectorAll('.ledger .fbtn').forEach(b=>b.onclick=()=>{ledgerFilter=b.dataset.f;render();}); }
+function wireVis(){ document.querySelectorAll('.viewtoggle .fbtn').forEach(b=>b.onclick=()=>{visStockView=b.dataset.view;render();}); }
 load();
 </script>
 </body>
