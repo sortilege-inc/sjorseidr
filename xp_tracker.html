@@ -75,6 +75,9 @@ table.xp tbody tr:hover td{background:rgba(198,155,63,.10)}
 table.xp td.empty::after{content:"·";color:rgba(120,90,40,.35)}
 table.xp td.noxp{background:rgba(74,60,44,.16)}
 table.xp tbody tr:hover td.noxp{background:rgba(74,60,44,.22)}
+/* seasons before the character joined the covenant — not tracked */
+table.xp td.pre{background:rgba(24,17,10,.66)}
+table.xp tbody tr:hover td.pre{background:rgba(24,17,10,.7)}
 table.xp td.ong{background:rgba(120,90,40,.07)}
 table.xp td.ong::after{content:"—";color:rgba(120,90,40,.6)}
 table.xp td.act{background:rgba(62,107,53,.14)}
@@ -99,6 +102,7 @@ table.xp td.multi::after{content:none}
 .sw{width:15px;height:15px;border-radius:3px;border:1px solid rgba(120,90,40,.4);display:inline-block;position:relative}
 .sw.act{background:rgba(62,107,53,.28)}
 .sw.noxp{background:rgba(74,60,44,.28)}
+.sw.pre{background:rgba(24,17,10,.66)}
 .sw.cov{box-shadow:inset 3px 0 0 var(--gold-bright)}
 .sw.cov::before{content:"";position:absolute;top:1px;right:1px;width:5px;height:5px;border-radius:50%;background:var(--gold-bright)}
 .sw.fdry{background-image:radial-gradient(circle at bottom left, var(--teal) 0 5px, transparent 5px)}
@@ -146,21 +150,22 @@ function abbr(t){ if(!t) return ''; if(ART[t]) return ART[t];
     'Practice':'Prac','Reading':'Read','Learnspell':'Lrn'};
   if(map[t]) return map[t];
   return t.length<=4 ? t : t.slice(0,4); }
-let DATA=null, SEASON_IDX={}, ASOF_IDX=0;
+let DATA=null, SEASON_IDX={}, ASOF_IDX=0, REVIEW_IDX=0;
 let filter={type:'all',ship:'all',year:'all'};
-// A blank cell is "no XP earned" (grey) when the character was in the covenant that
-// season and it's at/before the current game edge (meta.as_of); otherwise just "not recorded".
+// Seasons before a character joined the covenant are "very dark" — we don't track XP there.
+function preCovenant(m,s){ return m.firstYear!=null && s.year < m.firstYear; }
+// A blank in-covenant season is "no XP earned" (grey) when it's within the reviewed range
+// (meta.reviewedThroughSeason); otherwise just "not recorded". Magi never grey — a blank
+// magus season is an omission, not confirmed no-XP.
 function greyEmpty(m,s){
-  if(m.type==='magus') return false;   // magi always advance — a blank magus season is an omission, not "no XP"
-  const y=s.year;
-  if(m.firstYear!=null && y<m.firstYear) return false;
-  if(m.lastYear!=null && y>m.lastYear) return false;
-  // only years we've actually reviewed can be asserted as "confirmed no XP"; unreviewed years stay "not recorded"
-  const reviewed = DATA.meta.reviewedThrough;
-  if(reviewed==null || y>reviewed) return false;
-  return (SEASON_IDX[s.id]??1e9) <= ASOF_IDX;
+  if(preCovenant(m,s)) return false;
+  if(m.type==='magus') return false;
+  if(m.lastYear!=null && s.year>m.lastYear) return false;
+  return (SEASON_IDX[s.id]??1e9) <= REVIEW_IDX;
 }
-const emptyCell=(m,s)=>greyEmpty(m,s)?'<td class="noxp"></td>':'<td class="empty"></td>';
+const emptyCell=(m,s)=> preCovenant(m,s) ? '<td class="pre"></td>'
+                      : greyEmpty(m,s)   ? '<td class="noxp"></td>'
+                      : '<td class="empty"></td>';
 
 async function load(){
   try{ DATA=await (await fetch('./xp_tracker.json',{cache:'no-store'})).json(); }
@@ -169,6 +174,7 @@ async function load(){
   SEASON_IDX={}; DATA.seasons.forEach((s,i)=>SEASON_IDX[s.id]=i);
   ASOF_IDX=DATA.seasons.findIndex(s=>(s.label||'').includes(DATA.meta.as_of||' '));
   if(ASOF_IDX<0) ASOF_IDX=DATA.seasons.length-1;
+  REVIEW_IDX = (DATA.meta.reviewedThroughSeason in SEASON_IDX) ? SEASON_IDX[DATA.meta.reviewedThroughSeason] : ASOF_IDX;
   $('#foot').innerHTML=`As of <b>${esc(DATA.meta.as_of||'')}</b>. `
     +`${DATA.members.length} members · ${DATA.seasons.length} seasons. Cells populate from <code>xp_tracker.json</code> — empty for now.`;
   const head=$('#filtersHead'), body=$('#filtersBody'), box=head.parentElement;
@@ -267,7 +273,8 @@ function render(){
    +`<span class="chip"><span class="sw act fdry"></span> confirmed in Foundry${fc?` <span style="color:var(--ink-soft)">(last pull ${esc(fc)})</span>`:''}</span>`
    +`<span class="chip"><span class="sw">—</span> activity underway / XP credited a later season</span>`
    +`<span class="chip"><span class="sw noxp"></span> in covenant, no XP that season</span>`
-   +`<span class="chip"><span class="sw">·</span> not recorded / not in covenant</span>`
+   +`<span class="chip"><span class="sw pre"></span> before joining the covenant — not tracked</span>`
+   +`<span class="chip"><span class="sw">·</span> not recorded (unreviewed)</span>`
    +`<span class="chip" style="color:var(--ink-soft)">Row border &amp; dot = type &amp; ship.</span>`;
 }
 load();
