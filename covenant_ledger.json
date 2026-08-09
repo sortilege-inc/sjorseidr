@@ -1,1110 +1,1276 @@
 {
  "meta": {
   "title": "Covenant Ledger — Sjórseiðr",
-  "schema_version": 1,
-  "baseline": "The state below is the covenant's current baseline, imported from the Foundry covenant actor (pulled 2026-08-09). Treat it as roughly 'as of' the 1224 play state, NOT a reconstructed 1209 origin — the Foundry actor lags the table (e.g. it still lists 5 ships) and its early history is incomplete. The ledger records dated changes from here.",
-  "asOf": "1224 (approx.)",
-  "caveat": "Pre-baseline history is approximate; the actor's early data is known to be wrong/incomplete."
- },
- "state": {
+  "schema_version": 2,
   "identity": {
    "name": "Sjórseiðr",
    "founded": 1209,
-   "tribunal": "Normandy",
-   "aegis": 0,
-   "penetration": 0,
-   "regio": 0
+   "tribunal": "Normandy"
   },
-  "economics": {
-   "wealth": 0,
-   "totalIncome": 319,
-   "baseExpenditure": 194,
-   "costSavings": 0,
-   "totalExpenditure": 194,
-   "inhabitantsPoints": 137,
-   "laboratoriesPoints": 255,
-   "weaponsPoints": 110,
-   "averageEquipMaintenance": 5,
-   "incomeSources": [
-    {
-     "name": "Improved Trade & Transport",
-     "type": "Typical",
-     "incoming": 44
-    },
-    {
-     "name": "Line of Credit - Bruges",
-     "type": "Credit",
-     "incoming": 275
-    }
-   ],
-   "yearlyExpenses": {
-    "buildings": {
-     "amount": 14,
-     "notes": ""
-    },
-    "consumables": {
-     "amount": 28,
-     "notes": ""
-    },
-    "laboratories": {
-     "amount": 26,
-     "notes": ""
-    },
-    "provisions": {
-     "amount": 69,
-     "notes": ""
-    },
-    "wages": {
-     "amount": 28,
-     "notes": ""
-    },
-    "weapons": {
-     "amount": 1,
-     "notes": ""
-    },
-    "writingMaterials": {
-     "amount": 8,
-     "notes": ""
-    },
-    "tithes": {
-     "amount": 0,
-     "notes": ""
-    },
-    "inflation": {
-     "amount": 0,
-     "notes": ""
-    },
-    "sundry": {
-     "amount": 20,
-     "notes": "New crew for the Veðrdreki"
-    }
-   }
-  },
-  "ships": [
-   {
-    "id": "tide-of-memory",
-    "name": "Tide of Memory",
-    "aka": "",
-    "kind": "Cog",
-    "owner": "Dagmar",
-    "captain": "Absalom",
-    "status": "Active",
-    "lab": "Tide of Memory's Laboratory (30 pts)",
-    "note": "Originally covenant founder Solving Epicurusson's ship; inherited by Dagmar after Solving vanished into Twilight (1220). Carries Solving's summoning bell and astrolabe, and the cov"
-   },
-   {
-    "id": "brineborn",
-    "name": "Brineborn",
-    "aka": "",
-    "kind": "Hulk",
-    "owner": "Éogan Dobhartha",
-    "captain": "Rembrant de Wees",
-    "status": "Active",
-    "lab": "The Brineborn's Laboratory (10 pts)",
-    "note": "Éogan's ship, under sailing-captain Rembrant de Wees. As of Fall 1223, the vessel carrying the party's Ireland expedition."
-   },
-   {
-    "id": "scholars-wake",
-    "name": "The Scholar's Wake",
-    "aka": "",
-    "kind": "Cog",
-    "owner": "Dustin Page",
-    "captain": "",
-    "status": "Active",
-    "lab": "The Scholar's Wake's Laboratory (10 pts)",
-    "note": "Dustin's ship and the covenant's main trade vessel — recruited Stijntje aboard in 1220; worked with merchant-agent Heynric the Merchant. Home to Rosie the pig and Dustin's apprenti"
-   },
-   {
-    "id": "storm-dragon",
-    "name": "Veðrdreki",
-    "aka": "Storm Dragon",
-    "kind": "Longship",
-    "owner": "Valdemar Bjornsson",
-    "captain": "",
-    "status": "Active",
-    "lab": "Veðrdreki Laboratory (10 pts)",
-    "note": "Valdemar's personal Viking drakar — distinct from the main covenant fleet, used mainly for river/inland transit (e.g. up the Sarthe to Le Mans in Summer 1223)."
-   },
-   {
-    "id": "adamant",
-    "name": "Adamant",
-    "aka": "",
-    "kind": "—",
-    "owner": "Valerian de Castellane",
-    "captain": "",
-    "status": "Active",
-    "lab": "The Adamant's Laboratory (10 pts)",
-    "note": "Valerian's ship — confirmed to be the fleet's fifth hull, commissioned at Bergen and given to Valerian on his arrival in 1222. Per Solving's own notes, the hull was earmarked from "
-   },
-   {
-    "id": "hound-of-cassel",
-    "name": "Hound of Cassel",
-    "aka": "the Tremere ship, formerly Scarem Montem's",
-    "kind": "Cog (mundane)",
-    "owner": "Wilhelm Stienauer",
-    "captain": "",
-    "status": "En route to Scarem Montem",
-    "lab": null,
-    "note": "Confirmed: this is the ship pirated from Scarem Montem — a Tremere-crewed vessel, raided by Valdemar's crew in Summer 1221. Yielded three magically-sealed chests and the letter tha"
-   },
-   {
-    "id": "maelstroms-maw",
-    "name": "Maelstrom's Maw",
-    "aka": "",
-    "kind": "Knarr",
-    "owner": "formerly Nequam of Tytalus, then Kor Ex Flambeau",
-    "captain": "",
-    "status": "On sabbatical",
-    "lab": "The Maelstrom's Maw's Laboratory (30 pts)",
-    "note": "Nequam's ship, handed to Kor Ex Flambeau in Summer 1220. Survived a sky-ship crash during a meteor storm (Winter 1220-21). Kor is currently on sabbatical — a covenant member in goo"
-   },
-   {
-    "id": "the-gloaming",
-    "name": "The Gloaming",
-    "aka": "",
-    "kind": "Ketch",
-    "owner": "unclear",
-    "captain": "",
-    "status": "No longer part of the covenant",
-    "lab": "The Gloaming's Laboratory (10 pts)",
-    "note": "A former covenant ship, no longer with the fleet. Circumstances of its departure not yet recorded."
-   }
-  ],
-  "inhabitants": [
-   {
-    "name": "Dagmar",
-    "category": "magi",
-    "job": "House Criamon",
-    "points": 5,
-    "yearBorn": 1195,
-    "qty": 1,
-    "actorId": "9ek4ZhrnGmHO5n2b"
-   },
-   {
-    "name": "Dustin Page",
-    "category": "magi",
-    "job": "House Bonisagus",
-    "points": 5,
-    "yearBorn": 1198,
-    "qty": 1,
-    "actorId": "9b2XTpOahvmgWfO5"
-   },
-   {
-    "name": "Henri - Failed Apprentice Grog",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1184,
-    "qty": 1,
-    "actorId": "Guf1yUo8ZaEIzBln"
-   },
-   {
-    "name": "Valdemar Bjornsson",
-    "category": "magi",
-    "job": "House Diedne",
-    "points": 5,
-    "yearBorn": 1195,
-    "qty": 1,
-    "actorId": "hcg6lMEwPcmXuxzo"
-   },
-   {
-    "name": "Kor Ex Flambeau",
-    "category": "magi",
-    "job": "Magus House Flambeau",
-    "points": 5,
-    "yearBorn": 1191,
-    "qty": 1,
-    "actorId": "G1QY9Em2kcgQkv0u"
-   },
-   {
-    "name": "Father Lachlan",
-    "category": "companions",
-    "job": "Mendicant Friar",
-    "points": 3,
-    "yearBorn": 1178,
-    "qty": 1,
-    "actorId": "BiZ5mPsMWNUGsPKQ"
-   },
-   {
-    "name": "Drest - Specialist",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1201,
-    "qty": 1,
-    "actorId": "j8657dvesXq30aaQ"
-   },
-   {
-    "name": "Erc - Standard Soldier",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1195,
-    "qty": 1,
-    "actorId": "vJfeOalQ9UfBS95c"
-   },
-   {
-    "name": "Ka'wa'ill",
-    "category": "companions",
-    "job": "Prince",
-    "points": 3,
-    "yearBorn": 1220,
-    "qty": 1,
-    "actorId": "Tfr2thQO9m2uY4ty"
-   },
-   {
-    "name": "Rembrant de Wees (Ship Captain)",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1187,
-    "qty": 1,
-    "actorId": "hSUskGqlfj6IICnx"
-   },
-   {
-    "name": "Galan - Only Job He Could Find",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1195,
-    "qty": 1,
-    "actorId": "4STAVTpxsID2bLpJ"
-   },
-   {
-    "name": "Cy - Shield Grog",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1195,
-    "qty": 1,
-    "actorId": "AyiTBI1rdJAYWtIl"
-   },
-   {
-    "name": "Hob - Hunter",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": "j5zE4cclNsz8El6O"
-   },
-   {
-    "name": "Captain Absalom",
-    "category": "turbula",
-    "job": "Captain",
-    "points": 1,
-    "yearBorn": 1185,
-    "qty": 1,
-    "actorId": "u0GQMYomXGGEaCjH"
-   },
-   {
-    "name": "Heynric the Merchant",
-    "category": "companions",
-    "job": "",
-    "points": 3,
-    "yearBorn": 1195,
-    "qty": 1,
-    "actorId": "svQyAc2opWNuGKS4"
-   },
-   {
-    "name": "Udo Ironhand - Guard",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1185,
-    "qty": 1,
-    "actorId": "1uEJTLzlHw7kGEcx"
-   },
-   {
-    "name": "Runi the Moody",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1205,
-    "qty": 1,
-    "actorId": "AwluSNgH0AzSVq9o"
-   },
-   {
-    "name": "Adam Smith (Sailor, experienced here)",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1201,
-    "qty": 1,
-    "actorId": "lH84OiQHNDNxT6IC"
-   },
-   {
-    "name": "Stijntje Kuiper",
-    "category": "magi",
-    "job": "House N/A",
-    "points": 5,
-    "yearBorn": 1211,
-    "qty": 1,
-    "actorId": "y7SZJxNgAR0HPaxL"
-   },
-   {
-    "name": "Henri - Failed Apprentice",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1184,
-    "qty": 1,
-    "actorId": "Guf1yUo8ZaEIzBln"
-   },
-   {
-    "name": "The Specialist",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1201,
-    "qty": 1,
-    "actorId": "H94ZmqzGnkOsUfP7"
-   },
-   {
-    "name": "Garrat Coffin",
-    "category": "companions",
-    "job": "",
-    "points": 3,
-    "yearBorn": 1197,
-    "qty": 1,
-    "actorId": "1drFAk8VbTUxOT31"
-   },
-   {
-    "name": "Reinier - The Silent Sellsword",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1189,
-    "qty": 1,
-    "actorId": "QpE9JjxAH2dODzsF"
-   },
-   {
-    "name": "Willem 'Sour' Jensen - Crew chief",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1175,
-    "qty": 1,
-    "actorId": "JjJH8bbvrkN4ntZi"
-   },
-   {
-    "name": "Leofwin - \"retired\" pirate",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1192,
-    "qty": 1,
-    "actorId": "NmZOh5c7TTA2UTeO"
-   },
-   {
-    "name": "Isabeau / Foxglove",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1197,
-    "qty": 1,
-    "actorId": "6T5c3i1m690saEz0"
-   },
-   {
-    "name": "Gerard \"The Mule\"",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1193,
-    "qty": 1,
-    "actorId": "MxUTLoyzhS1NI1Gu"
-   },
-   {
-    "name": "Pieter van Dijk - Surgeon",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1193,
-    "qty": 1,
-    "actorId": "qMPmYvPy0aJxSbso"
-   },
-   {
-    "name": "The Specialist",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1201,
-    "qty": 1,
-    "actorId": "7RMCgZvjIDo2xQFP"
-   },
-   {
-    "name": "Giden",
-    "category": "companions",
-    "job": "",
-    "points": 3,
-    "yearBorn": 1191,
-    "qty": 1,
-    "actorId": "Db7dXIBaeO35RxNH"
-   },
-   {
-    "name": "SPECIALIST",
-    "category": "specialists",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SPECIALIST",
-    "category": "specialists",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SPECIALIST",
-    "category": "specialists",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SPECIALIST",
-    "category": "specialists",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SPECIALIST",
-    "category": "specialists",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "CRAFTSMAN",
-    "category": "craftsmen",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "CRAFTSMAN",
-    "category": "craftsmen",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "CRAFTSMAN",
-    "category": "craftsmen",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "CRAFTSMAN",
-    "category": "craftsmen",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "CRAFTSMAN",
-    "category": "craftsmen",
-    "job": "",
-    "points": 0,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "SAILOR",
-    "category": "servants",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1200,
-    "qty": 1,
-    "actorId": null
-   },
-   {
-    "name": "Valerian de Castellane",
-    "category": "magi",
-    "job": "House Guernicus",
-    "points": 5,
-    "yearBorn": 1197,
-    "qty": 1,
-    "actorId": "K52pPLw2Krc49aVy"
-   },
-   {
-    "name": "Rán",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1198,
-    "qty": 1,
-    "actorId": "Z1ke2ojytKqpYosh"
-   },
-   {
-    "name": "Willhelm Stienauer (old)",
-    "category": "magi",
-    "job": "House N/A",
-    "points": 5,
-    "yearBorn": 1198,
-    "qty": 1,
-    "actorId": "dhDSBRm7QhdhKenS"
-   },
-   {
-    "name": "Éogan Dobhartha",
-    "category": "magi",
-    "job": "House Ex Miscellanea",
-    "points": 5,
-    "yearBorn": 1199,
-    "qty": 1,
-    "actorId": "UyYejPuGyj67Xq9J"
-   },
-   {
-    "name": "Angus McPeterson",
-    "category": "turbula",
-    "job": "",
-    "points": 1,
-    "yearBorn": 1204,
-    "qty": 1,
-    "actorId": "UCGj6k82DM3UMbJj"
-   }
-  ],
-  "library": {
-   "books": [
-    "Journal of Unusual Encounters volume 01",
-    "Journal of Unusual Encounters volume 02",
-    "Journal of Unusual Encounters volume 03",
-    "Journal of Unusual Encounters volume 04",
-    "The Technique of Precision",
-    "The Hermetic Zodiac",
-    "Methods for the Application of Magic Theory in Enchantment",
-    "The Examples of the Victors",
-    "That Which Was Shared",
-    "Tenebris caeli domino",
-    "Incantatione fulmineus",
-    "Domito hastam Ignis",
-    "The Incredible Journey",
-    "On the Dream of Scipio",
-    "Foundations",
-    "The Authority Granted to the Tribunal by its Members",
-    "The Forms and Uses of Natural Shape and Materials in Magic",
-    "Ship's Log",
-    "Carta Marina",
-    "Emanations Brought on by Hermetic Arts",
-    "A Hermetic Methodology for the Investigation of Occurrences",
-    "The Decline of Things",
-    "On the Unnatural Promotion of Natural Processes",
-    "Comparative Anatomies Volume 01,",
-    "Deluge",
-    "Comparative Anatomies",
-    "Tumult",
-    "A Discussion on Auras and Their Effects on Our Spells and Rituals",
-    "De Salis et Fontibus",
-    "Radices Scientiae",
-    "Boek fan de Tinken",
-    "Speculum Veritatis",
-    "Liber Cogitationum (translated from Boek fan de Tinken)"
-   ],
-   "labTexts": [
-    "Wreaths of Foul Smoke Charged Device",
-    "Bind Wound Charged Device",
-    "Pilum of Fire Charged Device",
-    "Circular Ward Against Demons Charged Device",
-    "Broach of Lungs of the Fish Device Effect",
-    "The Freshwater Barrel Device Effec",
-    "The Master’s Chart Device Effect",
-    "The Incantation Of Lightning",
-    "Clouds Of Thunderous Might",
-    "Bind Wound",
-    "The Inexorable Search",
-    "Cloak Of Black Feathers",
-    "In Christ’s Footsteps",
-    "Endurance of the Berserkers",
-    "The Leap Of Homecoming",
-    "Lamp without Flame",
-    "Pilum of Fire",
-    "Conjuration Of The Indubitable Cold",
-    "Haunt Of The Living Ghost",
-    "Piercing the Magical Veil",
-    "Circular Ward Against Demons",
-    "Aegis of the Hearth",
-    "Grain Preservation Ward Excellante",
-    "New LaboratoryText"
-   ]
-  },
-  "vis": {
-   "stock": [
-    {
-     "name": "Alfgeir's Resting Place",
-     "q": 5,
-     "art": "re"
-    },
-    {
-     "name": "Alfgeir’s Bones",
-     "q": 5,
-     "art": "co"
-    },
-    {
-     "name": "The Oyster King’s Shell",
-     "q": 3,
-     "art": "mu"
-    },
-    {
-     "name": "Fixed Arcane Connection",
-     "q": 1,
-     "art": "cr"
-    },
-    {
-     "name": "The Magus' Share",
-     "q": 15,
-     "art": "cr"
-    },
-    {
-     "name": "Otto-Pauels' Share",
-     "q": 5,
-     "art": "cr"
-    },
-    {
-     "name": "Dolly Price's Share",
-     "q": 1,
-     "art": "co"
-    },
-    {
-     "name": "Kraken's Egg (1220)",
-     "q": 0,
-     "art": "an"
-    },
-    {
-     "name": "Summer Fog (1220-21)",
-     "q": 9,
-     "art": "me"
-    },
-    {
-     "name": "Horseshoe (1220)",
-     "q": 4,
-     "art": "re"
-    },
-    {
-     "name": "Fire from the Sky (1220)",
-     "q": 1,
-     "art": "te"
-    },
-    {
-     "name": "Via Redcap",
-     "q": 8,
-     "art": "vi"
-    }
-   ],
-   "sources": [
-    {
-     "name": "Fire From the Sky"
-    },
-    {
-     "name": "The Kragen's Egg"
-    },
-    {
-     "name": "The Summer Fog"
-    },
-    {
-     "name": "The Black Horse of Boulogne"
-    }
-   ]
-  },
-  "possessions": [
-   "Bell of Summoning",
-   "Brooch of Lungs of the Fish",
-   "The Freshwater Barrel",
-   "The Magical Astrolabe",
-   "The Master's Chart"
-  ],
-  "virtues": [
-   "Mystical Allies (Merfolk)",
-   "Criminals",
-   "Difficult Access",
-   "Famous Resident: Solving Epicurusson",
-   "Healthy Feature",
-   "Informants",
-   "Local Ally",
-   "Ungoverned",
-   "Sailors"
-  ],
-  "flaws": [
-   "Missing Aura",
-   "Tribunal Border",
-   "Erratically Mobile",
-   "Gender Imbalance",
-   "Possession Victim",
-   "Poverty"
-  ]
+  "baseline": "The state below is the covenant's current baseline, imported from the Foundry covenant actor (pulled 2026-08-09). Treat it as roughly 'as of' the 1224 play state, NOT a reconstructed 1209 origin — the Foundry actor lags the table (e.g. it still lists 5 ships) and its early history is incomplete. The ledger records dated changes from here.",
+  "asOf": "1224 (approx.)",
+  "caveat": "Pre-baseline history is approximate; the actor's early data is known to be wrong/incomplete.",
+  "nodesNote": "Each node is the covenant's state at the end of Winter that year; 'Current' is the live state. Selecting a node re-renders every tab. Year nodes are empty skeletons until reconstructed — early data is known to be unreliable."
  },
+ "nodes": [
+  {
+   "id": "1219",
+   "label": "1219",
+   "sub": "Foundation / start",
+   "cutoff": "1220-03-20",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
+  },
+  {
+   "id": "1220",
+   "label": "1220",
+   "sub": "end of Winter 1220-21",
+   "cutoff": "1221-03-20",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
+  },
+  {
+   "id": "1221",
+   "label": "1221",
+   "sub": "end of Winter 1221-22",
+   "cutoff": "1222-03-20",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
+  },
+  {
+   "id": "1222",
+   "label": "1222",
+   "sub": "end of Winter 1222-23",
+   "cutoff": "1223-03-20",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
+  },
+  {
+   "id": "1223",
+   "label": "1223",
+   "sub": "end of Winter 1223-24",
+   "cutoff": "1224-03-20",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
+  },
+  {
+   "id": "1224",
+   "label": "1224",
+   "sub": "end of Winter 1224-25",
+   "cutoff": "1225-03-20",
+   "populated": false,
+   "state": {
+    "aegis": null,
+    "penetration": null,
+    "regio": null,
+    "economics": {},
+    "ships": [],
+    "inhabitants": [],
+    "library": {
+     "books": [],
+     "labTexts": []
+    },
+    "vis": {
+     "stock": [],
+     "sources": []
+    },
+    "possessions": [],
+    "virtues": [],
+    "flaws": []
+   }
+  },
+  {
+   "id": "current",
+   "label": "Current",
+   "sub": "Summer 1224 (live)",
+   "cutoff": "9999",
+   "populated": true,
+   "state": {
+    "aegis": 0,
+    "penetration": 0,
+    "regio": 0,
+    "economics": {
+     "wealth": 0,
+     "totalIncome": 319,
+     "baseExpenditure": 194,
+     "costSavings": 0,
+     "totalExpenditure": 194,
+     "inhabitantsPoints": 137,
+     "laboratoriesPoints": 255,
+     "weaponsPoints": 110,
+     "averageEquipMaintenance": 5,
+     "incomeSources": [
+      {
+       "name": "Improved Trade & Transport",
+       "type": "Typical",
+       "incoming": 44
+      },
+      {
+       "name": "Line of Credit - Bruges",
+       "type": "Credit",
+       "incoming": 275
+      }
+     ],
+     "yearlyExpenses": {
+      "buildings": {
+       "amount": 14,
+       "notes": ""
+      },
+      "consumables": {
+       "amount": 28,
+       "notes": ""
+      },
+      "laboratories": {
+       "amount": 26,
+       "notes": ""
+      },
+      "provisions": {
+       "amount": 69,
+       "notes": ""
+      },
+      "wages": {
+       "amount": 28,
+       "notes": ""
+      },
+      "weapons": {
+       "amount": 1,
+       "notes": ""
+      },
+      "writingMaterials": {
+       "amount": 8,
+       "notes": ""
+      },
+      "tithes": {
+       "amount": 0,
+       "notes": ""
+      },
+      "inflation": {
+       "amount": 0,
+       "notes": ""
+      },
+      "sundry": {
+       "amount": 20,
+       "notes": "New crew for the Veðrdreki"
+      }
+     }
+    },
+    "ships": [
+     {
+      "id": "tide-of-memory",
+      "name": "Tide of Memory",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dagmar",
+      "captain": "Absalom",
+      "status": "Active",
+      "lab": "Tide of Memory's Laboratory (30 pts)",
+      "note": "Originally covenant founder Solving Epicurusson's ship; inherited by Dagmar after Solving vanished into Twilight (1220). Carries Solving's summoning bell and astrolabe, and the cov"
+     },
+     {
+      "id": "brineborn",
+      "name": "Brineborn",
+      "aka": "",
+      "kind": "Hulk",
+      "owner": "Éogan Dobhartha",
+      "captain": "Rembrant de Wees",
+      "status": "Active",
+      "lab": "The Brineborn's Laboratory (10 pts)",
+      "note": "Éogan's ship, under sailing-captain Rembrant de Wees. As of Fall 1223, the vessel carrying the party's Ireland expedition."
+     },
+     {
+      "id": "scholars-wake",
+      "name": "The Scholar's Wake",
+      "aka": "",
+      "kind": "Cog",
+      "owner": "Dustin Page",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Scholar's Wake's Laboratory (10 pts)",
+      "note": "Dustin's ship and the covenant's main trade vessel — recruited Stijntje aboard in 1220; worked with merchant-agent Heynric the Merchant. Home to Rosie the pig and Dustin's apprenti"
+     },
+     {
+      "id": "storm-dragon",
+      "name": "Veðrdreki",
+      "aka": "Storm Dragon",
+      "kind": "Longship",
+      "owner": "Valdemar Bjornsson",
+      "captain": "",
+      "status": "Active",
+      "lab": "Veðrdreki Laboratory (10 pts)",
+      "note": "Valdemar's personal Viking drakar — distinct from the main covenant fleet, used mainly for river/inland transit (e.g. up the Sarthe to Le Mans in Summer 1223)."
+     },
+     {
+      "id": "adamant",
+      "name": "Adamant",
+      "aka": "",
+      "kind": "—",
+      "owner": "Valerian de Castellane",
+      "captain": "",
+      "status": "Active",
+      "lab": "The Adamant's Laboratory (10 pts)",
+      "note": "Valerian's ship — confirmed to be the fleet's fifth hull, commissioned at Bergen and given to Valerian on his arrival in 1222. Per Solving's own notes, the hull was earmarked from "
+     },
+     {
+      "id": "hound-of-cassel",
+      "name": "Hound of Cassel",
+      "aka": "the Tremere ship, formerly Scarem Montem's",
+      "kind": "Cog (mundane)",
+      "owner": "Wilhelm Stienauer",
+      "captain": "",
+      "status": "En route to Scarem Montem",
+      "lab": null,
+      "note": "Confirmed: this is the ship pirated from Scarem Montem — a Tremere-crewed vessel, raided by Valdemar's crew in Summer 1221. Yielded three magically-sealed chests and the letter tha"
+     },
+     {
+      "id": "maelstroms-maw",
+      "name": "Maelstrom's Maw",
+      "aka": "",
+      "kind": "Knarr",
+      "owner": "formerly Nequam of Tytalus, then Kor Ex Flambeau",
+      "captain": "",
+      "status": "On sabbatical",
+      "lab": "The Maelstrom's Maw's Laboratory (30 pts)",
+      "note": "Nequam's ship, handed to Kor Ex Flambeau in Summer 1220. Survived a sky-ship crash during a meteor storm (Winter 1220-21). Kor is currently on sabbatical — a covenant member in goo"
+     },
+     {
+      "id": "the-gloaming",
+      "name": "The Gloaming",
+      "aka": "",
+      "kind": "Ketch",
+      "owner": "unclear",
+      "captain": "",
+      "status": "No longer part of the covenant",
+      "lab": "The Gloaming's Laboratory (10 pts)",
+      "note": "A former covenant ship, no longer with the fleet. Circumstances of its departure not yet recorded."
+     }
+    ],
+    "inhabitants": [
+     {
+      "name": "Dagmar",
+      "category": "magi",
+      "job": "House Criamon",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "9ek4ZhrnGmHO5n2b"
+     },
+     {
+      "name": "Dustin Page",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1198,
+      "qty": 1,
+      "actorId": "9b2XTpOahvmgWfO5"
+     },
+     {
+      "name": "Henri - Failed Apprentice Grog",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1184,
+      "qty": 1,
+      "actorId": "Guf1yUo8ZaEIzBln"
+     },
+     {
+      "name": "Valdemar Bjornsson",
+      "category": "magi",
+      "job": "House Diedne",
+      "points": 5,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "hcg6lMEwPcmXuxzo"
+     },
+     {
+      "name": "Kor Ex Flambeau",
+      "category": "magi",
+      "job": "Magus House Flambeau",
+      "points": 5,
+      "yearBorn": 1191,
+      "qty": 1,
+      "actorId": "G1QY9Em2kcgQkv0u"
+     },
+     {
+      "name": "Father Lachlan",
+      "category": "companions",
+      "job": "Mendicant Friar",
+      "points": 3,
+      "yearBorn": 1178,
+      "qty": 1,
+      "actorId": "BiZ5mPsMWNUGsPKQ"
+     },
+     {
+      "name": "Drest - Specialist",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1201,
+      "qty": 1,
+      "actorId": "j8657dvesXq30aaQ"
+     },
+     {
+      "name": "Erc - Standard Soldier",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "vJfeOalQ9UfBS95c"
+     },
+     {
+      "name": "Ka'wa'ill",
+      "category": "companions",
+      "job": "Prince",
+      "points": 3,
+      "yearBorn": 1220,
+      "qty": 1,
+      "actorId": "Tfr2thQO9m2uY4ty"
+     },
+     {
+      "name": "Rembrant de Wees (Ship Captain)",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1187,
+      "qty": 1,
+      "actorId": "hSUskGqlfj6IICnx"
+     },
+     {
+      "name": "Galan - Only Job He Could Find",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "4STAVTpxsID2bLpJ"
+     },
+     {
+      "name": "Cy - Shield Grog",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "AyiTBI1rdJAYWtIl"
+     },
+     {
+      "name": "Hob - Hunter",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": "j5zE4cclNsz8El6O"
+     },
+     {
+      "name": "Captain Absalom",
+      "category": "turbula",
+      "job": "Captain",
+      "points": 1,
+      "yearBorn": 1185,
+      "qty": 1,
+      "actorId": "u0GQMYomXGGEaCjH"
+     },
+     {
+      "name": "Heynric the Merchant",
+      "category": "companions",
+      "job": "",
+      "points": 3,
+      "yearBorn": 1195,
+      "qty": 1,
+      "actorId": "svQyAc2opWNuGKS4"
+     },
+     {
+      "name": "Udo Ironhand - Guard",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1185,
+      "qty": 1,
+      "actorId": "1uEJTLzlHw7kGEcx"
+     },
+     {
+      "name": "Runi the Moody",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1205,
+      "qty": 1,
+      "actorId": "AwluSNgH0AzSVq9o"
+     },
+     {
+      "name": "Adam Smith (Sailor, experienced here)",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1201,
+      "qty": 1,
+      "actorId": "lH84OiQHNDNxT6IC"
+     },
+     {
+      "name": "Stijntje Kuiper",
+      "category": "magi",
+      "job": "House N/A",
+      "points": 5,
+      "yearBorn": 1211,
+      "qty": 1,
+      "actorId": "y7SZJxNgAR0HPaxL"
+     },
+     {
+      "name": "Henri - Failed Apprentice",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1184,
+      "qty": 1,
+      "actorId": "Guf1yUo8ZaEIzBln"
+     },
+     {
+      "name": "The Specialist",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1201,
+      "qty": 1,
+      "actorId": "H94ZmqzGnkOsUfP7"
+     },
+     {
+      "name": "Garrat Coffin",
+      "category": "companions",
+      "job": "",
+      "points": 3,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": "1drFAk8VbTUxOT31"
+     },
+     {
+      "name": "Reinier - The Silent Sellsword",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1189,
+      "qty": 1,
+      "actorId": "QpE9JjxAH2dODzsF"
+     },
+     {
+      "name": "Willem 'Sour' Jensen - Crew chief",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1175,
+      "qty": 1,
+      "actorId": "JjJH8bbvrkN4ntZi"
+     },
+     {
+      "name": "Leofwin - \"retired\" pirate",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1192,
+      "qty": 1,
+      "actorId": "NmZOh5c7TTA2UTeO"
+     },
+     {
+      "name": "Isabeau / Foxglove",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": "6T5c3i1m690saEz0"
+     },
+     {
+      "name": "Gerard \"The Mule\"",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1193,
+      "qty": 1,
+      "actorId": "MxUTLoyzhS1NI1Gu"
+     },
+     {
+      "name": "Pieter van Dijk - Surgeon",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1193,
+      "qty": 1,
+      "actorId": "qMPmYvPy0aJxSbso"
+     },
+     {
+      "name": "The Specialist",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1201,
+      "qty": 1,
+      "actorId": "7RMCgZvjIDo2xQFP"
+     },
+     {
+      "name": "Giden",
+      "category": "companions",
+      "job": "",
+      "points": 3,
+      "yearBorn": 1191,
+      "qty": 1,
+      "actorId": "Db7dXIBaeO35RxNH"
+     },
+     {
+      "name": "SPECIALIST",
+      "category": "specialists",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SPECIALIST",
+      "category": "specialists",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SPECIALIST",
+      "category": "specialists",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SPECIALIST",
+      "category": "specialists",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SPECIALIST",
+      "category": "specialists",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "CRAFTSMAN",
+      "category": "craftsmen",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "CRAFTSMAN",
+      "category": "craftsmen",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "CRAFTSMAN",
+      "category": "craftsmen",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "CRAFTSMAN",
+      "category": "craftsmen",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "CRAFTSMAN",
+      "category": "craftsmen",
+      "job": "",
+      "points": 0,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "SAILOR",
+      "category": "servants",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1200,
+      "qty": 1,
+      "actorId": null
+     },
+     {
+      "name": "Valerian de Castellane",
+      "category": "magi",
+      "job": "House Guernicus",
+      "points": 5,
+      "yearBorn": 1197,
+      "qty": 1,
+      "actorId": "K52pPLw2Krc49aVy"
+     },
+     {
+      "name": "Rán",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1198,
+      "qty": 1,
+      "actorId": "Z1ke2ojytKqpYosh"
+     },
+     {
+      "name": "Willhelm Stienauer (old)",
+      "category": "magi",
+      "job": "House N/A",
+      "points": 5,
+      "yearBorn": 1198,
+      "qty": 1,
+      "actorId": "dhDSBRm7QhdhKenS"
+     },
+     {
+      "name": "Éogan Dobhartha",
+      "category": "magi",
+      "job": "House Ex Miscellanea",
+      "points": 5,
+      "yearBorn": 1199,
+      "qty": 1,
+      "actorId": "UyYejPuGyj67Xq9J"
+     },
+     {
+      "name": "Angus McPeterson",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": 1204,
+      "qty": 1,
+      "actorId": "UCGj6k82DM3UMbJj"
+     }
+    ],
+    "library": {
+     "books": [
+      "Journal of Unusual Encounters volume 01",
+      "Journal of Unusual Encounters volume 02",
+      "Journal of Unusual Encounters volume 03",
+      "Journal of Unusual Encounters volume 04",
+      "The Technique of Precision",
+      "The Hermetic Zodiac",
+      "Methods for the Application of Magic Theory in Enchantment",
+      "The Examples of the Victors",
+      "That Which Was Shared",
+      "Tenebris caeli domino",
+      "Incantatione fulmineus",
+      "Domito hastam Ignis",
+      "The Incredible Journey",
+      "On the Dream of Scipio",
+      "Foundations",
+      "The Authority Granted to the Tribunal by its Members",
+      "The Forms and Uses of Natural Shape and Materials in Magic",
+      "Ship's Log",
+      "Carta Marina",
+      "Emanations Brought on by Hermetic Arts",
+      "A Hermetic Methodology for the Investigation of Occurrences",
+      "The Decline of Things",
+      "On the Unnatural Promotion of Natural Processes",
+      "Comparative Anatomies Volume 01,",
+      "Deluge",
+      "Comparative Anatomies",
+      "Tumult",
+      "A Discussion on Auras and Their Effects on Our Spells and Rituals",
+      "De Salis et Fontibus",
+      "Radices Scientiae",
+      "Boek fan de Tinken",
+      "Speculum Veritatis",
+      "Liber Cogitationum (translated from Boek fan de Tinken)"
+     ],
+     "labTexts": [
+      "Wreaths of Foul Smoke Charged Device",
+      "Bind Wound Charged Device",
+      "Pilum of Fire Charged Device",
+      "Circular Ward Against Demons Charged Device",
+      "Broach of Lungs of the Fish Device Effect",
+      "The Freshwater Barrel Device Effec",
+      "The Master’s Chart Device Effect",
+      "The Incantation Of Lightning",
+      "Clouds Of Thunderous Might",
+      "Bind Wound",
+      "The Inexorable Search",
+      "Cloak Of Black Feathers",
+      "In Christ’s Footsteps",
+      "Endurance of the Berserkers",
+      "The Leap Of Homecoming",
+      "Lamp without Flame",
+      "Pilum of Fire",
+      "Conjuration Of The Indubitable Cold",
+      "Haunt Of The Living Ghost",
+      "Piercing the Magical Veil",
+      "Circular Ward Against Demons",
+      "Aegis of the Hearth",
+      "Grain Preservation Ward Excellante",
+      "New LaboratoryText"
+     ]
+    },
+    "vis": {
+     "stock": [
+      {
+       "name": "Alfgeir's Resting Place",
+       "q": 5,
+       "art": "re"
+      },
+      {
+       "name": "Alfgeir’s Bones",
+       "q": 5,
+       "art": "co"
+      },
+      {
+       "name": "The Oyster King’s Shell",
+       "q": 3,
+       "art": "mu"
+      },
+      {
+       "name": "Fixed Arcane Connection",
+       "q": 1,
+       "art": "cr"
+      },
+      {
+       "name": "The Magus' Share",
+       "q": 15,
+       "art": "cr"
+      },
+      {
+       "name": "Otto-Pauels' Share",
+       "q": 5,
+       "art": "cr"
+      },
+      {
+       "name": "Dolly Price's Share",
+       "q": 1,
+       "art": "co"
+      },
+      {
+       "name": "Kraken's Egg (1220)",
+       "q": 0,
+       "art": "an"
+      },
+      {
+       "name": "Summer Fog (1220-21)",
+       "q": 9,
+       "art": "me"
+      },
+      {
+       "name": "Horseshoe (1220)",
+       "q": 4,
+       "art": "re"
+      },
+      {
+       "name": "Fire from the Sky (1220)",
+       "q": 1,
+       "art": "te"
+      },
+      {
+       "name": "Via Redcap",
+       "q": 8,
+       "art": "vi"
+      }
+     ],
+     "sources": [
+      {
+       "name": "Fire From the Sky"
+      },
+      {
+       "name": "The Kragen's Egg"
+      },
+      {
+       "name": "The Summer Fog"
+      },
+      {
+       "name": "The Black Horse of Boulogne"
+      }
+     ]
+    },
+    "possessions": [
+     "Bell of Summoning",
+     "Brooch of Lungs of the Fish",
+     "The Freshwater Barrel",
+     "The Magical Astrolabe",
+     "The Master's Chart"
+    ],
+    "virtues": [
+     "Mystical Allies (Merfolk)",
+     "Criminals",
+     "Difficult Access",
+     "Famous Resident: Solving Epicurusson",
+     "Healthy Feature",
+     "Informants",
+     "Local Ally",
+     "Ungoverned",
+     "Sailors"
+    ],
+    "flaws": [
+     "Missing Aura",
+     "Tribunal Border",
+     "Erratically Mobile",
+     "Gender Imbalance",
+     "Possession Victim",
+     "Poverty"
+    ]
+   }
+  }
+ ],
  "ledger": [
   {
    "season": "Fall 1223",

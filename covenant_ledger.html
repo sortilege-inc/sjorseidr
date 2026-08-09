@@ -30,7 +30,22 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .caveat{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin:8px 0 0;padding:8px 12px;
   background:rgba(181,74,50,.08);border-left:3px solid var(--rust-bright);border-radius:0 6px 6px 0}
 
-.tabs{display:flex;gap:3px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:16px 0 18px}
+/* year-node timeline */
+.nodebar{display:flex;justify-content:space-between;position:relative;margin:18px 6px 4px;padding-top:2px}
+.nodebar::before{content:"";position:absolute;left:6%;right:6%;top:12px;height:2px;
+  background:linear-gradient(90deg,transparent,var(--line) 6%,var(--line) 94%,transparent);opacity:.6}
+.node{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;cursor:pointer;flex:1;gap:4px}
+.node .pip{width:15px;height:15px;border-radius:50%;background:var(--parch-deep);border:2px solid var(--line);transition:.12s}
+.node:hover .pip{border-color:var(--gold)}
+.node.on .pip{background:var(--rust-bright);border-color:var(--rust);box-shadow:0 0 0 3px rgba(181,74,50,.22);transform:scale(1.15)}
+.node.unpop .pip{background:var(--parch);border-style:dashed}
+.node .lb{font-family:'Cinzel',serif;font-size:12.5px;color:var(--ink-soft)}
+.node.on .lb{color:var(--rust-bright);font-weight:600}
+.node .sb{font-size:9px;color:var(--ink-soft);font-style:italic;opacity:.7;text-align:center;line-height:1.1;max-width:88px}
+.nodehint{font-style:italic;color:var(--ink-soft);font-size:12px;margin:2px 6px 0;text-align:right}
+.notpop{text-align:center;color:var(--ink-soft);font-style:italic;padding:30px 12px;
+  background:rgba(120,90,40,.05);border:1px dashed rgba(120,90,40,.4);border-radius:10px}
+.tabs{display:flex;gap:3px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:14px 0 18px}
 .tab{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.02em;padding:8px 15px;cursor:pointer;color:var(--ink-soft);
   border-bottom:3px solid transparent;display:flex;align-items:center;gap:7px}
 .tab:hover{color:var(--ink)}
@@ -94,6 +109,8 @@ footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);
     <p class="caveat" id="caveat"></p>
   </header>
 
+  <div class="nodebar" id="nodebar"></div>
+  <div class="nodehint" id="nodehint"></div>
   <div class="tabs" id="tabs"></div>
   <div id="panels"></div>
 
@@ -104,34 +121,49 @@ footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);
 <script>
 const $=s=>document.querySelector(s);
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let D=null, tab='overview', ledgerFilter='all';
+let D=null, tab='overview', ledgerFilter='all', node='current';
 const TABS=[['overview','Overview'],['ships','Ships & Labs'],['inhabitants','Inhabitants'],
   ['library','Library & Vis'],['economics','Economics'],['ledger','Ledger']];
 
 async function load(){
   try{ D=await (await fetch('./covenant_ledger.json',{cache:'no-store'})).json(); }
   catch(e){ $('#panels').innerHTML=`<p style="padding:24px">Could not load covenant_ledger.json (serve over http).<br>${esc(e.message)}</p>`; return; }
-  const id=D.state.identity;
-  $('#cname').textContent=`${esc(id.name)} — Covenant Ledger`;
-  $('#ident').innerHTML=`<span>Founded <b>${esc(id.founded)}</b></span><span><b>${esc(id.tribunal)}</b> Tribunal</span>`
-    +`<span>Aegis <b>${id.aegis}</b> · Pen. <b>${id.penetration}</b></span><span>Regio <b>${id.regio}</b></span>`
-    +`<span>Wealth <b>${D.state.economics.wealth}</b> £</span>`;
+  $('#cname').textContent=`${esc(D.meta.identity.name)} — Covenant Ledger`;
   $('#caveat').textContent=D.meta.baseline;
-  $('#foot').innerHTML=`Baseline as of <b>${esc(D.meta.asOf)}</b>, from the Foundry covenant actor. The ledger below records changes from that baseline forward.`;
-  $('#tabs').innerHTML=TABS.map(([k,l])=>{
-    const n = k==='ships'?D.state.ships.length : k==='inhabitants'?D.state.inhabitants.length
-      : k==='library'?(D.state.library.books.length+D.state.library.labTexts.length) : k==='ledger'?D.ledger.length : '';
-    return `<div class="tab ${tab===k?'on':''}" data-tab="${k}">${l}${n!==''?` <span class="n">${n}</span>`:''}</div>`;}).join('');
-  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;render();});
-  render();
+  $('#foot').innerHTML=`Baseline from the Foundry covenant actor (~${esc(D.meta.asOf)}). Each node is the covenant at that year's end of Winter; <b>Current</b> is live. Year nodes fill in as we reconstruct them.`;
+  buildNodebar(); render();
 }
+function buildNodebar(){
+  $('#nodebar').innerHTML=D.nodes.map(n=>
+    `<div class="node ${node===n.id?'on':''} ${n.populated?'':'unpop'}" data-node="${esc(n.id)}" title="${esc(n.sub||'')}">
+      <span class="pip"></span><span class="lb">${esc(n.label)}</span><span class="sb">${esc(n.sub||'')}</span></div>`).join('');
+  document.querySelectorAll('.node').forEach(el=>el.onclick=()=>{node=el.dataset.node;buildNodebar();render();});
+}
+const N=()=>D.nodes.find(n=>n.id===node);
+const s=()=>N().state;
+const ledgerUpTo=()=>{ const cut=N().cutoff||'9999'; return D.ledger.filter(l=>(l.sort_iso||'')<=cut); };
 
 function render(){
-  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.tab===tab));
-  $('#panels').innerHTML=`<div class="panel on">${PANELS[tab]()}</div>`;
+  const n=N(), st=s(), id=D.meta.identity, dash=v=>(v==null?'—':v);
+  $('#ident').innerHTML=`<span>Founded <b>${esc(id.founded)}</b></span><span><b>${esc(id.tribunal)}</b> Tribunal</span>`
+    +`<span>Aegis <b>${dash(st.aegis)}</b> · Pen. <b>${dash(st.penetration)}</b></span><span>Regio <b>${dash(st.regio)}</b></span>`
+    +`<span>Wealth <b>${dash(st.economics&&st.economics.wealth)}</b> £</span>`;
+  $('#nodehint').textContent = n.populated ? `Showing ${n.label} — ${n.sub}` : `${n.label} — not yet reconstructed`;
+  $('#tabs').innerHTML=TABS.map(([k,l])=>{
+    let cnt='';
+    if(k==='ledger') cnt=ledgerUpTo().length;
+    else if(n.populated) cnt = k==='ships'?st.ships.length : k==='inhabitants'?st.inhabitants.length
+      : k==='library'?(st.library.books.length+st.library.labTexts.length) : '';
+    return `<div class="tab ${tab===k?'on':''}" data-tab="${k}">${l}${cnt!==''?` <span class="n">${cnt}</span>`:''}</div>`;}).join('');
+  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;render();});
+  let html;
+  if(tab!=='ledger' && !n.populated){
+    html=`<div class="notpop">The <b>${esc(n.label)}</b> snapshot (${esc(n.sub)}) hasn't been reconstructed yet.<br>`
+      +`The actor's early data is unreliable, so these fill in as we sort them out. See <b>Current</b> for the live state, or open the <b>Ledger</b> for changes up to this point.</div>`;
+  } else html=PANELS[tab]();
+  $('#panels').innerHTML=`<div class="panel on">${html}</div>`;
   if(tab==='ledger') wireLedger();
 }
-const s=()=>D.state;
 const PANELS={
   overview(){ const e=s().economics;
     return `<p class="section-sub">The covenant at a glance. Detailed facets are on the tabs above; changes over time are in the Ledger.</p>
@@ -199,11 +231,13 @@ const PANELS={
      <p class="section-sub" style="margin-top:12px">Note: these are the actor's baseline figures; the Bruges credit line (275 £) inflates income, and Foxglove's unsanctioned dragon-gold is <em>not</em> covenant wealth (see Ledger).</p>`;
   },
   ledger(){
-    const facets=['all',...[...new Set(D.ledger.map(l=>l.facet))]];
+    const upto=ledgerUpTo();
+    const facets=['all',...[...new Set(upto.map(l=>l.facet))]];
     const btns=facets.map(f=>`<button class="fbtn ${ledgerFilter===f?'on':''}" data-f="${esc(f)}">${f==='all'?'All':esc(f)}</button>`).join('');
-    const items=D.ledger.filter(l=>ledgerFilter==='all'||l.facet===ledgerFilter)
+    const items=upto.filter(l=>ledgerFilter==='all'||l.facet===ledgerFilter)
       .slice().sort((a,b)=>(b.sort_iso||'').localeCompare(a.sort_iso||''));
-    return `<p class="section-sub">Dated changes from the baseline forward. Newest first. This is the covenant's true running history; the state tabs show where it stands now.</p>
+    const scope = node==='current' ? 'through the present' : `through the end of Winter ${esc(N().label)}`;
+    return `<p class="section-sub">Dated changes ${scope}, newest first. This is the covenant's true running history; the state tabs show where it stood at the selected node.</p>
       <div class="ledger">${btns}
       ${items.map(l=>`<div class="levent">
         <div class="lt"><span class="facet f-${esc(l.facet)}">${esc(l.facet)}</span><span class="season">${esc(l.season)}</span></div>
