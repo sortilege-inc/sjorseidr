@@ -161,7 +161,10 @@ const SHIP_NAMES={'tide-of-memory':'Tide of Memory','brineborn':'The Brineborn',
 const ABSENT=['twilight','sabbatical'];
 // Inhabitants tab badge: contributing headcount for by-ship nodes, else raw total.
 function inhabCount(){const st=s();const useShip=st.inhabitants.some(i=>i.ship||i.standing);
-  return useShip ? st.inhabitants.filter(i=>!ABSENT.includes(i.standing)).length : st.inhabitants.length;}
+  if(!useShip) return st.inhabitants.length;
+  const NONC=['magi','companions','familiars','npc'];
+  const pool=(st.ships||[]).reduce((a,sh)=>a+(sh.crew||0),0);
+  return pool + st.inhabitants.filter(i=>NONC.includes(i.category)).length;}
 
 function render(){
   const n=N(), st=s(), id=D.meta.identity, dash=v=>(v==null?'—':v);
@@ -219,10 +222,13 @@ const PANELS={
   },
   inhabitants(){
     const st=s();
+    const chip=(t,cl)=>` <span style="font-family:Cinzel;font-size:9.5px;letter-spacing:.03em;padding:1px 6px;border-radius:8px;background:${cl}22;color:${cl};border:1px solid ${cl}66">${esc(t)}</span>`;
     const STAND={apprentice:['apprentice','#5b3a8a'],guest:['guest','#2c6b66'],
       twilight:['in Twilight','#8a3324'],sabbatical:['on sabbatical','#8a3324']};
-    const tagOf=i=>(i.standing&&STAND[i.standing])
-      ? ` <span style="font-family:Cinzel;font-size:9.5px;letter-spacing:.03em;padding:1px 6px;border-radius:8px;background:${STAND[i.standing][1]}22;color:${STAND[i.standing][1]};border:1px solid ${STAND[i.standing][1]}66">${STAND[i.standing][0]}</span>` : '';
+    const CATTAG={companions:['companion','#3e6b35'],familiars:['familiar','#9a6b1f'],npc:['NPC','#6b5436']};
+    const COUNT_CATS=['turbula','specialists','craftsmen','servants','crew','grog'];
+    const tagOf=i=>{ if(i.standing&&STAND[i.standing])return chip(STAND[i.standing][0],STAND[i.standing][1]);
+      if(CATTAG[i.category])return chip(CATTAG[i.category][0],CATTAG[i.category][1]); return ''; };
     const row=i=>`<div class="row">${esc(i.name)}${i.qty>1?` ×${i.qty}`:''}${i.job?` <small>— ${esc(i.job)}</small>`:''}${i.yearBorn?` <small>(b. ${esc(i.yearBorn)})</small>`:''}${tagOf(i)}</div>`;
     const useShip = st.inhabitants.some(i=>i.ship||i.standing);
     if(!useShip){
@@ -241,12 +247,18 @@ const PANELS={
     const shipOrder=(st.ships||[]).map(sh=>sh.id).filter(k=>groups[k]);
     const otherKeys=Object.keys(groups).filter(k=>k!=='__none__'&&!shipOrder.includes(k));
     const keys=[...shipOrder,...otherKeys,...(groups['__none__']?['__none__']:[])];
-    let html=`<p class="section-sub">The covenant's people, grouped by ship — ${present.length} contributing member${present.length===1?'':'s'}${absent.length?`, plus ${absent.length} in the covenant but not contributing`:''}.</p>`;
+    let html=`<p class="section-sub">Grouped by ship. Each hull carries a pool of 14 crew — named grogs fill slots, the rest shows as “additional crew”. Magi, apprentices, companions, familiars and guests don't count against a ship's crew.${absent.length?` ${absent.length} member${absent.length===1?'':'s'} in the covenant but not contributing, below.`:''}</p>`;
     html+=keys.map(k=>{
-      const list=groups[k]; const title=k==='__none__'?'Covenant household':shipName(k);
-      const meta=k==='__none__'?'':shipMeta(k); const n=list.reduce((a,i)=>a+(i.qty||1),0);
-      return `<div class="catblock"><h3 style="text-transform:none">${k==='__none__'?'⚑ ':'⛵ '}${esc(title)} <span class="n">(${n})</span>${meta?` <span class="n">— ${meta}</span>`:''}</h3>
-        <div class="cols">${list.map(row).join('')}</div></div>`;
+      const list=groups[k]; const sh=(st.ships||[]).find(x=>x.id===k);
+      const title=k==='__none__'?'Covenant household':shipName(k);
+      const meta=k==='__none__'?'':shipMeta(k);
+      const counting=list.filter(i=>COUNT_CATS.includes(i.category)).reduce((a,i)=>a+(i.qty||1),0);
+      const pool=sh?(sh.crew||0):0; const add=Math.max(0,pool-counting);
+      const named=list.reduce((a,i)=>a+(i.qty||1),0); const head=k==='__none__'?named:named+add;
+      const statusTag= sh&&/sabbatical|prize|route|no longer|left|depart|laid/i.test(sh.status||'') ? chip(sh.status,'#8a3324') : '';
+      const addRow=(k!=='__none__'&&add>0)?`<div class="row" style="color:var(--ink-soft);font-style:italic">＋${add} additional crew</div>`:'';
+      return `<div class="catblock"><h3 style="text-transform:none">${k==='__none__'?'⚑ ':'⛵ '}${esc(title)} <span class="n">(${head})</span>${meta?` <span class="n">— ${meta}</span>`:''}${statusTag}</h3>
+        <div class="cols">${list.map(row).join('')}${addRow}</div></div>`;
     }).join('');
     if(absent.length){
       html+=`<div class="catblock" style="margin-top:14px;border-top:1px dashed rgba(120,90,40,.4);padding-top:10px">

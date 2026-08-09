@@ -35,7 +35,8 @@
       "captain": "",
       "status": "Active",
       "lab": "Solving's Laboratory",
-      "note": "The founder's flagship. Dagmar inherits it in 1220 after Solving vanishes into Twilight."
+      "note": "The founder's flagship. Dagmar inherits it in 1220 after Solving vanishes into Twilight.",
+      "crew": 14
      },
      {
       "id": "brineborn",
@@ -46,7 +47,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Brineborn's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "scholars-wake",
@@ -57,7 +59,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Scholar's Wake's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "maelstroms-maw",
@@ -68,7 +71,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Maelstrom's Maw Laboratory",
-      "note": "Nequam hands it to Kor Ex Flambeau in Summer 1220."
+      "note": "Nequam hands it to Kor Ex Flambeau in Summer 1220.",
+      "crew": 14
      },
      {
       "id": "gloaming",
@@ -79,7 +83,8 @@
       "captain": "",
       "status": "Left before Winter 1219-20",
       "lab": "The Gloaming's Laboratory",
-      "note": "Departs the covenant with its magus Marina at some point in 1219, before the fleet winters at Boulogne; exact season not recorded. Never rejoins."
+      "note": "Departs the covenant with its magus Marina at some point in 1219, before the fleet winters at Boulogne; exact season not recorded. Never rejoins.",
+      "crew": 14
      }
     ],
     "inhabitants": [
@@ -148,6 +153,186 @@
       "actorId": null,
       "ship": "gloaming",
       "standing": "active"
+     },
+     {
+      "name": "Reinier",
+      "category": "turbula",
+      "job": "Silent sellsword",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Willem 'Sour' Jensen",
+      "category": "turbula",
+      "job": "Crew chief",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Pieter van Dijk",
+      "category": "turbula",
+      "job": "Surgeon",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Isabeau / Foxglove",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Gerard \"The Mule\"",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Leofwin",
+      "category": "turbula",
+      "job": "Cook / fighter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Rembrant de Wees",
+      "category": "turbula",
+      "job": "Sailing captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Drest",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Erc",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Udo Ironhand",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Runi the Moody",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Adam Smith",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leonhardt Ansgar Von Hahn",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Hob",
+      "category": "turbula",
+      "job": "Hunter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Cy",
+      "category": "turbula",
+      "job": "Shield grog",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Galan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Rostan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Captain Absalom",
+      "category": "turbula",
+      "job": "Captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
      }
     ],
     "library": {
@@ -184,7 +369,8 @@
       "captain": "",
       "status": "Active",
       "lab": "Solving's Laboratory",
-      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220).",
+      "crew": 14
      },
      {
       "id": "brineborn",
@@ -195,7 +381,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Brineborn's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "scholars-wake",
@@ -206,7 +393,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Scholar's Wake's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "maelstroms-maw",
@@ -217,7 +405,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Maelstrom's Maw Laboratory",
-      "note": "Handed from Nequam to Kor in Summer 1220."
+      "note": "Handed from Nequam to Kor in Summer 1220.",
+      "crew": 14
      },
      {
       "id": "storm-dragon",
@@ -228,7 +417,8 @@
       "captain": "",
       "status": "Active",
       "lab": "",
-      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet.",
+      "crew": 14
      }
     ],
     "inhabitants": [
@@ -319,6 +509,246 @@
       "actorId": "y7SZJxNgAR0HPaxL",
       "ship": "scholars-wake",
       "standing": "apprentice"
+     },
+     {
+      "name": "Reinier",
+      "category": "turbula",
+      "job": "Silent sellsword",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Willem 'Sour' Jensen",
+      "category": "turbula",
+      "job": "Crew chief",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Pieter van Dijk",
+      "category": "turbula",
+      "job": "Surgeon",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Isabeau / Foxglove",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Gerard \"The Mule\"",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Leofwin",
+      "category": "turbula",
+      "job": "Cook / fighter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Rembrant de Wees",
+      "category": "turbula",
+      "job": "Sailing captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Drest",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Erc",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Father Lachlan",
+      "category": "companions",
+      "job": "Mendicant friar",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Ka'wa'ill",
+      "category": "companions",
+      "job": "Merfolk ally",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Garrat Coffin",
+      "category": "companions",
+      "job": "",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Udo Ironhand",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Runi the Moody",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Adam Smith",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leonhardt Ansgar Von Hahn",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Heynric the Merchant",
+      "category": "companions",
+      "job": "Merchant-agent",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Henri",
+      "category": "companions",
+      "job": "Failed apprentice",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Rosie",
+      "category": "familiars",
+      "job": "Dustin's familiar (pig)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Hob",
+      "category": "turbula",
+      "job": "Hunter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Cy",
+      "category": "turbula",
+      "job": "Shield grog",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Galan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Rostan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Captain Absalom",
+      "category": "turbula",
+      "job": "Captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
      }
     ],
     "library": {
@@ -1415,7 +1845,8 @@
       "captain": "",
       "status": "Active",
       "lab": "Solving's Laboratory",
-      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220).",
+      "crew": 14
      },
      {
       "id": "brineborn",
@@ -1426,7 +1857,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Brineborn's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "scholars-wake",
@@ -1437,7 +1869,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Scholar's Wake's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "storm-dragon",
@@ -1448,7 +1881,8 @@
       "captain": "",
       "status": "Active",
       "lab": "",
-      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet.",
+      "crew": 14
      },
      {
       "id": "adamant",
@@ -1459,7 +1893,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Adamant's Laboratory",
-      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival."
+      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival.",
+      "crew": 14
      },
      {
       "id": "maelstroms-maw",
@@ -1470,7 +1905,8 @@
       "captain": "",
       "status": "On sabbatical",
       "lab": "The Maelstrom's Maw Laboratory",
-      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it."
+      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it.",
+      "crew": 14
      },
      {
       "id": "hound-of-cassel",
@@ -1481,7 +1917,8 @@
       "captain": "",
       "status": "Laid-up prize (Isle of Man)",
       "lab": "",
-      "note": "Captured from Scarem Montem (Summer 1221); berthed at the Isle of Man. No lab."
+      "note": "Captured from Scarem Montem (Summer 1221); berthed at the Isle of Man. No lab.",
+      "crew": 14
      }
     ],
     "inhabitants": [
@@ -1572,6 +2009,276 @@
       "actorId": "y7SZJxNgAR0HPaxL",
       "ship": "scholars-wake",
       "standing": "apprentice"
+     },
+     {
+      "name": "Reinier",
+      "category": "turbula",
+      "job": "Silent sellsword",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Willem 'Sour' Jensen",
+      "category": "turbula",
+      "job": "Crew chief",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Pieter van Dijk",
+      "category": "turbula",
+      "job": "Surgeon",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Isabeau / Foxglove",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Gerard \"The Mule\"",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Captain Absalom",
+      "category": "turbula",
+      "job": "Captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Rembrant de Wees",
+      "category": "turbula",
+      "job": "Sailing captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Drest",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Erc",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Father Lachlan",
+      "category": "companions",
+      "job": "Mendicant friar",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Udo Ironhand",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Runi the Moody",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Adam Smith",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leonhardt Ansgar Von Hahn",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Heynric the Merchant",
+      "category": "companions",
+      "job": "Merchant-agent",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Henri",
+      "category": "companions",
+      "job": "Failed apprentice",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Rosie",
+      "category": "familiars",
+      "job": "Dustin's familiar (pig)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leofwin",
+      "category": "turbula",
+      "job": "Cook / fighter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Giden",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Angus McPeterson",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Ka'wa'ill",
+      "category": "companions",
+      "job": "Merfolk ally",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Garrat Coffin",
+      "category": "companions",
+      "job": "",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Rán",
+      "category": "npc",
+      "job": "Valdemar's wife (fae)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Hob",
+      "category": "turbula",
+      "job": "Hunter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Cy",
+      "category": "turbula",
+      "job": "Shield grog",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Galan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Rostan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
      }
     ],
     "library": {
@@ -1609,7 +2316,8 @@
       "captain": "",
       "status": "Active",
       "lab": "Solving's Laboratory",
-      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220).",
+      "crew": 14
      },
      {
       "id": "brineborn",
@@ -1620,7 +2328,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Brineborn's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "scholars-wake",
@@ -1631,7 +2340,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Scholar's Wake's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "storm-dragon",
@@ -1642,7 +2352,8 @@
       "captain": "",
       "status": "Active",
       "lab": "",
-      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet.",
+      "crew": 14
      },
      {
       "id": "adamant",
@@ -1653,7 +2364,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Adamant's Laboratory",
-      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival."
+      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival.",
+      "crew": 14
      },
      {
       "id": "maelstroms-maw",
@@ -1664,7 +2376,8 @@
       "captain": "",
       "status": "On sabbatical",
       "lab": "The Maelstrom's Maw Laboratory",
-      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it."
+      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it.",
+      "crew": 14
      },
      {
       "id": "hound-of-cassel",
@@ -1675,7 +2388,8 @@
       "captain": "",
       "status": "Laid-up prize (Isle of Man)",
       "lab": "",
-      "note": "Captured from Scarem Montem (Summer 1221); berthed at the Isle of Man. No lab."
+      "note": "Captured from Scarem Montem (Summer 1221); berthed at the Isle of Man. No lab.",
+      "crew": 14
      }
     ],
     "inhabitants": [
@@ -1777,6 +2491,316 @@
       "actorId": "y7SZJxNgAR0HPaxL",
       "ship": "scholars-wake",
       "standing": "apprentice"
+     },
+     {
+      "name": "Reinier",
+      "category": "turbula",
+      "job": "Silent sellsword",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Willem 'Sour' Jensen",
+      "category": "turbula",
+      "job": "Crew chief",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Pieter van Dijk",
+      "category": "turbula",
+      "job": "Surgeon",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Isabeau / Foxglove",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Gerard \"The Mule\"",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Captain Absalom",
+      "category": "turbula",
+      "job": "Captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Rembrant de Wees",
+      "category": "turbula",
+      "job": "Sailing captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Drest",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Erc",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Father Lachlan",
+      "category": "companions",
+      "job": "Mendicant friar",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Udo Ironhand",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Runi the Moody",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Adam Smith",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leonhardt Ansgar Von Hahn",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Heynric the Merchant",
+      "category": "companions",
+      "job": "Merchant-agent",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Henri",
+      "category": "companions",
+      "job": "Failed apprentice",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Rosie",
+      "category": "familiars",
+      "job": "Dustin's familiar (pig)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leofwin",
+      "category": "turbula",
+      "job": "Cook / fighter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Giden",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Angus McPeterson",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Ka'wa'ill",
+      "category": "companions",
+      "job": "Merfolk ally",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Garrat Coffin",
+      "category": "companions",
+      "job": "",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Rán",
+      "category": "npc",
+      "job": "Valdemar's wife (fae)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Hob",
+      "category": "turbula",
+      "job": "Hunter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Cy",
+      "category": "turbula",
+      "job": "Shield grog",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Galan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Rostan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Hilda",
+      "category": "companions",
+      "job": "Wilhelm's scribe",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Carl",
+      "category": "companions",
+      "job": "Wilhelm's research assistant",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Isaac",
+      "category": "companions",
+      "job": "Wilhelm's research assistant",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Dietrich",
+      "category": "companions",
+      "job": "Wilhelm's brother",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
      }
     ],
     "library": {
@@ -1814,7 +2838,8 @@
       "captain": "",
       "status": "Active",
       "lab": "Solving's Laboratory",
-      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220).",
+      "crew": 14
      },
      {
       "id": "brineborn",
@@ -1825,7 +2850,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Brineborn's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "scholars-wake",
@@ -1836,7 +2862,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Scholar's Wake's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "storm-dragon",
@@ -1847,7 +2874,8 @@
       "captain": "",
       "status": "Active",
       "lab": "",
-      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet.",
+      "crew": 14
      },
      {
       "id": "adamant",
@@ -1858,7 +2886,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Adamant's Laboratory",
-      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival."
+      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival.",
+      "crew": 14
      },
      {
       "id": "maelstroms-maw",
@@ -1869,7 +2898,8 @@
       "captain": "",
       "status": "On sabbatical",
       "lab": "The Maelstrom's Maw Laboratory",
-      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it."
+      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it.",
+      "crew": 14
      },
      {
       "id": "hound-of-cassel",
@@ -1880,7 +2910,8 @@
       "captain": "",
       "status": "En route to Scarem Montem",
       "lab": "",
-      "note": "Now Wilhelm's; sailing back to Scarem Montem as the trade chip for his stolen thesis. No lab."
+      "note": "Now Wilhelm's; sailing back to Scarem Montem as the trade chip for his stolen thesis. No lab.",
+      "crew": 14
      }
     ],
     "inhabitants": [
@@ -1982,6 +3013,316 @@
       "actorId": "y7SZJxNgAR0HPaxL",
       "ship": "scholars-wake",
       "standing": "apprentice"
+     },
+     {
+      "name": "Reinier",
+      "category": "turbula",
+      "job": "Silent sellsword",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Willem 'Sour' Jensen",
+      "category": "turbula",
+      "job": "Crew chief",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Pieter van Dijk",
+      "category": "turbula",
+      "job": "Surgeon",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Isabeau / Foxglove",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Gerard \"The Mule\"",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Captain Absalom",
+      "category": "turbula",
+      "job": "Captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Rembrant de Wees",
+      "category": "turbula",
+      "job": "Sailing captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Drest",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Erc",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Father Lachlan",
+      "category": "companions",
+      "job": "Mendicant friar",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Udo Ironhand",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Runi the Moody",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Adam Smith",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leonhardt Ansgar Von Hahn",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Heynric the Merchant",
+      "category": "companions",
+      "job": "Merchant-agent",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Henri",
+      "category": "companions",
+      "job": "Failed apprentice",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Rosie",
+      "category": "familiars",
+      "job": "Dustin's familiar (pig)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leofwin",
+      "category": "turbula",
+      "job": "Cook / fighter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Giden",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Angus McPeterson",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Ka'wa'ill",
+      "category": "companions",
+      "job": "Merfolk ally",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Garrat Coffin",
+      "category": "companions",
+      "job": "",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Rán",
+      "category": "npc",
+      "job": "Valdemar's wife (fae)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Hob",
+      "category": "turbula",
+      "job": "Hunter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Cy",
+      "category": "turbula",
+      "job": "Shield grog",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Galan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Rostan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Hilda",
+      "category": "companions",
+      "job": "Wilhelm's scribe",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel"
+     },
+     {
+      "name": "Carl",
+      "category": "companions",
+      "job": "Wilhelm's research assistant",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel"
+     },
+     {
+      "name": "Isaac",
+      "category": "companions",
+      "job": "Wilhelm's research assistant",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel"
+     },
+     {
+      "name": "Dietrich",
+      "category": "companions",
+      "job": "Wilhelm's brother",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel"
      }
     ],
     "library": {
@@ -2019,7 +3360,8 @@
       "captain": "",
       "status": "Active",
       "lab": "Solving's Laboratory",
-      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220)."
+      "note": "Inherited by Dagmar after Solving vanished into Twilight (Spring 1220).",
+      "crew": 14
      },
      {
       "id": "brineborn",
@@ -2030,7 +3372,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Brineborn's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "scholars-wake",
@@ -2041,7 +3384,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Scholar's Wake's Laboratory",
-      "note": ""
+      "note": "",
+      "crew": 14
      },
      {
       "id": "storm-dragon",
@@ -2052,7 +3396,8 @@
       "captain": "",
       "status": "Active",
       "lab": "",
-      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet."
+      "note": "Valdemar's personal Viking drakar; river/inland transit, distinct from the main fleet.",
+      "crew": 14
      },
      {
       "id": "adamant",
@@ -2063,7 +3408,8 @@
       "captain": "",
       "status": "Active",
       "lab": "The Adamant's Laboratory",
-      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival."
+      "note": "The fleet's fifth hull, commissioned at Bergen; given to Valerian on his 1222 arrival.",
+      "crew": 14
      },
      {
       "id": "maelstroms-maw",
@@ -2074,7 +3420,8 @@
       "captain": "",
       "status": "On sabbatical",
       "lab": "The Maelstrom's Maw Laboratory",
-      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it."
+      "note": "Off the active roster while Kor is on sabbatical; a held asset, not lost — the Master Chart no longer tracks it.",
+      "crew": 14
      },
      {
       "id": "hound-of-cassel",
@@ -2085,7 +3432,8 @@
       "captain": "",
       "status": "En route to Scarem Montem",
       "lab": "",
-      "note": "Now Wilhelm's; sailing back to Scarem Montem as the trade chip for his stolen thesis. No lab."
+      "note": "Now Wilhelm's; sailing back to Scarem Montem as the trade chip for his stolen thesis. No lab.",
+      "crew": 14
      }
     ],
     "inhabitants": [
@@ -2187,6 +3535,316 @@
       "actorId": "y7SZJxNgAR0HPaxL",
       "ship": "scholars-wake",
       "standing": "apprentice"
+     },
+     {
+      "name": "Reinier",
+      "category": "turbula",
+      "job": "Silent sellsword",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Willem 'Sour' Jensen",
+      "category": "turbula",
+      "job": "Crew chief",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Pieter van Dijk",
+      "category": "turbula",
+      "job": "Surgeon",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Isabeau / Foxglove",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Gerard \"The Mule\"",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Captain Absalom",
+      "category": "turbula",
+      "job": "Captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "tide-of-memory"
+     },
+     {
+      "name": "Rembrant de Wees",
+      "category": "turbula",
+      "job": "Sailing captain",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Drest",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Erc",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Father Lachlan",
+      "category": "companions",
+      "job": "Mendicant friar",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
+     },
+     {
+      "name": "Udo Ironhand",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Runi the Moody",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Adam Smith",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leonhardt Ansgar Von Hahn",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Heynric the Merchant",
+      "category": "companions",
+      "job": "Merchant-agent",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Henri",
+      "category": "companions",
+      "job": "Failed apprentice",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Rosie",
+      "category": "familiars",
+      "job": "Dustin's familiar (pig)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "scholars-wake"
+     },
+     {
+      "name": "Leofwin",
+      "category": "turbula",
+      "job": "Cook / fighter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Giden",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Angus McPeterson",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Ka'wa'ill",
+      "category": "companions",
+      "job": "Merfolk ally",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Garrat Coffin",
+      "category": "companions",
+      "job": "",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Rán",
+      "category": "npc",
+      "job": "Valdemar's wife (fae)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "storm-dragon"
+     },
+     {
+      "name": "Hob",
+      "category": "turbula",
+      "job": "Hunter",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Cy",
+      "category": "turbula",
+      "job": "Shield grog",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Galan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Rostan",
+      "category": "turbula",
+      "job": "",
+      "points": 1,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "maelstroms-maw"
+     },
+     {
+      "name": "Hilda",
+      "category": "companions",
+      "job": "Wilhelm's scribe",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel"
+     },
+     {
+      "name": "Carl",
+      "category": "companions",
+      "job": "Wilhelm's research assistant",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel"
+     },
+     {
+      "name": "Isaac",
+      "category": "companions",
+      "job": "Wilhelm's research assistant",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel"
+     },
+     {
+      "name": "Dietrich",
+      "category": "companions",
+      "job": "Wilhelm's brother",
+      "points": 3,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel"
      }
     ],
     "library": {
@@ -2402,6 +4060,51 @@
    "kind": "add",
    "summary": "Valerian de Castellane (Guernicus) arrives",
    "detail": "Rescued from imprisonment; joins as an uneasy ally, bringing the Adamant. (The 1221 actor anchor lists him a season early; his true arrival is Spring 1222.)",
+   "refs": []
+  },
+  {
+   "season": "Spring 1221",
+   "sort_iso": "1221-04-20",
+   "facet": "inhabitants",
+   "kind": "note",
+   "summary": "Rosie familiared to Dustin",
+   "detail": "The magical pig Rosie becomes Dustin's familiar; sails with the Scholar's Wake thereafter. (Not counted against ship crew.)",
+   "refs": []
+  },
+  {
+   "season": "Summer 1221",
+   "sort_iso": "1221-06-20",
+   "facet": "inhabitants",
+   "kind": "note",
+   "summary": "Valdemar's raid crew forms on the Veðrdreki",
+   "detail": "For the Hound of Cassel raid, Valdemar's Veðrdreki takes on Garrat Coffin and Ka'wa'ill (both from the Brineborn) and Leofwin (from the Tide of Memory), alongside Giden and Angus McPeterson. These stick as the drakar's standing crew.",
+   "refs": []
+  },
+  {
+   "season": "Winter 1221-22",
+   "sort_iso": "1221-12-20",
+   "facet": "inhabitants",
+   "kind": "note",
+   "summary": "Absalom moves to captain the Tide of Memory",
+   "detail": "When the Maelstrom's Maw goes on sabbatical with Kor, its captain Absalom transfers to the Tide of Memory under Dagmar.",
+   "refs": []
+  },
+  {
+   "season": "Summer 1222",
+   "sort_iso": "1222-06-20",
+   "facet": "inhabitants",
+   "kind": "note",
+   "summary": "Rán boards the Veðrdreki as Valdemar's wife",
+   "detail": "The deep-sea fae Valdemar wed emerges in human form and joins the drakar (an NPC; not counted against ship crew).",
+   "refs": []
+  },
+  {
+   "season": "Summer 1223",
+   "sort_iso": "1223-06-24",
+   "facet": "inhabitants",
+   "kind": "note",
+   "summary": "Wilhelm's household joins",
+   "detail": "Wilhelm's scribe Hilda, research assistants Carl and Isaac, and his brother Dietrich travel with him (aboard the Brineborn in 1223, the Hound of Cassel from 1224). Guests — not counted against ship crew.",
    "refs": []
   }
  ]
