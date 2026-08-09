@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Covenant Ledger — Sjórseiðr</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,500;0,600;1,400;1,500&display=swap');
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86; --green:#3e6b35; --purple:#5b3a8a;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;min-height:100vh}
+.wrap{max-width:1080px;margin:0 auto;padding:26px 18px 70px}
+a{color:var(--teal)}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:14px}
+.crumb{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--rust-bright);margin:4px 0 2px}
+.ident{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13.5px;color:var(--ink-soft);margin-top:6px}
+.ident b{color:var(--ink);font-weight:600}
+.caveat{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin:8px 0 0;padding:8px 12px;
+  background:rgba(181,74,50,.08);border-left:3px solid var(--rust-bright);border-radius:0 6px 6px 0}
+
+.tabs{display:flex;gap:3px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin:16px 0 18px}
+.tab{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.02em;padding:8px 15px;cursor:pointer;color:var(--ink-soft);
+  border-bottom:3px solid transparent;display:flex;align-items:center;gap:7px}
+.tab:hover{color:var(--ink)}
+.tab.on{color:var(--rust-bright);border-color:var(--rust-bright);font-weight:600}
+.tab .n{font-family:'EB Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-soft)}
+
+.panel{display:none}
+.panel.on{display:block}
+.section-sub{font-style:italic;color:var(--ink-soft);font-size:13px;margin:0 0 14px}
+h2.sh{font-family:'Cinzel',serif;font-weight:600;font-size:16px;color:var(--rust-bright);margin:20px 0 8px}
+
+.card{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);border:1.5px solid rgba(120,90,40,.4);border-radius:10px;
+  padding:13px 16px;box-shadow:0 2px 6px var(--shadow);margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:11px}
+.ship .st{font-family:'Cinzel',serif;font-size:10px;text-transform:uppercase;letter-spacing:.05em;padding:2px 8px;border-radius:9px;
+  background:rgba(62,107,53,.16);color:var(--green);border:1px solid rgba(62,107,53,.4);float:right}
+.ship .st.inactive{background:rgba(120,90,40,.14);color:var(--ink-soft);border-color:rgba(120,90,40,.4)}
+.ship h3{font-family:'Cinzel',serif;font-size:15px;color:var(--ink);margin:0 0 2px}
+.ship .meta{font-size:12.5px;color:var(--ink-soft);line-height:1.5}
+.ship .lab{margin-top:5px;font-size:12px;color:var(--teal)}
+.ship .lab.none{color:var(--ink-soft);font-style:italic}
+
+table{border-collapse:collapse;width:100%;font-size:13px;margin:4px 0 10px}
+th,td{text-align:left;padding:5px 9px;border-bottom:1px solid rgba(120,90,40,.2)}
+th{font-family:'Cinzel',serif;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft)}
+tr:hover td{background:rgba(198,155,63,.08)}
+.pill{display:inline-block;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.03em;padding:2px 8px;border-radius:9px;
+  background:rgba(120,90,40,.14);color:var(--ink-soft);border:1px solid rgba(120,90,40,.3);margin:2px 3px 2px 0}
+.catblock{margin-bottom:12px}
+.catblock h3{font-family:'Cinzel',serif;font-size:13.5px;color:var(--rust-bright);margin:0 0 4px;text-transform:capitalize}
+.catblock h3 .n{font-family:'EB Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-soft);font-weight:400}
+.cols{columns:2;column-gap:24px}
+.cols .row{break-inside:avoid;font-size:13px;padding:2px 0;color:var(--ink)}
+.cols .row small{color:var(--ink-soft)}
+.econ-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed rgba(120,90,40,.25);font-size:14px}
+.econ-row b{font-family:'Cinzel',serif}
+.econ-big{font-size:20px;font-family:'Cinzel',serif}
+.pos{color:var(--green)} .neg{color:var(--rust-bright)}
+
+.ledger .fbtn{font-family:'Cinzel',serif;font-size:11px;cursor:pointer;border:1px solid rgba(120,90,40,.3);
+  background:rgba(244,235,213,.6);color:var(--ink-soft);padding:3px 10px;border-radius:13px;margin:0 4px 8px 0}
+.ledger .fbtn.on{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:#fff6df;border-color:#7a5318;font-weight:600}
+.levent{border-left:4px solid var(--gold);padding:8px 12px;margin:0 0 9px;background:rgba(120,90,40,.05);border-radius:0 8px 8px 0}
+.levent .lt{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.levent .season{font-family:'Cinzel',serif;font-size:11px;color:var(--rust-bright);letter-spacing:.03em;white-space:nowrap}
+.levent .facet{font-family:'Cinzel',serif;font-size:9.5px;text-transform:uppercase;letter-spacing:.05em;color:#fff6ec;padding:1px 7px;border-radius:8px}
+.levent h4{margin:2px 0 3px;font-size:14.5px}
+.levent p{margin:0;font-size:13px;color:var(--ink-soft);line-height:1.5}
+.f-ships{background:var(--teal)} .f-economics{background:var(--gold)} .f-vis{background:var(--purple)}
+.f-library{background:var(--green)} .f-inhabitants{background:var(--rust-bright)} .f-note{background:var(--ink-soft)}
+footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);font-size:12px;color:var(--ink-soft);font-style:italic}
+@media(max-width:640px){.cols{columns:1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="crumb"><a href="index.html">Sjórseiðr</a> · Covenant · Ledger</div>
+    <h1 id="cname">Covenant Ledger</h1>
+    <div class="ident" id="ident"></div>
+    <p class="caveat" id="caveat"></p>
+  </header>
+
+  <div class="tabs" id="tabs"></div>
+  <div id="panels"></div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script src="nav.js"></script>
+<script>
+const $=s=>document.querySelector(s);
+const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let D=null, tab='overview', ledgerFilter='all';
+const TABS=[['overview','Overview'],['ships','Ships & Labs'],['inhabitants','Inhabitants'],
+  ['library','Library & Vis'],['economics','Economics'],['ledger','Ledger']];
+
+async function load(){
+  try{ D=await (await fetch('./covenant_ledger.json',{cache:'no-store'})).json(); }
+  catch(e){ $('#panels').innerHTML=`<p style="padding:24px">Could not load covenant_ledger.json (serve over http).<br>${esc(e.message)}</p>`; return; }
+  const id=D.state.identity;
+  $('#cname').textContent=`${esc(id.name)} — Covenant Ledger`;
+  $('#ident').innerHTML=`<span>Founded <b>${esc(id.founded)}</b></span><span><b>${esc(id.tribunal)}</b> Tribunal</span>`
+    +`<span>Aegis <b>${id.aegis}</b> · Pen. <b>${id.penetration}</b></span><span>Regio <b>${id.regio}</b></span>`
+    +`<span>Wealth <b>${D.state.economics.wealth}</b> £</span>`;
+  $('#caveat').textContent=D.meta.baseline;
+  $('#foot').innerHTML=`Baseline as of <b>${esc(D.meta.asOf)}</b>, from the Foundry covenant actor. The ledger below records changes from that baseline forward.`;
+  $('#tabs').innerHTML=TABS.map(([k,l])=>{
+    const n = k==='ships'?D.state.ships.length : k==='inhabitants'?D.state.inhabitants.length
+      : k==='library'?(D.state.library.books.length+D.state.library.labTexts.length) : k==='ledger'?D.ledger.length : '';
+    return `<div class="tab ${tab===k?'on':''}" data-tab="${k}">${l}${n!==''?` <span class="n">${n}</span>`:''}</div>`;}).join('');
+  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;render();});
+  render();
+}
+
+function render(){
+  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('on',t.dataset.tab===tab));
+  $('#panels').innerHTML=`<div class="panel on">${PANELS[tab]()}</div>`;
+  if(tab==='ledger') wireLedger();
+}
+const s=()=>D.state;
+const PANELS={
+  overview(){ const e=s().economics;
+    return `<p class="section-sub">The covenant at a glance. Detailed facets are on the tabs above; changes over time are in the Ledger.</p>
+     <div class="grid">
+      <div class="card"><h2 class="sh" style="margin-top:0">Standing</h2>
+        <div class="econ-row"><span>Ships</span><b>${s().ships.length}</b></div>
+        <div class="econ-row"><span>Inhabitants</span><b>${s().inhabitants.length}</b></div>
+        <div class="econ-row"><span>Library (books · lab texts)</span><b>${s().library.books.length} · ${s().library.labTexts.length}</b></div>
+        <div class="econ-row"><span>Vis (stocks · sources)</span><b>${s().vis.stock.length} · ${s().vis.sources.length}</b></div>
+        <div class="econ-row"><span>Income · Expenditure</span><b>${e.totalIncome} · ${e.totalExpenditure} £</b></div>
+      </div>
+      <div class="card"><h2 class="sh" style="margin-top:0">Boons &amp; Hooks</h2>
+        <div><b style="font-family:Cinzel">Virtues</b><br>${s().virtues.map(v=>`<span class="pill">${esc(v)}</span>`).join('')}</div>
+        <div style="margin-top:8px"><b style="font-family:Cinzel">Flaws</b><br>${s().flaws.map(v=>`<span class="pill">${esc(v)}</span>`).join('')}</div>
+      </div>
+      <div class="card"><h2 class="sh" style="margin-top:0">Notable possessions</h2>
+        ${s().possessions.map(p=>`<div>· ${esc(p)}</div>`).join('')}</div>
+     </div>`;
+  },
+  ships(){
+    return `<p class="section-sub">Each ship is a covenant asset; most carry a magus's laboratory. The Hound of Cassel is a plain merchantman (no lab).</p>
+     <div class="grid">${s().ships.map(sh=>{
+       const inactive=/no longer|sabbatical|route/i.test(sh.status||'');
+       return `<div class="card ship"><span class="st ${inactive?'inactive':''}">${esc(sh.status||'')}</span>
+        <h3>${esc(sh.name)}${sh.aka?` <small style="color:var(--ink-soft)">(${esc(sh.aka)})</small>`:''}</h3>
+        <div class="meta">${esc(sh.kind||'')} · owner <b>${esc(sh.owner||'—')}</b>${sh.captain?` · captain ${esc(sh.captain)}`:''}</div>
+        <div class="lab ${sh.lab?'':'none'}">⚗ ${sh.lab?esc(sh.lab):'no laboratory'}</div></div>`;}).join('')}</div>`;
+  },
+  inhabitants(){
+    const cats={}; s().inhabitants.forEach(i=>(cats[i.category]=cats[i.category]||[]).push(i));
+    const order=['magi','companions','specialists','craftsmen','turbula','servants'];
+    return `<p class="section-sub">The covenant's people as recorded in the actor (${s().inhabitants.length} total). Counts include grouped servants/turbula.</p>`
+      + order.filter(c=>cats[c]).map(c=>{
+        const list=cats[c];
+        return `<div class="catblock"><h3>${esc(c)} <span class="n">(${list.reduce((a,i)=>a+(i.qty||1),0)})</span></h3>
+          <div class="cols">${list.map(i=>`<div class="row">${esc(i.name)}${i.qty>1?` ×${i.qty}`:''}${i.job?` <small>— ${esc(i.job)}</small>`:''}${i.yearBorn?` <small>(b. ${esc(i.yearBorn)})</small>`:''}</div>`).join('')}</div></div>`;
+      }).join('');
+  },
+  library(){
+    const L=s().library, V=s().vis;
+    return `<h2 class="sh" style="margin-top:0">Library <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${L.books.length} books, ${L.labTexts.length} lab texts</span></h2>
+      <div class="cols">${L.books.map(b=>`<div class="row">📖 ${esc(b)}</div>`).join('')}</div>
+      <h2 class="sh">Laboratory texts <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${L.labTexts.length}</span></h2>
+      <div class="cols">${L.labTexts.map(b=>`<div class="row">📜 ${esc(b)}</div>`).join('')}</div>
+      <h2 class="sh">Vis</h2>
+      <p class="section-sub" style="margin-bottom:6px">${V.stock.length} stocks · ${V.sources.length} sources <span style="color:var(--rust-bright)">(the 1224 prize sources are in the Ledger; the actor predates them)</span></p>
+      <div><b style="font-family:Cinzel">Sources</b><br>${V.sources.map(x=>`<span class="pill">${esc(x.name)}</span>`).join('')||'—'}</div>
+      <div style="margin-top:8px"><b style="font-family:Cinzel">Stock</b><br>${V.stock.map(x=>`<span class="pill">${esc(x.name)}${x.q?` ×${esc(x.q)}`:''}</span>`).join('')||'—'}</div>`;
+  },
+  economics(){
+    const e=s().economics;
+    const exp=e.yearlyExpenses||{};
+    const expRows=Object.entries(exp).map(([k,v])=>`<div class="econ-row"><span style="text-transform:capitalize">${esc(k)}</span><b>${v&&v.amount!=null?v.amount:(typeof v==='object'?'':v)} £</b></div>`).join('');
+    return `<div class="grid">
+      <div class="card"><h2 class="sh" style="margin-top:0">Balance</h2>
+        <div class="econ-row"><span>Total income</span><b class="pos">${e.totalIncome} £</b></div>
+        <div class="econ-row"><span>Total expenditure</span><b class="neg">${e.totalExpenditure} £</b></div>
+        <div class="econ-row"><span>Wealth</span><b class="econ-big">${e.wealth} £</b></div>
+        <div style="margin-top:6px;font-size:12px;color:var(--ink-soft)">Points — inhabitants ${e.inhabitantsPoints}, laboratories ${e.laboratoriesPoints}, weapons ${e.weaponsPoints}</div>
+      </div>
+      <div class="card"><h2 class="sh" style="margin-top:0">Income sources</h2>
+        ${(e.incomeSources||[]).map(x=>`<div class="econ-row"><span>${esc(x.name)} <small>(${esc(x.type||'')})</small></span><b class="pos">${x.incoming} £</b></div>`).join('')}</div>
+      <div class="card"><h2 class="sh" style="margin-top:0">Yearly expenses</h2>${expRows||'—'}</div>
+     </div>
+     <p class="section-sub" style="margin-top:12px">Note: these are the actor's baseline figures; the Bruges credit line (275 £) inflates income, and Foxglove's unsanctioned dragon-gold is <em>not</em> covenant wealth (see Ledger).</p>`;
+  },
+  ledger(){
+    const facets=['all',...[...new Set(D.ledger.map(l=>l.facet))]];
+    const btns=facets.map(f=>`<button class="fbtn ${ledgerFilter===f?'on':''}" data-f="${esc(f)}">${f==='all'?'All':esc(f)}</button>`).join('');
+    const items=D.ledger.filter(l=>ledgerFilter==='all'||l.facet===ledgerFilter)
+      .slice().sort((a,b)=>(b.sort_iso||'').localeCompare(a.sort_iso||''));
+    return `<p class="section-sub">Dated changes from the baseline forward. Newest first. This is the covenant's true running history; the state tabs show where it stands now.</p>
+      <div class="ledger">${btns}
+      ${items.map(l=>`<div class="levent">
+        <div class="lt"><span class="facet f-${esc(l.facet)}">${esc(l.facet)}</span><span class="season">${esc(l.season)}</span></div>
+        <h4>${esc(l.summary)}</h4><p>${esc(l.detail)}</p></div>`).join('') || '<p>No entries for this facet.</p>'}</div>`;
+  }
+};
+function wireLedger(){ document.querySelectorAll('.ledger .fbtn').forEach(b=>b.onclick=()=>{ledgerFilter=b.dataset.f;render();}); }
+load();
+</script>
+</body>
+</html>
