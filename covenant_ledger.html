@@ -158,7 +158,9 @@ const $=s=>document.querySelector(s);
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let D=null, tab='overview', ledgerFilter='all', node='current';
 const TABS=[['overview','Overview'],['ships','Ships & Labs'],['inhabitants','Inhabitants'],
-  ['library','Library'],['vis','Vis'],['economics','Economics'],['ledger','Ledger']];
+  ['library','Library'],['vis','Vis'],['trade','Trade'],['economics','Economics'],['ledger','Ledger']];
+const nodeYear=()=>node==='current'?1224:+node;
+const tradeTotal=y=>((D&&D.trade)||[]).filter(t=>t.year===y).reduce((a,t)=>a+(t.result||0),0);
 let visStockView='type', libSort='title';
 let libFilter={type:'all',location:'all',level:'all',quality:'all',topic:'all'};
 let libTableSort={col:'title',dir:1};
@@ -209,6 +211,7 @@ function facetReady(t){
   if(t==='library') return ((st.library.books||[]).length+(st.library.labTexts||[]).length)>0;
   if(t==='vis') return ((st.vis.stock||[]).length+(st.vis.sources||[]).length)>0;
   if(t==='economics') return st.economics && Object.keys(st.economics).length>0;
+  if(t==='trade') return true;
   return true;
 }
 const hasEcon=()=>{const e=s().economics;return e&&Object.keys(e).length>0;};
@@ -236,7 +239,8 @@ function render(){
     let cnt='';
     if(n.populated && facetReady(k)) cnt = k==='ships'?st.ships.length : k==='inhabitants'?inhabCount()
       : k==='library'?(st.library.books.length+st.library.labTexts.length)
-      : k==='vis'?st.vis.stock.reduce((a,x)=>a+(x.q||0),0) : '';
+      : k==='vis'?st.vis.stock.reduce((a,x)=>a+(x.q||0),0)
+      : k==='trade'?(tradeTotal(nodeYear())||'') : '';
     return `<div class="tab ${tab===k?'on':''}" data-tab="${k}">${l}${cnt!==''?` <span class="n">${cnt}</span>`:''}</div>`;}).join('');
   document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;render();});
   let html;
@@ -394,6 +398,21 @@ const PANELS={
       ${stock.length?legend:''}
       <h2 class="sh">Sources <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— pawns received this year vs. expected</span></h2>
       ${srcHtml}`;
+  },
+  trade(){
+    const yr=nodeYear();
+    const yv=((D.trade)||[]).filter(t=>t.year===yr);
+    const total=yv.reduce((a,t)=>a+(t.result||0),0);
+    const shipName=id=>SHIP_NAMES[id]||id;
+    const cards=yv.length?yv.map(t=>{
+      const bits=[]; if(t.risk)bits.push(t.risk+' risk'); if(t.target)bits.push('EF '+t.target);
+      const meta=bits.length?` <span style="font-family:Cinzel;font-size:10px;color:var(--ink-soft)">(${esc(bits.join(' · '))})</span>`:'';
+      const who=[t.ship?shipName(t.ship):null,t.by].filter(Boolean).join(' — ')||'Trade venture';
+      return `<div class="levent"><div class="lt"><span class="season">${esc(t.season)} ${yr}</span><b class="${t.result<0?'neg':'pos'}">${t.result>0?'+':''}${t.result} £</b></div>
+        <h4>${esc(who)}${meta}</h4><p>${esc(t.detail||'')}</p></div>`;
+    }).join(''):`<div class="notpop">No documented trade ventures for ${yr}. Any standing trade income is on the <b>Economics</b> tab.</div>`;
+    return `<p class="section-sub">Seasonal trade — one roll per ship, per season, under the covenant’s <a href="reference.html">homebrew trade rule</a> (Reference → Homebrew). Only ventures with a recorded result are shown; their totals feed the Economics tab’s trade income.</p>
+      <div class="ledger">${cards}${yv.length?`<div class="econ-row" style="margin-top:8px;border-top:1px solid rgba(120,90,40,.4)"><span><b style="font-family:Cinzel">Documented trade, ${yr}</b></span><b class="pos econ-big">${total} £</b></div>`:''}</div>`;
   },
   economics(){
     const e=s().economics;

@@ -249,17 +249,38 @@ function renderGazetteer(){
   `;
 }
 
+function simpleTable(cols, rows){
+  const head = `<tr>${cols.map((c,i)=>`<th class="${i===0?'corner':''}">${esc(c)}</th>`).join('')}</tr>`;
+  const body = rows.map(r=>`<tr>${r.map((v,i)=>i===0?`<td class="rowhead">${esc(v)}</td>`:`<td>${esc(v)}</td>`).join('')}</tr>`).join('');
+  return `<div class="tablewrap"><table>${head}${body}</table></div>`;
+}
+function renderHomebrew(){
+  const h = DATA.homebrew || {};
+  const s = h.tradeSuccess || {}, sf = h.tradeShortfall || {};
+  return `
+    <div class="section">
+      <div class="section-title">${esc(h.title || 'Homebrew')}</div>
+      <p class="note-flag">${esc(h.note || '')}</p>
+      <div class="section-sub">${esc(s.title || '')}</div>
+      ${simpleTable(s.cols || [], s.rows || [])}
+      <div class="section-sub">${esc(sf.title || '')}</div>
+      ${simpleTable(sf.cols || [], sf.rows || [])}
+    </div>`;
+}
+
 function render(){
   const tabs = [
     ['travel', 'Travel Times'],
     ['trade', 'Trade & Banking'],
     ['gazetteer', 'World Gazetteer'],
+    ['homebrew', 'Homebrew'],
   ];
   $('#tabs').innerHTML = tabs.map(([k,label])=>`<div class="reftab ${activeTab===k?'active':''}" data-tab="${k}">${label}</div>`).join('');
   $$('.reftab').forEach(el=>el.onclick=()=>{activeTab=el.dataset.tab; render();});
 
   if(activeTab==='travel') $('#content').innerHTML = renderTravel();
   else if(activeTab==='trade') $('#content').innerHTML = renderTrade();
+  else if(activeTab==='homebrew') $('#content').innerHTML = renderHomebrew();
   else if(activeTab==='gazetteer'){
     $('#content').innerHTML = renderGazetteer();
     $$('.gaz-btn').forEach(el=>el.onclick=()=>{activeGazPlace=+el.dataset.i; render();});

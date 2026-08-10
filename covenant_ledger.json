@@ -7977,5 +7977,48 @@
    "detail": "Wilhelm's scribe Hilda, research assistants Carl and Isaac, and his brother Dietrich travel with him (aboard the Brineborn in 1223, the Hound of Cassel from 1224). Guests — not counted against ship crew.",
    "refs": []
   }
+ ],
+ "trade": [
+  {
+   "year": 1220,
+   "season": "Spring",
+   "ship": "scholars-wake",
+   "by": "Dustin Page",
+   "result": 24,
+   "detail": "“An Apprentice” — the Scholar's Wake's season of trade for the covenant"
+  },
+  {
+   "year": 1221,
+   "season": "Spring",
+   "ship": "storm-dragon",
+   "by": "Valdemar Bjornsson",
+   "risk": "high",
+   "target": 12,
+   "result": 20,
+   "detail": "Antique's Trade — rolled 13 against Ease Factor 12"
+  },
+  {
+   "year": 1221,
+   "season": "Spring",
+   "ship": "brineborn",
+   "by": "Éogan Dobhartha",
+   "result": 9,
+   "detail": "Freshwater-barrel enchantment sold in trade"
+  },
+  {
+   "year": 1221,
+   "season": "Fall",
+   "ship": "brineborn",
+   "by": "Éogan Dobhartha",
+   "risk": "high",
+   "result": 15,
+   "detail": "Speculum Veritatis venture — a risk trade, successful"
+  },
+  {
+   "year": 1223,
+   "season": "Summer",
+   "result": 35,
+   "detail": "Fleet trade while the covenant was away at the Tribunal — 35 collectively (Scholar's Wake netted 11, best haul 15, low risk / low reward)"
+  }
  ]
 }

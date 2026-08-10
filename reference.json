@@ -1,527 +1,606 @@
 {
-  "meta": {
-    "title": "Reference",
-    "source": "Notion campaign wiki, pulled 2026-07-13",
-    "note": "GM reference tables transcribed from the campaign's Notion workspace, not otherwise on the site."
-  },
-  "travelTimes": {
-    "unit": "days",
-    "note": "Sailing times between major North Sea and Baltic ports, as tracked by the GM. The source table has a handful of asymmetric entries (e.g. Bruges→London reads 4 days, London→Bruges reads 3) and a couple of blank-looking cells (Skagarek Junction→Bruges) — transcribed as-is rather than smoothed over.",
-    "northSea": {
-      "locations": [
-        "Bruges",
-        "Dublin",
-        "Edinburgh (Leith)",
-        "Hamburg",
-        "London",
-        "Paris",
-        "Brittany Junction",
-        "Skagarek Junction"
-      ],
-      "matrix": [
-        [
-          0,
-          11,
-          8,
-          7,
-          4,
-          32,
-          8,
-          11
-        ],
-        [
-          11,
-          0,
-          12,
-          17,
-          12,
-          36,
-          7,
-          9
-        ],
-        [
-          8,
-          12,
-          0,
-          9,
-          9,
-          38,
-          13,
-          9
-        ],
-        [
-          7,
-          17,
-          9,
-          0,
-          9,
-          38,
-          10,
-          7
-        ],
-        [
-          3,
-          11,
-          8,
-          9,
-          0,
-          32,
-          5,
-          17
-        ],
-        [
-          27,
-          31,
-          33,
-          33,
-          5,
-          0,
-          35,
-          34
-        ],
-        [
-          7,
-          5,
-          13,
-          10,
-          7,
-          40,
-          0,
-          16
-        ],
-        [
-          0,
-          7,
-          9,
-          7,
-          12,
-          20,
-          16,
-          0
-        ]
-      ]
-    },
-    "baltic": {
-      "locations": [
-        "Danzig",
-        "Lubeck",
-        "Reval",
-        "Riga",
-        "Skagarek Junction"
-      ],
-      "matrix": [
-        [
-          0,
-          6,
-          8,
-          6,
-          8
-        ],
-        [
-          6,
-          0,
-          12,
-          10,
-          5
-        ],
-        [
-          8,
-          12,
-          0,
-          6,
-          13
-        ],
-        [
-          6,
-          10,
-          6,
-          0,
-          12
-        ],
-        [
-          8,
-          5,
-          13,
-          12,
-          0
-        ]
-      ]
-    }
-  },
-  "brugesToBordeaux": {
-    "title": "Bruges ↔ Bordeaux by Ketch",
-    "route": "Bruges → English Channel → around Brittany → into the Bay of Biscay → up the Garonne River to Bordeaux",
-    "distance": "Roughly 600–700 nautical miles, depending on the hugging route and tidal river navigation.",
-    "timing": [
-      {
-        "label": "Best case (favorable winds, minimal stops)",
-        "value": "6–8 days nonstop"
-      },
-      {
-        "label": "Realistic (coastal navigation, resupply, delays)",
-        "value": "2–3 weeks one way"
-      },
-      {
-        "label": "Southbound total",
-        "value": "2–3 weeks"
-      },
-      {
-        "label": "Time in port (trading, repairs, weather)",
-        "value": "1–2 weeks"
-      },
-      {
-        "label": "Northbound (against the wind, slower)",
-        "value": "3–4 weeks"
-      },
-      {
-        "label": "Round trip, average",
-        "value": "6–9 weeks"
-      },
-      {
-        "label": "Round trip, if unlucky with weather or negotiations",
-        "value": "up to 3 months"
-      }
+ "meta": {
+  "title": "Reference",
+  "source": "Notion campaign wiki, pulled 2026-07-13",
+  "note": "GM reference tables transcribed from the campaign's Notion workspace, not otherwise on the site."
+ },
+ "travelTimes": {
+  "unit": "days",
+  "note": "Sailing times between major North Sea and Baltic ports, as tracked by the GM. The source table has a handful of asymmetric entries (e.g. Bruges→London reads 4 days, London→Bruges reads 3) and a couple of blank-looking cells (Skagarek Junction→Bruges) — transcribed as-is rather than smoothed over.",
+  "northSea": {
+   "locations": [
+    "Bruges",
+    "Dublin",
+    "Edinburgh (Leith)",
+    "Hamburg",
+    "London",
+    "Paris",
+    "Brittany Junction",
+    "Skagarek Junction"
+   ],
+   "matrix": [
+    [
+     0,
+     11,
+     8,
+     7,
+     4,
+     32,
+     8,
+     11
     ],
-    "note": "Sailing south is usually with the wind, thanks to prevailing westerlies and coastal currents — the return trip is the slow leg.",
-    "hazards": [
-      "The Raz de Sein near Brittany — a nasty tidal bottleneck.",
-      "Bay of Biscay storms — infamous; late autumn and winter can be brutal.",
-      "Sandbanks and estuarial navigation in the Garonne River can slow or strand vessels."
-    ]
-  },
-  "tradeGoods": {
-    "title": "North Sea Trade Goods (circa 1220)",
-    "note": "What moves where, and the credit/banking practices that made it possible, before formal banks existed in the region.",
-    "regions": [
-      {
-        "name": "British Isles",
-        "exports": [
-          "Wool — England's most important export by far, especially from London, Boston, and Lynn; prized in Flanders for the textile industry.",
-          "Tin and lead, mined in Cornwall and shipped to the mainland.",
-          "Hides, leather, and salted fish, particularly from Scottish and northern English ports."
-        ],
-        "imports": [
-          "Cloth and textiles — fine wool and linen from Flanders and Brabant, often dyed and finished.",
-          "Wine, especially from Bordeaux, distributed via northern ports.",
-          "Salt, from the Bay of Biscay and German coasts — vital for preserving food.",
-          "Spices and luxury goods, originating in the Mediterranean or beyond but passing through Bruges or Lübeck first."
-        ]
-      },
-      {
-        "name": "Scandinavia",
-        "exports": [
-          "Timber, tar, and pitch — shipbuilding and construction.",
-          "Iron, from Sweden's Dalarna region.",
-          "Furs and hides from northern, forested regions.",
-          "Dried and salted fish — cod from Norway, herring from the Baltic."
-        ],
-        "imports": [
-          "Grain, particularly rye and wheat, from northern Germany and the Low Countries.",
-          "Crafted goods and luxury items — pottery, cloth, tools, and the occasional exotic good via German or Low Country merchants."
-        ]
-      },
-      {
-        "name": "Low Countries & Northern Germany (Bruges, Hamburg)",
-        "exports": [],
-        "imports": [],
-        "note": "Intermediary markets, not producers. Bruges became a permanent fair-town where almost any good could be bought — spices, silks, books, fine steel. Markets and fairs are gradually giving way to towns as permanent trade hubs."
-      }
+    [
+     11,
+     0,
+     12,
+     17,
+     12,
+     36,
+     7,
+     9
     ],
-    "banking": {
-      "title": "What was banking, in 1220?",
-      "note": "No banks exist yet as physical institutions in the North, and no checking accounts or public currency exchanges — Italian merchant-bankers won't establish branches in places like Bruges until later in the 13th and 14th centuries.",
-      "points": [
-        "Usury (charging interest) was officially condemned by the Church, but workarounds were common.",
-        "Wealthy merchants, Jews (often restricted to financial roles), and some clergy acted as moneylenders.",
-        "Credit-based trade was widespread — bills of exchange, letters of credit, and tallies settled debts across distances without moving coin.",
-        "Bills of exchange (an early form of the check) were invented in Italy and spreading north — a merchant in Bruges could receive payment from a partner in Venice via a bank-like intermediary.",
-        "Jewish financiers provided vital financial services in many North Sea towns, especially in England and the Low Countries, often under the protection (and taxation) of kings or lords.",
-        "Merchants borrowed capital to outfit ships or buy goods in bulk; profit-sharing ventures (an early investment partnership) were common in Hanseatic and Flemish contexts."
-      ]
-    },
-    "shipCosts": {
-      "title": "Ship Costs (Ars Magica context)",
-      "note": "Rough pricing for the hull types most relevant to the covenant's own fleet, standard craftsmanship assumed — exceptional features (faerie wood, hidden compartments, sea-weathering enchantments) can double the cost or more.",
-      "ships": [
-        {
-          "name": "Knarr",
-          "tag": "Norse cargo vessel, coastal/oceanic",
-          "capacity": "~20–30 tons",
-          "crew": "~8–15",
-          "cost": "500–800 silver pennies (~5–8 Mythic Pounds)",
-          "notes": "Used for long-haul trade, sturdy in rough waters."
-        },
-        {
-          "name": "Cog",
-          "tag": "Early medieval merchant vessel — like the covenant's own ships",
-          "capacity": "80–125 tons",
-          "crew": "~12–30",
-          "cost": "2,000–4,000 silver pennies (~20–40 Mythic Pounds)",
-          "notes": "High-sided, with a single sail; ideal for North Sea travel."
-        },
-        {
-          "name": "Longship",
-          "tag": "Military-focused, shallow draft",
-          "capacity": "Small cargo, but fast and maneuverable",
-          "crew": "",
-          "cost": "15–25 Mythic Pounds",
-          "notes": "Sleek and intimidating, but less suited for hauling cargo."
-        }
-      ],
-      "upkeepNote": "Ongoing upkeep — crew wages, dock fees, repairs, and cargo insurance — runs 1–3 Mythic Pounds per season as a baseline."
-    }
-  },
-  "gazetteer": {
-    "title": "World Gazetteer",
-    "note": "Broader Mythic Europe reference the GM prepared — mostly untested in play, dated “circa 1220” (current play is 1223–1224, so treat political specifics as a starting point, not gospel; Southampton's regency cast in particular has moved on — William Marshal died in 1219). Bruges' noble houses and their individual NPCs live on the Bruges Roster (open_questions.html) rather than being repeated here.",
-    "places": [
-      {
-        "name": "Bergen",
-        "tag": "Norway — where the covenant's fifth ship, the Adamant, was built",
-        "sections": [
-          {
-            "heading": "Overview",
-            "text": "The largest and most important city in Norway this period, a key trading hub and royal residence on the western coast, surrounded by fjords and mountains with a natural harbor and strong maritime culture. Christianized, but many rural Norwegians nearby still hold to older traditions. A melting pot of Norse, German, and Celtic influences, with a Hanseatic presence a century ahead of full Hansa dominance — German merchants are already active. Hosts a royal court, a bishopric, and a growing number of Benedictine and Augustinian churches and monasteries."
-          },
-          {
-            "heading": "Politics",
-            "text": "Ruled in name by King Haakon IV (still a minor in 1220), with power contested by the Bagler and Birkebeiner factions during the civil war era. A regency and noble council wields actual authority; the Bishop of Bergen holds major sway over trade, law, and education."
-          },
-          {
-            "heading": "Economy",
-            "text": "Exports dried fish (stockfish), furs, timber, and iron; imports grain, luxury goods, textiles, and wine. Ships from England, Denmark, and the Low Countries visit frequently. Merchant guilds are forming, Norwegian and foreign members alike vying for privileges."
-          }
-        ],
-        "npcs": [
-          {
-            "name": "Ragna Eriksdatter",
-            "role": "Local Power & Governance",
-            "note": "A widowed noblewoman of Birkebeiner loyalty, managing trade leases and under-the-table port taxes. Fiercely intelligent; rumored to have used seidhr magic in her youth."
-          },
-          {
-            "name": "Bishop Audun of Bergen",
-            "role": "Local Power & Governance",
-            "note": "Stern, reform-minded churchman and political player. Opposes pagan practices, but secretly collects old Norse manuscripts."
-          },
-          {
-            "name": "Torgils Alvsson",
-            "role": "Local Power & Governance",
-            "note": "Mercenary captain with a Letter of Marque. Loyal to whoever pays; occasionally hired to guard merchant vessels or “quietly” remove pirates."
-          },
-          {
-            "name": "Klaus Hestermann",
-            "role": "Merchants & Locals",
-            "note": "German merchant from Lübeck, trying to establish a permanent kontor. Friendly but calculating; may offer Hermetic magi foreign news and rare goods."
-          },
-          {
-            "name": "Inga the Lame",
-            "role": "Merchants & Locals",
-            "note": "Fishwife with a razor wit and a memory like a ledger. Knows everything about local dock traffic."
-          },
-          {
-            "name": "Sigurd Snorrason",
-            "role": "Merchants & Locals",
-            "note": "Master shipwright with an eye for detail and superstitious habits. Believes every vessel should carry a carved troll figure for luck."
-          },
-          {
-            "name": "Yrsa the White",
-            "role": "Mystic & Story Seeds",
-            "note": "Blind herbalist living just outside the city. Her remedies work too well — might be a hedge witch, or faerie-blooded."
-          },
-          {
-            "name": "Ketil Hermundsson",
-            "role": "Mystic & Story Seeds",
-            "note": "Reclusive rune-carver living in the old hill outside the city. Says he hears “the stones dream,” and has visions of dragons beneath the sea."
-          },
-          {
-            "name": "Jorunn Vardlokkur",
-            "role": "Mystic & Story Seeds",
-            "note": "A former seidhr-practitioner turned nun. Secretly mentors girls with strange dreams — possibly a path to apprentices or supernatural allies."
-          }
-        ]
-      },
-      {
-        "name": "Rhine Tribunal duchies bordering Bruges/Normandy",
-        "tag": "Quick reference",
-        "sections": [
-          {
-            "heading": "",
-            "text": "Duchy of Brabant — just east of Bruges, capital Leuven (Louvain), an important center of trade and culture. Duchy of Limburg — small but strategic, near the Meuse River. Duchy of Luxembourg — further southeast, still tied to Rhine Tribunal politics in mythic terms. Duchy of Cleves and Duchy of Julich — along the lower Rhine, in what's now western Germany. County of Flanders (includes Bruges) — formally Normandy Tribunal, but proximity means regular interaction with Rhine covenants. County of Hainaut and County of Namur — border regions, contested or jointly influenced depending on Tribunal politics."
-          }
-        ],
-        "npcs": []
-      },
-      {
-        "name": "London",
-        "tag": "England",
-        "sections": [
-          {
-            "heading": "",
-            "text": "The dominant English port, by size, location on the Thames, and royal investment. Trades wool, wine, cloth, and luxury goods, linked to the continent via Flemish, French, and Hanseatic merchants."
-          }
-        ],
-        "npcs": []
-      },
-      {
-        "name": "Southampton",
-        "tag": "England — Channel-facing, Gascon/Castilian/Italian trade",
-        "sections": [
-          {
-            "heading": "Overview",
-            "text": "A key Channel-facing port, important for trade with Gascony, Castile, and Italy — imports wine from Bordeaux, exports wool and cloth. Attracts Italian merchant ships (especially Genoa and Pisa) by the late 12th/early 13th century."
-          },
-          {
-            "heading": "Noble authority",
-            "text": "Southampton is a royal port under direct royal oversight, with a royal reeve or sheriff answerable to the Crown. With the king a minor, the regency council governs — principally Hubert de Burgh (Justiciar of England) and Peter des Roches (Bishop of Winchester, controlling church lands in Hampshire). William Marshal, Earl of Pembroke, had been regent until his death in 1219 and is no longer part of the current council."
-          }
-        ],
-        "npcs": [
-          {
-            "name": "Lord Edric of Marchwood",
-            "role": "Fictional noble, granted Southampton by the regency council",
-            "note": "A pragmatic, aging knight with little interest in courtly life, holding Marchwood and oversight of the port for loyalty during the First Barons' War. Distrusts magi but tolerates them if they pay tolls and stay clear of Church politics. Entangled in maritime tariffs, trade disputes with Flanders, and covert dealings with French sympathizers. His steward suspects Magus Benedictus of “unwholesome teachings” (see t031), but Edric is reluctant to confront a man with noble clients and unknown allies."
-          },
-          {
-            "name": "Gilbert de Barfleur & Margery de Barfleur",
-            "role": "Merchant family — wine & wool, Norman descent",
-            "note": "Long-established traders with ties to Bordeaux and Rouen; warehouses on the quayside, fund a small dockside chapel. Current heir Margery is a shrewd young widow who manages the books and may dabble in folk charms. Hook: a relic they claim came from Aquitaine — possibly vis, possibly faerie interest."
-          },
-          {
-            "name": "Editha Godwin",
-            "role": "Merchant family — wool & salt, Saxon descent",
-            "note": "Matriarch of the Godwinsons, who regained influence after supporting King John; control wool export and salt routes inland, wary of Norman influence. Editha is known for an iron will and generous alms to hospitals and monasteries. Hook: one of their warehouses suffers repeated inexplicable cold snaps."
-          },
-          {
-            "name": "Elias FitzEnoch",
-            "role": "Merchant family — beer, timber, pilgrims",
-            "note": "Head of the FitzEnochs, originally coopers and brewers now in beer exports, timber, and ferrying pilgrims; unusually open to strangers, rumored selkie or nixie ancestry. Elias plays the merry drunk but keeps exacting ledgers. Hook: their riverboats have started seeing ghost lights on the Solent, and Elias has privately asked Magus Benedictus to look into it (see t031)."
-          },
-          {
-            "name": "Ysbrand van Tolen",
-            "role": "Merchant family — moneychangers, Flemish",
-            "note": "Recent arrivals from Bruges dealing in credit notes, Dutch dyes, and manuscript copying; worship discreetly at a private chapel to a Flemish saint. Ysbrand is a stoic merchant-banker whose daughter has visions of ships that never returned. Hook: their ledgers are impossibly accurate — possibly enchanted, possibly hedge math."
-          },
-          {
-            "name": "Dolly Price",
-            "role": "Wealthy merchant, coastal smuggling connections",
-            "note": "A wealthy Southampton merchant with real influence among coastal criminals and smugglers, though she'd never put it that plainly. A committed busybody who knows everyone's business, she's made a genuine enemy of the Sheriff of Southampton and carries some manner of infernal curse she keeps carefully hidden. Most striking: she's under the personal protection of Solving Epicurusson — a connection that predates his 1220 disappearance and has never been followed up on (see t061)."
-          }
-        ]
-      },
-      {
-        "name": "Other English ports",
-        "tag": "Brief reference",
-        "sections": [
-          {
-            "heading": "Bristol",
-            "text": "Vital for Irish trade and increasingly Iberia/Brittany. Leading exporter of wool and hides, importer of wine and salt. Shipyards, growing merchant community."
-          },
-          {
-            "heading": "King's Lynn (Bishop's Lynn)",
-            "text": "Major east-coast port for North Sea trade with Flanders, the Baltic, and Scandinavia. Strong wool-trade and cloth-production ties. Grew under the Bishop of Norwich's patronage."
-          },
-          {
-            "heading": "Boston (Lincolnshire)",
-            "text": "Rising port for the wool trade to Flanders — already active in 1220, later the second-richest English wool port after London."
-          },
-          {
-            "heading": "Hull (Wyke upon Hull)",
-            "text": "Still emerging in 1220; becomes a royal port only later (officially founded 1293)."
-          },
-          {
-            "heading": "Sandwich",
-            "text": "A Cinque Port — commerce and naval service both. Trades with France and the Low Countries, royal patronage as part of Crown naval infrastructure."
-          },
-          {
-            "heading": "Dover",
-            "text": "Primarily military and passenger, part of the Cinque Ports; less bulk trade, more strategic."
-          },
-          {
-            "heading": "Yarmouth (Great Yarmouth)",
-            "text": "Herring fishery, trade with the Low Countries; a significant regional port especially in autumn during the herring fair."
-          },
-          {
-            "heading": "Exeter, Chichester, Berwick-upon-Tweed, Scarborough, Whitby",
-            "text": "Exeter: coastal trade with Brittany and the Bay of Biscay. Chichester: smaller, local trade. Berwick: contested, a northern hub with Scotland and Scandinavia. Scarborough and Whitby: Yorkshire fishing and regional trade."
-          }
-        ],
-        "npcs": []
-      },
-      {
-        "name": "Rouen",
-        "tag": "France — capital of the Duchy of Normandy",
-        "sections": [
-          {
-            "heading": "Political control",
-            "text": "Philip II Augustus took Normandy from King John in 1204, so by 1220 Rouen is part of the French royal domain — governed by a royal bailiff (bailli) and its own city council, with royal appointees overseeing both. Local nobility who'd pledged to the English Crown were mostly dispossessed, replaced by Capetian loyalists."
-          },
-          {
-            "heading": "Church influence",
-            "text": "Seat of the Archbishop of Rouen, one of the most powerful church positions in northern France, holding vast lands and political influence. Rouen Cathedral, already a major ecclesiastical site for centuries, is still under construction."
-          },
-          {
-            "heading": "Civic life & merchants",
-            "text": "A major commercial/maritime hub on the Seine, linking to Paris and the sea. English and Flemish merchants keep doing business there despite the political change. Strong wine, cloth, and salt trades, plus spice/silk/luxury markets flowing in via Marseille and Genoa."
-          },
-          {
-            "heading": "Military presence",
-            "text": "A border city between formerly-English and now-French territory — houses a royal garrison, frequently fortified or monitored, with French knights and royal officials common as Philip and his successors tighten control over Normandy."
-          }
-        ],
-        "npcs": []
-      },
-      {
-        "name": "Other French ports",
-        "tag": "Brief reference",
-        "sections": [
-          {
-            "heading": "La Rochelle (Poitou)",
-            "text": "Cosmopolitan, access to scholars, sea trade, and less oversight. Safe ground for Bonisagus research exchanges and faerie court rumors."
-          },
-          {
-            "heading": "Boulogne-sur-Mer",
-            "text": "A common Channel crossing point. GM notes call it “a winter port for the Sjórseiðr covenant... likely the most frequent destination,” but the chronicle records the party settling on Bruges as the default winter port instead — this note is superseded by actual play."
-          },
-          {
-            "heading": "Dieppe or Honfleur (lesser Norman ports)",
-            "text": "Used for discreet meetings with other covenants or hedge practitioners; possibly linked to fae enclaves or Criamon pilgrims heading inland."
-          }
-        ],
-        "npcs": [
-          {
-            "name": "Otto-Pauels",
-            "role": "Boulogne-sur-Mer — well-traveled clerk, ex-warrior",
-            "note": "A literate former warrior (arthritis-slowed now, possibly a Crusade veteran) turned clerk, well-traveled enough to get along anywhere in the region. Owns a minor holy relic. Haunted by a diabolic past he's since escaped, and troubled by a weakness for adventure that undoes his better judgment when something shiny catches his attention."
-          }
-        ]
-      },
-      {
-        "name": "Bruges — civic structure",
-        "tag": "The covenant's actual winter port",
-        "sections": [
-          {
-            "heading": "The Town Watch (Stadswacht)",
-            "text": "Paid, rotated guards drawn from guilds and civic households. Patrol marketplaces, gates, and curfew hours; enforce city law, prevent theft and riots, guard the belfry and town hall. Answer nominally to the Schepenen."
-          },
-          {
-            "heading": "The Castellan's Men",
-            "text": "A private armed force loyal to the Castellan of Bruges, who holds the castle for the Count of Flanders. Intervene in seditious activity, noble disputes, or defense of strategic sites — not always on friendly terms with the town authorities."
-          },
-          {
-            "heading": "The Schepenen (Aldermen)",
-            "text": "Magistrates serving as judges, jurists, and city council members — interpret city charters, settle disputes, oversee criminal proceedings. Often former merchants or guild leaders."
-          },
-          {
-            "heading": "Ecclesiastical courts",
-            "text": "Clergy and monastics answer to canon law, not civic law. The Bishop of Tournai has indirect jurisdiction, but local abbots and priories hold real influence; heresy and magical accusations often fall into this murky overlap."
-          },
-          {
-            "heading": "Overlord: the Count of Flanders",
-            "text": "Nominal ruler of Bruges and all Flanders is Joan of Constantinople, Countess of Flanders and Hainaut (see the Bruges Roster). Her husband and co-ruler, Ferdinand of Portugal, has been imprisoned by the King of France since the 1214 Battle of Bouvines — she governs alone, torn between French royal power and Flemish autonomy."
-          }
-        ],
-        "npcs": []
-      }
+    [
+     8,
+     12,
+     0,
+     9,
+     9,
+     38,
+     13,
+     9
+    ],
+    [
+     7,
+     17,
+     9,
+     0,
+     9,
+     38,
+     10,
+     7
+    ],
+    [
+     3,
+     11,
+     8,
+     9,
+     0,
+     32,
+     5,
+     17
+    ],
+    [
+     27,
+     31,
+     33,
+     33,
+     5,
+     0,
+     35,
+     34
+    ],
+    [
+     7,
+     5,
+     13,
+     10,
+     7,
+     40,
+     0,
+     16
+    ],
+    [
+     0,
+     7,
+     9,
+     7,
+     12,
+     20,
+     16,
+     0
     ]
+   ]
+  },
+  "baltic": {
+   "locations": [
+    "Danzig",
+    "Lubeck",
+    "Reval",
+    "Riga",
+    "Skagarek Junction"
+   ],
+   "matrix": [
+    [
+     0,
+     6,
+     8,
+     6,
+     8
+    ],
+    [
+     6,
+     0,
+     12,
+     10,
+     5
+    ],
+    [
+     8,
+     12,
+     0,
+     6,
+     13
+    ],
+    [
+     6,
+     10,
+     6,
+     0,
+     12
+    ],
+    [
+     8,
+     5,
+     13,
+     12,
+     0
+    ]
+   ]
   }
+ },
+ "brugesToBordeaux": {
+  "title": "Bruges ↔ Bordeaux by Ketch",
+  "route": "Bruges → English Channel → around Brittany → into the Bay of Biscay → up the Garonne River to Bordeaux",
+  "distance": "Roughly 600–700 nautical miles, depending on the hugging route and tidal river navigation.",
+  "timing": [
+   {
+    "label": "Best case (favorable winds, minimal stops)",
+    "value": "6–8 days nonstop"
+   },
+   {
+    "label": "Realistic (coastal navigation, resupply, delays)",
+    "value": "2–3 weeks one way"
+   },
+   {
+    "label": "Southbound total",
+    "value": "2–3 weeks"
+   },
+   {
+    "label": "Time in port (trading, repairs, weather)",
+    "value": "1–2 weeks"
+   },
+   {
+    "label": "Northbound (against the wind, slower)",
+    "value": "3–4 weeks"
+   },
+   {
+    "label": "Round trip, average",
+    "value": "6–9 weeks"
+   },
+   {
+    "label": "Round trip, if unlucky with weather or negotiations",
+    "value": "up to 3 months"
+   }
+  ],
+  "note": "Sailing south is usually with the wind, thanks to prevailing westerlies and coastal currents — the return trip is the slow leg.",
+  "hazards": [
+   "The Raz de Sein near Brittany — a nasty tidal bottleneck.",
+   "Bay of Biscay storms — infamous; late autumn and winter can be brutal.",
+   "Sandbanks and estuarial navigation in the Garonne River can slow or strand vessels."
+  ]
+ },
+ "tradeGoods": {
+  "title": "North Sea Trade Goods (circa 1220)",
+  "note": "What moves where, and the credit/banking practices that made it possible, before formal banks existed in the region.",
+  "regions": [
+   {
+    "name": "British Isles",
+    "exports": [
+     "Wool — England's most important export by far, especially from London, Boston, and Lynn; prized in Flanders for the textile industry.",
+     "Tin and lead, mined in Cornwall and shipped to the mainland.",
+     "Hides, leather, and salted fish, particularly from Scottish and northern English ports."
+    ],
+    "imports": [
+     "Cloth and textiles — fine wool and linen from Flanders and Brabant, often dyed and finished.",
+     "Wine, especially from Bordeaux, distributed via northern ports.",
+     "Salt, from the Bay of Biscay and German coasts — vital for preserving food.",
+     "Spices and luxury goods, originating in the Mediterranean or beyond but passing through Bruges or Lübeck first."
+    ]
+   },
+   {
+    "name": "Scandinavia",
+    "exports": [
+     "Timber, tar, and pitch — shipbuilding and construction.",
+     "Iron, from Sweden's Dalarna region.",
+     "Furs and hides from northern, forested regions.",
+     "Dried and salted fish — cod from Norway, herring from the Baltic."
+    ],
+    "imports": [
+     "Grain, particularly rye and wheat, from northern Germany and the Low Countries.",
+     "Crafted goods and luxury items — pottery, cloth, tools, and the occasional exotic good via German or Low Country merchants."
+    ]
+   },
+   {
+    "name": "Low Countries & Northern Germany (Bruges, Hamburg)",
+    "exports": [],
+    "imports": [],
+    "note": "Intermediary markets, not producers. Bruges became a permanent fair-town where almost any good could be bought — spices, silks, books, fine steel. Markets and fairs are gradually giving way to towns as permanent trade hubs."
+   }
+  ],
+  "banking": {
+   "title": "What was banking, in 1220?",
+   "note": "No banks exist yet as physical institutions in the North, and no checking accounts or public currency exchanges — Italian merchant-bankers won't establish branches in places like Bruges until later in the 13th and 14th centuries.",
+   "points": [
+    "Usury (charging interest) was officially condemned by the Church, but workarounds were common.",
+    "Wealthy merchants, Jews (often restricted to financial roles), and some clergy acted as moneylenders.",
+    "Credit-based trade was widespread — bills of exchange, letters of credit, and tallies settled debts across distances without moving coin.",
+    "Bills of exchange (an early form of the check) were invented in Italy and spreading north — a merchant in Bruges could receive payment from a partner in Venice via a bank-like intermediary.",
+    "Jewish financiers provided vital financial services in many North Sea towns, especially in England and the Low Countries, often under the protection (and taxation) of kings or lords.",
+    "Merchants borrowed capital to outfit ships or buy goods in bulk; profit-sharing ventures (an early investment partnership) were common in Hanseatic and Flemish contexts."
+   ]
+  },
+  "shipCosts": {
+   "title": "Ship Costs (Ars Magica context)",
+   "note": "Rough pricing for the hull types most relevant to the covenant's own fleet, standard craftsmanship assumed — exceptional features (faerie wood, hidden compartments, sea-weathering enchantments) can double the cost or more.",
+   "ships": [
+    {
+     "name": "Knarr",
+     "tag": "Norse cargo vessel, coastal/oceanic",
+     "capacity": "~20–30 tons",
+     "crew": "~8–15",
+     "cost": "500–800 silver pennies (~5–8 Mythic Pounds)",
+     "notes": "Used for long-haul trade, sturdy in rough waters."
+    },
+    {
+     "name": "Cog",
+     "tag": "Early medieval merchant vessel — like the covenant's own ships",
+     "capacity": "80–125 tons",
+     "crew": "~12–30",
+     "cost": "2,000–4,000 silver pennies (~20–40 Mythic Pounds)",
+     "notes": "High-sided, with a single sail; ideal for North Sea travel."
+    },
+    {
+     "name": "Longship",
+     "tag": "Military-focused, shallow draft",
+     "capacity": "Small cargo, but fast and maneuverable",
+     "crew": "",
+     "cost": "15–25 Mythic Pounds",
+     "notes": "Sleek and intimidating, but less suited for hauling cargo."
+    }
+   ],
+   "upkeepNote": "Ongoing upkeep — crew wages, dock fees, repairs, and cargo insurance — runs 1–3 Mythic Pounds per season as a baseline."
+  }
+ },
+ "gazetteer": {
+  "title": "World Gazetteer",
+  "note": "Broader Mythic Europe reference the GM prepared — mostly untested in play, dated “circa 1220” (current play is 1223–1224, so treat political specifics as a starting point, not gospel; Southampton's regency cast in particular has moved on — William Marshal died in 1219). Bruges' noble houses and their individual NPCs live on the Bruges Roster (open_questions.html) rather than being repeated here.",
+  "places": [
+   {
+    "name": "Bergen",
+    "tag": "Norway — where the covenant's fifth ship, the Adamant, was built",
+    "sections": [
+     {
+      "heading": "Overview",
+      "text": "The largest and most important city in Norway this period, a key trading hub and royal residence on the western coast, surrounded by fjords and mountains with a natural harbor and strong maritime culture. Christianized, but many rural Norwegians nearby still hold to older traditions. A melting pot of Norse, German, and Celtic influences, with a Hanseatic presence a century ahead of full Hansa dominance — German merchants are already active. Hosts a royal court, a bishopric, and a growing number of Benedictine and Augustinian churches and monasteries."
+     },
+     {
+      "heading": "Politics",
+      "text": "Ruled in name by King Haakon IV (still a minor in 1220), with power contested by the Bagler and Birkebeiner factions during the civil war era. A regency and noble council wields actual authority; the Bishop of Bergen holds major sway over trade, law, and education."
+     },
+     {
+      "heading": "Economy",
+      "text": "Exports dried fish (stockfish), furs, timber, and iron; imports grain, luxury goods, textiles, and wine. Ships from England, Denmark, and the Low Countries visit frequently. Merchant guilds are forming, Norwegian and foreign members alike vying for privileges."
+     }
+    ],
+    "npcs": [
+     {
+      "name": "Ragna Eriksdatter",
+      "role": "Local Power & Governance",
+      "note": "A widowed noblewoman of Birkebeiner loyalty, managing trade leases and under-the-table port taxes. Fiercely intelligent; rumored to have used seidhr magic in her youth."
+     },
+     {
+      "name": "Bishop Audun of Bergen",
+      "role": "Local Power & Governance",
+      "note": "Stern, reform-minded churchman and political player. Opposes pagan practices, but secretly collects old Norse manuscripts."
+     },
+     {
+      "name": "Torgils Alvsson",
+      "role": "Local Power & Governance",
+      "note": "Mercenary captain with a Letter of Marque. Loyal to whoever pays; occasionally hired to guard merchant vessels or “quietly” remove pirates."
+     },
+     {
+      "name": "Klaus Hestermann",
+      "role": "Merchants & Locals",
+      "note": "German merchant from Lübeck, trying to establish a permanent kontor. Friendly but calculating; may offer Hermetic magi foreign news and rare goods."
+     },
+     {
+      "name": "Inga the Lame",
+      "role": "Merchants & Locals",
+      "note": "Fishwife with a razor wit and a memory like a ledger. Knows everything about local dock traffic."
+     },
+     {
+      "name": "Sigurd Snorrason",
+      "role": "Merchants & Locals",
+      "note": "Master shipwright with an eye for detail and superstitious habits. Believes every vessel should carry a carved troll figure for luck."
+     },
+     {
+      "name": "Yrsa the White",
+      "role": "Mystic & Story Seeds",
+      "note": "Blind herbalist living just outside the city. Her remedies work too well — might be a hedge witch, or faerie-blooded."
+     },
+     {
+      "name": "Ketil Hermundsson",
+      "role": "Mystic & Story Seeds",
+      "note": "Reclusive rune-carver living in the old hill outside the city. Says he hears “the stones dream,” and has visions of dragons beneath the sea."
+     },
+     {
+      "name": "Jorunn Vardlokkur",
+      "role": "Mystic & Story Seeds",
+      "note": "A former seidhr-practitioner turned nun. Secretly mentors girls with strange dreams — possibly a path to apprentices or supernatural allies."
+     }
+    ]
+   },
+   {
+    "name": "Rhine Tribunal duchies bordering Bruges/Normandy",
+    "tag": "Quick reference",
+    "sections": [
+     {
+      "heading": "",
+      "text": "Duchy of Brabant — just east of Bruges, capital Leuven (Louvain), an important center of trade and culture. Duchy of Limburg — small but strategic, near the Meuse River. Duchy of Luxembourg — further southeast, still tied to Rhine Tribunal politics in mythic terms. Duchy of Cleves and Duchy of Julich — along the lower Rhine, in what's now western Germany. County of Flanders (includes Bruges) — formally Normandy Tribunal, but proximity means regular interaction with Rhine covenants. County of Hainaut and County of Namur — border regions, contested or jointly influenced depending on Tribunal politics."
+     }
+    ],
+    "npcs": []
+   },
+   {
+    "name": "London",
+    "tag": "England",
+    "sections": [
+     {
+      "heading": "",
+      "text": "The dominant English port, by size, location on the Thames, and royal investment. Trades wool, wine, cloth, and luxury goods, linked to the continent via Flemish, French, and Hanseatic merchants."
+     }
+    ],
+    "npcs": []
+   },
+   {
+    "name": "Southampton",
+    "tag": "England — Channel-facing, Gascon/Castilian/Italian trade",
+    "sections": [
+     {
+      "heading": "Overview",
+      "text": "A key Channel-facing port, important for trade with Gascony, Castile, and Italy — imports wine from Bordeaux, exports wool and cloth. Attracts Italian merchant ships (especially Genoa and Pisa) by the late 12th/early 13th century."
+     },
+     {
+      "heading": "Noble authority",
+      "text": "Southampton is a royal port under direct royal oversight, with a royal reeve or sheriff answerable to the Crown. With the king a minor, the regency council governs — principally Hubert de Burgh (Justiciar of England) and Peter des Roches (Bishop of Winchester, controlling church lands in Hampshire). William Marshal, Earl of Pembroke, had been regent until his death in 1219 and is no longer part of the current council."
+     }
+    ],
+    "npcs": [
+     {
+      "name": "Lord Edric of Marchwood",
+      "role": "Fictional noble, granted Southampton by the regency council",
+      "note": "A pragmatic, aging knight with little interest in courtly life, holding Marchwood and oversight of the port for loyalty during the First Barons' War. Distrusts magi but tolerates them if they pay tolls and stay clear of Church politics. Entangled in maritime tariffs, trade disputes with Flanders, and covert dealings with French sympathizers. His steward suspects Magus Benedictus of “unwholesome teachings” (see t031), but Edric is reluctant to confront a man with noble clients and unknown allies."
+     },
+     {
+      "name": "Gilbert de Barfleur & Margery de Barfleur",
+      "role": "Merchant family — wine & wool, Norman descent",
+      "note": "Long-established traders with ties to Bordeaux and Rouen; warehouses on the quayside, fund a small dockside chapel. Current heir Margery is a shrewd young widow who manages the books and may dabble in folk charms. Hook: a relic they claim came from Aquitaine — possibly vis, possibly faerie interest."
+     },
+     {
+      "name": "Editha Godwin",
+      "role": "Merchant family — wool & salt, Saxon descent",
+      "note": "Matriarch of the Godwinsons, who regained influence after supporting King John; control wool export and salt routes inland, wary of Norman influence. Editha is known for an iron will and generous alms to hospitals and monasteries. Hook: one of their warehouses suffers repeated inexplicable cold snaps."
+     },
+     {
+      "name": "Elias FitzEnoch",
+      "role": "Merchant family — beer, timber, pilgrims",
+      "note": "Head of the FitzEnochs, originally coopers and brewers now in beer exports, timber, and ferrying pilgrims; unusually open to strangers, rumored selkie or nixie ancestry. Elias plays the merry drunk but keeps exacting ledgers. Hook: their riverboats have started seeing ghost lights on the Solent, and Elias has privately asked Magus Benedictus to look into it (see t031)."
+     },
+     {
+      "name": "Ysbrand van Tolen",
+      "role": "Merchant family — moneychangers, Flemish",
+      "note": "Recent arrivals from Bruges dealing in credit notes, Dutch dyes, and manuscript copying; worship discreetly at a private chapel to a Flemish saint. Ysbrand is a stoic merchant-banker whose daughter has visions of ships that never returned. Hook: their ledgers are impossibly accurate — possibly enchanted, possibly hedge math."
+     },
+     {
+      "name": "Dolly Price",
+      "role": "Wealthy merchant, coastal smuggling connections",
+      "note": "A wealthy Southampton merchant with real influence among coastal criminals and smugglers, though she'd never put it that plainly. A committed busybody who knows everyone's business, she's made a genuine enemy of the Sheriff of Southampton and carries some manner of infernal curse she keeps carefully hidden. Most striking: she's under the personal protection of Solving Epicurusson — a connection that predates his 1220 disappearance and has never been followed up on (see t061)."
+     }
+    ]
+   },
+   {
+    "name": "Other English ports",
+    "tag": "Brief reference",
+    "sections": [
+     {
+      "heading": "Bristol",
+      "text": "Vital for Irish trade and increasingly Iberia/Brittany. Leading exporter of wool and hides, importer of wine and salt. Shipyards, growing merchant community."
+     },
+     {
+      "heading": "King's Lynn (Bishop's Lynn)",
+      "text": "Major east-coast port for North Sea trade with Flanders, the Baltic, and Scandinavia. Strong wool-trade and cloth-production ties. Grew under the Bishop of Norwich's patronage."
+     },
+     {
+      "heading": "Boston (Lincolnshire)",
+      "text": "Rising port for the wool trade to Flanders — already active in 1220, later the second-richest English wool port after London."
+     },
+     {
+      "heading": "Hull (Wyke upon Hull)",
+      "text": "Still emerging in 1220; becomes a royal port only later (officially founded 1293)."
+     },
+     {
+      "heading": "Sandwich",
+      "text": "A Cinque Port — commerce and naval service both. Trades with France and the Low Countries, royal patronage as part of Crown naval infrastructure."
+     },
+     {
+      "heading": "Dover",
+      "text": "Primarily military and passenger, part of the Cinque Ports; less bulk trade, more strategic."
+     },
+     {
+      "heading": "Yarmouth (Great Yarmouth)",
+      "text": "Herring fishery, trade with the Low Countries; a significant regional port especially in autumn during the herring fair."
+     },
+     {
+      "heading": "Exeter, Chichester, Berwick-upon-Tweed, Scarborough, Whitby",
+      "text": "Exeter: coastal trade with Brittany and the Bay of Biscay. Chichester: smaller, local trade. Berwick: contested, a northern hub with Scotland and Scandinavia. Scarborough and Whitby: Yorkshire fishing and regional trade."
+     }
+    ],
+    "npcs": []
+   },
+   {
+    "name": "Rouen",
+    "tag": "France — capital of the Duchy of Normandy",
+    "sections": [
+     {
+      "heading": "Political control",
+      "text": "Philip II Augustus took Normandy from King John in 1204, so by 1220 Rouen is part of the French royal domain — governed by a royal bailiff (bailli) and its own city council, with royal appointees overseeing both. Local nobility who'd pledged to the English Crown were mostly dispossessed, replaced by Capetian loyalists."
+     },
+     {
+      "heading": "Church influence",
+      "text": "Seat of the Archbishop of Rouen, one of the most powerful church positions in northern France, holding vast lands and political influence. Rouen Cathedral, already a major ecclesiastical site for centuries, is still under construction."
+     },
+     {
+      "heading": "Civic life & merchants",
+      "text": "A major commercial/maritime hub on the Seine, linking to Paris and the sea. English and Flemish merchants keep doing business there despite the political change. Strong wine, cloth, and salt trades, plus spice/silk/luxury markets flowing in via Marseille and Genoa."
+     },
+     {
+      "heading": "Military presence",
+      "text": "A border city between formerly-English and now-French territory — houses a royal garrison, frequently fortified or monitored, with French knights and royal officials common as Philip and his successors tighten control over Normandy."
+     }
+    ],
+    "npcs": []
+   },
+   {
+    "name": "Other French ports",
+    "tag": "Brief reference",
+    "sections": [
+     {
+      "heading": "La Rochelle (Poitou)",
+      "text": "Cosmopolitan, access to scholars, sea trade, and less oversight. Safe ground for Bonisagus research exchanges and faerie court rumors."
+     },
+     {
+      "heading": "Boulogne-sur-Mer",
+      "text": "A common Channel crossing point. GM notes call it “a winter port for the Sjórseiðr covenant... likely the most frequent destination,” but the chronicle records the party settling on Bruges as the default winter port instead — this note is superseded by actual play."
+     },
+     {
+      "heading": "Dieppe or Honfleur (lesser Norman ports)",
+      "text": "Used for discreet meetings with other covenants or hedge practitioners; possibly linked to fae enclaves or Criamon pilgrims heading inland."
+     }
+    ],
+    "npcs": [
+     {
+      "name": "Otto-Pauels",
+      "role": "Boulogne-sur-Mer — well-traveled clerk, ex-warrior",
+      "note": "A literate former warrior (arthritis-slowed now, possibly a Crusade veteran) turned clerk, well-traveled enough to get along anywhere in the region. Owns a minor holy relic. Haunted by a diabolic past he's since escaped, and troubled by a weakness for adventure that undoes his better judgment when something shiny catches his attention."
+     }
+    ]
+   },
+   {
+    "name": "Bruges — civic structure",
+    "tag": "The covenant's actual winter port",
+    "sections": [
+     {
+      "heading": "The Town Watch (Stadswacht)",
+      "text": "Paid, rotated guards drawn from guilds and civic households. Patrol marketplaces, gates, and curfew hours; enforce city law, prevent theft and riots, guard the belfry and town hall. Answer nominally to the Schepenen."
+     },
+     {
+      "heading": "The Castellan's Men",
+      "text": "A private armed force loyal to the Castellan of Bruges, who holds the castle for the Count of Flanders. Intervene in seditious activity, noble disputes, or defense of strategic sites — not always on friendly terms with the town authorities."
+     },
+     {
+      "heading": "The Schepenen (Aldermen)",
+      "text": "Magistrates serving as judges, jurists, and city council members — interpret city charters, settle disputes, oversee criminal proceedings. Often former merchants or guild leaders."
+     },
+     {
+      "heading": "Ecclesiastical courts",
+      "text": "Clergy and monastics answer to canon law, not civic law. The Bishop of Tournai has indirect jurisdiction, but local abbots and priories hold real influence; heresy and magical accusations often fall into this murky overlap."
+     },
+     {
+      "heading": "Overlord: the Count of Flanders",
+      "text": "Nominal ruler of Bruges and all Flanders is Joan of Constantinople, Countess of Flanders and Hainaut (see the Bruges Roster). Her husband and co-ruler, Ferdinand of Portugal, has been imprisoned by the King of France since the 1214 Battle of Bouvines — she governs alone, torn between French royal power and Flemish autonomy."
+     }
+    ],
+    "npcs": []
+   }
+  ]
+ },
+ "homebrew": {
+  "title": "Seasonal Trade",
+  "note": "House rule for covenant trade. A single character makes ONE trade roll per ship, per season: they declare a target Ease Factor and a risk level, then roll the relevant Ability (Bargain / Profession: Merchant) + a stress die + modifiers. Meet or beat the target for the net profit on that row; fall short for the net loss by margin. High risk swings harder both ways. All figures are in mythic pounds.",
+  "tradeSuccess": {
+   "title": "Success — meet your target Ease Factor",
+   "cols": [
+    "Ease Factor",
+    "Low Risk",
+    "High Risk"
+   ],
+   "rows": [
+    [
+     6,
+     1,
+     3
+    ],
+    [
+     9,
+     10,
+     15
+    ],
+    [
+     12,
+     14,
+     20
+    ],
+    [
+     15,
+     18,
+     30
+    ],
+    [
+     18,
+     22,
+     35
+    ],
+    [
+     21,
+     26,
+     45
+    ],
+    [
+     24,
+     30,
+     60
+    ]
+   ]
+  },
+  "tradeShortfall": {
+   "title": "Shortfall — fall below your target",
+   "cols": [
+    "Below target by",
+    "Low Risk",
+    "High Risk"
+   ],
+   "rows": [
+    [
+     "3",
+     "−2",
+     "−4"
+    ],
+    [
+     "6",
+     "−4",
+     "−8"
+    ],
+    [
+     "9",
+     "−6",
+     "−16"
+    ],
+    [
+     "12 or more",
+     "−9",
+     "−25"
+    ]
+   ]
+  }
+ }
 }
