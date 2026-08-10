@@ -335,22 +335,7 @@ const PANELS={
   library(){
     const L=s().library;
     const hdr=`<h2 class="sh" style="margin-top:0">Library <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${L.books.length} books, ${L.labTexts.length} lab texts</span></h2>`;
-    const toggle=`<div class="viewtoggle"><button class="fbtn ${libSort==='title'?'on':''}" data-sort="title">By title</button><button class="fbtn ${libSort==='location'?'on':''}" data-sort="location">By location</button><button class="fbtn ${libSort==='table'?'on':''}" data-sort="table">Table</button></div>`;
-    if(libSort==='table') return hdr+toggle+libTable(L);
-    if(libSort==='location'){
-      const items=[...L.books.map(b=>['📖',b]),...L.labTexts.map(b=>['📜',b])];
-      const grp={}; items.forEach(it=>{const k=bl(it[1])||'__un';(grp[k]=grp[k]||[]).push(it);});
-      const keys=Object.keys(grp).sort((a,b)=>a==='__un'?1:b==='__un'?-1:a.localeCompare(b));
-      const shipNames=new Set([...Object.values(SHIP_NAMES),...(s().ships||[]).map(x=>x.name)]);
-      const locIcon=k=>shipNames.has(k)?'⛵':'🏰';   // ships sail; fixed places (e.g. Oleron) get a castle
-      let body=keys.map(k=>`<div class="catblock"><h3 style="text-transform:none">${k==='__un'?'⚑ Covenant library (unassigned)':locIcon(k)+' '+esc(k)} <span class="n">(${grp[k].length})</span></h3><div class="cols">${grp[k].map(it=>`<div class="row" title="${esc(bTip(it[1]))}">${it[0]} ${esc(bt(it[1]))}</div>`).join('')}</div></div>`).join('');
-      if(items.every(it=>!bl(it[1]))) body+=`<p class="vis-none">No per-item location recorded yet — tag books with a <code>location</code> (usually a ship) to split this view.</p>`;
-      return hdr+toggle+body;
-    }
-    return hdr+toggle
-      +`<div class="cols">${L.books.map(b=>`<div class="row" title="${esc(bTip(b))}">📖 ${esc(bt(b))}</div>`).join('')}</div>
-        <h2 class="sh">Laboratory texts <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${L.labTexts.length}</span></h2>
-        <div class="cols">${L.labTexts.map(b=>`<div class="row" title="${esc(bTip(b))}">📜 ${esc(bt(b))}</div>`).join('')}</div>`;
+    return hdr+libTable(L);
   },
   vis(){
     const V=s().vis, stock=V.stock||[], sources=V.sources||[];
@@ -368,10 +353,9 @@ const PANELS={
         return `<div class="visrow"><span class="vislabel"><span class="sw" style="background:${artColor(a)}"></span>${esc(ART_NAME[a]||a)} <span class="q">${q}</span></span><span class="pawns" title="${esc(tip)}">${pawnRun(a,q)}</span></div>`;
       }).join('');
     } else {
-      const bySource=view==='source';
-      // by source = the annual vis source that produced it (optional `source` field);
-      // by location = the raw-vis form / harvest label it's held as — the lot name itself.
-      const keyer=bySource?(x=>x.source||'__un'):(x=>x.location||x.name||'__un');
+      // By source = the raw-vis form / harvest label the pawns are held as (the lot name,
+      // or an explicit `location` override).
+      const keyer=x=>x.location||x.name||'__un';
       const grp={}; stock.forEach(x=>{const k=keyer(x);(grp[k]=grp[k]||[]).push(x);});
       const keys=Object.keys(grp).filter(k=>grp[k].reduce((t,x)=>t+(x.q||0),0)>0)
         .sort((a,b)=>a==='__un'?1:b==='__un'?-1:a.localeCompare(b));
@@ -380,10 +364,9 @@ const PANELS={
         const pawns=items.map(x=>pawnRun(x.art,x.q||0)).join('');
         const arts=[...new Set(items.map(x=>ART_NAME[x.art]||x.art||'?'))].join(', ');
         const tip=items.map(x=>`${x.name} — ${ART_NAME[x.art]||x.art||'?'} ×${x.q||0}`).join(', ');
-        const nm=k==='__un'?(bySource?'Unattributed':'Unassigned'):k;
-        return `<div class="visrow"><span class="vislabel">${esc(nm)} <span class="q">${q}${bySource?'':` <span style="opacity:.7">${esc(arts)}</span>`}</span></span><span class="pawns" title="${esc(tip)}">${pawns}</span></div>`;
+        const nm=k==='__un'?'Unassigned':k;
+        return `<div class="visrow"><span class="vislabel">${esc(nm)} <span class="q">${q} <span style="opacity:.7">${esc(arts)}</span></span></span><span class="pawns" title="${esc(tip)}">${pawns}</span></div>`;
       }).join('');
-      if(bySource && stock.every(x=>!x.source)) stockHtml+=`<p class="vis-none">No per-lot source attribution recorded yet — tag stock lots with a <code>source</code> to split this view.</p>`;
     }
     const legend=`<div class="leg">${ART_ORDER.map(a=>`<span class="chip">${pawnSpan(a)}${ART_ABBR[a]}</span>`).join('')}</div>`;
     let srcHtml;
@@ -407,7 +390,7 @@ const PANELS={
     }).join('');
     return `<p class="section-sub">The covenant's raw vis — what's in the vaults, and what each source yielded this year against expectation.</p>
       <h2 class="sh" style="margin-top:4px">Stock <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${totalPawns} pawn${totalPawns===1?'':'s'} in ${stock.length} lot${stock.length===1?'':'s'}</span></h2>
-      <div class="viewtoggle"><button class="fbtn ${view==='type'?'on':''}" data-view="type">By type</button><button class="fbtn ${view==='source'?'on':''}" data-view="source">By source</button><button class="fbtn ${view==='location'?'on':''}" data-view="location">By location</button></div>
+      <div class="viewtoggle"><button class="fbtn ${view==='type'?'on':''}" data-view="type">By type</button><button class="fbtn ${view!=='type'?'on':''}" data-view="source">By source</button></div>
       ${stockHtml}
       ${stock.length?legend:''}
       <h2 class="sh">Sources <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— pawns received this year vs. expected</span></h2>
@@ -446,7 +429,7 @@ const PANELS={
 };
 function wireLedger(){ document.querySelectorAll('.ledger .fbtn').forEach(b=>b.onclick=()=>{ledgerFilter=b.dataset.f;render();}); }
 function wireVis(){ document.querySelectorAll('.viewtoggle .fbtn[data-view]').forEach(b=>b.onclick=()=>{visStockView=b.dataset.view;render();}); }
-function wireLib(){ document.querySelectorAll('.viewtoggle .fbtn[data-sort]').forEach(b=>b.onclick=()=>{libSort=b.dataset.sort;render();}); if(libSort==='table')wireLibTable(); }
+function wireLib(){ wireLibTable(); }
 function libRows(L){
   const mk=(b,icon)=>({icon,title:bt(b),
     type:(typeof b==='object'&&b.type)?b.type:null,
