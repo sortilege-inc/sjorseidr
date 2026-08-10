@@ -341,7 +341,10 @@
       "Journal of Unusual Encounters volume 02",
       "Journal of Unusual Encounters volume 03",
       "Journal of Unusual Encounters volume 04",
-      "The Technique of Precision",
+      {
+       "title": "The Technique of Precision",
+       "location": "Tide of Memory"
+      },
       "The Hermetic Zodiac",
       "Methods for the Application of Magic Theory in Enchantment",
       "The Examples of the Victors",
@@ -363,13 +366,25 @@
       "Comparative Anatomies Volume 01,",
       "Deluge",
       "Comparative Anatomies",
-      "Tumult",
+      {
+       "title": "Tumult",
+       "location": "Tide of Memory"
+      },
       "A Discussion on Auras and Their Effects on Our Spells and Rituals",
       "De Salis et Fontibus",
-      "Radices Scientiae",
+      {
+       "title": "Radices Scientiae",
+       "location": "The Scholar's Wake"
+      },
       "Boek fan de Tinken",
-      "Speculum Veritatis",
-      "Liber Cogitationum (translated from Boek fan de Tinken)"
+      {
+       "title": "Speculum Veritatis",
+       "location": "The Brineborn"
+      },
+      {
+       "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
+       "location": "The Scholar's Wake"
+      }
      ],
      "labTexts": [
       "Wreaths of Foul Smoke Charged Device",
@@ -793,7 +808,10 @@
       "Journal of Unusual Encounters volume 02",
       "Journal of Unusual Encounters volume 03",
       "Journal of Unusual Encounters volume 04",
-      "The Technique of Precision",
+      {
+       "title": "The Technique of Precision",
+       "location": "Tide of Memory"
+      },
       "The Hermetic Zodiac",
       "Methods for the Application of Magic Theory in Enchantment",
       "The Examples of the Victors",
@@ -815,13 +833,25 @@
       "Comparative Anatomies Volume 01,",
       "Deluge",
       "Comparative Anatomies",
-      "Tumult",
+      {
+       "title": "Tumult",
+       "location": "Tide of Memory"
+      },
       "A Discussion on Auras and Their Effects on Our Spells and Rituals",
       "De Salis et Fontibus",
-      "Radices Scientiae",
+      {
+       "title": "Radices Scientiae",
+       "location": "The Scholar's Wake"
+      },
       "Boek fan de Tinken",
-      "Speculum Veritatis",
-      "Liber Cogitationum (translated from Boek fan de Tinken)"
+      {
+       "title": "Speculum Veritatis",
+       "location": "The Brineborn"
+      },
+      {
+       "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
+       "location": "The Scholar's Wake"
+      }
      ],
      "labTexts": [
       "Wreaths of Foul Smoke Charged Device",
@@ -1773,7 +1803,10 @@
       "Journal of Unusual Encounters volume 02",
       "Journal of Unusual Encounters volume 03",
       "Journal of Unusual Encounters volume 04",
-      "The Technique of Precision",
+      {
+       "title": "The Technique of Precision",
+       "location": "Tide of Memory"
+      },
       "The Hermetic Zodiac",
       "Methods for the Application of Magic Theory in Enchantment",
       "The Examples of the Victors",
@@ -1795,13 +1828,25 @@
       "Comparative Anatomies Volume 01,",
       "Deluge",
       "Comparative Anatomies",
-      "Tumult",
+      {
+       "title": "Tumult",
+       "location": "Tide of Memory"
+      },
       "A Discussion on Auras and Their Effects on Our Spells and Rituals",
       "De Salis et Fontibus",
-      "Radices Scientiae",
+      {
+       "title": "Radices Scientiae",
+       "location": "The Scholar's Wake"
+      },
       "Boek fan de Tinken",
-      "Speculum Veritatis",
-      "Liber Cogitationum (translated from Boek fan de Tinken)"
+      {
+       "title": "Speculum Veritatis",
+       "location": "The Brineborn"
+      },
+      {
+       "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
+       "location": "The Scholar's Wake"
+      }
      ],
      "labTexts": [
       "Wreaths of Foul Smoke Charged Device",
@@ -2412,7 +2457,10 @@
       "Journal of Unusual Encounters volume 02",
       "Journal of Unusual Encounters volume 03",
       "Journal of Unusual Encounters volume 04",
-      "The Technique of Precision",
+      {
+       "title": "The Technique of Precision",
+       "location": "Tide of Memory"
+      },
       "The Hermetic Zodiac",
       "Methods for the Application of Magic Theory in Enchantment",
       "The Examples of the Victors",
@@ -2434,13 +2482,25 @@
       "Comparative Anatomies Volume 01,",
       "Deluge",
       "Comparative Anatomies",
-      "Tumult",
+      {
+       "title": "Tumult",
+       "location": "Tide of Memory"
+      },
       "A Discussion on Auras and Their Effects on Our Spells and Rituals",
       "De Salis et Fontibus",
-      "Radices Scientiae",
+      {
+       "title": "Radices Scientiae",
+       "location": "The Scholar's Wake"
+      },
       "Boek fan de Tinken",
-      "Speculum Veritatis",
-      "Liber Cogitationum (translated from Boek fan de Tinken)"
+      {
+       "title": "Speculum Veritatis",
+       "location": "The Brineborn"
+      },
+      {
+       "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
+       "location": "The Scholar's Wake"
+      }
      ],
      "labTexts": [
       "Wreaths of Foul Smoke Charged Device",
@@ -3018,7 +3078,10 @@
       "Journal of Unusual Encounters volume 02",
       "Journal of Unusual Encounters volume 03",
       "Journal of Unusual Encounters volume 04",
-      "The Technique of Precision",
+      {
+       "title": "The Technique of Precision",
+       "location": "Tide of Memory"
+      },
       "The Hermetic Zodiac",
       "Methods for the Application of Magic Theory in Enchantment",
       "The Examples of the Victors",
@@ -3040,20 +3103,53 @@
       "Comparative Anatomies Volume 01,",
       "Deluge",
       "Comparative Anatomies",
-      "Tumult",
+      {
+       "title": "Tumult",
+       "location": "Tide of Memory"
+      },
       "A Discussion on Auras and Their Effects on Our Spells and Rituals",
       "De Salis et Fontibus",
-      "Radices Scientiae",
+      {
+       "title": "Radices Scientiae",
+       "location": "The Scholar's Wake"
+      },
       "Boek fan de Tinken",
-      "Speculum Veritatis",
-      "Liber Cogitationum (translated from Boek fan de Tinken)",
-      "De Lapii",
-      "Subtle Knives",
-      "The Babble Within Thought",
-      "The Compact Explained",
-      "Insights from Twilight",
-      "Legends of Brittany",
-      "Research Notes on Aegis of the Hearth"
+      {
+       "title": "Speculum Veritatis",
+       "location": "The Brineborn"
+      },
+      {
+       "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
+       "location": "The Scholar's Wake"
+      },
+      {
+       "title": "De Lapii",
+       "location": "Oleron"
+      },
+      {
+       "title": "Subtle Knives",
+       "location": "Oleron"
+      },
+      {
+       "title": "The Babble Within Thought",
+       "location": "Oleron"
+      },
+      {
+       "title": "The Compact Explained",
+       "location": "Oleron"
+      },
+      {
+       "title": "Insights from Twilight",
+       "location": "Oleron"
+      },
+      {
+       "title": "Legends of Brittany",
+       "location": "Veðrdreki"
+      },
+      {
+       "title": "Research Notes on Aegis of the Hearth",
+       "location": "Oleron"
+      }
      ],
      "labTexts": [
       "Wreaths of Foul Smoke Charged Device",
@@ -3645,7 +3741,10 @@
       "Journal of Unusual Encounters volume 02",
       "Journal of Unusual Encounters volume 03",
       "Journal of Unusual Encounters volume 04",
-      "The Technique of Precision",
+      {
+       "title": "The Technique of Precision",
+       "location": "Tide of Memory"
+      },
       "The Hermetic Zodiac",
       "Methods for the Application of Magic Theory in Enchantment",
       "The Examples of the Victors",
@@ -3667,20 +3766,53 @@
       "Comparative Anatomies Volume 01,",
       "Deluge",
       "Comparative Anatomies",
-      "Tumult",
+      {
+       "title": "Tumult",
+       "location": "Tide of Memory"
+      },
       "A Discussion on Auras and Their Effects on Our Spells and Rituals",
       "De Salis et Fontibus",
-      "Radices Scientiae",
+      {
+       "title": "Radices Scientiae",
+       "location": "The Scholar's Wake"
+      },
       "Boek fan de Tinken",
-      "Speculum Veritatis",
-      "Liber Cogitationum (translated from Boek fan de Tinken)",
-      "De Lapii",
-      "Subtle Knives",
-      "The Babble Within Thought",
-      "The Compact Explained",
-      "Insights from Twilight",
-      "Legends of Brittany",
-      "Research Notes on Aegis of the Hearth"
+      {
+       "title": "Speculum Veritatis",
+       "location": "The Brineborn"
+      },
+      {
+       "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
+       "location": "The Scholar's Wake"
+      },
+      {
+       "title": "De Lapii",
+       "location": "Oleron"
+      },
+      {
+       "title": "Subtle Knives",
+       "location": "Oleron"
+      },
+      {
+       "title": "The Babble Within Thought",
+       "location": "Oleron"
+      },
+      {
+       "title": "The Compact Explained",
+       "location": "Oleron"
+      },
+      {
+       "title": "Insights from Twilight",
+       "location": "Oleron"
+      },
+      {
+       "title": "Legends of Brittany",
+       "location": "Veðrdreki"
+      },
+      {
+       "title": "Research Notes on Aegis of the Hearth",
+       "location": "Oleron"
+      }
      ],
      "labTexts": [
       "Wreaths of Foul Smoke Charged Device",
@@ -3752,7 +3884,7 @@
        "art": "vi",
        "expected": 2,
        "received": 2,
-       "note": "Animal OR Vim by collector choice; Dagmar captured the snake alive Spring 1224 → Vim (confirm)"
+       "note": "Yields Animal or Vim by collector choice; Vim collected in 1224 (Dagmar captured the snake)"
       },
       {
        "name": "The Diedne Garden",
@@ -4290,7 +4422,10 @@
       "Journal of Unusual Encounters volume 02",
       "Journal of Unusual Encounters volume 03",
       "Journal of Unusual Encounters volume 04",
-      "The Technique of Precision",
+      {
+       "title": "The Technique of Precision",
+       "location": "Tide of Memory"
+      },
       "The Hermetic Zodiac",
       "Methods for the Application of Magic Theory in Enchantment",
       "The Examples of the Victors",
@@ -4312,20 +4447,53 @@
       "Comparative Anatomies Volume 01,",
       "Deluge",
       "Comparative Anatomies",
-      "Tumult",
+      {
+       "title": "Tumult",
+       "location": "Tide of Memory"
+      },
       "A Discussion on Auras and Their Effects on Our Spells and Rituals",
       "De Salis et Fontibus",
-      "Radices Scientiae",
+      {
+       "title": "Radices Scientiae",
+       "location": "The Scholar's Wake"
+      },
       "Boek fan de Tinken",
-      "Speculum Veritatis",
-      "Liber Cogitationum (translated from Boek fan de Tinken)",
-      "De Lapii",
-      "Subtle Knives",
-      "The Babble Within Thought",
-      "The Compact Explained",
-      "Insights from Twilight",
-      "Legends of Brittany",
-      "Research Notes on Aegis of the Hearth"
+      {
+       "title": "Speculum Veritatis",
+       "location": "The Brineborn"
+      },
+      {
+       "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
+       "location": "The Scholar's Wake"
+      },
+      {
+       "title": "De Lapii",
+       "location": "Oleron"
+      },
+      {
+       "title": "Subtle Knives",
+       "location": "Oleron"
+      },
+      {
+       "title": "The Babble Within Thought",
+       "location": "Oleron"
+      },
+      {
+       "title": "The Compact Explained",
+       "location": "Oleron"
+      },
+      {
+       "title": "Insights from Twilight",
+       "location": "Oleron"
+      },
+      {
+       "title": "Legends of Brittany",
+       "location": "Veðrdreki"
+      },
+      {
+       "title": "Research Notes on Aegis of the Hearth",
+       "location": "Oleron"
+      }
      ],
      "labTexts": [
       "Wreaths of Foul Smoke Charged Device",
