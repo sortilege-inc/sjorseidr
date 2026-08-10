@@ -424,7 +424,7 @@ const PANELS={
       <div class="card"><h2 class="sh" style="margin-top:0">Balance</h2>
         <div class="econ-row"><span>Total expenditure</span><b class="neg">${e.totalExpenditure} £</b></div>
         <div class="econ-row"><span>Total income</span><b class="pos">${incReady?e.totalIncome+' £':na}</b></div>
-        <div class="econ-row"><span>Wealth</span><b class="econ-big">${e.wealth!=null?e.wealth+' £':na}</b></div>
+        <div class="econ-row"><span>Wealth</span><b class="econ-big ${e.wealth<0?'neg':(e.wealth>0?'pos':'')}">${e.wealth!=null?e.wealth+' £':na}</b></div>
         <div style="margin-top:6px;font-size:12px;color:var(--ink-soft)">Points — inhabitants ${e.inhabitantsPoints}, laboratories ${e.laboratoriesPoints}, weapons ${e.weaponsPoints}</div>
       </div>
       <div class="card"><h2 class="sh" style="margin-top:0">Income sources</h2>
