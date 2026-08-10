@@ -3269,13 +3269,13 @@
        "notes": ""
       }
      },
-     "totalIncome": 13,
+     "totalIncome": 58,
      "wealth": null,
      "incomeSources": [
       {
        "name": "Seasonal trade",
        "type": "Trade",
-       "incoming": 29
+       "incoming": 74
       },
       {
        "name": "Raiding — attempted theft",
@@ -4310,13 +4310,13 @@
        "notes": ""
       }
      },
-     "totalIncome": 173,
+     "totalIncome": 254,
      "wealth": null,
      "incomeSources": [
       {
        "name": "Seasonal trade",
        "type": "Trade",
-       "incoming": 151
+       "incoming": 232
       },
       {
        "name": "Piracy — Veðrdreki",
@@ -7994,7 +7994,7 @@
    "season": "Spring",
    "ship": "scholars-wake",
    "by": "Dustin Page",
-   "result": 24,
+   "result": 33,
    "detail": "“An Apprentice” — the Scholar's Wake's season of trade for the covenant"
   },
   {
@@ -8004,7 +8004,7 @@
    "by": "Valdemar Bjornsson",
    "risk": "high",
    "target": 12,
-   "result": 20,
+   "result": 29,
    "detail": "Antique's Trade — rolled 13 against Ease Factor 12"
   },
   {
@@ -8012,7 +8012,7 @@
    "season": "Spring",
    "ship": "brineborn",
    "by": "Éogan Dobhartha",
-   "result": 9,
+   "result": 18,
    "detail": "Freshwater-barrel enchantment sold in trade"
   },
   {
@@ -8021,7 +8021,7 @@
    "ship": "brineborn",
    "by": "Éogan Dobhartha",
    "risk": "high",
-   "result": 15,
+   "result": 24,
    "detail": "Speculum Veritatis venture — a risk trade, successful"
   },
   {
@@ -8030,7 +8030,7 @@
    "ship": "scholars-wake",
    "by": "Heynric the Merchant",
    "risk": "high",
-   "result": -25,
+   "result": -16,
    "detail": "Botched the venture (high-risk)"
   },
   {
@@ -8038,7 +8038,7 @@
    "season": "Summer",
    "ship": "brineborn",
    "risk": "high",
-   "result": 0,
+   "result": 9,
    "detail": "High-risk venture — missed the target by 1 (no profit, no loss)"
   },
   {
@@ -8058,7 +8058,7 @@
    "by": "Heynric the Merchant",
    "risk": "high",
    "target": 15,
-   "result": 30,
+   "result": 39,
    "detail": "High-risk venture, hit Ease Factor 15"
   },
   {
@@ -8067,7 +8067,7 @@
    "ship": "brineborn",
    "risk": "low",
    "target": 12,
-   "result": 14,
+   "result": 23,
    "detail": "Low-risk venture, Ease Factor 12"
   },
   {
@@ -8076,7 +8076,7 @@
    "ship": "adamant",
    "risk": "low",
    "target": 9,
-   "result": 10,
+   "result": 19,
    "detail": "Low-risk venture, Ease Factor 9"
   },
   {
@@ -8086,7 +8086,7 @@
    "by": "Captain Absalom",
    "risk": "high",
    "target": 15,
-   "result": 30,
+   "result": 39,
    "detail": "High-risk venture, hit Ease Factor 15"
   },
   {
@@ -8105,7 +8105,7 @@
    "by": "Father Lachlan",
    "risk": "low",
    "target": 12,
-   "result": 14,
+   "result": 23,
    "detail": "Low-risk venture, Ease Factor 12"
   },
   {
@@ -8115,14 +8115,15 @@
    "by": "Heynric the Merchant",
    "risk": "high",
    "target": 12,
-   "result": 20,
+   "result": 29,
    "detail": "High-risk venture, Ease Factor 12"
   },
   {
    "year": 1223,
    "season": "Summer",
-   "result": 35,
-   "detail": "Fleet trade while the covenant was away at the Tribunal — 35 collectively (Scholar's Wake netted 11, best haul 15, low risk / low reward)"
+   "result": 62,
+   "detail": "Fleet trade while the covenant was away at the Tribunal — 35 collectively (Scholar's Wake netted 11, best haul 15, low risk / low reward); +27 net-neutral base for 3 ships",
+   "ships": 3
   },
   {
    "year": 1223,
@@ -8140,7 +8141,7 @@
    "by": "Valerian de Castellane",
    "risk": "low",
    "target": 24,
-   "result": 30,
+   "result": 39,
    "detail": "Low-risk venture, Ease Factor 24"
   },
   {
@@ -8148,14 +8149,14 @@
    "season": "Winter",
    "ship": "brineborn",
    "risk": "low",
-   "result": 11,
+   "result": 20,
    "detail": "Low-risk trade from winter quarters at Carrick"
   },
   {
    "year": 1223,
    "season": "Winter",
    "ship": "scholars-wake",
-   "result": 11,
+   "result": 20,
    "detail": "Trade from winter quarters at Carrick"
   }
  ]

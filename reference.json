@@ -526,7 +526,7 @@
  },
  "homebrew": {
   "title": "Seasonal Trade",
-  "note": "House rule for covenant trade. A single character makes ONE trade roll per ship, per season: they declare a target Ease Factor and a risk level, then roll the relevant Ability (Bargain / Profession: Merchant) + a stress die + modifiers. Meet or beat the target for the net profit on that row; fall short for the net loss by margin. High risk swings harder both ways. All figures are in mythic pounds.",
+  "note": "House rule for covenant trade. A single character makes ONE trade roll per ship, per season: they declare a target Ease Factor and a risk level, then roll the relevant Ability (Bargain / Profession: Merchant) + a stress die + modifiers. The tables show PROFIT, not gross income — every trading season a ship works earns a base net-neutral income of 9£, and the figures below are added to (or subtracted from) that base. So a break-even venture still nets +9£; a botched high-risk run loses 25 against the base, netting −16£. All figures are in mythic pounds.",
   "tradeSuccess": {
    "title": "Success — meet your target Ease Factor",
    "cols": [
@@ -601,6 +601,7 @@
      "−25"
     ]
    ]
-  }
+  },
+  "baseIncome": 9
  }
 }

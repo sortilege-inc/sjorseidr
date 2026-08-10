@@ -411,7 +411,7 @@ const PANELS={
       return `<div class="levent"><div class="lt"><span class="season">${esc(t.season)} ${yr}</span><b class="${t.result<0?'neg':'pos'}">${t.result>0?'+':''}${t.result} £</b></div>
         <h4>${esc(who)}${meta}</h4><p>${esc(t.detail||'')}</p></div>`;
     }).join(''):`<div class="notpop">No documented trade ventures for ${yr}. Any standing trade income is on the <b>Economics</b> tab.</div>`;
-    return `<p class="section-sub">Seasonal trade — one roll per ship, per season, under the covenant’s <a href="reference.html">homebrew trade rule</a> (Reference → Homebrew). Only ventures with a recorded result are shown; their totals feed the Economics tab’s trade income.</p>
+    return `<p class="section-sub">Seasonal trade — one roll per ship, per season, under the covenant’s <a href="reference.html">homebrew trade rule</a> (Reference → Homebrew). Each trade includes the <b>£9 net-neutral base</b> (a break-even voyage still nets +9); piracy and theft don’t. Only ventures with a recorded result are shown; totals feed the Economics tab.</p>
       <div class="ledger">${cards}${yv.length?`<div class="econ-row" style="margin-top:8px;border-top:1px solid rgba(120,90,40,.4)"><span><b style="font-family:Cinzel">Documented trade, ${yr}</b></span><b class="pos econ-big">${total} £</b></div>`:''}</div>`;
   },
   economics(){
