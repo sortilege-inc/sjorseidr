@@ -749,7 +749,48 @@
      ]
     },
     "vis": {
-     "stock": [],
+     "stock": [
+      {
+       "name": "The Magus' Share",
+       "q": 15,
+       "art": "cr"
+      },
+      {
+       "name": "Otto-Pauels' Share",
+       "q": 5,
+       "art": "cr"
+      },
+      {
+       "name": "Fixed Arcane Connection",
+       "q": 1,
+       "art": "cr"
+      },
+      {
+       "name": "Alfgeir's Bones",
+       "q": 5,
+       "art": "co"
+      },
+      {
+       "name": "Dolly Price's Share",
+       "q": 1,
+       "art": "co"
+      },
+      {
+       "name": "The Oyster King's Shell",
+       "q": 3,
+       "art": "mu"
+      },
+      {
+       "name": "Alfgeir's Resting Place",
+       "q": 5,
+       "art": "re"
+      },
+      {
+       "name": "Via Redcap",
+       "q": 18,
+       "art": "vi"
+      }
+     ],
      "sources": []
     },
     "possessions": [],
@@ -1551,7 +1592,68 @@
      ]
     },
     "vis": {
-     "stock": [],
+     "stock": [
+      {
+       "name": "The Magus' Share",
+       "q": 15,
+       "art": "cr"
+      },
+      {
+       "name": "Otto-Pauels' Share",
+       "q": 5,
+       "art": "cr"
+      },
+      {
+       "name": "Fixed Arcane Connection",
+       "q": 1,
+       "art": "cr"
+      },
+      {
+       "name": "Alfgeir's Bones",
+       "q": 5,
+       "art": "co"
+      },
+      {
+       "name": "Dolly Price's Share",
+       "q": 1,
+       "art": "co"
+      },
+      {
+       "name": "The Oyster King's Shell",
+       "q": 3,
+       "art": "mu"
+      },
+      {
+       "name": "Alfgeir's Resting Place",
+       "q": 5,
+       "art": "re"
+      },
+      {
+       "name": "Via Redcap",
+       "q": 18,
+       "art": "vi"
+      },
+      {
+       "name": "Fire From the Sky",
+       "q": 10,
+       "art": "te"
+      },
+      {
+       "name": "The Kraken's Egg",
+       "q": 5,
+       "art": "an"
+      },
+      {
+       "name": "The Summer Fog",
+       "q": 4,
+       "art": "me"
+      },
+      {
+       "name": "The Black Horse of Boulogne",
+       "q": 4,
+       "art": "re"
+      }
+     ],
      "sources": [
       {
        "name": "Fire From the Sky",
@@ -2883,26 +2985,6 @@
     "vis": {
      "stock": [
       {
-       "name": "Alfgeir's Resting Place",
-       "q": 5,
-       "art": "re"
-      },
-      {
-       "name": "Alfgeir’s Bones",
-       "q": 5,
-       "art": "co"
-      },
-      {
-       "name": "The Oyster King’s Shell",
-       "q": 3,
-       "art": "mu"
-      },
-      {
-       "name": "Fixed Arcane Connection",
-       "q": 1,
-       "art": "cr"
-      },
-      {
        "name": "The Magus' Share",
        "q": 15,
        "art": "cr"
@@ -2913,34 +2995,59 @@
        "art": "cr"
       },
       {
+       "name": "Fixed Arcane Connection",
+       "q": 1,
+       "art": "cr"
+      },
+      {
+       "name": "Alfgeir's Bones",
+       "q": 5,
+       "art": "co"
+      },
+      {
        "name": "Dolly Price's Share",
        "q": 1,
        "art": "co"
       },
       {
-       "name": "Kraken's Egg (1220)",
-       "q": 0,
-       "art": "an"
+       "name": "The Oyster King's Shell",
+       "q": 3,
+       "art": "mu"
       },
       {
-       "name": "Summer Fog (1220-21)",
-       "q": 9,
-       "art": "me"
-      },
-      {
-       "name": "Horseshoe (1220)",
-       "q": 4,
+       "name": "Alfgeir's Resting Place",
+       "q": 5,
        "art": "re"
-      },
-      {
-       "name": "Fire from the Sky (1220)",
-       "q": 1,
-       "art": "te"
       },
       {
        "name": "Via Redcap",
        "q": 8,
        "art": "vi"
+      },
+      {
+       "name": "Fire From the Sky",
+       "q": 17,
+       "art": "te"
+      },
+      {
+       "name": "The Kraken's Egg",
+       "q": 10,
+       "art": "an"
+      },
+      {
+       "name": "The Summer Fog",
+       "q": 9,
+       "art": "me"
+      },
+      {
+       "name": "The Black Horse of Boulogne",
+       "q": 8,
+       "art": "re"
+      },
+      {
+       "name": "The Kraken's Egg (fae-touched)",
+       "q": 3,
+       "art": "aq"
       }
      ],
      "sources": [
@@ -3870,7 +3977,73 @@
      ]
     },
     "vis": {
-     "stock": [],
+     "stock": [
+      {
+       "name": "The Magus' Share",
+       "q": 15,
+       "art": "cr"
+      },
+      {
+       "name": "Otto-Pauels' Share",
+       "q": 5,
+       "art": "cr"
+      },
+      {
+       "name": "Fixed Arcane Connection",
+       "q": 1,
+       "art": "cr"
+      },
+      {
+       "name": "Alfgeir's Bones",
+       "q": 5,
+       "art": "co"
+      },
+      {
+       "name": "Dolly Price's Share",
+       "q": 1,
+       "art": "co"
+      },
+      {
+       "name": "The Oyster King's Shell",
+       "q": 3,
+       "art": "mu"
+      },
+      {
+       "name": "Alfgeir's Resting Place",
+       "q": 5,
+       "art": "re"
+      },
+      {
+       "name": "Via Redcap",
+       "q": 8,
+       "art": "vi"
+      },
+      {
+       "name": "Fire From the Sky",
+       "q": 27,
+       "art": "te"
+      },
+      {
+       "name": "The Kraken's Egg",
+       "q": 15,
+       "art": "an"
+      },
+      {
+       "name": "The Summer Fog",
+       "q": 14,
+       "art": "me"
+      },
+      {
+       "name": "The Black Horse of Boulogne",
+       "q": 12,
+       "art": "re"
+      },
+      {
+       "name": "The Kraken's Egg (fae-touched)",
+       "q": 3,
+       "art": "aq"
+      }
+     ],
      "sources": [
       {
        "name": "Fire From the Sky",
@@ -4882,7 +5055,78 @@
      ]
     },
     "vis": {
-     "stock": [],
+     "stock": [
+      {
+       "name": "The Magus' Share",
+       "q": 10,
+       "art": "cr"
+      },
+      {
+       "name": "Otto-Pauels' Share",
+       "q": 5,
+       "art": "cr"
+      },
+      {
+       "name": "Fixed Arcane Connection",
+       "q": 1,
+       "art": "cr"
+      },
+      {
+       "name": "Alfgeir's Bones",
+       "q": 5,
+       "art": "co"
+      },
+      {
+       "name": "Dolly Price's Share",
+       "q": 1,
+       "art": "co"
+      },
+      {
+       "name": "The Oyster King's Shell",
+       "q": 3,
+       "art": "mu"
+      },
+      {
+       "name": "Alfgeir's Resting Place",
+       "q": 5,
+       "art": "re"
+      },
+      {
+       "name": "Via Redcap",
+       "q": 8,
+       "art": "vi"
+      },
+      {
+       "name": "Fire From the Sky",
+       "q": 37,
+       "art": "te"
+      },
+      {
+       "name": "The Kraken's Egg",
+       "q": 20,
+       "art": "an"
+      },
+      {
+       "name": "The Summer Fog",
+       "q": 19,
+       "art": "me"
+      },
+      {
+       "name": "The Black Horse of Boulogne",
+       "q": 16,
+       "art": "re"
+      },
+      {
+       "name": "The Kraken's Egg (fae-touched)",
+       "q": 3,
+       "art": "aq"
+      },
+      {
+       "name": "Mont-Saint-Michel Tide Pools",
+       "q": 5,
+       "art": "aq"
+      }
+     ],
      "sources": [
       {
        "name": "Fire From the Sky",
@@ -5908,7 +6152,88 @@
      ]
     },
     "vis": {
-     "stock": [],
+     "stock": [
+      {
+       "name": "The Magus' Share",
+       "q": 10,
+       "art": "cr"
+      },
+      {
+       "name": "Otto-Pauels' Share",
+       "q": 5,
+       "art": "cr"
+      },
+      {
+       "name": "Fixed Arcane Connection",
+       "q": 1,
+       "art": "cr"
+      },
+      {
+       "name": "Alfgeir's Bones",
+       "q": 5,
+       "art": "co"
+      },
+      {
+       "name": "Dolly Price's Share",
+       "q": 1,
+       "art": "co"
+      },
+      {
+       "name": "The Oyster King's Shell",
+       "q": 3,
+       "art": "mu"
+      },
+      {
+       "name": "Alfgeir's Resting Place",
+       "q": 5,
+       "art": "re"
+      },
+      {
+       "name": "Via Redcap",
+       "q": 8,
+       "art": "vi"
+      },
+      {
+       "name": "Fire From the Sky",
+       "q": 37,
+       "art": "te"
+      },
+      {
+       "name": "The Kraken's Egg",
+       "q": 25,
+       "art": "an"
+      },
+      {
+       "name": "The Summer Fog",
+       "q": 24,
+       "art": "me"
+      },
+      {
+       "name": "The Black Horse of Boulogne",
+       "q": 16,
+       "art": "re"
+      },
+      {
+       "name": "The Kraken's Egg (fae-touched)",
+       "q": 3,
+       "art": "aq"
+      },
+      {
+       "name": "Mont-Saint-Michel Tide Pools",
+       "q": 5,
+       "art": "aq"
+      },
+      {
+       "name": "The Falcon's Cliff",
+       "q": 2,
+       "art": "vi"
+      },
+      {
+       "name": "The Diedne Garden",
+       "q": 3,
+       "art": "he"
+      }
+     ],
      "sources": [
       {
        "name": "Fire From the Sky",
@@ -6952,7 +7277,88 @@
      ]
     },
     "vis": {
-     "stock": [],
+     "stock": [
+      {
+       "name": "The Magus' Share",
+       "q": 10,
+       "art": "cr"
+      },
+      {
+       "name": "Otto-Pauels' Share",
+       "q": 5,
+       "art": "cr"
+      },
+      {
+       "name": "Fixed Arcane Connection",
+       "q": 1,
+       "art": "cr"
+      },
+      {
+       "name": "Alfgeir's Bones",
+       "q": 5,
+       "art": "co"
+      },
+      {
+       "name": "Dolly Price's Share",
+       "q": 1,
+       "art": "co"
+      },
+      {
+       "name": "The Oyster King's Shell",
+       "q": 3,
+       "art": "mu"
+      },
+      {
+       "name": "Alfgeir's Resting Place",
+       "q": 5,
+       "art": "re"
+      },
+      {
+       "name": "Via Redcap",
+       "q": 8,
+       "art": "vi"
+      },
+      {
+       "name": "Fire From the Sky",
+       "q": 37,
+       "art": "te"
+      },
+      {
+       "name": "The Kraken's Egg",
+       "q": 25,
+       "art": "an"
+      },
+      {
+       "name": "The Summer Fog",
+       "q": 24,
+       "art": "me"
+      },
+      {
+       "name": "The Black Horse of Boulogne",
+       "q": 16,
+       "art": "re"
+      },
+      {
+       "name": "The Kraken's Egg (fae-touched)",
+       "q": 3,
+       "art": "aq"
+      },
+      {
+       "name": "Mont-Saint-Michel Tide Pools",
+       "q": 5,
+       "art": "aq"
+      },
+      {
+       "name": "The Falcon's Cliff",
+       "q": 2,
+       "art": "vi"
+      },
+      {
+       "name": "The Diedne Garden",
+       "q": 3,
+       "art": "he"
+      }
+     ],
      "sources": []
     },
     "possessions": [],
