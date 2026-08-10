@@ -344,18 +344,21 @@ const PANELS={
       }).join('');
     } else {
       const bySource=view==='source';
-      const keyer=bySource?(x=>x.source||'__un'):(x=>x.location||'__un');
+      // by source = the annual vis source that produced it (optional `source` field);
+      // by location = the raw-vis form / harvest label it's held as — the lot name itself.
+      const keyer=bySource?(x=>x.source||'__un'):(x=>x.location||x.name||'__un');
       const grp={}; stock.forEach(x=>{const k=keyer(x);(grp[k]=grp[k]||[]).push(x);});
-      const keys=Object.keys(grp).sort((a,b)=>a==='__un'?1:b==='__un'?-1:a.localeCompare(b));
+      const keys=Object.keys(grp).filter(k=>grp[k].reduce((t,x)=>t+(x.q||0),0)>0)
+        .sort((a,b)=>a==='__un'?1:b==='__un'?-1:a.localeCompare(b));
       stockHtml=keys.map(k=>{
         const items=grp[k]; const q=items.reduce((t,x)=>t+(x.q||0),0);
         const pawns=items.map(x=>pawnRun(x.art,x.q||0)).join('');
+        const arts=[...new Set(items.map(x=>ART_NAME[x.art]||x.art||'?'))].join(', ');
         const tip=items.map(x=>`${x.name} — ${ART_NAME[x.art]||x.art||'?'} ×${x.q||0}`).join(', ');
         const nm=k==='__un'?(bySource?'Unattributed':'Unassigned'):k;
-        return `<div class="visrow"><span class="vislabel">${esc(nm)} <span class="q">${q}</span></span><span class="pawns" title="${esc(tip)}">${pawns}</span></div>`;
+        return `<div class="visrow"><span class="vislabel">${esc(nm)} <span class="q">${q}${bySource?'':` <span style="opacity:.7">${esc(arts)}</span>`}</span></span><span class="pawns" title="${esc(tip)}">${pawns}</span></div>`;
       }).join('');
-      const allMissing=bySource?stock.every(x=>!x.source):stock.every(x=>!x.location);
-      if(allMissing) stockHtml+=`<p class="vis-none">No per-lot ${bySource?'source attribution':'location'} recorded yet — tag stock lots with a <code>${bySource?'source':'location'}</code>${bySource?'':' (usually a ship)'} to split this view.</p>`;
+      if(bySource && stock.every(x=>!x.source)) stockHtml+=`<p class="vis-none">No per-lot source attribution recorded yet — tag stock lots with a <code>source</code> to split this view.</p>`;
     }
     const legend=`<div class="leg">${ART_ORDER.map(a=>`<span class="chip">${pawnSpan(a)}${ART_ABBR[a]}</span>`).join('')}</div>`;
     let srcHtml;

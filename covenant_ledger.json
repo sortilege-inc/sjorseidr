@@ -3749,10 +3749,10 @@
       },
       {
        "name": "The Falcon's Cliff",
-       "art": "an",
+       "art": "vi",
        "expected": 2,
        "received": 2,
-       "note": "Dagmar, Spring 1224 (strong yield)"
+       "note": "Animal OR Vim by collector choice; Dagmar captured the snake alive Spring 1224 → Vim (confirm)"
       },
       {
        "name": "The Diedne Garden",
