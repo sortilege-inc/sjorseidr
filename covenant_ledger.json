@@ -3269,9 +3269,22 @@
        "notes": ""
       }
      },
-     "totalIncome": null,
+     "totalIncome": 44,
      "wealth": null,
-     "incomeSources": []
+     "incomeSources": [
+      {
+       "name": "Fleet trade & transport",
+       "type": "Trade",
+       "incoming": 44
+      }
+     ],
+     "debts": [
+      {
+       "name": "Line of Credit — Bruges (Duke of Limburg, via Bernard)",
+       "amount": 275,
+       "notes": "arranged Spring 1221; drawn from 1222"
+      }
+     ]
     },
     "ships": [
      {
@@ -4292,9 +4305,22 @@
        "notes": ""
       }
      },
-     "totalIncome": null,
+     "totalIncome": 35,
      "wealth": null,
-     "incomeSources": []
+     "incomeSources": [
+      {
+       "name": "Fleet trade (reduced — covenant at Tribunal)",
+       "type": "Trade",
+       "incoming": 35
+      }
+     ],
+     "debts": [
+      {
+       "name": "Line of Credit — Bruges (Duke of Limburg, via Bernard)",
+       "amount": 275,
+       "notes": "arranged Spring 1221; drawn from 1222"
+      }
+     ]
     },
     "ships": [
      {
@@ -5441,9 +5467,22 @@
        "notes": ""
       }
      },
-     "totalIncome": null,
+     "totalIncome": 44,
      "wealth": null,
-     "incomeSources": []
+     "incomeSources": [
+      {
+       "name": "Fleet trade & transport",
+       "type": "Trade",
+       "incoming": 44
+      }
+     ],
+     "debts": [
+      {
+       "name": "Line of Credit — Bruges (Duke of Limburg, via Bernard)",
+       "amount": 275,
+       "notes": "arranged Spring 1221; drawn from 1222"
+      }
+     ]
     },
     "ships": [
      {
@@ -6618,9 +6657,22 @@
        "notes": ""
       }
      },
-     "totalIncome": null,
+     "totalIncome": 44,
      "wealth": null,
-     "incomeSources": []
+     "incomeSources": [
+      {
+       "name": "Fleet trade & transport",
+       "type": "Trade",
+       "incoming": 44
+      }
+     ],
+     "debts": [
+      {
+       "name": "Line of Credit — Bruges (Duke of Limburg, via Bernard)",
+       "amount": 275,
+       "notes": "arranged Spring 1221; drawn from 1222"
+      }
+     ]
     },
     "ships": [
      {

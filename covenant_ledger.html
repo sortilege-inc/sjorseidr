@@ -412,6 +412,10 @@ const PANELS={
         ${incReady?(e.incomeSources||[]).map(x=>`<div class="econ-row"><span>${esc(x.name)} <small>(${esc(x.type||'')})</small></span><b class="pos">${x.incoming} £</b></div>`).join('')||na:na}</div>
       <div class="card"><h2 class="sh" style="margin-top:0">Yearly expenses</h2>${expRows||'—'}</div>
      </div>
+     ${(e.debts&&e.debts.length)?`<div class="card" style="margin-top:10px"><h2 class="sh" style="margin-top:0">Debts owed</h2>
+        ${e.debts.map(x=>`<div class="econ-row"><span>${esc(x.name)}${x.notes?` <small>(${esc(x.notes)})</small>`:''}</span><b class="neg">${x.amount} £</b></div>`).join('')}
+        <div class="econ-row" style="border-top:1px solid rgba(120,90,40,.4)"><span><b style="font-family:Cinzel">Total owed</b></span><b class="neg econ-big">${e.debts.reduce((a,x)=>a+(x.amount||0),0)} £</b></div>
+        <div style="margin-top:4px;font-size:12px;color:var(--ink-soft);font-style:italic">The Bruges credit is available as cash (adding to wealth) but repayable — a liability, not income.</div></div>`:''}
      <p class="section-sub" style="margin-top:12px">${(e.incomeSources||[]).some(x=>/bruges|credit/i.test((x.name||'')+(x.type||'')))
         ? 'Note: these are the actor’s baseline figures; the Bruges credit line (275 £) inflates income, and Foxglove’s unsanctioned dragon-gold is <em>not</em> covenant wealth (see Ledger).'
         : 'Expenditure reconstructed from the <em>Covenants</em> RAW (inhabitant/laboratory/weapon points → category costs), with fleet hull-maintenance in place of the landed “Buildings” line.'+(incReady?'':' Income is pending.')}</p>`;
