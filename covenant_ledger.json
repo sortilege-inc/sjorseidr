@@ -73,8 +73,8 @@
        "notes": ""
       }
      },
-     "totalIncome": null,
-     "wealth": null,
+     "totalIncome": 57,
+     "wealth": 62,
      "incomeSources": []
     },
     "ships": [
@@ -909,8 +909,8 @@
        "notes": ""
       }
      },
-     "totalIncome": null,
-     "wealth": null,
+     "totalIncome": 111,
+     "wealth": 0,
      "incomeSources": []
     },
     "ships": [

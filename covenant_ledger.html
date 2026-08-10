@@ -412,9 +412,9 @@ const PANELS={
         ${incReady?(e.incomeSources||[]).map(x=>`<div class="econ-row"><span>${esc(x.name)} <small>(${esc(x.type||'')})</small></span><b class="pos">${x.incoming} £</b></div>`).join('')||na:na}</div>
       <div class="card"><h2 class="sh" style="margin-top:0">Yearly expenses</h2>${expRows||'—'}</div>
      </div>
-     <p class="section-sub" style="margin-top:12px">${incReady
+     <p class="section-sub" style="margin-top:12px">${(e.incomeSources||[]).some(x=>/bruges|credit/i.test((x.name||'')+(x.type||'')))
         ? 'Note: these are the actor’s baseline figures; the Bruges credit line (275 £) inflates income, and Foxglove’s unsanctioned dragon-gold is <em>not</em> covenant wealth (see Ledger).'
-        : 'Expenditure reconstructed from the <em>Covenants</em> RAW (inhabitant/laboratory/weapon points → category costs), with fleet hull-maintenance in place of the landed “Buildings” line. 1221 keeps the Foundry actor’s figures. Income is pending.'}</p>`;
+        : 'Expenditure reconstructed from the <em>Covenants</em> RAW (inhabitant/laboratory/weapon points → category costs), with fleet hull-maintenance in place of the landed “Buildings” line.'+(incReady?'':' Income is pending.')}</p>`;
   },
   ledger(){
     const upto=ledgerUpTo();
