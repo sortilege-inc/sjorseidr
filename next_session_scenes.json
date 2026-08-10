@@ -1,9 +1,9 @@
 {
  "meta": {
   "title": "Next Session — Candidate Scenes",
-  "subtitle": "The GM's working slate for the session after Summer 1224 (next play: the 22nd). Wilhelm is bound for Scarem Montem; the northern party owes a return to Tormente and means to enter the Carnac regio. Played scenes from the 2026-08-08 session are marked and now live in the Chronicle. Derived from the Open Questions prep hub (q027).",
+  "subtitle": "The GM's working slate for the 22nd (into Fall 1224), built on three spines: Wilhelm's delivery run to Scarem Montem, Dagmar's push into the regiones gated behind Tormente, and Confluensis turning the screws on the home front. Forward-looking only — beats played in the 2026-08-08 session have moved to the Chronicle and the Open Questions. Derived from the Open Questions prep hub (q027, t078).",
   "as_of": "End of Summer 1224",
-  "source": "open_questions.json → q027 \"What are we preparing for next session?\" (+ the Rody hand-off, t023/q026)",
+  "source": "open_questions.json → q027 \"What are we preparing for next session?\" + t078 (Confluensis's reprisal)",
   "schema_version": 1,
   "magi_roster": [
    "Éogan",
@@ -13,7 +13,7 @@
    "Valerian",
    "Dustin"
   ],
-  "status_note": "Developed = prepped and ready to stage · Deferred = deliberately left to improvise · Needs prep = flagged but not yet developed · Played = staged in the 2026-08-08 session (see the Chronicle)"
+  "status_note": "Developed = prepped and ready to stage · Deferred = deliberately left to improvise · Needs prep = flagged but not yet developed"
  },
  "scenes": [
   {
@@ -37,75 +37,6 @@
     "t020",
     "q028",
     "t071"
-   ]
-  },
-  {
-   "id": "s2",
-   "title": "Where does Foxglove get off the ship?",
-   "seasons": [
-    "Spring 1224"
-   ],
-   "magi": [
-    "Dagmar"
-   ],
-   "npcs": [
-    "Foxglove",
-    "Tormente"
-   ],
-   "thread": "Tormente's errand / the stolen hoard",
-   "status": "Played",
-   "hook": "Foxglove is aboard the Tide of Memory with roughly five bags of stolen Roman dragon-gold — lifted the same night Dagmar agreed to run Tormente's peace-errand. She has every reason to vanish with the hoard before the theft surfaces, and the ship is already running north toward a Stonehenge-Tribunal port.",
-   "detail": "PLAYED (Summer 1224): in London the gold proved unspendable in a silver economy; Foxglove fenced only three coins at a brutal one-for-one and kept the bulk, staying with the covenant for cover (she is also wanted elsewhere) — Where she gets off (and whether she deserts outright), and the fallout if she is still aboard when Dagmar returns to Tormente and the missing hoard is noticed, are player calls. What got prepped is the WORLD constraint: a GM reference on converting Roman gold c.1224 — no gold coinage on a silver standard, so bullion by weight only (melt, goldsmiths, moneylenders, Flanders/Lombard bankers, worked goods, the Church), plus treasure-trove and provenance friction and no collector market yet.",
-   "refs": [
-    "c026",
-    "t066"
-   ]
-  },
-  {
-   "id": "s3",
-   "title": "Does Valdemar join Dagmar for the dragon leg?",
-   "seasons": [
-    "Spring 1224"
-   ],
-   "magi": [
-    "Valdemar",
-    "Dagmar"
-   ],
-   "npcs": [
-    "Llewellyn ex Miscellanea",
-    "Rán"
-   ],
-   "thread": "Tormente's errand / familiars",
-   "status": "Played",
-   "hook": "The northbound errand — carry the jewelled crown to Tormente's estranged kin off Scarborough / Newcastle — is a two-magus job. Valdemar (no familiar yet, and tied to the sea-fae Rán) is a natural companion for dragon diplomacy against a wyrm claiming Norse descent.",
-   "detail": "PLAYED (Summer 1224): Valdemar joined — the Tide met his ship off Northumbria and he sailed on for the dragon leg — Dagmar has already invited Llewellyn ex Miscellanea by Redcap. Deferred: Valdemar's player has been absent, so the GM will improvise whether he signs on rather than pre-stage it. His Rán connection is worth watching against the kin-dragon's claim (s4).",
-   "refs": [
-    "t066",
-    "t037",
-    "c022"
-   ]
-  },
-  {
-   "id": "s4",
-   "title": "The kin-dragon claims descent from Jörmungandr — the Mímormr reveal",
-   "seasons": [
-    "Spring 1224",
-    "Summer 1224"
-   ],
-   "magi": [
-    "Dagmar"
-   ],
-   "npcs": [
-    "Tormente",
-    "Mímormr"
-   ],
-   "thread": "Tormente's errand",
-   "status": "Played",
-   "hook": "The reveal behind the errand: the estranged dragon claims descent from Jörmungandr, the Midgard Serpent, styling itself the greatest magical being that ever was. For a Norse-seiðr saga this is a cosmological escalation.",
-   "detail": "PLAYED (Summer 1224): the worm is Mímormr, self-proclaimed great-grandchild of Jörmungandr; delivering Tormente's crown FREED it (a name-release), and it is now loosed toward the North Sea. The sequel is s8 — Developed: the claim is FALSE but sincerely believed by Mímormr, a cursed bone-speaking scholar-wyrm. Tormente (a trickster) is using Dagmar to break Mímormr's curse — and freeing it looses a regional threat. Full build in t072; recontextualizes the Carnac regio's guardianship and frames Tormente's magnitude-10 Might as merely the lesser sibling's.",
-   "refs": [
-    "t066",
-    "t072"
    ]
   },
   {
@@ -148,30 +79,6 @@
     "t009",
     "c012",
     "t028"
-   ]
-  },
-  {
-   "id": "s7",
-   "title": "The Rody hand-off at Cruachan",
-   "seasons": [
-    "Spring 1224"
-   ],
-   "magi": [
-    "Wilhelm",
-    "Éogan"
-   ],
-   "npcs": [
-    "Rody",
-    "Gráinne",
-    "Tadhg"
-   ],
-   "thread": "The changeling delivery",
-   "status": "Played",
-   "hook": "The Connacht → Hermetic delivery custom passed the party a Fae changeling — Rody — as an 'owed' Gifted-child delivery, while a real Gifted child is still missing, taken by the Fae. The party chose not to interrogate or trade with the changeling directly.",
-   "detail": "PLAYED (Summer 1224): delivered. Rody (confirmed fully Fae) was left with the Cruachan magi Gráinne & Tadhg; the real child is still missing — Their plan was to quietly brief the receiving Hermetic magi near the Hill of Uisneach once the delivery completes. The open beats: does that briefing actually happen on the way home, and how did a Fae changeling come to be treated as a Gifted-child delivery in the first place? Flagged as a live thread but not yet developed.",
-   "refs": [
-    "t023",
-    "q026"
    ]
   },
   {
@@ -242,6 +149,34 @@
    "refs": [
     "t025",
     "t073"
+   ]
+  },
+  {
+   "id": "s11",
+   "title": "Confluensis turns the screws — the Grand Tribunal complaint",
+   "seasons": [
+    "Fall 1224"
+   ],
+   "magi": [
+    "Dustin",
+    "Valerian"
+   ],
+   "npcs": [
+    "Confluensis",
+    "Bertrand ex Verditius",
+    "Oleron"
+   ],
+   "thread": "Confluensis's reprisal",
+   "status": "Developed",
+   "hook": "The home-front spine for the 22nd: after the public 13th-place \"Siege of Shame\" at the 1223 Tribunal and Bertrand's cold renege of the book-storage deal, Confluensis moves from soured silence to active reprisal — assembling a complaint against Sjórseiðr while the covenant's magi are scattered north (Dagmar/Valdemar) and south (Wilhelm).",
+   "detail": "The documented direction (c022): someone from Confluensis is preparing to bring Rán's open faerie association — and the covenant's OTHER exposed edges — before the Grand Tribunal as a bundled quaesitorial complaint. Live edges it could gather: Valdemar parading the sea-fae Rán at the feast (c022), the unspendable five bags of stolen Roman dragon-gold and its provenance (c026), Mímormr loosed toward the North Sea by Dagmar's errand (t072), and — most dangerous — Wilhelm's ungifted folk-magic teaching with its madness/death toll (t019, t020, q028). Oleron, a Liege that favours Sjórseiðr for beating the other lieges, is the natural counter-ally (t074). What FORM the screw-turning takes first — a formal charge, a whispering campaign, vassal-poaching, or economic pressure through the soured Bertrand arrangement — is the live beat. GM prep 2026-08-09 (t078).",
+   "refs": [
+    "t078",
+    "c019",
+    "c022",
+    "t074",
+    "c026",
+    "t072"
    ]
   }
  ]
