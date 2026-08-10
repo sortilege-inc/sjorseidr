@@ -405,7 +405,7 @@ const PANELS={
     const total=yv.reduce((a,t)=>a+(t.result||0),0);
     const shipName=id=>SHIP_NAMES[id]||id;
     const cards=yv.length?yv.map(t=>{
-      const bits=[]; if(t.risk)bits.push(t.risk+' risk'); if(t.target)bits.push('EF '+t.target);
+      const bits=[]; if(t.kind)bits.push(t.kind); if(t.risk)bits.push(t.risk+' risk'); if(t.target)bits.push('EF '+t.target);
       const meta=bits.length?` <span style="font-family:Cinzel;font-size:10px;color:var(--ink-soft)">(${esc(bits.join(' · '))})</span>`:'';
       const who=[t.ship?shipName(t.ship):null,t.by].filter(Boolean).join(' — ')||'Trade venture';
       return `<div class="levent"><div class="lt"><span class="season">${esc(t.season)} ${yr}</span><b class="${t.result<0?'neg':'pos'}">${t.result>0?'+':''}${t.result} £</b></div>

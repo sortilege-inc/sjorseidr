@@ -3269,13 +3269,14 @@
        "notes": ""
       }
      },
-     "totalIncome": 44,
+     "totalIncome": 13,
      "wealth": null,
      "incomeSources": [
       {
-       "name": "Fleet trade & transport",
+       "name": "Seasonal trade & ventures",
        "type": "Trade",
-       "incoming": 44
+       "incoming": 13,
+       "notes": "net of 6 rolls (see Trade tab)"
       }
      ],
      "debts": [
@@ -8013,6 +8014,61 @@
    "risk": "high",
    "result": 15,
    "detail": "Speculum Veritatis venture — a risk trade, successful"
+  },
+  {
+   "year": 1222,
+   "season": "Spring",
+   "ship": "scholars-wake",
+   "by": "Heynric the Merchant",
+   "risk": "high",
+   "result": -25,
+   "detail": "Botched the venture (high-risk)"
+  },
+  {
+   "year": 1222,
+   "season": "Summer",
+   "ship": "brineborn",
+   "risk": "high",
+   "result": 0,
+   "detail": "High-risk venture — missed the target by 1 (no profit, no loss)"
+  },
+  {
+   "year": 1222,
+   "season": "Summer",
+   "ship": "tide-of-memory",
+   "by": "Foxglove",
+   "risk": "high",
+   "result": -16,
+   "kind": "theft",
+   "detail": "Foxglove attempted a theft — botched"
+  },
+  {
+   "year": 1222,
+   "season": "Fall",
+   "ship": "scholars-wake",
+   "by": "Heynric the Merchant",
+   "risk": "high",
+   "target": 15,
+   "result": 30,
+   "detail": "High-risk venture, hit Ease Factor 15"
+  },
+  {
+   "year": 1222,
+   "season": "Fall",
+   "ship": "brineborn",
+   "risk": "low",
+   "target": 12,
+   "result": 14,
+   "detail": "Low-risk venture, Ease Factor 12"
+  },
+  {
+   "year": 1222,
+   "season": "Fall",
+   "ship": "adamant",
+   "risk": "low",
+   "target": 9,
+   "result": 10,
+   "detail": "Low-risk venture, Ease Factor 9"
   },
   {
    "year": 1223,
