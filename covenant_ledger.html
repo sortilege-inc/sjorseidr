@@ -118,6 +118,19 @@ tr:hover td{background:rgba(198,155,63,.08)}
 .srcrow .nm{flex:0 0 200px;font-size:13px;color:var(--ink)}
 .srcrow .cmp{font-family:'Cinzel',serif;font-size:12px;color:var(--ink-soft);white-space:nowrap;margin-left:auto}
 .srcrow .cmp .short{color:var(--rust-bright);font-weight:600} .srcrow .cmp .met{color:var(--green);font-weight:600}
+/* library filter table */
+.libfilters{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:2px 0 12px}
+.libfilters label{font-family:'Cinzel',serif;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);display:flex;align-items:center;gap:5px}
+.libfilters select{font-family:'EB Garamond',serif;font-size:13px;color:var(--ink);background:rgba(244,235,213,.7);
+  border:1px solid rgba(120,90,40,.4);border-radius:6px;padding:3px 6px}
+.libfilters .clr{font-family:'Cinzel',serif;font-size:10.5px;cursor:pointer;color:var(--teal);background:none;border:none;text-decoration:underline}
+table.libtbl th{cursor:pointer;user-select:none;white-space:nowrap}
+table.libtbl th.sorted{color:var(--rust-bright)}
+table.libtbl th .ar{font-size:9px;opacity:.8}
+table.libtbl td.num{text-align:right;font-variant-numeric:tabular-nums}
+table.libtbl td.dim{color:var(--ink-soft)}
+.libtbl .kindico{opacity:.75;margin-right:3px}
+.libcount{font-size:12px;color:var(--ink-soft);font-style:italic;margin:0 0 8px}
 footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);font-size:12px;color:var(--ink-soft);font-style:italic}
 @media(max-width:640px){.cols{columns:1}}
 </style>
@@ -147,6 +160,8 @@ let D=null, tab='overview', ledgerFilter='all', node='current';
 const TABS=[['overview','Overview'],['ships','Ships & Labs'],['inhabitants','Inhabitants'],
   ['library','Library'],['vis','Vis'],['economics','Economics'],['ledger','Ledger']];
 let visStockView='type', libSort='title';
+let libFilter={type:'all',location:'all',level:'all',quality:'all',topic:'all'};
+let libTableSort={col:'title',dir:1};
 // The Fifteen Arts, in canonical order, each a distinct rainbow hue tuned to sit on parchment.
 const PAWN='♟︎';   // ♟ forced to text (not emoji) so `color` applies
 const ART_ORDER=['cr','in','mu','pe','re','an','aq','au','co','he','ig','im','me','te','vi'];
@@ -156,6 +171,15 @@ const ART_ABBR={cr:'Cr',in:'In',mu:'Mu',pe:'Pe',re:'Re',an:'An',aq:'Aq',au:'Au',
 const artColor=a=>{const i=ART_ORDER.indexOf(a);return i<0?'#6b5436':`hsl(${Math.round(i*360/15)} 54% 43%)`;};
 const pawnSpan=(a,cls)=>`<span class="pawn${cls?' '+cls:''}" style="color:${artColor(a)}">${PAWN}</span>`;
 const pawnRun=(a,n)=>pawnSpan(a).repeat(Math.max(0,n|0));
+// library text helpers (a book/labText is a string legacy or an object with metadata)
+const bt=b=>typeof b==='string'?b:(b.title||'');
+const bl=b=>(typeof b==='object'&&b.location)?b.location:null;
+const bTip=b=>{ if(typeof b!=='object') return '';
+  const seg=[]; if(b.topic)seg.push(b.topic);
+  const lq=[]; if(b.type)lq.push(b.type);
+  if(b.level!=null&&b.level!==0)lq.push('L'+b.level);
+  if(b.quality!=null)lq.push('Q'+b.quality);
+  return seg.concat(lq.length?[lq.join(' ')]:[]).join(' — '); };
 
 async function load(){
   try{ D=await (await fetch('./covenant_ledger.json',{cache:'no-store'})).json(); }
@@ -310,24 +334,23 @@ const PANELS={
   },
   library(){
     const L=s().library;
-    const bt=b=>typeof b==='string'?b:(b.title||'');
-    const bl=b=>(typeof b==='object'&&b.location)?b.location:null;
     const hdr=`<h2 class="sh" style="margin-top:0">Library <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${L.books.length} books, ${L.labTexts.length} lab texts</span></h2>`;
-    const toggle=`<div class="viewtoggle"><button class="fbtn ${libSort==='title'?'on':''}" data-sort="title">By title</button><button class="fbtn ${libSort==='location'?'on':''}" data-sort="location">By location</button></div>`;
+    const toggle=`<div class="viewtoggle"><button class="fbtn ${libSort==='title'?'on':''}" data-sort="title">By title</button><button class="fbtn ${libSort==='location'?'on':''}" data-sort="location">By location</button><button class="fbtn ${libSort==='table'?'on':''}" data-sort="table">Table</button></div>`;
+    if(libSort==='table') return hdr+toggle+libTable(L);
     if(libSort==='location'){
       const items=[...L.books.map(b=>['📖',b]),...L.labTexts.map(b=>['📜',b])];
       const grp={}; items.forEach(it=>{const k=bl(it[1])||'__un';(grp[k]=grp[k]||[]).push(it);});
       const keys=Object.keys(grp).sort((a,b)=>a==='__un'?1:b==='__un'?-1:a.localeCompare(b));
       const shipNames=new Set([...Object.values(SHIP_NAMES),...(s().ships||[]).map(x=>x.name)]);
       const locIcon=k=>shipNames.has(k)?'⛵':'🏰';   // ships sail; fixed places (e.g. Oleron) get a castle
-      let body=keys.map(k=>`<div class="catblock"><h3 style="text-transform:none">${k==='__un'?'⚑ Covenant library (unassigned)':locIcon(k)+' '+esc(k)} <span class="n">(${grp[k].length})</span></h3><div class="cols">${grp[k].map(it=>`<div class="row">${it[0]} ${esc(bt(it[1]))}</div>`).join('')}</div></div>`).join('');
+      let body=keys.map(k=>`<div class="catblock"><h3 style="text-transform:none">${k==='__un'?'⚑ Covenant library (unassigned)':locIcon(k)+' '+esc(k)} <span class="n">(${grp[k].length})</span></h3><div class="cols">${grp[k].map(it=>`<div class="row" title="${esc(bTip(it[1]))}">${it[0]} ${esc(bt(it[1]))}</div>`).join('')}</div></div>`).join('');
       if(items.every(it=>!bl(it[1]))) body+=`<p class="vis-none">No per-item location recorded yet — tag books with a <code>location</code> (usually a ship) to split this view.</p>`;
       return hdr+toggle+body;
     }
     return hdr+toggle
-      +`<div class="cols">${L.books.map(b=>`<div class="row">📖 ${esc(bt(b))}</div>`).join('')}</div>
+      +`<div class="cols">${L.books.map(b=>`<div class="row" title="${esc(bTip(b))}">📖 ${esc(bt(b))}</div>`).join('')}</div>
         <h2 class="sh">Laboratory texts <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${L.labTexts.length}</span></h2>
-        <div class="cols">${L.labTexts.map(b=>`<div class="row">📜 ${esc(bt(b))}</div>`).join('')}</div>`;
+        <div class="cols">${L.labTexts.map(b=>`<div class="row" title="${esc(bTip(b))}">📜 ${esc(bt(b))}</div>`).join('')}</div>`;
   },
   vis(){
     const V=s().vis, stock=V.stock||[], sources=V.sources||[];
@@ -423,7 +446,50 @@ const PANELS={
 };
 function wireLedger(){ document.querySelectorAll('.ledger .fbtn').forEach(b=>b.onclick=()=>{ledgerFilter=b.dataset.f;render();}); }
 function wireVis(){ document.querySelectorAll('.viewtoggle .fbtn[data-view]').forEach(b=>b.onclick=()=>{visStockView=b.dataset.view;render();}); }
-function wireLib(){ document.querySelectorAll('.viewtoggle .fbtn[data-sort]').forEach(b=>b.onclick=()=>{libSort=b.dataset.sort;render();}); }
+function wireLib(){ document.querySelectorAll('.viewtoggle .fbtn[data-sort]').forEach(b=>b.onclick=()=>{libSort=b.dataset.sort;render();}); if(libSort==='table')wireLibTable(); }
+function libRows(L){
+  const mk=(b,icon)=>({icon,title:bt(b),
+    type:(typeof b==='object'&&b.type)?b.type:null,
+    location:(typeof b==='object'&&b.location)?b.location:null,
+    level:(typeof b==='object'&&b.level!=null)?b.level:null,
+    quality:(typeof b==='object'&&b.quality!=null)?b.quality:null,
+    topic:(typeof b==='object'&&b.topic)?b.topic:null});
+  return [...(L.books||[]).map(b=>mk(b,'📖')),...(L.labTexts||[]).map(b=>mk(b,'📜'))];
+}
+function libTable(L){
+  const rows=libRows(L);
+  const cols=[['title','Title'],['type','Type'],['location','Location'],['level','Level'],['quality','Quality'],['topic','Topic']];
+  const distinct=k=>[...new Set(rows.map(r=>r[k]).filter(v=>v!=null))].sort((a,b)=>typeof a==='number'?a-b:String(a).localeCompare(String(b)));
+  const fkeys=['type','location','level','quality','topic'];
+  const fr=rows.filter(r=>fkeys.every(k=>{const f=libFilter[k]; if(f==='all')return true; if(f==='__none')return r[k]==null; return String(r[k])===String(f);}));
+  const {col,dir}=libTableSort;
+  fr.sort((a,b)=>{let x=a[col],y=b[col]; const xn=x==null,yn=y==null;
+    if(xn&&yn)return 0; if(xn)return 1; if(yn)return -1;
+    return (typeof x==='number'&&typeof y==='number'?(x-y):String(x).localeCompare(String(y)))*dir;});
+  const sel=(k,label,none)=>{const opts=['<option value="all">All</option>']
+      .concat(none?['<option value="__none"'+(libFilter[k]==='__none'?' selected':'')+'>— none —</option>']:[])
+      .concat(distinct(k).map(v=>`<option value="${esc(String(v))}"${String(libFilter[k])===String(v)?' selected':''}>${esc(String(v))}</option>`));
+    return `<label>${label}<select data-filter="${k}">${opts.join('')}</select></label>`;};
+  const filters=`<div class="libfilters">${sel('type','Type')}${sel('location','Location',true)}${sel('level','Level',true)}${sel('quality','Quality',true)}${sel('topic','Topic',true)}<button class="clr" data-clear="1">Reset</button></div>`;
+  const arrow=k=>col===k?` <span class="ar">${dir>0?'▲':'▼'}</span>`:'';
+  const head=`<tr>${cols.map(([k,l])=>`<th data-col="${k}" class="${col===k?'sorted':''}">${l}${arrow(k)}</th>`).join('')}</tr>`;
+  const dim='<span class="dim">—</span>';
+  const body=fr.map(r=>`<tr>
+     <td><span class="kindico">${r.icon}</span>${esc(r.title)}</td>
+     <td class="dim">${esc(r.type||'—')}</td>
+     <td>${r.location?esc(r.location):dim}</td>
+     <td class="num">${r.level==null?dim:r.level}</td>
+     <td class="num">${r.quality==null?dim:r.quality}</td>
+     <td>${r.topic?esc(r.topic):dim}</td></tr>`).join('');
+  return filters+`<p class="libcount">${fr.length} of ${rows.length} texts</p>`
+    +`<table class="libtbl"><thead>${head}</thead><tbody>${body||'<tr><td colspan="6" class="dim" style="text-align:center;padding:16px">No texts match these filters.</td></tr>'}</tbody></table>`;
+}
+function wireLibTable(){
+  document.querySelectorAll('.libfilters select').forEach(el=>el.onchange=()=>{libFilter[el.dataset.filter]=el.value;render();});
+  const clr=document.querySelector('.libfilters .clr'); if(clr)clr.onclick=()=>{libFilter={type:'all',location:'all',level:'all',quality:'all',topic:'all'};render();};
+  document.querySelectorAll('table.libtbl th[data-col]').forEach(th=>th.onclick=()=>{const c=th.dataset.col;
+    if(libTableSort.col===c)libTableSort.dir*=-1; else libTableSort={col:c,dir:1}; render();});
+}
 load();
 </script>
 </body>

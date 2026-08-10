@@ -337,89 +337,415 @@
     ],
     "library": {
      "books": [
-      "Journal of Unusual Encounters volume 01",
-      "Journal of Unusual Encounters volume 02",
-      "Journal of Unusual Encounters volume 03",
-      "Journal of Unusual Encounters volume 04",
+      {
+       "title": "Journal of Unusual Encounters volume 01",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Dominion Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 02",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Faerie Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 03",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Infernal Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 04",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Magic Lore"
+      },
       {
        "title": "The Technique of Precision",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 14,
+       "topic": "Finesse"
       },
-      "The Hermetic Zodiac",
-      "Methods for the Application of Magic Theory in Enchantment",
-      "The Examples of the Victors",
-      "That Which Was Shared",
-      "Tenebris caeli domino",
-      "Incantatione fulmineus",
-      "Domito hastam Ignis",
-      "The Incredible Journey",
-      "On the Dream of Scipio",
-      "Foundations",
-      "The Authority Granted to the Tribunal by its Members",
-      "The Forms and Uses of Natural Shape and Materials in Magic",
-      "Ship's Log",
-      "Carta Marina",
-      "Emanations Brought on by Hermetic Arts",
-      "A Hermetic Methodology for the Investigation of Occurrences",
-      "The Decline of Things",
-      "On the Unnatural Promotion of Natural Processes",
+      {
+       "title": "The Hermetic Zodiac",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "Methods for the Application of Magic Theory in Enchantment",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "The Examples of the Victors",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Penetration"
+      },
+      {
+       "title": "That Which Was Shared",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Parma Magica"
+      },
+      {
+       "title": "Tenebris caeli domino",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Incantatione fulmineus",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Domito hastam Ignis",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "The Incredible Journey",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "On the Dream of Scipio",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Artes Liberales"
+      },
+      {
+       "title": "Foundations",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Authority Granted to the Tribunal by its Members",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 12,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Forms and Uses of Natural Shape and Materials in Magic",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Philosophiae"
+      },
+      {
+       "title": "Ship's Log",
+       "type": "Summa",
+       "level": 2,
+       "quality": 6,
+       "topic": "Profession"
+      },
+      {
+       "title": "Carta Marina",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "Emanations Brought on by Hermetic Arts",
+       "type": "Summa",
+       "level": 9,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "A Hermetic Methodology for the Investigation of Occurrences",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "The Decline of Things",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Creo"
+      },
+      {
+       "title": "On the Unnatural Promotion of Natural Processes",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Rego"
+      },
       {
        "title": "Comparative Anatomies Volume 01,",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Animal"
       },
-      "Deluge",
+      {
+       "title": "Deluge",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Aquam"
+      },
       {
        "title": "Comparative Anatomies",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Corpus"
       },
       {
        "title": "Tumult",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Terram"
       },
-      "A Discussion on Auras and Their Effects on Our Spells and Rituals",
-      "De Salis et Fontibus",
+      {
+       "title": "A Discussion on Auras and Their Effects on Our Spells and Rituals",
+       "type": "Summa",
+       "level": 8,
+       "quality": 11,
+       "topic": "Vim"
+      },
+      {
+       "title": "De Salis et Fontibus",
+       "type": "Summa",
+       "level": 10,
+       "quality": 9,
+       "topic": "Aquam"
+      },
       {
        "title": "Radices Scientiae",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Herbam"
       },
       {
        "title": "Boek fan de Tinken",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "Speculum Veritatis",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 10,
+       "quality": 10,
+       "topic": "Intellego"
       },
       {
        "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       }
      ],
      "labTexts": [
-      "Wreaths of Foul Smoke Charged Device",
-      "Bind Wound Charged Device",
-      "Pilum of Fire Charged Device",
-      "Circular Ward Against Demons Charged Device",
-      "Broach of Lungs of the Fish Device Effect",
-      "The Freshwater Barrel Device Effec",
-      "The Master’s Chart Device Effect",
-      "The Incantation Of Lightning",
-      "Clouds Of Thunderous Might",
-      "Bind Wound",
-      "The Inexorable Search",
-      "Cloak Of Black Feathers",
-      "In Christ’s Footsteps",
-      "Endurance of the Berserkers",
-      "The Leap Of Homecoming",
-      "Lamp without Flame",
-      "Pilum of Fire",
-      "Conjuration Of The Indubitable Cold",
-      "Haunt Of The Living Ghost",
-      "Piercing the Magical Veil",
-      "Circular Ward Against Demons",
-      "Aegis of the Hearth",
-      "Grain Preservation Ward Excellante",
-      "New LaboratoryText"
+      {
+       "title": "Wreaths of Foul Smoke Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Bind Wound Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "Pilum of Fire Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Circular Ward Against Demons Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Broach of Lungs of the Fish Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Aquam"
+      },
+      {
+       "title": "The Freshwater Barrel Device Effec",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Aquam"
+      },
+      {
+       "title": "The Master’s Chart Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Herbam"
+      },
+      {
+       "title": "The Incantation Of Lightning",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Clouds Of Thunderous Might",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Auram"
+      },
+      {
+       "title": "Bind Wound",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "The Inexorable Search",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Corpus"
+      },
+      {
+       "title": "Cloak Of Black Feathers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Corpus"
+      },
+      {
+       "title": "In Christ’s Footsteps",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Endurance of the Berserkers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "The Leap Of Homecoming",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Lamp without Flame",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Pilum of Fire",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Conjuration Of The Indubitable Cold",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Ignem"
+      },
+      {
+       "title": "Haunt Of The Living Ghost",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Imaginem"
+      },
+      {
+       "title": "Piercing the Magical Veil",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Vim"
+      },
+      {
+       "title": "Circular Ward Against Demons",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Aegis of the Hearth",
+       "type": "Lab Text",
+       "level": 30,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Grain Preservation Ward Excellante",
+       "type": "Lab Text",
+       "level": 5,
+       "quality": null,
+       "topic": "Creo Herbam"
+      },
+      {
+       "title": "New LaboratoryText",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Animal"
+      }
      ]
     },
     "vis": {
@@ -813,89 +1139,415 @@
     ],
     "library": {
      "books": [
-      "Journal of Unusual Encounters volume 01",
-      "Journal of Unusual Encounters volume 02",
-      "Journal of Unusual Encounters volume 03",
-      "Journal of Unusual Encounters volume 04",
+      {
+       "title": "Journal of Unusual Encounters volume 01",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Dominion Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 02",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Faerie Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 03",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Infernal Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 04",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Magic Lore"
+      },
       {
        "title": "The Technique of Precision",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 14,
+       "topic": "Finesse"
       },
-      "The Hermetic Zodiac",
-      "Methods for the Application of Magic Theory in Enchantment",
-      "The Examples of the Victors",
-      "That Which Was Shared",
-      "Tenebris caeli domino",
-      "Incantatione fulmineus",
-      "Domito hastam Ignis",
-      "The Incredible Journey",
-      "On the Dream of Scipio",
-      "Foundations",
-      "The Authority Granted to the Tribunal by its Members",
-      "The Forms and Uses of Natural Shape and Materials in Magic",
-      "Ship's Log",
-      "Carta Marina",
-      "Emanations Brought on by Hermetic Arts",
-      "A Hermetic Methodology for the Investigation of Occurrences",
-      "The Decline of Things",
-      "On the Unnatural Promotion of Natural Processes",
+      {
+       "title": "The Hermetic Zodiac",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "Methods for the Application of Magic Theory in Enchantment",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "The Examples of the Victors",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Penetration"
+      },
+      {
+       "title": "That Which Was Shared",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Parma Magica"
+      },
+      {
+       "title": "Tenebris caeli domino",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Incantatione fulmineus",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Domito hastam Ignis",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "The Incredible Journey",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "On the Dream of Scipio",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Artes Liberales"
+      },
+      {
+       "title": "Foundations",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Authority Granted to the Tribunal by its Members",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 12,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Forms and Uses of Natural Shape and Materials in Magic",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Philosophiae"
+      },
+      {
+       "title": "Ship's Log",
+       "type": "Summa",
+       "level": 2,
+       "quality": 6,
+       "topic": "Profession"
+      },
+      {
+       "title": "Carta Marina",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "Emanations Brought on by Hermetic Arts",
+       "type": "Summa",
+       "level": 9,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "A Hermetic Methodology for the Investigation of Occurrences",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "The Decline of Things",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Creo"
+      },
+      {
+       "title": "On the Unnatural Promotion of Natural Processes",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Rego"
+      },
       {
        "title": "Comparative Anatomies Volume 01,",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Animal"
       },
-      "Deluge",
+      {
+       "title": "Deluge",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Aquam"
+      },
       {
        "title": "Comparative Anatomies",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Corpus"
       },
       {
        "title": "Tumult",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Terram"
       },
-      "A Discussion on Auras and Their Effects on Our Spells and Rituals",
-      "De Salis et Fontibus",
+      {
+       "title": "A Discussion on Auras and Their Effects on Our Spells and Rituals",
+       "type": "Summa",
+       "level": 8,
+       "quality": 11,
+       "topic": "Vim"
+      },
+      {
+       "title": "De Salis et Fontibus",
+       "type": "Summa",
+       "level": 10,
+       "quality": 9,
+       "topic": "Aquam"
+      },
       {
        "title": "Radices Scientiae",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Herbam"
       },
       {
        "title": "Boek fan de Tinken",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "Speculum Veritatis",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 10,
+       "quality": 10,
+       "topic": "Intellego"
       },
       {
        "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       }
      ],
      "labTexts": [
-      "Wreaths of Foul Smoke Charged Device",
-      "Bind Wound Charged Device",
-      "Pilum of Fire Charged Device",
-      "Circular Ward Against Demons Charged Device",
-      "Broach of Lungs of the Fish Device Effect",
-      "The Freshwater Barrel Device Effec",
-      "The Master’s Chart Device Effect",
-      "The Incantation Of Lightning",
-      "Clouds Of Thunderous Might",
-      "Bind Wound",
-      "The Inexorable Search",
-      "Cloak Of Black Feathers",
-      "In Christ’s Footsteps",
-      "Endurance of the Berserkers",
-      "The Leap Of Homecoming",
-      "Lamp without Flame",
-      "Pilum of Fire",
-      "Conjuration Of The Indubitable Cold",
-      "Haunt Of The Living Ghost",
-      "Piercing the Magical Veil",
-      "Circular Ward Against Demons",
-      "Aegis of the Hearth",
-      "Grain Preservation Ward Excellante",
-      "New LaboratoryText"
+      {
+       "title": "Wreaths of Foul Smoke Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Bind Wound Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "Pilum of Fire Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Circular Ward Against Demons Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Broach of Lungs of the Fish Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Aquam"
+      },
+      {
+       "title": "The Freshwater Barrel Device Effec",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Aquam"
+      },
+      {
+       "title": "The Master’s Chart Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Herbam"
+      },
+      {
+       "title": "The Incantation Of Lightning",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Clouds Of Thunderous Might",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Auram"
+      },
+      {
+       "title": "Bind Wound",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "The Inexorable Search",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Corpus"
+      },
+      {
+       "title": "Cloak Of Black Feathers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Corpus"
+      },
+      {
+       "title": "In Christ’s Footsteps",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Endurance of the Berserkers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "The Leap Of Homecoming",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Lamp without Flame",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Pilum of Fire",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Conjuration Of The Indubitable Cold",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Ignem"
+      },
+      {
+       "title": "Haunt Of The Living Ghost",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Imaginem"
+      },
+      {
+       "title": "Piercing the Magical Veil",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Vim"
+      },
+      {
+       "title": "Circular Ward Against Demons",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Aegis of the Hearth",
+       "type": "Lab Text",
+       "level": 30,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Grain Preservation Ward Excellante",
+       "type": "Lab Text",
+       "level": 5,
+       "quality": null,
+       "topic": "Creo Herbam"
+      },
+      {
+       "title": "New LaboratoryText",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Animal"
+      }
      ]
     },
     "vis": {
@@ -1817,89 +2469,415 @@
     ],
     "library": {
      "books": [
-      "Journal of Unusual Encounters volume 01",
-      "Journal of Unusual Encounters volume 02",
-      "Journal of Unusual Encounters volume 03",
-      "Journal of Unusual Encounters volume 04",
+      {
+       "title": "Journal of Unusual Encounters volume 01",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Dominion Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 02",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Faerie Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 03",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Infernal Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 04",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Magic Lore"
+      },
       {
        "title": "The Technique of Precision",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 14,
+       "topic": "Finesse"
       },
-      "The Hermetic Zodiac",
-      "Methods for the Application of Magic Theory in Enchantment",
-      "The Examples of the Victors",
-      "That Which Was Shared",
-      "Tenebris caeli domino",
-      "Incantatione fulmineus",
-      "Domito hastam Ignis",
-      "The Incredible Journey",
-      "On the Dream of Scipio",
-      "Foundations",
-      "The Authority Granted to the Tribunal by its Members",
-      "The Forms and Uses of Natural Shape and Materials in Magic",
-      "Ship's Log",
-      "Carta Marina",
-      "Emanations Brought on by Hermetic Arts",
-      "A Hermetic Methodology for the Investigation of Occurrences",
-      "The Decline of Things",
-      "On the Unnatural Promotion of Natural Processes",
+      {
+       "title": "The Hermetic Zodiac",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "Methods for the Application of Magic Theory in Enchantment",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "The Examples of the Victors",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Penetration"
+      },
+      {
+       "title": "That Which Was Shared",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Parma Magica"
+      },
+      {
+       "title": "Tenebris caeli domino",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Incantatione fulmineus",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Domito hastam Ignis",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "The Incredible Journey",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "On the Dream of Scipio",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Artes Liberales"
+      },
+      {
+       "title": "Foundations",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Authority Granted to the Tribunal by its Members",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 12,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Forms and Uses of Natural Shape and Materials in Magic",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Philosophiae"
+      },
+      {
+       "title": "Ship's Log",
+       "type": "Summa",
+       "level": 2,
+       "quality": 6,
+       "topic": "Profession"
+      },
+      {
+       "title": "Carta Marina",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "Emanations Brought on by Hermetic Arts",
+       "type": "Summa",
+       "level": 9,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "A Hermetic Methodology for the Investigation of Occurrences",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "The Decline of Things",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Creo"
+      },
+      {
+       "title": "On the Unnatural Promotion of Natural Processes",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Rego"
+      },
       {
        "title": "Comparative Anatomies Volume 01,",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Animal"
       },
-      "Deluge",
+      {
+       "title": "Deluge",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Aquam"
+      },
       {
        "title": "Comparative Anatomies",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Corpus"
       },
       {
        "title": "Tumult",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Terram"
       },
-      "A Discussion on Auras and Their Effects on Our Spells and Rituals",
-      "De Salis et Fontibus",
+      {
+       "title": "A Discussion on Auras and Their Effects on Our Spells and Rituals",
+       "type": "Summa",
+       "level": 8,
+       "quality": 11,
+       "topic": "Vim"
+      },
+      {
+       "title": "De Salis et Fontibus",
+       "type": "Summa",
+       "level": 10,
+       "quality": 9,
+       "topic": "Aquam"
+      },
       {
        "title": "Radices Scientiae",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Herbam"
       },
       {
        "title": "Boek fan de Tinken",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "Speculum Veritatis",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 10,
+       "quality": 10,
+       "topic": "Intellego"
       },
       {
        "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       }
      ],
      "labTexts": [
-      "Wreaths of Foul Smoke Charged Device",
-      "Bind Wound Charged Device",
-      "Pilum of Fire Charged Device",
-      "Circular Ward Against Demons Charged Device",
-      "Broach of Lungs of the Fish Device Effect",
-      "The Freshwater Barrel Device Effec",
-      "The Master’s Chart Device Effect",
-      "The Incantation Of Lightning",
-      "Clouds Of Thunderous Might",
-      "Bind Wound",
-      "The Inexorable Search",
-      "Cloak Of Black Feathers",
-      "In Christ’s Footsteps",
-      "Endurance of the Berserkers",
-      "The Leap Of Homecoming",
-      "Lamp without Flame",
-      "Pilum of Fire",
-      "Conjuration Of The Indubitable Cold",
-      "Haunt Of The Living Ghost",
-      "Piercing the Magical Veil",
-      "Circular Ward Against Demons",
-      "Aegis of the Hearth",
-      "Grain Preservation Ward Excellante",
-      "New LaboratoryText"
+      {
+       "title": "Wreaths of Foul Smoke Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Bind Wound Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "Pilum of Fire Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Circular Ward Against Demons Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Broach of Lungs of the Fish Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Aquam"
+      },
+      {
+       "title": "The Freshwater Barrel Device Effec",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Aquam"
+      },
+      {
+       "title": "The Master’s Chart Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Herbam"
+      },
+      {
+       "title": "The Incantation Of Lightning",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Clouds Of Thunderous Might",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Auram"
+      },
+      {
+       "title": "Bind Wound",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "The Inexorable Search",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Corpus"
+      },
+      {
+       "title": "Cloak Of Black Feathers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Corpus"
+      },
+      {
+       "title": "In Christ’s Footsteps",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Endurance of the Berserkers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "The Leap Of Homecoming",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Lamp without Flame",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Pilum of Fire",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Conjuration Of The Indubitable Cold",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Ignem"
+      },
+      {
+       "title": "Haunt Of The Living Ghost",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Imaginem"
+      },
+      {
+       "title": "Piercing the Magical Veil",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Vim"
+      },
+      {
+       "title": "Circular Ward Against Demons",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Aegis of the Hearth",
+       "type": "Lab Text",
+       "level": 30,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Grain Preservation Ward Excellante",
+       "type": "Lab Text",
+       "level": 5,
+       "quality": null,
+       "topic": "Creo Herbam"
+      },
+      {
+       "title": "New LaboratoryText",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Animal"
+      }
      ]
     },
     "vis": {
@@ -2480,89 +3458,415 @@
     ],
     "library": {
      "books": [
-      "Journal of Unusual Encounters volume 01",
-      "Journal of Unusual Encounters volume 02",
-      "Journal of Unusual Encounters volume 03",
-      "Journal of Unusual Encounters volume 04",
+      {
+       "title": "Journal of Unusual Encounters volume 01",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Dominion Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 02",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Faerie Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 03",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Infernal Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 04",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Magic Lore"
+      },
       {
        "title": "The Technique of Precision",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 14,
+       "topic": "Finesse"
       },
-      "The Hermetic Zodiac",
-      "Methods for the Application of Magic Theory in Enchantment",
-      "The Examples of the Victors",
-      "That Which Was Shared",
-      "Tenebris caeli domino",
-      "Incantatione fulmineus",
-      "Domito hastam Ignis",
-      "The Incredible Journey",
-      "On the Dream of Scipio",
-      "Foundations",
-      "The Authority Granted to the Tribunal by its Members",
-      "The Forms and Uses of Natural Shape and Materials in Magic",
-      "Ship's Log",
-      "Carta Marina",
-      "Emanations Brought on by Hermetic Arts",
-      "A Hermetic Methodology for the Investigation of Occurrences",
-      "The Decline of Things",
-      "On the Unnatural Promotion of Natural Processes",
+      {
+       "title": "The Hermetic Zodiac",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "Methods for the Application of Magic Theory in Enchantment",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "The Examples of the Victors",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Penetration"
+      },
+      {
+       "title": "That Which Was Shared",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Parma Magica"
+      },
+      {
+       "title": "Tenebris caeli domino",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Incantatione fulmineus",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Domito hastam Ignis",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "The Incredible Journey",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "On the Dream of Scipio",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Artes Liberales"
+      },
+      {
+       "title": "Foundations",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Authority Granted to the Tribunal by its Members",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 12,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Forms and Uses of Natural Shape and Materials in Magic",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Philosophiae"
+      },
+      {
+       "title": "Ship's Log",
+       "type": "Summa",
+       "level": 2,
+       "quality": 6,
+       "topic": "Profession"
+      },
+      {
+       "title": "Carta Marina",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "Emanations Brought on by Hermetic Arts",
+       "type": "Summa",
+       "level": 9,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "A Hermetic Methodology for the Investigation of Occurrences",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "The Decline of Things",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Creo"
+      },
+      {
+       "title": "On the Unnatural Promotion of Natural Processes",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Rego"
+      },
       {
        "title": "Comparative Anatomies Volume 01,",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Animal"
       },
-      "Deluge",
+      {
+       "title": "Deluge",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Aquam"
+      },
       {
        "title": "Comparative Anatomies",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Corpus"
       },
       {
        "title": "Tumult",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Terram"
       },
-      "A Discussion on Auras and Their Effects on Our Spells and Rituals",
-      "De Salis et Fontibus",
+      {
+       "title": "A Discussion on Auras and Their Effects on Our Spells and Rituals",
+       "type": "Summa",
+       "level": 8,
+       "quality": 11,
+       "topic": "Vim"
+      },
+      {
+       "title": "De Salis et Fontibus",
+       "type": "Summa",
+       "level": 10,
+       "quality": 9,
+       "topic": "Aquam"
+      },
       {
        "title": "Radices Scientiae",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Herbam"
       },
       {
        "title": "Boek fan de Tinken",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "Speculum Veritatis",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 10,
+       "quality": 10,
+       "topic": "Intellego"
       },
       {
        "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       }
      ],
      "labTexts": [
-      "Wreaths of Foul Smoke Charged Device",
-      "Bind Wound Charged Device",
-      "Pilum of Fire Charged Device",
-      "Circular Ward Against Demons Charged Device",
-      "Broach of Lungs of the Fish Device Effect",
-      "The Freshwater Barrel Device Effec",
-      "The Master’s Chart Device Effect",
-      "The Incantation Of Lightning",
-      "Clouds Of Thunderous Might",
-      "Bind Wound",
-      "The Inexorable Search",
-      "Cloak Of Black Feathers",
-      "In Christ’s Footsteps",
-      "Endurance of the Berserkers",
-      "The Leap Of Homecoming",
-      "Lamp without Flame",
-      "Pilum of Fire",
-      "Conjuration Of The Indubitable Cold",
-      "Haunt Of The Living Ghost",
-      "Piercing the Magical Veil",
-      "Circular Ward Against Demons",
-      "Aegis of the Hearth",
-      "Grain Preservation Ward Excellante",
-      "New LaboratoryText"
+      {
+       "title": "Wreaths of Foul Smoke Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Bind Wound Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "Pilum of Fire Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Circular Ward Against Demons Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Broach of Lungs of the Fish Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Aquam"
+      },
+      {
+       "title": "The Freshwater Barrel Device Effec",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Aquam"
+      },
+      {
+       "title": "The Master’s Chart Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Herbam"
+      },
+      {
+       "title": "The Incantation Of Lightning",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Clouds Of Thunderous Might",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Auram"
+      },
+      {
+       "title": "Bind Wound",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "The Inexorable Search",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Corpus"
+      },
+      {
+       "title": "Cloak Of Black Feathers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Corpus"
+      },
+      {
+       "title": "In Christ’s Footsteps",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Endurance of the Berserkers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "The Leap Of Homecoming",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Lamp without Flame",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Pilum of Fire",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Conjuration Of The Indubitable Cold",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Ignem"
+      },
+      {
+       "title": "Haunt Of The Living Ghost",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Imaginem"
+      },
+      {
+       "title": "Piercing the Magical Veil",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Vim"
+      },
+      {
+       "title": "Circular Ward Against Demons",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Aegis of the Hearth",
+       "type": "Lab Text",
+       "level": 30,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Grain Preservation Ward Excellante",
+       "type": "Lab Text",
+       "level": 5,
+       "quality": null,
+       "topic": "Creo Herbam"
+      },
+      {
+       "title": "New LaboratoryText",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Animal"
+      }
      ]
     },
     "vis": {
@@ -3110,117 +4414,471 @@
     ],
     "library": {
      "books": [
-      "Journal of Unusual Encounters volume 01",
-      "Journal of Unusual Encounters volume 02",
-      "Journal of Unusual Encounters volume 03",
-      "Journal of Unusual Encounters volume 04",
+      {
+       "title": "Journal of Unusual Encounters volume 01",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Dominion Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 02",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Faerie Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 03",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Infernal Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 04",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Magic Lore"
+      },
       {
        "title": "The Technique of Precision",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 14,
+       "topic": "Finesse"
       },
-      "The Hermetic Zodiac",
-      "Methods for the Application of Magic Theory in Enchantment",
-      "The Examples of the Victors",
-      "That Which Was Shared",
-      "Tenebris caeli domino",
-      "Incantatione fulmineus",
-      "Domito hastam Ignis",
-      "The Incredible Journey",
-      "On the Dream of Scipio",
-      "Foundations",
-      "The Authority Granted to the Tribunal by its Members",
-      "The Forms and Uses of Natural Shape and Materials in Magic",
-      "Ship's Log",
-      "Carta Marina",
-      "Emanations Brought on by Hermetic Arts",
-      "A Hermetic Methodology for the Investigation of Occurrences",
-      "The Decline of Things",
-      "On the Unnatural Promotion of Natural Processes",
+      {
+       "title": "The Hermetic Zodiac",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "Methods for the Application of Magic Theory in Enchantment",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "The Examples of the Victors",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Penetration"
+      },
+      {
+       "title": "That Which Was Shared",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Parma Magica"
+      },
+      {
+       "title": "Tenebris caeli domino",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Incantatione fulmineus",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Domito hastam Ignis",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "The Incredible Journey",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "On the Dream of Scipio",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Artes Liberales"
+      },
+      {
+       "title": "Foundations",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Authority Granted to the Tribunal by its Members",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 12,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Forms and Uses of Natural Shape and Materials in Magic",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Philosophiae"
+      },
+      {
+       "title": "Ship's Log",
+       "type": "Summa",
+       "level": 2,
+       "quality": 6,
+       "topic": "Profession"
+      },
+      {
+       "title": "Carta Marina",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "Emanations Brought on by Hermetic Arts",
+       "type": "Summa",
+       "level": 9,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "A Hermetic Methodology for the Investigation of Occurrences",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "The Decline of Things",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Creo"
+      },
+      {
+       "title": "On the Unnatural Promotion of Natural Processes",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Rego"
+      },
       {
        "title": "Comparative Anatomies Volume 01,",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Animal"
       },
-      "Deluge",
+      {
+       "title": "Deluge",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Aquam"
+      },
       {
        "title": "Comparative Anatomies",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Corpus"
       },
       {
        "title": "Tumult",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Terram"
       },
-      "A Discussion on Auras and Their Effects on Our Spells and Rituals",
-      "De Salis et Fontibus",
+      {
+       "title": "A Discussion on Auras and Their Effects on Our Spells and Rituals",
+       "type": "Summa",
+       "level": 8,
+       "quality": 11,
+       "topic": "Vim"
+      },
+      {
+       "title": "De Salis et Fontibus",
+       "type": "Summa",
+       "level": 10,
+       "quality": 9,
+       "topic": "Aquam"
+      },
       {
        "title": "Radices Scientiae",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Herbam"
       },
       {
        "title": "Boek fan de Tinken",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "Speculum Veritatis",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 10,
+       "quality": 10,
+       "topic": "Intellego"
       },
       {
        "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "De Lapii",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": 17,
+       "quality": 14,
+       "topic": "Terram"
       },
       {
        "title": "Subtle Knives",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": null,
+       "quality": null,
+       "topic": "Penetration"
       },
       {
        "title": "The Babble Within Thought",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Mentem"
       },
       {
        "title": "The Compact Explained",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Tractatus",
+       "level": null,
+       "quality": null,
+       "topic": "Order of Hermes Lore"
       },
       {
        "title": "Insights from Twilight",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": 6,
+       "quality": null,
+       "topic": "Magic Theory"
       },
       {
        "title": "Legends of Brittany",
-       "location": "Veðrdreki"
+       "location": "Veðrdreki",
+       "type": "Summa",
+       "level": 3,
+       "quality": null,
+       "topic": "Faerie Lore"
       },
       {
        "title": "Research Notes on Aegis of the Hearth",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Tractatus",
+       "level": null,
+       "quality": null,
+       "topic": "Spell Mastery"
       }
      ],
      "labTexts": [
-      "Wreaths of Foul Smoke Charged Device",
-      "Bind Wound Charged Device",
-      "Pilum of Fire Charged Device",
-      "Circular Ward Against Demons Charged Device",
-      "Broach of Lungs of the Fish Device Effect",
-      "The Freshwater Barrel Device Effec",
-      "The Master’s Chart Device Effect",
-      "The Incantation Of Lightning",
-      "Clouds Of Thunderous Might",
-      "Bind Wound",
-      "The Inexorable Search",
-      "Cloak Of Black Feathers",
-      "In Christ’s Footsteps",
-      "Endurance of the Berserkers",
-      "The Leap Of Homecoming",
-      "Lamp without Flame",
-      "Pilum of Fire",
-      "Conjuration Of The Indubitable Cold",
-      "Haunt Of The Living Ghost",
-      "Piercing the Magical Veil",
-      "Circular Ward Against Demons",
-      "Aegis of the Hearth",
-      "Grain Preservation Ward Excellante",
-      "New LaboratoryText"
+      {
+       "title": "Wreaths of Foul Smoke Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Bind Wound Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "Pilum of Fire Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Circular Ward Against Demons Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Broach of Lungs of the Fish Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Aquam"
+      },
+      {
+       "title": "The Freshwater Barrel Device Effec",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Aquam"
+      },
+      {
+       "title": "The Master’s Chart Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Herbam"
+      },
+      {
+       "title": "The Incantation Of Lightning",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Clouds Of Thunderous Might",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Auram"
+      },
+      {
+       "title": "Bind Wound",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "The Inexorable Search",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Corpus"
+      },
+      {
+       "title": "Cloak Of Black Feathers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Corpus"
+      },
+      {
+       "title": "In Christ’s Footsteps",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Endurance of the Berserkers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "The Leap Of Homecoming",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Lamp without Flame",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Pilum of Fire",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Conjuration Of The Indubitable Cold",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Ignem"
+      },
+      {
+       "title": "Haunt Of The Living Ghost",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Imaginem"
+      },
+      {
+       "title": "Piercing the Magical Veil",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Vim"
+      },
+      {
+       "title": "Circular Ward Against Demons",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Aegis of the Hearth",
+       "type": "Lab Text",
+       "level": 30,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Grain Preservation Ward Excellante",
+       "type": "Lab Text",
+       "level": 5,
+       "quality": null,
+       "topic": "Creo Herbam"
+      },
+      {
+       "title": "New LaboratoryText",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Animal"
+      }
      ]
     },
     "vis": {
@@ -3782,117 +5440,471 @@
     ],
     "library": {
      "books": [
-      "Journal of Unusual Encounters volume 01",
-      "Journal of Unusual Encounters volume 02",
-      "Journal of Unusual Encounters volume 03",
-      "Journal of Unusual Encounters volume 04",
+      {
+       "title": "Journal of Unusual Encounters volume 01",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Dominion Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 02",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Faerie Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 03",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Infernal Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 04",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Magic Lore"
+      },
       {
        "title": "The Technique of Precision",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 14,
+       "topic": "Finesse"
       },
-      "The Hermetic Zodiac",
-      "Methods for the Application of Magic Theory in Enchantment",
-      "The Examples of the Victors",
-      "That Which Was Shared",
-      "Tenebris caeli domino",
-      "Incantatione fulmineus",
-      "Domito hastam Ignis",
-      "The Incredible Journey",
-      "On the Dream of Scipio",
-      "Foundations",
-      "The Authority Granted to the Tribunal by its Members",
-      "The Forms and Uses of Natural Shape and Materials in Magic",
-      "Ship's Log",
-      "Carta Marina",
-      "Emanations Brought on by Hermetic Arts",
-      "A Hermetic Methodology for the Investigation of Occurrences",
-      "The Decline of Things",
-      "On the Unnatural Promotion of Natural Processes",
+      {
+       "title": "The Hermetic Zodiac",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "Methods for the Application of Magic Theory in Enchantment",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "The Examples of the Victors",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Penetration"
+      },
+      {
+       "title": "That Which Was Shared",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Parma Magica"
+      },
+      {
+       "title": "Tenebris caeli domino",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Incantatione fulmineus",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Domito hastam Ignis",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "The Incredible Journey",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "On the Dream of Scipio",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Artes Liberales"
+      },
+      {
+       "title": "Foundations",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Authority Granted to the Tribunal by its Members",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 12,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Forms and Uses of Natural Shape and Materials in Magic",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Philosophiae"
+      },
+      {
+       "title": "Ship's Log",
+       "type": "Summa",
+       "level": 2,
+       "quality": 6,
+       "topic": "Profession"
+      },
+      {
+       "title": "Carta Marina",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "Emanations Brought on by Hermetic Arts",
+       "type": "Summa",
+       "level": 9,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "A Hermetic Methodology for the Investigation of Occurrences",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "The Decline of Things",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Creo"
+      },
+      {
+       "title": "On the Unnatural Promotion of Natural Processes",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Rego"
+      },
       {
        "title": "Comparative Anatomies Volume 01,",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Animal"
       },
-      "Deluge",
+      {
+       "title": "Deluge",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Aquam"
+      },
       {
        "title": "Comparative Anatomies",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Corpus"
       },
       {
        "title": "Tumult",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Terram"
       },
-      "A Discussion on Auras and Their Effects on Our Spells and Rituals",
-      "De Salis et Fontibus",
+      {
+       "title": "A Discussion on Auras and Their Effects on Our Spells and Rituals",
+       "type": "Summa",
+       "level": 8,
+       "quality": 11,
+       "topic": "Vim"
+      },
+      {
+       "title": "De Salis et Fontibus",
+       "type": "Summa",
+       "level": 10,
+       "quality": 9,
+       "topic": "Aquam"
+      },
       {
        "title": "Radices Scientiae",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Herbam"
       },
       {
        "title": "Boek fan de Tinken",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "Speculum Veritatis",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 10,
+       "quality": 10,
+       "topic": "Intellego"
       },
       {
        "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "De Lapii",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": 17,
+       "quality": 14,
+       "topic": "Terram"
       },
       {
        "title": "Subtle Knives",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": null,
+       "quality": null,
+       "topic": "Penetration"
       },
       {
        "title": "The Babble Within Thought",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Mentem"
       },
       {
        "title": "The Compact Explained",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Tractatus",
+       "level": null,
+       "quality": null,
+       "topic": "Order of Hermes Lore"
       },
       {
        "title": "Insights from Twilight",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": 6,
+       "quality": null,
+       "topic": "Magic Theory"
       },
       {
        "title": "Legends of Brittany",
-       "location": "Veðrdreki"
+       "location": "Veðrdreki",
+       "type": "Summa",
+       "level": 3,
+       "quality": null,
+       "topic": "Faerie Lore"
       },
       {
        "title": "Research Notes on Aegis of the Hearth",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Tractatus",
+       "level": null,
+       "quality": null,
+       "topic": "Spell Mastery"
       }
      ],
      "labTexts": [
-      "Wreaths of Foul Smoke Charged Device",
-      "Bind Wound Charged Device",
-      "Pilum of Fire Charged Device",
-      "Circular Ward Against Demons Charged Device",
-      "Broach of Lungs of the Fish Device Effect",
-      "The Freshwater Barrel Device Effec",
-      "The Master’s Chart Device Effect",
-      "The Incantation Of Lightning",
-      "Clouds Of Thunderous Might",
-      "Bind Wound",
-      "The Inexorable Search",
-      "Cloak Of Black Feathers",
-      "In Christ’s Footsteps",
-      "Endurance of the Berserkers",
-      "The Leap Of Homecoming",
-      "Lamp without Flame",
-      "Pilum of Fire",
-      "Conjuration Of The Indubitable Cold",
-      "Haunt Of The Living Ghost",
-      "Piercing the Magical Veil",
-      "Circular Ward Against Demons",
-      "Aegis of the Hearth",
-      "Grain Preservation Ward Excellante",
-      "New LaboratoryText"
+      {
+       "title": "Wreaths of Foul Smoke Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Bind Wound Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "Pilum of Fire Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Circular Ward Against Demons Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Broach of Lungs of the Fish Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Aquam"
+      },
+      {
+       "title": "The Freshwater Barrel Device Effec",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Aquam"
+      },
+      {
+       "title": "The Master’s Chart Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Herbam"
+      },
+      {
+       "title": "The Incantation Of Lightning",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Clouds Of Thunderous Might",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Auram"
+      },
+      {
+       "title": "Bind Wound",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "The Inexorable Search",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Corpus"
+      },
+      {
+       "title": "Cloak Of Black Feathers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Corpus"
+      },
+      {
+       "title": "In Christ’s Footsteps",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Endurance of the Berserkers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "The Leap Of Homecoming",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Lamp without Flame",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Pilum of Fire",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Conjuration Of The Indubitable Cold",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Ignem"
+      },
+      {
+       "title": "Haunt Of The Living Ghost",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Imaginem"
+      },
+      {
+       "title": "Piercing the Magical Veil",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Vim"
+      },
+      {
+       "title": "Circular Ward Against Demons",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Aegis of the Hearth",
+       "type": "Lab Text",
+       "level": 30,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Grain Preservation Ward Excellante",
+       "type": "Lab Text",
+       "level": 5,
+       "quality": null,
+       "topic": "Creo Herbam"
+      },
+      {
+       "title": "New LaboratoryText",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Animal"
+      }
      ]
     },
     "vis": {
@@ -4472,117 +6484,471 @@
     ],
     "library": {
      "books": [
-      "Journal of Unusual Encounters volume 01",
-      "Journal of Unusual Encounters volume 02",
-      "Journal of Unusual Encounters volume 03",
-      "Journal of Unusual Encounters volume 04",
+      {
+       "title": "Journal of Unusual Encounters volume 01",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Dominion Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 02",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Faerie Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 03",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Infernal Lore"
+      },
+      {
+       "title": "Journal of Unusual Encounters volume 04",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Magic Lore"
+      },
       {
        "title": "The Technique of Precision",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 14,
+       "topic": "Finesse"
       },
-      "The Hermetic Zodiac",
-      "Methods for the Application of Magic Theory in Enchantment",
-      "The Examples of the Victors",
-      "That Which Was Shared",
-      "Tenebris caeli domino",
-      "Incantatione fulmineus",
-      "Domito hastam Ignis",
-      "The Incredible Journey",
-      "On the Dream of Scipio",
-      "Foundations",
-      "The Authority Granted to the Tribunal by its Members",
-      "The Forms and Uses of Natural Shape and Materials in Magic",
-      "Ship's Log",
-      "Carta Marina",
-      "Emanations Brought on by Hermetic Arts",
-      "A Hermetic Methodology for the Investigation of Occurrences",
-      "The Decline of Things",
-      "On the Unnatural Promotion of Natural Processes",
+      {
+       "title": "The Hermetic Zodiac",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "Methods for the Application of Magic Theory in Enchantment",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Magic Theory"
+      },
+      {
+       "title": "The Examples of the Victors",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Penetration"
+      },
+      {
+       "title": "That Which Was Shared",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Parma Magica"
+      },
+      {
+       "title": "Tenebris caeli domino",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Incantatione fulmineus",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "Domito hastam Ignis",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 9,
+       "topic": "Spell Mastery"
+      },
+      {
+       "title": "The Incredible Journey",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "On the Dream of Scipio",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Artes Liberales"
+      },
+      {
+       "title": "Foundations",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 8,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Authority Granted to the Tribunal by its Members",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 12,
+       "topic": "Code of Hermes"
+      },
+      {
+       "title": "The Forms and Uses of Natural Shape and Materials in Magic",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 7,
+       "topic": "Philosophiae"
+      },
+      {
+       "title": "Ship's Log",
+       "type": "Summa",
+       "level": 2,
+       "quality": 6,
+       "topic": "Profession"
+      },
+      {
+       "title": "Carta Marina",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 6,
+       "topic": "Area Lore"
+      },
+      {
+       "title": "Emanations Brought on by Hermetic Arts",
+       "type": "Summa",
+       "level": 9,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "A Hermetic Methodology for the Investigation of Occurrences",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 10,
+       "topic": "Creo"
+      },
+      {
+       "title": "The Decline of Things",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Creo"
+      },
+      {
+       "title": "On the Unnatural Promotion of Natural Processes",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Rego"
+      },
       {
        "title": "Comparative Anatomies Volume 01,",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 11,
+       "quality": 11,
+       "topic": "Animal"
       },
-      "Deluge",
+      {
+       "title": "Deluge",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Aquam"
+      },
       {
        "title": "Comparative Anatomies",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Corpus"
       },
       {
        "title": "Tumult",
-       "location": "Tide of Memory"
+       "location": "Tide of Memory",
+       "type": "Tractatus",
+       "level": null,
+       "quality": 11,
+       "topic": "Terram"
       },
-      "A Discussion on Auras and Their Effects on Our Spells and Rituals",
-      "De Salis et Fontibus",
+      {
+       "title": "A Discussion on Auras and Their Effects on Our Spells and Rituals",
+       "type": "Summa",
+       "level": 8,
+       "quality": 11,
+       "topic": "Vim"
+      },
+      {
+       "title": "De Salis et Fontibus",
+       "type": "Summa",
+       "level": 10,
+       "quality": 9,
+       "topic": "Aquam"
+      },
       {
        "title": "Radices Scientiae",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 11,
+       "topic": "Herbam"
       },
       {
        "title": "Boek fan de Tinken",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "Speculum Veritatis",
-       "location": "The Brineborn"
+       "location": "The Brineborn",
+       "type": "Summa",
+       "level": 10,
+       "quality": 10,
+       "topic": "Intellego"
       },
       {
        "title": "Liber Cogitationum (translated from Boek fan de Tinken)",
-       "location": "The Scholar's Wake"
+       "location": "The Scholar's Wake",
+       "type": "Summa",
+       "level": 10,
+       "quality": 12,
+       "topic": "Mentem"
       },
       {
        "title": "De Lapii",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": 17,
+       "quality": 14,
+       "topic": "Terram"
       },
       {
        "title": "Subtle Knives",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": null,
+       "quality": null,
+       "topic": "Penetration"
       },
       {
        "title": "The Babble Within Thought",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": 12,
+       "quality": 11,
+       "topic": "Mentem"
       },
       {
        "title": "The Compact Explained",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Tractatus",
+       "level": null,
+       "quality": null,
+       "topic": "Order of Hermes Lore"
       },
       {
        "title": "Insights from Twilight",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Summa",
+       "level": 6,
+       "quality": null,
+       "topic": "Magic Theory"
       },
       {
        "title": "Legends of Brittany",
-       "location": "Veðrdreki"
+       "location": "Veðrdreki",
+       "type": "Summa",
+       "level": 3,
+       "quality": null,
+       "topic": "Faerie Lore"
       },
       {
        "title": "Research Notes on Aegis of the Hearth",
-       "location": "Oleron"
+       "location": "Oleron",
+       "type": "Tractatus",
+       "level": null,
+       "quality": null,
+       "topic": "Spell Mastery"
       }
      ],
      "labTexts": [
-      "Wreaths of Foul Smoke Charged Device",
-      "Bind Wound Charged Device",
-      "Pilum of Fire Charged Device",
-      "Circular Ward Against Demons Charged Device",
-      "Broach of Lungs of the Fish Device Effect",
-      "The Freshwater Barrel Device Effec",
-      "The Master’s Chart Device Effect",
-      "The Incantation Of Lightning",
-      "Clouds Of Thunderous Might",
-      "Bind Wound",
-      "The Inexorable Search",
-      "Cloak Of Black Feathers",
-      "In Christ’s Footsteps",
-      "Endurance of the Berserkers",
-      "The Leap Of Homecoming",
-      "Lamp without Flame",
-      "Pilum of Fire",
-      "Conjuration Of The Indubitable Cold",
-      "Haunt Of The Living Ghost",
-      "Piercing the Magical Veil",
-      "Circular Ward Against Demons",
-      "Aegis of the Hearth",
-      "Grain Preservation Ward Excellante",
-      "New LaboratoryText"
+      {
+       "title": "Wreaths of Foul Smoke Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Bind Wound Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "Pilum of Fire Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Circular Ward Against Demons Charged Device",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Broach of Lungs of the Fish Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Aquam"
+      },
+      {
+       "title": "The Freshwater Barrel Device Effec",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Aquam"
+      },
+      {
+       "title": "The Master’s Chart Device Effect",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Herbam"
+      },
+      {
+       "title": "The Incantation Of Lightning",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Auram"
+      },
+      {
+       "title": "Clouds Of Thunderous Might",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Auram"
+      },
+      {
+       "title": "Bind Wound",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Corpus"
+      },
+      {
+       "title": "The Inexorable Search",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Corpus"
+      },
+      {
+       "title": "Cloak Of Black Feathers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Muto Corpus"
+      },
+      {
+       "title": "In Christ’s Footsteps",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Endurance of the Berserkers",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "The Leap Of Homecoming",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Corpus"
+      },
+      {
+       "title": "Lamp without Flame",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Pilum of Fire",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Ignem"
+      },
+      {
+       "title": "Conjuration Of The Indubitable Cold",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Perdo Ignem"
+      },
+      {
+       "title": "Haunt Of The Living Ghost",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Imaginem"
+      },
+      {
+       "title": "Piercing the Magical Veil",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Intellego Vim"
+      },
+      {
+       "title": "Circular Ward Against Demons",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Aegis of the Hearth",
+       "type": "Lab Text",
+       "level": 30,
+       "quality": null,
+       "topic": "Rego Vim"
+      },
+      {
+       "title": "Grain Preservation Ward Excellante",
+       "type": "Lab Text",
+       "level": 5,
+       "quality": null,
+       "topic": "Creo Herbam"
+      },
+      {
+       "title": "New LaboratoryText",
+       "type": "Lab Text",
+       "level": 1,
+       "quality": null,
+       "topic": "Creo Animal"
+      }
      ]
     },
     "vis": {
