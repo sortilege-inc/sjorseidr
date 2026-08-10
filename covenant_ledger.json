@@ -24,7 +24,59 @@
     "aegis": null,
     "penetration": null,
     "regio": null,
-    "economics": {},
+    "economics": {
+     "inhabitantsPoints": 126,
+     "laboratoriesPoints": 325,
+     "weaponsPoints": 216,
+     "baseExpenditure": 189,
+     "costSavings": 0,
+     "totalExpenditure": 189,
+     "yearlyExpenses": {
+      "provisions": {
+       "amount": 63,
+       "notes": ""
+      },
+      "wages": {
+       "amount": 25,
+       "notes": ""
+      },
+      "consumables": {
+       "amount": 25,
+       "notes": ""
+      },
+      "buildings": {
+       "amount": 35,
+       "notes": "hull maintenance (5 active hulls)"
+      },
+      "laboratories": {
+       "amount": 32,
+       "notes": ""
+      },
+      "weapons": {
+       "amount": 1,
+       "notes": ""
+      },
+      "writingMaterials": {
+       "amount": 8,
+       "notes": "6 magi + 2 scribes"
+      },
+      "tithes": {
+       "amount": 0,
+       "notes": "independent — no liege"
+      },
+      "inflation": {
+       "amount": 0,
+       "notes": ""
+      },
+      "sundry": {
+       "amount": 0,
+       "notes": ""
+      }
+     },
+     "totalIncome": null,
+     "wealth": null,
+     "incomeSources": []
+    },
     "ships": [
      {
       "id": "tide-of-memory",
@@ -808,7 +860,59 @@
     "aegis": null,
     "penetration": null,
     "regio": null,
-    "economics": {},
+    "economics": {
+     "inhabitantsPoints": 119,
+     "laboratoriesPoints": 260,
+     "weaponsPoints": 216,
+     "baseExpenditure": 173,
+     "costSavings": 0,
+     "totalExpenditure": 173,
+     "yearlyExpenses": {
+      "provisions": {
+       "amount": 60,
+       "notes": ""
+      },
+      "wages": {
+       "amount": 24,
+       "notes": ""
+      },
+      "consumables": {
+       "amount": 24,
+       "notes": ""
+      },
+      "buildings": {
+       "amount": 28,
+       "notes": "hull maintenance (4 active hulls)"
+      },
+      "laboratories": {
+       "amount": 26,
+       "notes": ""
+      },
+      "weapons": {
+       "amount": 1,
+       "notes": ""
+      },
+      "writingMaterials": {
+       "amount": 9,
+       "notes": "7 magi + 2 scribes"
+      },
+      "tithes": {
+       "amount": 0,
+       "notes": "independent — no liege"
+      },
+      "inflation": {
+       "amount": 1,
+       "notes": ""
+      },
+      "sundry": {
+       "amount": 0,
+       "notes": ""
+      }
+     },
+     "totalIncome": null,
+     "wealth": null,
+     "incomeSources": []
+    },
     "ships": [
      {
       "id": "tide-of-memory",
@@ -3116,7 +3220,59 @@
     "aegis": null,
     "penetration": null,
     "regio": null,
-    "economics": {},
+    "economics": {
+     "inhabitantsPoints": 158,
+     "laboratoriesPoints": 325,
+     "weaponsPoints": 240,
+     "baseExpenditure": 230,
+     "costSavings": 0,
+     "totalExpenditure": 230,
+     "yearlyExpenses": {
+      "provisions": {
+       "amount": 79,
+       "notes": ""
+      },
+      "wages": {
+       "amount": 32,
+       "notes": ""
+      },
+      "consumables": {
+       "amount": 32,
+       "notes": ""
+      },
+      "buildings": {
+       "amount": 42,
+       "notes": "hull maintenance (6 active hulls)"
+      },
+      "laboratories": {
+       "amount": 32,
+       "notes": ""
+      },
+      "weapons": {
+       "amount": 1,
+       "notes": ""
+      },
+      "writingMaterials": {
+       "amount": 10,
+       "notes": "8 magi + 2 scribes"
+      },
+      "tithes": {
+       "amount": 0,
+       "notes": "independent — no liege"
+      },
+      "inflation": {
+       "amount": 2,
+       "notes": ""
+      },
+      "sundry": {
+       "amount": 0,
+       "notes": ""
+      }
+     },
+     "totalIncome": null,
+     "wealth": null,
+     "incomeSources": []
+    },
     "ships": [
      {
       "id": "tide-of-memory",
@@ -4087,7 +4243,59 @@
     "aegis": null,
     "penetration": null,
     "regio": null,
-    "economics": {},
+    "economics": {
+     "inhabitantsPoints": 165,
+     "laboratoriesPoints": 325,
+     "weaponsPoints": 240,
+     "baseExpenditure": 236,
+     "costSavings": 0,
+     "totalExpenditure": 236,
+     "yearlyExpenses": {
+      "provisions": {
+       "amount": 82,
+       "notes": ""
+      },
+      "wages": {
+       "amount": 33,
+       "notes": ""
+      },
+      "consumables": {
+       "amount": 33,
+       "notes": ""
+      },
+      "buildings": {
+       "amount": 42,
+       "notes": "hull maintenance (6 active hulls)"
+      },
+      "laboratories": {
+       "amount": 32,
+       "notes": ""
+      },
+      "weapons": {
+       "amount": 1,
+       "notes": ""
+      },
+      "writingMaterials": {
+       "amount": 11,
+       "notes": "9 magi + 2 scribes"
+      },
+      "tithes": {
+       "amount": 0,
+       "notes": "independent — no liege"
+      },
+      "inflation": {
+       "amount": 2,
+       "notes": ""
+      },
+      "sundry": {
+       "amount": 0,
+       "notes": ""
+      }
+     },
+     "totalIncome": null,
+     "wealth": null,
+     "incomeSources": []
+    },
     "ships": [
      {
       "id": "tide-of-memory",
@@ -5184,7 +5392,59 @@
     "aegis": null,
     "penetration": null,
     "regio": null,
-    "economics": {},
+    "economics": {
+     "inhabitantsPoints": 167,
+     "laboratoriesPoints": 325,
+     "weaponsPoints": 240,
+     "baseExpenditure": 238,
+     "costSavings": 0,
+     "totalExpenditure": 238,
+     "yearlyExpenses": {
+      "provisions": {
+       "amount": 84,
+       "notes": ""
+      },
+      "wages": {
+       "amount": 33,
+       "notes": ""
+      },
+      "consumables": {
+       "amount": 33,
+       "notes": ""
+      },
+      "buildings": {
+       "amount": 42,
+       "notes": "hull maintenance (6 active hulls)"
+      },
+      "laboratories": {
+       "amount": 32,
+       "notes": ""
+      },
+      "weapons": {
+       "amount": 1,
+       "notes": ""
+      },
+      "writingMaterials": {
+       "amount": 11,
+       "notes": "9 magi + 2 scribes"
+      },
+      "tithes": {
+       "amount": 0,
+       "notes": "independent — no liege"
+      },
+      "inflation": {
+       "amount": 2,
+       "notes": ""
+      },
+      "sundry": {
+       "amount": 0,
+       "notes": ""
+      }
+     },
+     "totalIncome": null,
+     "wealth": null,
+     "incomeSources": []
+    },
     "ships": [
      {
       "id": "tide-of-memory",
@@ -6309,7 +6569,59 @@
     "aegis": null,
     "penetration": null,
     "regio": null,
-    "economics": {},
+    "economics": {
+     "inhabitantsPoints": 167,
+     "laboratoriesPoints": 325,
+     "weaponsPoints": 240,
+     "baseExpenditure": 238,
+     "costSavings": 0,
+     "totalExpenditure": 238,
+     "yearlyExpenses": {
+      "provisions": {
+       "amount": 84,
+       "notes": ""
+      },
+      "wages": {
+       "amount": 33,
+       "notes": ""
+      },
+      "consumables": {
+       "amount": 33,
+       "notes": ""
+      },
+      "buildings": {
+       "amount": 42,
+       "notes": "hull maintenance (6 active hulls)"
+      },
+      "laboratories": {
+       "amount": 32,
+       "notes": ""
+      },
+      "weapons": {
+       "amount": 1,
+       "notes": ""
+      },
+      "writingMaterials": {
+       "amount": 11,
+       "notes": "9 magi + 2 scribes"
+      },
+      "tithes": {
+       "amount": 0,
+       "notes": "independent — no liege"
+      },
+      "inflation": {
+       "amount": 2,
+       "notes": ""
+      },
+      "sundry": {
+       "amount": 0,
+       "notes": ""
+      }
+     },
+     "totalIncome": null,
+     "wealth": null,
+     "incomeSources": []
+    },
     "ships": [
      {
       "id": "tide-of-memory",

@@ -399,18 +399,22 @@ const PANELS={
     const e=s().economics;
     const exp=e.yearlyExpenses||{};
     const expRows=Object.entries(exp).map(([k,v])=>`<div class="econ-row"><span style="text-transform:capitalize">${esc(k)}</span><b>${v&&v.amount!=null?v.amount:(typeof v==='object'?'':v)} £</b></div>`).join('');
+    const na='<span style="color:var(--ink-soft);font-style:italic">not yet reconstructed</span>';
+    const incReady=e.totalIncome!=null;
     return `<div class="grid">
       <div class="card"><h2 class="sh" style="margin-top:0">Balance</h2>
-        <div class="econ-row"><span>Total income</span><b class="pos">${e.totalIncome} £</b></div>
         <div class="econ-row"><span>Total expenditure</span><b class="neg">${e.totalExpenditure} £</b></div>
-        <div class="econ-row"><span>Wealth</span><b class="econ-big">${e.wealth} £</b></div>
+        <div class="econ-row"><span>Total income</span><b class="pos">${incReady?e.totalIncome+' £':na}</b></div>
+        <div class="econ-row"><span>Wealth</span><b class="econ-big">${e.wealth!=null?e.wealth+' £':na}</b></div>
         <div style="margin-top:6px;font-size:12px;color:var(--ink-soft)">Points — inhabitants ${e.inhabitantsPoints}, laboratories ${e.laboratoriesPoints}, weapons ${e.weaponsPoints}</div>
       </div>
       <div class="card"><h2 class="sh" style="margin-top:0">Income sources</h2>
-        ${(e.incomeSources||[]).map(x=>`<div class="econ-row"><span>${esc(x.name)} <small>(${esc(x.type||'')})</small></span><b class="pos">${x.incoming} £</b></div>`).join('')}</div>
+        ${incReady?(e.incomeSources||[]).map(x=>`<div class="econ-row"><span>${esc(x.name)} <small>(${esc(x.type||'')})</small></span><b class="pos">${x.incoming} £</b></div>`).join('')||na:na}</div>
       <div class="card"><h2 class="sh" style="margin-top:0">Yearly expenses</h2>${expRows||'—'}</div>
      </div>
-     <p class="section-sub" style="margin-top:12px">Note: these are the actor's baseline figures; the Bruges credit line (275 £) inflates income, and Foxglove's unsanctioned dragon-gold is <em>not</em> covenant wealth (see Ledger).</p>`;
+     <p class="section-sub" style="margin-top:12px">${incReady
+        ? 'Note: these are the actor’s baseline figures; the Bruges credit line (275 £) inflates income, and Foxglove’s unsanctioned dragon-gold is <em>not</em> covenant wealth (see Ledger).'
+        : 'Expenditure reconstructed from the <em>Covenants</em> RAW (inhabitant/laboratory/weapon points → category costs), with fleet hull-maintenance in place of the landed “Buildings” line. 1221 keeps the Foundry actor’s figures. Income is pending.'}</p>`;
   },
   ledger(){
     const upto=ledgerUpTo();
