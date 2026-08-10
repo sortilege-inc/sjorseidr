@@ -318,7 +318,9 @@ const PANELS={
       const items=[...L.books.map(b=>['📖',b]),...L.labTexts.map(b=>['📜',b])];
       const grp={}; items.forEach(it=>{const k=bl(it[1])||'__un';(grp[k]=grp[k]||[]).push(it);});
       const keys=Object.keys(grp).sort((a,b)=>a==='__un'?1:b==='__un'?-1:a.localeCompare(b));
-      let body=keys.map(k=>`<div class="catblock"><h3 style="text-transform:none">${k==='__un'?'⚑ Covenant library (unassigned)':'⛵ '+esc(k)} <span class="n">(${grp[k].length})</span></h3><div class="cols">${grp[k].map(it=>`<div class="row">${it[0]} ${esc(bt(it[1]))}</div>`).join('')}</div></div>`).join('');
+      const shipNames=new Set([...Object.values(SHIP_NAMES),...(s().ships||[]).map(x=>x.name)]);
+      const locIcon=k=>shipNames.has(k)?'⛵':'🏰';   // ships sail; fixed places (e.g. Oleron) get a castle
+      let body=keys.map(k=>`<div class="catblock"><h3 style="text-transform:none">${k==='__un'?'⚑ Covenant library (unassigned)':locIcon(k)+' '+esc(k)} <span class="n">(${grp[k].length})</span></h3><div class="cols">${grp[k].map(it=>`<div class="row">${it[0]} ${esc(bt(it[1]))}</div>`).join('')}</div></div>`).join('');
       if(items.every(it=>!bl(it[1]))) body+=`<p class="vis-none">No per-item location recorded yet — tag books with a <code>location</code> (usually a ship) to split this view.</p>`;
       return hdr+toggle+body;
     }
