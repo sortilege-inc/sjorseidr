@@ -3273,10 +3273,14 @@
      "wealth": null,
      "incomeSources": [
       {
-       "name": "Seasonal trade & ventures",
+       "name": "Seasonal trade",
        "type": "Trade",
-       "incoming": 13,
-       "notes": "net of 6 rolls (see Trade tab)"
+       "incoming": 29
+      },
+      {
+       "name": "Raiding — attempted theft",
+       "type": "Raiding",
+       "incoming": -16
       }
      ],
      "debts": [
@@ -4306,13 +4310,18 @@
        "notes": ""
       }
      },
-     "totalIncome": 35,
+     "totalIncome": 173,
      "wealth": null,
      "incomeSources": [
       {
-       "name": "Fleet trade (reduced — covenant at Tribunal)",
+       "name": "Seasonal trade",
        "type": "Trade",
-       "incoming": 35
+       "incoming": 151
+      },
+      {
+       "name": "Piracy — Veðrdreki",
+       "type": "Raiding",
+       "incoming": 22
       }
      ],
      "debts": [
@@ -8072,9 +8081,82 @@
   },
   {
    "year": 1223,
+   "season": "Spring",
+   "ship": "tide-of-memory",
+   "by": "Captain Absalom",
+   "risk": "high",
+   "target": 15,
+   "result": 30,
+   "detail": "High-risk venture, hit Ease Factor 15"
+  },
+  {
+   "year": 1223,
+   "season": "Spring",
+   "ship": "storm-dragon",
+   "by": "Valdemar Bjornsson",
+   "kind": "piracy",
+   "result": 22,
+   "detail": "Raiding"
+  },
+  {
+   "year": 1223,
+   "season": "Spring",
+   "ship": "brineborn",
+   "by": "Father Lachlan",
+   "risk": "low",
+   "target": 12,
+   "result": 14,
+   "detail": "Low-risk venture, Ease Factor 12"
+  },
+  {
+   "year": 1223,
+   "season": "Spring",
+   "ship": "scholars-wake",
+   "by": "Heynric the Merchant",
+   "risk": "high",
+   "target": 12,
+   "result": 20,
+   "detail": "High-risk venture, Ease Factor 12"
+  },
+  {
+   "year": 1223,
    "season": "Summer",
    "result": 35,
    "detail": "Fleet trade while the covenant was away at the Tribunal — 35 collectively (Scholar's Wake netted 11, best haul 15, low risk / low reward)"
+  },
+  {
+   "year": 1223,
+   "season": "Fall",
+   "ship": "storm-dragon",
+   "by": "Valdemar Bjornsson",
+   "kind": "piracy",
+   "result": 0,
+   "detail": "Raiding — missed by 1 (no gain, no loss)"
+  },
+  {
+   "year": 1223,
+   "season": "Fall",
+   "ship": "adamant",
+   "by": "Valerian de Castellane",
+   "risk": "low",
+   "target": 24,
+   "result": 30,
+   "detail": "Low-risk venture, Ease Factor 24"
+  },
+  {
+   "year": 1223,
+   "season": "Winter",
+   "ship": "brineborn",
+   "risk": "low",
+   "result": 11,
+   "detail": "Low-risk trade from winter quarters at Carrick"
+  },
+  {
+   "year": 1223,
+   "season": "Winter",
+   "ship": "scholars-wake",
+   "result": 11,
+   "detail": "Trade from winter quarters at Carrick"
   }
  ]
 }
