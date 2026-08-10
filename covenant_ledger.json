@@ -4665,8 +4665,8 @@
        "title": "Subtle Knives",
        "location": "Oleron",
        "type": "Summa",
-       "level": null,
-       "quality": null,
+       "level": 5,
+       "quality": 8,
        "topic": "Penetration"
       },
       {
@@ -4682,7 +4682,7 @@
        "location": "Oleron",
        "type": "Tractatus",
        "level": null,
-       "quality": null,
+       "quality": 8,
        "topic": "Order of Hermes Lore"
       },
       {
@@ -4690,7 +4690,7 @@
        "location": "Oleron",
        "type": "Summa",
        "level": 6,
-       "quality": null,
+       "quality": 11,
        "topic": "Magic Theory"
       },
       {
@@ -4698,7 +4698,7 @@
        "location": "Veðrdreki",
        "type": "Summa",
        "level": 3,
-       "quality": null,
+       "quality": 5,
        "topic": "Faerie Lore"
       },
       {
@@ -4706,7 +4706,7 @@
        "location": "Oleron",
        "type": "Tractatus",
        "level": null,
-       "quality": null,
+       "quality": 11,
        "topic": "Spell Mastery"
       }
      ],
@@ -5691,8 +5691,8 @@
        "title": "Subtle Knives",
        "location": "Oleron",
        "type": "Summa",
-       "level": null,
-       "quality": null,
+       "level": 5,
+       "quality": 8,
        "topic": "Penetration"
       },
       {
@@ -5708,7 +5708,7 @@
        "location": "Oleron",
        "type": "Tractatus",
        "level": null,
-       "quality": null,
+       "quality": 8,
        "topic": "Order of Hermes Lore"
       },
       {
@@ -5716,7 +5716,7 @@
        "location": "Oleron",
        "type": "Summa",
        "level": 6,
-       "quality": null,
+       "quality": 11,
        "topic": "Magic Theory"
       },
       {
@@ -5724,7 +5724,7 @@
        "location": "Veðrdreki",
        "type": "Summa",
        "level": 3,
-       "quality": null,
+       "quality": 5,
        "topic": "Faerie Lore"
       },
       {
@@ -5732,7 +5732,7 @@
        "location": "Oleron",
        "type": "Tractatus",
        "level": null,
-       "quality": null,
+       "quality": 11,
        "topic": "Spell Mastery"
       }
      ],
@@ -6735,8 +6735,8 @@
        "title": "Subtle Knives",
        "location": "Oleron",
        "type": "Summa",
-       "level": null,
-       "quality": null,
+       "level": 5,
+       "quality": 8,
        "topic": "Penetration"
       },
       {
@@ -6752,7 +6752,7 @@
        "location": "Oleron",
        "type": "Tractatus",
        "level": null,
-       "quality": null,
+       "quality": 8,
        "topic": "Order of Hermes Lore"
       },
       {
@@ -6760,7 +6760,7 @@
        "location": "Oleron",
        "type": "Summa",
        "level": 6,
-       "quality": null,
+       "quality": 11,
        "topic": "Magic Theory"
       },
       {
@@ -6768,7 +6768,7 @@
        "location": "Veðrdreki",
        "type": "Summa",
        "level": 3,
-       "quality": null,
+       "quality": 5,
        "topic": "Faerie Lore"
       },
       {
@@ -6776,7 +6776,7 @@
        "location": "Oleron",
        "type": "Tractatus",
        "level": null,
-       "quality": null,
+       "quality": 11,
        "topic": "Spell Mastery"
       }
      ],
