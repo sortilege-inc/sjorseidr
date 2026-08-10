@@ -234,10 +234,9 @@ function render(){
   $('#nodehint').textContent = n.populated ? `Showing ${n.label} — ${n.sub}` : `${n.label} — not yet reconstructed`;
   $('#tabs').innerHTML=TABS.map(([k,l])=>{
     let cnt='';
-    if(k==='ledger') cnt=ledgerUpTo().length;
-    else if(n.populated && facetReady(k)) cnt = k==='ships'?st.ships.length : k==='inhabitants'?inhabCount()
+    if(n.populated && facetReady(k)) cnt = k==='ships'?st.ships.length : k==='inhabitants'?inhabCount()
       : k==='library'?(st.library.books.length+st.library.labTexts.length)
-      : k==='vis'?st.vis.stock.length : '';
+      : k==='vis'?st.vis.stock.reduce((a,x)=>a+(x.q||0),0) : '';
     return `<div class="tab ${tab===k?'on':''}" data-tab="${k}">${l}${cnt!==''?` <span class="n">${cnt}</span>`:''}</div>`;}).join('');
   document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;render();});
   let html;
