@@ -74,7 +74,7 @@
       }
      },
      "totalIncome": 57,
-     "wealth": 62,
+     "wealth": 112,
      "incomeSources": []
     },
     "ships": [
@@ -910,7 +910,7 @@
       }
      },
      "totalIncome": 111,
-     "wealth": 0,
+     "wealth": 50,
      "incomeSources": []
     },
     "ships": [
@@ -1803,7 +1803,7 @@
     "penetration": 0,
     "regio": 0,
     "economics": {
-     "wealth": 152,
+     "wealth": 202,
      "totalIncome": 71,
      "baseExpenditure": 194,
      "costSavings": 0,
@@ -3272,7 +3272,7 @@
       }
      },
      "totalIncome": 58,
-     "wealth": -32,
+     "wealth": 18,
      "incomeSources": [
       {
        "name": "Seasonal trade",
@@ -4313,7 +4313,7 @@
       }
      },
      "totalIncome": 254,
-     "wealth": -26,
+     "wealth": 24,
      "incomeSources": [
       {
        "name": "Seasonal trade",
