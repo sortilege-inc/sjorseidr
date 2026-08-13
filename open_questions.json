@@ -805,6 +805,28 @@
    "raised_event": "",
    "status": "Open",
    "resolution": ""
+  },
+  {
+   "id": "t079",
+   "type": "Thread",
+   "category": "Covenant Business",
+   "title": "Valdemar's laboratory on the Isle of Man — funded by piracy.",
+   "context": "GM note 2026-08-10. Valdemar means to build his own laboratory at the covenant's Isle of Man base, and to fund the outfitting through PIRACY rather than the covenant purse. The lab's specifications are coming from the player (Size, Refinement/Virtues/Flaws, specialization — TBD); hold the build until those land. Costing baseline (Covenants, per the lab-cost rules note): a standard Size 0 / Refinement 0 lab is ~5£ to outfit from scratch plus two seasons of work by a magus with Magic Theory 3+, then ~1£/yr upkeep; larger or Virtue-laden labs cost more silver and more seasons (Refinement, gated by Magic Theory). Funding: piracy proceeds run through the covenant's income tracking under the homebrew trade/piracy rule — piracy earns NO £9 net-neutral base, and only documented ventures are booked (never invent the take). Fits the established Isle-of-Man buildup where Valdemar 'raids lightly, trades mostly' (proposed_events). Cross-ref t065 (Isle of Man vis source, Wilhelm's), t076 (Valdemar), and the covenant_ledger economics / Trade log.",
+   "raised_in": "GM note 2026-08-10",
+   "raised_event": "",
+   "status": "Open",
+   "resolution": ""
+  },
+  {
+   "id": "t080",
+   "type": "Thread",
+   "category": "Character",
+   "title": "Valdemar seeks fellow viktir magi — now looking to Hibernia.",
+   "context": "GM note 2026-08-10. Valdemar (viktir tradition — Norse rune-song magic; see magi.json) wants to widen his search for other viktir magi into HIBERNIA. This continues the quest begun in the north, where he asked around for another viktir magus and was pointed to Þóra Ketilsdóttir the Bone-Keeper, a maga hermit in a northern fjord, from whom he learned three rune-songs (mechanically summa for study; see the Chronicle). What viktir practitioners exist in Ireland — and whether they read as teachers, rivals, or recruits — is open. Leans on the party's existing Hibernian footprint (the Cruachan magi Gráinne & Tadhg, the Uisneach / Connacht Gifted-child delivery custom).",
+   "raised_in": "GM note 2026-08-10",
+   "raised_event": "",
+   "status": "Open",
+   "resolution": ""
   }
  ],
  "gmReference": {
