@@ -2,7 +2,7 @@
   "meta": {
     "title": "Crew & Companion Sheets",
     "source": "Foundry VTT REST API (arm5e system), pulled 2026-07-13",
-    "note": "Covers grogs, companions, and NPC magi with real Foundry actor sheets. Hilda (companion) and Solving Epicurusson (the vanished founder) are hand-authored non-Foundry cards added 2026-08-12; Karl still has no sheet and keeps the lightweight note card from ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets."
+    "note": "Covers grogs, companions, and NPC magi with real Foundry actor sheets. Hilda (companion) and Solving Epicurusson (the vanished founder) are hand-authored non-Foundry cards added 2026-08-12; Karl still has no sheet and keeps the lightweight note card from ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets. Brussel (a púca Willhelm taught, 2026-07-25) is a hand-authored non-Foundry card without a statblock."
   },
   "npcs": {
     "Adam Smith": {
@@ -1230,7 +1230,7 @@
       "house": "",
       "parens": "",
       "sigil": "A flash of blue light.",
-      "biography": "Dietrich is Willhelm Stienauer's older brother — a mundane (un-Gifted) scholar, a professor of medicine and philosophy at a Cologne cathedral school, and a master there who must teach at least two seasons a year to keep his standing.\n\nHe is the polished public face of Willhelm's folk-magic thesis: at the 1223 Normandy Tribunal he worked the crowd of mundane scholars and Redcaps with formal scholastic rhetoric — pitching that the system lets the un-Gifted mine vis, find arcane connections, and do basic lab work, and that it is syncretic enough to function in Divine auras — while Willhelm himself kept a low profile. The whole project traces to the book Willhelm wrote so his mundane brother could learn magic; the technique survived Willhelm's own Gift-opening, which is why he can research it.\n\nReturned to Cologne to teach after the Tribunal (Spring 1224) — his plan to self-initiate via Magic Lore so he could formally teach the folk system alongside Magic Theory there went ahead as intended.",
+      "biography": "Dietrich is Willhelm Stienauer's older brother — a mundane (un-Gifted) scholar, a professor of medicine and philosophy at a Cologne cathedral school, and a master there who must teach at least two seasons a year to keep his standing.\n\nHe is the polished public face of Willhelm's folk-magic thesis: at the 1223 Normandy Tribunal he worked the crowd of mundane scholars and Redcaps with formal scholastic rhetoric — pitching that the system lets the un-Gifted mine vis, find arcane connections, and do basic lab work, and that it is syncretic enough to function in Divine auras — while Willhelm himself kept a low profile. The whole project traces to the book Willhelm wrote so his mundane brother could learn magic; the technique survived Willhelm's own Gift-opening, which is why he can research it.\n\nReturned to Cologne to teach after the Tribunal (Spring 1224) — his plan to self-initiate via Magic Lore so he could formally teach the folk system alongside Magic Theory there went ahead as intended. Cologne is his home base, but he travels to give guest lectures — including a stint in Prague — so he may turn up teaching elsewhere for a season.",
       "born": 1198,
       "age": 25,
       "apparentAge": 25,
@@ -9510,6 +9510,137 @@
       "source": "Canon per resolved_questions.json (t034; GM 2026-07-25: in Wizard’s Twilight, return possible but UNLIKELY — treat as effectively gone) and covenant.json’s founding note. Hand-authored non-Foundry card.",
       "shortDescription": "The covenant’s founder and Dagmar’s parens — vanished into Wizard’s Twilight from Bruges in 1220; a member in good standing, “on sabbatical.”",
       "biography": "Solving Epicurusson founded Sjórseiðr in 1209 alongside several other magi, and is Dagmar’s parens — a Criamon diviner in pursuit of the Enigma who built the covenant as “a covenant in motion, unanchored and burdened less by the weight of Tribunal demands.”\n\nIn 1220, in Bruges, he vanished into Wizard’s Twilight — witnessed by his grogs — while going to meet “V.” (Valerian de Castellane) near Saint Jacob’s bell tower. His ship, the Tide of Memory (which still carries his summoning bell and astrolabe), passed to Dagmar. He remains a covenant member in good standing, flagged “on sabbatical,” and holds the charter’s elder-magus tie-breaking vote in absentia. Canon: his return is possible but unlikely — treat him as effectively gone.\n\nCross-refs: t034 (where he went — resolved), t035 (the covenant’s other, unnamed founders), q024 (the elder-magus vote), t061 (his standing protection of Marina, the Southampton merchant)."
+    },
+    "Brussel": {
+      "name": "Brussel",
+      "foundryName": null,
+      "charType": "entity",
+      "portrait": null,
+      "house": "gen",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "qik": 0,
+        "pre": 0,
+        "com": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [],
+      "flaws": [],
+      "abilities": [],
+      "spells": [],
+      "personalityTraits": [
+        "Trickster",
+        "Curious",
+        "Playful"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": null,
+      "mightRealm": "Faerie",
+      "form": "",
+      "soak": 0,
+      "combat": [],
+      "powers": [],
+      "vis": "",
+      "appearance": "A black horse that speaks — in rudimentary Latin — and trots a circle to mimic a warding ritual. To Owen’s fairy-lore eye, unmistakably a púca.",
+      "shortDescription": "A púca (a black-horse faerie) that Willhelm taught the basics of folk magic to in Connacht; it gave him a rowan-wood horseshoe in thanks.",
+      "source": "First appears in play at session 2026-07-25 (the Connacht leg of the 1224 Ireland trip; the folk-magic teaching test, t019 / p050). Hand-authored non-Foundry card; no statblock was established at the table.",
+      "biography": "Brussel is a púca — a shape-shifting Faerie trickster in the form of a black horse — that Willhelm Stienauer met in the wilds of Connacht on the 1224 Ireland trip (see t019, p050). Overhearing that Willhelm was “teaching magic to all,” it asked to be taught, and Willhelm walked it through the fundamentals of his folk-magic system (drawing the warding circle by dragging a hoof). Owen, reading it by fairy-lore, judged it a trickster that inconveniences rather than truly harms.\n\nWhen they parted, Brussel gave Willhelm a horseshoe of ROWAN WOOD as a gift — which Willhelm keeps in his treasury, prizing it as the first “person” outside his own research staff to take a genuine interest in his work. “Brussel” is a wizard-name (at best a weak Arcane Connection), not its true name."
     }
   }
 }
