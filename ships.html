@@ -200,6 +200,9 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .rollable:hover{background:rgba(198,155,63,.16)}
 .ability-row.rollable{border-radius:4px;padding-left:4px;padding-right:4px;margin:0 -4px}
 .ability-row.rollable:hover .ab-name::before{content:'🎲 ';font-size:11px}
+.ability-cat{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);margin:9px 0 2px;padding-bottom:2px;border-bottom:1px solid rgba(120,90,40,.35)}
+.ability-cat:first-child{margin-top:0}
 
 .spell-item{margin-bottom:9px;padding:7px 9px;background:rgba(244,235,213,.5);border-radius:6px;
   border:1px solid rgba(120,90,40,.25)}
@@ -607,14 +610,49 @@ function vfListHtml(list, cls){
   `;}).join('')}</div>`;
 }
 
+// ArM5 ability categories, in display order (General first).
+const ABILITY_CATEGORIES = ['General','Academic','Arcane','Martial','Supernatural'];
+// Valdemar's viktir runes (Elder Futhark) render as Supernatural abilities.
+const RUNE_ABILITIES = new Set(['fehu','uruz','thurisaz','ansuz','raido','kenaz','kaunan','gebo','wunjo',
+  'hagalaz','naudiz','isa','jera','eihwaz','iwaz','perthro','perth','algiz','sowilo','tiwaz','berkanan',
+  'ehwaz','mannaz','laguz','ingwaz','othila','othala','dagaz']);
+const ACADEMIC_ABILITIES = new Set(['artes liberales','civil & canon law','civil and canon law','common law',
+  'medicine','philosophiae','theology','theology - christian','latin']);
+const ARCANE_ABILITIES = new Set(['code of hermes','enigmatic wisdom','finesse','magic theory','folk magic theory',
+  'parma magica','penetration','order of hermes lore','dominion lore','faerie lore','magic lore','infernal lore',
+  'divine lore']);
+const MARTIAL_ABILITIES = new Set(['bows','great weapon','single weapon','thrown weapon']);
+const SUPERNATURAL_ABILITIES = new Set(['premonitions','second sight','dowsing','enchanting music','animal ken',
+  'magic sensitivity','sense holiness and unholiness','wilderness sense','entrancement','shapeshifter']);
+
+// Best-guess ArM5 ability category from the ability name (records carry no category).
+function abilityCategory(rawName){
+  const n = String(rawName||'').replace(/\*+\s*$/,'').trim().toLowerCase(); // drop trailing * marker
+  const base = n.replace(/\s*\([^)]*\)\s*$/,'').trim();                     // drop a trailing (spec)
+  if(RUNE_ABILITIES.has(base) || SUPERNATURAL_ABILITIES.has(base)) return 'Supernatural';
+  if(MARTIAL_ABILITIES.has(base)) return 'Martial';
+  if(ARCANE_ABILITIES.has(base)) return 'Arcane';         // incl. the four Realm Lores + Order of Hermes Lore
+  if(/^dead language\b/.test(n) || ACADEMIC_ABILITIES.has(base)) return 'Academic';
+  return 'General';                                       // Area/Org Lores, Craft, Profession, living languages, etc.
+}
+
 function abilitiesHtml(list){
   if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
-  return list.map((a,i)=>`
-    <div class="ability-row rollable" data-roll="ability" data-idx="${i}" title="Click to roll">
+  const rank = c => { const i = ABILITY_CATEGORIES.indexOf(c); return i < 0 ? 99 : i; };
+  // Keep each ability's ORIGINAL index (data-idx feeds the roll handler), then sort
+  // by category (General first) and alphabetically within each category.
+  const rows = list.map((a,i)=>({a, i, cat: abilityCategory(a.name)}))
+    .sort((x,y)=> rank(x.cat) - rank(y.cat)
+                || x.a.name.toLowerCase().localeCompare(y.a.name.toLowerCase()));
+  let out = '', lastCat = null;
+  for(const {a,i,cat} of rows){
+    if(cat !== lastCat){ out += `<div class="ability-cat">${esc(cat)}</div>`; lastCat = cat; }
+    out += `<div class="ability-row rollable" data-roll="ability" data-idx="${i}" title="Click to roll">
       <span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span>
       <span class="ab-score">${a.score}</span>
-    </div>
-  `).join('');
+    </div>`;
+  }
+  return out;
 }
 
 const RDT = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
