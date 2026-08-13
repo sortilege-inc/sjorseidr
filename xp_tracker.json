@@ -4,7 +4,7 @@
   "schema_version": 1,
   "note": "Per-member, per-season log of covenant activity and XP. Filter by type (magi / companions / grogs) and by current ship. Cells are empty until filled in a follow-up pass. For magi, a season also records whether the activity was a covenant service; every member records whether a season activity was undertaken and any XP (type + amount).",
   "as_of": "Summer 1224",
-  "foundryConfirmed": "2026-08-09",
+  "foundryConfirmed": "2026-08-12",
   "reviewedThroughSeason": "1223-summer"
  },
  "ships": {

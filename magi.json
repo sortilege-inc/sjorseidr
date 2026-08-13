@@ -999,7 +999,7 @@
         "aq": {
           "label": "Aquam",
           "score": 17,
-          "xp": 73
+          "xp": 78
         },
         "au": {
           "label": "Auram",
@@ -1230,7 +1230,7 @@
         {
           "name": "Code of Hermes*",
           "speciality": "Gray Areas",
-          "xp": 5,
+          "xp": 7,
           "score": 1
         },
         {
@@ -1256,6 +1256,12 @@
           "speciality": "Hermetic Arts",
           "xp": 2,
           "score": 0
+        },
+        {
+          "name": "Leadership",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
         }
       ],
       "spells": [
