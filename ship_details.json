@@ -126,6 +126,12 @@
               "description": ""
             }
           ]
+        },
+        {
+          "name": "The Ever-Full Grain Dish",
+          "quantity": 1,
+          "description": "Willhelm Stienauer's personal magic item — carried with him, not fixed to any ship (recorded here because he sailed aboard the Brineborn on the 1224 Ireland voyage). A carved stone dish about the size of a large butter dish that is perpetually full of grain: it holds on the order of a million cubic yards and refills as fast as it is emptied (a sack or two a minute by hand), so for all practical purposes it never runs out. It was his apprenticeship/graduation research project — a Creo Herbam working; its exact magnitude was not established at the table. Because the grain is magically created, it counts as magically-produced content in every Tribunal, so it cannot be freely sold as mundane trade goods without raising a jurisdictional-arbitrage question — a wrinkle the covenant has eyed. Willhelm treats it as unremarkable and tends to mention it only in passing.",
+          "effects": []
         }
       ]
     },

@@ -968,7 +968,10 @@
       "reputations": [],
       "sanctum": "Tide of Memory's Laboratory (30 pts)",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "shortDescription": "A Criamon magus of the Oleron covenant — Dagmar's opponent in the 1223 dimicatio (certamen) final.",
+      "biography": "A relaxed, boyish-faced senior Criamon of the Oleron covenant. At the Summer 1223 Normandy Tribunal he met Dagmar in the dimicatio final — a near mirror-match of Criamon divination and Vim. Caris took first in the event, breaking Dagmar's shield (a Perdo Vim dispel of his Parma) after Dagmar failed the counter, leaving Dagmar second. He parted cordially, telling Dagmar he looked forward to their rematch next Tribunal.",
+      "source": "1223 Normandy Tribunal (session 2026-05-23). Confirmed a Criamon magus of the Oleron covenant by GM 2026-08-12."
     },
     "Cy": {
       "name": "Cy",
@@ -1227,7 +1230,7 @@
       "house": "",
       "parens": "",
       "sigil": "A flash of blue light.",
-      "biography": "Returned to Cologne to teach after the Tribunal (Spring 1224) — his plan to self-initiate via Magic Lore so he could formally teach Magic Theory there went ahead as intended.",
+      "biography": "Dietrich is Willhelm Stienauer's older brother — a mundane (un-Gifted) scholar, a professor of medicine and philosophy at a Cologne cathedral school, and a master there who must teach at least two seasons a year to keep his standing.\n\nHe is the polished public face of Willhelm's folk-magic thesis: at the 1223 Normandy Tribunal he worked the crowd of mundane scholars and Redcaps with formal scholastic rhetoric — pitching that the system lets the un-Gifted mine vis, find arcane connections, and do basic lab work, and that it is syncretic enough to function in Divine auras — while Willhelm himself kept a low profile. The whole project traces to the book Willhelm wrote so his mundane brother could learn magic; the technique survived Willhelm's own Gift-opening, which is why he can research it.\n\nReturned to Cologne to teach after the Tribunal (Spring 1224) — his plan to self-initiate via Magic Lore so he could formally teach the folk system alongside Magic Theory there went ahead as intended.",
       "born": 1198,
       "age": 25,
       "apparentAge": 25,
@@ -1330,11 +1333,17 @@
       "flaws": [],
       "abilities": [],
       "spells": [],
-      "personalityTraits": [],
+      "personalityTraits": [
+        "Vigorous",
+        "Formidable orator",
+        "Protective of Willhelm"
+      ],
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "shortDescription": "Willhelm Stienauer's elder brother — a mundane Cologne professor of medicine and philosophy, and the public rhetorical voice of Willhelm's folk-magic thesis.",
+      "appearance": "Rugged and vigorous; strides about robustly pontificating on points of magical theory, covering good scholarship with genial banter."
     },
     "Drest": {
       "name": "Drest",

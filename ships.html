@@ -353,9 +353,12 @@ function mdRules(s){
 }
 let activeTab = null; // snapshot id, or 'all-ships'
 
-// ships.json occasionally spells a name differently than the magi.json key.
-// Map any known variants -> the canonical name here.
-const MAGI_ALIASES = {};
+// ships.json sometimes spells a name differently than the magi.json key
+// (e.g. a one-L "Wilhelm" variant of the canonical "Willhelm Stienauer").
+// Map those known variants -> the magi.json key here.
+const MAGI_ALIASES = {
+  'Wilhelm Stienauer': 'Willhelm Stienauer',
+};
 
 function findMagus(name){
   if(!MAGI) return null;
