@@ -2,7 +2,7 @@
   "meta": {
     "title": "Crew & Companion Sheets",
     "source": "Foundry VTT REST API (arm5e system), pulled 2026-07-13",
-    "note": "Covers grogs, companions, and NPC magi with real Foundry actor sheets. Hilda (companion) and Solving Epicurusson (the vanished founder) are hand-authored non-Foundry cards added 2026-08-12; Karl still has no sheet and keeps the lightweight note card from ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets. Brussel (a púca Willhelm taught, 2026-07-25) is a hand-authored non-Foundry card without a statblock."
+    "note": "Covers grogs, companions, and NPC magi. Several are hand-authored non-Foundry cards (no Foundry actor sheet): Hilda and Solving Epicurusson (added 2026-08-12); Carl & Isaac Schmidt (Willhelm's field-research assistants) and the Cruachan magi Gráinne & Tadhg (added 2026-08-12); and Brussel, the púca Willhelm taught (no statblock). Karl retains only a lightweight note card in ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets."
   },
   "npcs": {
     "Adam Smith": {
@@ -9641,6 +9641,580 @@
       "shortDescription": "A púca (a black-horse faerie) that Willhelm taught the basics of folk magic to in Connacht; it gave him a rowan-wood horseshoe in thanks.",
       "source": "First appears in play at session 2026-07-25 (the Connacht leg of the 1224 Ireland trip; the folk-magic teaching test, t019 / p050). Hand-authored non-Foundry card; no statblock was established at the table.",
       "biography": "Brussel is a púca — a shape-shifting Faerie trickster in the form of a black horse — that Willhelm Stienauer met in the wilds of Connacht on the 1224 Ireland trip (see t019, p050). Overhearing that Willhelm was “teaching magic to all,” it asked to be taught, and Willhelm walked it through the fundamentals of his folk-magic system (drawing the warding circle by dragging a hoof). Owen, reading it by fairy-lore, judged it a trickster that inconveniences rather than truly harms.\n\nWhen they parted, Brussel gave Willhelm a horseshoe of ROWAN WOOD as a gift — which Willhelm keeps in his treasury, prizing it as the first “person” outside his own research staff to take a genuine interest in his work. “Brussel” is a wizard-name (at best a weak Arcane Connection), not its true name."
+    },
+    "Carl Schmidt": {
+      "name": "Carl Schmidt",
+      "foundryName": null,
+      "charType": "companion",
+      "portrait": null,
+      "house": "",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "qik": 0,
+        "pre": 0,
+        "com": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "Educated",
+          "impact": "minor",
+          "description": ""
+        },
+        {
+          "name": "Good Teacher",
+          "impact": "minor",
+          "description": ""
+        },
+        {
+          "name": "Book Learner",
+          "impact": "minor",
+          "description": ""
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Obsessed (magic)",
+          "impact": "major",
+          "description": ""
+        },
+        {
+          "name": "Lecherous",
+          "impact": "minor",
+          "description": ""
+        },
+        {
+          "name": "Nocturnal",
+          "impact": "minor",
+          "description": ""
+        }
+      ],
+      "abilities": [],
+      "spells": [],
+      "personalityTraits": [
+        "Obsessive about magic",
+        "Nocturnal",
+        "Lecherous"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": null,
+      "mightRealm": "",
+      "form": "",
+      "soak": 0,
+      "combat": [],
+      "powers": [],
+      "vis": "",
+      "appearance": "",
+      "source": "Named in play 2026-08-08; character details provided by the GM 2026-08-12. Hand-authored non-Foundry companion card.",
+      "shortDescription": "One of Willhelm's two mundane field-research assistants — the “Carl” of Carl & Isaac Schmidt (no relation). An excellent writer, a decent interviewer.",
+      "biography": "Carl Schmidt is one of Willhelm Stienauer's two mundane field-research assistants (with Isaac Schmidt — same surname, no relation, a running joke). Cologne-educated, he came out of the University of Cologne looking for work after his studies and got the post through Willhelm's brother DIETRICH and the university's Magic Club; he and Isaac are friends. He is an excellent writer and a decent interviewer.\n\nLife path (skill packages): Curious Child → Student at a parish school then a cathedral school → University student → Scribe → Cultist (magic). His job is to travel to hedge witches and folk wizards, scribe a treatise on each one's magic (which may carry an Insight for Willhelm's folk-magic system), and bring it back for Willhelm to study.\n\nHe has only just now fully ACCLIMATED to Willhelm's Gift (28 of the 30 seasons it takes a mundane to overcome the Gift's social penalty). On the 2026-08-08 winter fieldwork he returned hale and healthy — it was Isaac who came back injured."
+    },
+    "Isaac Schmidt": {
+      "name": "Isaac Schmidt",
+      "foundryName": null,
+      "charType": "companion",
+      "portrait": null,
+      "house": "",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "qik": 0,
+        "pre": 0,
+        "com": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "Educated",
+          "impact": "minor",
+          "description": ""
+        },
+        {
+          "name": "Gossip",
+          "impact": "minor",
+          "description": ""
+        },
+        {
+          "name": "Common Sense",
+          "impact": "minor",
+          "description": ""
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Vow (learn magic)",
+          "impact": "major",
+          "description": ""
+        },
+        {
+          "name": "Pious",
+          "impact": "minor",
+          "description": ""
+        }
+      ],
+      "abilities": [],
+      "spells": [],
+      "personalityTraits": [
+        "Pious",
+        "Talkative (gossip)"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": null,
+      "mightRealm": "",
+      "form": "",
+      "soak": 0,
+      "combat": [],
+      "powers": [],
+      "vis": "",
+      "appearance": "",
+      "source": "Named in play 2026-08-08; character details provided by the GM 2026-08-12. Hand-authored non-Foundry companion card.",
+      "shortDescription": "Willhelm's other field-research assistant — the “Isaac” of Carl & Isaac Schmidt (no relation). An excellent interviewer, a decent writer.",
+      "biography": "Isaac Schmidt is Willhelm Stienauer's other mundane field-research assistant (with Carl Schmidt — same surname, no relation). He was a career/professional student at the University of Cologne — eight-plus years there — and met DIETRICH through the university's Magic Club, which is how he came by a recommendation to work for Willhelm. He is an excellent interviewer and a decent writer, and has sworn a Vow to learn magic; he is pious.\n\nLife path (skill packages): Curious Child → Storyteller then Steel Merchant → University student → Scribe → Cultist (magic). Like Carl, he travels to hedge practitioners and scribes treatises on their magic for Willhelm to mine for Insight.\n\nHe has only just now fully ACCLIMATED to Willhelm's Gift (28 of 30 seasons). On the 2026-08-08 winter fieldwork he came back injured — on a crutch — after the local lord had the assistants beaten and expelled when the folk-magic teaching drove some students to madness (a suicide and a double killing); see t019 / t020."
+    },
+    "Gráinne": {
+      "name": "Gráinne",
+      "foundryName": null,
+      "charType": "magus",
+      "portrait": null,
+      "house": "",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "qik": 0,
+        "pre": 0,
+        "com": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [],
+      "flaws": [],
+      "abilities": [],
+      "spells": [],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": null,
+      "mightRealm": "",
+      "form": "",
+      "soak": 0,
+      "combat": [],
+      "powers": [],
+      "vis": "",
+      "appearance": "",
+      "source": "First appears in play 2026-08-08 (the Cruachan delivery of Rody). Hand-authored non-Foundry card; no statblock established at the table.",
+      "shortDescription": "A maga of the Cruachan covenant in Hibernia — one of the two who received Rody.",
+      "biography": "Gráinne is one of the Hermetic magi of the CRUACHAN covenant, near the Hill of Tara in central Ireland (the covenant normally numbers about seven magi, four of them present when the party arrived). With Tadhg she welcomed Dustin and Owen with the Order's hospitality when they came to deliver the covenant's owed apprentice, and helped host the feast at which the party disclosed that the boy “Rody” is in fact a Faerie changeling (t023, q026). Cruachan has real capability with the Fae and faerie magic — which is exactly why the party brought the changeling to them, hoping they can confine and question it and trace the real, stolen Gifted child."
+    },
+    "Tadhg": {
+      "name": "Tadhg",
+      "foundryName": null,
+      "charType": "magus",
+      "portrait": null,
+      "house": "",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "qik": 0,
+        "pre": 0,
+        "com": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [],
+      "flaws": [],
+      "abilities": [],
+      "spells": [],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": null,
+      "mightRealm": "",
+      "form": "",
+      "soak": 0,
+      "combat": [],
+      "powers": [],
+      "vis": "",
+      "appearance": "",
+      "source": "First appears in play 2026-08-08 (the Cruachan delivery of Rody). Hand-authored non-Foundry card; no statblock established at the table.",
+      "shortDescription": "A magus of the Cruachan covenant in Hibernia — gave the party the token to bring the Fae within the Aegis, and led Rody's apprentice-oath.",
+      "biography": "Tadhg is one of the Hermetic magi of the CRUACHAN covenant (with Gráinne). When the party revealed that the delivered apprentice “Rody” was a Faerie changeling, Tadhg produced a token — a knotted piece of wood — to carry the Fae safely within the covenant's Aegis of the Hearth, and at the welcoming feast he led the boy through a preliminary apprentice's oath (a repeat-after-me, short of the full Oath of Hermes). Cruachan means to use its Fae expertise to confine and question the changeling and recover the real, stolen child (t023, q026)."
     }
   }
 }
