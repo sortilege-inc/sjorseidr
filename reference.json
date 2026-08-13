@@ -602,6 +602,12 @@
     ]
    ]
   },
-  "baseIncome": 9
+  "baseIncome": 9,
+  "additionalRules": [
+   {
+    "title": "Normandy Tribunal — Mundane Goods Are Fair Game",
+    "note": "A Normandy Tribunal peripheral-code custom, sharper here than in the wider Order. Hermetic law protects a magus's PERSON and their MAGICAL property — assault, and the theft of vis or enchanted items, are offences a quaesitor will hear and the Tribunal will enforce.\n\nMUNDANE property has no such protection. Coin, cargo, ships, servants, a magus's mundane kin — if these are taken, it is \"a mundane problem\": outside Tribunal jurisdiction, with no Hermetic recourse. It may still be a crime in mundane law, but no quaesitor will hear it, and no Hermetic penalty attaches.\n\nThis is why the sea-covenants' raiding-and-trading economy is tolerated: taking mundane goods — even from another covenant's mundane holdings — is not a Hermetic crime. For Sjórseiðr it means piracy and prize-taking against mundane shipping is legally clean at Tribunal; the line is only crossed by interfering with another magus directly, or seizing their vis or enchanted devices.\n\nEstablished in play at the 1223 Normandy Tribunal, when Valdemar explained the custom to the newly-arrived Wilhelm (and hinted, none too subtly, at the covenant's own participation in it)."
+   }
+  ]
  }
 }

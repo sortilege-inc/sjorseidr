@@ -353,11 +353,9 @@ function mdRules(s){
 }
 let activeTab = null; // snapshot id, or 'all-ships'
 
-// ships.json spells some names slightly differently than the Foundry actor name
-// (e.g. a single-L typo). Map those known variants -> the Foundry name here.
-const MAGI_ALIASES = {
-  'Wilhelm Stienauer': 'Willhelm Stienauer',
-};
+// ships.json occasionally spells a name differently than the magi.json key.
+// Map any known variants -> the canonical name here.
+const MAGI_ALIASES = {};
 
 function findMagus(name){
   if(!MAGI) return null;

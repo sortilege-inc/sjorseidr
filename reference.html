@@ -257,6 +257,11 @@ function simpleTable(cols, rows){
 function renderHomebrew(){
   const h = DATA.homebrew || {};
   const s = h.tradeSuccess || {}, sf = h.tradeShortfall || {};
+  const extra = (h.additionalRules || []).map(r => `
+    <div class="section">
+      <div class="section-title">${esc(r.title || '')}</div>
+      ${(r.note || '').split('\n\n').map(p => `<p class="note-flag">${esc(p)}</p>`).join('')}
+    </div>`).join('');
   return `
     <div class="section">
       <div class="section-title">${esc(h.title || 'Homebrew')}</div>
@@ -265,7 +270,8 @@ function renderHomebrew(){
       ${simpleTable(s.cols || [], s.rows || [])}
       <div class="section-sub">${esc(sf.title || '')}</div>
       ${simpleTable(sf.cols || [], sf.rows || [])}
-    </div>`;
+    </div>
+    ${extra}`;
 }
 
 function render(){

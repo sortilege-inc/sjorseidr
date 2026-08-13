@@ -2,7 +2,7 @@
   "meta": {
     "title": "Crew & Companion Sheets",
     "source": "Foundry VTT REST API (arm5e system), pulled 2026-07-13",
-    "note": "Covers grogs, companions, and NPC magi with real Foundry actor sheets. Hilda and Karl have no Foundry sheet and keep the lightweight note card from ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets."
+    "note": "Covers grogs, companions, and NPC magi with real Foundry actor sheets. Hilda (companion) and Solving Epicurusson (the vanished founder) are hand-authored non-Foundry cards added 2026-08-12; Karl still has no sheet and keeps the lightweight note card from ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets."
   },
   "npcs": {
     "Adam Smith": {
@@ -9234,6 +9234,267 @@
       "source": "GM prep (2026-08-08). Built on the Toy Soldier (Realms of Power: Faerie, Faerie Might 5) and tweaked into a changeling per RoP:Faerie’s “Gerontified Faerie” changeling rules — Size raised to a boy’s, Form shifted to Imaginem (the disguise is its essence), Might raised to 15 so a base-10 folk ward cannot reliably hold it, and the toy-soldier’s ward/loyalty traits swapped for the changeling’s glamour, neediness, and stolen-child bond.",
       "shortDescription": "A Faerie changeling wearing a Gifted boy’s shape — the real child is still missing (t023, q026).",
       "biography": "Rody is a changeling: a gerontified faerie exchanged for a real Gifted child and wearing that child’s seeming. It was being delivered east — toward the Hill of Tara / the receiving Hermetic magi near Uisneach — as though it were the Gifted boy, until Éogan and Dustin confirmed the deception and brought Wilhelm in (p051). Its glamour counterfeits the very aura of The Gift, which is how it was mistaken for a Gifted child in the first place (q026); its neediness is itself a charm that makes its hosts nurture and shield it.\n\nSTATBLOCK — Might 15 (Faerie, Imaginem); Magic Resistance 15; Size –1; Soak 0. Int +1, Per +2, Pre +1, Com 0, Str –3, Sta –1, Dex 0, Qik +1. It is no fighter. Vis: 1 pawn Imaginem when the seeming breaks.\n\nPOWERS — The Child’s Seeming (the Gift-counterfeiting disguise); Pull at the Heart (the neediness-glamour that wins nurture); The Stolen Thread (a lingering bond to the real child it replaced).\n\nTHE WARD CLIFFHANGER (p051) — Wilhelm’s folk Ward against Faeries at roughly base level 10 is HIGHLY UNLIKELY to hold a changeling of Might 15: it can step out of the circle much as a human would, so the test is inconclusive either way — which is exactly the hanging note the scene ended on. THE MISSING CHILD (t023) — the real Gifted child is still out there, not necessarily harmed; The Stolen Thread is the way back to it."
+    },
+    "Hilda": {
+      "name": "Hilda",
+      "foundryName": null,
+      "charType": "companion",
+      "portrait": null,
+      "house": "",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "qik": 0,
+        "pre": 0,
+        "com": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [],
+      "flaws": [],
+      "abilities": [],
+      "spells": [],
+      "personalityTraits": [
+        "Practical",
+        "No-nonsense",
+        "Protective of Wilhelm’s work"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": null,
+      "mightRealm": "",
+      "form": "",
+      "soak": 0,
+      "combat": [],
+      "powers": [],
+      "vis": "",
+      "appearance": "No-nonsense and practical — dressed for hard North Sea weather rather than to impress, hair kept long in the local style.",
+      "source": "Established in play at the 1223 Normandy Tribunal (2026-04-04 session). Hand-authored non-Foundry card (she has no Foundry sheet).",
+      "shortDescription": "Wilhelm’s scribe, assistant, and publicist — the organizational spine of his folk-magic thesis and its review.",
+      "biography": "Hilda is Wilhelm Stienauer’s mundane scribe, assistant, and publicist — the person who has written and rewritten his seven-year folk-magic thesis through all its revisions, and who runs the practical side of his life while he chases theory.\n\nAt the 1223 Normandy Tribunal she was his handler and gatekeeper: she decided when (and whether) to introduce him, and she arranged the peer review of his manuscript, carrying copies in Latin and Low German to Magus Fettelmid and to Juliana ex Bonisagus of Dragon’s Rest. Wilhelm openly credits her with getting him “at least halfway here.” Keeps two research assistants (Karl and one other) pointed at fieldwork."
+    },
+    "Solving Epicurusson": {
+      "name": "Solving Epicurusson",
+      "foundryName": null,
+      "charType": "magus",
+      "portrait": null,
+      "house": "Criamon",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "qik": 0,
+        "pre": 0,
+        "com": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [],
+      "flaws": [],
+      "abilities": [],
+      "spells": [],
+      "personalityTraits": [
+        "Seeker of the Enigma",
+        "Restless / unanchored"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": null,
+      "mightRealm": "",
+      "form": "",
+      "soak": 0,
+      "combat": [],
+      "powers": [],
+      "vis": "",
+      "appearance": "",
+      "source": "Canon per resolved_questions.json (t034; GM 2026-07-25: in Wizard’s Twilight, return possible but UNLIKELY — treat as effectively gone) and covenant.json’s founding note. Hand-authored non-Foundry card.",
+      "shortDescription": "The covenant’s founder and Dagmar’s parens — vanished into Wizard’s Twilight from Bruges in 1220; a member in good standing, “on sabbatical.”",
+      "biography": "Solving Epicurusson founded Sjórseiðr in 1209 alongside several other magi, and is Dagmar’s parens — a Criamon diviner in pursuit of the Enigma who built the covenant as “a covenant in motion, unanchored and burdened less by the weight of Tribunal demands.”\n\nIn 1220, in Bruges, he vanished into Wizard’s Twilight — witnessed by his grogs — while going to meet “V.” (Valerian de Castellane) near Saint Jacob’s bell tower. His ship, the Tide of Memory (which still carries his summoning bell and astrolabe), passed to Dagmar. He remains a covenant member in good standing, flagged “on sabbatical,” and holds the charter’s elder-magus tie-breaking vote in absentia. Canon: his return is possible but unlikely — treat him as effectively gone.\n\nCross-refs: t034 (where he went — resolved), t035 (the covenant’s other, unnamed founders), q024 (the elder-magus vote), t061 (his standing protection of Marina, the Southampton merchant)."
     }
   }
 }
