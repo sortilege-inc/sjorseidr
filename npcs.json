@@ -4797,13 +4797,19 @@
           "description": "This spell inflicts a Heavy Wound on the target."
         }
       ],
-      "personalityTraits": [],
+      "personalityTraits": [
+        "Obsessive",
+        "Reclusive",
+        "Ambitious tinkerer"
+      ],
       "reputations": [],
       "sanctum": "The Maelstrom's Maw's Laboratory (30 pts)",
       "familiar": null,
       "activeWounds": [],
       "originallyFrom": "France",
-      "playedBy": "David"
+      "playedBy": "David",
+      "shortDescription": "A former covenant magus (Flambeau), on sabbatical — off at sea building a giant flying stone “castle,” may or may not resurface.",
+      "biography": "Kor was a PC magus with the covenant briefly, before Willhelm's player joined. He left to pursue an obsessive personal project out in the open ocean: a giant flying platform — a single enormous stone made incredibly thin, flat, and round, then built up into a hovering “castle” (a Rego Terram levitation platform enchanted to lift itself and whatever is raised on it).\n\nNotably he reworked the enchantment away from a continuous effect toward a per-moment recast, so that if the levitation is ever counterspelled it drops only for an instant and immediately recasts itself — a deliberate safety measure. He is off doing his own thing and may or may not check in; a covenant member might one day glimpse buildings drifting on the horizon in empty water and realise “Kor figured it out.” Flagged “on sabbatical” as an absent member in good standing (cf. c013)."
     },
     "Leofwin": {
       "name": "Leofwin",
