@@ -17,7 +17,7 @@
   var PAGE_SECTION = {
     'sjorseidr_chronicle.html': 'chronicle', 'fleet_timeline.html': 'chronicle',
     'covenant.html': 'covenant', 'ships.html': 'covenant', 'xp_tracker.html': 'covenant',
-    'covenant_ledger.html': 'covenant',
+    'covenant_ledger.html': 'covenant', 'dramatis_personae.html': 'covenant',
     'normandy_tribunal_1223.html': 'tribunal', 'tribunal_workbook.html': 'tribunal',
     'normandy_tribunal_reference.html': 'tribunal',
     'hiberian.html': 'reference', 'reference.html': 'reference', 'integrating_magic.html': 'reference',

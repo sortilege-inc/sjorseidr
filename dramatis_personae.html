@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sjórseiðr — Dramatis Personae</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86;
+  --purple:#5b3a8a; --green:#3e6b35;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;
+  min-height:100vh;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(120,80,30,.06) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(90,60,20,.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 50% 85%, rgba(120,80,30,.05) 0 2px, transparent 3px);
+  background-size:140px 140px,180px 180px,160px 160px;opacity:.6;mix-blend-mode:multiply;
+}
+.wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:32px 20px 80px;
+  transition:margin-right .2s ease}
+.wrap.sidebar-open{margin-right:min(320px,90vw)}
+.wrap.sidebar-open.sidebar-wide{margin-right:min(600px,94vw)}
+a{color:var(--teal-bright)}
+
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+  border-bottom:2px solid var(--line);padding-bottom:16px;margin-bottom:22px}
+.crumb{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--rust-bright);margin:4px 0 2px}
+.subtitle{font-style:italic;color:var(--ink-soft);font-size:14.5px;margin:0;max-width:660px}
+
+.filterbar{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:16px;padding:8px 10px;
+  background:rgba(120,90,40,.08);border:1px solid rgba(120,90,40,.18);border-radius:8px}
+.filterbar .label{font-family:'Cinzel',serif;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-soft);margin-right:2px;flex:none}
+.fbtn{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.04em;cursor:pointer;
+  border:1px solid rgba(120,90,40,.3);background:rgba(244,235,213,.6);color:var(--ink-soft);
+  padding:4px 10px;border-radius:14px;transition:all .12s;display:inline-flex;align-items:center;gap:5px}
+.fbtn:hover{background:rgba(244,235,213,.95);color:var(--ink)}
+.fbtn.on{background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:#fff6df;border-color:#7a5318;font-weight:600}
+.fbtn .n{font-family:'EB Garamond',serif;font-style:italic;font-size:11px;opacity:.8}
+
+.group-block{margin-bottom:26px}
+.group-head{font-family:'Cinzel',serif;font-size:13px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--rust);border-bottom:1px solid var(--line);padding-bottom:5px;margin:0 0 4px;
+  display:flex;align-items:baseline;gap:8px}
+.group-head .gh-count{font-family:'EB Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-soft);text-transform:none;letter-spacing:0}
+.group-sub{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin:0 0 12px}
+
+.persona-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.persona-card{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);
+  border:1.5px solid rgba(120,90,40,.45);border-left-width:5px;border-radius:10px;padding:13px 15px 14px;
+  box-shadow:0 2px 6px var(--shadow);cursor:pointer;transition:border-color .12s,transform .08s}
+.persona-card:hover{border-color:var(--gold);transform:translateY(-1px)}
+.persona-card.k-magus{border-left-color:var(--purple)}
+.persona-card.k-entity{border-left-color:var(--teal)}
+.pc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:5px}
+.pc-name{font-family:'Cinzel',serif;font-weight:600;font-size:16px;color:var(--ink);line-height:1.25}
+.pc-kind{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;
+  padding:2px 8px;border-radius:9px;white-space:nowrap;flex:none;font-weight:600}
+.pc-kind.k-magus{background:rgba(91,58,138,.14);color:var(--purple);border:1px solid rgba(91,58,138,.4)}
+.pc-kind.k-entity{background:rgba(44,107,102,.14);color:var(--teal);border:1px solid rgba(44,107,102,.4)}
+.pc-tags{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 7px}
+.pc-tag{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.03em;padding:2px 7px;border-radius:8px;
+  background:rgba(120,90,40,.12);color:var(--ink-soft);border:1px solid rgba(120,90,40,.3);white-space:nowrap}
+.pc-tag.might{background:rgba(44,107,102,.13);color:var(--teal);border-color:rgba(44,107,102,.35)}
+.pc-tag.house{background:rgba(91,58,138,.12);color:var(--purple);border-color:rgba(91,58,138,.35)}
+.pc-desc{font-size:13px;line-height:1.5;color:var(--ink-soft);margin:0}
+.pc-open{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.05em;text-transform:uppercase;
+  color:var(--gold);margin-top:9px}
+.empty{text-align:center;color:var(--ink-soft);font-style:italic;padding:40px 10px}
+
+/* sidebar (mirrors ships.html) */
+#sidebar{position:fixed;top:0;right:0;width:min(600px,94vw);height:100vh;z-index:50;
+  background:linear-gradient(180deg,var(--parch),var(--parch-deep));
+  border-left:2px solid var(--line);box-shadow:-8px 0 24px var(--shadow);
+  transform:translateX(100%);transition:transform .2s ease;
+  overflow-y:auto;padding:20px}
+#sidebar.open{transform:translateX(0)}
+#sidebarClose{position:absolute;top:14px;right:14px;background:none;border:none;font-size:20px;
+  cursor:pointer;color:var(--ink-soft);line-height:1;z-index:2}
+#sidebarClose:hover{color:var(--rust)}
+#overlay{position:fixed;inset:0;background:rgba(30,20,10,.25);z-index:40;display:none}
+#overlay.open{display:block}
+
+/* sheet */
+.sheet-header{display:flex;gap:14px;align-items:flex-start;margin:8px 0 14px}
+.sheet-portrait{width:76px;height:76px;border-radius:8px;object-fit:cover;flex:none;
+  border:1.5px solid rgba(120,90,40,.5);box-shadow:0 2px 6px var(--shadow)}
+.sheet-portrait.placeholder{display:flex;align-items:center;justify-content:center;
+  background:rgba(120,90,40,.12);font-size:26px;color:var(--ink-soft)}
+.sheet-name{font-family:'Cinzel',serif;font-weight:600;font-size:19px;color:var(--rust-bright);margin:0 0 2px}
+.sheet-sub{font-style:italic;color:var(--ink-soft);font-size:12.5px;line-height:1.4;margin:0}
+.sheet-tagline{font-size:12.5px;color:var(--ink);line-height:1.4;margin:4px 0 0}
+.sheet-meta{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 4px}
+.meta-chip{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.03em;text-transform:uppercase;
+  padding:2px 8px;border-radius:9px;background:rgba(120,90,40,.1);color:var(--ink-soft);
+  border:1px solid rgba(120,90,40,.3);white-space:nowrap}
+.meta-chip.might{background:rgba(44,107,102,.13);color:var(--teal);border-color:rgba(44,107,102,.4)}
+.sheet-source{font-size:11px;font-style:italic;color:var(--ink-soft);opacity:.75;margin:14px 0 4px}
+
+.appearance-box{font-size:13px;line-height:1.55;color:var(--ink);margin:2px 0 4px;
+  padding:9px 12px;background:rgba(120,90,40,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0}
+.appearance-box .ab-label{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--ink-soft);display:block;margin-bottom:3px}
+
+.sheet-section-title{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-soft);border-bottom:1px solid rgba(120,90,40,.35);margin:18px 0 8px;padding-bottom:3px}
+
+.char-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 6px}
+.char-stat{text-align:center;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.3);
+  border-radius:6px;padding:5px 2px}
+.char-stat .cs-label{display:block;font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.04em;color:var(--ink-soft)}
+.char-stat .cs-val{display:block;font-size:16px;font-weight:600;color:var(--ink)}
+
+.arts-row-label{font-size:10.5px;color:var(--ink-soft);font-style:italic;margin:8px 0 4px}
+.arts-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.art-cell{text-align:center;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.3);
+  border-radius:6px;padding:4px 2px}
+.art-cell .a-label{display:block;font-size:10px;color:var(--ink-soft)}
+.art-cell .a-val{display:block;font-size:14.5px;font-weight:600;color:var(--teal)}
+.art-cell.technique .a-val{color:var(--rust)}
+
+.vf-list{display:flex;flex-direction:column;gap:6px}
+.vf-item{font-size:12.5px;line-height:1.45;padding:6px 9px;border-radius:6px;background:rgba(244,235,213,.5);
+  border-left:3px solid var(--line)}
+.vf-item.virtue{border-left-color:var(--green)}
+.vf-item.flaw{border-left-color:var(--rust)}
+.vf-item .vf-name{font-weight:600;color:var(--ink)}
+.vf-item .vf-impact{font-size:10px;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-soft);
+  font-style:normal;margin-left:5px}
+.vf-item .vf-desc{display:block;color:var(--ink-soft);margin-top:2px}
+
+.ability-row{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;padding:3px 0;
+  border-bottom:1px dotted rgba(120,90,40,.25)}
+.ability-row .ab-name{color:var(--ink)}
+.ability-row .ab-spec{color:var(--ink-soft);font-style:italic;font-size:11.5px}
+.ability-row .ab-score{font-weight:600;color:var(--teal);flex:none}
+.ability-cat{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);margin:9px 0 2px;padding-bottom:2px;border-bottom:1px solid rgba(120,90,40,.35)}
+.ability-cat:first-child{margin-top:0}
+
+.power-item{margin:6px 0;padding:7px 10px;background:rgba(244,235,213,.55);border-radius:6px;
+  border:1px solid rgba(120,90,40,.3)}
+.power-item .pw-name{font-weight:600;font-size:13px;color:var(--ink)}
+.power-item .pw-meta{font-size:10.5px;color:var(--teal);font-family:'Cinzel',serif;letter-spacing:.02em;margin:1px 0 3px}
+.power-item .pw-desc{font-size:12px;color:var(--ink-soft);line-height:1.45}
+
+.combat-grid{display:flex;flex-direction:column;gap:6px}
+.combat-line{display:grid;grid-template-columns:1.3fr repeat(4,1fr);gap:4px;font-size:12px;
+  background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.3);border-radius:6px;padding:6px 8px;align-items:center}
+.combat-line .cl-name{font-weight:600;color:var(--ink)}
+.combat-line .cl-cell{text-align:center;color:var(--ink-soft)}
+.combat-line .cl-cell b{display:block;font-size:9px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft);font-weight:400}
+.combat-line .cl-cell span{color:var(--teal);font-weight:600;font-size:13px}
+.combat-line.head{background:none;border:none;padding:0 8px;font-family:'Cinzel',serif;font-size:9px;
+  letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft)}
+.combat-line.head .cl-cell{text-align:center}
+.soak-line{font-size:12.5px;color:var(--ink-soft);margin:6px 0 2px}
+.soak-line b{color:var(--teal)}
+.vis-line{font-size:12.5px;color:var(--ink-soft);margin:6px 0 2px}
+
+.trait-chips{display:flex;flex-wrap:wrap;gap:5px}
+.trait-chip{font-size:11.5px;padding:2px 9px;border-radius:11px;background:rgba(91,58,138,.12);
+  color:var(--purple);border:1px solid rgba(91,58,138,.3)}
+
+.sheet-collapsible summary{cursor:pointer;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid rgba(120,90,40,.35);
+  margin:18px 0 8px;padding-bottom:3px;list-style:none}
+.sheet-collapsible summary::-webkit-details-marker{display:none}
+.sheet-collapsible summary::before{content:'▸ ';color:var(--gold)}
+.sheet-collapsible[open] summary::before{content:'▾ '}
+.sheet-empty{font-size:12px;font-style:italic;color:var(--ink-soft)}
+.sheet-bio{font-size:13.5px;line-height:1.6;color:var(--ink)}
+.sheet-bio p{margin:0 0 10px}
+.sheet-bio p:last-child{margin-bottom:0}
+
+footer{text-align:center;margin-top:44px;padding-top:14px;border-top:1px solid rgba(120,90,40,.3);
+  font-size:12.5px;color:var(--ink-soft);font-style:italic}
+</style>
+</head>
+<body>
+<div id="overlay"></div>
+<div id="sidebar">
+  <button id="sidebarClose">✕</button>
+  <div id="sidebarContent"></div>
+</div>
+
+<div class="wrap" id="wrap">
+  <header>
+    <div>
+      <div class="crumb"><a href="index.html">Sjórseiðr</a> · Covenant Archive · Dramatis Personae</div>
+      <h1>Dramatis Personae</h1>
+      <p class="subtitle">The people, dragons, faeries, and spirits who move through the chronicle but do <em>not</em> crew a covenant ship — foreign magi, guardian-beasts of the regiones, and the Fae the covenant has dealt with. Click any card for the full sheet. (Everyone aboard the fleet lives on the <a href="ships.html">Fleet &amp; Crew</a> page.)</p>
+    </div>
+  </header>
+
+  <div class="filterbar" id="filterbar"></div>
+  <div id="content"></div>
+
+  <footer id="foot">Loading…</footer>
+</div>
+
+<script>
+const $ = s=>document.querySelector(s);
+const $$ = s=>Array.from(document.querySelectorAll(s));
+const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cap = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
+const signed = n => { n = n||0; return n>0 ? `+${n}` : `${n}`; };
+
+let NPCS = {};            // name -> full record
+let PERSONAE = [];        // non-fleet records, in display order
+let RULES_IDX = {};       // normalized rule name -> verbatim text
+let filter = 'all';
+
+// ships.json spells some crew names differently than the record key
+// (e.g. one-L "Wilhelm" vs the canonical "Willhelm Stienauer").
+const MAGI_ALIASES = { 'Wilhelm Stienauer': 'Willhelm Stienauer' };
+
+const rlNorm = s => (s==null?'':String(s)).toLowerCase().split(/\s+/).filter(Boolean).join(' ');
+function ruleText(name, fallback){ return RULES_IDX[rlNorm(name)] || fallback || ''; }
+function mdRules(s){
+  return esc(s)
+    .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
+    .replace(/\n\s*\n/g, '<br><br>')
+    .replace(/\n/g, ' ');
+}
+
+async function load(){
+  let ships, npcsJson, rulesJson;
+  try{
+    const [shipsRes, npcsRes, rulesRes] = await Promise.all([
+      fetch('./ships.json', {cache:'no-store'}),
+      fetch('./npcs.json',  {cache:'no-store'}),
+      fetch('./rules.json', {cache:'no-store'}).catch(()=>null),
+    ]);
+    ships = await shipsRes.json();
+    npcsJson = await npcsRes.json();
+    if(rulesRes && rulesRes.ok){
+      const rj = await rulesRes.json();
+      Object.entries(rj.entities || {}).forEach(([name, e]) => { if(e && e.text) RULES_IDX[rlNorm(name)] = e.text; });
+    }
+  }catch(e){
+    $('#content').innerHTML = `<div class="empty">Could not load the data files — serve this page over http, not file://.<br>${esc(e.message)}</div>`;
+    $('#foot').textContent = 'Load failed'; return;
+  }
+  NPCS = npcsJson.npcs || {};
+
+  // Everyone who appears anywhere in the fleet (standing/former crew + every
+  // season snapshot) is a fleet character and lives on the Fleet & Crew page.
+  const onFleet = new Set();
+  const add = n => { if(n) onFleet.add(MAGI_ALIASES[n] || n); };
+  (ships.ships||[]).forEach(s=>{ (s.standing_crew||[]).forEach(add); (s.former_crew||[]).forEach(add); });
+  (ships.snapshots||[]).forEach(sn=>{ (sn.assignments||[]).forEach(a=>{ (a.crew||[]).forEach(add); }); });
+
+  PERSONAE = Object.entries(NPCS)
+    .filter(([name]) => !onFleet.has(name))
+    .map(([name, rec]) => ({name, rec}))
+    .sort((a,b)=> a.name.localeCompare(b.name, 'en'));
+
+  renderFilters();
+  render();
+  $('#foot').innerHTML = `${PERSONAE.length} characters not aboard the fleet, drawn live from <code>npcs.json</code> and cross-checked against <code>ships.json</code> — anyone later assigned to a ship's crew moves to the <a href="ships.html">Fleet &amp; Crew</a> page automatically. Virtue, flaw, and spell text is reproduced verbatim from the rules corpus where available.`;
+}
+
+// ── grouping ────────────────────────────────────────────────
+const GROUPS = [
+  {key:'magus',  head:'Magi of Other Covenants', sub:'Hermetic magi outside Sjórseiðr — rivals, hosts, and hands the party has dealt with.'},
+  {key:'entity', head:'Dragons, Faeries & Spirits', sub:'The Magic- and Faerie-realm beings the covenant has bargained with, freed, taught, or courted.'},
+  {key:'other',  head:'Others', sub:'Everyone else off the fleet.'},
+];
+function groupKey(rec){
+  if(rec.charType === 'magus') return 'magus';
+  if(rec.charType === 'entity') return 'entity';
+  return 'other';
+}
+
+function renderFilters(){
+  const counts = {all: PERSONAE.length};
+  GROUPS.forEach(g=> counts[g.key] = PERSONAE.filter(p=>groupKey(p.rec)===g.key).length);
+  const btn = (key,label)=>`<button class="fbtn ${filter===key?'on':''}" data-f="${key}">${label} <span class="n">${counts[key]||0}</span></button>`;
+  const parts = [btn('all','All')];
+  GROUPS.forEach(g=>{ if(counts[g.key]) parts.push(btn(g.key, g.head)); });
+  $('#filterbar').innerHTML = `<span class="label">Show</span>${parts.join('')}`;
+  $$('#filterbar .fbtn').forEach(b=> b.onclick = ()=>{ filter = b.dataset.f; renderFilters(); render(); });
+}
+
+// ── card + list ─────────────────────────────────────────────
+function cardTags(rec){
+  const t = [];
+  if(rec.charType === 'magus' && rec.house) t.push(`<span class="pc-tag house">House ${esc(rec.house)}</span>`);
+  if(rec.might != null) t.push(`<span class="pc-tag might">Might ${esc(rec.might)}${rec.mightRealm?' '+esc(rec.mightRealm):''}</span>`);
+  else if(rec.mightRealm && rec.charType==='entity') t.push(`<span class="pc-tag might">${esc(rec.mightRealm)}</span>`);
+  return t.length ? `<div class="pc-tags">${t.join('')}</div>` : '';
+}
+function personaCard(p){
+  const k = groupKey(p.rec)==='magus' ? 'k-magus' : (groupKey(p.rec)==='entity'?'k-entity':'');
+  const kindLabel = p.rec.charType==='magus' ? 'Magus' : (p.rec.charType==='entity'?'Entity':cap(p.rec.charType||'—'));
+  return `<div class="persona-card ${k}" data-name="${esc(p.name)}">
+    <div class="pc-top">
+      <div class="pc-name">${esc(p.name)}</div>
+      <span class="pc-kind ${k}">${esc(kindLabel)}</span>
+    </div>
+    ${cardTags(p.rec)}
+    <p class="pc-desc">${esc(p.rec.shortDescription || '')}</p>
+    <div class="pc-open">View sheet ▸</div>
+  </div>`;
+}
+
+function render(){
+  const shown = PERSONAE.filter(p=> filter==='all' || groupKey(p.rec)===filter);
+  if(!shown.length){ $('#content').innerHTML = `<div class="empty">No characters match this filter.</div>`; return; }
+  const html = GROUPS.map(g=>{
+    if(filter!=='all' && filter!==g.key) return '';
+    const items = shown.filter(p=>groupKey(p.rec)===g.key);
+    if(!items.length) return '';
+    return `<div class="group-block">
+      <div class="group-head">${esc(g.head)} <span class="gh-count">${items.length}</span></div>
+      <p class="group-sub">${esc(g.sub)}</p>
+      <div class="persona-grid">${items.map(personaCard).join('')}</div>
+    </div>`;
+  }).join('');
+  $('#content').innerHTML = html;
+  $$('.persona-card').forEach(c=> c.onclick = ()=> openSheet(c.dataset.name));
+}
+
+// ── sheet rendering (read-only) ─────────────────────────────
+const CHAR_LABELS = {int:'Int',per:'Per',str:'Str',sta:'Sta',pre:'Pre',com:'Com',dex:'Dex',qik:'Qik'};
+const CHAR_ORDER = ['int','per','str','sta','pre','com','dex','qik'];
+const TECH_ORDER = ['cr','in','mu','pe','re'];
+const FORM_ORDER = ['an','aq','au','co','he','ig','im','me','te','vi'];
+
+function charGridHtml(chars){
+  return `<div class="char-grid">${CHAR_ORDER.map(k=>`
+    <div class="char-stat"><span class="cs-label">${CHAR_LABELS[k]}</span><span class="cs-val">${signed(chars[k])}</span></div>
+  `).join('')}</div>`;
+}
+function artsGridHtml(arts){
+  const row = (codes, cls) => `<div class="arts-grid">${codes.map(code=>{
+    const a = arts[code];
+    return `<div class="art-cell ${cls}"><span class="a-label">${a?a.label:code}</span><span class="a-val">${a?a.score:0}</span></div>`;
+  }).join('')}</div>`;
+  return `<div class="arts-row-label">Techniques</div>${row(TECH_ORDER,'technique')}
+    <div class="arts-row-label">Forms</div>${row(FORM_ORDER,'form')}`;
+}
+function vfListHtml(list, cls){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  return `<div class="vf-list">${list.map(v=>{
+    const txt = ruleText(v.name, v.description);
+    return `<div class="vf-item ${cls}">
+      <span class="vf-name">${esc(v.name)}</span>${v.impact?`<span class="vf-impact">${esc(v.impact)}</span>`:''}
+      ${txt?`<span class="vf-desc">${mdRules(txt)}</span>`:''}
+    </div>`;}).join('')}</div>`;
+}
+
+// ArM5 ability categories (General first), matching the Fleet & Crew page.
+const ABILITY_CATEGORIES = ['General','Academic','Arcane','Martial','Supernatural'];
+const RUNE_ABILITIES = new Set(['fehu','uruz','thurisaz','ansuz','raido','kenaz','kaunan','gebo','wunjo',
+  'hagalaz','naudiz','isa','jera','eihwaz','iwaz','perthro','perth','algiz','sowilo','tiwaz','berkanan',
+  'ehwaz','mannaz','laguz','ingwaz','othila','othala','dagaz']);
+const ACADEMIC_ABILITIES = new Set(['artes liberales','civil & canon law','civil and canon law','common law',
+  'medicine','philosophiae','theology','theology - christian','latin']);
+const ARCANE_ABILITIES = new Set(['code of hermes','enigmatic wisdom','finesse','magic theory','folk magic theory',
+  'parma magica','penetration','order of hermes lore','dominion lore','faerie lore','magic lore','infernal lore',
+  'divine lore']);
+const MARTIAL_ABILITIES = new Set(['bows','great weapon','single weapon','thrown weapon']);
+const SUPERNATURAL_ABILITIES = new Set(['premonitions','second sight','dowsing','enchanting music','animal ken',
+  'magic sensitivity','sense holiness and unholiness','wilderness sense','entrancement','shapeshifter']);
+function abilityCategory(rawName){
+  const n = String(rawName||'').replace(/\*+\s*$/,'').trim().toLowerCase();
+  const base = n.replace(/\s*\([^)]*\)\s*$/,'').trim();
+  if(RUNE_ABILITIES.has(base) || SUPERNATURAL_ABILITIES.has(base)) return 'Supernatural';
+  if(MARTIAL_ABILITIES.has(base)) return 'Martial';
+  if(ARCANE_ABILITIES.has(base)) return 'Arcane';
+  if(/^dead language\b/.test(n) || ACADEMIC_ABILITIES.has(base)) return 'Academic';
+  return 'General';
+}
+function abilitiesHtml(list){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  const rank = c => { const i = ABILITY_CATEGORIES.indexOf(c); return i < 0 ? 99 : i; };
+  const rows = list.map(a=>({a, cat: abilityCategory(a.name)}))
+    .sort((x,y)=> rank(x.cat)-rank(y.cat) || x.a.name.toLowerCase().localeCompare(y.a.name.toLowerCase()));
+  let out = '', lastCat = null;
+  for(const {a,cat} of rows){
+    if(cat !== lastCat){ out += `<div class="ability-cat">${esc(cat)}</div>`; lastCat = cat; }
+    out += `<div class="ability-row">
+      <span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span>
+      <span class="ab-score">${a.score}</span>
+    </div>`;
+  }
+  return out;
+}
+const RDT = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
+function spellsHtml(list){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  return list.map(sp=>{
+    const txt = ruleText(sp.name, sp.description);
+    return `<div class="spell-item" style="margin-bottom:9px;padding:7px 9px;background:rgba(244,235,213,.5);border-radius:6px;border:1px solid rgba(120,90,40,.25)">
+      <div class="sp-name" style="font-weight:600;font-size:13px;color:var(--ink)">${esc(sp.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:11.5px">(lvl ${sp.level})</span></div>
+      <div class="sp-meta" style="font-size:11px;color:var(--ink-soft);margin:1px 0 3px">${esc(sp.technique)}${sp.form?'/'+esc(sp.form):''} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${sp.ritual?' · Ritual':''}</div>
+      ${txt?`<div class="sp-desc" style="font-size:12px;color:var(--ink-soft);line-height:1.4">${mdRules(txt)}</div>`:''}
+    </div>`;
+  }).join('');
+}
+function powersHtml(list){
+  return list.map(p=>{
+    const meta = [p.cost, p.init!=null?`Init ${p.init}`:'', p.form].filter(Boolean).join(' · ');
+    return `<div class="power-item">
+      <div class="pw-name">${esc(p.name)}</div>
+      ${meta?`<div class="pw-meta">${esc(meta)}</div>`:''}
+      ${p.description?`<div class="pw-desc">${esc(p.description)}</div>`:''}
+    </div>`;
+  }).join('');
+}
+function combatHtml(list, soak){
+  const head = `<div class="combat-line head"><span>Attack</span><span class="cl-cell">Init</span><span class="cl-cell">Atk</span><span class="cl-cell">Def</span><span class="cl-cell">Dmg</span></div>`;
+  const rows = list.map(c=>`<div class="combat-line">
+    <span class="cl-name">${esc(c.name)}</span>
+    <span class="cl-cell"><span>${signed(c.init)}</span></span>
+    <span class="cl-cell"><span>${signed(c.attack)}</span></span>
+    <span class="cl-cell"><span>${signed(c.defense)}</span></span>
+    <span class="cl-cell"><span>${c.damage!=null?'+'+c.damage:'—'}</span></span>
+  </div>`).join('');
+  const soakLine = (soak!=null) ? `<div class="soak-line">Soak <b>${signed(soak)}</b></div>` : '';
+  return `<div class="combat-grid">${head}${rows}</div>${soakLine}`;
+}
+
+function sheetHtml(name){
+  const m = NPCS[name]; if(!m) return `<div class="sheet-empty">No record for ${esc(name)}.</div>`;
+  const isMagus = m.charType==='magus';
+  const isEntity = m.charType==='entity';
+  const portrait = m.portrait
+    ? `<img class="sheet-portrait" src="${esc(m.portrait)}" alt="${esc(m.name)}">`
+    : `<div class="sheet-portrait placeholder">${isEntity?'🐉':'🜛'}</div>`;
+  const sub = isMagus
+    ? [m.house?`House ${m.house}`:'', m.parens?`parens ${m.parens}`:''].filter(Boolean).join(' · ')
+    : (isEntity ? [m.mightRealm?`${m.mightRealm} entity`:'Entity', m.form?`(${m.form})`:''].filter(Boolean).join(' ') : (m.charType?cap(m.charType):''));
+
+  const metaChips = [
+    m.might!=null?`Might ${m.might}${m.mightRealm?' '+m.mightRealm:''}`:'',
+    m.age!=null?`Age ${m.age}`:'',
+    m.apparentAge!=null && m.apparentAge!==m.age?`(apparent ${m.apparentAge})`:'',
+    m.born!=null?`Born ${m.born}`:'',
+    m.confidence && m.confidence.score?`Confidence ${m.confidence.score}`:'',
+    m.size!=null && m.size!==0?`Size ${signed(m.size)}`:'',
+    m.warping?`Warping ${m.warping}`:'',
+  ].filter(Boolean).map((t,i)=>`<span class="meta-chip ${i===0 && m.might!=null?'might':''}">${esc(t)}</span>`).join('');
+
+  const extras = [];
+  if(m.sigil) extras.push(`<div><em>Sigil:</em> ${esc(m.sigil)}</div>`);
+  if(m.sanctum) extras.push(`<div><em>Sanctum:</em> ${esc(m.sanctum)}</div>`);
+  if(m.familiar) extras.push(`<div><em>Familiar:</em> ${esc(m.familiar)}</div>`);
+
+  const hasArts = Object.values(m.arts||{}).some(a=>a && a.score>0);
+  const hasCombat = Array.isArray(m.combat) && m.combat.length;
+  const hasPowers = Array.isArray(m.powers) && m.powers.length;
+
+  return `
+    <div class="sheet-header">
+      ${portrait}
+      <div>
+        <div class="sheet-name">${esc(m.name)}</div>
+        <p class="sheet-sub">${esc(sub)}</p>
+        ${m.shortDescription ? `<p class="sheet-tagline">${esc(m.shortDescription)}</p>` : ''}
+      </div>
+    </div>
+    ${metaChips?`<div class="sheet-meta">${metaChips}</div>`:''}
+    ${extras.length?`<p style="font-size:12.5px;margin:8px 0;line-height:1.6">${extras.join('<br>')}</p>`:''}
+    ${m.appearance?`<div class="appearance-box"><span class="ab-label">Appearance</span>${esc(m.appearance)}</div>`:''}
+
+    ${m.biography ? `
+    <details class="sheet-collapsible" open>
+      <summary>Biography</summary>
+      <div class="sheet-bio">${m.biography.split('\n\n').map(p=>`<p>${esc(p)}</p>`).join('')}</div>
+    </details>` : ''}
+
+    ${Object.values(m.characteristics||{}).some(v=>v) ? `
+    <div class="sheet-section-title">Characteristics</div>
+    ${charGridHtml(m.characteristics||{})}` : ''}
+
+    ${(isMagus || hasArts) ? `
+    <div class="sheet-section-title">Arts</div>
+    ${artsGridHtml(m.arts||{})}` : ''}
+
+    ${hasCombat ? `
+    <div class="sheet-section-title">Combat</div>
+    ${combatHtml(m.combat, m.soak)}` : (m.soak ? `<div class="sheet-section-title">Combat</div><div class="soak-line">Soak <b>${signed(m.soak)}</b></div>` : '')}
+
+    ${hasPowers ? `
+    <div class="sheet-section-title">Powers</div>
+    ${powersHtml(m.powers)}` : ''}
+
+    ${m.vis ? `<div class="vis-line"><strong>Vis:</strong> ${esc(m.vis)}</div>` : ''}
+
+    ${m.personalityTraits && m.personalityTraits.length ? `
+    <div class="sheet-section-title">Personality</div>
+    <div class="trait-chips">${m.personalityTraits.map(t=>`<span class="trait-chip">${esc(t)}</span>`).join('')}</div>` : ''}
+
+    <details class="sheet-collapsible" ${(m.virtues||[]).length?'open':''}>
+      <summary>Virtues (${(m.virtues||[]).length})</summary>
+      ${vfListHtml(m.virtues,'virtue')}
+    </details>
+    <details class="sheet-collapsible">
+      <summary>Flaws (${(m.flaws||[]).length})</summary>
+      ${vfListHtml(m.flaws,'flaw')}
+    </details>
+    <details class="sheet-collapsible">
+      <summary>Abilities (${(m.abilities||[]).length})</summary>
+      ${abilitiesHtml(m.abilities)}
+    </details>
+    ${(m.spells||[]).length ? `
+    <details class="sheet-collapsible">
+      <summary>Spells (${m.spells.length})</summary>
+      ${spellsHtml(m.spells)}
+    </details>` : ''}
+    ${m.reputations && m.reputations.length ? `
+    <details class="sheet-collapsible">
+      <summary>Reputations (${m.reputations.length})</summary>
+      <div class="vf-list">${m.reputations.map(r=>`<div class="vf-item"><span class="vf-name">${esc(r.name)}</span>${r.description?`<span class="vf-desc">${esc(r.description)}</span>`:''}</div>`).join('')}</div>
+    </details>` : ''}
+
+    <p class="sheet-source">${esc(m.source || 'Hand-authored covenant record.')}</p>
+  `;
+}
+
+function openSheet(name){
+  $('#sidebarContent').innerHTML = sheetHtml(name);
+  $('#sidebar').classList.add('open');
+  $('#overlay').classList.add('open');
+  $('#wrap').classList.add('sidebar-open','sidebar-wide');
+}
+function closeSheet(){
+  $('#sidebar').classList.remove('open');
+  $('#overlay').classList.remove('open');
+  $('#wrap').classList.remove('sidebar-open','sidebar-wide');
+}
+$('#sidebarClose').onclick = closeSheet;
+$('#overlay').onclick = closeSheet;
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheet(); });
+
+load();
+</script>
+<script src="nav.js"></script>
+</body>
+</html>
