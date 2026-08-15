@@ -1276,7 +1276,7 @@ function renderReview(el){
   const problems=[]; visibleSteps().forEach(s=>{const v=s.valid();if(!v.ok)(v.msgs||[]).forEach(m=>{if(m.level==='warn')problems.push(s.title+': '+m.text);});});
   const obj=exportObject();
   el.innerHTML=`${problems.length?`<div class="${advisory?'good':'warn'}"><strong>${advisory?'Advisory notes':'RAW issues'} (${problems.length})${advisory?' — informational, export allowed':''}:</strong><ul style="margin:6px 0 0">${problems.map(p=>`<li>${esc(p)}</li>`).join('')}</ul></div>`:'<div class="good">All RAW checks pass. Ready to export.</div>'}
-    <p class="step-help">Export is a superset of the site's <code>magi.json</code> shape — paste it into <code>magi.json</code>'s <code>magi</code> map to view in <a href="ships.html">Fleet &amp; Crew</a>. Foundry export is planned.</p>
+    <p class="step-help">Export is a superset of the site's <code>magi.json</code> shape — paste it into <code>magi.json</code>'s <code>magi</code> map to view in the <a href="play.html">Playable Sheet</a>. Foundry export is planned.</p>
     <div class="navbtns" style="justify-content:flex-start;flex-wrap:wrap">
       <button class="btn" id="dlBtn">⬇ Download JSON</button>
       <button class="btn ghost" id="copyBtn">Copy to clipboard</button>

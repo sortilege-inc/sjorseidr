@@ -206,7 +206,7 @@ footer{text-align:center;margin-top:44px;padding-top:14px;border-top:1px solid r
     <div>
       <div class="crumb"><a href="index.html">Sjórseiðr</a> · Covenant Archive · Dramatis Personae</div>
       <h1>Dramatis Personae</h1>
-      <p class="subtitle">The people, dragons, faeries, and spirits who move through the chronicle but do <em>not</em> crew a covenant ship — foreign magi, guardian-beasts of the regiones, and the Fae the covenant has dealt with. Click any card for the full sheet. (Everyone aboard the fleet lives on the <a href="ships.html">Fleet &amp; Crew</a> page.)</p>
+      <p class="subtitle">The people, dragons, faeries, and spirits who move through the chronicle but do <em>not</em> crew a covenant ship — foreign magi, guardian-beasts of the regiones, and the Fae the covenant has dealt with. Click any card for the full sheet. (Everyone aboard the fleet lives on the <a href="covenant_ledger.html#ships">Ledger's Ships &amp; Land</a> tab.)</p>
     </div>
   </header>
 
@@ -276,7 +276,7 @@ async function load(){
 
   renderFilters();
   render();
-  $('#foot').innerHTML = `${PERSONAE.length} characters not aboard the fleet, drawn live from <code>npcs.json</code> and cross-checked against <code>ships.json</code> — anyone later assigned to a ship's crew moves to the <a href="ships.html">Fleet &amp; Crew</a> page automatically. Virtue, flaw, and spell text is reproduced verbatim from the rules corpus where available.`;
+  $('#foot').innerHTML = `${PERSONAE.length} characters not aboard the fleet, drawn live from <code>npcs.json</code> and cross-checked against <code>ships.json</code> — anyone later assigned to a ship's crew moves to the <a href="covenant_ledger.html#ships">Ledger's Ships &amp; Land</a> tab automatically. Virtue, flaw, and spell text is reproduced verbatim from the rules corpus where available.`;
 }
 
 // ── grouping ────────────────────────────────────────────────

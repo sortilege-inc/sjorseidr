@@ -80,6 +80,9 @@ tr:hover td{background:rgba(198,155,63,.08)}
 .cols{columns:2;column-gap:24px}
 .cols .row{break-inside:avoid;font-size:13px;padding:2px 0;color:var(--ink)}
 .cols .row small{color:var(--ink-soft)}
+.pc-link{color:var(--ink);text-decoration:none;border-bottom:1px dotted rgba(44,107,102,.6);cursor:pointer}
+.pc-link:hover{color:var(--teal);border-bottom-style:solid}
+.pc-link:hover::after{content:' 🎲';font-size:.85em}
 .econ-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px dashed rgba(120,90,40,.25);font-size:14px}
 .econ-row b{font-family:'Cinzel',serif}
 .econ-big{font-size:20px;font-family:'Cinzel',serif}
@@ -214,7 +217,7 @@ footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);
 <script>
 const $=s=>document.querySelector(s);
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let D=null, COV=null, DETAILS=null, HOLD=null, tab='covenant', ledgerFilter='all', node='current';
+let D=null, COV=null, DETAILS=null, HOLD=null, MAGI={}, NPCS={}, SHIPS_DATA=null, inhabSeason='year', tab='covenant', ledgerFilter='all', node='current';
 const TABS=[['covenant','Covenant'],['overview','Overview'],['ships','Ships & Land'],['labs','Labs'],
   ['inhabitants','Inhabitants'],['library','Library'],['vis','Vis'],['trade','Trade'],
   ['economics','Economics'],['ledger','Ledger']];
@@ -251,9 +254,14 @@ async function load(){
   // Covenant sheet, per-ship lab detail, and land/proposed holdings — all optional;
   // the panels that use them degrade gracefully if a file is missing.
   const grab=async u=>{ try{ const r=await fetch(u,{cache:'no-store'}); return r.ok?await r.json():null; }catch(_){ return null; } };
-  [COV, DETAILS, HOLD] = await Promise.all([
-    grab('./covenant.json'), grab('./ship_details.json'), grab('./holdings.json')
+  let MJ, NJ, SJ;
+  [COV, DETAILS, HOLD, MJ, NJ, SJ] = await Promise.all([
+    grab('./covenant.json'), grab('./ship_details.json'), grab('./holdings.json'),
+    grab('./magi.json'), grab('./npcs.json'), grab('./ships.json')
   ]);
+  MAGI = (MJ && MJ.magi) || {};
+  NPCS = (NJ && NJ.npcs) || {};
+  SHIPS_DATA = SJ || null;
   $('#cname').textContent=`${esc(D.meta.identity.name)} — Covenant Ledger`;
   $('#caveat').textContent=D.meta.baseline;
   $('#foot').innerHTML=`Baseline from the Foundry covenant actor (~${esc(D.meta.asOf)}). Each node is the covenant at that year's end of Winter; <b>Current</b> is live. Year nodes fill in as we reconstruct them.`;
@@ -293,6 +301,32 @@ const shipLabList=()=>DETAILS&&DETAILS.ships
 const proposedLabList=()=>(HOLD&&HOLD.labs)?HOLD.labs.map(l=>({...l,source:'holding'})):[];
 const allLabs=()=>[...shipLabList(),...proposedLabList()];
 const landList=()=>(HOLD&&HOLD.land)?HOLD.land:[];
+
+// ── link a person's name to their playable sheet, when one exists ──
+// ships.json/inhabitants sometimes spell a name differently than the sheet key
+// (one-L "Wilhelm", a "Captain"/"Father" title, a "(failed apprentice)" suffix),
+// so resolve tolerantly: exact key, alias, then a distinctive-token match.
+const MAGI_ALIASES={'Wilhelm Stienauer':'Willhelm Stienauer'};
+const NAME_STOP=new Set(['captain','father','sir','brother','the']);
+const nameToks=s=>String(s==null?'':s).replace(/["'()\/]/g,' ').toLowerCase().split(/\s+/).filter(t=>t&&!NAME_STOP.has(t));
+function sheetKeyFor(name){
+  if(!name) return null;
+  if(MAGI[name]) return name;
+  if(NPCS[name]) return name;
+  if(MAGI_ALIASES[name] && MAGI[MAGI_ALIASES[name]]) return MAGI_ALIASES[name];
+  const nt=nameToks(name); if(!nt.length) return null;
+  const keys=[...Object.keys(MAGI),...Object.keys(NPCS)];
+  let hits=keys.filter(k=>{const kt=nameToks(k);return kt.length&&kt[0]===nt[0];});
+  if(hits.length===1) return hits[0];
+  hits=keys.filter(k=>{const kt=new Set(nameToks(k));return nt.some(t=>t.length>2&&kt.has(t));});
+  return hits.length===1?hits[0]:null;
+}
+function nameLink(name){
+  const key=sheetKeyFor(name);
+  return key
+    ? `<a class="pc-link" href="play.html?char=${encodeURIComponent(key)}" title="Open ${esc(name)}'s playable sheet">${esc(name)}</a>`
+    : esc(name);
+}
 
 // ── covenant-sheet + lab/land rendering helpers ──
 const cap=s=>(s||'').replace(/^\w/,c=>c.toUpperCase());
@@ -394,7 +428,34 @@ function render(){
   if(tab==='vis') wireVis();
   if(tab==='library') wireLib();
   if(tab==='ships') wireLand();
+  if(tab==='inhabitants') wireInhab();
 }
+// Story-leg crew snapshots (ships.json) that fall within a given year — the
+// seasonal breakdown offered inside the Inhabitants tab.
+function seasonsForYear(year){
+  const snaps=(SHIPS_DATA&&SHIPS_DATA.snapshots)||[];
+  return snaps.filter(sn=>{
+    let y=String(sn.sort_iso||'').slice(0,4);
+    if(!/^\d{4}$/.test(y)){ const m=String(sn.label||'').match(/(1[12]\d\d)/); y=m?m[1]:''; }
+    return y===String(year);
+  }).sort((a,b)=>String(a.sort_iso||'').localeCompare(String(b.sort_iso||'')));
+}
+function seasonInhabHtml(sn){
+  const st=s();
+  const shipName=id=>{const sh=(st.ships||[]).find(x=>x.id===id);return sh?sh.name:(SHIP_NAMES[id]||id);};
+  const blocks=(sn.assignments||[]).map(a=>{
+    const crew=a.crew||[];
+    const body=crew.length?crew.map(n=>`<div class="row">${nameLink(n)}</div>`).join('')
+      :`<div class="row" style="font-style:italic;color:var(--ink-soft)">— no crew listed —</div>`;
+    return `<div class="catblock"><h3 style="text-transform:none">⛵ ${esc(shipName(a.ship))} <span class="n">(${crew.length})</span>${a.note?` <span class="n">— ${esc(a.note)}</span>`:''}</h3>
+      <div class="cols">${body}</div></div>`;
+  }).join('');
+  return `<p class="section-sub">Who crewed which ship in <b>${esc((sn.label||'').split(' — ')[0])}</b>${sn.note?` — ${esc(sn.note)}`:''}</p>${blocks}`;
+}
+function wireInhab(){
+  document.querySelectorAll('[data-inhabs]').forEach(b=>b.onclick=()=>{ inhabSeason=b.dataset.inhabs; render(); });
+}
+
 const PANELS={
   covenant(){
     if(!COV) return `<p class="section-sub">Covenant sheet (covenant.json) not loaded.</p>`;
@@ -456,7 +517,7 @@ const PANELS={
       const inactive=/no longer|sabbatical|route|left|depart|laid|prize/i.test(sh.status||'');
       return `<div class="card ship"><span class="st ${inactive?'inactive':''}">${esc(sh.status||'')}</span>
         <h3>${esc(sh.name)}${sh.aka?` <small style="color:var(--ink-soft)">(${esc(sh.aka)})</small>`:''}</h3>
-        <div class="meta">${esc(sh.kind||'')} · owner <b>${esc(sh.owner||'—')}</b>${sh.captain?` · captain ${esc(sh.captain)}`:''}</div>
+        <div class="meta">${esc(sh.kind||'')} · owner <b>${sh.owner?nameLink(sh.owner):'—'}</b>${sh.captain?` · captain ${nameLink(sh.captain)}`:''}</div>
         <div class="lab ${sh.lab?'':'none'}">⚗ ${sh.lab?esc(sh.lab):'no laboratory'}</div></div>`;}).join('');
     const land=landList();
     const landHtml=land.length
@@ -476,12 +537,20 @@ const PANELS={
     const COUNT_CATS=['turbula','specialists','craftsmen','servants','crew','grog'];
     const tagOf=i=>{ if(i.standing&&STAND[i.standing])return chip(STAND[i.standing][0],STAND[i.standing][1]);
       if(CATTAG[i.category])return chip(CATTAG[i.category][0],CATTAG[i.category][1]); return ''; };
-    const row=i=>`<div class="row">${esc(i.name)}${i.qty>1?` ×${i.qty}`:''}${i.job?` <small>— ${esc(i.job)}</small>`:''}${i.yearBorn?` <small>(b. ${esc(i.yearBorn)})</small>`:''}${tagOf(i)}</div>`;
+    const row=i=>`<div class="row">${nameLink(i.name)}${i.qty>1?` ×${i.qty}`:''}${i.job?` <small>— ${esc(i.job)}</small>`:''}${i.yearBorn?` <small>(b. ${esc(i.yearBorn)})</small>`:''}${tagOf(i)}</div>`;
+    // Season breakdown within this node's year (from the ships.json story-leg snapshots).
+    const seasons=seasonsForYear(nodeYear());
+    const activeSeason=seasons.find(sn=>sn.id===inhabSeason);
+    const seasonToggle = seasons.length
+      ? `<div class="viewtoggle" style="margin-bottom:12px"><button class="fbtn ${activeSeason?'':'on'}" data-inhabs="year">Year-end roster</button>`
+        + seasons.map(sn=>`<button class="fbtn ${inhabSeason===sn.id?'on':''}" data-inhabs="${esc(sn.id)}">${esc((sn.label||sn.id).split(' — ')[0])}</button>`).join('')
+        + `</div>` : '';
+    if(activeSeason) return seasonToggle + seasonInhabHtml(activeSeason);
     const useShip = st.inhabitants.some(i=>i.ship||i.standing);
     if(!useShip){
       const cats={}; st.inhabitants.forEach(i=>(cats[i.category]=cats[i.category]||[]).push(i));
       const order=['magi','companions','specialists','craftsmen','turbula','servants'];
-      return `<p class="section-sub">The covenant's people as recorded in the actor (${st.inhabitants.length} total). Counts include grouped servants/turbula.</p>`
+      return seasonToggle + `<p class="section-sub">The covenant's people as recorded in the actor (${st.inhabitants.length} total). Counts include grouped servants/turbula.</p>`
         + order.filter(c=>cats[c]).map(c=>{const list=cats[c];
           return `<div class="catblock"><h3>${esc(c)} <span class="n">(${list.reduce((a,i)=>a+(i.qty||1),0)})</span></h3>
             <div class="cols">${list.map(row).join('')}</div></div>`;}).join('');
@@ -494,7 +563,7 @@ const PANELS={
     const shipOrder=(st.ships||[]).map(sh=>sh.id).filter(k=>groups[k]);
     const otherKeys=Object.keys(groups).filter(k=>k!=='__none__'&&!shipOrder.includes(k));
     const keys=[...shipOrder,...otherKeys,...(groups['__none__']?['__none__']:[])];
-    let html=`<p class="section-sub">Grouped by ship. Each hull carries a pool of 14 crew — named grogs fill slots, the rest shows as “additional crew”. Magi, apprentices, companions, familiars and guests don't count against a ship's crew. Sabbatical crews are tracked but excluded from upkeep; prize crews count.${absent.length?` ${absent.length} member${absent.length===1?'':'s'} in the covenant but not contributing, below.`:''}</p>`;
+    let html=seasonToggle+`<p class="section-sub">Grouped by ship. Each hull carries a pool of 14 crew — named grogs fill slots, the rest shows as “additional crew”. Magi, apprentices, companions, familiars and guests don't count against a ship's crew. Sabbatical crews are tracked but excluded from upkeep; prize crews count.${absent.length?` ${absent.length} member${absent.length===1?'':'s'} in the covenant but not contributing, below.`:''}</p>`;
     html+=keys.map(k=>{
       const list=groups[k]; const sh=(st.ships||[]).find(x=>x.id===k);
       const title=k==='__none__'?'Covenant household':shipName(k);
