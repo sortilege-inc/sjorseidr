@@ -1,0 +1,1725 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sjórseiðr — Playable Character Sheet</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=UnifrakturCook:wght@700&display=swap');
+
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86;
+  --purple:#5b3a8a; --green:#3e6b35;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;
+  min-height:100vh;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(120,80,30,.06) 0 2px, transparent 3px),
+    radial-gradient(circle at 70% 60%, rgba(90,60,20,.05) 0 2px, transparent 3px),
+    radial-gradient(circle at 50% 85%, rgba(120,80,30,.05) 0 2px, transparent 3px);
+  background-size:140px 140px,180px 180px,160px 160px;opacity:.6;mix-blend-mode:multiply;
+}
+.wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:32px 20px 80px;
+  transition:margin-right .2s ease}
+.wrap.sidebar-open{margin-right:min(320px,90vw)}
+.wrap.sidebar-open.sidebar-wide{margin-right:min(600px,94vw)}
+a{color:var(--teal-bright)}
+
+header{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;
+  border-bottom:2px solid var(--line);padding-bottom:16px;margin-bottom:22px}
+.crumb{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--rust-bright);margin:4px 0 2px}
+.subtitle{font-style:italic;color:var(--ink-soft);font-size:14.5px;margin:0}
+
+.tabs{display:flex;gap:4px;margin-bottom:18px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tab{font-family:'Cinzel',serif;font-size:12.5px;letter-spacing:.03em;padding:9px 16px;cursor:pointer;
+  color:var(--ink-soft);border-bottom:3px solid transparent;transition:color .12s,border-color .12s}
+.tab:hover{color:var(--ink)}
+.tab.active{color:var(--rust-bright);border-color:var(--rust-bright);font-weight:600}
+
+.snap-note{font-style:italic;color:var(--ink-soft);font-size:14px;margin:0 0 18px;
+  padding:10px 14px;background:rgba(120,90,40,.08);border-left:3px solid var(--gold);border-radius:0 6px 6px 0}
+
+.ship-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.ship-card{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);
+  border:1.5px solid rgba(120,90,40,.45);border-radius:10px;padding:14px 16px 15px;
+  box-shadow:0 2px 6px var(--shadow)}
+.ship-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:4px}
+.ship-name{font-family:'Cinzel',serif;font-weight:600;font-size:16.5px;color:var(--ink)}
+.ship-owner{font-style:italic;color:var(--ink-soft);font-size:12.5px;margin:0 0 8px}
+.ship-status{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.04em;text-transform:uppercase;
+  padding:2px 8px;border-radius:9px;white-space:nowrap;flex:none}
+.ship-status.active{background:rgba(62,107,53,.16);color:var(--green);border:1px solid rgba(62,107,53,.4)}
+.ship-status.lost,.ship-status.missing,.ship-status.fate-unknown{background:rgba(138,51,36,.14);color:var(--rust);border:1px solid rgba(138,51,36,.4)}
+.ship-status.uncertain,.ship-status.unclear{background:rgba(154,107,31,.16);color:var(--gold);border:1px solid rgba(154,107,31,.4)}
+.ship-status.reassigned{background:rgba(44,107,102,.16);color:var(--teal);border:1px solid rgba(44,107,102,.35)}
+.ship-status.no-longer-part-of-the-covenant{background:rgba(74,60,44,.14);color:var(--ink-soft);border:1px solid rgba(74,60,44,.3)}
+.ship-desc{font-size:13.5px;line-height:1.5;color:var(--ink-soft);margin:0 0 10px}
+.ship-captain{font-style:italic;color:var(--ink-soft);font-size:12px;margin:0 0 8px}
+.ship-note{font-size:12.5px;line-height:1.45;color:var(--ink-soft);font-style:italic;margin:0 0 10px}
+.crew-label{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-soft);margin-bottom:6px}
+.crew-list{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:'EB Garamond',serif;font-size:13px;cursor:pointer;
+  background:rgba(244,235,213,.7);border:1px solid rgba(120,90,40,.4);border-radius:14px;
+  padding:3px 11px;color:var(--ink);transition:all .12s}
+.chip:hover{background:var(--gold-bright);color:#fff6df;border-color:#7a5318}
+.chip.pc-magus{background:rgba(181,74,50,.16);border-color:rgba(181,74,50,.5);color:var(--rust-bright);font-weight:600}
+.chip.npc-magus{background:rgba(91,58,138,.14);border-color:rgba(91,58,138,.45);color:var(--purple)}
+.chip.companion{background:rgba(44,107,102,.14);border-color:rgba(44,107,102,.4);color:var(--teal)}
+.chip.other{background:rgba(154,107,31,.16);border-color:rgba(154,107,31,.45);color:var(--gold)}
+.crew-empty{font-size:12.5px;font-style:italic;color:var(--ink-soft)}
+
+.chip-legend{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 18px;font-size:11.5px;color:var(--ink-soft)}
+.legend-item{display:flex;align-items:center;gap:5px}
+.legend-swatch{width:11px;height:11px;border-radius:50%;display:inline-block;border:1px solid rgba(120,90,40,.45);flex:none}
+.legend-swatch.pc-magus{background:var(--rust-bright);border-color:rgba(181,74,50,.6)}
+.legend-swatch.npc-magus{background:var(--purple);border-color:rgba(91,58,138,.6)}
+.legend-swatch.companion{background:var(--teal);border-color:rgba(44,107,102,.6)}
+.legend-swatch.grog{background:rgba(244,235,213,.9)}
+.legend-swatch.other{background:var(--gold);border-color:rgba(154,107,31,.6)}
+
+.ref-list{display:flex;flex-direction:column;gap:12px}
+
+/* All Ships cards are <details> — collapsed to just the name/owner/status row,
+   expand to reveal everything else (.ship-body). No nested collapsibles inside. */
+.ship-card summary.ship-summary{cursor:pointer;list-style:none;display:flex;align-items:flex-start;gap:8px}
+.ship-card summary.ship-summary::-webkit-details-marker{display:none}
+.ship-card summary.ship-summary::marker{display:none}
+.ship-card summary.ship-summary::before{content:'▸';color:var(--gold);flex:none;font-size:13px;margin-top:3px}
+.ship-card[open] summary.ship-summary::before{content:'▾'}
+.ship-card summary.ship-summary .ship-head{flex:1;margin-bottom:0}
+.ship-body{padding-top:12px}
+
+.ship-dims{font-size:12px;font-style:italic;color:var(--ink-soft);margin:0 0 8px}
+.ship-owner-line{font-size:12.5px;color:var(--ink-soft);margin:0 0 8px}
+.ship-owner-line .former{opacity:.85}
+.ship-covenant-status{font-size:12px;padding:5px 9px;border-radius:6px;background:rgba(138,51,36,.1);
+  border:1px solid rgba(138,51,36,.3);color:var(--rust);margin:0 0 10px}
+.ship-note-flag{font-size:11.5px;font-style:italic;color:var(--ink-soft);opacity:.8;margin:0 0 8px}
+
+.detail-section{margin-top:14px}
+.detail-section-title{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-soft);margin:0 0 8px}
+
+.device-item{margin:6px 0;padding:7px 10px;background:rgba(244,235,213,.55);border-radius:6px;
+  border:1px solid rgba(120,90,40,.3)}
+.device-item .dv-name{font-weight:600;font-size:13px;color:var(--ink)}
+.device-item .dv-desc{font-size:12px;color:var(--ink-soft);line-height:1.42;margin:2px 0 4px}
+.device-item .dv-effect{font-size:11.5px;color:var(--teal);margin:1px 0}
+
+.lab-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:6px 0 8px}
+.lab-stat{text-align:center;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.3);
+  border-radius:6px;padding:4px 2px}
+.lab-stat .ls-label{display:block;font-size:9.5px;letter-spacing:.03em;color:var(--ink-soft);text-transform:uppercase}
+.lab-stat .ls-val{display:block;font-size:14px;font-weight:600;color:var(--ink)}
+.lab-extra{font-size:12px;color:var(--ink-soft);line-height:1.5}
+
+/* sidebar */
+#sidebar{position:fixed;top:0;right:0;width:min(320px,90vw);height:100vh;z-index:50;
+  background:linear-gradient(180deg,var(--parch),var(--parch-deep));
+  border-left:2px solid var(--line);box-shadow:-8px 0 24px var(--shadow);
+  transform:translateX(100%);transition:transform .2s ease,width .2s ease;
+  overflow-y:auto;padding:20px}
+#sidebar.open{transform:translateX(0)}
+#sidebar.wide{width:min(600px,94vw)}
+#sidebarClose{position:absolute;top:14px;right:14px;background:none;border:none;font-size:20px;
+  cursor:pointer;color:var(--ink-soft);line-height:1;z-index:2}
+#sidebarClose:hover{color:var(--rust)}
+.sb-name{font-family:'Cinzel',serif;font-weight:600;font-size:20px;color:var(--rust-bright);margin:26px 0 2px}
+.sb-role{font-style:italic;color:var(--ink-soft);font-size:14px;margin:0 0 2px}
+.sb-affil{font-size:13px;color:var(--ink-soft);margin:0 0 14px}
+.sb-note{font-size:14.5px;line-height:1.55;margin:0 0 18px}
+.sb-stub{border:1.5px dashed rgba(120,90,40,.5);border-radius:8px;padding:14px;
+  text-align:center;color:var(--ink-soft);font-style:italic;font-size:13px}
+#overlay{position:fixed;inset:0;background:rgba(30,20,10,.25);z-index:40;display:none}
+#overlay.open{display:block}
+
+/* magus sheet */
+.sheet-header{display:flex;gap:14px;align-items:flex-start;margin:8px 0 14px}
+.sheet-portrait{width:76px;height:76px;border-radius:8px;object-fit:cover;flex:none;
+  border:1.5px solid rgba(120,90,40,.5);box-shadow:0 2px 6px var(--shadow)}
+.sheet-portrait.placeholder{display:flex;align-items:center;justify-content:center;
+  background:rgba(120,90,40,.12);font-size:26px;color:var(--ink-soft)}
+.sheet-name{font-family:'Cinzel',serif;font-weight:600;font-size:19px;color:var(--rust-bright);margin:0 0 2px}
+.sheet-sub{font-style:italic;color:var(--ink-soft);font-size:12.5px;line-height:1.4;margin:0}
+.sheet-tagline{font-size:12.5px;color:var(--ink);line-height:1.4;margin:4px 0 0}
+.sheet-meta{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 4px}
+.meta-chip{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.03em;text-transform:uppercase;
+  padding:2px 8px;border-radius:9px;background:rgba(120,90,40,.1);color:var(--ink-soft);
+  border:1px solid rgba(120,90,40,.3);white-space:nowrap}
+.sheet-source{font-size:11px;font-style:italic;color:var(--ink-soft);opacity:.75;margin:2px 0 16px}
+
+.sheet-section-title{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--ink-soft);border-bottom:1px solid rgba(120,90,40,.35);margin:18px 0 8px;padding-bottom:3px}
+
+.char-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px 6px}
+.char-stat{text-align:center;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.3);
+  border-radius:6px;padding:5px 2px}
+.char-stat .cs-label{display:block;font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.04em;color:var(--ink-soft)}
+.char-stat .cs-val{display:block;font-size:16px;font-weight:600;color:var(--ink)}
+
+.arts-row-label{font-size:10.5px;color:var(--ink-soft);font-style:italic;margin:8px 0 4px}
+.arts-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.art-cell{text-align:center;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.3);
+  border-radius:6px;padding:4px 2px}
+.art-cell .a-label{display:block;font-size:10px;color:var(--ink-soft)}
+.art-cell .a-val{display:block;font-size:14.5px;font-weight:600;color:var(--teal)}
+.art-cell.technique .a-val{color:var(--rust)}
+
+.vf-list{display:flex;flex-direction:column;gap:6px}
+.vf-item{font-size:12.5px;line-height:1.45;padding:6px 9px;border-radius:6px;background:rgba(244,235,213,.5);
+  border-left:3px solid var(--line)}
+.vf-item.virtue{border-left-color:var(--green)}
+.vf-item.flaw{border-left-color:var(--rust)}
+.vf-item .vf-name{font-weight:600;color:var(--ink)}
+.vf-item .vf-impact{font-size:10px;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-soft);
+  font-style:normal;margin-left:5px}
+.vf-item .vf-desc{display:block;color:var(--ink-soft);margin-top:2px}
+
+.ability-row{display:flex;justify-content:space-between;gap:8px;font-size:12.5px;padding:3px 0;
+  border-bottom:1px dotted rgba(120,90,40,.25)}
+.ability-row .ab-name{color:var(--ink)}
+.ability-row .ab-spec{color:var(--ink-soft);font-style:italic;font-size:11.5px}
+.ability-row .ab-score{font-weight:600;color:var(--teal);flex:none}
+.rollable{cursor:pointer;transition:background .12s}
+.rollable:hover{background:rgba(198,155,63,.16)}
+.ability-row.rollable{border-radius:4px;padding-left:4px;padding-right:4px;margin:0 -4px}
+.ability-row.rollable:hover .ab-name::before{content:'🎲 ';font-size:11px}
+.ability-cat{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--gold);margin:9px 0 2px;padding-bottom:2px;border-bottom:1px solid rgba(120,90,40,.35)}
+.ability-cat:first-child{margin-top:0}
+
+.spell-item{margin-bottom:9px;padding:7px 9px;background:rgba(244,235,213,.5);border-radius:6px;
+  border:1px solid rgba(120,90,40,.25)}
+.spell-item.rollable:hover{border-color:var(--gold);background:rgba(198,155,63,.12)}
+.spell-item .sp-name{font-weight:600;font-size:13px;color:var(--ink)}
+.spell-item.rollable:hover .sp-name::before{content:'✨ ';font-size:11px}
+.spell-item .sp-meta{font-size:11px;color:var(--ink-soft);margin:1px 0 3px}
+.spell-item .sp-desc{font-size:12px;color:var(--ink-soft);line-height:1.4}
+
+/* ── Dice-roll modal ─────────────────────────────────────── */
+#rollModal{position:fixed;inset:0;z-index:60;display:none;align-items:center;justify-content:center;
+  background:rgba(30,18,6,.55);padding:16px}
+#rollModal.open{display:flex}
+.roll-dialog{background:linear-gradient(180deg,#f3e9cf,#e7d7ac);border:1.5px solid var(--line);
+  border-radius:12px;box-shadow:0 10px 40px rgba(40,24,8,.5);width:min(440px,96vw);
+  max-height:92vh;overflow-y:auto;padding:18px 20px 20px}
+.roll-dialog h3{font-family:'Cinzel',serif;font-size:16px;color:var(--rust-bright);margin:0 0 2px}
+.roll-dialog .rd-sub{font-size:12px;color:var(--ink-soft);font-style:italic;margin:0 0 14px}
+.roll-dialog .rd-close{float:right;cursor:pointer;font-size:18px;color:var(--ink-soft);
+  background:none;border:none;line-height:1;margin:-4px -6px 0 0}
+.rd-row{display:flex;align-items:center;gap:8px;margin:7px 0;font-size:13px}
+.rd-row label{flex:1;color:var(--ink)}
+.rd-row .rd-hint{color:var(--ink-soft);font-size:11px;font-style:italic}
+.rd-row select,.rd-row input[type=number]{font-family:'EB Garamond',serif;font-size:13px;
+  padding:4px 7px;border:1px solid rgba(120,90,40,.45);border-radius:6px;background:rgba(255,250,238,.8);
+  color:var(--ink)}
+.rd-row input[type=number]{width:62px;text-align:center}
+.rd-row select{min-width:120px}
+.rd-check{display:flex;align-items:flex-start;gap:7px;margin:5px 0;font-size:12.5px;color:var(--ink)}
+.rd-check input{margin-top:3px;flex:none}
+.rd-check .rd-val{color:var(--teal);font-weight:600;flex:none}
+.rd-check.on{color:var(--ink)}
+.rd-divider{border:none;border-top:1px dashed rgba(120,90,40,.4);margin:13px 0 10px}
+.rd-section-label{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-soft);margin:12px 0 5px}
+.rd-buttons{display:flex;gap:8px;margin-top:14px}
+.rd-btn{flex:1;font-family:'Cinzel',serif;font-weight:600;font-size:12.5px;letter-spacing:.03em;
+  cursor:pointer;border:1px solid #7a5318;border-radius:8px;padding:9px 8px;color:#fff6df;
+  background:linear-gradient(180deg,var(--gold-bright),var(--gold));box-shadow:0 2px 4px var(--shadow)}
+.rd-btn:hover{filter:brightness(1.07)}
+.rd-btn.simple{background:linear-gradient(180deg,var(--teal-bright),var(--teal));border-color:#1f4b47}
+.rd-btn:disabled{opacity:.4;cursor:not-allowed;filter:none}
+.rd-result{margin-top:15px;padding:13px 14px;border-radius:9px;background:rgba(255,250,238,.7);
+  border:1px solid rgba(120,90,40,.4);display:none}
+.rd-result.show{display:block;animation:rdpop .18s ease}
+@keyframes rdpop{from{transform:scale(.96);opacity:.4}to{transform:scale(1);opacity:1}}
+.rd-total{font-family:'Cinzel',serif;font-size:15px;color:var(--ink)}
+.rd-total b{font-size:26px;color:var(--rust-bright);vertical-align:-2px}
+.rd-total.botch b{color:var(--rust)}
+.rd-outcome{font-size:13px;margin-top:5px;font-weight:600}
+.rd-outcome.good{color:var(--green)}
+.rd-outcome.bad{color:var(--rust)}
+.rd-breakdown{font-size:11.5px;color:var(--ink-soft);margin-top:7px;line-height:1.5;font-family:'EB Garamond',serif}
+.rd-breakdown .rd-die{color:var(--gold);font-weight:600}
+.rd-botchflag{color:var(--rust);font-weight:600}
+.rd-flags{margin-top:11px;padding:9px 11px;border-radius:8px;background:rgba(138,51,36,.1);
+  border:1px solid rgba(138,51,36,.3);color:var(--rust);font-size:11.5px;line-height:1.55}
+.rd-pen{margin-top:9px;padding-top:9px;border-top:1px dashed rgba(120,90,40,.35);font-size:12.5px;color:var(--ink)}
+.rd-pen-total{font-family:'Cinzel',serif;font-weight:600}
+.rd-pen-total.good{color:var(--green)}
+.rd-pen-total.bad{color:var(--rust)}
+.combat-open{font-family:'Cinzel',serif;font-weight:600;font-size:12px;letter-spacing:.03em;cursor:pointer;
+  border:1px solid #6a2418;border-radius:7px;padding:7px 13px;color:#fff6df;
+  background:linear-gradient(180deg,var(--rust-bright),var(--rust));box-shadow:0 2px 4px var(--shadow);margin-top:2px}
+.combat-open:hover{filter:brightness(1.08)}
+.cb-summary{display:flex;flex-wrap:wrap;gap:4px 12px;margin:11px 0 2px;padding:9px 11px;
+  background:rgba(120,90,40,.1);border-radius:7px;font-family:'Cinzel',serif;font-size:12px;color:var(--ink)}
+.cb-summary .cb-ab{color:var(--teal)}
+.rd-total b.hit{color:var(--green)}
+
+.trait-chips,.rep-chips{display:flex;flex-wrap:wrap;gap:5px}
+.trait-chip{font-size:11.5px;padding:2px 9px;border-radius:11px;background:rgba(91,58,138,.12);
+  color:var(--purple);border:1px solid rgba(91,58,138,.3)}
+
+.wound-warn{font-size:12.5px;padding:7px 10px;border-radius:6px;background:rgba(138,51,36,.12);
+  border:1px solid rgba(138,51,36,.35);color:var(--rust);margin-bottom:4px}
+
+.sheet-collapsible summary{cursor:pointer;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-soft);border-bottom:1px solid rgba(120,90,40,.35);
+  margin:18px 0 8px;padding-bottom:3px;list-style:none}
+.sheet-collapsible summary::-webkit-details-marker{display:none}
+.sheet-collapsible summary::before{content:'▸ ';color:var(--gold)}
+.sheet-collapsible[open] summary::before{content:'▾ '}
+.sheet-empty{font-size:12px;font-style:italic;color:var(--ink-soft)}
+.sheet-bio{font-size:13.5px;line-height:1.6;color:var(--ink)}
+.sheet-bio p{margin:0 0 10px}
+.sheet-bio p:last-child{margin-bottom:0}
+
+footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);opacity:.75}
+
+/* ── playable-page layout ── */
+.play-bar{position:sticky;top:0;z-index:30;display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;
+  padding:9px 16px;background:rgba(56,38,18,.94);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);
+  border-bottom:2px solid var(--line);box-shadow:0 2px 12px var(--shadow);font-family:'Cinzel',serif}
+.play-bar .pb-brand{font-weight:600;letter-spacing:.05em;color:var(--gold-bright);font-size:14.5px;text-decoration:none}
+.play-bar .pb-pick{font-size:11.5px;letter-spacing:.03em;color:#e9d8b2;display:flex;align-items:center;gap:6px}
+.play-bar .pb-pick select{font-family:'EB Garamond',serif;font-size:14px;color:var(--ink);background:rgba(244,235,213,.92);
+  border:1px solid #7a5318;border-radius:6px;padding:4px 8px;max-width:60vw}
+.play-bar .pb-spacer{flex:1}
+.play-bar .pb-btn{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.03em;cursor:pointer;color:#fff6df;
+  background:linear-gradient(180deg,var(--gold-bright),var(--gold));border:1px solid #7a5318;border-radius:7px;padding:6px 11px}
+.play-bar .pb-btn:hover{filter:brightness(1.07)}
+.play-bar .pb-link{font-size:12px;color:#e9d8b2;text-decoration:none;padding:6px 8px;border-radius:6px}
+.play-bar .pb-link:hover{color:#fff6df;background:rgba(255,255,255,.07)}
+
+.play-wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:24px 20px 80px;
+  display:grid;grid-template-columns:minmax(0,1fr) 288px;gap:24px;align-items:start}
+#sheet{min-width:0}
+.play-side{position:sticky;top:70px;display:flex;flex-direction:column;gap:14px}
+.play-note{font-size:11.5px;line-height:1.5;color:var(--ink-soft);font-style:italic;margin:0}
+@media(max-width:820px){.play-wrap{grid-template-columns:1fr}.play-side{position:static}}
+
+.tracker-box,.log-box{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);border:1.5px solid rgba(120,90,40,.45);
+  border-radius:10px;padding:12px 14px;box-shadow:0 2px 6px var(--shadow)}
+.tk-title{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust-bright);
+  border-bottom:1px solid rgba(120,90,40,.3);padding-bottom:4px;margin-bottom:8px}
+.tk-title .tk-who{font-family:'EB Garamond',serif;text-transform:none;letter-spacing:0;font-style:italic;color:var(--ink-soft);font-size:12px}
+.tk-row{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:3px 0}
+.tk-row .tk-l{font-size:13px;color:var(--ink)}
+.tk-step{display:flex;align-items:center;gap:7px}
+.tk-step button{width:23px;height:23px;border-radius:6px;border:1px solid #7a5318;cursor:pointer;
+  background:linear-gradient(180deg,var(--gold-bright),var(--gold));color:#fff6df;font-size:14px;line-height:1;font-weight:600}
+.tk-step button:hover{filter:brightness(1.08)}
+.tk-step .tk-v{min-width:20px;text-align:center;font-family:'Cinzel',serif;font-size:15px;color:var(--ink)}
+.tk-tag{font-size:10.5px;font-style:italic;color:var(--ink-soft);margin-left:auto;text-align:right}
+.tk-wsub{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin:8px 0 2px}
+#tkNotes{width:100%;min-height:150px;font-family:'EB Garamond',serif;font-size:13px;color:var(--ink);
+  background:rgba(255,250,238,.7);border:1px solid rgba(120,90,40,.4);border-radius:6px;padding:7px 9px;resize:vertical}
+.tk-reset{margin-top:8px;width:100%;font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.03em;cursor:pointer;
+  color:var(--ink-soft);background:rgba(244,235,213,.6);border:1px solid rgba(120,90,40,.35);border-radius:7px;padding:5px}
+.tk-reset:hover{color:var(--rust)}
+
+.log-head{display:flex;align-items:center;gap:8px;font-family:'Cinzel',serif;font-size:12px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--rust-bright);border-bottom:1px solid rgba(120,90,40,.3);padding-bottom:4px;margin-bottom:8px}
+.log-head .log-count{font-family:'EB Garamond',serif;text-transform:none;letter-spacing:0;color:var(--ink-soft);font-style:italic}
+.link-btn{margin-left:auto;font-family:'Cinzel',serif;font-size:10px;letter-spacing:.03em;cursor:pointer;
+  background:none;border:none;color:var(--teal);text-decoration:underline}
+.log-empty{font-size:12px;font-style:italic;color:var(--ink-soft);margin:2px 0}
+.log-item{position:relative;padding:7px 22px 8px 9px;margin-bottom:7px;background:rgba(244,235,213,.55);
+  border:1px solid rgba(120,90,40,.28);border-left:3px solid var(--gold);border-radius:0 7px 7px 0}
+.log-top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.log-name{font-weight:600;font-size:12.5px;color:var(--ink)}
+.log-when{font-size:9.5px;color:var(--ink-soft);white-space:nowrap}
+.log-line{font-size:12.5px;color:var(--rust);margin-top:1px}
+.log-detail{font-size:11px;color:var(--ink-soft);line-height:1.45;margin-top:2px}
+.log-del{position:absolute;top:5px;right:5px;background:none;border:none;cursor:pointer;color:var(--ink-soft);font-size:11px;line-height:1;opacity:.5}
+.log-del:hover{opacity:1;color:var(--rust)}
+.rd-keep{margin-top:11px;width:100%;font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.03em;cursor:pointer;
+  color:#fff6df;background:linear-gradient(180deg,var(--teal-bright),var(--teal));border:1px solid #1f4b47;border-radius:8px;padding:8px}
+.rd-keep:hover{filter:brightness(1.07)}
+.rd-keep.kept{background:rgba(62,107,53,.2);color:var(--green);border-color:rgba(62,107,53,.5);cursor:default}
+
+/* sheet section tabs (Abilities / Virtues / Flaws / Spells) */
+.sheet-tabs{display:flex;flex-wrap:wrap;gap:2px;border-bottom:1px solid var(--line);margin:20px 0 12px}
+.sheet-tab{font-family:'Cinzel',serif;font-size:12.5px;letter-spacing:.02em;cursor:pointer;background:none;border:none;
+  color:var(--ink-soft);padding:8px 14px;border-bottom:3px solid transparent;display:flex;align-items:center;gap:6px}
+.sheet-tab:hover{color:var(--ink)}
+.sheet-tab.on{color:var(--rust-bright);border-color:var(--rust-bright);font-weight:600}
+.sheet-tab .st-n{font-family:'EB Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-soft)}
+.sheet-tp{display:none}
+.sheet-tp.on{display:block}
+
+/* Notes / Log tabs beneath the In Play box */
+.side-tabs-box{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);border:1.5px solid rgba(120,90,40,.45);
+  border-radius:10px;box-shadow:0 2px 6px var(--shadow);overflow:hidden}
+.side-tabs{display:flex;border-bottom:1px solid rgba(120,90,40,.3)}
+.side-tab{flex:1;font-family:'Cinzel',serif;font-size:11px;letter-spacing:.03em;cursor:pointer;background:rgba(120,90,40,.07);
+  border:none;color:var(--ink-soft);padding:9px 8px;border-bottom:3px solid transparent}
+.side-tab:hover{color:var(--ink)}
+.side-tab.on{color:var(--rust-bright);border-bottom-color:var(--rust-bright);font-weight:600;background:transparent}
+.side-tab .log-count{font-family:'EB Garamond',serif;text-transform:none;letter-spacing:0;font-style:italic;color:var(--ink-soft)}
+.side-tp{display:none;padding:12px 14px}
+.side-tp.on{display:block}
+.side-tp .link-btn{display:block;margin:8px 0 0 auto}
+</style>
+</head>
+<body class="play-body">
+<div class="play-bar">
+  <a class="pb-brand" href="index.html">⚓ Sjórseiðr</a>
+  <label class="pb-pick">Character <select id="charPick"></select></label>
+  <span class="pb-spacer"></span>
+  <button class="pb-btn" id="btnExport" title="Download this character's trackers + roll log">⬇ Export</button>
+  <label class="pb-btn" id="btnImportL" title="Load a previously exported file">⬆ Import<input type="file" id="fileImport" accept="application/json" hidden></label>
+  <a class="pb-link" href="covenant_ledger.html">Ledger</a>
+  <a class="pb-link" href="index.html">Home</a>
+</div>
+
+<div id="rollModal"><div class="roll-dialog" id="rollDialog"></div></div>
+
+<div class="play-wrap">
+  <main id="sheet"></main>
+  <aside class="play-side">
+    <div class="tracker-box" id="trackers"></div>
+    <div class="side-tabs-box">
+      <div class="side-tabs" role="tablist">
+        <button class="side-tab on" data-side="log">Roll log <span class="log-count" id="logCount"></span></button>
+        <button class="side-tab" data-side="notes">Session notes</button>
+      </div>
+      <div class="side-tp on" data-side="log">
+        <div id="rollLog"></div>
+        <button class="link-btn" id="logClear">Clear log</button>
+      </div>
+      <div class="side-tp" data-side="notes">
+        <textarea id="tkNotes" placeholder="Session notes for this character…"></textarea>
+      </div>
+    </div>
+    <p class="play-note">Rolls are a calculator — they show the outcome but never change the sheet. Trackers, notes, and the log live in <b>this browser</b> per character; use Export to keep a copy.</p>
+  </aside>
+</div>
+
+<script>
+const $ = s=>document.querySelector(s);
+const $$ = s=>Array.from(document.querySelectorAll(s));
+const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const cap = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
+
+let DATA = null;
+let MAGI = null; // name -> full sheet, keyed by exact Foundry name
+let NPCS = null; // name -> full sheet, keyed by ships.json canonical name
+let SHIP_DETAILS = null; // ships.json ship id -> hull/devices/lab detail
+let FLEET_NOTE = null;
+let RULES_IDX = {}; // normalized rules-entity name -> verbatim DESCRIPTION text (from rules.json)
+
+// Verbatim virtue/flaw/spell text is pulled from rules.json (sliced from the
+// resolved armdef corpus by scripts/build_rules.py) so the sheets aren't
+// hard-coding rules prose. Falls back to a character's own embedded description
+// for anything not in the (core-only) corpus — e.g. grog/3rd-party content.
+const rlNorm = s => (s==null?'':String(s)).toLowerCase().split(/\s+/).filter(Boolean).join(' ');
+function ruleText(name, fallback){
+  return RULES_IDX[rlNorm(name)] || fallback || '';
+}
+/* escape, then light **bold** / *italic*, then blank lines -> paragraph breaks */
+function mdRules(s){
+  return esc(s)
+    .replace(/\*\*([^*\n]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
+    .replace(/\n\s*\n/g, '<br><br>')
+    .replace(/\n/g, ' ');
+}
+let activeTab = null; // snapshot id, or 'all-ships'
+
+// ships.json sometimes spells a name differently than the magi.json key
+// (e.g. a one-L "Wilhelm" variant of the canonical "Willhelm Stienauer").
+// Map those known variants -> the magi.json key here.
+const MAGI_ALIASES = {
+  'Wilhelm Stienauer': 'Willhelm Stienauer',
+};
+
+function findMagus(name){
+  if(!MAGI) return null;
+  if(MAGI[name]) return MAGI[name];
+  const alias = MAGI_ALIASES[name];
+  if(alias && MAGI[alias]) return MAGI[alias];
+  return null;
+}
+
+// Returns {sheet, kind:'magus'|'npc'} for anyone with a real Foundry sheet, else null.
+function findCharacterSheet(name){
+  const magus = findMagus(name);
+  if(magus) return {sheet: magus, kind: 'magus'};
+  if(NPCS && NPCS[name]) return {sheet: NPCS[name], kind: 'npc'};
+  return null;
+}
+
+async function load(){
+  try{
+    const [magiRes, npcsRes, rulesRes] = await Promise.all([
+      fetch('./magi.json', {cache:'no-store'}).catch(()=>null),
+      fetch('./npcs.json', {cache:'no-store'}).catch(()=>null),
+      fetch('./rules.json', {cache:'no-store'}).catch(()=>null),
+    ]);
+    if(rulesRes && rulesRes.ok){
+      const rulesJson = await rulesRes.json();
+      Object.entries(rulesJson.entities || {}).forEach(([name, e]) => {
+        if(e && e.text) RULES_IDX[rlNorm(name)] = e.text;
+      });
+    }
+    if(magiRes && magiRes.ok) MAGI = (await magiRes.json()).magi || {};
+    if(npcsRes && npcsRes.ok) NPCS = (await npcsRes.json()).npcs || {};
+  }catch(e){
+    $('#sheet').innerHTML = `<div class="sheet-empty" style="padding:24px">Could not load character data — open via a local server, not file://.<br>${esc(e.message)}</div>`;
+    return;
+  }
+  buildPickList();
+  const want = new URLSearchParams(location.search).get('char');
+  const start = (want && findCharacterSheet(want)) ? want
+    : (PICK_LIST[0] ? PICK_LIST[0].key : null);
+  renderPicker();
+  if(start) selectChar(start);
+  else $('#sheet').innerHTML = `<div class="sheet-empty" style="padding:24px">No characters with sheets found.</div>`;
+}
+
+// ── Character picker + selection ──────────────────────────
+let PICK_LIST = [];   // [{key,name,kind,pc}]
+let CUR_ID = null;
+function buildPickList(){
+  const list = [];
+  if(MAGI) Object.keys(MAGI).forEach(k=>list.push({key:k, name:(MAGI[k].name||k), kind:'magus', pc:true}));
+  if(NPCS) Object.keys(NPCS).forEach(k=>{ if(NPCS[k]) list.push({key:k, name:(NPCS[k].name||k), kind:NPCS[k].charType||'npc', pc:false}); });
+  list.sort((a,b)=> (b.pc?1:0)-(a.pc?1:0) || a.name.localeCompare(b.name,'en'));
+  PICK_LIST = list;
+}
+function renderPicker(){
+  const pcs = PICK_LIST.filter(p=>p.pc), rest = PICK_LIST.filter(p=>!p.pc);
+  const opt = p=>`<option value="${esc(p.key)}">${esc(p.name)}</option>`;
+  $('#charPick').innerHTML =
+    `<optgroup label="Player magi">${pcs.map(opt).join('')}</optgroup>`
+    + `<optgroup label="Other characters">${rest.map(opt).join('')}</optgroup>`;
+  if(CUR_ID) $('#charPick').value = CUR_ID;
+  $('#charPick').onchange = ()=> selectChar($('#charPick').value);
+}
+function selectChar(key){
+  const found = findCharacterSheet(key);
+  if(!found){ $('#sheet').innerHTML = `<div class="sheet-empty" style="padding:24px">No sheet for “${esc(key)}”.</div>`; return; }
+  CUR_ID = key;
+  CURRENT_SHEET = found.sheet;
+  history.replaceState(null, '', '?char='+encodeURIComponent(key));
+  $('#charPick').value = key;
+  $('#sheet').innerHTML = magusSheetHtml(found.sheet);
+  loadState();
+  renderTrackers();
+  renderNotes();
+  renderLog();
+  window.scrollTo(0,0);
+}
+
+function statusClass(status){
+  return (status||'').toLowerCase().replace(/[^a-z]+/g,'-').replace(/(^-|-$)/g,'');
+}
+
+function shipById(id){ return DATA.ships.find(s=>s.id===id); }
+
+function renderTabs(){
+  const snapTabs = DATA.snapshots.map(s=>
+    `<div class="tab ${activeTab===s.id?'active':''}" data-tab="${esc(s.id)}">${esc(s.label)}</div>`).join('');
+  $('#tabs').innerHTML = snapTabs +
+    `<div class="tab ${activeTab==='all-ships'?'active':''}" data-tab="all-ships">All Ships (reference)</div>`;
+  $$('.tab').forEach(t=>t.onclick=()=>{activeTab=t.dataset.tab;render();});
+}
+
+const GROG_ROLES = new Set(['crew','surgeon','sailing captain','merchant-agent']);
+
+// Prefer Foundry's own charType (ground truth) when we have a real sheet;
+// fall back to the ships.json role-string heuristic for the few names with
+// no Foundry sheet at all (e.g. Hilda, Karl, Rody).
+function characterCategory(name){
+  if(findMagus(name)) return 'pc-magus';
+  const npc = NPCS && NPCS[name];
+  if(npc){
+    switch(npc.charType){
+      case 'magus': return 'npc-magus';
+      case 'companion': return 'companion';
+      case 'grog': return 'grog';
+      default: return 'other';
+    }
+  }
+  const role = (((DATA.characters||{})[name]||{}).role || '').toLowerCase();
+  if(role.includes('magus')) return 'npc-magus';
+  if(role.includes('companion') || role === 'apprentice') return 'companion';
+  if(role.includes('grog') || GROG_ROLES.has(role)) return 'grog';
+  return 'other';
+}
+
+function crewChips(names, emptyText){
+  if(!names || !names.length) return `<div class="crew-empty">— ${esc(emptyText||'no crew listed')} —</div>`;
+  return `<div class="crew-list">${names.map(n=>`<button class="chip ${characterCategory(n)}" data-name="${esc(n)}">${esc(n)}</button>`).join('')}</div>`;
+}
+
+function shipSummaryRowHtml(ship){
+  const displayName = ship.aka ? `${esc(ship.name)} <span style="font-weight:400;font-style:italic;color:var(--ink-soft);font-size:13px">(aka ${esc(ship.aka)})</span>` : esc(ship.name);
+  return `<div class="ship-head">
+      <div>
+        <div class="ship-name">${displayName}</div>
+        <div class="ship-owner">${esc(ship.owner)}</div>
+      </div>
+      <span class="ship-status ${statusClass(ship.status)}">${esc(ship.status)}</span>
+    </div>`;
+}
+
+function shipHeadHtml(ship){
+  return `${shipSummaryRowHtml(ship)}
+    ${ship.captain ? `<p class="ship-captain">Captained by ${esc(ship.captain)}</p>` : ''}`;
+}
+
+function renderSnapshot(snap){
+  const cards = snap.assignments.map(a=>{
+    const ship = shipById(a.ship);
+    if(!ship) return '';
+    return `<div class="ship-card">
+      ${shipHeadHtml(ship)}
+      <div class="crew-label">Aboard this leg</div>
+      ${crewChips(a.crew, 'no crew listed for this leg')}
+      ${a.note ? `<p class="ship-note" style="margin-top:10px">${esc(a.note)}</p>` : ''}
+    </div>`;
+  }).join('');
+  $('#content').innerHTML = `
+    <p class="snap-note">${esc(snap.note||'')}</p>
+    <div class="ship-grid">${cards}</div>
+  `;
+}
+
+function renderAllShips(){
+  const cards = DATA.ships.map(ship=>`<details class="ship-card">
+      <summary class="ship-summary">${shipSummaryRowHtml(ship)}</summary>
+      <div class="ship-body">
+        ${ship.captain ? `<p class="ship-captain">Captained by ${esc(ship.captain)}</p>` : ''}
+        <p class="ship-desc">${esc(ship.description)}</p>
+        <div class="crew-label">Standing crew</div>
+        ${crewChips(ship.standing_crew, 'no standing crew recorded')}
+        ${ship.former_crew && ship.former_crew.length ? `<div class="crew-label" style="margin-top:8px">Formerly</div>${crewChips(ship.former_crew, '')}` : ''}
+        ${shipDetailHtml(ship.id)}
+      </div>
+    </details>`).join('');
+  const fleetNote = FLEET_NOTE
+    ? `<p class="ship-note-flag">${esc(FLEET_NOTE)}</p>` : '';
+  $('#content').innerHTML = `
+    <p class="snap-note">Full fleet reference, independent of any single time period — including ships lost, retired, or of uncertain status. Click a ship to see its full details.</p>
+    ${fleetNote}
+    <div class="ship-grid ref-list">${cards}</div>
+  `;
+}
+
+function labStatGridHtml(lab){
+  const stats = [
+    ['Size', lab.size], ['Quality', lab.generalQuality], ['Safety', lab.safety],
+    ['Health', lab.health], ['Refine', lab.refinement], ['Upkeep', lab.upkeep],
+    ['Warping', lab.warping], ['Aesthetics', lab.aesthetics],
+  ];
+  return `<div class="lab-grid">${stats.map(([label,val])=>`
+    <div class="lab-stat"><span class="ls-label">${label}</span><span class="ls-val">${val>0?'+':''}${val}</span></div>
+  `).join('')}</div>`;
+}
+
+function deviceItemHtml(dv){
+  const effects = (dv.effects||[]).map(e=>`<div class="dv-effect">${esc(e.name)} — ${esc(e.technique)}${e.form?'/'+esc(e.form):''} (lvl ${e.level})${e.description?': '+esc(e.description):''}</div>`).join('');
+  return `<div class="device-item">
+    <div class="dv-name">${esc(dv.name)}${dv.quantity>1?` <span style="font-weight:400;color:var(--ink-soft);font-size:11px">(×${dv.quantity} — one per ship)</span>`:''}</div>
+    ${dv.description?`<div class="dv-desc">${esc(dv.description)}</div>`:''}
+    ${effects}
+  </div>`;
+}
+
+function shipDetailHtml(shipId){
+  if(!SHIP_DETAILS) return '';
+  const d = SHIP_DETAILS[shipId];
+  if(!d) return '';
+
+  const owner = [];
+  if(d.currentOwner) owner.push(`Currently: <strong>${esc(d.currentOwner)}</strong>`);
+  if(d.formerOwner) owner.push(`<span class="former">Formerly: ${esc(d.formerOwner)}</span>`);
+  const ownerLine = owner.length ? `<p class="ship-owner-line">${owner.join(' · ')}</p>` : '';
+  const covenantStatus = d.covenantStatus ? `<p class="ship-covenant-status">⚠ ${esc(d.covenantStatus)}</p>` : '';
+  const note = d.note ? `<p class="ship-note-flag">${esc(d.note)}</p>` : '';
+  const dims = d.dimensions ? `<p class="ship-dims">${esc(d.dimensions)}</p>` : '';
+
+  const devices = (d.enchantedDevices && d.enchantedDevices.length) ? `
+    <div class="detail-section">
+      <div class="detail-section-title">Enchanted Devices (${d.enchantedDevices.length})</div>
+      ${d.enchantedDevices.map(deviceItemHtml).join('')}
+    </div>` : '';
+
+  const lab = d.laboratory ? `
+    <div class="detail-section">
+      <div class="detail-section-title">Laboratory — ${esc(d.laboratory.name)}</div>
+      ${d.laboratory.owner?`<p class="lab-extra" style="margin:6px 0">Owner: ${esc(d.laboratory.owner)}</p>`:''}
+      ${labStatGridHtml(d.laboratory)}
+      ${d.laboratory.specialties?`<p class="lab-extra"><em>Specialties:</em> ${esc(d.laboratory.specialties).replace(/\n\n/g,', ')}</p>`:''}
+      ${d.laboratory.features?`<p class="lab-extra"><em>Features:</em> ${esc(d.laboratory.features)}</p>`:''}
+    </div>` : '';
+
+  return `${dims}${ownerLine}${covenantStatus}${note}${devices}${lab}`;
+}
+
+function render(){
+  renderTabs();
+  if(activeTab === 'all-ships') renderAllShips();
+  else{
+    const snap = DATA.snapshots.find(s=>s.id===activeTab);
+    if(snap) renderSnapshot(snap); else renderAllShips();
+  }
+  $$('.chip').forEach(c=>c.onclick=()=>openSidebar(c.dataset.name));
+}
+
+const CHAR_LABELS = {int:'Int',per:'Per',str:'Str',sta:'Sta',pre:'Pre',com:'Com',dex:'Dex',qik:'Qik'};
+const CHAR_ORDER = ['int','per','str','sta','pre','com','dex','qik'];
+const TECH_ORDER = ['cr','in','mu','pe','re'];
+const FORM_ORDER = ['an','aq','au','co','he','ig','im','me','te','vi'];
+
+function signed(n){ n = n||0; return n>0 ? `+${n}` : `${n}`; }
+
+function charGridHtml(chars){
+  return `<div class="char-grid">${CHAR_ORDER.map(k=>`
+    <div class="char-stat"><span class="cs-label">${CHAR_LABELS[k]}</span><span class="cs-val">${signed(chars[k])}</span></div>
+  `).join('')}</div>`;
+}
+
+function artsGridHtml(arts){
+  const row = (codes, cls) => `<div class="arts-grid">${codes.map(code=>{
+    const a = arts[code];
+    return `<div class="art-cell ${cls}"><span class="a-label">${a?a.label:code}</span><span class="a-val">${a?a.score:0}</span></div>`;
+  }).join('')}</div>`;
+  return `
+    <div class="arts-row-label">Techniques</div>
+    ${row(TECH_ORDER,'technique')}
+    <div class="arts-row-label">Forms</div>
+    ${row(FORM_ORDER,'form')}
+  `;
+}
+
+function vfListHtml(list, cls){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  return `<div class="vf-list">${list.map(v=>{
+    const txt = ruleText(v.name, v.description);
+    return `
+    <div class="vf-item ${cls}">
+      <span class="vf-name">${esc(v.name)}</span>${v.impact?`<span class="vf-impact">${esc(v.impact)}</span>`:''}
+      ${txt?`<span class="vf-desc">${mdRules(txt)}</span>`:''}
+    </div>
+  `;}).join('')}</div>`;
+}
+
+// ArM5 ability categories, in display order (General first).
+const ABILITY_CATEGORIES = ['General','Academic','Arcane','Martial','Supernatural'];
+// Valdemar's viktir runes (Elder Futhark) render as Supernatural abilities.
+const RUNE_ABILITIES = new Set(['fehu','uruz','thurisaz','ansuz','raido','kenaz','kaunan','gebo','wunjo',
+  'hagalaz','naudiz','isa','jera','eihwaz','iwaz','perthro','perth','algiz','sowilo','tiwaz','berkanan',
+  'ehwaz','mannaz','laguz','ingwaz','othila','othala','dagaz']);
+const ACADEMIC_ABILITIES = new Set(['artes liberales','civil & canon law','civil and canon law','common law',
+  'medicine','philosophiae','theology','theology - christian','latin']);
+const ARCANE_ABILITIES = new Set(['code of hermes','enigmatic wisdom','finesse','magic theory','folk magic theory',
+  'parma magica','penetration','order of hermes lore','dominion lore','faerie lore','magic lore','infernal lore',
+  'divine lore']);
+const MARTIAL_ABILITIES = new Set(['bows','great weapon','single weapon','thrown weapon']);
+const SUPERNATURAL_ABILITIES = new Set(['premonitions','second sight','dowsing','enchanting music','animal ken',
+  'magic sensitivity','sense holiness and unholiness','wilderness sense','entrancement','shapeshifter']);
+
+// Best-guess ArM5 ability category from the ability name (records carry no category).
+function abilityCategory(rawName){
+  const n = String(rawName||'').replace(/\*+\s*$/,'').trim().toLowerCase(); // drop trailing * marker
+  const base = n.replace(/\s*\([^)]*\)\s*$/,'').trim();                     // drop a trailing (spec)
+  if(RUNE_ABILITIES.has(base) || SUPERNATURAL_ABILITIES.has(base)) return 'Supernatural';
+  if(MARTIAL_ABILITIES.has(base)) return 'Martial';
+  if(ARCANE_ABILITIES.has(base)) return 'Arcane';         // incl. the four Realm Lores + Order of Hermes Lore
+  if(/^dead language\b/.test(n) || ACADEMIC_ABILITIES.has(base)) return 'Academic';
+  return 'General';                                       // Area/Org Lores, Craft, Profession, living languages, etc.
+}
+
+function abilitiesHtml(list){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  const rank = c => { const i = ABILITY_CATEGORIES.indexOf(c); return i < 0 ? 99 : i; };
+  // Keep each ability's ORIGINAL index (data-idx feeds the roll handler), then sort
+  // by category (General first) and alphabetically within each category.
+  const rows = list.map((a,i)=>({a, i, cat: abilityCategory(a.name)}))
+    .sort((x,y)=> rank(x.cat) - rank(y.cat)
+                || x.a.name.toLowerCase().localeCompare(y.a.name.toLowerCase()));
+  let out = '', lastCat = null;
+  for(const {a,i,cat} of rows){
+    if(cat !== lastCat){ out += `<div class="ability-cat">${esc(cat)}</div>`; lastCat = cat; }
+    out += `<div class="ability-row rollable" data-roll="ability" data-idx="${i}" title="Click to roll">
+      <span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span>
+      <span class="ab-score">${a.score}</span>
+    </div>`;
+  }
+  return out;
+}
+
+const RDT = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
+
+function spellsHtml(list){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  return list.map((sp,i)=>{
+    const txt = ruleText(sp.name, sp.description);
+    return `
+    <div class="spell-item rollable" data-roll="spell" data-idx="${i}" title="Click to cast">
+      <div class="sp-name">${esc(sp.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:11.5px">(lvl ${sp.level})</span></div>
+      <div class="sp-meta">${esc(sp.technique)}${sp.form?'/'+esc(sp.form):''} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${sp.ritual?' · Ritual':''}</div>
+      ${txt?`<div class="sp-desc">${mdRules(txt)}</div>`:''}
+    </div>
+  `;}).join('');
+}
+
+function magusSheetHtml(m){
+  const portrait = m.portrait
+    ? `<img class="sheet-portrait" src="${esc(m.portrait)}" alt="${esc(m.name)}">`
+    : `<div class="sheet-portrait placeholder">🜛</div>`;
+  const isMagus = !m.charType || m.charType==='magus';
+  const sub = isMagus
+    ? [m.house?`House ${m.house}`:'', m.parens?`parens ${m.parens}`:''].filter(Boolean).join(' · ')
+    : (m.charType ? cap(m.charType) : '');
+  const metaChips = [
+    m.age!=null?`Age ${m.age}`:'',
+    m.apparentAge!=null && m.apparentAge!==m.age?`(apparent ${m.apparentAge})`:'',
+    m.born!=null?`Born ${m.born}`:'',
+    m.confidence?`Confidence ${m.confidence.score}`:'',
+    m.size!=null?`Size ${signed(m.size)}`:'',
+    m.decrepitude?`Decrepitude ${m.decrepitude}`:'',
+    m.warping?`Warping ${m.warping}`:'',
+  ].filter(Boolean).map(t=>`<span class="meta-chip">${esc(t)}</span>`).join('');
+
+  const wounds = (m.activeWounds && m.activeWounds.length)
+    ? m.activeWounds.map(w=>`<div class="wound-warn">⚕ ${esc(w.gravity)} wound${w.description?' — '+esc(w.description):''}</div>`).join('')
+    : '';
+
+  const extras = [];
+  if(m.sigil) extras.push(`<div><em>Sigil:</em> ${esc(m.sigil)}</div>`);
+  if(m.sanctum) extras.push(`<div><em>Sanctum:</em> ${esc(m.sanctum)}</div>`);
+  if(m.originallyFrom) extras.push(`<div><em>Originally from:</em> ${esc(m.originallyFrom)}</div>`);
+  if(m.playedBy) extras.push(`<div><em>Played by:</em> ${esc(m.playedBy)}</div>`);
+  if(m.familiar) extras.push(`<div><em>Familiar:</em> ${esc(m.familiar)}</div>`);
+
+  return `
+    <div class="sheet-header">
+      ${portrait}
+      <div>
+        <div class="sheet-name">${esc(m.name)}</div>
+        <p class="sheet-sub">${esc(sub)}</p>
+        ${m.shortDescription ? `<p class="sheet-tagline">${esc(m.shortDescription)}</p>` : ''}
+      </div>
+    </div>
+    <div class="sheet-meta">${metaChips}</div>
+    ${wounds}
+    ${extras.length?`<p class="sb-note" style="font-size:12.5px;margin:8px 0">${extras.join('<br>')}</p>`:''}
+
+    ${m.biography ? `
+    <details class="sheet-collapsible">
+      <summary>Biography</summary>
+      <div class="sheet-bio">${m.biography.split('\n\n').map(p=>`<p>${esc(p)}</p>`).join('')}</div>
+    </details>
+    ` : ''}
+
+    <div class="sheet-section-title">Characteristics</div>
+    ${charGridHtml(m.characteristics||{})}
+
+    ${(!m.charType || m.charType==='magus' || Object.values(m.arts||{}).some(a=>a.score>0)) ? `
+    <div class="sheet-section-title">Arts</div>
+    ${artsGridHtml(m.arts||{})}
+    ` : ''}
+
+    <div class="sheet-section-title">Combat</div>
+    <button class="combat-open" onclick="combatDialog(CURRENT_SHEET)">⚔ Open combat roller</button>
+
+    ${m.personalityTraits && m.personalityTraits.length ? `
+    <div class="sheet-section-title">Personality</div>
+    <div class="trait-chips">${m.personalityTraits.map(t=>`<span class="trait-chip">${esc(t)}</span>`).join('')}</div>
+    ` : ''}
+
+    <div class="sheet-tabs" role="tablist">
+      <button class="sheet-tab on" data-stab="abilities">Abilities <span class="st-n">${(m.abilities||[]).length}</span></button>
+      <button class="sheet-tab" data-stab="virtues">Virtues <span class="st-n">${(m.virtues||[]).length}</span></button>
+      <button class="sheet-tab" data-stab="flaws">Flaws <span class="st-n">${(m.flaws||[]).length}</span></button>
+      <button class="sheet-tab" data-stab="spells">Spells <span class="st-n">${(m.spells||[]).length}</span></button>
+      ${m.reputations && m.reputations.length ? `<button class="sheet-tab" data-stab="reputations">Reputations <span class="st-n">${m.reputations.length}</span></button>` : ''}
+    </div>
+    <div class="sheet-tp on" data-stab="abilities">${abilitiesHtml(m.abilities)}</div>
+    <div class="sheet-tp" data-stab="virtues">${vfListHtml(m.virtues,'virtue')}</div>
+    <div class="sheet-tp" data-stab="flaws">${vfListHtml(m.flaws,'flaw')}</div>
+    <div class="sheet-tp" data-stab="spells">${spellsHtml(m.spells)}</div>
+    ${m.reputations && m.reputations.length ? `<div class="sheet-tp" data-stab="reputations"><div class="vf-list">${m.reputations.map(r=>`<div class="vf-item"><span class="vf-name">${esc(r.name)}</span>${r.description?`<span class="vf-desc">${esc(r.description)}</span>`:''}</div>`).join('')}</div></div>` : ''}
+
+    <p class="sheet-source">Pulled from the live Foundry sheet — treat as a snapshot, not a live view. Some scores may still reflect character-creation defaults rather than in-play advancement.</p>
+  `;
+}
+
+let CURRENT_SHEET = null;
+
+function openSidebar(name){
+  const found = findCharacterSheet(name);
+  if(found){
+    CURRENT_SHEET = found.sheet;
+    $('#sidebarContent').innerHTML = magusSheetHtml(found.sheet);
+    $('#sidebar').classList.add('wide');
+    $('#wrap').classList.add('sidebar-wide');
+  } else {
+    CURRENT_SHEET = null;
+    const c = (DATA.characters||{})[name] || {};
+    $('#sidebarContent').innerHTML = `
+      <div class="sb-name">${esc(name)}</div>
+      <p class="sb-role">${esc(c.role||'Role unrecorded')}</p>
+      <p class="sb-affil">${esc(c.affiliation||'')}</p>
+      <p class="sb-note">${esc(c.note||'')}</p>
+      <div class="sb-stub">📜 Full character sheet — coming soon</div>
+    `;
+    $('#sidebar').classList.remove('wide');
+    $('#wrap').classList.remove('sidebar-wide');
+  }
+  $('#sidebar').classList.add('open');
+  $('#overlay').classList.add('open');
+  $('#wrap').classList.add('sidebar-open');
+}
+/* ══════════════ Dice engine + roll dialogs ══════════════
+   Faithful to armdef-0.4-core-systems.ttrpg (Simple/Stress Die, Botch Dice)
+   and armdef-0.4-hermetic-magic.ttrpg (casting totals). Stateless: rolls
+   display an outcome but never mutate the character snapshot. */
+
+function d10(){ return Math.floor(Math.random()*10); } // 0..9 (0 reads as 10 except on a stress first-roll)
+
+function rollSimple(){
+  const r = d10();
+  const v = r===0 ? 10 : r;
+  return { value:v, detail:`simple die ${v}` };
+}
+
+function rollStress(botchDice){
+  let first = d10();
+  if(first >= 2){ return { value:first, botch:false, detail:`stress die ${first}` }; }
+  if(first === 1){
+    // Explode: reroll doubling; on rerolls a 0 counts as 10.
+    let mult = 2, chain = ['1'];
+    while(true){
+      let r = d10();
+      if(r === 1){ mult *= 2; chain.push('1'); continue; }
+      const face = r===0 ? 10 : r;
+      chain.push(String(face));
+      return { value: face*mult, botch:false, detail:`stress die ${chain.join('→')} ×${mult} = ${face*mult}` };
+    }
+  }
+  // first === 0 → botch check
+  const n = Math.max(0, botchDice|0);
+  let zeros = 0;
+  for(let i=0;i<n;i++){ if(d10()===0) zeros++; }
+  if(zeros > 0){ return { value:0, botch:true, botchCount:zeros, detail:`stress die 0 — ${zeros} botch die${zeros>1?'s':''} came up 0` }; }
+  return { value:0, botch:false, detail:`stress die 0 (no botch on ${n} die${n===1?'':'s'})` };
+}
+
+const CHAR_FULL = {int:'Intelligence',per:'Perception',str:'Strength',sta:'Stamina',pre:'Presence',com:'Communication',dex:'Dexterity',qik:'Quickness'};
+const ART_CODE = {Creo:'cr',Intellego:'in',Muto:'mu',Perdo:'pe',Rego:'re',Animal:'an',Aquam:'aq',Auram:'au',Corpus:'co',Herbam:'he',Ignem:'ig',Imaginem:'im',Mentem:'me',Terram:'te',Vim:'vi'};
+
+// Best-guess default Characteristic for an ability (ArM5 convention; player can override).
+// defaultChaAb from Foundry wasn't carried into the committed data — revisit on next pull.
+const ABILITY_CHAR = [
+  [/awareness|scan|search|hunt|survival|track|chirurgy|medicine/i,'per'],
+  [/brawl|single weapon|great weapon|bows|thrown|martial|siege|weapon/i,'dex'],
+  [/athletics|swim|climb/i,'str'],
+  [/stealth|legerdemain|ride|animal handling/i,'qik'],
+  [/guile|charm|leadership|bargain|etiquette|intrigue|carouse|folk ken/i,'pre'],
+  [/language|native|latin|greek|speak|music/i,'com'],
+  [/concentration/i,'sta'],
+];
+function defaultCharFor(name){
+  for(const [re,c] of ABILITY_CHAR){ if(re.test(name)) return c; }
+  return 'int';
+}
+
+/* ── Auto-applied modifier library ───────────────────────
+   Mechanics verified against armdef-0.4-virtues / -flaws:
+   • Puissant Art = +3, Puissant Ability = +2
+   • Cautious with (Ability) = −2 botch dice; Cautious Sorcerer = −3 botch dice (casting)
+   • Deficient Technique/Form = that Art's contribution to the casting total is halved
+   • Afflicted Tongue = −2 Casting Score (verbal) + 1 extra botch die                    */
+const ART_NAMES = new Set(Object.keys(ART_CODE).map(s=>s.toLowerCase()));
+
+function parsePuissant(vname){
+  const m = /^\s*puissant\b\s*(?:ability\b\s*)?(.+?)\s*$/i.exec(vname||'');
+  if(!m) return null;
+  const target = m[1].replace(/[()*]/g,'').trim();
+  return { target, isArt: ART_NAMES.has(target.toLowerCase()) };
+}
+// Puissant Art → +3; Puissant Ability → +2.
+function puissantArtBonus(sheet, artLabel){
+  const t = artLabel.toLowerCase();
+  return (sheet.virtues||[]).some(v=>{ const p=parsePuissant(v.name); return p && p.isArt && p.target.toLowerCase()===t; }) ? 3 : 0;
+}
+function puissantAbilityBonus(sheet, abName){
+  const t = abName.toLowerCase();
+  return (sheet.virtues||[]).some(v=>{ const p=parsePuissant(v.name); return p && !p.isArt && p.target.toLowerCase()===t; }) ? 2 : 0;
+}
+// Cautious with (Ability): 2 fewer botch dice for that Ability.
+function cautiousAbility(sheet, abName){
+  const t = abName.toLowerCase();
+  return (sheet.virtues||[]).some(v=>{ const m=/^cautious with\b\s*(.+?)\s*$/i.exec(v.name||''); return m && m[1].replace(/[()*]/g,'').trim().toLowerCase()===t; });
+}
+function hasVirtue(sheet, re){ return (sheet.virtues||[]).some(v=>re.test(v.name||'')); }
+function hasFlaw(sheet, re){ return (sheet.flaws||[]).some(v=>re.test(v.name||'')); }
+function flawNamed(sheet, re){ const f=(sheet.flaws||[]).find(v=>re.test(v.name||'')); return f?f.name:null; }
+// Deficient Technique/Form (Art): that Art's contribution to the casting total is halved.
+// Tolerant match on the first four letters (sheet data spells one "Imagonem" for Imaginem).
+function deficientArt(sheet, artLabel){
+  const key = artLabel.toLowerCase().slice(0,4);
+  return (sheet.flaws||[]).some(v=>{
+    const m = /^deficient (?:technique|form)\b\s*[-(:]*\s*(.+?)\s*[)]*$/i.exec(v.name||'');
+    return m && m[1].replace(/[()*]/g,'').trim().toLowerCase().slice(0,4)===key;
+  });
+}
+function focusVirtues(sheet){ return (sheet.virtues||[]).filter(v=>/magical focus/i.test(v.name||'')); }
+function abilityScore(sheet, name){
+  const a = (sheet.abilities||[]).find(x=>x.name.toLowerCase()===name.toLowerCase());
+  return a ? a.score : 0;
+}
+
+// Situational modifiers: ticking the toggle applies this value (with a "when" hint)
+// instead of the generic ±1. Values verified against the rules text.
+const SITUATIONAL = [
+  [/^venus'?s? blessing/i,        {value:3,  hint:'Com/Pre with compatible characters'}],
+  [/^disfigured/i,                {value:-3, hint:'Presence for looks / respect'}],
+  [/^missing eye/i,               {value:-3, hint:'spell targeting / missile attack'}],
+  [/^missing ear/i,               {value:-3, hint:'hearing-based rolls'}],
+  [/^perfect balance/i,           {value:6,  hint:'avoid falling / tripping'}],
+  [/^light touch/i,               {value:1,  hint:'subtle manipulation (also −1 botch)'}],
+  [/^slow reflexes/i,             {value:-3, hint:'Initiative'}],
+  [/^poor concentration/i,        {value:-3, hint:'Concentration rolls'}],
+  [/^obese/i,                     {value:-1, hint:'moving quickly/gracefully (−3 Fatigue)'}],
+  [/^afflicted tongue/i,          {value:-2, hint:'voice rolls'}],
+  [/^strong.?willed/i,            {value:3,  hint:'resist / Concentration vs distraction'}],
+  [/^social contacts/i,           {value:3,  hint:'info/help from that circle'}],
+  [/^gossip/i,                    {value:3,  hint:'local news about people'}],
+  [/^piercing gaze/i,             {value:3,  hint:'Intimidation'}],
+  [/^inspirational/i,             {value:3,  hint:"a target's Personality Trait roll"}],
+  [/^great communication/i,       {value:0,  hint:'already in your Communication score'}],
+];
+function situational(name){ for(const [re,info] of SITUATIONAL){ if(re.test(name)) return info; } return null; }
+// Baked into a Characteristic score, or handled automatically elsewhere — hide from toggles.
+const TOGGLE_HIDE = /^(the gift|hermetic magus|improved characteristics|great (intelligence|perception|strength|stamina|presence|communication|dexterity|quickness)|poor (communication|perception|strength|stamina|intelligence|presence|dexterity|quickness))/i;
+
+function openRollModal(){ $('#rollModal').classList.add('open'); }
+function closeRollModal(){ $('#rollModal').classList.remove('open'); }
+
+function charOptions(sel){
+  return CHAR_ORDER.map(k=>`<option value="${k}" ${k===sel?'selected':''}>${CHAR_FULL[k]} (${signed((CURRENT_SHEET.characteristics||{})[k])})</option>`).join('');
+}
+
+// Names auto-handled for a given roll context → hidden from the manual toggle list.
+function autoHandledNames(sheet, ctx){
+  const names = new Set();
+  (sheet.virtues||[]).forEach(v=>{
+    const p = parsePuissant(v.name);
+    if(ctx.kind==='ability' && p && !p.isArt && p.target.toLowerCase()===ctx.ability.toLowerCase()) names.add(v.name);
+    if(ctx.kind==='casting' && p && p.isArt && (p.target.toLowerCase()===ctx.technique.toLowerCase()||p.target.toLowerCase()===ctx.form.toLowerCase())) names.add(v.name);
+    if(ctx.kind==='ability' && /^cautious with\b/i.test(v.name)){ const m=/^cautious with\b\s*(.+?)\s*$/i.exec(v.name); if(m && m[1].replace(/[()*]/g,'').trim().toLowerCase()===ctx.ability.toLowerCase()) names.add(v.name); }
+    if(ctx.kind==='casting' && /^cautious sorcerer/i.test(v.name)) names.add(v.name);
+    if(ctx.kind==='casting' && /magical focus/i.test(v.name)) names.add(v.name);
+  });
+  (sheet.flaws||[]).forEach(v=>{
+    if(ctx.kind==='casting' && /^deficient (technique|form)/i.test(v.name)){
+      const m=/^deficient (?:technique|form)\b\s*[-(:]*\s*(.+?)\s*[)]*$/i.exec(v.name);
+      if(m){ const k=m[1].replace(/[()*]/g,'').trim().toLowerCase().slice(0,4); if(k===ctx.technique.toLowerCase().slice(0,4)||k===ctx.form.toLowerCase().slice(0,4)) names.add(v.name); }
+    }
+    if(ctx.kind==='casting' && /^afflicted tongue/i.test(v.name)) names.add(v.name);
+  });
+  return names;
+}
+
+// Informational casting reminders (no arithmetic).
+function castingFlags(sheet){
+  const out=[];
+  const nc=flawNamed(sheet,/^necessary condition/i); if(nc) out.push(nc+': you must perform the action while casting, or the spell fails entirely.');
+  if(hasFlaw(sheet,/^painful magic/i)) out.push('Painful Magic: 1 Fatigue level of pain per spell cast (cumulative action penalty).');
+  if(hasFlaw(sheet,/^chaotic magic/i)) out.push('Chaotic Magic: your spontaneous magic is unpredictable.');
+  if(hasFlaw(sheet,/^short-lived magic/i)) out.push('Short-lived Magic: your spell durations are shorter than normal.');
+  const r=flawNamed(sheet,/^restriction/i); if(r) out.push(r+': cannot cast while the restriction applies.');
+  const fp=flawNamed(sheet,/^flawed parma/i); if(fp) out.push(fp+' — affects Magic Resistance, not this casting total.');
+  return out;
+}
+
+// ── Ability roll dialog ─────────────────────────────────
+function abilityDialog(ab){
+  const sheet = CURRENT_SHEET;
+  const defChar = defaultCharFor(ab.name);
+  const puiss = puissantAbilityBonus(sheet, ab.name);   // 0 or 2
+  const cautious = cautiousAbility(sheet, ab.name);
+  const baseBotch = Math.max(0, 1 - (cautious?2:0));
+  $('#rollDialog').innerHTML = `
+    <button class="rd-close" onclick="closeRollModal()">✕</button>
+    <h3>${esc(ab.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:13px">score ${ab.score}</span></h3>
+    <p class="rd-sub">Characteristic + Ability + die roll</p>
+
+    <div class="rd-row">
+      <label>Characteristic</label>
+      <select id="rdChar">${charOptions(defChar)}</select>
+    </div>
+    <div class="rd-row"><label>Ability score</label><span class="rd-val" style="color:var(--teal);font-weight:600">${signed(ab.score)}</span></div>
+    ${ab.speciality ? `<label class="rd-check on"><input type="checkbox" id="rdSpec"><span>Specialty (+1) — ${esc(ab.speciality)}</span></label>` : ''}
+    ${puiss ? `<label class="rd-check on"><input type="checkbox" id="rdPuiss" checked><span>Puissant ${esc(ab.name)} <span class="rd-val">+2</span></span></label>` : ''}
+    ${cautious ? `<div class="rd-row"><label>Cautious with ${esc(ab.name)}</label><span class="rd-hint">−2 botch dice (auto)</span></div>` : ''}
+    ${vfToggles(sheet, {kind:'ability', ability:ab.name})}
+    <div class="rd-row"><label>Other modifier</label><input type="number" id="rdMod" value="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice <span class="rd-hint">(stress only)</span></label><input type="number" id="rdBotch" value="${baseBotch}" min="0" step="1"></div>
+
+    <div class="rd-buttons">
+      <button class="rd-btn" onclick="doAbilityRoll(true)">🎲 Roll Stress</button>
+      <button class="rd-btn simple" onclick="doAbilityRoll(false)">Roll Simple</button>
+    </div>
+    <div class="rd-result" id="rdResult"></div>
+  `;
+  openRollModal();
+}
+
+function vfToggles(sheet, ctx){
+  // Optional per-roll virtue/flaw checkboxes; known ones pre-valued with a "when" hint.
+  const hide = autoHandledNames(sheet, ctx);
+  const items = [...(sheet.virtues||[]).map(v=>({name:v.name,kind:'virtue'})),
+                 ...(sheet.flaws||[]).map(v=>({name:v.name,kind:'flaw'}))]
+    .filter(v=>!TOGGLE_HIDE.test(v.name) && !hide.has(v.name));
+  if(!items.length) return '';
+  const rows = items.map((v,i)=>{
+    const s = situational(v.name);
+    const val = s ? s.value : (v.kind==='flaw'?-1:1);
+    const hint = s ? ` <span class="rd-hint">${esc(s.hint)}</span>` : '';
+    return `<label class="rd-check">
+      <input type="checkbox" class="rdVF" data-i="${i}" data-name="${esc(v.name)}">
+      <span>${esc(v.name)}${hint}</span>
+      <input type="number" class="rdVFval" data-i="${i}" value="${val}" step="1" style="width:52px" disabled>
+    </label>`;
+  }).join('');
+  return `<hr class="rd-divider"><div class="rd-section-label">Optional virtues / flaws (tick to apply)</div>${rows}`;
+}
+
+function collectVF(){
+  let sum = 0; const parts = [];
+  $$('.rdVF').forEach(cb=>{
+    if(cb.checked){
+      const val = document.querySelector(`.rdVFval[data-i="${cb.dataset.i}"]`);
+      const n = parseInt(val.value,10)||0;
+      sum += n;
+      parts.push(`${cb.dataset.name} ${signed(n)}`);
+    }
+  });
+  return {sum, parts};
+}
+
+function doAbilityRoll(stress){
+  const sheet = CURRENT_SHEET;
+  const charKey = $('#rdChar').value;
+  const charVal = (sheet.characteristics||{})[charKey]||0;
+  const ab = ROLL_CTX.ab;
+  const spec = $('#rdSpec') && $('#rdSpec').checked ? 1 : 0;
+  const puiss = $('#rdPuiss') && $('#rdPuiss').checked ? 2 : 0;
+  const mod = parseInt($('#rdMod').value,10)||0;
+  const vf = collectVF();
+  const base = charVal + ab.score + spec + puiss + mod + vf.sum;
+
+  const die = stress ? rollStress(parseInt($('#rdBotch').value,10)||0) : rollSimple();
+  const botched = !!die.botch;
+  const total = botched ? 0 : base + die.value;
+
+  const parts = [
+    `${CHAR_FULL[charKey]} ${signed(charVal)}`,
+    `${ab.name} ${signed(ab.score)}`,
+    spec?`specialty +1`:'',
+    puiss?`Puissant +2`:'',
+    ...vf.parts,
+    mod?`other ${signed(mod)}`:'',
+    `<span class="rd-die">${die.detail}</span>`
+  ].filter(Boolean);
+
+  showResult({
+    total, botched,
+    breakdown: parts.join(' · '),
+    outcome: botched ? {cls:'bad', text:'✗ Botch — the roll fails badly.'} : null
+  });
+}
+
+// ── Spell casting dialog ────────────────────────────────
+function castingArts(sheet, sp){
+  const arts = sheet.arts||{};
+  const rawTech = (arts[ART_CODE[sp.technique]]||{}).score||0;
+  const rawForm = (arts[ART_CODE[sp.form]]||{}).score||0;
+  const defT = deficientArt(sheet, sp.technique);
+  const defF = deficientArt(sheet, sp.form);
+  return {
+    rawTech, rawForm, defT, defF,
+    techScore: defT ? Math.floor(rawTech/2) : rawTech,
+    formScore: defF ? Math.floor(rawForm/2) : rawForm
+  };
+}
+
+function penAbility(sheet){
+  return (sheet.abilities||[]).find(a=>a.name.toLowerCase()==='penetration') || {score:0, speciality:''};
+}
+// Penetration section: Bonus = (Penetration + specialty + mastery) × multiplier,
+// multiplier = 1 + Arcane-Connection bonus + stacked sympathetic bonuses.
+const SYMP_CONNECTIONS = [
+  ['Blood relative of target', 1],
+  ['Signature of target', 1],
+  ['Nickname or birth name', 1],
+  ['Secret magic-ritual name', 1],
+  ["Today's horoscope", 1],
+  ['Nativity horoscope', 2],
+  ['Symbolic representation', 2],
+];
+function penetrationSection(sheet, sp){
+  const pen = penAbility(sheet);
+  const specMatch = pen.speciality && [sp.technique, sp.form].some(x=>x.toLowerCase()===pen.speciality.toLowerCase());
+  return `
+    <hr class="rd-divider">
+    <div class="rd-section-label">Penetration (optional)</div>
+    <div class="rd-row"><label>Penetration Ability</label><span class="rd-val">${signed(pen.score)}</span></div>
+    ${pen.speciality?`<label class="rd-check ${specMatch?'on':''}"><input type="checkbox" id="rdPenSpec" ${specMatch?'checked':''}><span>Penetration specialty (+1) — ${esc(pen.speciality)}${specMatch?' <span class="rd-hint">matches this spell</span>':''}</span></label>`:''}
+    <div class="rd-row"><label>Mastery (Penetration)</label><input type="number" id="rdPenMastery" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Arcane Connection</label>
+      <select id="rdPenAC">
+        <option value="0">none (×1)</option>
+        <option value="1">lasts hours–days (+1)</option>
+        <option value="2">lasts weeks–months (+2)</option>
+        <option value="3">lasts years–decades (+3)</option>
+        <option value="4">lasts indefinitely (+4)</option>
+      </select></div>
+    <div id="rdSympWrap" style="opacity:.4;pointer-events:none">
+      <div class="rd-hint" style="margin:5px 0 2px">Sympathetic connections (need an Arcane Connection; stack):</div>
+      ${SYMP_CONNECTIONS.map(([label,v])=>`<label class="rd-check"><input type="checkbox" class="rdSymp" data-v="${v}"><span>${esc(label)} <span class="rd-val">+${v}</span></span></label>`).join('')}
+    </div>
+    <label class="rd-check"><input type="checkbox" id="rdForceless"><span>Forceless casting <span class="rd-hint">(cap Penetration at 0 — tournaments)</span></span></label>
+    <div class="rd-row"><label>Target Magic Resistance <span class="rd-hint">(optional)</span></label><input type="number" id="rdMR" placeholder="—" step="1" style="width:62px"></div>
+  `;
+}
+
+function spellDialog(sp){
+  const sheet = CURRENT_SHEET;
+  const a = castingArts(sheet, sp);
+  const sta = (sheet.characteristics||{}).sta||0;
+  const puissT = puissantArtBonus(sheet, sp.technique);   // 0 or 3
+  const puissF = puissantArtBonus(sheet, sp.form);
+  const foci = focusVirtues(sheet);
+  const ritual = !!sp.ritual;
+  const cautiousSorc = hasVirtue(sheet, /^cautious sorcerer/i);
+  const afflicted = flawNamed(sheet, /^afflicted tongue/i);
+  const baseBotch = Math.max(0, 1 - (cautiousSorc?3:0) + (afflicted?1:0));
+  const flags = castingFlags(sheet);
+
+  $('#rollDialog').innerHTML = `
+    <button class="rd-close" onclick="closeRollModal()">✕</button>
+    <h3>${esc(sp.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:13px">lvl ${sp.level}</span></h3>
+    <p class="rd-sub">${esc(sp.technique)}/${esc(sp.form)} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${ritual?' · Ritual':''}</p>
+
+    <div class="rd-section-label">Casting score</div>
+    <div class="rd-row"><label>${esc(sp.technique)} (Technique)${a.defT?' <span class="rd-hint">deficient</span>':''}</label><span class="rd-val">${signed(a.techScore)}${a.defT?` <span class="rd-hint">(halved from ${signed(a.rawTech)})</span>`:''}</span></div>
+    <div class="rd-row"><label>${esc(sp.form)} (Form)${a.defF?' <span class="rd-hint">deficient</span>':''}</label><span class="rd-val">${signed(a.formScore)}${a.defF?` <span class="rd-hint">(halved from ${signed(a.rawForm)})</span>`:''}</span></div>
+    <div class="rd-row"><label>Stamina</label><span class="rd-val">${signed(sta)}</span></div>
+    ${puissT?`<label class="rd-check on"><input type="checkbox" id="rdPuT" checked><span>Puissant ${esc(sp.technique)} <span class="rd-val">+3</span></span></label>`:''}
+    ${puissF?`<label class="rd-check on"><input type="checkbox" id="rdPuF" checked><span>Puissant ${esc(sp.form)} <span class="rd-val">+3</span></span></label>`:''}
+    ${foci.map((f,i)=>`<label class="rd-check"><input type="checkbox" class="rdFocus" data-i="${i}"><span>${esc(f.name)} — doubles the weaker Art <span class="rd-val">+${Math.min(a.techScore,a.formScore)}</span></span></label>`).join('')}
+    ${afflicted?`<div class="rd-row"><label>${esc(afflicted)} <span class="rd-hint">(verbal casting)</span></label><span class="rd-val">−2</span></div>`:''}
+    <div class="rd-row"><label>Encumbrance</label><input type="number" id="rdEnc" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Aura modifier</label><input type="number" id="rdAura" value="0" step="1"></div>
+    ${ritual?`<div class="rd-row"><label>Artes Liberales <span class="rd-hint">(ritual)</span></label><span class="rd-val">${signed(abilityScore(sheet,'Artes Liberales'))}</span></div>
+    <div class="rd-row"><label>Philosophiae <span class="rd-hint">(ritual)</span></label><span class="rd-val">${signed(abilityScore(sheet,'Philosophiae'))}</span></div>`:''}
+    ${cautiousSorc?`<div class="rd-row"><label>Cautious Sorcerer</label><span class="rd-hint">−3 botch dice (auto)</span></div>`:''}
+    <div class="rd-row"><label>Other modifier</label><input type="number" id="rdMod" value="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice</label><input type="number" id="rdBotch" value="${baseBotch}" min="0" step="1"></div>
+    ${flags.length?`<div class="rd-flags">${flags.map(f=>`⚠ ${esc(f)}`).join('<br>')}</div>`:''}
+    ${penetrationSection(sheet, sp)}
+
+    <div class="rd-buttons">
+      ${ritual
+        ? `<button class="rd-btn" onclick="doSpellCast('ritual')">✨ Cast Ritual (stress)</button>`
+        : `<button class="rd-btn" onclick="doSpellCast('stress')">✨ Cast (stress)</button>
+           <button class="rd-btn simple" onclick="doSpellCast('simple')">Cast (calm)</button>`}
+    </div>
+    <div class="rd-result" id="rdResult"></div>
+  `;
+  openRollModal();
+}
+
+function doSpellCast(mode){
+  const sheet = CURRENT_SHEET;
+  const sp = ROLL_CTX.sp;
+  const a = castingArts(sheet, sp);
+  const sta = (sheet.characteristics||{}).sta||0;
+  const enc = parseInt($('#rdEnc').value,10)||0;
+  const aura = parseInt($('#rdAura').value,10)||0;
+  const mod = parseInt($('#rdMod').value,10)||0;
+  const puT = $('#rdPuT') && $('#rdPuT').checked ? 3 : 0;
+  const puF = $('#rdPuF') && $('#rdPuF').checked ? 3 : 0;
+  let focus = 0;
+  $$('.rdFocus').forEach(cb=>{ if(cb.checked) focus += Math.min(a.techScore,a.formScore); });
+  const afflicted = hasFlaw(sheet, /^afflicted tongue/i) ? -2 : 0;
+  const ritual = mode==='ritual';
+  const al = ritual ? abilityScore(sheet,'Artes Liberales') : 0;
+  const ph = ritual ? abilityScore(sheet,'Philosophiae') : 0;
+
+  const score = a.techScore + a.formScore + sta - enc + aura + puT + puF + focus + afflicted + al + ph + mod;
+  const die = (mode==='simple') ? rollSimple() : rollStress(parseInt($('#rdBotch').value,10)||0);
+  const botched = !!die.botch;
+  const total = botched ? 0 : score + die.value;
+  const diff = total - sp.level;
+
+  let outcome;
+  if(botched){
+    outcome = {cls:'bad', text:'✗ Botch — the spell fails; something goes wrong.'};
+  } else if(ritual){
+    let fat, cast;
+    if(diff>=0){cast=true;fat=1;} else if(diff>=-5){cast=true;fat=2;} else if(diff>=-10){cast=true;fat=3;} else if(diff>=-15){cast=false;fat=4;} else {cast=false;fat=5;}
+    outcome = {cls:cast?'good':'bad', text:`${cast?'✓ Cast':'✗ Failed'} — ${fat} long-term Fatigue level${fat>1?'s':''} lost${cast?'':' (spell does not take effect)'}.`};
+  } else {
+    let fat, cast;
+    if(diff>=0){cast=true;fat=0;} else if(diff>=-10){cast=true;fat=1;} else {cast=false;fat=1;}
+    outcome = {cls:cast?'good':'bad', text:`${cast?'✓ Cast':'✗ Failed'} — ${fat===0?'no Fatigue lost':fat+' Fatigue level lost'}${cast?'':' (spell does not take effect)'}.`};
+  }
+
+  const parts = [
+    `${sp.technique} ${signed(a.techScore)}${a.defT?' (halved)':''}`, `${sp.form} ${signed(a.formScore)}${a.defF?' (halved)':''}`, `Sta ${signed(sta)}`,
+    enc?`Enc ${signed(-enc)}`:'', aura?`aura ${signed(aura)}`:'',
+    puT?`Puissant +3`:'', puF?`Puissant +3`:'', focus?`focus +${focus}`:'', afflicted?`Afflicted Tongue −2`:'',
+    ritual?`Artes Lib ${signed(al)}`:'', ritual?`Philo ${signed(ph)}`:'',
+    mod?`other ${signed(mod)}`:'',
+    `<span class="rd-die">${die.detail}</span>`
+  ].filter(Boolean);
+
+  // ── Penetration Total = Casting Total + Penetration Bonus − Spell Level ──
+  let penetration = null;
+  if(!botched){
+    const pen = penAbility(sheet);
+    const penSpec = ($('#rdPenSpec') && $('#rdPenSpec').checked) ? 1 : 0;
+    const penMastery = parseInt(($('#rdPenMastery')||{}).value,10)||0;
+    const acBonus = parseInt(($('#rdPenAC')||{}).value,10)||0;
+    let sympBonus = 0;
+    if(acBonus>0){ $$('.rdSymp').forEach(cb=>{ if(cb.checked) sympBonus += parseInt(cb.dataset.v,10)||0; }); }
+    const multiplier = 1 + acBonus + sympBonus;
+    const penAbilTotal = pen.score + penSpec + penMastery;
+    const penBonus = penAbilTotal * multiplier;
+    const forceless = $('#rdForceless') && $('#rdForceless').checked;
+    const natural = total + penBonus - sp.level;
+    const penTotal = forceless ? Math.min(0, natural) : natural;
+
+    const mrRaw = ($('#rdMR')||{}).value;
+    const mr = (mrRaw===''||mrRaw==null) ? null : (parseInt(mrRaw,10)||0);
+    let verdict;
+    if(mr!=null) verdict = penTotal > mr ? `penetrates Magic Resistance ${mr} ✓` : `resisted by Magic Resistance ${mr} ✗`;
+    else if(penTotal<=0) verdict = 'cannot affect anything with Magic Resistance (unresisted targets only)';
+    else verdict = `affects targets whose Magic Resistance is below ${penTotal}`;
+
+    const bd = [
+      `Pen ${signed(pen.score)}`, penSpec?'spec +1':'', penMastery?`mastery +${penMastery}`:'',
+      multiplier!==1?`× ${multiplier} (1${acBonus?` +${acBonus} AC`:''}${sympBonus?` +${sympBonus} symp`:''})`:'× 1',
+      forceless?'· forceless':''
+    ].filter(Boolean).join(' ');
+    penetration = { total: penTotal, verdict, breakdown: `bonus ${signed(penBonus)} = [${bd}] · casting ${total} − level ${sp.level}` };
+  }
+
+  showResult({
+    total, botched,
+    label: botched ? 'Casting total 0' : `Casting total ${total} vs. level ${sp.level} (${signed(diff)})`,
+    breakdown: parts.join(' · '),
+    outcome, penetration
+  });
+}
+
+function showResult({total, botched, label, breakdown, outcome, penetration}){
+  const el = $('#rdResult');
+  const penCls = penetration ? (penetration.total>0 ? 'good' : 'bad') : '';
+  el.innerHTML = `
+    <div class="rd-total ${botched?'botch':''}">${label ? esc(label).replace(/(-?\d+)(?=\s*vs)/,'<b>$1</b>') : `Total <b>${total}</b>`}${botched?' <span class="rd-botchflag">BOTCH</span>':''}</div>
+    ${outcome?`<div class="rd-outcome ${outcome.cls}">${outcome.text}</div>`:''}
+    <div class="rd-breakdown">${breakdown}</div>
+    ${penetration?`<div class="rd-pen"><span class="rd-pen-total ${penCls}">Penetration ${signed(penetration.total)}</span> — ${esc(penetration.verdict)}<div class="rd-breakdown">${esc(penetration.breakdown)}</div></div>`:''}
+    ${keepBtnHtml()}
+  `;
+  el.classList.add('show');
+  const name = ROLL_CTX.ab ? ROLL_CTX.ab.name : (ROLL_CTX.sp ? 'Cast: '+ROLL_CTX.sp.name : 'Roll');
+  LAST_RESULT = {
+    name,
+    line: (label || ('Total '+total)) + (botched?' — BOTCH':'') + (penetration?(' · Penetration '+signed(penetration.total)):''),
+    detail: stripTags(breakdown)
+  };
+}
+
+/* ══════════════ Combat roller ══════════════
+   armdef-0.4-obstacles: Init/Attack/Defense/Damage/Soak, weapon & armor
+   tables, and the Damage/Wound table. Stateless calculator.            */
+const WEAPONS = [
+  {n:'Dodge', ab:'Brawl', init:0, atk:null, dfn:0, dam:null},
+  {n:'Fist', ab:'Brawl', init:0, atk:0, dfn:0, dam:0},
+  {n:'Kick', ab:'Brawl', init:-1, atk:0, dfn:-1, dam:3},
+  {n:'Gauntlet', ab:'Brawl', init:0, atk:0, dfn:1, dam:2},
+  {n:'Bludgeon', ab:'Brawl', init:0, atk:2, dfn:0, dam:2},
+  {n:'Dagger', ab:'Brawl', init:0, atk:2, dfn:0, dam:3},
+  {n:'Knife', ab:'Brawl', init:0, atk:1, dfn:0, dam:2},
+  {n:'Axe', ab:'Single', init:1, atk:4, dfn:0, dam:6},
+  {n:'Club', ab:'Single', init:1, atk:2, dfn:1, dam:3},
+  {n:'Hatchet', ab:'Single', init:0, atk:3, dfn:0, dam:4},
+  {n:'Lance', ab:'Single', init:2, atk:4, dfn:0, dam:5},
+  {n:'Mace', ab:'Single', init:1, atk:3, dfn:0, dam:8},
+  {n:'Mace and Chain', ab:'Single', init:2, atk:3, dfn:0, dam:7},
+  {n:'Spear, Short', ab:'Single', init:2, atk:2, dfn:0, dam:5},
+  {n:'Sword, Short', ab:'Single', init:1, atk:3, dfn:1, dam:5},
+  {n:'Sword, Long', ab:'Single', init:2, atk:4, dfn:1, dam:6},
+  {n:'Cudgel', ab:'Great', init:1, atk:4, dfn:1, dam:7},
+  {n:'Farm Implement', ab:'Great', init:1, atk:3, dfn:1, dam:5},
+  {n:'Flail', ab:'Great', init:1, atk:3, dfn:1, dam:8},
+  {n:'Pole Arm', ab:'Great', init:3, atk:4, dfn:1, dam:8},
+  {n:'Pole Axe', ab:'Great', init:1, atk:5, dfn:0, dam:11},
+  {n:'Spear, Long', ab:'Great', init:3, atk:3, dfn:1, dam:7},
+  {n:'Sword, Great', ab:'Great', init:2, atk:5, dfn:2, dam:9},
+  {n:'Staff', ab:'Great', init:2, atk:3, dfn:3, dam:2},
+  {n:'Warhammer', ab:'Great', init:0, atk:6, dfn:0, dam:12},
+  {n:'Axe, Throwing', ab:'Thrown', init:0, atk:2, dfn:0, dam:6, missile:true},
+  {n:'Javelin', ab:'Thrown', init:0, atk:2, dfn:0, dam:5, missile:true},
+  {n:'Knife (thrown)', ab:'Thrown', init:0, atk:1, dfn:0, dam:2, missile:true},
+  {n:'Sling', ab:'Thrown', init:-3, atk:1, dfn:0, dam:4, missile:true},
+  {n:'Stone', ab:'Thrown', init:0, atk:1, dfn:0, dam:2, missile:true},
+  {n:'Bow, Long', ab:'Bow', init:-2, atk:4, dfn:0, dam:8, missile:true},
+  {n:'Bow, Short', ab:'Bow', init:-1, atk:3, dfn:0, dam:6, missile:true},
+];
+const SHIELDS = [
+  {n:'(none)', init:0, atk:0, dfn:0, dam:0},
+  {n:'Shield, Buckler', init:0, atk:0, dfn:1, dam:0},
+  {n:'Shield, Round', init:0, atk:0, dfn:2, dam:0},
+  {n:'Shield, Heater', init:0, atk:0, dfn:3, dam:0},
+];
+const ARMORS = [
+  {n:'(none)', prot:0},
+  {n:'Quilted / Fur — partial', prot:1},
+  {n:'Heavy Leather — partial', prot:2},
+  {n:'Metal-Reinf. Leather — partial', prot:2},
+  {n:'Metal-Reinf. Leather — full', prot:4},
+  {n:'Leather Scale — partial', prot:3},
+  {n:'Leather Scale — full', prot:5},
+  {n:'Metal Scale — partial', prot:4},
+  {n:'Metal Scale — full', prot:7},
+  {n:'Chain Mail — partial', prot:6},
+  {n:'Chain Mail — full', prot:9},
+];
+const CB_AB = {Brawl:'Brawl', Single:'Single Weapon', Great:'Great Weapon', Thrown:'Thrown Weapon', Bow:'Bows'};
+
+// Each (5 + Size) points of damage past Soak raises the wound level.
+function woundLevel(through, size){
+  if(through < 1) return {level:'No wound', note:''};
+  let step = 5 + (size||0); if(step < 1) step = 1;
+  const n = Math.ceil(through/step);
+  const levels=['Light','Medium','Heavy','Incapacitating','Dead'];
+  const notes=['−1 penalty','−3 penalty','−5 penalty','incapacitated','slain'];
+  const i=Math.min(n-1,4);
+  return {level:levels[i], note:notes[i]};
+}
+
+function combatDerived(sheet){
+  const w = WEAPONS[+$('#cbWeapon').value] || WEAPONS[1];
+  const sh = SHIELDS[+$('#cbShield').value] || SHIELDS[0];
+  const ar = ARMORS[+$('#cbArmor').value] || ARMORS[0];
+  const enc = parseInt($('#cbEnc').value,10)||0;
+  const wound = parseInt($('#cbWound').value,10)||0;
+  const form = parseInt($('#cbForm').value,10)||0;
+  const ch = sheet.characteristics||{};
+  const abName = CB_AB[w.ab];
+  const abSc = abilityScore(sheet, abName) + puissantAbilityBonus(sheet, abName);  // Puissant applies in combat
+  const initMod=(w.init||0)+(sh.init||0), atkMod=(w.atk||0)+(sh.atk||0), dfnMod=(w.dfn||0)+(sh.dfn||0), damMod=(w.dam||0)+(sh.dam||0);
+  return {
+    w, sh, ar, enc, wound, form, abName, abSc, ch, initMod, atkMod, dfnMod, damMod,
+    init: (ch.qik||0) + initMod - enc - wound,
+    atk: (ch.dex||0) + abSc + atkMod - wound,
+    def: (ch.qik||0) + abSc + dfnMod - wound,
+    damBase: (ch.str||0) + damMod,
+    soak: (ch.sta||0) + (ar.prot||0) + form,
+    canAttack: w.atk!==null, canDamage: w.dam!==null
+  };
+}
+
+function bestCombatWeaponIndex(sheet){
+  const prefs = [['Single Weapon','Sword, Long'],['Great Weapon','Sword, Great'],['Bows','Bow, Short'],['Thrown Weapon','Javelin']];
+  let best=null, bestScore=0;
+  prefs.forEach(([ab,wn])=>{ const s=abilityScore(sheet,ab); if(s>bestScore){bestScore=s; best=wn;} });
+  const idx = best ? WEAPONS.findIndex(w=>w.n===best) : -1;
+  return idx<0 ? WEAPONS.findIndex(w=>w.n==='Fist') : idx;
+}
+
+function updateCombatSummary(){
+  const el=$('#cbSummary'); if(!el || !ROLL_CTX.combat) return;
+  const d=combatDerived(ROLL_CTX.combat);
+  el.innerHTML = `<span>Init ${signed(d.init)}</span><span>Atk ${d.canAttack?signed(d.atk):'—'}</span><span>Def ${signed(d.def)}</span><span>Dam ${d.canDamage?signed(d.damBase):'—'} <span class="rd-hint">+adv</span></span><span>Soak ${signed(d.soak)}</span><span class="cb-ab">${esc(d.abName)} ${signed(d.abSc)}</span>`;
+}
+
+function combatDialog(sheet){
+  if(!sheet) return;
+  ROLL_CTX = {combat:sheet};
+  const wOpts = WEAPONS.map((w,i)=>`<option value="${i}">${esc(w.n)} · ${esc(CB_AB[w.ab])}${w.missile?' (missile)':''}</option>`).join('');
+  const shOpts = SHIELDS.map((s,i)=>`<option value="${i}">${esc(s.n)}</option>`).join('');
+  const arOpts = ARMORS.map((a,i)=>`<option value="${i}">${esc(a.n)}${a.prot?` (Prot ${a.prot})`:''}</option>`).join('');
+  $('#rollDialog').innerHTML = `
+    <button class="rd-close" onclick="closeRollModal()">✕</button>
+    <h3>⚔ Combat — ${esc(sheet.name)}</h3>
+    <p class="rd-sub">Init = Qik + wpn − Enc · Atk = Dex + Ability + wpn · Def = Qik + Ability + wpn · each + stress die</p>
+    <div class="rd-row"><label>Weapon</label><select id="cbWeapon">${wOpts}</select></div>
+    <div class="rd-row"><label>Shield / off-hand</label><select id="cbShield">${shOpts}</select></div>
+    <div class="rd-row"><label>Armor</label><select id="cbArmor">${arOpts}</select></div>
+    <div class="rd-row"><label>Encumbrance</label><input type="number" id="cbEnc" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Wound penalty <span class="rd-hint">(as positive)</span></label><input type="number" id="cbWound" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Form bonus to Soak <span class="rd-hint">(magi)</span></label><input type="number" id="cbForm" value="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice</label><input type="number" id="cbBotch" value="1" min="0" step="1"></div>
+    <div id="cbSummary" class="cb-summary"></div>
+    <div class="rd-buttons">
+      <button class="rd-btn simple" onclick="combatRoll('init')">Initiative</button>
+      <button class="rd-btn" onclick="combatRoll('attack')">Attack</button>
+      <button class="rd-btn simple" onclick="combatRoll('defense')">Defense</button>
+    </div>
+    <div class="rd-section-label" style="margin-top:14px">Attack resolution (optional — fill before rolling Attack)</div>
+    <div class="rd-row"><label>Target Defense Total</label><input type="number" id="cbTgtDef" placeholder="—" step="1" style="width:62px"></div>
+    <div class="rd-row"><label>Target Soak Total</label><input type="number" id="cbTgtSoak" placeholder="—" step="1" style="width:62px"></div>
+    <div class="rd-row"><label>Target Size</label><input type="number" id="cbTgtSize" value="0" step="1" style="width:62px"></div>
+    <div class="rd-result" id="rdResult"></div>
+  `;
+  $('#cbWeapon').value = bestCombatWeaponIndex(sheet);
+  updateCombatSummary();
+  openRollModal();
+}
+
+function combatRoll(kind){
+  const sheet = ROLL_CTX.combat; if(!sheet) return;
+  const d = combatDerived(sheet);
+  const botchDice = parseInt($('#cbBotch').value,10)||0;
+  const woundBit = d.wound?` · wound −${d.wound}`:'';
+
+  if(kind==='init'){
+    const die = rollStress(botchDice);
+    const total = die.botch ? Math.min(0,d.init) : d.init + die.value;
+    return showCombat({title:'Initiative', total, botched:die.botch,
+      breakdown:`Qik ${signed(d.ch.qik)} · ${esc(d.w.n)} init ${signed(d.initMod)} · Enc ${signed(-d.enc)}${woundBit} · ${die.detail}`});
+  }
+  if(kind==='defense'){
+    const die = rollStress(botchDice);
+    const total = die.botch ? Math.min(0,d.def) : d.def + die.value;
+    return showCombat({title:'Defense', total, botched:die.botch,
+      breakdown:`Qik ${signed(d.ch.qik)} · ${esc(d.abName)} ${signed(d.abSc)} · def mod ${signed(d.dfnMod)}${woundBit} · ${die.detail}`,
+      outcome: die.botch ? {cls:'bad', text:'✗ Botch on defense — very dangerous; the attacker gains a large advantage.'} : null});
+  }
+  // attack
+  if(!d.canAttack) return showCombat({title:'Attack', text:`${esc(d.w.n)} is a defensive/dodge option and cannot attack.`});
+  const die = rollStress(botchDice);
+  const atk = die.botch ? Math.min(0,d.atk) : d.atk + die.value;
+  const breakdown = `Dex ${signed(d.ch.dex)} · ${esc(d.abName)} ${signed(d.abSc)} · atk mod ${signed(d.atkMod)}${woundBit} · ${die.detail}`;
+  const res = {title:'Attack', total:atk, botched:die.botch, breakdown};
+
+  const tdRaw = ($('#cbTgtDef')||{}).value;
+  if(die.botch){
+    res.outcome = {cls:'bad', text:'✗ Botch — a combat botch is dangerous (dropped weapon, lost footing, an opening for the foe).'};
+  } else if(tdRaw!==''){
+    const tgtDef = parseInt(tdRaw,10)||0;
+    const aa = atk - tgtDef;
+    if(aa <= 0){
+      res.outcome = {cls:'bad', text:`✗ Miss — Attack ${atk} vs Defense ${tgtDef} (advantage ${signed(aa)}; hit needs advantage &gt; 0).`};
+    } else {
+      const damTotal = d.damBase + aa;
+      let txt = `✓ Hit — Attack Advantage +${aa}. Damage Total <b>${damTotal}</b> (Str ${signed(d.ch.str)} · wpn ${signed(d.damMod)} · advantage +${aa})`;
+      const tsRaw = ($('#cbTgtSoak')||{}).value;
+      if(tsRaw!==''){
+        const tgtSoak = parseInt(tsRaw,10)||0;
+        const tSize = parseInt(($('#cbTgtSize')||{}).value,10)||0;
+        const through = damTotal - tgtSoak;
+        const w = woundLevel(through, tSize);
+        txt += `. Past Soak ${tgtSoak}: ${Math.max(0,through)} → Size ${signed(tSize)} → <b>${w.level}</b>${w.note?` (${w.note})`:''}`;
+      } else {
+        txt += ` — enter Target Soak for the wound.`;
+      }
+      res.outcome = {cls:'good', text:txt};
+    }
+  }
+  showCombat(res);
+}
+
+function showCombat({title, total, botched, breakdown, outcome, text}){
+  const el=$('#rdResult');
+  el.innerHTML = `
+    ${text?`<div class="rd-total">${text}</div>`:''}
+    ${total!=null?`<div class="rd-total ${botched?'botch':''}">${esc(title)} <b>${total}</b>${botched?' <span class="rd-botchflag">BOTCH</span>':''}</div>`:''}
+    ${outcome?`<div class="rd-outcome ${outcome.cls}">${outcome.text}</div>`:''}
+    ${breakdown?`<div class="rd-breakdown">${breakdown}</div>`:''}
+    ${keepBtnHtml()}
+  `;
+  el.classList.add('show');
+  LAST_RESULT = {
+    name: 'Combat' + (title?': '+title:''),
+    line: (text?stripTags(text)+' — ':'') + (total!=null?(esc(title)+' '+total):'') + (botched?' BOTCH':''),
+    detail: stripTags(breakdown||'') + (outcome?(' · '+stripTags(outcome.text)):'')
+  };
+}
+
+// ── Trackers, roll log, export/import (per character, in localStorage) ──
+let STATE = {}, LOG = [], LAST_RESULT = null;
+const stKey  = id => 'sjor_sheet_' + id;
+const logKey = id => 'sjor_log_' + id;
+const stripTags = s => String(s==null?'':s).replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
+function defaultState(sheet){
+  return { fatigue:0, wounds:{light:0,medium:0,heavy:0,incap:0},
+    confidence:(sheet && sheet.confidence && sheet.confidence.score)||0, notes:'' };
+}
+function loadState(){
+  const d = defaultState(CURRENT_SHEET);
+  try{ STATE = Object.assign({}, d, JSON.parse(localStorage.getItem(stKey(CUR_ID))||'null')||{}); }
+  catch(_){ STATE = d; }
+  STATE.wounds = Object.assign({}, d.wounds, STATE.wounds||{});
+  try{ LOG = JSON.parse(localStorage.getItem(logKey(CUR_ID))||'[]') || []; }catch(_){ LOG = []; }
+}
+function saveState(){ try{ localStorage.setItem(stKey(CUR_ID), JSON.stringify(STATE)); }catch(_){} }
+function saveLog(){ try{ localStorage.setItem(logKey(CUR_ID), JSON.stringify(LOG)); }catch(_){} }
+
+const FATIGUE_LEVELS = ['Fresh','Winded','Weary','Tired','Dazed','Unconscious'];
+const WOUND_KEYS = [['light','Light'],['medium','Medium'],['heavy','Heavy'],['incap','Incap.']];
+function renderTrackers(){
+  const st = STATE;
+  const fat = FATIGUE_LEVELS[Math.min(st.fatigue,5)] || '—';
+  const stepper = (minus, plus, val) =>
+    `<span class="tk-step"><button data-tk="${minus}">−</button><b class="tk-v">${val}</b><button data-tk="${plus}">+</button></span>`;
+  const step = (label, minus, plus, val) =>
+    `<div class="tk-row"><span class="tk-l">${label}</span>${stepper(minus, plus, val)}</div>`;
+  // Fatigue: the level name (Fresh…Unconscious) sits to the LEFT of the stepper.
+  const fatRow = `<div class="tk-row"><span class="tk-l">Fatigue</span><span class="tk-tag">${esc(fat)}</span>${stepper('fat-','fat+',st.fatigue)}</div>`;
+  $('#trackers').innerHTML =
+    `<div class="tk-title">In play <span class="tk-who">— ${esc((CURRENT_SHEET&&CURRENT_SHEET.name)||'')}</span></div>`
+    + fatRow
+    + step('Confidence', 'conf-', 'conf+', st.confidence)
+    + `<div class="tk-wsub">Wounds</div>`
+    + WOUND_KEYS.map(([k,l])=>step(l, 'w-'+k, 'w+'+k, st.wounds[k]||0)).join('')
+    + `<button class="tk-reset" id="tkReset">Reset trackers</button>`;
+  $$('#trackers [data-tk]').forEach(b=> b.onclick=()=>adjustTracker(b.dataset.tk));
+  $('#tkReset').onclick = ()=>{ if(confirm('Reset fatigue, wounds, confidence, and notes for '+((CURRENT_SHEET&&CURRENT_SHEET.name)||'this character')+'?')){ STATE = defaultState(CURRENT_SHEET); saveState(); renderTrackers(); renderNotes(); } };
+}
+function renderNotes(){ const t=$('#tkNotes'); if(t) t.value = STATE.notes||''; }
+function adjustTracker(cmd){
+  const cl=(v,lo,hi)=>Math.max(lo,hi==null?v:Math.min(hi,v));
+  if(cmd==='fat+') STATE.fatigue=cl(STATE.fatigue+1,0,5);
+  else if(cmd==='fat-') STATE.fatigue=cl(STATE.fatigue-1,0,5);
+  else if(cmd==='conf+') STATE.confidence=cl(STATE.confidence+1,0,null);
+  else if(cmd==='conf-') STATE.confidence=cl(STATE.confidence-1,0,null);
+  else if(cmd[0]==='w'){ const k=cmd.slice(2); const dir=cmd[1]==='+'?1:-1; STATE.wounds[k]=cl((STATE.wounds[k]||0)+dir,0,null); }
+  saveState(); renderTrackers();
+}
+
+function keepBtnHtml(){ return `<button class="rd-keep" onclick="keepLast()">＋ Keep to log</button>`; }
+function keepLast(){
+  if(!LAST_RESULT) return;
+  LOG.unshift({ when: stampNow(), name: LAST_RESULT.name, line: LAST_RESULT.line, detail: LAST_RESULT.detail });
+  saveLog(); renderLog();
+  const b = document.querySelector('#rdResult .rd-keep');
+  if(b){ b.textContent='✓ Kept'; b.disabled=true; b.classList.add('kept'); }
+}
+function stampNow(){ try{ return new Date().toLocaleString(); }catch(_){ return ''; } }
+function renderLog(){
+  $('#logCount').textContent = LOG.length ? `(${LOG.length})` : '';
+  const host = $('#rollLog');
+  if(!LOG.length){ host.innerHTML = `<p class="log-empty">No rolls kept yet. Roll, then <b>＋ Keep to log</b>.</p>`; return; }
+  host.innerHTML = LOG.map((e,i)=>`
+    <div class="log-item">
+      <div class="log-top"><span class="log-name">${esc(e.name||'Roll')}</span><span class="log-when">${esc(e.when||'')}</span></div>
+      <div class="log-line">${esc(e.line||'')}</div>
+      ${e.detail?`<div class="log-detail">${esc(e.detail)}</div>`:''}
+      <button class="log-del" data-del="${i}" title="Remove">✕</button>
+    </div>`).join('');
+  $$('#rollLog .log-del').forEach(b=> b.onclick=()=>{ LOG.splice(+b.dataset.del,1); saveLog(); renderLog(); });
+}
+
+// export / import a {character, state, log} bundle
+function exportChar(){
+  const data = { app:'sjorseidr-sheet', character:CUR_ID, name:(CURRENT_SHEET&&CURRENT_SHEET.name)||CUR_ID,
+    exportedFrom:'play.html', state:STATE, log:LOG };
+  const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href=url; a.download=(CUR_ID||'character')+'-sheet.json'; a.click();
+  URL.revokeObjectURL(url);
+}
+function importChar(file){
+  const r = new FileReader();
+  r.onload = ()=>{
+    try{
+      const d = JSON.parse(r.result);
+      if(d.character && d.character!==CUR_ID){
+        if(!confirm(`This file is for “${d.name||d.character}”, but you're viewing “${(CURRENT_SHEET&&CURRENT_SHEET.name)||CUR_ID}”. Import anyway (applies to the file's character)?`)) return;
+        if(findCharacterSheet(d.character)){ selectChar(d.character); }
+      }
+      if(d.state){ STATE = Object.assign(defaultState(CURRENT_SHEET), d.state); STATE.wounds = Object.assign(defaultState(CURRENT_SHEET).wounds, d.state.wounds||{}); saveState(); }
+      if(Array.isArray(d.log)){ LOG = d.log; saveLog(); }
+      renderTrackers(); renderLog();
+    }catch(err){ alert('Could not read that file: '+err.message); }
+  };
+  r.readAsText(file);
+}
+$('#btnExport').onclick = exportChar;
+$('#fileImport').onchange = e=>{ if(e.target.files[0]){ importChar(e.target.files[0]); e.target.value=''; } };
+$('#logClear').onclick = ()=>{ if(LOG.length && confirm('Clear the entire roll log for this character?')){ LOG=[]; saveLog(); renderLog(); } };
+$('#tkNotes').oninput = e=>{ STATE.notes = e.target.value; saveState(); };
+// Notes / Log tab toggle beneath the In Play box.
+$$('.side-tab').forEach(t=>t.onclick=()=>{
+  const key = t.dataset.side;
+  $$('.side-tab').forEach(x=>x.classList.toggle('on', x===t));
+  $$('.side-tp').forEach(p=>p.classList.toggle('on', p.dataset.side===key));
+});
+
+// Delegated: clicking a rollable ability/spell row opens its dialog.
+let ROLL_CTX = {};
+$('#sheet').addEventListener('click', e=>{
+  const stab = e.target.closest('.sheet-tab');
+  if(stab){
+    const key = stab.dataset.stab;
+    $$('#sheet .sheet-tab').forEach(t=>t.classList.toggle('on', t===stab));
+    $$('#sheet .sheet-tp').forEach(p=>p.classList.toggle('on', p.dataset.stab===key));
+    return;
+  }
+  const row = e.target.closest('.rollable');
+  if(!row || !CURRENT_SHEET) return;
+  const idx = parseInt(row.dataset.idx,10);
+  if(row.dataset.roll==='ability'){
+    const ab = (CURRENT_SHEET.abilities||[])[idx];
+    if(ab){ ROLL_CTX = {ab}; abilityDialog(ab); }
+  } else if(row.dataset.roll==='spell'){
+    const sp = (CURRENT_SHEET.spells||[])[idx];
+    if(sp){ ROLL_CTX = {sp}; spellDialog(sp); }
+  }
+});
+$('#rollModal').addEventListener('click', e=>{ if(e.target.id==='rollModal') closeRollModal(); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeRollModal(); });
+// Enable a V/F value field only when its checkbox is ticked.
+$('#rollDialog').addEventListener('change', e=>{
+  if(e.target.classList.contains('rdVF')){
+    const val = document.querySelector(`.rdVFval[data-i="${e.target.dataset.i}"]`);
+    if(val){ val.disabled = !e.target.checked; e.target.parentElement.classList.toggle('on', e.target.checked); }
+  }
+  if(e.target.id==='rdPenAC'){
+    const on = (parseInt(e.target.value,10)||0) > 0;
+    const wrap = document.getElementById('rdSympWrap');
+    if(wrap){ wrap.style.opacity = on?'1':'.4'; wrap.style.pointerEvents = on?'auto':'none';
+      if(!on) wrap.querySelectorAll('input').forEach(i=>{ i.checked=false; }); }
+  }
+  if(e.target.id && e.target.id.startsWith('cb')) updateCombatSummary();
+});
+$('#rollDialog').addEventListener('input', e=>{
+  if(e.target.id && e.target.id.startsWith('cb')) updateCombatSummary();
+});
+
+load();
+</script>
+</body>
+</html>
