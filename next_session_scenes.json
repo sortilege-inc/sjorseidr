@@ -178,6 +178,26 @@
     "c026",
     "t072"
    ]
+  },
+  {
+   "id": "s12",
+   "title": "Harvesting the Diedne Garden — what does it entail?",
+   "seasons": [
+    "Summer 1224",
+    "Fall 1224"
+   ],
+   "magi": [
+    "Valdemar"
+   ],
+   "npcs": [],
+   "thread": "Vis sources / the Diedne Garden",
+   "status": "Needs prep",
+   "hook": "Valdemar has taken on the covenant's newly-won Diedne Garden — a Herbam vis source (3 pawns/yr). What tending and harvesting it actually entails is undeveloped: the harvest mechanics, any guardian or condition, and — given the name — whether a vanished Diedne magus left something in it no one has yet seen.",
+   "detail": "Flagged from Valdemar's declared season plans (t079) and the 2026-08-08 recap, where he 'defaulted to taking care of the Diedne Garden' and said he wanted to keep an eye on it — wondering whether its Diedne maker left a remnant behind. TO PREP: how the Herbam vis is harvested (the season/window, the roll, any risk of botch or aura harm); the garden's nature and location; whether there is a guardian, ward, or standing condition on the harvest; and what — if anything — a long-dead Diedne planter concealed there. Pointed resonance: Valdemar is himself secretly House Diedne (t078), so a Diedne garden is a personal draw as much as a practical one. He also means to pick up the basics of Herbam in order to work it.",
+   "refs": [
+    "t079",
+    "t078"
+   ]
   }
  ]
 }
