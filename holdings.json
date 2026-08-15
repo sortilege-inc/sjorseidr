@@ -24,7 +24,7 @@
   "labs": [
     {
       "id": "undrahol-lab",
-      "name": "Undrahöll Laboratory",
+      "name": "Undrahöll",
       "aka": "the Hall of Wonders",
       "owner": "Valdemar Bjornsson",
       "status": "proposed",
@@ -38,11 +38,11 @@
       "upkeep": 4,
       "warping": 0,
       "aesthetics": 11,
-      "constructionCost": "100£ (100 lab points × ½£/point = 50£, doubled by Superior Construction) — the same points total that sets the Upkeep-4 maintenance below",
+      "constructionCost": "100£ (100 lab points × ½£/point = 50£, doubled by Superior Construction)",
       "maintenance": "Upkeep 4 = 100 points → ~5£/yr at ≤1 season (Valdemar's Winter-only use), 10£ at two seasons, 15£ at 3–4.",
-      "specialties": "Spells +3 (Antechamber)\n\nItems +3 (Forge, Running Water, Superior Tools)\n\nRego +1 (Dedicated Building) — the player may point this at a rune instead\n\nAquam +1 (Idyllic Surroundings, seaside) — may instead be Laguz, the water-rune",
+      "specialties": "Spells +3 (Antechamber)\n\nItems +3 (Forge, Running Water, Superior Tools)\n\nRego/Tiwaz +1 (Dedicated Building)\n\nAquam/Laguz +1 (Idyllic Surroundings, seaside)",
       "features": "Minor Structures: Extensive Stores, Gallery, Spacious, Well Insulated · Greater Feature: Antechamber · Lesser Features: Forge, Running Water · Free virtues: Dedicated Building, Grand Entrance, Idyllic Surroundings, Superior Construction, Guard, Superior Equipment, Superior Tools · Flaw: Empty ×2 (holding 4 points in reserve for future Refinement)",
-      "notes": "Viktir rune-workings function as spells, so learning a rune-effect is the Spells activity (+4 with Antechamber & General Quality) and imbuing a rune into an object is the Items activity (+4). Aesthetics +11 reads as a ~55-point reputation as a Rune Master. Refinement is capped at Valdemar's Magic Theory (3) and rises with study. Full player notes and rulings live in the t079 dossier.",
+      "notes": "Viktir rune-workings function as spells, so learning a rune-effect is the Spells activity (+4 with Antechamber & General Quality) and imbuing a rune into an object is the Items activity (+4). Aesthetics +11 reads as a ~55-point reputation as a Rune Master. Refinement is capped at Valdemar's Magic Theory (3) and rises with study.",
       "refs": ["t079", "s13"]
     }
   ]
