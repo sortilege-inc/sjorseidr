@@ -120,7 +120,9 @@
       "status": "En route to Scarem Montem",
       "description": "Confirmed: this is the ship pirated from Scarem Montem — a Tremere-crewed vessel, raided by Valdemar's crew in Summer 1221. Yielded three magically-sealed chests and the letter that led to discovering the imprisoned Valerian de Castellane. As of Spring 1224, it's under Wilhelm's control and heading back to Scarem Montem — handing them back their own hull as the trade chip for his stolen thesis.",
       "standing_crew": [
-        "Wilhelm Stienauer"
+        "Wilhelm Stienauer",
+        "Carl Schmidt",
+        "Isaac Schmidt"
       ],
       "former_crew": [
         "Joris Van Damme (captain)",
