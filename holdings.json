@@ -17,7 +17,7 @@
         { "name": "Nóatún", "role": "Main hall — where the coven Winters" },
         { "name": "Undrahöll — “Hall of Wonders”", "role": "Valdemar's hall: his laboratory plus living quarters for him and Rán, the living space kept separate from the lab for Safety", "lab": "undrahol-lab" }
       ],
-      "funding": "Construction (60£) and yearly upkeep are funded through the summer and fall raiding and trading seasons, booked in the covenant ledger; the build seasons are held until the laboratory specs are locked.",
+      "funding": "Construction (100£) and yearly upkeep are funded through the summer and fall raiding and trading seasons, booked in the covenant ledger; the build seasons are held until the laboratory specs are locked.",
       "refs": ["t079", "s13"]
     }
   ],
@@ -38,7 +38,7 @@
       "upkeep": 4,
       "warping": 0,
       "aesthetics": 11,
-      "constructionCost": "60£ (Size 13 at 1£/point after Superior Construction doubles the bill)",
+      "constructionCost": "100£ (100 lab points × ½£/point = 50£, doubled by Superior Construction) — the same points total that sets the Upkeep-4 maintenance below",
       "maintenance": "Upkeep 4 = 100 points → ~5£/yr at ≤1 season (Valdemar's Winter-only use), 10£ at two seasons, 15£ at 3–4.",
       "specialties": "Spells +3 (Antechamber)\n\nItems +3 (Forge, Running Water, Superior Tools)\n\nRego +1 (Dedicated Building) — the player may point this at a rune instead\n\nAquam +1 (Idyllic Surroundings, seaside) — may instead be Laguz, the water-rune",
       "features": "Minor Structures: Extensive Stores, Gallery, Spacious, Well Insulated · Greater Feature: Antechamber · Lesser Features: Forge, Running Water · Free virtues: Dedicated Building, Grand Entrance, Idyllic Surroundings, Superior Construction, Guard, Superior Equipment, Superior Tools · Flaw: Empty ×2 (holding 4 points in reserve for future Refinement)",

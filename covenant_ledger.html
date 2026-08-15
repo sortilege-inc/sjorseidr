@@ -181,6 +181,8 @@ footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);
 .lab-specs{display:flex;flex-wrap:wrap;gap:5px}
 .lab-spec{font-size:11.5px;background:rgba(44,107,102,.13);color:var(--teal);border:1px solid rgba(44,107,102,.32);border-radius:9px;padding:2px 8px}
 .lab-feat{font-size:12.5px;line-height:1.5;color:var(--ink-soft);margin:2px 0}
+.featchip{border-bottom:1px dotted var(--gold);cursor:help;color:var(--ink)}
+.featchip:hover{background:rgba(198,155,63,.2);border-radius:3px}
 .lab-note{font-size:12px;line-height:1.55;color:var(--ink-soft);font-style:italic;margin:11px 0 0;padding-left:10px;border-left:2px solid rgba(120,90,40,.3)}
 .lab-refs{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
 .lab-refs a{font-family:'Cinzel',serif;font-size:10px;text-decoration:none;background:rgba(120,90,40,.12);
@@ -339,6 +341,37 @@ function vfRows(list,cls){
 const LAB_STATS=[['Size','size'],['Refinement','refinement'],['Gen. Quality','generalQuality'],['Safety','safety'],
   ['Health','health'],['Upkeep','upkeep'],['Warping','warping'],['Aesthetics','aesthetics']];
 const LAB_SIGNED=new Set(['generalQuality','safety','health','warping','aesthetics']);
+
+// Covenants laboratory features/virtues → what each does (hover tooltip on the Labs tab).
+const FEATURE_DESC={
+  'Extensive Stores':'Structure Virtue — the lab is richly stocked with materials. +2 Safety.',
+  'Gallery':'Structure Virtue — a raised space to observe and teach. +1 Safety, +1 Aesthetics, +1 Teaching.',
+  'Spacious':'Structure Virtue — generous working room. +2 Safety, +1 Aesthetics.',
+  'Well Insulated':'Structure Virtue — proofed against draughts and damp. +1 Safety, +1 Aesthetics.',
+  'Antechamber':'Greater Feature — a separate room for practising spellcasting. +3 Spells, +2 Aesthetics.',
+  'Forge':'Lesser Feature — a smithy for enchanting objects. +1 Items.',
+  'Running Water':'Lesser Feature — a fountain or channel running through the lab. +1 Items.',
+  'Empty':'Structure Flaw — unused space beyond what the lab needs (one per 2 leftover Size points). −1 Aesthetics and either +1 Upkeep or −1 Health; lost once the space is filled.',
+  'Dedicated Building':'Free Structure Virtue — the whole building is given over to the lab. +1 Upkeep, +1 Aesthetics, and a specialization of choice.',
+  'Grand Entrance':'Free Structure Virtue — an imposing approach. +2 Aesthetics.',
+  'Idyllic Surroundings':'Free Structure Virtue — sited in beautiful, healthful country. +2 Health, +1 Aesthetics, and a terrain-based Art specialization.',
+  'Superior Construction':'Free Structure Virtue — built to a higher standard; doubles the construction cost. +1 Safety, +1 Aesthetics.',
+  'Guard':'Free Outfitting Virtue — a warden posted at the lab. +1 Aesthetics.',
+  'Superior Equipment':'Free Outfitting Virtue — the finest instruments. +1 General Quality, +2 Upkeep, +1 Safety, +1 Vis Extraction.',
+  'Superior Tools':'Free Outfitting Virtue — the finest hand tools. +1 Upkeep, +1 Safety, +1 Items.',
+  'Map':'A map kept in the lab (a note carried on the Foundry record, not a scored feature).'
+};
+const FEATURE_NAMES=Object.keys(FEATURE_DESC).sort((a,b)=>b.length-a.length); // longest first
+const reEsc=s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+// Escape the features prose, then wrap any known feature name in a hover-tooltip span.
+function featuresHtml(str){
+  let html=esc(str);
+  FEATURE_NAMES.forEach(name=>{
+    html=html.replace(new RegExp('\\b'+reEsc(name)+'\\b','g'),
+      `<span class="featchip" title="${esc(FEATURE_DESC[name])}">${esc(name)}</span>`);
+  });
+  return html;
+}
 function labSheetHtml(lab){
   const proposed=lab.status==='proposed';
   const specs=lab.specialties?lab.specialties.split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean):[];
@@ -354,7 +387,7 @@ function labSheetHtml(lab){
     ${lab.structure?`<p class="lab-struct">${esc(lab.structure)}</p>`:''}
     <div class="lstat-grid">${LAB_STATS.map(([l,k])=>stat(l,k)).join('')}</div>
     ${specs.length?`<div class="lab-sec"><div class="lab-sec-t">Specializations</div><div class="lab-specs">${specs.map(x=>`<span class="lab-spec">${esc(x)}</span>`).join('')}</div></div>`:''}
-    ${lab.features?`<div class="lab-sec"><div class="lab-sec-t">Features</div><p class="lab-feat">${esc(lab.features)}</p></div>`:''}
+    ${lab.features?`<div class="lab-sec"><div class="lab-sec-t">Features</div><p class="lab-feat">${featuresHtml(lab.features)}</p></div>`:''}
     ${(lab.constructionCost||lab.maintenance)?`<div class="lab-sec"><div class="lab-sec-t">Cost &amp; upkeep</div>${lab.constructionCost?`<p class="lab-feat"><b>Build:</b> ${esc(lab.constructionCost)}</p>`:''}${lab.maintenance?`<p class="lab-feat"><b>Upkeep:</b> ${esc(lab.maintenance)}</p>`:''}</div>`:''}
     ${lab.notes?`<p class="lab-note">${esc(lab.notes)}</p>`:''}
     ${refs?`<div class="lab-refs">${refs}</div>`:''}
