@@ -133,6 +133,64 @@ table.libtbl td.dim{color:var(--ink-soft)}
 .libcount{font-size:12px;color:var(--ink-soft);font-style:italic;margin:0 0 8px}
 footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);font-size:12px;color:var(--ink-soft);font-style:italic}
 @media(max-width:640px){.cols{columns:1}}
+
+/* ── covenant tab: meta tiles, charter, virtues/flaws ── */
+.mtile-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px;margin:2px 0 6px}
+.mtile{background:rgba(244,235,213,.6);border:1px solid rgba(120,90,40,.3);border-radius:8px;padding:7px 10px}
+.mtile .ml{display:block;font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft)}
+.mtile .mv{display:block;font-size:15px;font-weight:600;color:var(--ink);margin-top:2px}
+.cov-sec{margin-bottom:18px}
+.cov-p{font-size:14px;line-height:1.6;color:var(--ink);margin:10px 0}
+.cov-lbl{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin:10px 0 4px}
+.cov-ol,.cov-ul{padding-left:22px;margin:6px 0}
+.cov-ol li,.cov-ul li{margin-bottom:7px;font-size:14px;line-height:1.5}
+.cov-ul li{color:var(--ink-soft)}
+.vf-cols{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.vf-col-t{font-family:'Cinzel',serif;font-size:12px;color:var(--rust-bright);margin-bottom:6px}
+.vf{background:rgba(244,235,213,.5);border-left:3px solid var(--line);border-radius:6px;padding:7px 10px;margin-bottom:7px}
+.vf.virtue{border-left-color:var(--green)} .vf.flaw{border-left-color:var(--rust)}
+.vf .vfn{font-weight:600;color:var(--ink);font-size:13.5px}
+.vf .vfi{font-family:'Cinzel',serif;font-size:9px;text-transform:uppercase;letter-spacing:.03em;color:var(--ink-soft);margin-left:6px}
+.vf .vfd{font-size:12.5px;color:var(--ink-soft);line-height:1.5;margin-top:3px}
+.vf-empty{font-style:italic;color:var(--ink-soft);font-size:12.5px}
+@media(max-width:640px){.vf-cols{grid-template-columns:1fr}}
+
+/* ── labs + land cards ── */
+.lab-sec-t{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--rust-bright);
+  border-bottom:1px solid rgba(120,90,40,.3);padding-bottom:3px;margin:0 0 8px}
+.lab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px}
+.labsheet,.landcard{background:linear-gradient(180deg,#f1e6c9,#e4d3a8);border:1.5px solid rgba(120,90,40,.4);
+  border-radius:10px;padding:13px 15px;box-shadow:0 2px 6px var(--shadow);margin-bottom:10px}
+.labsheet.proposed,.landcard.proposed{border-style:dashed;border-color:var(--gold);background:linear-gradient(180deg,#f2e8ca,#e7d7ab)}
+.lab-head{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:6px}
+.lab-name{font-family:'Cinzel',serif;font-weight:600;font-size:15px;color:var(--ink)}
+.lab-aka{font-weight:400;font-style:italic;font-size:12.5px;color:var(--ink-soft)}
+.lab-owner{font-size:12.5px;color:var(--ink-soft);margin-top:1px}
+.lab-status{font-family:'Cinzel',serif;font-size:9.5px;text-transform:uppercase;letter-spacing:.05em;padding:2px 8px;border-radius:9px;white-space:nowrap;flex:none}
+.lab-status.st-built{background:rgba(62,107,53,.16);color:var(--green);border:1px solid rgba(62,107,53,.4)}
+.lab-status.st-proposed{background:rgba(154,107,31,.18);color:var(--gold);border:1px solid rgba(154,107,31,.5)}
+.lab-struct{font-size:12.5px;line-height:1.5;color:var(--ink-soft);margin:2px 0 10px}
+.lstat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:4px}
+.lstat{text-align:center;background:rgba(244,235,213,.6);border:1px solid rgba(120,90,40,.3);border-radius:6px;padding:5px 2px}
+.lstat .ls-l{display:block;font-family:'Cinzel',serif;font-size:8.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft)}
+.lstat .ls-v{display:block;font-size:16px;font-weight:600;color:var(--ink)}
+.lab-sec{margin-top:11px}
+.lab-specs{display:flex;flex-wrap:wrap;gap:5px}
+.lab-spec{font-size:11.5px;background:rgba(44,107,102,.13);color:var(--teal);border:1px solid rgba(44,107,102,.32);border-radius:9px;padding:2px 8px}
+.lab-feat{font-size:12.5px;line-height:1.5;color:var(--ink-soft);margin:2px 0}
+.lab-note{font-size:12px;line-height:1.55;color:var(--ink-soft);font-style:italic;margin:11px 0 0;padding-left:10px;border-left:2px solid rgba(120,90,40,.3)}
+.lab-refs{margin-top:9px;display:flex;gap:6px;flex-wrap:wrap}
+.lab-refs a{font-family:'Cinzel',serif;font-size:10px;text-decoration:none;background:rgba(120,90,40,.12);
+  border:1px solid rgba(120,90,40,.3);color:var(--ink-soft);padding:2px 7px;border-radius:8px}
+.lab-refs a:hover{background:rgba(198,155,63,.3);color:var(--ink)}
+.land-mean{font-size:13px;color:var(--ink-soft);margin:0 0 6px}
+.bld{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:5px 0;border-bottom:1px dashed rgba(120,90,40,.22)}
+.bld:last-child{border-bottom:none}
+.bld-n{font-weight:600;font-size:13px;color:var(--ink)}
+.bld-r{display:block;font-size:12px;color:var(--ink-soft);line-height:1.4}
+.lab-jump{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.03em;cursor:pointer;white-space:nowrap;flex:none;
+  background:rgba(44,107,102,.14);color:var(--teal);border:1px solid rgba(44,107,102,.35);border-radius:9px;padding:3px 9px}
+.lab-jump:hover{background:var(--teal);color:#fff}
 </style>
 </head>
 <body>
@@ -156,9 +214,13 @@ footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);
 <script>
 const $=s=>document.querySelector(s);
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let D=null, tab='overview', ledgerFilter='all', node='current';
-const TABS=[['overview','Overview'],['ships','Ships & Labs'],['inhabitants','Inhabitants'],
-  ['library','Library'],['vis','Vis'],['trade','Trade'],['economics','Economics'],['ledger','Ledger']];
+let D=null, COV=null, DETAILS=null, HOLD=null, tab='covenant', ledgerFilter='all', node='current';
+const TABS=[['covenant','Covenant'],['overview','Overview'],['ships','Ships & Land'],['labs','Labs'],
+  ['inhabitants','Inhabitants'],['library','Library'],['vis','Vis'],['trade','Trade'],
+  ['economics','Economics'],['ledger','Ledger']];
+// Tabs that describe the covenant as a whole rather than a single time-node,
+// so they render the same on every node and skip the node-population gate.
+const NODE_INDEPENDENT=new Set(['covenant','labs']);
 const nodeYear=()=>node==='current'?1224:+node;
 const tradeTotal=y=>((D&&D.trade)||[]).filter(t=>t.year===y).reduce((a,t)=>a+(t.result||0),0);
 let visStockView='type', libSort='title';
@@ -186,10 +248,17 @@ const bTip=b=>{ if(typeof b!=='object') return '';
 async function load(){
   try{ D=await (await fetch('./covenant_ledger.json',{cache:'no-store'})).json(); }
   catch(e){ $('#panels').innerHTML=`<p style="padding:24px">Could not load covenant_ledger.json (serve over http).<br>${esc(e.message)}</p>`; return; }
+  // Covenant sheet, per-ship lab detail, and land/proposed holdings — all optional;
+  // the panels that use them degrade gracefully if a file is missing.
+  const grab=async u=>{ try{ const r=await fetch(u,{cache:'no-store'}); return r.ok?await r.json():null; }catch(_){ return null; } };
+  [COV, DETAILS, HOLD] = await Promise.all([
+    grab('./covenant.json'), grab('./ship_details.json'), grab('./holdings.json')
+  ]);
   $('#cname').textContent=`${esc(D.meta.identity.name)} — Covenant Ledger`;
   $('#caveat').textContent=D.meta.baseline;
   $('#foot').innerHTML=`Baseline from the Foundry covenant actor (~${esc(D.meta.asOf)}). Each node is the covenant at that year's end of Winter; <b>Current</b> is live. Year nodes fill in as we reconstruct them.`;
   if(!N().populated){ const pop=D.nodes.filter(n=>n.populated); if(pop.length) node=pop[pop.length-1].id; } // open on latest populated node
+  const h=(location.hash||'').replace('#',''); if(h && TABS.some(t=>t[0]===h)) tab=h; // deep-link to a tab
   buildNodebar(); render();
 }
 function buildNodebar(){
@@ -215,6 +284,72 @@ function facetReady(t){
   return true;
 }
 const hasEcon=()=>{const e=s().economics;return e&&Object.keys(e).length>0;};
+// Labs come from two places: the per-ship laboratories in ship_details.json and
+// any standalone / proposed labs in holdings.json. Both are covenant-level (not
+// node-scoped), so the Labs and Ships & Land tabs read the same on every node.
+const shipLabList=()=>DETAILS&&DETAILS.ships
+  ? Object.entries(DETAILS.ships).filter(([,d])=>d.laboratory).map(([sid,d])=>({...d.laboratory,shipId:sid,source:'ship'}))
+  : [];
+const proposedLabList=()=>(HOLD&&HOLD.labs)?HOLD.labs.map(l=>({...l,source:'holding'})):[];
+const allLabs=()=>[...shipLabList(),...proposedLabList()];
+const landList=()=>(HOLD&&HOLD.land)?HOLD.land:[];
+
+// ── covenant-sheet + lab/land rendering helpers ──
+const cap=s=>(s||'').replace(/^\w/,c=>c.toUpperCase());
+const sgn=v=>{v=v||0;return v>0?`+${v}`:`${v}`;};
+function metaTile(label,val){ return `<div class="mtile"><span class="ml">${esc(label)}</span><span class="mv">${esc(val)}</span></div>`; }
+function vfRows(list,cls){
+  if(!list||!list.length) return `<div class="vf-empty">— none recorded —</div>`;
+  return list.map(v=>`<div class="vf ${cls}"><span class="vfn">${esc(v.name)}</span>${v.impact?`<span class="vfi">${esc(v.impact)}</span>`:''}${v.description?`<div class="vfd">${esc(v.description)}</div>`:''}</div>`).join('');
+}
+const LAB_STATS=[['Size','size'],['Refinement','refinement'],['Gen. Quality','generalQuality'],['Safety','safety'],
+  ['Health','health'],['Upkeep','upkeep'],['Warping','warping'],['Aesthetics','aesthetics']];
+const LAB_SIGNED=new Set(['generalQuality','safety','health','warping','aesthetics']);
+function labSheetHtml(lab){
+  const proposed=lab.status==='proposed';
+  const specs=lab.specialties?lab.specialties.split(/\n\s*\n/).map(x=>x.trim()).filter(Boolean):[];
+  const refs=(lab.refs||[]).map(r=>`<a href="${r[0]==='s'?'next_session_scenes.html':'open_questions.html'}" title="See ${esc(r)}">${esc(r)}</a>`).join(' ');
+  const stat=(label,key)=>{const v=lab[key];const disp=v==null?'—':(LAB_SIGNED.has(key)?sgn(v):v);
+    return `<div class="lstat"><span class="ls-l">${esc(label)}</span><span class="ls-v">${esc(disp)}</span></div>`;};
+  return `<div class="labsheet${proposed?' proposed':''}" id="lab-${esc(lab.id||'')}">
+    <div class="lab-head">
+      <div><div class="lab-name">${esc(lab.name)}${lab.aka?` <span class="lab-aka">(${esc(lab.aka)})</span>`:''}</div>
+        <div class="lab-owner">${esc(lab.owner||'—')}${lab.shipId?` · aboard ${esc(SHIP_NAMES[lab.shipId]||lab.shipId)}`:''}</div></div>
+      <span class="lab-status ${proposed?'st-proposed':'st-built'}">${proposed?'Proposed':'Built'}</span>
+    </div>
+    ${lab.structure?`<p class="lab-struct">${esc(lab.structure)}</p>`:''}
+    <div class="lstat-grid">${LAB_STATS.map(([l,k])=>stat(l,k)).join('')}</div>
+    ${specs.length?`<div class="lab-sec"><div class="lab-sec-t">Specializations</div><div class="lab-specs">${specs.map(x=>`<span class="lab-spec">${esc(x)}</span>`).join('')}</div></div>`:''}
+    ${lab.features?`<div class="lab-sec"><div class="lab-sec-t">Features</div><p class="lab-feat">${esc(lab.features)}</p></div>`:''}
+    ${(lab.constructionCost||lab.maintenance)?`<div class="lab-sec"><div class="lab-sec-t">Cost &amp; upkeep</div>${lab.constructionCost?`<p class="lab-feat"><b>Build:</b> ${esc(lab.constructionCost)}</p>`:''}${lab.maintenance?`<p class="lab-feat"><b>Upkeep:</b> ${esc(lab.maintenance)}</p>`:''}</div>`:''}
+    ${lab.notes?`<p class="lab-note">${esc(lab.notes)}</p>`:''}
+    ${refs?`<div class="lab-refs">${refs}</div>`:''}
+  </div>`;
+}
+function landCardHtml(h){
+  const proposed=h.status==='proposed';
+  const bld=(h.buildings||[]).map(b=>{
+    const jump=b.lab?`<button class="lab-jump" data-golab="${esc(b.lab)}">view lab ▸</button>`:'';
+    return `<div class="bld"><div><span class="bld-n">${esc(b.name)}</span><span class="bld-r">${esc(b.role)}</span></div>${jump}</div>`;
+  }).join('');
+  const refs=(h.refs||[]).map(r=>`<a href="${r[0]==='s'?'next_session_scenes.html':'open_questions.html'}" title="See ${esc(r)}">${esc(r)}</a>`).join(' ');
+  return `<div class="landcard${proposed?' proposed':''}">
+    <div class="lab-head"><div><div class="lab-name">${esc(h.name)}${h.aka?` <span class="lab-aka">(${esc(h.aka)})</span>`:''}</div>
+      <div class="lab-owner">${esc(h.location||'')}</div></div>
+      <span class="lab-status ${proposed?'st-proposed':'st-built'}">${proposed?'Proposed':'Held'}</span></div>
+    ${h.meaning?`<p class="land-mean"><em>${esc(h.meaning)}</em></p>`:''}
+    <p class="lab-struct">${esc(h.description||'')}</p>
+    ${bld?`<div class="lab-sec"><div class="lab-sec-t">Buildings</div>${bld}</div>`:''}
+    ${h.funding?`<p class="lab-feat" style="margin-top:8px"><b>Funding:</b> ${esc(h.funding)}</p>`:''}
+    ${refs?`<div class="lab-refs">${refs}</div>`:''}
+  </div>`;
+}
+function wireLand(){
+  document.querySelectorAll('.lab-jump[data-golab]').forEach(b=>b.onclick=()=>{
+    const id=b.dataset.golab; tab='labs'; render();
+    requestAnimationFrame(()=>document.getElementById('lab-'+id)?.scrollIntoView({behavior:'smooth',block:'center'}));
+  });
+}
 const SHIP_NAMES={'tide-of-memory':'Tide of Memory','brineborn':'The Brineborn','scholars-wake':"The Scholar's Wake",
  'maelstroms-maw':"The Maelstrom's Maw",'gloaming':'The Gloaming','storm-dragon':'Veðrdreki',
  'adamant':'Adamant','hound-of-cassel':'Hound of Cassel'};
@@ -237,17 +372,19 @@ function render(){
   $('#nodehint').textContent = n.populated ? `Showing ${n.label} — ${n.sub}` : `${n.label} — not yet reconstructed`;
   $('#tabs').innerHTML=TABS.map(([k,l])=>{
     let cnt='';
-    if(n.populated && facetReady(k)) cnt = k==='ships'?st.ships.length : k==='inhabitants'?inhabCount()
+    if(k==='labs') cnt = allLabs().length||'';
+    else if(n.populated && facetReady(k)) cnt = k==='ships'?st.ships.length : k==='inhabitants'?inhabCount()
       : k==='library'?(st.library.books.length+st.library.labTexts.length)
       : k==='vis'?st.vis.stock.reduce((a,x)=>a+(x.q||0),0)
       : k==='trade'?(tradeTotal(nodeYear())||'') : '';
     return `<div class="tab ${tab===k?'on':''}" data-tab="${k}">${l}${cnt!==''?` <span class="n">${cnt}</span>`:''}</div>`;}).join('');
-  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;render();});
+  document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>{tab=t.dataset.tab;history.replaceState(null,'','#'+tab);render();});
   let html;
-  if(tab!=='ledger' && !n.populated){
+  const gated = tab!=='ledger' && !NODE_INDEPENDENT.has(tab);
+  if(gated && !n.populated){
     html=`<div class="notpop">The <b>${esc(n.label)}</b> snapshot (${esc(n.sub)}) hasn't been reconstructed yet.<br>`
       +`The actor's early data is unreliable, so these fill in as we sort them out. See <b>Current</b> for the live state, or open the <b>Ledger</b> for changes up to this point.</div>`;
-  } else if(tab!=='ledger' && n.populated && !facetReady(tab)){
+  } else if(gated && n.populated && !facetReady(tab)){
     const tl=(TABS.find(t=>t[0]===tab)||['',tab])[1];
     html=`<div class="notpop">The <b>${esc(tl)}</b> facet for <b>${esc(n.label)}</b> hasn't been reconstructed yet.<br>`
       +`Ships and magi are done for this node; the remaining facets fill in as we sort them out. See the <b>Ledger</b> for dated changes, or <b>Current</b> for the live state.</div>`;
@@ -256,8 +393,45 @@ function render(){
   if(tab==='ledger') wireLedger();
   if(tab==='vis') wireVis();
   if(tab==='library') wireLib();
+  if(tab==='ships') wireLand();
 }
 const PANELS={
+  covenant(){
+    if(!COV) return `<p class="section-sub">Covenant sheet (covenant.json) not loaded.</p>`;
+    const d=COV, ch=d.charter, ag=d.aegis||{}, lo=d.loyalty||{}, lp=lo.points||{}, lm=lo.modifiers||{};
+    const overviewTiles=[['Tribunal',d.tribunal||'—'],['Founded',d.foundationYear?`A.D. ${d.foundationYear}`:'—'],
+      ['Current Season',cap(d.season)||'—'],['Saga',d.saga||'—'],['Saga Type',d.sagaType||'—'],['Storyguide',d.narrator||'—']]
+      .map(([l,v])=>metaTile(l,v)).join('');
+    const ports=(d.preferredPorts||[]).map(p=>`<span class="pill">${esc(p)}</span>`).join('');
+    const aegisNote=(!d.aegis||(d.aegis.level===0&&d.aegis.penetration===0))&&!d.regioLevels
+      ? `<p class="lab-note" style="border-left-color:var(--rust-bright)">Aegis level, penetration, and regio levels are all recorded as 0 in Foundry — this may just mean they're unconfigured on the sheet rather than a narrative fact. Worth a GM check.</p>`:'';
+    return `<p class="section-sub">The covenant sheet — charter, standing, and boons &amp; hooks. Yearly finances live on the <b>Economics</b> tab; assets are split across <b>Ships &amp; Land</b>, <b>Labs</b>, <b>Library</b>, and <b>Vis</b>.</p>
+      <div class="cov-sec"><div class="lab-sec-t">Overview</div><div class="mtile-grid">${overviewTiles}</div>
+        ${d.foundingNote?`<p class="cov-p">${esc(d.foundingNote)}</p>`:''}
+        ${ports?`<p class="cov-lbl">Preferred ports</p><div>${ports}</div>`:''}</div>
+      ${ch?`<div class="cov-sec"><div class="lab-sec-t">Covenant Charter</div>
+        <p class="cov-p" style="color:var(--ink-soft)">${esc(ch.note)}</p>
+        <ol class="cov-ol">${(ch.clauses||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ol>
+        ${ch.amendmentsNote?`<p class="cov-p" style="font-size:13px">${esc(ch.amendmentsNote)}</p>`:''}
+        <ul class="cov-ul">${(ch.amendments||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul></div>`:''}
+      <div class="cov-sec"><div class="lab-sec-t">Aegis &amp; Regio</div>${aegisNote}
+        <div class="mtile-grid">${metaTile('Aegis Level',ag.level??0)}${metaTile('Aegis Penetration',ag.penetration??0)}${metaTile('Regio Levels',d.regioLevels??0)}</div></div>
+      <div class="cov-sec"><div class="lab-sec-t">Loyalty</div>
+        <div class="mtile-grid">${metaTile('Prevailing',lp.prevailing??'—')}${metaTile('Modifier',lp.modifier??'—')}${metaTile('Equipment',cap(lm.equipment)||'—')}${metaTile('Wages',cap(lm.wages)||'—')}${metaTile('Familiarity',lm.familiarity??'—')}${metaTile('Events',lm.events??'—')}</div></div>
+      <div class="cov-sec"><div class="lab-sec-t">Covenant Virtues &amp; Flaws</div>
+        <div class="vf-cols"><div><div class="vf-col-t">Virtues (${(d.virtues||[]).length})</div>${vfRows(d.virtues,'virtue')}</div>
+          <div><div class="vf-col-t">Flaws (${(d.flaws||[]).length})</div>${vfRows(d.flaws,'flaw')}</div></div></div>`;
+  },
+  labs(){
+    const labs=allLabs();
+    if(!labs.length) return `<p class="section-sub">No laboratories loaded — ship_details.json / holdings.json unavailable.</p>`;
+    const shipL=labs.filter(l=>l.source==='ship'), otherL=labs.filter(l=>l.source!=='ship');
+    return `<p class="section-sub">Every laboratory the covenant can call on — the magi's shipboard labs and any land-based or proposed labs — with the full <em>Covenants</em> sheet: Size, Refinement, Safety, Upkeep, and the rest.</p>
+      <h2 class="sh" style="margin-top:4px">Shipboard laboratories <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${shipL.length}</span></h2>
+      <div class="lab-grid">${shipL.map(labSheetHtml).join('')}</div>
+      ${otherL.length?`<h2 class="sh">Land-based &amp; proposed <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${otherL.length}</span></h2>
+      <div class="lab-grid">${otherL.map(labSheetHtml).join('')}</div>`:''}`;
+  },
   overview(){ const e=s().economics; const na='<span style="color:var(--ink-soft);font-style:italic">not yet reconstructed</span>';
     const libReady=facetReady('library'), visReady=facetReady('vis');
     return `<p class="section-sub">The covenant at a glance. Detailed facets are on the tabs above; changes over time are in the Ledger.</p>
@@ -278,13 +452,20 @@ const PANELS={
      </div>`;
   },
   ships(){
-    return `<p class="section-sub">Each ship is a covenant asset; most carry a magus's laboratory. The Hound of Cassel is a plain merchantman (no lab).</p>
-     <div class="grid">${s().ships.map(sh=>{
-       const inactive=/no longer|sabbatical|route|left|depart|laid|prize/i.test(sh.status||'');
-       return `<div class="card ship"><span class="st ${inactive?'inactive':''}">${esc(sh.status||'')}</span>
+    const ships=s().ships.map(sh=>{
+      const inactive=/no longer|sabbatical|route|left|depart|laid|prize/i.test(sh.status||'');
+      return `<div class="card ship"><span class="st ${inactive?'inactive':''}">${esc(sh.status||'')}</span>
         <h3>${esc(sh.name)}${sh.aka?` <small style="color:var(--ink-soft)">(${esc(sh.aka)})</small>`:''}</h3>
         <div class="meta">${esc(sh.kind||'')} · owner <b>${esc(sh.owner||'—')}</b>${sh.captain?` · captain ${esc(sh.captain)}`:''}</div>
-        <div class="lab ${sh.lab?'':'none'}">⚗ ${sh.lab?esc(sh.lab):'no laboratory'}</div></div>`;}).join('')}</div>`;
+        <div class="lab ${sh.lab?'':'none'}">⚗ ${sh.lab?esc(sh.lab):'no laboratory'}</div></div>`;}).join('');
+    const land=landList();
+    const landHtml=land.length
+      ? `<h2 class="sh">Land holdings <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${land.length}</span></h2>
+         <div class="grid">${land.map(landCardHtml).join('')}</div>`
+      : `<h2 class="sh">Land holdings</h2><p class="section-sub">No land holdings recorded yet.</p>`;
+    return `<p class="section-sub">The covenant's ships and its land. Each ship is a covenant asset; most carry a magus's laboratory — full lab sheets are on the <b>Labs</b> tab. The Hound of Cassel is a plain merchantman.</p>
+     <div class="grid">${ships}</div>
+     ${landHtml}`;
   },
   inhabitants(){
     const st=s();
@@ -499,6 +680,9 @@ function wireLibTable(){
   document.querySelectorAll('table.libtbl th[data-col]').forEach(th=>th.onclick=()=>{const c=th.dataset.col;
     if(libTableSort.col===c)libTableSort.dir*=-1; else libTableSort={col:c,dir:1}; render();});
 }
+// Deep-link support when already on the page (bookmarks / anchor clicks).
+// replaceState in the tab handler doesn't fire hashchange, so this only runs on real hash edits.
+window.addEventListener('hashchange',()=>{ const h=(location.hash||'').replace('#',''); if(D && h && TABS.some(t=>t[0]===h) && h!==tab){ tab=h; render(); } });
 load();
 </script>
 </body>

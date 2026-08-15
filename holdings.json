@@ -1,0 +1,49 @@
+{
+  "meta": {
+    "title": "Covenant Land & Proposed Holdings",
+    "note": "Non-ship structures — land holdings and the laboratories built within them. 'Proposed' entries are planned and speced but not yet built; see the linked Storyteller thread for the ruling and the funding plan."
+  },
+  "land": [
+    {
+      "id": "noatun",
+      "name": "Nóatún",
+      "aka": "the Isle-of-Man manor",
+      "status": "proposed",
+      "owner": "Valdemar Bjornsson (raised for the covenant)",
+      "location": "Ránargarðr — a seaside harbour holding on the Isle of Man",
+      "meaning": "“Place of Ships” / “Ship Enclosure”, after Njord's seaside hall",
+      "description": "The covenant's first permanent land base: a manor Valdemar is assembling on the Isle of Man for the covenant to Winter in, when sailing, raiding, and trading are hardest. The whole seaside harbour holding is Ránargarðr (“Rán's Garden”), likely to give its name to the village that grows up around the hall. Nóatún is the main hall where the coven Winters; Valdemar's own hall, Undrahöll, houses his laboratory and his and Rán's living quarters.",
+      "buildings": [
+        { "name": "Nóatún", "role": "Main hall — where the coven Winters" },
+        { "name": "Undrahöll — “Hall of Wonders”", "role": "Valdemar's hall: his laboratory plus living quarters for him and Rán, the living space kept separate from the lab for Safety", "lab": "undrahol-lab" }
+      ],
+      "funding": "Construction (60£) and yearly upkeep are funded through the summer and fall raiding and trading seasons, booked in the covenant ledger; the build seasons are held until the laboratory specs are locked.",
+      "refs": ["t079", "s13"]
+    }
+  ],
+  "labs": [
+    {
+      "id": "undrahol-lab",
+      "name": "Undrahöll Laboratory",
+      "aka": "the Hall of Wonders",
+      "owner": "Valdemar Bjornsson",
+      "status": "proposed",
+      "holding": "noatun",
+      "structure": "A modified Viking longhouse — solid stone walls, proper chimneys for ventilation, and windows — inside the hall Undrahöll at Nóatún (Ránargarðr, Isle of Man).",
+      "size": 13,
+      "refinement": 0,
+      "generalQuality": 1,
+      "safety": 0,
+      "health": 0,
+      "upkeep": 4,
+      "warping": 0,
+      "aesthetics": 11,
+      "constructionCost": "60£ (Size 13 at 1£/point after Superior Construction doubles the bill)",
+      "maintenance": "Upkeep 4 = 100 points → ~5£/yr at ≤1 season (Valdemar's Winter-only use), 10£ at two seasons, 15£ at 3–4.",
+      "specialties": "Spells +3 (Antechamber)\n\nItems +3 (Forge, Running Water, Superior Tools)\n\nRego +1 (Dedicated Building) — the player may point this at a rune instead\n\nAquam +1 (Idyllic Surroundings, seaside) — may instead be Laguz, the water-rune",
+      "features": "Minor Structures: Extensive Stores, Gallery, Spacious, Well Insulated · Greater Feature: Antechamber · Lesser Features: Forge, Running Water · Free virtues: Dedicated Building, Grand Entrance, Idyllic Surroundings, Superior Construction, Guard, Superior Equipment, Superior Tools · Flaw: Empty ×2 (holding 4 points in reserve for future Refinement)",
+      "notes": "Viktir rune-workings function as spells, so learning a rune-effect is the Spells activity (+4 with Antechamber & General Quality) and imbuing a rune into an object is the Items activity (+4). Aesthetics +11 reads as a ~55-point reputation as a Rune Master. Refinement is capped at Valdemar's Magic Theory (3) and rises with study. Full player notes and rulings live in the t079 dossier.",
+      "refs": ["t079", "s13"]
+    }
+  ]
+}
