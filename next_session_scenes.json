@@ -220,6 +220,29 @@
     "t079",
     "t080"
    ]
+  },
+  {
+   "id": "s14",
+   "title": "Valdemar bargains for the land — and the Christian lie",
+   "seasons": [
+    "Summer 1224",
+    "Fall 1224"
+   ],
+   "magi": [
+    "Valdemar"
+   ],
+   "npcs": [
+    "the Norse Ruler of Man"
+   ],
+   "thread": "The Isle-of-Man base / Valdemar's fief",
+   "status": "Developed",
+   "hook": "The Norse Ruler of Man grants Valdemar right and title to the Ránargarðr holding — potentially as a proper feudal fief — but the grant demands he profess himself a Christian, which is a lie.",
+   "detail": "The stage-able beat behind Valdemar's Isle-of-Man holding (see the thread t081). Much of the groundwork is backstory the covenant doesn't know about — a favour already done for the Ruler, a down payment made in goods or services, title received in writing — so this can play as the formal grant and the moment of the lie, or as a later reveal to the covenant. Live beats: whether he swears an Oath of Fealty (not his preference) or bargains a promise of specific service instead; what that owed service is (a standing debt the GM can call in — t081); and how far the Christian lie widens his exposure, stacking on his hidden House Diedne lineage (t078). Around it, Ránargarðr / Nóatún is growing into a Viking fjord-town — grog families first, then settlers, then pirates; a Norse bailiff; a winter Althing. Runs straight off s13 (raising the manor and Undrahöll).",
+   "refs": [
+    "t081",
+    "t079",
+    "t078"
+   ]
   }
  ]
 }

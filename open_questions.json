@@ -831,6 +831,26 @@
    }
   },
   {
+   "id": "t081",
+   "type": "Thread",
+   "category": "Plot",
+   "title": "Valdemar's title to the Isle of Man — the owed favour, the fief, and the Christian lie.",
+   "context": "GM note 2026-08-15. Valdemar has quietly secured right and title to the Ránargarðr holding on the Isle of Man through a private arrangement the covenant knows nothing about: a big favour done for the current Norse Ruler of Man, a down payment made in goods or services, and title received in writing. He wants to hold the land in fact, not merely by sword-right, and to keep the local potentate a friend — though that ruler's ENEMIES are fair game. The open question is the FORM of the obligation — an Oath of Fealty (which Valdemar would rather avoid) versus a promise of specific service — and the standing DEBT it leaves him owing, which the GM may call in at any time.\n\nNext-session beat (scene s14): the fief is granted — potentially as a proper feudal fief — but Valdemar must LIE and profess himself a Christian to receive and hold it. That deception stacks on his hidden House Diedne lineage (t078): a pagan viktir magus, secretly Diedne, now also perjuring his faith to a Christian-facing authority to hold mundane land openly. Rich exposure if it ever unravels.\n\nLonger arc (player-flagged, optional): Valdemar may later move to own the Isle outright — unseating the local lord with the complicity of the King of Norway — if the other magi take interest.\n\nSettlement plan: recruit grog families first, then island/mainland settlers wanting new farmland to clear, then other pirates and their families; a Norse 'bailiff' to run the place while Valdemar raids and trades; justice dispensed by Valdemar as local lord when in port; and a winter Althing for community decisions — a Viking fjord-town in the making around Nóatún. The player's full hand-off is in the dossier below.\n\nRules aside (the player's question — 'no rules about Hermetics ruling land openly in our Tribunal, right?'): there is no blanket Hermetic ban on owning or ruling mundane land, but the Oath's clause against interfering with mundanes and thereby bringing ruin on one's sodales is the lever a quaesitor would reach for — openly ruling a fief is deep mundane entanglement. Whether it crosses the line is a Tribunal call, and this border sea-covenant already runs on unusual mundane latitude (see the Normandy 'Mundane Goods Are Fair Game' custom). Plausible — but it widens his exposure. Cross-ref t079 (the manor & lab), s13/s14, and t078 (Confluensis and the Diedne secret).",
+   "raised_in": "GM note 2026-08-15",
+   "raised_event": "",
+   "status": "Open",
+   "resolution": "",
+   "dossier": {
+    "summary": "Valdemar's Isle-of-Man title — the player's hand-off (the favour, the fief, the settlement)",
+    "sections": [
+     {
+      "heading": "The player's hand-off (verbatim)",
+      "body": "There is probably a side story somewhere that the Covenant doesn't know about wherein Valdemar did a big favor for the current (Norse) Ruler of Man to gain right and title to the land.\n\nValdemar wants to own the property in fact as well as by sword right, and doesn't want the local potentate as an enemy (though enemies of that person, well, those guys are fair game). There are lots of ways a Wizard can be of use to a Warlord. Whatever agreement they came to, Valdemar has at least made the down payment in goods or services and received in writing the title to the property. This can involve an Oath of Fealty, though that would not be Valdemar's preference. He would rather promise specific service in exchange for the right to the land. (Valdemar might one day decide he just wants to own the Isle outright, and may develop plans to unseat the local lord at the behest of or with the complicity of the King of Norway. This might be a future plotline if the others take interest too. No rules about Hermetics NOT ruling land openly exist in our Tribunal, right?)\n\nThis presumed debt/promise of support/owed service/favor/etc. is a complication I am handing you to feel free to reference / make use of at any point future.\n\nIn terms of population, I'd first look to recruit the families of our Grogs, then local inhabitants from the island or mainland wanting new farmlands to clear, then other pirates and their families. Valdemar will appoint the Norse equivalent of a Bailiff to manage the settlement while he's out doing what Norsemen do, will dispense justice as the local lord when in town, and he will convene a traditional Althing in the Winter to deal with community concerns and make big decisions.\n\nBasically, this settlement is a Viking Fjord Town in the making at the moment."
+     }
+    ]
+   }
+  },
+  {
    "id": "t080",
    "type": "Thread",
    "category": "Character",
