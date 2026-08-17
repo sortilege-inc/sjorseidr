@@ -238,7 +238,11 @@ async function load(){
     }
     const nOpen = STATE.items.filter(q=>q.status!=='Resolved').length;
     $('#status').textContent = `${nOpen} open · ${STATE.items.length-nOpen} resolved`;
+    // deep-link / storyteller rail: open a specific type view
+    const wantType = new URLSearchParams(location.search).get('type');
+    if(wantType && (wantType==='all' || wantType==='reference' || TYPE_ORDER.includes(wantType))) activeType = wantType;
     render();
+    if(window.stRailHighlight) window.stRailHighlight(activeType);
   }catch(e){
     $('#qlist').innerHTML = `<div class="empty">Could not load open_questions.json / resolved_questions.json — open this page via a local server, not file://.<br>${esc(e.message)}</div>`;
     $('#status').textContent = 'Load failed';
@@ -268,7 +272,7 @@ function renderTypeTabs(){
   const refTab = STATE.gmReference
     ? `<div class="typetab ${activeType==='reference'?'active':''}" data-type="reference">📚 GM Reference <span class="n">(${refCount})</span></div>` : '';
   $('#typetabs').innerHTML = allTab + tabs + refTab;
-  $$('.typetab').forEach(el=>el.onclick=()=>{activeType=el.dataset.type; filter.category='all'; render();});
+  $$('.typetab').forEach(el=>el.onclick=()=>{activeType=el.dataset.type; filter.category='all'; render(); if(window.stRailHighlight) window.stRailHighlight(activeType);});
 
   const descs = {
     all: 'Everything the table has flagged, mixed together.',
@@ -466,8 +470,13 @@ $('#saveResolvedBtn').onclick = ()=>{
   download({meta: rmeta, items: resolved}, 'resolved_questions.json');
 };
 
+// Storyteller rail hooks: let the rail switch the type view in-place.
+window.stSetType = function(t){ activeType=t; filter.category='all'; render(); if(window.stRailHighlight) window.stRailHighlight(t); };
+window.stGetType = function(){ return activeType; };
+
 load();
 </script>
 <script src="nav.js"></script>
+<script src="storyteller-rail.js"></script>
 </body>
 </html>

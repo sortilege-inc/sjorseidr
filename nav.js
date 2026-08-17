@@ -1,7 +1,7 @@
-/* Shared site nav — injected on every page. Links point at the home page's
-   grouped sections (index.html#<section>); the current page's section is
-   highlighted. On the full-viewport map apps (.app { height:100vh }) the nav
-   shrinks the app to sit below it so nothing overflows. */
+/* Shared site nav — injected on content subpages. Links point at each
+   section's landing page (section.html?sec=<section>); the current page's
+   section is highlighted. On the full-viewport map apps (.app { height:100vh })
+   the nav shrinks the app to sit below it so nothing overflows. */
 (function () {
   if (document.querySelector('nav.stnav')) return; // idempotent
 
@@ -26,7 +26,6 @@
   };
   var here = (location.pathname.split('/').pop() || 'index.html');
   var active = PAGE_SECTION[here];
-  var onHome = (here === 'index.html' || here === '');
 
   var css =
     '.stnav{position:sticky;top:0;z-index:1000;display:flex;flex-wrap:wrap;align-items:center;gap:2px;' +
@@ -52,7 +51,7 @@
   var html = '<a class="stnav-brand" href="index.html">Sjórseiðr</a>';
   LINKS.forEach(function (l) {
     var cls = (l[2] ? 'gm' : '') + ((active === l[1]) ? ' active' : '');
-    var href = onHome ? ('#' + l[1]) : ('index.html#' + l[1]);
+    var href = 'section.html?sec=' + l[1];
     html += '<a class="' + cls.trim() + '" href="' + href + '">' + l[0] + '</a>';
   });
   nav.innerHTML = html;

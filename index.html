@@ -18,7 +18,6 @@
   --line:#6b5436; --shadow:rgba(50,32,12,.45);
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
 html,body{margin:0;min-height:100%}
 body{
   font-family:'EB Garamond',Georgia,serif;color:var(--ink);
@@ -36,10 +35,10 @@ body::before{
 
 /* ---------- top nav ---------- */
 .topnav{position:sticky;top:0;z-index:60;display:flex;flex-wrap:wrap;align-items:center;gap:2px;
-  padding:9px 18px;background:rgba(56,38,18,.86);backdrop-filter:blur(5px);
+  padding:9px 18px;background:rgba(56,38,18,.86);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);
   border-bottom:2px solid var(--line);box-shadow:0 2px 12px var(--shadow)}
 .topnav .brand{font-family:'Cinzel',serif;font-weight:600;letter-spacing:.06em;color:var(--gold-bright);
-  margin-right:auto;font-size:15px}
+  margin-right:auto;font-size:15px;text-decoration:none}
 .topnav .brand::before{content:"⚓";margin-right:.45em;color:var(--rust-bright);font-size:.85em}
 .topnav a{font-family:'Cinzel',serif;font-size:12.5px;letter-spacing:.04em;color:#e9d8b2;text-decoration:none;
   padding:6px 11px;border-radius:6px;border-bottom:2px solid transparent;transition:.15s}
@@ -73,20 +72,11 @@ header.masthead{text-align:center;margin-bottom:26px}
 .hero:hover{transform:translateY(-2px);box-shadow:0 18px 36px -16px var(--shadow)}
 .hero:hover::after{opacity:1}
 
-.lede{max-width:640px;margin:0 auto 30px;font-size:16.5px;line-height:1.6;color:var(--ink-soft);
+.lede{max-width:640px;margin:0 auto 34px;font-size:16.5px;line-height:1.6;color:var(--ink-soft);
   font-style:italic;text-align:center}
 
-/* ---------- grouped sections ---------- */
-.group{margin:0 0 30px;scroll-margin-top:66px}
-.group-title{font-family:'Cinzel',serif;font-weight:600;font-size:19px;color:var(--rust-bright);
-  display:flex;align-items:center;gap:9px;margin:0 0 3px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-.group-title .gi{font-size:20px}
-.group-title .rest{font-family:'EB Garamond',serif;font-style:italic;font-weight:400;font-size:13.5px;
-  color:var(--ink-soft);text-transform:none;letter-spacing:0;margin-left:auto}
-.group-sub{font-style:italic;color:var(--ink-soft);font-size:13.5px;margin:6px 0 15px}
-
+/* ---------- section cards ---------- */
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:18px}
-
 a.card{
   display:block;position:relative;text-decoration:none;color:inherit;
   background:linear-gradient(180deg,var(--parch) 0%,var(--parch-deep) 100%);
@@ -97,30 +87,15 @@ a.card{
 a.card:hover{transform:translateY(-3px);border-color:var(--gold);
   box-shadow:0 1px 0 rgba(255,255,255,.5) inset, 0 16px 30px -14px var(--shadow)}
 a.card::before{content:"";position:absolute;inset:5px;border:1px solid rgba(106,84,54,.35);border-radius:3px;pointer-events:none}
-.card-icon{font-size:26px;line-height:1;margin-bottom:9px;display:block}
-.card-title{font-family:'Cinzel',serif;font-weight:600;font-size:17px;color:var(--rust-bright);margin:0 0 7px;letter-spacing:.3px}
+.card-icon{font-size:28px;line-height:1;margin-bottom:9px;display:block}
+.card-title{font-family:'Cinzel',serif;font-weight:600;font-size:18px;color:var(--rust-bright);margin:0 0 7px;letter-spacing:.3px}
 .card-desc{font-size:14.5px;line-height:1.5;color:var(--ink-soft);margin:0}
 .card-tag{display:inline-block;margin-top:11px;font-family:'Cinzel',serif;font-size:10.5px;
   letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);opacity:.85}
-
-/* ---------- Storyteller: behind the veil ---------- */
-.group.storyteller .group-title{color:var(--rust)}
-.group.storyteller .group-title .gi{color:var(--rust)}
-.conceal{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.05em;text-transform:uppercase;
-  color:var(--ink-soft);background:rgba(120,90,40,.12);border:1px solid rgba(120,90,40,.35);
-  border-radius:12px;padding:3px 10px;cursor:pointer;margin-left:auto;display:none}
-.conceal:hover{background:rgba(198,155,63,.28);color:var(--ink)}
-.veilwrap{position:relative}
-.veiled{filter:blur(11px) saturate(.78);pointer-events:none;user-select:none}
-.veil-gate{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;align-items:center;justify-content:center;
-  gap:7px;cursor:pointer;border:1.5px dashed rgba(138,51,36,.6);border-radius:10px;text-align:center;
-  background:radial-gradient(130% 130% at 50% 0%, rgba(60,42,20,.30), rgba(60,42,20,.10));
-  font-family:'Cinzel',serif;transition:opacity .3s}
-.veil-gate:hover{background:radial-gradient(130% 130% at 50% 0%, rgba(60,42,20,.38), rgba(60,42,20,.14))}
-.veil-gate .vg-seal{font-size:30px;color:var(--rust)}
-.veil-gate .vg-title{font-size:20px;font-weight:600;color:var(--rust-bright);letter-spacing:.04em}
-.veil-gate .vg-sub{font-size:12.5px;font-style:italic;font-family:'EB Garamond',serif;color:var(--ink-soft)}
-.veil-gate.lifted{opacity:0;pointer-events:none}
+a.card.gm{border-color:rgba(138,51,36,.55);background:linear-gradient(180deg,#efe2c4,#dcc79c)}
+a.card.gm .card-title{color:var(--rust)}
+a.card.gm:hover{border-color:var(--rust-bright)}
+a.card.gm .card-tag{color:var(--rust)}
 
 footer{text-align:center;margin-top:50px;padding-top:18px;border-top:1px solid rgba(120,90,40,.3);
   font-size:13px;color:var(--ink-soft);opacity:.85}
@@ -131,15 +106,7 @@ footer a{color:var(--teal-bright)}
 </head>
 <body>
 
-<nav class="topnav">
-  <span class="brand">Sjórseiðr</span>
-  <a href="#chronicle">Chronicle</a>
-  <a href="#covenant">Covenant</a>
-  <a href="#tribunal">Normandy Tribunal</a>
-  <a href="#reference">Reference</a>
-  <a href="#tools">Tools</a>
-  <a href="#storyteller" class="gm">Storyteller</a>
-</nav>
+<nav class="topnav" id="topnav"><a class="brand" href="index.html">Sjórseiðr</a></nav>
 
 <div class="wrap">
 
@@ -157,187 +124,9 @@ footer a{color:var(--teal-bright)}
 
   <p class="lede">The covenant archive — the chronicle of a wandering fleet, the records and
     standings of the Normandy Tribunal, the covenant's own sheet and crew, a reference library,
-    and the Storyteller's working papers.</p>
+    and the Storyteller's working papers. Choose a shelf.</p>
 
-  <!-- ============ CHRONICLE ============ -->
-  <section class="group" id="chronicle">
-    <h2 class="group-title"><span class="gi">📖</span> Chronicle</h2>
-    <p class="group-sub">The story so far, and where the ships have sailed.</p>
-    <div class="grid">
-      <a class="card" href="sjorseidr_chronicle.html">
-        <span class="card-icon">📖</span>
-        <p class="card-title">Chronicle of Events</p>
-        <p class="card-desc">The covenant's full story timeline — verified history and
-          proposed drafts awaiting review, season by season.</p>
-        <span class="card-tag">History</span>
-      </a>
-      <a class="card" href="fleet_timeline.html">
-        <span class="card-icon">🚢</span>
-        <p class="card-title">Fleet Voyages by Season</p>
-        <p class="card-desc">A time-series map over the Mythic Europe chart — track each ship
-          and magus season by season, with vis harvests and Tribunal covenants.</p>
-        <span class="card-tag">Voyage Map</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ COVENANT ============ -->
-  <section class="group" id="covenant">
-    <h2 class="group-title"><span class="gi">🏛️</span> Covenant</h2>
-    <p class="group-sub">The covenant itself, and who crews its ships.</p>
-    <div class="grid">
-      <a class="card" href="covenant_ledger.html#covenant">
-        <span class="card-icon">🏛️</span>
-        <p class="card-title">Covenant Sheet</p>
-        <p class="card-desc">Founding, charter, tribunal standing, aegis, loyalty,
-          and covenant-wide virtues &amp; flaws — now the Ledger's Covenant tab.</p>
-        <span class="card-tag">Covenant Sheet</span>
-      </a>
-      <a class="card" href="play.html">
-        <span class="card-icon">🎲</span>
-        <p class="card-title">Playable Character Sheet</p>
-        <p class="card-desc">Live ArM5 sheets with dice, spell &amp; combat rollers,
-          in-play trackers, a roll log, and per-character export/import.</p>
-        <span class="card-tag">Play</span>
-      </a>
-
-      <a class="card" href="dramatis_personae.html">
-        <span class="card-icon">🎭</span>
-        <p class="card-title">Dramatis Personae</p>
-        <p class="card-desc">Foreign magi, dragons, faeries, and spirits who move
-          through the story but don't crew a ship — click for full sheets.</p>
-        <span class="card-tag">Dramatis Personae</span>
-      </a>
-
-      <a class="card" href="xp_tracker.html">
-        <span class="card-icon">📈</span>
-        <p class="card-title">XP &amp; Season Tracker</p>
-        <p class="card-desc">Every member's season-by-season activity and XP —
-          filterable by type and by ship.</p>
-        <span class="card-tag">XP Tracker</span>
-      </a>
-
-      <a class="card" href="covenant_ledger.html#overview">
-        <span class="card-icon">📚</span>
-        <p class="card-title">Covenant Ledger</p>
-        <p class="card-desc">The covenant's true complexity over time — ships &amp; land,
-          labs, inhabitants, library, vis, and economics, with a running change log.</p>
-        <span class="card-tag">Ledger</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ NORMANDY TRIBUNAL ============ -->
-  <section class="group" id="tribunal">
-    <h2 class="group-title"><span class="gi">🗺️</span> Normandy Tribunal</h2>
-    <p class="group-sub">The 1223 Tribunal — its covenants, its tournament, and its prizes.</p>
-    <div class="grid">
-      <a class="card" href="normandy_tribunal_1223.html">
-        <span class="card-icon">🗺️</span>
-        <p class="card-title">The Normandy Tribunal — 1223</p>
-        <p class="card-desc">Interactive map of the Tribunal's covenants, with a
-          toggle between covenant profiles and the tournament standings.</p>
-        <span class="card-tag">Map &amp; Standings</span>
-      </a>
-      <a class="card" href="tribunal_workbook.html">
-        <span class="card-icon">📊</span>
-        <p class="card-title">Tribunal Workbook — 1223</p>
-        <p class="card-desc">Editable scoring workbook — vis sources, library prizes,
-          and tournament brackets, loaded live from the data file.</p>
-        <span class="card-tag">Workbook</span>
-      </a>
-      <a class="card" href="normandy_tribunal_reference.html">
-        <span class="card-icon">🕯️</span>
-        <p class="card-title">Vis Sources &amp; Library</p>
-        <p class="card-desc">Reference catalogue of the Tribunal's known vis sources
-          and library holdings.</p>
-        <span class="card-tag">Reference</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ REFERENCE ============ -->
-  <section class="group" id="reference">
-    <h2 class="group-title"><span class="gi">📚</span> Reference</h2>
-    <p class="group-sub">Wider lore and rules — beyond the covenant's own waters.</p>
-    <div class="grid">
-      <a class="card" href="hiberian.html">
-        <span class="card-icon">🍀</span>
-        <p class="card-title">The Contested Isle: The Hibernian Tribunal</p>
-        <p class="card-desc">Extracted reference data for the Hibernian Tribunal —
-          overview and regional maps for Connacht, Leinster, Meath, Munster, and Ulster.</p>
-        <span class="card-tag">Hibernia Reference</span>
-      </a>
-      <a class="card" href="reference.html">
-        <span class="card-icon">🧭</span>
-        <p class="card-title">Reference</p>
-        <p class="card-desc">Miscellaneous GM tables — North Sea and Baltic sailing
-          times between major ports.</p>
-        <span class="card-tag">Sailing Tables</span>
-      </a>
-      <a class="card" href="integrating_magic.html">
-        <span class="card-icon">📜</span>
-        <p class="card-title">Integrating a New Magic System</p>
-        <p class="card-desc">GM rules reference — the Original Research → Breakthrough →
-          Integration track for folding folk magic into Hermetic theory.</p>
-        <span class="card-tag">Rules Reference</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ TOOLS ============ -->
-  <section class="group" id="tools">
-    <h2 class="group-title"><span class="gi">🧰</span> Tools</h2>
-    <p class="group-sub">Build characters, and the rules data that feeds the archive.</p>
-    <div class="grid">
-      <a class="card" href="chargen.html">
-        <span class="card-icon">🪄</span>
-        <p class="card-title">Character Creator</p>
-        <p class="card-desc">Guided Ars Magica character creation — magi, companions,
-          and grogs — with rules and text drawn live from the armdef 0.5 corpus.</p>
-        <span class="card-tag">Chargen</span>
-      </a>
-      <a class="card" href="armdef-0.5-full.merged.ttrpg" download>
-        <span class="card-icon">⬇️</span>
-        <p class="card-title">Ars Magica Rule Set — .ttrpg</p>
-        <p class="card-desc">The full merged Ars Magica 5e rules definition (armdef 0.5) — every
-          core book composed into a single titterpig .ttrpg by the synthesist, the source that
-          feeds the archive's rollable crew sheets and verbatim rules text.</p>
-        <span class="card-tag">Rules Data · Download</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ STORYTELLER (behind the veil) ============ -->
-  <section class="group storyteller" id="storyteller">
-    <h2 class="group-title"><span class="gi">⚔</span> Storyteller
-      <button class="conceal" id="conceal">Conceal again</button>
-    </h2>
-    <p class="group-sub">The Storyteller's working papers — spoilers within; for the Game Master's eyes.</p>
-    <div class="veilwrap">
-      <div class="grid veiled" id="stGrid">
-        <a class="card" href="open_questions.html">
-          <span class="card-icon">❓</span>
-          <p class="card-title">Open Questions for the Storyteller</p>
-          <p class="card-desc">Questions needing a ruling, threads nobody's picked
-            back up, and consequences still waiting to land.</p>
-          <span class="card-tag">Open Questions</span>
-        </a>
-        <a class="card" href="next_session_scenes.html">
-          <span class="card-icon">🎬</span>
-          <p class="card-title">Next Session — Candidate Scenes</p>
-          <p class="card-desc">The Storyteller's working slate of scenes to stage next
-            session, filterable by season and by magus.</p>
-          <span class="card-tag">Session Prep</span>
-        </a>
-      </div>
-      <button class="veil-gate" id="veilGate" aria-label="Reveal Storyteller material">
-        <span class="vg-seal">☷</span>
-        <span class="vg-title">Behind the Veil</span>
-        <span class="vg-sub">Storyteller material — click to reveal</span>
-      </button>
-    </div>
-  </section>
+  <div class="grid" id="sectionGrid"></div>
 
   <footer>
     Compiled A.D. 1223 · <a href="https://github.com/sortilege-inc/sjorseidr">sortilege-inc/sjorseidr</a>
@@ -347,25 +136,30 @@ footer a{color:var(--teal-bright)}
 </div>
 
 <script>
-// Storyteller blur gate
-const gate = document.getElementById('veilGate');
-const grid = document.getElementById('stGrid');
-const conceal = document.getElementById('conceal');
-let hideTimer;
-gate.addEventListener('click', ()=>{
-  clearTimeout(hideTimer);
-  grid.classList.remove('veiled');
-  gate.classList.add('lifted');
-  hideTimer = setTimeout(()=>{ gate.style.display='none'; }, 320);
-  conceal.style.display='inline-block';
-});
-conceal.addEventListener('click', ()=>{
-  clearTimeout(hideTimer);
-  grid.classList.add('veiled');
-  gate.style.display='';
-  gate.classList.remove('lifted');
-  conceal.style.display='none';
-});
+const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+fetch('./sitemap.json', {cache:'no-store'})
+  .then(r => r.json())
+  .then(map => {
+    const secs = map.sections || [];
+    // top-nav links
+    document.getElementById('topnav').insertAdjacentHTML('beforeend',
+      secs.map(s => `<a class="${s.gm?'gm':''}" href="section.html?sec=${encodeURIComponent(s.id)}">${esc(s.title)}</a>`).join(''));
+    // one card per section
+    document.getElementById('sectionGrid').innerHTML = secs.map(s => {
+      const n = (s.cards||[]).length;
+      return `<a class="card ${s.gm?'gm':''}" href="section.html?sec=${encodeURIComponent(s.id)}">
+        <span class="card-icon">${esc(s.icon||'')}</span>
+        <p class="card-title">${esc(s.title)}</p>
+        <p class="card-desc">${esc(s.blurb||'')}</p>
+        <span class="card-tag">${n} ${n===1?'entry':'entries'}</span>
+      </a>`;
+    }).join('');
+  })
+  .catch(e => {
+    document.getElementById('sectionGrid').innerHTML =
+      `<p class="lede">Could not load sitemap.json — serve this over http, not file://.<br>${esc(e.message)}</p>`;
+  });
 
 // build info
 fetch('./build_info.json', {cache:'no-store'})

@@ -1,0 +1,91 @@
+{
+  "meta": {
+    "title": "Sjórseiðr — site map",
+    "note": "Single source of truth for the home page's section cards and each section landing page (section.html?sec=<id>). Add a card here and it appears in both the section page and the home-page count."
+  },
+  "sections": [
+    {
+      "id": "chronicle",
+      "title": "Chronicle",
+      "icon": "📖",
+      "blurb": "The story so far, and where the ships have sailed — the event timeline and the season-by-season voyage map.",
+      "cards": [
+        { "icon": "📖", "title": "Chronicle of Events", "href": "sjorseidr_chronicle.html", "tag": "History",
+          "desc": "The covenant's full story timeline — verified history and proposed drafts awaiting review, season by season." },
+        { "icon": "🚢", "title": "Fleet Voyages by Season", "href": "fleet_timeline.html", "tag": "Voyage Map",
+          "desc": "A time-series map over the Mythic Europe chart — track each ship and magus season by season, with vis harvests and Tribunal covenants." }
+      ]
+    },
+    {
+      "id": "covenant",
+      "title": "Covenant",
+      "icon": "🏛️",
+      "blurb": "The covenant itself and who crews its ships — the ledger, the playable sheets, the roster, and the dramatis personae.",
+      "cards": [
+        { "icon": "🏛️", "title": "Covenant Sheet", "href": "covenant_ledger.html#covenant", "tag": "Covenant Sheet",
+          "desc": "Founding, charter, tribunal standing, aegis, loyalty, and covenant-wide virtues & flaws — the Ledger's Covenant tab." },
+        { "icon": "🎲", "title": "Playable Character Sheet", "href": "play.html", "tag": "Play",
+          "desc": "Live ArM5 sheets with dice, spell & combat rollers, in-play trackers, a roll log, and per-character export/import." },
+        { "icon": "🎭", "title": "Dramatis Personae", "href": "dramatis_personae.html", "tag": "Dramatis Personae",
+          "desc": "Foreign magi, dragons, faeries, and spirits who move through the story but don't crew a ship — click for full sheets." },
+        { "icon": "📈", "title": "XP & Season Tracker", "href": "xp_tracker.html", "tag": "XP Tracker",
+          "desc": "Every member's season-by-season activity and XP — filterable by type and by ship." },
+        { "icon": "📚", "title": "Covenant Ledger", "href": "covenant_ledger.html#overview", "tag": "Ledger",
+          "desc": "The covenant's true complexity over time — ships & land, labs, inhabitants, library, vis, and economics, with a running change log." }
+      ]
+    },
+    {
+      "id": "tribunal",
+      "title": "Normandy Tribunal",
+      "icon": "🗺️",
+      "blurb": "The 1223 Tribunal — its covenants, its tournament, and its prizes.",
+      "cards": [
+        { "icon": "🗺️", "title": "The Normandy Tribunal — 1223", "href": "normandy_tribunal_1223.html", "tag": "Map & Standings",
+          "desc": "Interactive map of the Tribunal's covenants, with a toggle between covenant profiles and the tournament standings." },
+        { "icon": "📊", "title": "Tribunal Workbook — 1223", "href": "tribunal_workbook.html", "tag": "Workbook",
+          "desc": "Editable scoring workbook — vis sources, library prizes, and tournament brackets, loaded live from the data file." },
+        { "icon": "🕯️", "title": "Vis Sources & Library", "href": "normandy_tribunal_reference.html", "tag": "Reference",
+          "desc": "Reference catalogue of the Tribunal's known vis sources and library holdings." }
+      ]
+    },
+    {
+      "id": "reference",
+      "title": "Reference",
+      "icon": "📚",
+      "blurb": "Wider lore and rules — beyond the covenant's own waters.",
+      "cards": [
+        { "icon": "🍀", "title": "The Contested Isle: The Hibernian Tribunal", "href": "hiberian.html", "tag": "Hibernia Reference",
+          "desc": "Extracted reference data for the Hibernian Tribunal — overview and regional maps for Connacht, Leinster, Meath, Munster, and Ulster." },
+        { "icon": "🧭", "title": "Reference", "href": "reference.html", "tag": "Sailing Tables",
+          "desc": "Miscellaneous GM tables — North Sea and Baltic sailing times between major ports, plus saga homebrew rulings." },
+        { "icon": "📜", "title": "Integrating a New Magic System", "href": "integrating_magic.html", "tag": "Rules Reference",
+          "desc": "GM rules reference — the Original Research → Breakthrough → Integration track for folding folk magic into Hermetic theory." }
+      ]
+    },
+    {
+      "id": "tools",
+      "title": "Tools",
+      "icon": "🧰",
+      "blurb": "Build characters, and the rules data that feeds the archive.",
+      "cards": [
+        { "icon": "🪄", "title": "Character Creator", "href": "chargen.html", "tag": "Chargen",
+          "desc": "Guided Ars Magica character creation — magi, companions, and grogs — with rules and text drawn live from the armdef 0.5 corpus." },
+        { "icon": "⬇️", "title": "Ars Magica Rule Set — .ttrpg", "href": "armdef-0.5-full.merged.ttrpg", "tag": "Rules Data · Download", "download": true,
+          "desc": "The full merged Ars Magica 5e rules definition (armdef 0.5) — every core book composed into a single titterpig .ttrpg by the synthesist, the source that feeds the archive's rollable sheets and verbatim rules text." }
+      ]
+    },
+    {
+      "id": "storyteller",
+      "title": "Storyteller",
+      "icon": "⚔",
+      "gm": true,
+      "blurb": "The Storyteller's working papers — open questions, rulings, and the candidate scenes for next session. Spoilers within; for the Game Master's eyes.",
+      "cards": [
+        { "icon": "❓", "title": "Open Questions for the Storyteller", "href": "open_questions.html", "tag": "Open Questions",
+          "desc": "Questions needing a ruling, threads nobody's picked back up, and consequences still waiting to land." },
+        { "icon": "🎬", "title": "Next Session — Candidate Scenes", "href": "next_session_scenes.html", "tag": "Session Prep",
+          "desc": "The Storyteller's working slate of scenes to stage next session, filterable by season and by magus." }
+      ]
+    }
+  ]
+}
