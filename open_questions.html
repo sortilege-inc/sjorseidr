@@ -237,7 +237,7 @@ async function load(){
       }catch(_){}
     }
     const nOpen = STATE.items.filter(q=>q.status!=='Resolved').length;
-    $('#status').textContent = `${nOpen} open · ${STATE.items.length-nOpen} resolved`;
+    $('#status').textContent = `${nOpen} open`;
     // deep-link / storyteller rail: open a specific type view
     const wantType = new URLSearchParams(location.search).get('type');
     if(wantType && (wantType==='all' || wantType==='reference' || TYPE_ORDER.includes(wantType))) activeType = wantType;
@@ -255,14 +255,19 @@ function autosave(){
 
 function typeClass(t){ return 'type-' + (t||'').toLowerCase(); }
 
+// Resolved items are archived to resolved_questions.json and are NOT shown in
+// the interface — they're a GM-only reference. We still LOAD them (so "Save
+// Resolved" round-trips the full archive), but every view draws from live().
+function live(){ return STATE.items.filter(q=>q.status!=='Resolved'); }
+
 function categories(){
-  const pool = activeType==='all' ? STATE.items : STATE.items.filter(i=>i.type===activeType);
+  const pool = activeType==='all' ? live() : live().filter(i=>i.type===activeType);
   return [...new Set(pool.map(q=>q.category))].sort();
 }
 
 function renderTypeTabs(){
-  const counts = {}; TYPE_ORDER.forEach(t=>counts[t]=STATE.items.filter(i=>i.type===t).length);
-  const allTab = `<div class="typetab ${activeType==='all'?'active':''}" data-type="all">All <span class="n">(${STATE.items.length})</span></div>`;
+  const counts = {}; TYPE_ORDER.forEach(t=>counts[t]=live().filter(i=>i.type===t).length);
+  const allTab = `<div class="typetab ${activeType==='all'?'active':''}" data-type="all">All <span class="n">(${live().length})</span></div>`;
   const tabs = TYPE_ORDER.map(t=>
     `<div class="typetab ${activeType===t?'active':''}" data-type="${t}">${TYPE_ICON[t]} ${t}s <span class="n">(${counts[t]})</span></div>`).join('');
   const refCount = (STATE.gmReference?.brugesRoster.entries.length||0)
@@ -288,15 +293,14 @@ function renderTypeTabs(){
 function renderFilterbar(){
   const cats = ['all', ...categories()];
   const catBtns = cats.map(c=>`<button class="fbtn ${filter.category===c?'on':''}" data-cat="${esc(c)}">${c==='all'?'All Categories':esc(c)}</button>`).join('');
-  const statuses = ['all','Open','Idea','Confirm to delete','Resolved'];
+  const statuses = ['all','Open','Idea','Confirm to delete'];
   const statusBtns = statuses.map(s=>`<button class="fbtn ${filter.status===s?'on':''}" data-status="${esc(s)}">${s==='all'?'All Status':esc(s)}</button>`).join('');
-  const pool = activeType==='all' ? STATE.items : STATE.items.filter(i=>i.type===activeType);
-  const openCount = pool.filter(q=>q.status!=='Resolved').length;
+  const pool = activeType==='all' ? live() : live().filter(i=>i.type===activeType);
   $('#filterbar').innerHTML = `
     <span class="label">Category:</span> ${catBtns}
     <span class="label" style="margin-left:8px">Status:</span> ${statusBtns}
     <span class="spacer"></span>
-    <span class="count">${openCount} still open · ${pool.length} total</span>
+    <span class="count">${pool.length} shown</span>
   `;
   $$('#filterbar .fbtn[data-cat]').forEach(b=>b.onclick=()=>{filter.category=b.dataset.cat;render();});
   $$('#filterbar .fbtn[data-status]').forEach(b=>b.onclick=()=>{filter.status=b.dataset.status;render();});
@@ -421,20 +425,17 @@ function render(){
   renderTypeTabs();
   if(activeType === 'reference'){ renderReference(); return; }
   renderFilterbar();
-  let list = STATE.items.filter(q=>{
+  let list = live().filter(q=>{
     if(activeType!=='all' && q.type!==activeType) return false;
     if(filter.category!=='all' && q.category!==filter.category) return false;
     if(filter.status!=='all' && (q.status||'Open')!==filter.status) return false;
     return true;
   });
-  const openItems = list.filter(q=>q.status!=='Resolved');
-  const resolvedItems = list.filter(q=>q.status==='Resolved');
   const section = (title, sub, items) => items.length
     ? `<div class="qsection"><h2 class="qsection-head">${title} <span class="n">(${items.length})</span></h2>
        <p class="qsection-sub">${sub}</p>${items.map(qCard).join('')}</div>`
     : '';
-  const html = section('Open &amp; In-Play', 'Threads, questions, and to-dos still live — <code>open_questions.json</code>.', openItems)
-    + section('Resolved', 'Archived rulings and picked-up threads — <code>resolved_questions.json</code>.', resolvedItems);
+  const html = section('Open &amp; In-Play', 'Threads, questions, and to-dos still live — <code>open_questions.json</code>. Resolved items are archived to <code>resolved_questions.json</code> and hidden here.', list);
   $('#qlist').innerHTML = html || `<div class="empty">Nothing matches this filter.</div>`;
 
   $$('.qcard').forEach(card=>{
