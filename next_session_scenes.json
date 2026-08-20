@@ -1,10 +1,10 @@
 {
  "meta": {
   "title": "Next Session — Candidate Scenes",
-  "subtitle": "The GM's working slate for the 22nd (into Fall 1224), built on three spines: Wilhelm's delivery run to Scarem Montem, Dagmar's push into the regiones gated behind Tormente, and Confluensis turning the screws on the home front. Forward-looking only — beats played in the 2026-08-08 session have moved to the Chronicle and the Open Questions. Derived from the Open Questions prep hub (q027, t078).",
+  "subtitle": "The GM's working slate for the 22nd (into Fall 1224), built on three spines: Wilhelm's delivery run to Scarem Montem, Dagmar's push into the regiones gated behind Tormente, and Confluensis turning the screws on the home front. The Carnac material is now backed by a full five-level site brief (see meta.source_briefs) — scenes s8–s10 have been rewritten against it and s15–s18 added for the deeper levels. Forward-looking only — beats played in the 2026-08-08 session have moved to the Chronicle and the Open Questions. Derived from the Open Questions prep hub (q027, t078).",
   "as_of": "End of Summer 1224",
   "source": "open_questions.json → q027 \"What are we preparing for next session?\" + t078 (Confluensis's reprisal)",
-  "schema_version": 1,
+  "schema_version": 2,
   "magi_roster": [
    "Éogan",
    "Dagmar",
@@ -13,7 +13,36 @@
    "Valerian",
    "Dustin"
   ],
-  "status_note": "Developed = prepped and ready to stage · Deferred = deliberately left to improvise · Needs prep = flagged but not yet developed"
+  "status_note": "Developed = prepped and ready to stage · Deferred = deliberately left to improvise · Needs prep = flagged but not yet developed · Staged = fully briefed but deliberately out of reach this session",
+  "source_briefs": [
+   {
+    "file": "carnac-regio-gm-brief.md",
+    "title": "The Carnac Regio — GM Brief",
+    "scope": "Five nested Magic-aligned levels beneath the drowned end of the Carnac alignments. Discovered by Dagmar, Spring 1224. Playable 1224–1226.",
+    "covers": [
+     "s8",
+     "s9",
+     "s10",
+     "s15",
+     "s16",
+     "s17",
+     "s18"
+    ]
+   }
+  ],
+  "campaign_clock": {
+   "event": "The Great Conjunction of 4–5 March 1226",
+   "detail": "Jupiter and Saturn close to 2.1 arcminutes in Aquarius — an evening-sky event, the closest observable great conjunction between 1226 and 2020. It does not unlock a chamber; it makes the level-5 crossing survivable for one night. Hang the lock on the PATH, not the aura: Magic auras do not fluctuate cyclically.",
+   "runway": "Fall 1224 → March 1226 — roughly six playable seasons.",
+   "player_facing": "Dagmar's established method is premonitions plus astrology, so the date is his to discover in character. Aldebaran (a Behenian fixed star) is the anchor the conjunction points at; the Hyades are the classical rainy stars, which matches the covenant's maritime regio grammar.",
+   "optional": "Halley's Comet passed in 1222 — usable in retrospect as what woke the lower levels and produced the 1224 mirror-flash."
+  },
+  "scene_count": 14,
+  "corrections": [
+   "2026-08-19 — The Diedne Garden is on the SOUTH COAST OF THE ENGLISH CHANNEL, not within the Ránargarðr holding on the Isle of Man. Earlier s13 text asserting otherwise has been struck.",
+   "2026-08-19 — Scarem Montem left the 1223 Tribunal with the Latin manuscript of Wilhelm's thesis and has held it for roughly a year by the time of the delivery. See s6.",
+   "2026-08-19 — Valdemar's Isle-of-Man site carries a MAGIC AURA OF 3 (confirmed). Recorded in s13."
+  ]
  },
  "scenes": [
   {
@@ -53,32 +82,41 @@
    "thread": "Familiars / the sea voyage home",
    "status": "Developed",
    "hook": "On the voyage home from Ireland a Magic-realm capricorn (sea-goat) singles Éogan out and paces his ship — offered as his first familiar prospect. The work is courting it and the binding lab-work, not an instant bond.",
-   "detail": "ADVANCED (Spring 1224): Éogan spotted the capricorn at a river-mouth near Drogheda (it favours salt-meets-fresh water), took a water sample and cast a relocation spell. Courtship and binding are still ahead. Developed: the draw is independent of the 'small fae drawn to Éogan/Stijntje' affinity; its signature specialty is CROSSING THRESHOLDS INTO REGIONES (mythic grounding in Enki's Goat-Fish and Macrobius's Gate of the Gods). Corpus build/bind references and a suggested Might ~12–16 Magic build are recorded. What it wants in exchange remains open.",
+   "detail": "ADVANCED (Spring 1224): Éogan spotted the capricorn at a river-mouth near Drogheda (it favours salt-meets-fresh water), took a water sample and cast a relocation spell. Courtship and binding are still ahead. Developed: the draw is independent of the 'small fae drawn to Éogan/Stijntje' affinity; its signature specialty is CROSSING THRESHOLDS INTO REGIONES (mythic grounding in Enki's Goat-Fish and Macrobius's Gate of the Gods). Corpus build/bind references and a suggested Might ~12–16 Magic build are recorded. What it wants in exchange remains open.\n\nCARNAC LINK: per the site brief's backstory cascade, the fae were driven WEST into Atlantic and Irish waters c. 225 AD. Éogan's fae attendants (t068) and a Magic capricorn offering itself at an Irish river-mouth are both downstream of the same displacement — a player character is standing in the far end of the Carnac backstory without knowing it.",
    "refs": [
     "t070",
     "t068",
-    "t037"
+    "t037",
+    "t025"
    ]
   },
   {
    "id": "s6",
-   "title": "Does Wilhelm sail to Scarem Montem? — and the three sealed chests",
+   "title": "Wilhelm sails to Scarem Montem — and they have had the thesis for a year",
    "seasons": [
     "Summer 1224"
    ],
    "magi": [
     "Wilhelm"
    ],
-   "npcs": [],
+   "npcs": [
+    "Fettelmid of Scarem Montem",
+    "Bridget of Scarem Montem",
+    "Juliana ex Bonisagus",
+    "Hilda"
+   ],
    "thread": "Folk-magic integration / the ship-for-book swap",
    "status": "Developed",
-   "hook": "The ship-for-book swap is in motion — the Hound of Cassel is under Wilhelm's control and headed back to Scarem Montem, and what he owes them is the folk-magic thesis. Whether he arrives with a finished thesis or one still short its maritime example hinges on s1.",
-   "detail": "SET UP (Summer 1224): Wilhelm now has the Hound of Cassel and found the three sealed chests aboard (held from the Scarem Montem raid; still unopened, boat warded). The delivery is next session's anchor. Developed: the three sealed chests aboard the Hound of Cassel are intercepted Bishopric-of-Liège ↔ Scarem Montem cipher letters exposing a Church/State suborning — a Code violation tied to the Brabant conspiracy. Ring-based public/private-key crypto lets the covenant PROVE the correspondents but mostly not read the content. Wilhelm may be carrying Scarem Montem's own incriminating mail back to them: return it, keep it, or weaponise it in the swap? The Hound itself is warded with a 1-month-duration ward against scrying, cast by Wilhelm, for the run to Scarem Montem.",
+   "hook": "The ship-for-book swap is in motion: the Hound of Cassel is under Wilhelm's control and headed south, and what he owes them is the folk-magic thesis. He does not know that Scarem Montem left the 1223 Tribunal with the Latin manuscript in their baggage and has been running it in the field ever since.",
+   "detail": "SET UP (Summer 1224): Wilhelm has the Hound of Cassel and found three sealed chests aboard (held from the Scarem Montem raid; unopened, boat warded with a 1-month ward against scrying for the run south).\n\n═══ THE HIDDEN SITUATION ═══\nAT THE 1223 TRIBUNAL, Hilda gave FETTELMID of Scarem Montem the LATIN copy for a 'cursory appraisal by end of Friday.' Hilda only ever planned to swing by the tent and assess whether extended review was warranted. Scarem Montem left Montverte with the manuscript and nobody chased it. By the delivery they have held it for roughly a YEAR.\n\nWHAT THE YEAR BOUGHT THEM: replication over Fall 1223; first field deployment by Winter/Spring 1224; casualties on the ground before Wilhelm ever sails. Critically, a year is more than enough to have found the madness rate THEMSELVES — as Carl and Isaac did (s1) — and they continued anyway. That is the moral gap between them and Wilhelm, and the thing he will not forgive.\n\nTHE TARGET: they are deploying it against VILLEINS IN TERRITORIES CONTROLLED BY MONTVERTE — their own liege. Not cruelty for its own sake: Bridget of Scarem Montem pitched Éogan on the Lotharingian Tribunal, and destabilising Montverte's mundane base weakens their liege ahead of the Grand Tribunal petition. Run it as a GIFT, not an experiment — the technique offered to selected villeins as folk wisdom, in villages they want turned. The madness is the point and it is deniable, because it looks like the countryside going strange on Montverte's watch. Nobody is told they are a trial.\n\nWHY THEY STILL WANT THE HANDOVER: a formal delivery LAUNDERS THE POSSESSION. It makes Wilhelm the author of record and the transmission consensual and witnessed. Any later quaesitorial inquiry then finds a Hermetic magus who gave it to them freely, in payment of a debt. The swap is not a purchase — it is a signature, and they want him to sign.\n\nWILHELM'S COUNTER-WEAPON: teaching the ungifted is his exposure; it is also THEIRS, at scale, with intent, against mundanes. He holds a real charge. That should occur to him roughly ten seconds after the horror does.\n\nWHERE TO PUT THE REVEAL: not at Scarem Montem. Have Wilhelm's assistants — already out west and south gathering citations (s1) — come back having found the TECHNIQUE ALREADY IN USE in a village that should not have it, with the same failure rate. He recognises his own method in the field before he ever reaches the door, and turns the delivery into a confrontation he chooses to walk into.\n\nTHE LOOSE VERIFIER: JULIANA ex Bonisagus at Dragon's Rest holds the Low German copy and expects to swap for the Latin post-Tribunal. She has no idea it has been in the field for a year. A Bonisagus, at a covenant Montverte is trying to poach, who can blow this open with no PC involvement at all.\n\nTHE CHESTS, NOW SHARPER: the three sealed chests are intercepted Bishopric-of-Liège ↔ Scarem Montem cipher letters exposing a Church/State suborning (ring-based crypto PROVES the correspondents but mostly does not yield content). So Wilhelm sails into the covenant that has been quietly poisoning Montverte's villages while carrying that covenant's own incriminating mail. Two separate proofs, and no clear idea which one they would kill for. Return it, keep it, or weaponise it in the swap?",
    "refs": [
     "t002",
     "t009",
     "c012",
-    "t028"
+    "t028",
+    "t019",
+    "t020",
+    "q028"
    ]
   },
   {
@@ -98,18 +136,20 @@
    ],
    "thread": "The dragon errand / the Carnac regio",
    "status": "Developed",
-   "hook": "Dagmar carries Mímormr's token back to Tormente, expecting passage into the Carnac regio — but Tormente sent him to free a prisoner it had bound, and may not deal straight.",
-   "detail": "Tormente framed itself as 'estranged kin' and used Dagmar to break Mímormr's binding. What Tormente actually wanted, whether it honours the regio bargain, and how it reacts to Mímormr's freedom (and the stolen five bags of gold, if noticed) are all live. Flagged for the 22nd as the return to the first dragon.",
+   "hook": "Dagmar carries Mímormr's token back to Tormente, expecting passage into the Carnac regio. Tormente will almost certainly grant it — cheerfully, with useful advice about the tide and the stones. The problem is what the grant means: Tormente is not stationed at the mouth to control what goes IN.",
+   "detail": "Tormente framed itself as 'estranged kin' and used Dagmar to break Mímormr's binding. Play it as a POST, not a monster — Might 40, holding a station for centuries with no relief and no orders, possibly no longer reporting to anyone. It will name the stones, warn about the cold, and say nothing useful about coming back out, because that is not the brief. The brief is that nothing else comes out.\n\nMECHANICAL ANCHOR: Tormente is a preternatural tether of 4 (Might 40 ÷ 10) on LEVEL 1 ONLY. It contributes nothing to levels 2–5, which are held up by the monument. This produces the lever the players will eventually find — killing it cools level 1 from aura 7 toward 3, making the cave safe to garrison, while doing nothing whatsoever to the deep levels and removing the only thing keeping the contents in. The trade is exact and legible.\n\nINFERENCE TO OFFER THE PLAYERS: a Might 40 guardian implies the thing being contained outranks it. They can estimate what is upstairs by looking at what is parked downstairs, and the estimate should frighten them. The mirror-flash being undetectable at range is not the regio being coy — that is containment working.\n\nLIVE FROM PLAY: Mímormr's release now reads as a containment breach performed by the party on the guardian's own instructions. And Foxglove's unsanctioned theft of five bags of Roman gold (c026) becomes a much sharper question — he took something OUT. Either Tormente permits mundane traffic, or Foxglove is now marked by whatever standard it applies. Decide before the table asks.",
    "refs": [
     "t073",
     "t072",
     "c027",
-    "c026"
-   ]
+    "c026",
+    "t025"
+   ],
+   "brief_section": "§5 — Level 1 / Tormente"
   },
   {
    "id": "s9",
-   "title": "Into the magical regio — and Llewellyn's gambit",
+   "title": "Level 1 — the tidal cave, and Llewellyn's gambit",
    "seasons": [
     "Fall 1224"
    ],
@@ -118,20 +158,23 @@
     "Valdemar"
    ],
    "npcs": [
-    "Llewellyn"
+    "Llewellyn",
+    "Tormente"
    ],
-   "thread": "Regio exploration",
+   "thread": "The Carnac regio / regio exploration",
    "status": "Developed",
-   "hook": "Once Tormente grants passage, the party enters the Aquam-tinged Carnac regio — where Llewellyn hopes the irregular time-flow will let him safely unwind his Zeno's-paradox longevity working.",
-   "detail": "Llewellyn wants to 'catch the tide going out' — end his half-life-forever working in a place where time runs irregular, ideally with backup, before a sudden failure turns catastrophic. His found time-quartz crystal reads the flows. What the regio holds, and whether the gambit works, is the payoff.",
+   "hook": "Passage granted, the party rows into the sea-cave at the drowned end of the alignments. Aura 7, Magic, Aquam-aligned. The tide is the guardian: in on the ebb, out on the flood, or not at all.",
+   "detail": "THE CLOCK. No creature needed at the door — the mouth only opens at a specific state of the tide and the cave floods. This does three jobs: a guardian that cannot be fought, a hard clock on every session, and a daily rehearsal of the same logic that locks level 5 to March 1226. The regio teaches its own grammar on the ground floor.\n\nTHE REVEAL. The alignments continue underwater, standing whole. Whatever Carnac is, it was laid out when the water was somewhere else.\n\nWARPING — the load-bearing rule. Aura 7 warps by exposure: always-within = 1/year, half-time = 1/2 years, frequent visits (~¼) = NONE. Expeditions don't warp; garrisons do. Raiding costs nothing, which is exactly why nobody notices it is dangerous. It costs the moment they moor a boat, post a tide-watch, or station someone to hold the entry open — so every sensible operational decision is the one that hurts them. AND: characters with supernatural powers of the same realm as the aura — Hermetic magi in a Magic aura — do not warp from it at all. Dagmar and Llewellyn can stand there for years and feel nothing. Angus, Foxglove and Peter (the three grogs from the Spring 1224 rowboat) cannot. The magi cannot perceive the harm they are doing to their own people.\n\nWHAT IT LOOKS LIKE (Water/Aquam-tethered aura): Sensitive Sight, a Weakness for natural bodies of water, Disfigured — webbing between the digits, skin that cracks unless kept wet; Great Immunity: Drowning as the sweetener. At high Warping, moving by flowing. And from the aligned-aura rules: inhabitants eventually find it very hard to leave.\n\nMID-CAMPAIGN BEAT TO PLANT NOW: the first time a grog who has been changing tries to leave and Tormente does not move aside, because by whatever standard it applies he has stopped counting as something that came in.\n\n⚠ INTEGRATION CONFLICT — RESOLVE BEFORE THE 22nd. Llewellyn's gambit ('catch the tide going out' — unwind the Zeno working where time runs irregular) and Paulus ex Merinita's commissioned ward are both built for FAERIE regiones. The brief makes Carnac Magic-aligned, and Magic auras do not fluctuate. Three ways out: (a) the irregular flow is a property of depth rather than realm, and levels 3–5 run on tempora — which also feeds Llewellyn's heresy; (b) Paulus's ward simply fails to trigger, which is a cheap and painful lesson in what he actually sold; (c) move the gambit to a genuinely faerie site and let Carnac disappoint him. Option (a) is the most generative and costs nothing.",
    "refs": [
     "t018",
-    "t025"
-   ]
+    "t025",
+    "t073"
+   ],
+   "brief_section": "§5 — Level 1 / warping / the tide"
   },
   {
    "id": "s10",
-   "title": "The regiones behind Tormente",
+   "title": "The Carnac ladder — five levels, and the inversion",
    "seasons": [
     "Fall 1224"
    ],
@@ -144,12 +187,16 @@
    ],
    "thread": "The dragon errand / the Carnac regio",
    "status": "Developed",
-   "hook": "The next-session objective for the northern party: reach the regiones gated behind Tormente — more than one lies back there.",
-   "detail": "Umbrella objective for the 22nd. Beyond Tormente's ground sits a cluster of regiones — the Aquam-tinged Carnac regio (s9) and whatever else the dragon conceals. Runs straight off s8 (the return with Mímormr's token) and into s9 (Llewellyn's time-flow gambit inside the regio).",
+   "hook": "Umbrella frame for the whole Carnac arc. Five nested Magic levels under the drowned alignments. The party will enter believing the goal is to reach level five. By the time they understand the building, the goal is to make sure it never opens.",
+   "detail": "THE LADDER (Regio Sight Roll: Per + appropriate Ability + stress die vs EF 5 + 2× aura difference; Second Sight, Magic Sensitivity, or the InVi lvl-3 boundary guideline — Vision target gives the route):\n  L1 The Cave — aura 7 — EF 7 — Tormente resident, tidal.\n  L2 The Alignments — aura 8 — EF 9 — the sightline apparatus.\n  L3 The Colony — aura 9 — EF 7 — murfolk; social gate.\n  L4 The Throne Room — aura 10 — empty, waiting.\n  L5 The Road — 10+ — not a room; conjunction only.\n\nAuras are built from RoP:Magic tethers, not asserted: caves/water/astrological alignment on the natural side (cap 5), the megalithic monument at 1 per century of active use on the preternatural side (comfortably capped at 5 by a millennium of murfolk worship). Level 1 is the ONLY level where a living creature does any of the work.\n\nTHE WALL: the mechanical wall and the social wall are the same wall. Level 3 is the only floor from which level 4 can be reached, and the murfolk own it.\n\nNON-LINEARITY: the lock is operated from level 2 but acts on level 5, so the party must fight up, learn what the lock is, and come back DOWN to set it — crossing level 3 twice, with the murfolk's disposition possibly changed in between.\n\nREACH ON THE 22nd: levels 1 and 2 are plausibly in play. Level 3 is the pacing wall and probably the session's end. Levels 4–5 are staged (s17, s18) and should stay out of reach.\n\nOFFSTAGE BACKSTORY (do not resolve here): c. 225 AD Jörmungandr shifted position; the fae were displaced west into Atlantic waters; the merfolk were squeezed out of the sea and retreated UP into the already-ancient Carnac stack. None of the three tiers knows about the tier above it. The correction is a millennium away and out at sea.",
    "refs": [
     "t025",
-    "t073"
-   ]
+    "t073",
+    "t018",
+    "t070",
+    "t068"
+   ],
+   "brief_section": "§1–§4 — pitch, cascade, astronomy, aura structure"
   },
   {
    "id": "s11",
@@ -181,22 +228,24 @@
   },
   {
    "id": "s12",
-   "title": "Harvesting the Diedne Garden — what does it entail?",
+   "title": "The Diedne Garden — a druidic circle on the Channel coast, and the road to initiation",
    "seasons": [
-    "Summer 1224",
-    "Fall 1224"
+    "Fall 1224",
+    "1225–1226"
    ],
    "magi": [
     "Valdemar"
    ],
    "npcs": [],
-   "thread": "Vis sources / the Diedne Garden",
-   "status": "Needs prep",
-   "hook": "Valdemar has taken on the covenant's newly-won Diedne Garden — a Herbam vis source (3 pawns/yr). What tending and harvesting it actually entails is undeveloped: the harvest mechanics, any guardian or condition, and — given the name — whether a vanished Diedne magus left something in it no one has yet seen.",
-   "detail": "Flagged from Valdemar's declared season plans (t079) and the 2026-08-08 recap, where he 'defaulted to taking care of the Diedne Garden' and said he wanted to keep an eye on it — wondering whether its Diedne maker left a remnant behind. TO PREP: how the Herbam vis is harvested (the season/window, the roll, any risk of botch or aura harm); the garden's nature and location; whether there is a guardian, ward, or standing condition on the harvest; and what — if anything — a long-dead Diedne planter concealed there. Pointed resonance: Valdemar is himself secretly House Diedne (t078), so a Diedne garden is a personal draw as much as a practical one. He also means to pick up the basics of Herbam in order to work it.",
+   "thread": "Vis sources / the Diedne Garden / Valdemar's lineage",
+   "status": "Developed",
+   "hook": "Valdemar has taken on the covenant's newly-won Diedne Garden — a Herbam vis source (3 pawns/yr) on the SOUTH COAST OF THE ENGLISH CHANNEL, not on the Isle of Man. It is an old druidic circle. He can spend the season there harvesting, or he can spend it beginning to initiate himself into the Diedne mystery.",
+   "detail": "CORRECTION OF RECORD: the garden is on the Channel's south coast. Earlier notes placing it inside the Ránargarðr holding on Man were wrong and have been struck from s13.\n\nWHY THE SITING IS BETTER: it sits in the Tribunal's heartland, not on a private island. It was won as a Tribunal prize, so its location is a matter of public record — everyone in Normandy knows who holds it. Every season Valdemar spends there is a season a DIEDNE SITE is being visited, repeatedly, by a magus from the covenant Confluensis is building a case against (s11). Part of the ordeal is simply being seen going.\n\nAND IT COSTS HIM SEASONS: Undrahöll on Man (s13), the garden on the Channel, and the raiding that funds both are three different places. He cannot do all of it. Making him choose between his laboratory and his lineage every year is the engine of this thread.\n\n═══ THE INITIATION ═══\nThe Diedne are a thousand years dead, so there is no mystagogue. THE SITE IS THE MYSTAGOGUE — the script is kept in the circle, recoverable a rung at a time, and the Ordeals are things the place demands rather than things a person imposes. Give Valdemar a DIEDNE LORE cult ability to accumulate; each season in the garden is a script attempt.\n\nTHE LADDER (four rungs, capstone deliberately years out):\n1. THE NAMING — Outer Mystery. He says his lineage aloud inside the ring, which is the first time he has said it to anything. Grants Diedne Lore 1. Ordeal cost: minor.\n2. THE GREEN SEASON — a modest grove-bound working benefit (study or spontaneous bonus within the circle).\n3. THE BENDING — a partial capstone, usable years early: reduce an opponent's Penetration by his Diedne Lore score. Lets him feel it working before he has earned the whole thing.\n4. THE UNBROKEN RING — Major Hermetic Virtue. HALVE an opponent's Penetration total against him.\n\nBALANCE NOTE: halving Penetration is very strong — against a Penetration 40 attack that is a flat −20 on top of Parma. Purely defensive, so it does not warp offence, but it will make him near-unhittable by anything short of a Tribunal. Two tunings, pick one:\n  (a) BIND IT TO THE RING — it functions only inside a circle he has consecrated, including small ones he can lay in a season or scribe aboard a ship. Thematically exact, self-limiting, and it makes his HOLDINGS the source of his power rather than his person.\n  (b) UNCONDITIONAL, PRICE IN THE FLAWS — TMRE convention is one Flaw per script. For a secret Diedne the right Flaws are not personal hardships but LEGIBILITY: his magic begins resisting in a way no catalogued Hermetic Virtue explains. RECOMMENDED — because Confluensis is assembling a bundled complaint (s11), an anomalous resistance is not a rumour but a demonstrable effect a quaesitor can test for, and Valerian is a former Rhine quaesitor sitting at his own dinner table. The capstone virtue becomes the confession.\n\nSTILL TO PREP: the Herbam harvest mechanics (season/window, roll, botch risk); whether a guardian, ward, or standing condition sits on the harvest; and what the long-dead Diedne planter left behind. Valdemar also means to pick up basic Herbam in order to work it.\n\nSTANDING NOTE: Valdemar is secretly House Diedne (t078). Stacked with the Christian lie (s14) and the fief, this is the highest-stakes exposure any PC carries.",
    "refs": [
     "t079",
-    "t078"
+    "t078",
+    "c022",
+    "t081"
    ]
   },
   {
@@ -215,10 +264,11 @@
    "thread": "The Isle-of-Man base / Valdemar's lab",
    "status": "Developed",
    "hook": "Valdemar builds out the covenant's Isle-of-Man harbour holding — Ránargarðr (“Rán's Garden”) — raising the main hall Nóatún, where the coven Winters, and his own Undrahöll (“Hall of Wonders”), whose ratified laboratory he means to work through the cold months, funded by the summer and fall raiding and trading.",
-   "detail": "The lab is speced and ratified (full player notes + rulings live in t079's dossier): a modified Viking longhouse — Size 13 / Refinement 0 / Safety 0 / General Quality +1 / Aesthetics +11 — 100£ to raise (Superior Construction doubling the bill), Upkeep 4 (~5£/yr at Valdemar's Winter-only use), with living quarters for him and Rán kept separate from the lab for Safety. The Diedne Garden (see s12) sits within the same Ránargarðr holding. TO RESOLVE IN PLAY: the raiding/trading that funds the 100£ build and its upkeep; Valdemar's final laboratory specialization picks (runes vs Techniques/Forms, per the ruling that viktir work as spells); and which season(s) the construction consumes. Once this beat is played, its outcomes merge back into the t079 dossier.",
+   "detail": "The lab is speced and ratified (full player notes + rulings live in t079's dossier): a modified Viking longhouse — Size 13 / Refinement 0 / Safety 0 / General Quality +1 / Aesthetics +11 — 100£ to raise (Superior Construction doubling the bill), Upkeep 4 (~5£/yr at Valdemar's Winter-only use), with living quarters for him and Rán kept separate from the lab for Safety. ═══ THE AURA — RESOLVED ═══\nThe site Valdemar selected on the Isle of Man carries a MAGIC AURA OF 3. This makes Undrahöll's laboratory viable (aura 3 to the Lab Total) and — deliberately — sits BELOW the Warping threshold of 6, so the grog families, the bailiff, the settlers and the winter Althing can all live there safely. Contrast this with Carnac's level 1 at aura 7 (s9), which cannot be garrisoned without changing the people who hold it: one holding that is safe to populate, one that quietly is not.\nCONSEQUENCE FOR DAGMAR: an existing Magic aura is the precondition for STRATIFYING THE SUBTLE REALITIES (CrVi General, T: Boundary, Ritual) — the aura-strengthening ritual whose failure mode is stratification into a regio. Ránargarðr is now the only viable target the covenant owns, which puts Dagmar's regio ambitions and Valdemar's home on the same ground. Note the trap: if the ritual SUCCEEDS in pushing the aura past 6, Dagmar has made Valdemar's town uninhabitable as a favour.\nSOURCE OF THE AURA — still open. Manx folklore is overwhelmingly Faerie-coded (Manannán's mist-cloak, the Little Fellas) and Rán is already resident and already the edge Confluensis intends to name (c022). For a MAGIC aura, reach for something Norse and buried rather than Manx and storied — a ship burial or howe, the dead and their vessel under the turf. It gives Valdemar a reason the site is his rather than merely purchased, it sits in the same idiom as the covenant's sea-serpent skeleton, and unlike a resident fae it is a tether nobody can accuse him of consorting with.\n\nTO RESOLVE IN PLAY: the raiding/trading that funds the 100£ build and its upkeep; Valdemar's final laboratory specialization picks (runes vs Techniques/Forms, per the ruling that viktir work as spells); and which season(s) the construction consumes. Once this beat is played, its outcomes merge back into the t079 dossier.",
    "refs": [
     "t079",
-    "t080"
+    "t080",
+    "c022"
    ]
   },
   {
@@ -237,12 +287,103 @@
    "thread": "The Isle-of-Man base / Valdemar's fief",
    "status": "Developed",
    "hook": "Rǫgnvaldr Guðrøðarson (Reginald), the Christian King of Mann and the Isles, grants Valdemar right and title to the Ránargarðr holding — potentially as a proper feudal fief — but the grant demands he profess himself a Christian, which is a lie.",
-   "detail": "The stage-able beat behind Valdemar's Isle-of-Man holding (see the thread t081). Much of the groundwork is backstory the covenant doesn't know about — a favour already done for King Rǫgnvaldr, a down payment made in goods or services, title received in writing — so this can play as the formal grant and the moment of the lie, or as a later reveal to the covenant. Live beats: whether he swears an Oath of Fealty (not his preference) or bargains a promise of specific service instead; what that owed service is (a standing debt the GM can call in — t081); and how far the Christian lie widens his exposure, stacking on his hidden House Diedne lineage (t078). Around it, Ránargarðr / Nóatún is growing into a Viking fjord-town — grog families first, then settlers, then pirates; a Norse bailiff; a winter Althing. Runs straight off s13 (raising the manor and Undrahöll).",
+   "detail": "The stage-able beat behind Valdemar's Isle-of-Man holding (see the thread t081). Much of the groundwork is backstory the covenant doesn't know about — a favour already done for King Rǫgnvaldr, a down payment made in goods or services, title received in writing — so this can play as the formal grant and the moment of the lie, or as a later reveal to the covenant. Live beats: whether he swears an Oath of Fealty (not his preference) or bargains a promise of specific service instead; what that owed service is (a standing debt the GM can call in — t081); and how far the Christian lie widens his exposure, stacking on his hidden House Diedne lineage (t078). Around it, Ránargarðr / Nóatún is growing into a Viking fjord-town — grog families first, then settlers, then pirates; a Norse bailiff; a winter Althing. Runs straight off s13 (raising the manor and Undrahöll), which now carries a confirmed Magic aura of 3 — low enough that the growing fjord-town can be settled without Warping its people. Note the Diedne Garden is NOT part of this holding; it lies on the Channel's south coast (s12).",
    "refs": [
     "t081",
     "t079",
     "t078"
    ]
+  },
+  {
+   "id": "s15",
+   "title": "Level 2 — the alignments, and the sightline you set from the murfolk's doorstep",
+   "seasons": [
+    "Fall 1224",
+    "Winter 1224"
+   ],
+   "magi": [
+    "Dagmar",
+    "Valdemar",
+    "Llewellyn"
+   ],
+   "npcs": [
+    "Llewellyn"
+   ],
+   "thread": "The Carnac regio / the lock",
+   "status": "Developed",
+   "hook": "Aura 8. The puzzle room. Stones continuing under the water, standing whole — the apparatus that opens level 5, operated from here but acting five floors up.",
+   "detail": "THE MECHANISM. Megalithic alignments work by foresight and backsight: a near stone and a far stone that merge from exactly one standing place. Seven pillars for the seven planets, with Aldebaran as the fixed anchor they are measured against, arranged so that VIEWED FROM THE ENTRANCE TO LEVEL 3 they reproduce the March 1226 conjunction. Pillars do not share a socket — they sit at different DISTANCES, so distance encodes the 2.1-arcminute separation.\n\nWHY THIS IS THE RIGHT DESIGN:\n• The vantage point is the murfolk's front door. The apparatus cannot be surveyed or verified from anywhere else. You cannot work on it without standing on their threshold, repeatedly, for as long as it takes.\n• Parallax makes it a species question. The alignment is only true at one eye height. A configuration set correctly by murfolk reckoning is subtly wrong for a standing human — so whoever the stones were set for is recoverable from the geometry, and it is not the murfolk.\n• It forces split parties and shouted corrections: one caller at the door, others moving pillars blind out among the stones, nobody able to see whether they have helped.\n• It matches the covenant's own gateway signature. Two stones becoming one stone is exactly the idiom of Orkney's false second sun and the 1224 mirror-flash. The archive has been describing this mechanism for six years without knowing it.\n\nTHERE IS NO SABOTEUR. Nobody has ever solved this. The apparatus has stood mis-set since it was raised — not hidden, just never read, because no one who could read the sky has ever stood in that doorway. The murfolk's ignorance is the only thing that has ever kept the door shut.\n\nTHE COMPLICATION. The murfolk have looked at this arrangement every day for forty generations. It is their skyline. They will notice a moved stone before the party finishes moving it, and they will have opinions about which arrangement is correct. So at this stage they may not be an obstacle — they may be EAGER. They have been waiting for someone who could read the sky, and the magi are visibly qualified.\n\nDRESSING:\n• First yellow. Not a sign, not a symbol — a vestige (RoP:M): a tattered awning over nothing, a figure at the edge of the stones in a colour that should not survive underwater. Nobody should be able to say afterward whether they saw it.\n• The offerings — a path of them, small, salt-crusted, made by hands, all facing up. This tells the players there is a congregation before they meet it.\n• Optional, the counting. Carnac folklore holds the stones cannot be counted twice the same. Use as a lock (get the number right to ascend), a census (the number has been dropping for a thousand years and nobody works out what is being counted until level 4), or a tempus (the stones are being raised on loop by people who cannot see you).",
+   "refs": [
+    "t025",
+    "t018",
+    "q027"
+   ],
+   "brief_section": "§6 — Level 2"
+  },
+  {
+   "id": "s16",
+   "title": "Level 3 — the colony, and the negotiation you cannot avoid",
+   "seasons": [
+    "Winter 1224",
+    "1225"
+   ],
+   "magi": [
+    "Dagmar",
+    "Valdemar"
+   ],
+   "npcs": [
+    "The murfolk"
+   ],
+   "thread": "The Carnac regio / the social gate",
+   "status": "Developed",
+   "hook": "Aura 9. Murlocs, not mermaids — croaking, wide-mouthed, bulge-eyed, wattled, wearing salvaged ship-timber as carapace. They hold the only floor from which level 4 can be reached, and have held it for a thousand years.",
+   "detail": "WHAT THEY ARE. A distinct magical species with Magic Might — not warped humans, not transformed anything. Their anatomy is theirs; they were webbed and wattled when they still had the open sea. Treat them as a people, not a condition. They are the natives; the party are the strange-looking ones.\n\nTHE MISREADING (and it is a mistake the party can make honestly). A magus who sees a webbed, water-adapted grog on level 1 and a colony of webbed, water-adapted beings on level 3 will draw the obvious line. It is false — convergent adaptation to the same aura, not shared ancestry — and voicing it will insult them badly, because they know exactly what they are and have never been anything else.\n\nWHAT THEY BELIEVE. There is a king on the floor above. He took them in when the fae drove them from the water. They tend his threshold and have done so for forty generations; he will rise when they are finally owed. They are correct that he will rise. Everything else is wrong. They do not have a history — they have a grievance, polished into liturgy, which they chant, and which is misdirected by two whole tiers.\n\nTHE PRISON, NOT THE SANCTUARY. Tormente does not let things out. The murfolk have been inside a sealed vessel for a thousand years with a guardian at the door that will not release them and does not consider them the point. So they do not want help going UP — they want help getting OUT. Level 3 is a prison bargain, and the party is the first thing in ten centuries to walk in the front door with any prospect of walking back out.\n\nRUNNING IT. The party must cross level 3 twice — up, and back down to set the pillars — and their standing can change between crossings. The thing they must not say is the one thing that would break the murfolk entirely. Whether the party works out what is upstairs BEFORE or AFTER they need murfolk cooperation is the single biggest pacing decision in the whole arc.\n\nCOVENANT HOOK: the salvage-as-carapace register deliberately echoes the hermit crab wearing half a hull at the Scandinavian sea-mount (Spring 1222). If Dagmar makes that connection out loud, it is a real piece of scholarship.",
+   "refs": [
+    "t025",
+    "t073"
+   ],
+   "brief_section": "§7 — Level 3"
+  },
+  {
+   "id": "s17",
+   "title": "Level 4 — the throne room, and the thing that is not in it",
+   "seasons": [
+    "1225"
+   ],
+   "magi": [
+    "Dagmar"
+   ],
+   "npcs": [],
+   "thread": "The Carnac regio / the king",
+   "status": "Staged",
+   "hook": "Aura 10. Empty. Waiting. A throne room for a king the murfolk think is theirs. It is Hastur's. STAGED — should not be reachable on the 22nd.",
+   "detail": "REALM ASSIGNMENT — the key design decision. Do NOT file him under Infernal: that flattens him into a duke of Hell in a mask and, worse, makes him legible. Put him in the TWILIGHT VOID — RoP:M's second part of the Magic Realm, sparse and foreboding, home to ancient beings it is wisest not to disturb, and given no bestiary in the published text. Claiming that address costs nothing.\n\nTWO BENEFITS: (1) it stays Magic-aligned, so the magi are not eating doubled botch dice in the throne room — DE clarifies that the doubling applies in a regio whose realm differs from that of the POWER; (2) it gives a delivery vector requiring no travel at all. Magi who go into Twilight go into the Void. A bad botch, a Warping-heavy season, and someone meets him without leaving the lab. That horror is free from the system — and Dagmar is currently at Warping 0 with Weird Magic, which is a fuse worth lighting slowly.\n\nWHAT IS IN THE ROOM: nothing. An absence with the shape of an occupant. A seat, maintained, running on habit, tended by a congregation who have not been told anything. The mark on the floor is not fae — that is where the murfolk's liturgy fails.\n\nTHE YELLOW SIGN AS REGIO PATH. DE explicitly allows entry by following a particular path or ritual. The Sign fits that slot — and it PROPAGATES. The moment the party writes it down, sketches it in a lab text, or describes it to a Redcap, the regio acquires a new door. Their own scholarship is the vector, which is a very Ars Magica failure mode and lands squarely on a covenant that trades in books.",
+   "refs": [
+    "t025"
+   ],
+   "brief_section": "§8 — Level 4"
+  },
+  {
+   "id": "s18",
+   "title": "Level 5 — the road, and the March 1226 lock",
+   "seasons": [
+    "1225",
+    "Spring 1226"
+   ],
+   "magi": [
+    "Dagmar",
+    "Llewellyn"
+   ],
+   "npcs": [],
+   "thread": "The Carnac regio / the conjunction",
+   "status": "Staged",
+   "hook": "Not a room. The far side. The conjunction of 4–5 March 1226 does not unlock a chamber — it makes the crossing survivable, for one night.",
+   "detail": "RoP:M notes that gateways into the Magic Realm proper are guarded by fierce creatures on the FAR side and typically open inward only; insulae are theorised as Magic regiones above aura 10, and aura 10 already reads in core as a gateway to the realm of its affiliation.\n\nTHE INVERSION, stated plainly: the goal is not to reach level 5. It is to be standing in the throne room in March 1226 and prevent the stairs from appearing — while the only people who know the building are convinced the party has come to rob their church.\n\nHANG THE LOCK ON THE PATH, NOT THE AURA. Magic auras do not fluctuate cyclically; the aura stays 10 and only the stairs are conditional. DE's Ease-Factor language covers this explicitly.\n\nLLEWELLYN'S PRIZE (§10). RoP:M gives three unprovable models of the Magic Realm — cosms, the Magic Archipelago (insulae and Ferrymen), and tempora (deeper = older; popular with Criamon, which is Dagmar's house). Orkney was already a COSM reading: room-sized spherical microcosms hanging in liquid sky. Carnac in the archipelago idiom is the same phenomenon under a different theory. Two magi, two models, one regio, incompatible maps — exactly the trap Erobos warned about, and exactly the ammunition Llewellyn needs. The published text says sustained exploration by a group of magi MIGHT make one theory harder to sustain, and that the storyguide then decides the underlying truth. That is a campaign-length prize and it is on the table.\n\nOPTIONAL: A. Vibert Douglas identified five conjunctions across 1226–27. If you want the number five doing extra work — five conjunctions, five levels, each keyed to one, the fifth simply the last to arrive.",
+   "refs": [
+    "t018",
+    "t025"
+   ],
+   "brief_section": "§9–§10 — Level 5, the three theories"
   }
  ]
 }

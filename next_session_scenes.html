@@ -58,6 +58,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .scene.st-deferred{border-left-color:var(--gold)}
 .scene.st-needsprep{border-left-color:var(--rust-bright)}
 .scene.st-played{border-left-color:#8a7d68;opacity:.72}
+.scene.st-staged{border-left-color:#4a6b8a}
 .scene-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:7px}
 .scene h2{font-family:'Cinzel',serif;font-weight:600;font-size:17px;line-height:1.3;margin:0;color:var(--ink)}
 .badge{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.06em;text-transform:uppercase;
@@ -66,6 +67,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .badge.st-deferred{background:rgba(154,107,31,.2);color:var(--gold);border:1px solid rgba(154,107,31,.5)}
 .badge.st-needsprep{background:rgba(181,74,50,.16);color:var(--rust-bright);border:1px solid rgba(181,74,50,.45)}
 .badge.st-played{background:rgba(120,90,40,.14);color:var(--ink-soft);border:1px solid rgba(120,90,40,.4)}
+.badge.st-staged{background:rgba(74,107,138,.16);color:#3a5670;border:1px solid rgba(74,107,138,.45)}
 .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
 .tag{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.04em;padding:2px 9px;border-radius:9px;white-space:nowrap;
   display:inline-flex;align-items:center;gap:5px}
@@ -83,6 +85,42 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .empty{text-align:center;color:var(--ink-soft);font-style:italic;padding:40px 10px}
 footer{margin-top:30px;padding-top:14px;border-top:1px solid rgba(120,90,40,.3);font-size:12.5px;color:var(--ink-soft);font-style:italic}
 @media(max-width:560px){.scene-top{flex-direction:column-reverse;align-items:flex-start}}
+
+/* ── new meta: campaign clock, corrections, source brief ── */
+.clock{background:linear-gradient(180deg,#e8eef2,#d7e2ea);border:1.5px solid rgba(74,107,138,.5);
+  border-left-width:5px;border-radius:10px;padding:13px 16px;margin-bottom:12px;box-shadow:0 2px 6px var(--shadow)}
+.clock-h{font-family:'Cinzel',serif;font-weight:600;font-size:14.5px;color:#33546e;margin-bottom:5px}
+.clock p{font-size:13.5px;line-height:1.5;color:var(--ink);margin:5px 0}
+.clock-grid{display:grid;grid-template-columns:1fr;gap:6px;margin-top:6px}
+.clock-grid>div{font-size:12.5px;line-height:1.5;color:var(--ink-soft)}
+.clock-grid .ck-l{display:block;font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:#4a6b8a}
+.metabox{background:rgba(120,90,40,.06);border:1px solid rgba(120,90,40,.32);border-radius:9px;margin-bottom:12px;overflow:hidden}
+.metabox>summary{cursor:pointer;font-family:'Cinzel',serif;font-size:12.5px;letter-spacing:.03em;color:var(--rust);
+  padding:9px 13px;list-style:none;display:flex;align-items:center;gap:7px}
+.metabox>summary::-webkit-details-marker{display:none}
+.metabox>summary::before{content:'▸';color:var(--gold);font-size:12px}
+.metabox[open]>summary::before{content:'▾'}
+.metabox[open]>summary{border-bottom:1px solid rgba(120,90,40,.28)}
+.metabox .mb-n{font-family:'EB Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-soft)}
+.corr{margin:10px 14px;padding-left:20px;font-size:13px;line-height:1.55;color:var(--ink)}
+.corr li{margin-bottom:6px}
+.brief-scope{font-size:12.5px;color:var(--ink-soft);margin:10px 14px 0}
+.tag.brief-sec{background:rgba(74,107,138,.14);color:#3a5670;border:1px solid rgba(74,107,138,.4);
+  font-family:'EB Garamond',serif;text-transform:none;font-size:12px}
+
+/* rendered brief markdown */
+.brief-body{padding:6px 16px 14px;font-size:13.5px;line-height:1.6;color:var(--ink)}
+.brief-body h1{font-family:'Cinzel',serif;font-size:18px;color:var(--rust-bright);margin:14px 0 4px}
+.brief-body h2{font-family:'Cinzel',serif;font-size:15px;color:var(--rust);margin:20px 0 6px;padding-bottom:4px;border-bottom:1px solid rgba(120,90,40,.3)}
+.brief-body h3{font-family:'Cinzel',serif;font-size:13px;color:var(--rust-bright);margin:14px 0 4px}
+.brief-body p{margin:7px 0}
+.brief-body ul,.brief-body ol{margin:7px 0;padding-left:22px}
+.brief-body li{margin-bottom:5px}
+.brief-body hr{border:none;border-top:1px solid rgba(120,90,40,.3);margin:16px 0}
+.brief-body table{border-collapse:collapse;width:100%;margin:8px 0;font-size:12.5px}
+.brief-body th,.brief-body td{border:1px solid rgba(120,90,40,.35);padding:5px 8px;text-align:left;vertical-align:top}
+.brief-body th{background:rgba(120,90,40,.12);font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft)}
+.brief-body em{font-style:italic}
 </style>
 </head>
 <body>
@@ -95,6 +133,8 @@ footer{margin-top:30px;padding-top:14px;border-top:1px solid rgba(120,90,40,.3);
     </div>
     <div class="status" id="status">Loading…</div>
   </header>
+
+  <div id="meta"></div>
 
   <div class="filterbar" id="seasonbar"></div>
   <div class="filterbar" id="magusbar"></div>
@@ -123,8 +163,10 @@ async function load(){
     $('#status').textContent = 'Load failed'; return;
   }
   $('#subtitle').textContent = DATA.meta.subtitle || '';
+  renderMeta();
+  loadBriefs();
   $('#foot').innerHTML = `As of <b>${esc(DATA.meta.as_of||'')}</b>. Source: ${esc(DATA.meta.source||'the Open Questions prep')}. `
-    + `Legend — <b style="color:var(--green)">Developed</b> ready to stage · <b style="color:var(--gold)">Deferred</b> improvise at the table · <b style="color:var(--rust-bright)">Needs prep</b> flagged but undeveloped · <b style="color:var(--ink-soft)">Played</b> already staged (see the Chronicle).`;
+    + `Legend — <b style="color:var(--green)">Developed</b> ready to stage · <b style="color:var(--gold)">Deferred</b> improvise at the table · <b style="color:var(--rust-bright)">Needs prep</b> flagged but undeveloped · <b style="color:#4a6b8a">Staged</b> briefed but out of reach this session · <b style="color:var(--ink-soft)">Played</b> already staged (see the Chronicle).`;
   renderFilters();
   render();
 }
@@ -179,11 +221,82 @@ function sceneCard(s){
       ${magusTags(s.magi)}
       ${(s.npcs||[]).map(n=>`<span class="tag npc">${esc(n)}</span>`).join('')}
       ${s.thread?`<span class="tag thread">${esc(s.thread)}</span>`:''}
+      ${s.brief_section?`<span class="tag brief-sec" title="Backed by the Carnac GM brief above">📖 ${esc(s.brief_section)}</span>`:''}
     </div>
     <p class="hook">${esc(s.hook)}</p>
-    <p class="detail">${esc(s.detail)}</p>
+    ${detailHtml(s.detail)}
     ${refLinks(s.refs)}
   </div>`;
+}
+
+// ── campaign clock · corrections · source brief (the new meta) ──
+function renderMeta(){
+  const m = DATA.meta; let html = '';
+  const cc = m.campaign_clock;
+  if(cc){
+    html += `<div class="clock">
+      <div class="clock-h">⏳ Campaign clock — ${esc(cc.event||'')}</div>
+      ${cc.detail?`<p>${esc(cc.detail)}</p>`:''}
+      <div class="clock-grid">
+        ${cc.runway?`<div><span class="ck-l">Runway</span>${esc(cc.runway)}</div>`:''}
+        ${cc.player_facing?`<div><span class="ck-l">Player-facing</span>${esc(cc.player_facing)}</div>`:''}
+        ${cc.optional?`<div><span class="ck-l">Optional</span>${esc(cc.optional)}</div>`:''}
+      </div>
+    </div>`;
+  }
+  if(Array.isArray(m.corrections) && m.corrections.length){
+    html += `<details class="metabox"><summary>⚠ Corrections of record <span class="mb-n">(${m.corrections.length})</span></summary>
+      <ul class="corr">${m.corrections.map(c=>`<li>${esc(c)}</li>`).join('')}</ul></details>`;
+  }
+  (m.source_briefs||[]).forEach((b,i)=>{
+    html += `<details class="metabox brief">
+      <summary>📖 ${esc(b.title||b.file)} <span class="mb-n">${b.covers&&b.covers.length?('· covers '+b.covers.join(', ')):''}</span></summary>
+      ${b.scope?`<p class="brief-scope"><em>${esc(b.scope)}</em></p>`:''}
+      <div class="brief-body" data-file="${esc(b.file)}">Loading brief…</div></details>`;
+  });
+  $('#meta').innerHTML = html;
+}
+function loadBriefs(){
+  $$all('.brief-body').forEach(async el=>{
+    try{
+      const md = await (await fetch('./'+el.dataset.file, {cache:'no-store'})).text();
+      el.innerHTML = mdToHtml(md);
+    }catch(e){ el.innerHTML = `<p class="empty" style="padding:12px">Could not load ${esc(el.dataset.file)} — it must be served over http.</p>`; }
+  });
+}
+// Compact Markdown → HTML for the GM brief (headings, bold/italic, lists, tables, hr, paragraphs).
+function mdToHtml(md){
+  const ev = s => String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+  const inline = s => ev(s).replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>').replace(/\*([^*]+)\*/g,'<em>$1</em>');
+  const L = md.replace(/\r/g,'').split('\n'); let out=''; let i=0;
+  const cells = r => r.replace(/^\||\|\s*$/g,'').split('|').map(c=>c.trim());
+  while(i<L.length){
+    const line = L[i];
+    if(/^---+\s*$/.test(line)){ out+='<hr>'; i++; continue; }
+    let h=/^(#{1,6})\s+(.*)$/.exec(line);
+    if(h){ out+=`<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`; i++; continue; }
+    if(/^\|/.test(line) && i+1<L.length && /^\|[\s:|-]+\|?\s*$/.test(L[i+1])){
+      const head=cells(line); i+=2; const body=[];
+      while(i<L.length && /^\|/.test(L[i])){ body.push(cells(L[i])); i++; }
+      out+=`<table><thead><tr>${head.map(c=>`<th>${inline(c)}</th>`).join('')}</tr></thead><tbody>`
+        +body.map(r=>`<tr>${r.map(c=>`<td>${inline(c)}</td>`).join('')}</tr>`).join('')+`</tbody></table>`;
+      continue;
+    }
+    if(/^\s*-\s+/.test(line)){ const it=[]; while(i<L.length && /^\s*-\s+/.test(L[i])){ it.push(L[i].replace(/^\s*-\s+/,'')); i++; }
+      out+=`<ul>${it.map(x=>`<li>${inline(x)}</li>`).join('')}</ul>`; continue; }
+    if(/^\s*\d+\.\s+/.test(line)){ const it=[]; while(i<L.length && /^\s*\d+\.\s+/.test(L[i])){ it.push(L[i].replace(/^\s*\d+\.\s+/,'')); i++; }
+      out+=`<ol>${it.map(x=>`<li>${inline(x)}</li>`).join('')}</ol>`; continue; }
+    if(/^\s*$/.test(line)){ i++; continue; }
+    const para=[line]; i++;
+    while(i<L.length && !/^\s*$/.test(L[i]) && !/^(#{1,6}\s|---+\s*$|\||\s*-\s|\s*\d+\.\s)/.test(L[i])){ para.push(L[i]); i++; }
+    out+=`<p>${inline(para.join(' '))}</p>`;
+  }
+  return out;
+}
+// Scene details now carry \n\n paragraph breaks; render them as paragraphs.
+function detailHtml(text){
+  return String(text||'').split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean)
+    .map(p=>`<p class="detail">${esc(p).replace(/\n/g,'<br>')}</p>`).join('');
 }
 
 function render(){
