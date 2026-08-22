@@ -1025,7 +1025,7 @@
      "xp": 15
     }
    ],
-   "detail": "inventSpell: Spell: Grip of Ice+15",
+   "detail": "inventSpell: Spell: Grip of Ice+15 (season 1 of 2)",
    "covenant": null,
    "source": "foundry"
   },
@@ -1033,17 +1033,12 @@
    "activity": true,
    "deferred": false,
    "act": "inventSpell",
-   "xp": 15,
+   "xp": 0,
    "xpType": "Spell: Grip of Ice",
-   "targets": [
-    {
-     "type": "Spell: Grip of Ice",
-     "xp": 15
-    }
-   ],
-   "detail": "inventSpell: Spell: Grip of Ice+15",
+   "targets": [],
+   "detail": "inventSpell: Spell: Grip of Ice (season 2 of 2; +15 counted in Winter 1222-23)",
    "covenant": null,
-   "source": "foundry"
+   "source": "gm-ruling"
   },
   "Éogan Dobhartha::1223-summer": {
    "activity": true,
@@ -2084,6 +2079,341 @@
    "detail": "exposure: Dead language (Latin)+2",
    "covenant": null,
    "source": "foundry"
+  },
+  "Dagmar::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 23,
+   "xpType": "Corpus",
+   "targets": [
+    {
+     "type": "Corpus",
+     "xp": 23
+    }
+   ],
+   "detail": "reading: Corpus+23",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dagmar::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Tribunal Lore",
+   "targets": [
+    {
+     "type": "Tribunal Lore",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Tribunal Lore+4",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dagmar::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Awareness",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Awareness+5",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dagmar::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 11,
+   "xpType": "Vim",
+   "targets": [
+    {
+     "type": "Vim",
+     "xp": 11
+    }
+   ],
+   "detail": "practice: Vim+11",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dagmar::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Intrigue",
+   "targets": [
+    {
+     "type": "Intrigue",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Intrigue+2",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dustin Page::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Teaching+2",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Éogan Dobhartha::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Bargain",
+   "targets": [
+    {
+     "type": "Bargain",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Bargain+2",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dustin Page::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Teaching+2",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dustin Page::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Charm",
+   "targets": [
+    {
+     "type": "Charm",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Charm+5",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valerian de Castellane::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Profession: Scribe+4",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dustin Page::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "unallocated",
+   "targets": [],
+   "detail": "adventuring: 5 XP, target pending",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Éogan Dobhartha::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Penetration",
+   "targets": [
+    {
+     "type": "Penetration",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Penetration+2",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dustin Page::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Animal Handling",
+   "targets": [
+    {
+     "type": "Animal Handling",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Animal Handling+2",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valerian de Castellane::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Faerie Lore",
+   "targets": [
+    {
+     "type": "Faerie Lore",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Faerie Lore+5",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valerian de Castellane::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Guile",
+   "targets": [
+    {
+     "type": "Guile",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Guile+5",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valdemar Bjornsson::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 14,
+   "xpType": "Dead language (Latin)",
+   "targets": [
+    {
+     "type": "Dead language (Latin)",
+     "xp": 14
+    }
+   ],
+   "detail": "teaching: Dead language (Latin)+14 (taught by Éogan; apt pupil + single-student bonus)",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valdemar Bjornsson::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Ansuz",
+   "targets": [
+    {
+     "type": "Ansuz",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Ansuz+5",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valdemar Bjornsson::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 5,
+   "xpType": "Diedne Lore",
+   "targets": [
+    {
+     "type": "Diedne Lore",
+     "xp": 5
+    }
+   ],
+   "detail": "reading: Diedne Lore+5",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dagmar::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Artes Liberales",
+   "targets": [
+    {
+     "type": "Artes Liberales",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Artes Liberales+2",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valdemar Bjornsson::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Ansuz",
+   "targets": [
+    {
+     "type": "Ansuz",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Ansuz+4",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Dagmar::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Covenant of the North Sea Lore",
+     "xp": 5
+    },
+    {
+     "type": "Code of Hermes",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Covenant of the North Sea Lore+5, Code of Hermes+5",
+   "covenant": null,
+   "source": "gm-ruling"
   }
  }
 }
