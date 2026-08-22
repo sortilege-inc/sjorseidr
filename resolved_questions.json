@@ -339,6 +339,17 @@
       "raised_event": "Post–Spring 1224 seasonal review of proposed_events p047–p054",
       "status": "Resolved",
       "resolution": "Migrated (2026-08-19): 'What are we preparing for next session?' was the GM's rolling scene-planning hub; its live content now lives in next_session_scenes.json as the developed scenes (s1 Wilhelm's assistants/thesis; s5 Éogan's capricorn; s6 the Scarem Montem delivery; s8–s11 the Carnac-regio cluster and the Confluensis reprisal). Its sub-threads were routed to their own items: the Roman-gold/Foxglove beat to c026, the sealed cipher chests to c012, the capricorn to t070, the Jörmungandr/Mímormr reveal to t072, familiars to t037, and the one genuinely open sub-question (folk-magic madness: method vs. inherent) to q028. Archived here as the migration record — no longer tracked as an open question."
+    },
+    {
+      "id": "q032",
+      "type": "Question",
+      "category": "World Detail",
+      "title": "Was Solving the Diedne who planted the Garden?",
+      "context": "CONFLICT IN THE RECORD. The Spring 1224 verified event 'Valdemar harvests the Diedne Garden' states he means to look closer at the ruined Diedne site, 'curious whether the vanished founder SOLVING left anything there unseen.' The next-session prep (s12) instead speaks of a long-dead Diedne planter. These are not the same claim and the difference is large.\n\nIF SOLVING PLANTED IT: Sjórseiðr's own vanished founder was House Diedne. Valdemar is then not the only one, his 'personal draw' to the garden is inheritance rather than coincidence, and Solving's disappearance — and the whole 'finding V' correspondence arc — reads differently. It would also mean the covenant has been holding a Diedne lineage since its founding, which changes what a Confluensis complaint could turn up (t078).\n\nIF NOT: the planter is an unnamed pre-Schism Diedne, Solving's interest was scholarly or opportunistic, and Valdemar's draw stays personal and private.\n\nNeeds a GM ruling before s12 is staged, because the initiation ladder in t082 reads completely differently depending on whose circle he is standing in.\n\nLINKS: t082, t078, s12.",
+      "raised_in": "GM prep (2026-08-21)",
+      "status": "Resolved",
+      "raised_event": "",
+      "resolution": "Resolved (2026-08-22): Solving did NOT plant the garden and is NOT House Diedne. The planter is an unnamed pre-Schism Diedne; Solving's interest (per the Spring 1224 'Valdemar harvests the Diedne Garden' event) was scholarly/opportunistic at most. Valdemar's draw to the garden stays personal and private — not inheritance. The 'IF SOLVING PLANTED IT' branch is closed; s12's 'long-dead planter' framing stands."
     }
   ]
 }

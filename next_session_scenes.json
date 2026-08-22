@@ -37,7 +37,7 @@
    "player_facing": "Dagmar's established method is premonitions plus astrology, so the date is his to discover in character. Aldebaran (a Behenian fixed star) is the anchor the conjunction points at; the Hyades are the classical rainy stars, which matches the covenant's maritime regio grammar.",
    "optional": "Halley's Comet passed in 1222 — usable in retrospect as what woke the lower levels and produced the 1224 mirror-flash."
   },
-  "scene_count": 14,
+  "scene_count": 15,
   "corrections": [
    "2026-08-19 — The Diedne Garden is on the SOUTH COAST OF THE ENGLISH CHANNEL, not within the Ránargarðr holding on the Isle of Man. Earlier s13 text asserting otherwise has been struck.",
    "2026-08-19 — Scarem Montem left the 1223 Tribunal with the Latin manuscript of Wilhelm's thesis and has held it for roughly a year by the time of the delivery. See s6.",
@@ -117,6 +117,29 @@
     "t019",
     "t020",
     "q028"
+   ]
+  },
+  {
+   "id": "s7",
+   "title": "The gold in the hold — Foxglove confronted",
+   "seasons": [
+    "Fall 1224"
+   ],
+   "magi": [
+    "Dagmar"
+   ],
+   "npcs": [
+    "Foxglove"
+   ],
+   "thread": "The dragon errand / Foxglove's theft",
+   "status": "Needs prep",
+   "hook": "STUB: Dagmar (or someone aboard the Tide of Memory) discovers Foxglove's stolen Roman gold and confronts her about it.",
+   "detail": "Stub for next session — flesh out at the table. The five bags Foxglove lifted from Tormente's hoard (c026) come to light aboard ship and get confronted. Peter already caught her lying about it once, so he is the natural one to surface it. Live stakes to remember: Dagmar is sailing back toward Tormente (s8) and depends on the dragon's goodwill, so a robbed hoard could curdle the errand's welcome.",
+   "refs": [
+    "c026",
+    "t066",
+    "t025",
+    "t073"
    ]
   },
   {
