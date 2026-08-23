@@ -10215,6 +10215,137 @@
       "source": "First appears in play 2026-08-08 (the Cruachan delivery of Rody). Hand-authored non-Foundry card; no statblock established at the table.",
       "shortDescription": "A magus of the Cruachan covenant in Hibernia — gave the party the token to bring the Fae within the Aegis, and led Rody's apprentice-oath.",
       "biography": "Tadhg is one of the Hermetic magi of the CRUACHAN covenant (with Gráinne). When the party revealed that the delivered apprentice “Rody” was a Faerie changeling, Tadhg produced a token — a knotted piece of wood — to carry the Fae safely within the covenant's Aegis of the Hearth, and at the welcoming feast he led the boy through a preliminary apprentice's oath (a repeat-after-me, short of the full Oath of Hermes). Cruachan means to use its Fae expertise to confine and question the changeling and recover the real, stolen child (t023, q026)."
+    },
+    "Aurelius": {
+      "name": "Aurelius",
+      "foundryName": null,
+      "charType": "magus",
+      "portrait": null,
+      "house": "",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "qik": 0,
+        "pre": 0,
+        "com": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [],
+      "flaws": [],
+      "abilities": [],
+      "spells": [],
+      "personalityTraits": [
+        "Imposing but warm",
+        "Gracious host",
+        "Senior and authoritative"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": null,
+      "mightRealm": "",
+      "form": "",
+      "soak": 0,
+      "combat": [],
+      "powers": [],
+      "vis": "",
+      "appearance": "A huge man — six foot four and broad-shouldered — with a heavy dark beard and a shaven head. His face reads as ferocious, almost angry, until it breaks into a broad, welcoming smile.",
+      "source": "Established in play at Scarem Montem (2026-08-22 session). PROVISIONAL — from proposed event p081, pending verification. Hand-authored non-Foundry card; house and stats undetermined.",
+      "shortDescription": "A senior magus of Scarem Montem — imposing but warm — who received Wilhelm and returned the covenant's raided property.",
+      "biography": "Aurelius is a magus of Scarem Montem who welcomed Wilhelm Stienauer when he sailed the raided Hound of Cassel back to them in Summer 1224. Physically imposing and stern-faced, he proved a gracious host — greeting Wilhelm as 'brother,' accepting the return of the magical chests taken in the raid, feeding and drinking his party, and conceding (after sending another magus to check the ship's enchantment) that Wilhelm's grasp of Tribunal law was 'surprisingly thorough for a magus of Durenmar.' Alongside Fettelmid he only belatedly realized Wilhelm's covenant was the one that had beaten Scarem Montem at the 1223 tournament. He and Fettelmid returned the Latin manuscript of Wilhelm's folk-magic thesis, praising it but claiming they needed to 'confirm their own data' before sharing notes — a pretext Wilhelm's Magic Theory read flagged as a lie (see proposed event p081, and c029). His House is not yet known."
     }
   }
 }

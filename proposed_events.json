@@ -327,5 +327,195 @@
   "source": "Seasonal activities, 2026-08-08 session.",
   "notes": "Declared seasonal plan; not yet played.",
   "body_text": "Declared: Dustin continues with the Terram summa and takes Aquam instruction from Éogan."
+ },
+ {
+  "file": "",
+  "session": "2026-08-22",
+  "status": "Proposed",
+  "source": "Transcript, 2026-08-22 session (Ars Magica).",
+  "id": "p078",
+  "sort_iso": "1224-04-15T12:00",
+  "scene": "Spring 1224 — Isle of Man",
+  "title": "The covenant's Isle-of-Man base revealed: Ránargarðr, Nóatún, and Undrahöll",
+  "icon": "⚓",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Valdemar",
+   "Éogan",
+   "Dustin",
+   "Wilhelm",
+   "Dagmar"
+  ],
+  "activity_type": "Travel",
+  "notes": "Isle-of-Man buildout + the Winter 1221-22 covenant vote narrated to set up the Spring 1224 arrival. Owner-confirmed: the ~40£ structure cost is PART OF the 100£ total in holdings.json (structure + tools), not a contradiction; the site carries a MAGIC aura of 3 as recorded, but its source has not yet been described in play (U1 open on source only). Site = Laxey, east coast.",
+  "body_text": "Backstory set at the table: over Winters 1221–22 Valdemar tired of the covenant wintering expensively in Bruges and pitched an anchorage of the covenant's own. In Summer 1222 he surveyed the Isle of Man — largely ill-ruled, Norse-claimed — and chose a harbour site he named **Ránargarðr**.\nValdemar brought a formal proposal (Winter 1221–22): seek the local Norse lord's permission rather than run a pirate's cove; ~50 Mythic pounds to start (of a ~130£ full estimate — 5£ quarters per magus, 1£ per grog family, plus construction).\nThe magi debated: Dagmar wary of tying resources to a stationary site (the covenant is deliberately mobile) unless it sits on a strong aura; Éogan for it if it pays its way; all agreed it must generate income, not be a financial sink.\nPeripheral-Code note raised in play: magi may not swear fealty or serve as court wizards, but may hold a landed site; the Isle of Man is a jurisdictional grey zone — not the Normandy Tribunal, not clearly any Tribunal (a feature Valdemar sought).\nBy Spring 1224 the base is built out (not fully finished): a Norse-style settlement of longhouses and local stone at **Laxey** (east coast), on a Magic-aura site (GM: 'R3'), with a slipway to haul ships, fields sown, and grog families settled.\nThe great hall **Nóatún** ('place of ships') is where the coven winters. Above it on a promontory rises Valdemar's laboratory-hall **Undrahöll** — a single ~4,500 sq ft longhouse that dwarfs Nóatún, seaside-facing for the idyllic-surroundings benefit, with the working lab walled off in a chamber for Safety.\nFunding: Valdemar has committed to piracy to help pay for it. The lab structure runs ~40£; the expensive tool/equipment upgrades drive the total far higher, while Safety is held at 0 by design."
+ },
+ {
+  "file": "",
+  "session": "2026-08-22",
+  "status": "Proposed",
+  "source": "Transcript, 2026-08-22 session (Ars Magica).",
+  "id": "p079",
+  "sort_iso": "1224-04-16T12:00",
+  "scene": "Spring 1224 — Isle of Man",
+  "title": "Rembrandt DeWeese made custos; Wilhelm's grain-dish installed",
+  "icon": "🌾",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Éogan",
+   "Wilhelm",
+   "Dustin"
+  ],
+  "activity_type": "Adventure",
+  "notes": "Which associate installs the dish (Isaac vs Carl) left open at the table. The dish is on loan, not gifted.",
+  "body_text": "The base needs a mundane custos/majordomo. **Rembrandt DeWeese** — formerly captain of the Brineborn under Éogan, and before that a soldier/bodyguard and merchant-in-training aboard the Tide of Memory under Solving — is promoted to run Ránargarðr; his first mate steps up to captain the Brineborn.\nWilhelm's associate (Isaac or Carl) offers to install Wilhelm's magical grain dish — a Dish of Plenty holding a vast store of grain but pourable only slowly (~2 pawns to invoke) — in a storehouse to help feed the community.\nLegal caveat noted in play: the conjured grain can't be sold, only lived on. Left here on loan for a season or more, as a favour."
+ },
+ {
+  "file": "",
+  "session": "2026-08-22",
+  "status": "Proposed",
+  "source": "Transcript, 2026-08-22 session (Ars Magica).",
+  "id": "p080",
+  "sort_iso": "1224-04-18T12:00",
+  "scene": "Spring 1224 — Isle of Man",
+  "title": "Wilhelm invited to formalize covenant membership",
+  "icon": "🤝",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Dustin",
+   "Éogan",
+   "Wilhelm"
+  ],
+  "activity_type": "Adventure",
+  "notes": "",
+  "body_text": "With seven magi official plus Wilhelm (Solving absent, Kor on hiatus), Dustin offers Wilhelm — a fellow ex Bonisagus — full membership, explicitly on his merits and not for his grain dish.\nWilhelm gives a tentative yes: the Isle of Man is a fine research base (Ireland's and England's natural traditions), but his commitment depends on where his research leads. He'll keep the dish here on loan regardless."
+ },
+ {
+  "file": "",
+  "session": "2026-08-22",
+  "status": "Proposed",
+  "source": "Transcript, 2026-08-22 session (Ars Magica).",
+  "id": "p081",
+  "sort_iso": "1224-07-15T12:00",
+  "scene": "Summer 1224 — Scarem Montem",
+  "title": "Wilhelm returns the Hound of Cassel and recovers his thesis — and catches them in a lie",
+  "icon": "📜",
+  "timeline": "☀️ Summer 1224",
+  "date": "Summer 1224",
+  "cast": [
+   "Wilhelm"
+  ],
+  "activity_type": "Travel",
+  "notes": "The s6 / c029 beat landing. On verify, reconcile with c029 (their year-long possession + villein deployment): the lie is consistent, but the villein-deployment was NOT surfaced in play. Chests returned; ship kept (enchanted). New NPC: Aurelius of Scarem Montem.",
+  "body_text": "Wilhelm sails the Hound of Cassel south to Scarem Montem to return their property and ask after his loaned thesis. He keeps a month-long enchantment on the hull; a Code/Law read suggests the enchantment makes the ship magical property that can't be re-seized, so he keeps the ship and returns only the still-sealed magical chests.\nHe is welcomed warmly by **Aurelius** (a huge, bearded, shaven-headed magus) and **Fettelmid**, who realize only belatedly that Wilhelm's covenant is the one that won the tournament (they'd left early). Fettelmid hands back the Latin manuscript of Wilhelm's folk-magic thesis.\nThey praise the work and promise to vouch for it publicly on publication — but claim they must 'confirm their own data' before sharing their notes, since partial information could be worse than none.\nWilhelm's Magic Theory roll (16) to parse what they could possibly mean comes up **dry** — he concludes they are almost certainly lying, as a pretext for something else. He lets it go, satisfied to have his book back.\nHe plans to return to Cologne to finish his Integration (Artes Liberales + ritual casting, so folk casters no longer halve or blow themselves up) and publish by year's end, then winter on the Isle of Man."
+ },
+ {
+  "file": "",
+  "session": "2026-08-22",
+  "status": "Proposed",
+  "source": "Transcript, 2026-08-22 session (Ars Magica).",
+  "id": "p082",
+  "sort_iso": "1224-10-01T12:00",
+  "scene": "Fall 1224 — aboard the Tide of Memory",
+  "title": "Foxglove's stolen dragon-gold discovered; the London recovery detour",
+  "icon": "🪙",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Dagmar",
+   "Valdemar",
+   "Foxglove",
+   "Peter"
+  ],
+  "activity_type": "Adventure",
+  "notes": "Fills the gap between transcript files 1 and 2 (owner-provided). Dagmar's mind-read implicated Peter as well as Foxglove (owner-confirmed). The s7 / c026 beat; Fall 1224 confirmed.",
+  "body_text": "En route to Tormente aboard the Tide of Memory, **Peter** — re-planking the deck — finds the full stash of Roman dragon-gold Foxglove smuggled out of the Carnac cave.\nThey argue; Foxglove lies that **Dagmar** had told her to take and hide it. Dagmar arrives and reads their minds — seeing the truth: Foxglove took the gold, and Peter had reached for it too.\nThree coins are already gone — the ones Foxglove sold to a London fence. Dagmar uses the coins still in hand to work a sympathetic / Arcane-Connection trace on the three that were sold, and the party detours to **London** — a Foxglove-and-Peter side adventure — to recover them.\nValdemar is told only that they'd 'misplaced something and must return it.' Foxglove survives (genuinely in doubt at the table; a replacement grog, Garrett Coffin, was on standby)."
+ },
+ {
+  "file": "",
+  "session": "2026-08-22",
+  "status": "Proposed",
+  "source": "Transcript, 2026-08-22 session (Ars Magica).",
+  "id": "p083",
+  "sort_iso": "1224-10-05T12:00",
+  "scene": "Fall 1224 — the Carnac regio (Tormente)",
+  "title": "Return to Tormente: errand accepted, the coin dismissed as 'debris'",
+  "icon": "🐉",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Dagmar",
+   "Valdemar",
+   "Llewellyn"
+  ],
+  "activity_type": "Adventure",
+  "notes": "s8 played. RESOLVES U6 (does Tormente permit mundane traffic / is Foxglove marked): it does not care about the coin; all are free to come and go. New open thread: Dagmar owes Tormente a coin-brokerage errand.",
+  "body_text": "Dagmar, Valdemar and Llewellyn (with grogs Angus, Peter, Foxglove and Garrett) row back to Tormente. Dagmar pings it with Words of the Unbroken Silence; the dragon — now less serpentine, with proper legs — says it has 'felt the release' of its kin (Mímormr).\nDagmar reports the errand done and offers back the 'removed treasure.' Tormente dismisses the Roman coin as mere **'debris,' not treasure**, has no use for it, and asks Dagmar to **broker its sale** on the dragon's behalf.\nTormente states its only role is to keep 'the king' inside; visitors are free to come and go and conduct their business. It compresses aside and lets them pass into the regio (Magic aura 7)."
+ },
+ {
+  "file": "",
+  "session": "2026-08-22",
+  "status": "Proposed",
+  "source": "Transcript, 2026-08-22 session (Ars Magica).",
+  "id": "p084",
+  "sort_iso": "1224-10-06T12:00",
+  "scene": "Fall 1224 — Carnac regio, Level 1",
+  "title": "Carnac Level 1: the tidal sauna-cave",
+  "icon": "🌊",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Dagmar",
+   "Valdemar",
+   "Llewellyn"
+  ],
+  "activity_type": "Exploration",
+  "notes": "s9 played. Confirms the brief's aura-7 tidal-cave design; entry timed to the tide.",
+  "body_text": "Past Tormente, the party enters Level 1 (Magic aura 7): a smooth-walled cavern with an unnaturally placid, steaming hot pool — sauna-like and muggy, the water hot enough to burn on exposure. Torchlight plus Dagmar's Eyes of the Eagle and Clear Sight of the Naiad reveal it.\nThe way deeper is a threshold **under** the water. Having entered near high tide (so as not to be locked in), they wait for low tide rather than swim the scalding passage, then take the boats through the revealed arches into the next layer.\nThe grogs feel an uncanny hum 'past hearing' that sets their teeth on edge — the aura making itself felt."
+ },
+ {
+  "file": "",
+  "session": "2026-08-22",
+  "status": "Proposed",
+  "source": "Transcript, 2026-08-22 session (Ars Magica).",
+  "id": "p085",
+  "sort_iso": "1224-10-07T12:00",
+  "scene": "Fall 1224 — Carnac regio, Level 2",
+  "title": "Carnac Level 2: the seven-planet conjunction lock, solved",
+  "icon": "🪐",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Dagmar",
+   "Valdemar",
+   "Llewellyn"
+  ],
+  "activity_type": "Exploration",
+  "notes": "s15 played, and it matches the GM answer-key exactly (Jupiter merges into Saturn, Chaldean order, sighted from the door). Llewellyn's crystal reports the temporal scramble settling as it solves — feeds the depth-not-realm reading of U4.",
+  "body_text": "The second layer is constructed — huge rough-hewn slab stones laid as steps and walls, dry above the tideline — with seven freestanding cylindrical pillars, each etched (by a much later hand, on far older stone) with an alchemical planet symbol: Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon. They slide frictionlessly.\nA door opposite is a magical lock; moving any pillar produces a 'temporal adjustment' Llewellyn's time-crystal registers. The door bears a central planet motif with a pin-prick hole — the Earth/vantage — and there is no Earth marker on the floor.\nThe party reads it as a **conjunction**. Llewellyn 'warmer/cooler' nudges **Saturn** into the door's sightline; then, moving **Jupiter**, it MERGES into Saturn — two stones occupying one space.\nDagmar (Artes Liberales) recalls the **Chaldean order** — Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon — and has the grogs push each into line one at a time. Only Jupiter+Saturn merge; the rest line up. As the Moon locks in, a faint light runs from the door to the Moon, illumination rims the pillars, and the two interlocked door-halves crack open.\nBeyond: humidity, greenery, marsh-smell and animal sounds — a new threshold."
+ },
+ {
+  "file": "",
+  "session": "2026-08-22",
+  "status": "Proposed",
+  "source": "Transcript, 2026-08-22 session (Ars Magica).",
+  "id": "p086",
+  "sort_iso": "1224-10-08T12:00",
+  "scene": "Fall 1224 — Carnac regio, Level 3",
+  "title": "Carnac Level 3: the frog-folk ambush (cliffhanger)",
+  "icon": "🐸",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Dagmar",
+   "Valdemar",
+   "Llewellyn"
+  ],
+  "activity_type": "Exploration",
+  "notes": "s16 reached (cliffhanger). The murfolk (frog-folk) confirmed as the Level-3 colony. Session ended here; next session opens on the ambush.",
+  "body_text": "Crossing into Level 3: a bioluminescent marsh — fungi above and below the water, paths that dip between deep pools, and **underwater 'homesteads'** framed in light, with figures moving in the depths.\nAn arrow lands at Garrett's feet; a dart strikes Dagmar's neck and drops him into a hallucinatory (not unconscious) state. As he goes under he locks eyes with the shooter — not a merman like Ka'wa'ill but a grotesque, intelligent **frog-fish person** (the murfolk).\nAmbush sprung; the scene is paused here — next session opens on dealing with it."
  }
 ]
