@@ -37,7 +37,7 @@
    "player_facing": "Dagmar's established method is premonitions plus astrology, so the date is his to discover in character. Aldebaran (a Behenian fixed star) is the anchor the conjunction points at; the Hyades are the classical rainy stars, which matches the covenant's maritime regio grammar.",
    "optional": "Halley's Comet passed in 1222 — usable in retrospect as what woke the lower levels and produced the 1224 mirror-flash."
   },
-  "scene_count": 15,
+  "scene_count": 10,
   "corrections": [
    "2026-08-19 — The Diedne Garden is on the SOUTH COAST OF THE ENGLISH CHANNEL, not within the Ránargarðr holding on the Isle of Man. Earlier s13 text asserting otherwise has been struck.",
    "2026-08-19 — Scarem Montem left the 1223 Tribunal with the Latin manuscript of Wilhelm's thesis and has held it for roughly a year by the time of the delivery. See s6.",
@@ -89,111 +89,6 @@
     "t037",
     "t025"
    ]
-  },
-  {
-   "id": "s6",
-   "title": "Wilhelm sails to Scarem Montem — and they have had the thesis for a year",
-   "seasons": [
-    "Summer 1224"
-   ],
-   "magi": [
-    "Wilhelm"
-   ],
-   "npcs": [
-    "Fettelmid of Scarem Montem",
-    "Bridget of Scarem Montem",
-    "Juliana ex Bonisagus",
-    "Hilda"
-   ],
-   "thread": "Folk-magic integration / the ship-for-book swap",
-   "status": "Developed",
-   "hook": "The ship-for-book swap is in motion: the Hound of Cassel is under Wilhelm's control and headed south, and what he owes them is the folk-magic thesis. He does not know that Scarem Montem left the 1223 Tribunal with the Latin manuscript in their baggage and has been running it in the field ever since.",
-   "detail": "SET UP (Summer 1224): Wilhelm has the Hound of Cassel and found three sealed chests aboard (held from the Scarem Montem raid; unopened, boat warded with a 1-month ward against scrying for the run south).\n\n═══ THE HIDDEN SITUATION ═══\nAT THE 1223 TRIBUNAL, Hilda gave FETTELMID of Scarem Montem the LATIN copy for a 'cursory appraisal by end of Friday.' Hilda only ever planned to swing by the tent and assess whether extended review was warranted. Scarem Montem left Montverte with the manuscript and nobody chased it. By the delivery they have held it for roughly a YEAR.\n\nWHAT THE YEAR BOUGHT THEM: replication over Fall 1223; first field deployment by Winter/Spring 1224; casualties on the ground before Wilhelm ever sails. Critically, a year is more than enough to have found the madness rate THEMSELVES — as Carl and Isaac did (s1) — and they continued anyway. That is the moral gap between them and Wilhelm, and the thing he will not forgive.\n\nTHE TARGET: they are deploying it against VILLEINS IN TERRITORIES CONTROLLED BY MONTVERTE — their own liege. Not cruelty for its own sake: Bridget of Scarem Montem pitched Éogan on the Lotharingian Tribunal, and destabilising Montverte's mundane base weakens their liege ahead of the Grand Tribunal petition. Run it as a GIFT, not an experiment — the technique offered to selected villeins as folk wisdom, in villages they want turned. The madness is the point and it is deniable, because it looks like the countryside going strange on Montverte's watch. Nobody is told they are a trial.\n\nWHY THEY STILL WANT THE HANDOVER: a formal delivery LAUNDERS THE POSSESSION. It makes Wilhelm the author of record and the transmission consensual and witnessed. Any later quaesitorial inquiry then finds a Hermetic magus who gave it to them freely, in payment of a debt. The swap is not a purchase — it is a signature, and they want him to sign.\n\nWILHELM'S COUNTER-WEAPON: teaching the ungifted is his exposure; it is also THEIRS, at scale, with intent, against mundanes. He holds a real charge. That should occur to him roughly ten seconds after the horror does.\n\nWHERE TO PUT THE REVEAL: not at Scarem Montem. Have Wilhelm's assistants — already out west and south gathering citations (s1) — come back having found the TECHNIQUE ALREADY IN USE in a village that should not have it, with the same failure rate. He recognises his own method in the field before he ever reaches the door, and turns the delivery into a confrontation he chooses to walk into.\n\nTHE LOOSE VERIFIER: JULIANA ex Bonisagus at Dragon's Rest holds the Low German copy and expects to swap for the Latin post-Tribunal. She has no idea it has been in the field for a year. A Bonisagus, at a covenant Montverte is trying to poach, who can blow this open with no PC involvement at all.\n\nTHE CHESTS, NOW SHARPER: the three sealed chests are intercepted Bishopric-of-Liège ↔ Scarem Montem cipher letters exposing a Church/State suborning (ring-based crypto PROVES the correspondents but mostly does not yield content). So Wilhelm sails into the covenant that has been quietly poisoning Montverte's villages while carrying that covenant's own incriminating mail. Two separate proofs, and no clear idea which one they would kill for. Return it, keep it, or weaponise it in the swap?",
-   "refs": [
-    "t002",
-    "t009",
-    "c012",
-    "t028",
-    "t019",
-    "t020",
-    "q028"
-   ]
-  },
-  {
-   "id": "s7",
-   "title": "The gold in the hold — Foxglove confronted",
-   "seasons": [
-    "Fall 1224"
-   ],
-   "magi": [
-    "Dagmar"
-   ],
-   "npcs": [
-    "Foxglove"
-   ],
-   "thread": "The dragon errand / Foxglove's theft",
-   "status": "Needs prep",
-   "hook": "STUB: Dagmar (or someone aboard the Tide of Memory) discovers Foxglove's stolen Roman gold and confronts her about it.",
-   "detail": "Stub for next session — flesh out at the table. The five bags Foxglove lifted from Tormente's hoard (c026) come to light aboard ship and get confronted. Peter already caught her lying about it once, so he is the natural one to surface it. Live stakes to remember: Dagmar is sailing back toward Tormente (s8) and depends on the dragon's goodwill, so a robbed hoard could curdle the errand's welcome.",
-   "refs": [
-    "c026",
-    "t066",
-    "t025",
-    "t073"
-   ]
-  },
-  {
-   "id": "s8",
-   "title": "Return to Tormente — with Mímormr's token",
-   "seasons": [
-    "Fall 1224"
-   ],
-   "magi": [
-    "Dagmar",
-    "Valdemar"
-   ],
-   "npcs": [
-    "Tormente",
-    "Mímormr",
-    "Llewellyn"
-   ],
-   "thread": "The dragon errand / the Carnac regio",
-   "status": "Developed",
-   "hook": "Dagmar carries Mímormr's token back to Tormente, expecting passage into the Carnac regio. Tormente will almost certainly grant it — cheerfully, with useful advice about the tide and the stones. The problem is what the grant means: Tormente is not stationed at the mouth to control what goes IN.",
-   "detail": "Tormente framed itself as 'estranged kin' and used Dagmar to break Mímormr's binding. Play it as a POST, not a monster — Might 40, holding a station for centuries with no relief and no orders, possibly no longer reporting to anyone. It will name the stones, warn about the cold, and say nothing useful about coming back out, because that is not the brief. The brief is that nothing else comes out.\n\nMECHANICAL ANCHOR: Tormente is a preternatural tether of 4 (Might 40 ÷ 10) on LEVEL 1 ONLY. It contributes nothing to levels 2–5, which are held up by the monument. This produces the lever the players will eventually find — killing it cools level 1 from aura 7 toward 3, making the cave safe to garrison, while doing nothing whatsoever to the deep levels and removing the only thing keeping the contents in. The trade is exact and legible.\n\nINFERENCE TO OFFER THE PLAYERS: a Might 40 guardian implies the thing being contained outranks it. They can estimate what is upstairs by looking at what is parked downstairs, and the estimate should frighten them. The mirror-flash being undetectable at range is not the regio being coy — that is containment working.\n\nLIVE FROM PLAY: Mímormr's release now reads as a containment breach performed by the party on the guardian's own instructions. And Foxglove's unsanctioned theft of five bags of Roman gold (c026) becomes a much sharper question — he took something OUT. Either Tormente permits mundane traffic, or Foxglove is now marked by whatever standard it applies. Decide before the table asks.",
-   "refs": [
-    "t073",
-    "t072",
-    "c027",
-    "c026",
-    "t025"
-   ],
-   "brief_section": "§5 — Level 1 / Tormente"
-  },
-  {
-   "id": "s9",
-   "title": "Level 1 — the tidal cave, and Llewellyn's gambit",
-   "seasons": [
-    "Fall 1224"
-   ],
-   "magi": [
-    "Dagmar",
-    "Valdemar"
-   ],
-   "npcs": [
-    "Llewellyn",
-    "Tormente"
-   ],
-   "thread": "The Carnac regio / regio exploration",
-   "status": "Developed",
-   "hook": "Passage granted, the party rows into the sea-cave at the drowned end of the alignments. Aura 7, Magic, Aquam-aligned. The tide is the guardian: in on the ebb, out on the flood, or not at all.",
-   "detail": "THE CLOCK. No creature needed at the door — the mouth only opens at a specific state of the tide and the cave floods. This does three jobs: a guardian that cannot be fought, a hard clock on every session, and a daily rehearsal of the same logic that locks level 5 to March 1226. The regio teaches its own grammar on the ground floor.\n\nTHE REVEAL. The alignments continue underwater, standing whole. Whatever Carnac is, it was laid out when the water was somewhere else.\n\nWARPING — the load-bearing rule. Aura 7 warps by exposure: always-within = 1/year, half-time = 1/2 years, frequent visits (~¼) = NONE. Expeditions don't warp; garrisons do. Raiding costs nothing, which is exactly why nobody notices it is dangerous. It costs the moment they moor a boat, post a tide-watch, or station someone to hold the entry open — so every sensible operational decision is the one that hurts them. AND: characters with supernatural powers of the same realm as the aura — Hermetic magi in a Magic aura — do not warp from it at all. Dagmar and Llewellyn can stand there for years and feel nothing. Angus, Foxglove and Peter (the three grogs from the Spring 1224 rowboat) cannot. The magi cannot perceive the harm they are doing to their own people.\n\nWHAT IT LOOKS LIKE (Water/Aquam-tethered aura): Sensitive Sight, a Weakness for natural bodies of water, Disfigured — webbing between the digits, skin that cracks unless kept wet; Great Immunity: Drowning as the sweetener. At high Warping, moving by flowing. And from the aligned-aura rules: inhabitants eventually find it very hard to leave.\n\nMID-CAMPAIGN BEAT TO PLANT NOW: the first time a grog who has been changing tries to leave and Tormente does not move aside, because by whatever standard it applies he has stopped counting as something that came in.\n\n⚠ INTEGRATION CONFLICT — RESOLVE BEFORE THE 22nd. Llewellyn's gambit ('catch the tide going out' — unwind the Zeno working where time runs irregular) and Paulus ex Merinita's commissioned ward are both built for FAERIE regiones. The brief makes Carnac Magic-aligned, and Magic auras do not fluctuate. Three ways out: (a) the irregular flow is a property of depth rather than realm, and levels 3–5 run on tempora — which also feeds Llewellyn's heresy; (b) Paulus's ward simply fails to trigger, which is a cheap and painful lesson in what he actually sold; (c) move the gambit to a genuinely faerie site and let Carnac disappoint him. Option (a) is the most generative and costs nothing.",
-   "refs": [
-    "t018",
-    "t025",
-    "t073"
-   ],
-   "brief_section": "§5 — Level 1 / warping / the tide"
   },
   {
    "id": "s10",
@@ -272,29 +167,6 @@
    ]
   },
   {
-   "id": "s13",
-   "title": "Raising Nóatún — the covenant's Isle-of-Man manor, hall, and Valdemar's laboratory",
-   "seasons": [
-    "Summer 1224",
-    "Fall 1224"
-   ],
-   "magi": [
-    "Valdemar"
-   ],
-   "npcs": [
-    "Rán"
-   ],
-   "thread": "The Isle-of-Man base / Valdemar's lab",
-   "status": "Developed",
-   "hook": "Valdemar builds out the covenant's Isle-of-Man harbour holding — Ránargarðr (“Rán's Garden”) — raising the main hall Nóatún, where the coven Winters, and his own Undrahöll (“Hall of Wonders”), whose ratified laboratory he means to work through the cold months, funded by the summer and fall raiding and trading.",
-   "detail": "The lab is speced and ratified (full player notes + rulings live in t079's dossier): a modified Viking longhouse — Size 13 / Refinement 0 / Safety 0 / General Quality +1 / Aesthetics +11 — 100£ to raise (Superior Construction doubling the bill), Upkeep 4 (~5£/yr at Valdemar's Winter-only use), with living quarters for him and Rán kept separate from the lab for Safety. ═══ THE AURA — RESOLVED ═══\nThe site Valdemar selected on the Isle of Man carries a MAGIC AURA OF 3. This makes Undrahöll's laboratory viable (aura 3 to the Lab Total) and — deliberately — sits BELOW the Warping threshold of 6, so the grog families, the bailiff, the settlers and the winter Althing can all live there safely. Contrast this with Carnac's level 1 at aura 7 (s9), which cannot be garrisoned without changing the people who hold it: one holding that is safe to populate, one that quietly is not.\nCONSEQUENCE FOR DAGMAR: an existing Magic aura is the precondition for STRATIFYING THE SUBTLE REALITIES (CrVi General, T: Boundary, Ritual) — the aura-strengthening ritual whose failure mode is stratification into a regio. Ránargarðr is now the only viable target the covenant owns, which puts Dagmar's regio ambitions and Valdemar's home on the same ground. Note the trap: if the ritual SUCCEEDS in pushing the aura past 6, Dagmar has made Valdemar's town uninhabitable as a favour.\nSOURCE OF THE AURA — still open. Manx folklore is overwhelmingly Faerie-coded (Manannán's mist-cloak, the Little Fellas) and Rán is already resident and already the edge Confluensis intends to name (c022). For a MAGIC aura, reach for something Norse and buried rather than Manx and storied — a ship burial or howe, the dead and their vessel under the turf. It gives Valdemar a reason the site is his rather than merely purchased, it sits in the same idiom as the covenant's sea-serpent skeleton, and unlike a resident fae it is a tether nobody can accuse him of consorting with.\n\nTO RESOLVE IN PLAY: the raiding/trading that funds the 100£ build and its upkeep; Valdemar's final laboratory specialization picks (runes vs Techniques/Forms, per the ruling that viktir work as spells); and which season(s) the construction consumes. Once this beat is played, its outcomes merge back into the t079 dossier.",
-   "refs": [
-    "t079",
-    "t080",
-    "c022"
-   ]
-  },
-  {
    "id": "s14",
    "title": "Valdemar bargains for the land — and the Christian lie",
    "seasons": [
@@ -316,32 +188,6 @@
     "t079",
     "t078"
    ]
-  },
-  {
-   "id": "s15",
-   "title": "Level 2 — the alignments, and the sightline you set from the murfolk's doorstep",
-   "seasons": [
-    "Fall 1224",
-    "Winter 1224"
-   ],
-   "magi": [
-    "Dagmar",
-    "Valdemar",
-    "Llewellyn"
-   ],
-   "npcs": [
-    "Llewellyn"
-   ],
-   "thread": "The Carnac regio / the lock",
-   "status": "Developed",
-   "hook": "Aura 8. The puzzle room. Stones continuing under the water, standing whole — the apparatus that opens level 5, operated from here but acting five floors up.",
-   "detail": "THE MECHANISM. Megalithic alignments work by foresight and backsight: a near stone and a far stone that merge from exactly one standing place. Seven pillars for the seven planets, with Aldebaran as the fixed anchor they are measured against, arranged so that VIEWED FROM THE ENTRANCE TO LEVEL 3 they reproduce the March 1226 conjunction. Pillars do not share a socket — they sit at different DISTANCES, so distance encodes the 2.1-arcminute separation.\n\nWHY THIS IS THE RIGHT DESIGN:\n• The vantage point is the murfolk's front door. The apparatus cannot be surveyed or verified from anywhere else. You cannot work on it without standing on their threshold, repeatedly, for as long as it takes.\n• Parallax makes it a species question. The alignment is only true at one eye height. A configuration set correctly by murfolk reckoning is subtly wrong for a standing human — so whoever the stones were set for is recoverable from the geometry, and it is not the murfolk.\n• It forces split parties and shouted corrections: one caller at the door, others moving pillars blind out among the stones, nobody able to see whether they have helped.\n• It matches the covenant's own gateway signature. Two stones becoming one stone is exactly the idiom of Orkney's false second sun and the 1224 mirror-flash. The archive has been describing this mechanism for six years without knowing it.\n\nTHERE IS NO SABOTEUR. Nobody has ever solved this. The apparatus has stood mis-set since it was raised — not hidden, just never read, because no one who could read the sky has ever stood in that doorway. The murfolk's ignorance is the only thing that has ever kept the door shut.\n\nTHE COMPLICATION. The murfolk have looked at this arrangement every day for forty generations. It is their skyline. They will notice a moved stone before the party finishes moving it, and they will have opinions about which arrangement is correct. So at this stage they may not be an obstacle — they may be EAGER. They have been waiting for someone who could read the sky, and the magi are visibly qualified.\n\nDRESSING:\n• First yellow. Not a sign, not a symbol — a vestige (RoP:M): a tattered awning over nothing, a figure at the edge of the stones in a colour that should not survive underwater. Nobody should be able to say afterward whether they saw it.\n• The offerings — a path of them, small, salt-crusted, made by hands, all facing up. This tells the players there is a congregation before they meet it.\n• Optional, the counting. Carnac folklore holds the stones cannot be counted twice the same. Use as a lock (get the number right to ascend), a census (the number has been dropping for a thousand years and nobody works out what is being counted until level 4), or a tempus (the stones are being raised on loop by people who cannot see you).",
-   "refs": [
-    "t025",
-    "t018",
-    "q027"
-   ],
-   "brief_section": "§6 — Level 2"
   },
   {
    "id": "s16",
@@ -407,6 +253,30 @@
     "t025"
    ],
    "brief_section": "§9–§10 — Level 5, the three theories"
+  },
+  {
+   "id": "s19",
+   "title": "London — brokering the dragon's gold",
+   "seasons": [
+    "Fall 1224",
+    "Winter 1224-25"
+   ],
+   "magi": [
+    "Dagmar"
+   ],
+   "npcs": [
+    "Foxglove"
+   ],
+   "thread": "The dragon errand / Tormente's gold",
+   "status": "Needs prep",
+   "hook": "Tormente handed Dagmar a brokerage errand — sell the Roman 'debris' gold on the dragon's behalf. London, the nearest gold market, is where it has to be converted, and the covenant already has form there.",
+   "detail": "STUB for next session. The recovered Roman dragon-gold is now Tormente's, and Dagmar owes it a sale. The problem is the one c026 already mapped: a silver-standard economy with no gold coinage, treasure-trove law, and provenance questions — melt to bullion, use a discreet fence / Jewish moneylender / Lombard banker, or commission worked goods. Foxglove knows the London fence from the earlier run (verified events). Live beats: how much of the coin to convert and how (melt vs sell-as-is), what Dagmar reports back to Tormente, and whether the covenant's own Flanders/Bruges bullion channels are now open since the theft is resolved.",
+   "refs": [
+    "c026",
+    "t066",
+    "t073",
+    "c027"
+   ]
   }
  ]
 }
