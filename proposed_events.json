@@ -81,7 +81,7 @@
   "sort_iso": "1224-07-15T12:00",
   "session": "2026-08-08",
   "scene": "Summer 1224 — the Isle of Man",
-  "title": "Valdemar builds the base and copies Legends of Brittany",
+  "title": "Valdemar copies Legends of Brittany with the assistance of Valerian",
   "icon": "⚖️",
   "timeline": "☀️ Summer 1224",
   "date": "Summer 1224",
@@ -92,8 +92,8 @@
   "activity_type": "Trade",
   "status": "Proposed",
   "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-  "body_text": "Valdemar builds up the Isle of Man as the covenant's base — raiding lightly, trading mostly — and, with Valerian's help, makes a surreptitious copy of Legends of Brittany to keep, exploiting cross-tribunal copy-law so the original can be returned while the covenant keeps the copy (see t076)."
+  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed. · Retitled and rescoped to the book-copying (owner review 2026-08-23); the base-buildout is covered by the Isle-of-Man establishment events.",
+  "body_text": "With Valerian's help, Valdemar makes a surreptitious copy of Legends of Brittany to keep — exploiting cross-tribunal copy-law so the original can be returned while the covenant keeps the copy (see t076)."
  },
  {
   "id": "p072",
@@ -208,27 +208,6 @@
   "source": "Seasonal activities, 2026-08-08 session.",
   "notes": "Declared seasonal plan; not yet played.",
   "body_text": "Declared: Dustin continues with the Terram summa and takes Aquam instruction from Éogan."
- },
- {
-  "file": "",
-  "session": "2026-08-22",
-  "status": "Proposed",
-  "source": "Transcript, 2026-08-22 session (Ars Magica).",
-  "id": "p078",
-  "sort_iso": "1224-04-15T12:00",
-  "scene": "Spring 1224 — Isle of Man",
-  "title": "The covenant's Isle-of-Man base revealed: Ránargarðr, Nóatún, and Undrahöll",
-  "icon": "⚓",
-  "timeline": "🌼 Spring 1224",
-  "date": "Spring 1224",
-  "cast": [
-   "Éogan",
-   "Dustin",
-   "Wilhelm"
-  ],
-  "activity_type": "Travel",
-  "notes": "Rewritten (owner review 2026-08-23) as the Spring 1224 arrival description only. The Winter 1221-22 pitch/authorization split to p087; the Summer 1222 survey folded into 'Establishing a dock and base on the Isle of Man' (marked Incomplete). Aura 3 (Magic) as recorded, source undescribed (U1); lab structure ~40£ is part of the ~100£ total in holdings.json.",
-  "body_text": "The base sits at **Laxey** on the Isle of Man's east coast, on a Magic aura (GM: 'R3' — aura 3). It reads as a Norse settlement stepped back in time: longhouses built largely of local **stone** rather than scarce timber (a side-effect of the island's mining), giving it more of an English-country look than the arrivals expect.\nA stone slipway hauls ships out for cleaning and repair, and a small shipwright's operation is already running. Fields have been sown with the starting money, the grog families who chose to settle have their farmsteads up, and a small creek feeds the settlement in bracing, salt-laden sea air.\nThe great hall **Nóatún** ('place of ships') — finished the year before, where the coven means to winter — is itself dwarfed by **Undrahöll** ('Hall of Wonders') rising on the promontory above the harbour: Valdemar's laboratory-hall. One enormous longhouse (~4,500 sq ft), a single structure wider in the belly, with a gallery walk end to end and modern amenities (fireplaces); the working lab-chamber is walled off for Safety, living quarters are reserved for Valdemar and Rán, and the whole faces the sea for the idyllic-surroundings benefit. It is kitted with the best tools and equipment, which drive the cost far past the ~40£ structure toward the ~100£ total. The township is effectively built AROUND the lab — a university town.\nA mundane custos/majordomo runs the place (see the following event). The site's recorded history is thin enough that the covenant is effectively its founder — it may or may not have been a harbour before 1220.\nThe arrivals react in character: Wilhelm — a sophisticated urbanite — is seasick and does not even register the style as Norse; Dustin is awed by the scale and a little jealous of the space beside his cramped shipboard lab; Éogan is excited by what a proper laboratory makes possible (inventing spells)."
  },
  {
   "file": "",
