@@ -171,6 +171,7 @@ header{display:flex;align-items:center;gap:16px;padding:16px 4px 12px;border-bot
 .evt-meta{font-size:12.5px;color:var(--ink-soft);margin-top:4px;display:flex;flex-wrap:wrap;gap:8px}
 .evt-meta .tag{display:inline-block;background:rgba(120,90,40,.15);padding:1px 7px;border-radius:9px;font-size:11px;border:1px solid rgba(120,90,40,.25)}
 .evt-meta .tag.proposed{background:rgba(91,58,138,.16);color:var(--proposed);border-color:rgba(91,58,138,.4)}
+.evt-meta .tag.status-life{background:rgba(138,51,36,.14);color:var(--rust);border-color:rgba(138,51,36,.4);font-style:italic}
 .evt-meta .tag.activity{background:rgba(154,107,31,.16);color:var(--gold);border-color:rgba(154,107,31,.3)}
 .evt-meta .tag.session{background:rgba(44,107,102,.16);color:var(--teal);border-color:rgba(44,107,102,.35);font-family:'Cinzel',serif;font-size:10.5px}
 .evt-meta .tag.tag-tribunal{background:rgba(138,51,36,.18);color:var(--rust);border-color:rgba(138,51,36,.45);font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.05em;font-weight:600}
@@ -669,6 +670,10 @@ function mdInline(s){
 function renderEvent(e){
   const isP = !!e.id && e.id.startsWith('p') && (e.status||'').toLowerCase().includes('proposed');
   const statusTag = isP ? `<span class="tag proposed">Proposed</span>` : '';
+  // Lifecycle statuses (other than the default Historical / Proposed) get a chip.
+  const lifeSt = (e.status||'').trim();
+  const lifeTag = (!isP && ['Future Plan','In Progress','Skipped','Incomplete'].includes(lifeSt))
+    ? `<span class="tag status-life">${esc(lifeSt)}</span>` : '';
   const tagsHtml = tagsFor(e).map(t => `<span class="tag ${t.cls}">${esc(t.label)}</span>`).join('');
   const notes = e.notes ? `<div class="evt-notes">${mdInline(e.notes)}</div>` : '';
 
@@ -697,7 +702,7 @@ function renderEvent(e){
       <div class="evt-title">${esc(e.title)}</div>
       <div class="evt-date">${esc(e.date||'')}</div>
     </div>
-    <div class="evt-meta">${statusTag}${tagsHtml}</div>
+    <div class="evt-meta">${statusTag}${lifeTag}${tagsHtml}</div>
     ${notes}
     <div class="evt-body">${bodyHtml}</div>
   </div>`;

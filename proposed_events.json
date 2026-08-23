@@ -62,7 +62,7 @@
   "sort_iso": "1224-07-01T12:00",
   "session": "2026-08-08",
   "scene": "Summer 1224 — the Isle of Man & the sea-lanes",
-  "title": "Éogan trades, builds his lab, and bottles fruit",
+  "title": "Éogan trades and bottles fruit",
   "icon": "⚗️",
   "timeline": "☀️ Summer 1224",
   "date": "Summer 1224",
@@ -73,46 +73,7 @@
   "status": "Proposed",
   "source": "Seasonal activities, 2026-08-08 session.",
   "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-  "body_text": "Éogan's crew returns to summer trade (wool out of the Isle of Man) while he sets up his new laboratory and develops a spell to draw the juice from fruit."
- },
- {
-  "id": "p058",
-  "file": "",
-  "sort_iso": "1224-07-05T12:00",
-  "session": "2026-08-08",
-  "scene": "Summer 1224 — London",
-  "title": "Foxglove fences the dragon's gold in London",
-  "icon": "💰",
-  "timeline": "☀️ Summer 1224",
-  "date": "Summer 1224",
-  "cast": [
-   "Foxglove"
-  ],
-  "activity_type": "Adventure",
-  "status": "Proposed",
-  "source": "Session transcript, 2026-08-08.",
-  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-  "body_text": "The Tide of Memory calls at London with trade out of Ghent. Foxglove — who took five bags of Tormente's hoard on impulse, with no plan — finds the gold near-worthless as spendable coin in a silver-standard economy. Through a fence she converts only a little (three coins), at a punishing one-for-one: a silver pound per gold piece, but legal tender at least. She keeps the bulk and, being wanted elsewhere, resolves to stay close to the covenant for cover while she holds it."
- },
- {
-  "id": "p068",
-  "file": "",
-  "sort_iso": "1224-07-10T12:00",
-  "session": "2026-08-08",
-  "scene": "Summer 1224 — a haunted coastal village",
-  "title": "Dustin gathers the Summer Fog, teaching as he goes",
-  "icon": "🌫️",
-  "timeline": "☀️ Summer 1224",
-  "date": "Summer 1224",
-  "cast": [
-   "Dustin",
-   "Stijntje"
-  ],
-  "activity_type": "Vis harvest",
-  "status": "Proposed",
-  "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-  "body_text": "Dustin collects the Summer Fog (Mentem vis) from its haunted coastal village, bringing Stijntje along to learn Aquam by doing — hands-on, and suitably terrifying."
+  "body_text": "Éogan's crew returns to summer trade (wool out of the Isle of Man) while he develops a spell to draw the juice from fruit."
  },
  {
   "id": "p069",
@@ -133,86 +94,6 @@
   "source": "Seasonal activities, 2026-08-08 session.",
   "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
   "body_text": "Valdemar builds up the Isle of Man as the covenant's base — raiding lightly, trading mostly — and, with Valerian's help, makes a surreptitious copy of Legends of Brittany to keep, exploiting cross-tribunal copy-law so the original can be returned while the covenant keeps the copy (see t076)."
- },
- {
-  "id": "p059",
-  "file": "",
-  "sort_iso": "1224-07-20T12:00",
-  "session": "2026-08-08",
-  "scene": "Summer 1224 — a cove on the English coast",
-  "title": "Llewellyn joins: Zeno's bargain and the time-crystal",
-  "icon": "⏳",
-  "timeline": "☀️ Summer 1224",
-  "date": "Summer 1224",
-  "cast": [
-   "Dagmar",
-   "Llewellyn"
-  ],
-  "activity_type": "Travel",
-  "status": "Proposed",
-  "source": "Session transcript, 2026-08-08.",
-  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-  "body_text": "Redcap messages sent from Ghent bring a reply at London: Llewellyn ex Miscellanea will meet the ship in a cove a fortnight on. He comes aboard for the northward leg, drawn by the promise of a Magic-aligned regio (Aquam-tinged) and “a safe place to catch my breath.”\n\nOn the voyage he confides his secret: captured by Zeno's paradox, he has extended his life by only ever living half his remaining span — a working grown so onerous, and maintained so long, that a sudden failure could be catastrophic. He hopes a regio of irregular time-flow will let him “catch the tide going out.” His time-quartz crystal, he says, reads those flows; Dagmar's cursory study finds it innately, naturally magical — a found object, not a made artifact, and not Llewellyn's own discovery."
- },
- {
-  "id": "p060",
-  "file": "",
-  "sort_iso": "1224-08-05T14:00",
-  "session": "2026-08-08",
-  "scene": "Summer 1224 — a cliff-cave northeast of York",
-  "title": "The crown delivered: Mímormr freed",
-  "icon": "🐉",
-  "timeline": "☀️ Summer 1224",
-  "date": "Summer 1224",
-  "cast": [
-   "Dagmar",
-   "Valdemar",
-   "Llewellyn",
-   "Foxglove"
-  ],
-  "activity_type": "Adventure",
-  "status": "Proposed",
-  "source": "Session transcript, 2026-08-08.",
-  "notes": "Auto-drafted from the 2026-08-08 session transcript; not yet owner-reviewed.",
-  "body_text": "Meeting Valdemar's ship off Northumbria, Dagmar explains Tormente's quest, and the crew rows to a cliff-cave northeast of York, silver-shimmered within. The occupant is no drake like Tormente but a vast silver-and-aquamarine worm who names itself Mímormr, great-grandchild of Jörmungandr and a speaker with the bones of the dead — bound in the cave for ages by Tormente, who (it says) calls its ancestry false and its deeds wicked.\n\nThe crown proves a pardon: a name-release that undoes the binding. Mímormr takes it and emerges, freed. Offered a boon, Dagmar — through Valdemar, who parses the garbled speech with his Ansuz rune — asks only for a token to carry back to Tormente as proof the task is done. Mímormr reaches for Dagmar's mind, seemingly to leave a readable mark but in truth to crush his skull; Dagmar treats it as an attack, slips it with his Parma, and takes no effect — while Mímormr believes it succeeded. Told of a relative's bones basking in power out in the North Sea, it means to finish its work here and then make east to meet that ancestor, and climbs away into the countryside, loosed upon the world.\n\nExamining the empty cave, the magi (Dagmar's premonitions; Valdemar and Llewellyn on the stone) find the binding was never Hermetic: a Muto-Terram-scale warping of the rock against its grain, plus an Adamic name-binding — power that would tax a trained magus to match."
- },
- {
-  "id": "p070",
-  "file": "",
-  "sort_iso": "1224-09-20T12:00",
-  "session": "2026-08-08",
-  "scene": "Fall 1224 — the Carnac regio",
-  "title": "Dagmar returns to Tormente (declared)",
-  "icon": "🐉",
-  "timeline": "🍂 Fall 1224",
-  "date": "Fall 1224",
-  "cast": [
-   "Dagmar"
-  ],
-  "activity_type": "Exploration",
-  "status": "Proposed",
-  "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Declared seasonal plan; not yet played.",
-  "body_text": "Declared: Dagmar means to carry Mímormr's token back to Tormente and, the debt paid, finally enter the Carnac regio (see t073, scene s8)."
- },
- {
-  "id": "p071",
-  "file": "",
-  "sort_iso": "1224-09-25T12:00",
-  "session": "2026-08-08",
-  "scene": "Fall 1224 — Scarem Montem",
-  "title": "Wilhelm sails to Scarem Montem (declared)",
-  "icon": "🧭",
-  "timeline": "🍂 Fall 1224",
-  "date": "Fall 1224",
-  "cast": [
-   "Wilhelm"
-  ],
-  "activity_type": "Travel",
-  "status": "Proposed",
-  "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Declared seasonal plan; not yet played.",
-  "body_text": "Declared: in late summer / early fall Wilhelm sails the Hound of Cassel to Scarem Montem to deliver the folk-magic thesis and settle the ship-for-book swap — carrying the three sealed chests, and hoping to retrieve his original manuscript (see scene s6, t075, c012)."
  },
  {
   "id": "p072",
@@ -398,114 +279,10 @@
   "session": "2026-08-22",
   "status": "Proposed",
   "source": "Transcript, 2026-08-22 session (Ars Magica).",
-  "id": "p081",
-  "sort_iso": "1224-07-15T12:00",
-  "scene": "Summer 1224 — Scarem Montem",
-  "title": "Wilhelm returns the Hound of Cassel and recovers his thesis — and catches them in a lie",
-  "icon": "📜",
-  "timeline": "☀️ Summer 1224",
-  "date": "Summer 1224",
-  "cast": [
-   "Wilhelm"
-  ],
-  "activity_type": "Travel",
-  "notes": "The s6 / c029 beat landing. On verify, reconcile with c029 (their year-long possession + villein deployment): the lie is consistent, but the villein-deployment was NOT surfaced in play. Chests returned; ship kept (enchanted). New NPC: Aurelius of Scarem Montem.",
-  "body_text": "Wilhelm sails the Hound of Cassel south to Scarem Montem to return their property and ask after his loaned thesis. He keeps a month-long enchantment on the hull; a Code/Law read suggests the enchantment makes the ship magical property that can't be re-seized, so he keeps the ship and returns only the still-sealed magical chests.\nHe is welcomed warmly by **Aurelius** (a huge, bearded, shaven-headed magus) and **Fettelmid**, who realize only belatedly that Wilhelm's covenant is the one that won the tournament (they'd left early). Fettelmid hands back the Latin manuscript of Wilhelm's folk-magic thesis.\nThey praise the work and promise to vouch for it publicly on publication — but claim they must 'confirm their own data' before sharing their notes, since partial information could be worse than none.\nWilhelm's Magic Theory roll (16) to parse what they could possibly mean comes up **dry** — he concludes they are almost certainly lying, as a pretext for something else. He lets it go, satisfied to have his book back.\nHe plans to return to Cologne to finish his Integration (Artes Liberales + ritual casting, so folk casters no longer halve or blow themselves up) and publish by year's end, then winter on the Isle of Man."
- },
- {
-  "file": "",
-  "session": "2026-08-22",
-  "status": "Proposed",
-  "source": "Transcript, 2026-08-22 session (Ars Magica).",
-  "id": "p082",
-  "sort_iso": "1224-10-01T12:00",
-  "scene": "Fall 1224 — aboard the Tide of Memory",
-  "title": "Foxglove's stolen dragon-gold discovered; the London recovery detour",
-  "icon": "🪙",
-  "timeline": "🍂 Fall 1224",
-  "date": "Fall 1224",
-  "cast": [
-   "Dagmar",
-   "Valdemar",
-   "Foxglove",
-   "Peter"
-  ],
-  "activity_type": "Adventure",
-  "notes": "Fills the gap between transcript files 1 and 2 (owner-provided). Dagmar's mind-read implicated Peter as well as Foxglove (owner-confirmed). The s7 / c026 beat; Fall 1224 confirmed.",
-  "body_text": "En route to Tormente aboard the Tide of Memory, **Peter** — re-planking the deck — finds the full stash of Roman dragon-gold Foxglove smuggled out of the Carnac cave.\nThey argue; Foxglove lies that **Dagmar** had told her to take and hide it. Dagmar arrives and reads their minds — seeing the truth: Foxglove took the gold, and Peter had reached for it too.\nThree coins are already gone — the ones Foxglove sold to a London fence. Dagmar uses the coins still in hand to work a sympathetic / Arcane-Connection trace on the three that were sold, and the party detours to **London** — a Foxglove-and-Peter side adventure — to recover them.\nValdemar is told only that they'd 'misplaced something and must return it.' Foxglove survives (genuinely in doubt at the table; a replacement grog, Garrett Coffin, was on standby)."
- },
- {
-  "file": "",
-  "session": "2026-08-22",
-  "status": "Proposed",
-  "source": "Transcript, 2026-08-22 session (Ars Magica).",
-  "id": "p083",
-  "sort_iso": "1224-10-05T12:00",
-  "scene": "Fall 1224 — the Carnac regio (Tormente)",
-  "title": "Return to Tormente: errand accepted, the coin dismissed as 'debris'",
-  "icon": "🐉",
-  "timeline": "🍂 Fall 1224",
-  "date": "Fall 1224",
-  "cast": [
-   "Dagmar",
-   "Valdemar",
-   "Llewellyn"
-  ],
-  "activity_type": "Adventure",
-  "notes": "s8 played. RESOLVES U6 (does Tormente permit mundane traffic / is Foxglove marked): it does not care about the coin; all are free to come and go. New open thread: Dagmar owes Tormente a coin-brokerage errand.",
-  "body_text": "Dagmar, Valdemar and Llewellyn (with grogs Angus, Peter, Foxglove and Garrett) row back to Tormente. Dagmar pings it with Words of the Unbroken Silence; the dragon — now less serpentine, with proper legs — says it has 'felt the release' of its kin (Mímormr).\nDagmar reports the errand done and offers back the 'removed treasure.' Tormente dismisses the Roman coin as mere **'debris,' not treasure**, has no use for it, and asks Dagmar to **broker its sale** on the dragon's behalf.\nTormente states its only role is to keep 'the king' inside; visitors are free to come and go and conduct their business. It compresses aside and lets them pass into the regio (Magic aura 7)."
- },
- {
-  "file": "",
-  "session": "2026-08-22",
-  "status": "Proposed",
-  "source": "Transcript, 2026-08-22 session (Ars Magica).",
-  "id": "p084",
-  "sort_iso": "1224-10-06T12:00",
-  "scene": "Fall 1224 — Carnac regio, Level 1",
-  "title": "Carnac Level 1: the tidal sauna-cave",
-  "icon": "🌊",
-  "timeline": "🍂 Fall 1224",
-  "date": "Fall 1224",
-  "cast": [
-   "Dagmar",
-   "Valdemar",
-   "Llewellyn"
-  ],
-  "activity_type": "Exploration",
-  "notes": "s9 played. Confirms the brief's aura-7 tidal-cave design; entry timed to the tide.",
-  "body_text": "Past Tormente, the party enters Level 1 (Magic aura 7): a smooth-walled cavern with an unnaturally placid, steaming hot pool — sauna-like and muggy, the water hot enough to burn on exposure. Torchlight plus Dagmar's Eyes of the Eagle and Clear Sight of the Naiad reveal it.\nThe way deeper is a threshold **under** the water. Having entered near high tide (so as not to be locked in), they wait for low tide rather than swim the scalding passage, then take the boats through the revealed arches into the next layer.\nThe grogs feel an uncanny hum 'past hearing' that sets their teeth on edge — the aura making itself felt."
- },
- {
-  "file": "",
-  "session": "2026-08-22",
-  "status": "Proposed",
-  "source": "Transcript, 2026-08-22 session (Ars Magica).",
-  "id": "p085",
-  "sort_iso": "1224-10-07T12:00",
-  "scene": "Fall 1224 — Carnac regio, Level 2",
-  "title": "Carnac Level 2: the seven-planet conjunction lock, solved",
-  "icon": "🪐",
-  "timeline": "🍂 Fall 1224",
-  "date": "Fall 1224",
-  "cast": [
-   "Dagmar",
-   "Valdemar",
-   "Llewellyn"
-  ],
-  "activity_type": "Exploration",
-  "notes": "s15 played, and it matches the GM answer-key exactly (Jupiter merges into Saturn, Chaldean order, sighted from the door). Llewellyn's crystal reports the temporal scramble settling as it solves — feeds the depth-not-realm reading of U4.",
-  "body_text": "The second layer is constructed — huge rough-hewn slab stones laid as steps and walls, dry above the tideline — with seven freestanding cylindrical pillars, each etched (by a much later hand, on far older stone) with an alchemical planet symbol: Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon. They slide frictionlessly.\nA door opposite is a magical lock; moving any pillar produces a 'temporal adjustment' Llewellyn's time-crystal registers. The door bears a central planet motif with a pin-prick hole — the Earth/vantage — and there is no Earth marker on the floor.\nThe party reads it as a **conjunction**. Llewellyn 'warmer/cooler' nudges **Saturn** into the door's sightline; then, moving **Jupiter**, it MERGES into Saturn — two stones occupying one space.\nDagmar (Artes Liberales) recalls the **Chaldean order** — Saturn, Jupiter, Mars, Sun, Venus, Mercury, Moon — and has the grogs push each into line one at a time. Only Jupiter+Saturn merge; the rest line up. As the Moon locks in, a faint light runs from the door to the Moon, illumination rims the pillars, and the two interlocked door-halves crack open.\nBeyond: humidity, greenery, marsh-smell and animal sounds — a new threshold."
- },
- {
-  "file": "",
-  "session": "2026-08-22",
-  "status": "Proposed",
-  "source": "Transcript, 2026-08-22 session (Ars Magica).",
   "id": "p086",
   "sort_iso": "1224-10-08T12:00",
   "scene": "Fall 1224 — Carnac regio, Level 3",
-  "title": "Carnac Level 3: the frog-folk ambush (cliffhanger)",
+  "title": "Regiones the Third: the frog-folk ambush (cliffhanger)",
   "icon": "🐸",
   "timeline": "🍂 Fall 1224",
   "date": "Fall 1224",
