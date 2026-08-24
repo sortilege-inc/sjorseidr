@@ -852,10 +852,6 @@
           "at": "northumbria",
           "ship": "storm-dragon"
         },
-        "Llewellyn": {
-          "at": "northumbria",
-          "ship": "tide-of-memory"
-        },
         "Wilhelm Stienauer": {
           "at": "scarem-montem",
           "ship": "hound-of-cassel"
@@ -863,6 +859,10 @@
         "Dustin Page": {
           "at": "fog-coast",
           "ship": "scholars-wake"
+        },
+        "Llewellyn ex Miscellanea": {
+          "at": "northumbria",
+          "ship": "tide-of-memory"
         }
       }
     },
@@ -897,7 +897,7 @@
           "at": "carnac",
           "ship": "storm-dragon"
         },
-        "Llewellyn": {
+        "Llewellyn ex Miscellanea": {
           "at": "carnac",
           "ship": "tide-of-memory"
         }
@@ -934,7 +934,7 @@
           "at": "carnac",
           "ship": "storm-dragon"
         },
-        "Llewellyn": {
+        "Llewellyn ex Miscellanea": {
           "at": "carnac",
           "ship": "tide-of-memory"
         }

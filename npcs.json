@@ -2,7 +2,7 @@
   "meta": {
     "title": "Crew & Companion Sheets",
     "source": "Foundry VTT REST API (arm5e system), pulled 2026-07-13",
-    "note": "Covers grogs, companions, and NPC magi. Several are hand-authored non-Foundry cards (no Foundry actor sheet): Hilda and Solving Epicurusson (added 2026-08-12); Carl & Isaac Schmidt (Willhelm's field-research assistants) and the Cruachan magi Gráinne & Tadhg (added 2026-08-12); and Brussel, the púca Willhelm taught (no statblock). Karl retains only a lightweight note card in ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets."
+    "note": "Covers grogs, companions, and NPC magi. Several are hand-authored non-Foundry cards (no Foundry actor sheet): Hilda and Solving Epicurusson (added 2026-08-12); Carl & Isaac Schmidt (Willhelm's field-research assistants) and the Cruachan magi Gráinne & Tadhg (added 2026-08-12); and Brussel, the púca Willhelm taught (no statblock); and Llewellyn ex Miscellanea (added 2026-08-24). Karl retains only a lightweight note card in ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets."
   },
   "npcs": {
     "Adam Smith": {
@@ -10346,6 +10346,133 @@
       "source": "Established in play at Scarem Montem (2026-08-22 session); verified in the chronicle. Hand-authored non-Foundry card; House and stats undetermined.",
       "shortDescription": "A senior magus of Scarem Montem — imposing but warm — who received Wilhelm and returned the covenant's raided property.",
       "biography": "Aurelius is a magus of Scarem Montem who welcomed Wilhelm Stienauer when he sailed the raided Hound of Cassel back to them in Summer 1224. Physically imposing and stern-faced, he proved a gracious host — greeting Wilhelm as 'brother,' accepting the return of the magical chests taken in the raid, feeding and drinking his party, and conceding (after sending another magus to check the ship's enchantment) that Wilhelm's grasp of Tribunal law was 'surprisingly thorough for a magus of Durenmar.' Alongside Fettelmid he only belatedly realized Wilhelm's covenant was the one that had beaten Scarem Montem at the 1223 tournament. He and Fettelmid returned the Latin manuscript of Wilhelm's folk-magic thesis, praising it but claiming they needed to 'confirm their own data' before sharing notes — a pretext Wilhelm's Magic Theory read flagged as a lie (see the verified chronicle event 'Wilhelm returns the Hound of Cassel and recovers his thesis', and c029). His House is not yet known."
+    },
+    "Llewellyn": {
+      "name": "Llewellyn",
+      "foundryName": null,
+      "charType": "magus",
+      "portrait": null,
+      "house": "Ex Miscellanea",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "dex": 0,
+        "qik": 0,
+        "pre": 0,
+        "com": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [],
+      "flaws": [],
+      "abilities": [],
+      "spells": [],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": null,
+      "mightRealm": "",
+      "form": "",
+      "soak": 0,
+      "combat": [],
+      "powers": [],
+      "vis": "",
+      "appearance": "",
+      "source": "First appears in play Summer 1224 — approached Dagmar at a night market and, after Redcap messages between Ghent and London, joined the ship's northward leg (p054 and the Zeno's-bargain event). Hand-authored non-Foundry card; no statblock established at the table.",
+      "shortDescription": "A free-agent magus of House Ex Miscellanea out of the Stonehenge Tribunal — life-extended by a Zeno's-paradox working, and carrying a naturally magical time-quartz crystal.",
+      "biography": "Llewellyn ex Miscellanea is a free agent out of the Stonehenge Tribunal (the British Isles) who approached Dagmar at a night market and, after Redcap messages passed between Ghent and London, came aboard the Tide of Memory for its northward leg in Summer 1224 — drawn by the promise of a Magic-aligned, Aquam-tinged regio and “a safe place to catch my breath.”\n\nOn the voyage he confided his secret: caught by Zeno's paradox, he has extended his life by only ever living half his remaining span — a working grown so onerous, and sustained so long, that a sudden failure could be catastrophic. He hopes a regio of irregular time-flow will let him “catch the tide going out.” His time-quartz crystal reads those flows; Dagmar's cursory study found it innately, naturally magical.\n\nHe joined the Fall 1224 expedition past the dragon Tormente into the Carnac regio, where his crystal registered the ‘temporal adjustments’ of the seven-planet conjunction lock and he helped solve it. His parens, sigil, and statblock are not yet established at the table."
     }
   }
 }
