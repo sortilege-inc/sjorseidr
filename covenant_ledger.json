@@ -4264,12 +4264,12 @@
     "penetration": null,
     "regio": null,
     "economics": {
-     "inhabitantsPoints": 165,
+     "inhabitantsPoints": 159,
      "laboratoriesPoints": 390,
      "weaponsPoints": 240,
-     "baseExpenditure": 248,
+     "baseExpenditure": 242,
      "costSavings": 0,
-     "totalExpenditure": 248,
+     "totalExpenditure": 242,
      "yearlyExpenses": {
       "provisions": {
        "amount": 82,
@@ -5431,12 +5431,12 @@
     "penetration": null,
     "regio": null,
     "economics": {
-     "inhabitantsPoints": 167,
+     "inhabitantsPoints": 161,
      "laboratoriesPoints": 390,
      "weaponsPoints": 240,
-     "baseExpenditure": 250,
+     "baseExpenditure": 244,
      "costSavings": 0,
-     "totalExpenditure": 250,
+     "totalExpenditure": 244,
      "yearlyExpenses": {
       "provisions": {
        "amount": 84,
@@ -6621,12 +6621,12 @@
     "penetration": null,
     "regio": null,
     "economics": {
-     "inhabitantsPoints": 167,
+     "inhabitantsPoints": 161,
      "laboratoriesPoints": 390,
      "weaponsPoints": 240,
-     "baseExpenditure": 250,
+     "baseExpenditure": 244,
      "costSavings": 0,
-     "totalExpenditure": 250,
+     "totalExpenditure": 244,
      "yearlyExpenses": {
       "provisions": {
        "amount": 84,
