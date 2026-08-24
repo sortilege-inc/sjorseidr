@@ -9253,7 +9253,7 @@
     "Hilda": {
       "name": "Hilda",
       "foundryName": null,
-      "charType": "companion",
+      "charType": "grog",
       "portrait": null,
       "house": "",
       "parens": "",
@@ -9645,7 +9645,7 @@
     "Carl Schmidt": {
       "name": "Carl Schmidt",
       "foundryName": null,
-      "charType": "companion",
+      "charType": "grog",
       "portrait": null,
       "house": "",
       "parens": "",
@@ -9808,7 +9808,7 @@
     "Isaac Schmidt": {
       "name": "Isaac Schmidt",
       "foundryName": null,
-      "charType": "companion",
+      "charType": "grog",
       "portrait": null,
       "house": "",
       "parens": "",
