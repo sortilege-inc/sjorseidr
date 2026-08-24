@@ -143,6 +143,36 @@
         25.75,
         53.9
       ]
+    },
+    "london": {
+      "name": "London",
+      "xy": [
+        35.0,
+        38.0
+      ],
+      "kind": "port"
+    },
+    "northumbria": {
+      "name": "Northumbrian coast (Mímormr's cave, NE of York)",
+      "xy": [
+        33.5,
+        26.0
+      ]
+    },
+    "scarem-montem": {
+      "name": "Scarem Montem (Dunkirk)",
+      "xy": [
+        40.8,
+        40.8
+      ],
+      "kind": "port"
+    },
+    "fog-coast": {
+      "name": "The Summer Fog coast (haunted village)",
+      "xy": [
+        41.5,
+        35.0
+      ]
     }
   },
   "waypoints": {
@@ -340,6 +370,24 @@
       "id": "1224-spring",
       "label": "🌼 Spring 1224",
       "iso": "1224-03-20",
+      "hasData": true
+    },
+    {
+      "id": "1224-summer",
+      "label": "☀️ Summer 1224",
+      "iso": "1224-07-01",
+      "hasData": true
+    },
+    {
+      "id": "1224-fall",
+      "label": "🍂 Fall 1224",
+      "iso": "1224-10-05",
+      "hasData": true
+    },
+    {
+      "id": "1224-winter",
+      "label": "❄️ Winter 1224-25",
+      "iso": "1224-12-20",
       "hasData": true
     }
   ],
@@ -770,6 +818,125 @@
         "Dustin Page": {
           "at": "ireland-cruachan",
           "ship": "scholars-wake"
+        }
+      }
+    },
+    "1224-summer": {
+      "note": "Dagmar's Tide of Memory calls at London with Ghent trade; Llewellyn ex Miscellanea comes aboard and the ship runs north, meeting Valdemar's Storm Dragon off Northumbria to deliver Tormente's crown and free the wyrm Mímormr in a cliff-cave NE of York. Wilhelm sails the Hound of Cassel to Scarem Montem (Dunkirk) to return the sealed chests — keeping the ship. Dustin nets the Summer Fog (Mentem) off its haunted coast, teaching Stijntje Aquam. (Brineborn and Adamant shown at their standing bases — no named errand this season.)",
+      "ships": {
+        "tide-of-memory": {
+          "at": "northumbria"
+        },
+        "storm-dragon": {
+          "at": "northumbria"
+        },
+        "hound-of-cassel": {
+          "at": "scarem-montem"
+        },
+        "scholars-wake": {
+          "at": "fog-coast"
+        },
+        "brineborn": {
+          "at": "dublin"
+        },
+        "adamant": {
+          "at": "isle-of-man"
+        }
+      },
+      "magi": {
+        "Dagmar": {
+          "at": "northumbria",
+          "ship": "tide-of-memory"
+        },
+        "Valdemar Bjornsson": {
+          "at": "northumbria",
+          "ship": "storm-dragon"
+        },
+        "Llewellyn": {
+          "at": "northumbria",
+          "ship": "tide-of-memory"
+        },
+        "Wilhelm Stienauer": {
+          "at": "scarem-montem",
+          "ship": "hound-of-cassel"
+        },
+        "Dustin Page": {
+          "at": "fog-coast",
+          "ship": "scholars-wake"
+        }
+      }
+    },
+    "1224-fall": {
+      "note": "Bound for Tormente aboard the Tide of Memory, Pieter uncovers the dragon-gold Foxglove smuggled from the Carnac cave; Dagmar mind-reads the truth and the ship detours to London to recover three coins already fenced. The party then rows back to Tormente near Carnac: the dragon dismisses the Roman coin as 'debris,' asks Dagmar to broker its sale, and lets them past into the regio — a tidal sauna-cave (Magic aura 7) and, beyond it, a seven-planet conjunction lock. Valdemar's Storm Dragon sails the dragon leg alongside. (Other ships shown at their standing bases — no named errand this season.)",
+      "ships": {
+        "tide-of-memory": {
+          "at": "carnac"
+        },
+        "storm-dragon": {
+          "at": "carnac"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        },
+        "scholars-wake": {
+          "at": "dublin"
+        },
+        "brineborn": {
+          "at": "dublin"
+        },
+        "adamant": {
+          "at": "isle-of-man"
+        }
+      },
+      "magi": {
+        "Dagmar": {
+          "at": "carnac",
+          "ship": "tide-of-memory"
+        },
+        "Valdemar Bjornsson": {
+          "at": "carnac",
+          "ship": "storm-dragon"
+        },
+        "Llewellyn": {
+          "at": "carnac",
+          "ship": "tide-of-memory"
+        }
+      }
+    },
+    "1224-winter": {
+      "note": "Current front — largely unplayed. Dagmar, Valdemar and Llewellyn are still inside the Carnac regio (past the conjunction lock; the deeper layer unresolved), so the Tide of Memory and Storm Dragon lie off Carnac. The rest of the fleet is shown laid up at its Isle-of-Man base for the winter as usual — Winter 1224-25 activities have not yet been played.",
+      "ships": {
+        "tide-of-memory": {
+          "at": "carnac"
+        },
+        "storm-dragon": {
+          "at": "carnac"
+        },
+        "hound-of-cassel": {
+          "at": "isle-of-man"
+        },
+        "scholars-wake": {
+          "at": "isle-of-man"
+        },
+        "brineborn": {
+          "at": "isle-of-man"
+        },
+        "adamant": {
+          "at": "isle-of-man"
+        }
+      },
+      "magi": {
+        "Dagmar": {
+          "at": "carnac",
+          "ship": "tide-of-memory"
+        },
+        "Valdemar Bjornsson": {
+          "at": "carnac",
+          "ship": "storm-dragon"
+        },
+        "Llewellyn": {
+          "at": "carnac",
+          "ship": "tide-of-memory"
         }
       }
     }
