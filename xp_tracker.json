@@ -4,7 +4,7 @@
   "schema_version": 1,
   "note": "Per-member, per-season log of covenant activity and XP. Filter by type (magi / companions / grogs) and by current ship. Cells are empty until filled in a follow-up pass. For magi, a season also records whether the activity was a covenant service; every member records whether a season activity was undertaken and any XP (type + amount).",
   "as_of": "Summer 1224",
-  "foundryConfirmed": "2026-08-12",
+  "foundryConfirmed": "2026-08-24",
   "reviewedThroughSeason": "1223-summer"
  },
  "ships": {
@@ -2414,6 +2414,182 @@
    "detail": "adventuring: Covenant of the North Sea Lore+5, Code of Hermes+5",
    "covenant": null,
    "source": "gm-ruling"
+  },
+  "Angus McPeterson::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 8,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 8
+    }
+   ],
+   "detail": "practice: Language: Latin+8",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 8,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 8
+    }
+   ],
+   "detail": "practice: Language: Latin+8",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 5,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 5
+    }
+   ],
+   "detail": "practice: Language: Latin+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Angus McPeterson::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 8,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 8
+    }
+   ],
+   "detail": "practice: Language: Latin+8",
+   "covenant": null,
+   "source": "foundry"
   }
  }
 }
