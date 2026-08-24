@@ -962,10 +962,15 @@ function abilAllocRow(arrId, a, i){
   const paramUI = isParamAbility(a.name)
     ? `<input type="text" class="detail-in" data-alparam="${arrId}:${i}" placeholder="parameter…" value="${esc(param)}"${dl.id?` list="${dl.id}"`:''}>` : '';
   const specUI = `<input type="text" class="detail-in" data-alspec="${arrId}:${i}" placeholder="specialty" value="${esc(spec)}"${dl.id?` list="${dl.id}"`:''}>`;
-  const sc=scoreFromXp(xp);
+  // Accumulation-aware across ALL phases: prior = XP this ability already has from every
+  // OTHER phase bucket (0 if it only appears here). The stepper shows the running total
+  // score; the ± / number box spend only THIS phase's points, and you can't drop below
+  // what the other phases already granted.
+  const prior = Math.max(0, abilityXp(a.name, a.param||'') - xp);
+  const sc=scoreFromXp(prior+xp), priorSc=scoreFromXp(prior);
   return `<div class="abil-row"><span class="an">${esc(a.name)} ${paramUI} ${specUI}${dl.html}</span>
-    <span class="lvlstep"><button data-aldec="${arrId}:${i}" ${sc<=0?'disabled':''}>−</button><span class="lvlval">${sc}</span><button data-alinc="${arrId}:${i}">+</button></span>
-    <input type="number" data-alx="${arrId}:${i}" value="${xp}"><span class="mini">xp</span>
+    <span class="lvlstep"><button data-aldec="${arrId}:${i}" ${sc<=priorSc?'disabled':''}>−</button><span class="lvlval">${sc}</span><button data-alinc="${arrId}:${i}">+</button></span>
+    <input type="number" data-alx="${arrId}:${i}" value="${xp}"><span class="mini">xp</span>${prior?`<span class="mini" style="opacity:.65" title="already score ${priorSc} from other phases">+${priorSc} prior</span>`:''}
     <button class="x" data-alrm="${arrId}:${i}">×</button></div>`;
 }
 function abilAllocRows(arr, arrId){
@@ -978,9 +983,11 @@ function abilAllocRows(arr, arrId){
    bump and an XP edit stay in sync — then re-render. */
 function wireAllocRows(el, arr, arrId, rerender){
   const inst=ref=>arr[+ref.split(':')[1]], done=rerender||function(){};
-  const bump=(ref,d)=>{const a=inst(ref); a.xp=xpForScore(Math.max(0,scoreFromXp(a.xp)+d)); save(); renderBudget(); done();};
+  const priorOf=a=> Math.max(0, abilityXp(a.name, a.param||'') - (+a.xp||0));   // XP this ability has in other phases
+  const bump=(ref,d)=>{const a=inst(ref); const p=priorOf(a); const total=scoreFromXp(p+(+a.xp||0));
+    const nt=d>0?total+1:Math.max(scoreFromXp(p), total-1); a.xp=Math.max(0, xpForScore(nt)-p); save(); renderBudget(); done();};
   el.querySelectorAll(`[data-alx^="${arrId}:"]`).forEach(inp=>inp.oninput=()=>{const a=inst(inp.dataset.alx); a.xp=+inp.value||0;
-    const lv=inp.closest('.abil-row').querySelector('.lvlval'); if(lv) lv.textContent=scoreFromXp(a.xp);
+    const lv=inp.closest('.abil-row').querySelector('.lvlval'); if(lv) lv.textContent=scoreFromXp(priorOf(a)+(+a.xp||0));
     save();renderBudget();updatePoolLine();renderMsgs(visibleSteps()[step]);});
   el.querySelectorAll(`[data-alinc^="${arrId}:"]`).forEach(b=>b.onclick=()=>bump(b.dataset.alinc,1));
   el.querySelectorAll(`[data-aldec^="${arrId}:"]`).forEach(b=>b.onclick=()=>bump(b.dataset.aldec,-1));
@@ -1101,8 +1108,8 @@ function renderAppr(el){
   el.innerHTML=`<p class="step-help">${isYoungApprentice()?`Apprentice mid-training: ${C.young.apprenticeYears} of 15 years completed. Budget scales — ${apprBudget()} XP (Arts + Abilities) and ${apprenticeshipXpFor(C.young.apprenticeYears).spells} spell levels.`:`Divide 240 XP between Hermetic Arts and Abilities. (Spells come next; you have 120 spell-levels there.)`}</p>${isYoungApprentice()?`<label class="fld">Apprenticeship years completed</label><input type="number" id="apprYears" min="0" max="15" value="${C.young.apprenticeYears}">`:``}
     <div class="alloc-pool ${spent>apprBudget()?'bad':''}" id="poolLine">Apprenticeship XP: ${spent} / ${apprBudget()}</div>
     <div class="arts-wrap">
-      <div><h4 class="mini">Techniques</h4>${artRows(DATA.arts.techniques)}</div>
-      <div><h4 class="mini">Forms</h4>${artRows(DATA.arts.forms)}</div></div>
+      <div><h4 class="mini">Techniques</h4>${artRows(DATA.arts.techniques, C.apprentice.arts)}</div>
+      <div><h4 class="mini">Forms</h4>${artRows(DATA.arts.forms, C.apprentice.arts)}</div></div>
     <label class="fld" style="margin-top:12px">Abilities</label>
     <div class="searchbar"><input type="text" class="al-q" placeholder="search abilities…"></div>
     <div class="list al-add" style="max-height:130px"></div>
@@ -1112,19 +1119,26 @@ function renderAppr(el){
   if($('#apprYears'))$('#apprYears').oninput=e=>{C.young.apprenticeYears=Math.max(0,Math.min(15,+e.target.value||0));save();renderAppr(el);renderBudget();};
   wireAbilAlloc(el, C.apprentice.abilities, 'appr', null, ()=>renderAppr(el));
 }
-function artRow(a, xp){ const sc=scoreFromXp(xp);
+/* Art XP this key already has in OTHER phase buckets (Arts live in apprentice + laterYears).
+   Lets each phase's Art stepper continue from the accumulated total, spending only its own points. */
+function artOtherXp(artObj, key){ let t=0; [C.apprentice.arts, C.laterYears.arts].forEach(o=>{ if(o!==artObj) t+=(+o[key]||0); }); return t; }
+function artRow(a, artObj){ const xp=+artObj[a.key]||0, prior=artOtherXp(artObj,a.key);
+  const sc=scoreFromXp(prior+xp), priorSc=scoreFromXp(prior);
   return `<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
-  <span class="lvlstep"><button data-artdec="${a.key}" ${sc<=0?'disabled':''}>−</button><span class="lvlval">${sc}</span><button data-artinc="${a.key}">+</button></span>
-  <input type="number" data-artxp="${a.key}" value="${xp}"><span class="mini">xp</span></div>`; }
-function artRows(list){ return list.map(a=>artRow(a, C.apprentice.arts[a.key]||0)).join(''); }
-/* Art rows mirror the ability steppers: ± snaps Art XP to the exact level total. */
+  <span class="lvlstep"><button data-artdec="${a.key}" ${sc<=priorSc?'disabled':''}>−</button><span class="lvlval">${sc}</span><button data-artinc="${a.key}">+</button></span>
+  <input type="number" data-artxp="${a.key}" value="${xp}"><span class="mini">xp</span>${prior?`<span class="mini" style="opacity:.65" title="already score ${priorSc} from other phases">+${priorSc} prior</span>`:''}</div>`; }
+function artRows(list, artObj){ return list.map(a=>artRow(a, artObj)).join(''); }
+/* Art rows mirror the ability steppers: ± snaps Art XP to the exact level total, continuing
+   from the accumulated cross-phase score and never dropping below what other phases granted. */
 function wireArtObj(el, artObj, attr, rerender){
-  const done=rerender||function(){};
-  el.querySelectorAll(`[data-${attr}]`).forEach(inp=>inp.oninput=()=>{artObj[inp.dataset[attr]]=+inp.value||0;
-    const lv=inp.closest('.art-row').querySelector('.lvlval'); if(lv) lv.textContent=scoreFromXp(+inp.value||0);
+  const done=rerender||function(){}, priorOf=k=>artOtherXp(artObj,k);
+  el.querySelectorAll(`[data-${attr}]`).forEach(inp=>inp.oninput=()=>{const k=inp.dataset[attr]; artObj[k]=+inp.value||0;
+    const lv=inp.closest('.art-row').querySelector('.lvlval'); if(lv) lv.textContent=scoreFromXp(priorOf(k)+(+inp.value||0));
     save();renderBudget();updatePoolLine();renderMsgs(visibleSteps()[step]);});
-  el.querySelectorAll('[data-artinc]').forEach(b=>b.onclick=()=>{const k=b.dataset.artinc;artObj[k]=xpForScore(scoreFromXp(artObj[k]||0)+1);save();renderBudget();done();});
-  el.querySelectorAll('[data-artdec]').forEach(b=>b.onclick=()=>{const k=b.dataset.artdec;artObj[k]=xpForScore(Math.max(0,scoreFromXp(artObj[k]||0)-1));save();renderBudget();done();});
+  el.querySelectorAll('[data-artinc]').forEach(b=>b.onclick=()=>{const k=b.dataset.artinc, p=priorOf(k);
+    const total=scoreFromXp(p+(+artObj[k]||0)); artObj[k]=Math.max(0, xpForScore(total+1)-p); save();renderBudget();done();});
+  el.querySelectorAll('[data-artdec]').forEach(b=>b.onclick=()=>{const k=b.dataset.artdec, p=priorOf(k);
+    const total=scoreFromXp(p+(+artObj[k]||0)), nt=Math.max(scoreFromXp(p), total-1); artObj[k]=Math.max(0, xpForScore(nt)-p); save();renderBudget();done();});
   el.querySelectorAll('[data-artdesc]').forEach(s=>s.onclick=()=>{const a=[...DATA.arts.techniques,...DATA.arts.forms].find(x=>x.name===s.dataset.artdesc);
     $('#artDesc').innerHTML=a&&a.text?`<div class="rules-note"><strong>${esc(a.name)}</strong><br>${mdRules(a.text)}</div>`:'';});
 }
@@ -1136,8 +1150,8 @@ function renderLYears(el){
     <div class="row2"><div><label class="fld">Years after apprenticeship</label><input type="number" id="lyY" value="${C.laterYears.years}"></div>
       <div><label class="fld">Spell levels reserved</label><input type="number" id="lySpell" value="${C.laterYears.spellLevels}"></div></div>
     <div class="alloc-pool ${spent>pool?'bad':''}" id="poolLine">Later-years points: ${spent} / ${pool}</div>
-    <div class="arts-wrap"><div><h4 class="mini">Techniques</h4>${lyArtRows(DATA.arts.techniques)}</div>
-      <div><h4 class="mini">Forms</h4>${lyArtRows(DATA.arts.forms)}</div></div>
+    <div class="arts-wrap"><div><h4 class="mini">Techniques</h4>${artRows(DATA.arts.techniques, C.laterYears.arts)}</div>
+      <div><h4 class="mini">Forms</h4>${artRows(DATA.arts.forms, C.laterYears.arts)}</div></div>
     <label class="fld" style="margin-top:12px">Abilities</label>
     <div class="searchbar"><input type="text" class="al-q" placeholder="search abilities…"></div>
     <div class="list al-add" style="max-height:120px"></div>
@@ -1146,16 +1160,9 @@ function renderLYears(el){
   updatePoolLine=upd;
   $('#lyY').oninput=e=>{C.laterYears.years=+e.target.value||0;save();renderLYears(el);renderBudget();};
   $('#lySpell').oninput=e=>{C.laterYears.spellLevels=+e.target.value||0;save();upd();renderBudget();renderMsgs(visibleSteps()[step]);};
-  wireArtRowsLY(el, C.laterYears.arts, upd, ()=>renderLYears(el));
+  wireArtRows(el, C.laterYears.arts, 'artxp', ()=>renderLYears(el));
   wireAbilAlloc(el, C.laterYears.abilities, 'lyears', null, ()=>renderLYears(el));
 }
-function lyArtRows(list){ return list.map(a=>{const a2={name:a.name,key:a.key};
-  const xp=C.laterYears.arts[a.key]||0, sc=scoreFromXp(xp);
-  return `<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
-  <span class="lvlstep"><button data-artdec="${a.key}" ${sc<=0?'disabled':''}>−</button><span class="lvlval">${sc}</span><button data-artinc="${a.key}">+</button></span>
-  <input type="number" data-lyxp="${a.key}" value="${xp}"><span class="mini">xp</span></div>`;}).join(''); }
-function wireArtRowsLY(el, artObj, upd, rerender){ wireArtObj(el, artObj, 'lyxp', rerender); }
-
 let spellFilter={q:'',te:'',fo:''};
 let spellMode='pick';
 let design={te:'Creo',fo:'Ignem',gi:null,base:1,range:'Personal',duration:'Momentary',target:'Individual',size:0,complexity:0,ritual:false,name:''};
