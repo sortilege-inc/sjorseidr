@@ -241,8 +241,8 @@
   {
    "id": "Hilda",
    "name": "Hilda",
-   "type": "companion",
-   "role": "Companion",
+   "type": "grog",
+   "role": "Grog",
    "ship": "hound-of-cassel",
    "house": "",
    "firstYear": 1223
@@ -250,8 +250,8 @@
   {
    "id": "Isaac",
    "name": "Isaac",
-   "type": "companion",
-   "role": "Companion",
+   "type": "grog",
+   "role": "Grog",
    "ship": "hound-of-cassel",
    "house": "",
    "firstYear": 1223
@@ -259,8 +259,8 @@
   {
    "id": "Carl",
    "name": "Carl",
-   "type": "companion",
-   "role": "Companion",
+   "type": "grog",
+   "role": "Grog",
    "ship": "hound-of-cassel",
    "house": "",
    "firstYear": 1223
