@@ -3,7 +3,7 @@
   "edition": "armdef",
   "spec_version": "0.5",
   "generated_from": "armdef-0.5-full.resolved.json",
-  "note": "Character-creation data sliced from the resolved armdef corpus for chargen.html. Regenerate with scripts/build_chargen.py after a corpus update."
+  "note": "Character-creation data sliced from the resolved armdef corpus for chargen.html. Regenerate with sjorseidr-support/scripts/build_chargen.py after a corpus update."
  },
  "budgets": {
   "source": "armdef-0.5-core-character-creation",

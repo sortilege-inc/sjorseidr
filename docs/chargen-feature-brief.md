@@ -24,7 +24,7 @@ pages are otherwise untouched.
 6. **Virtue/Flaw list:** the **full** core set (452 Virtues + 379 Flaws).
 
 ## Repo & conventions
-- Repo: `/home/hewhocutsdown/Working/2025-2026 Sjórseiðr/sjorseidr`; GitHub Pages
+- Repo: `/home/hewhocutsdown/Sortilege/Campaigns/2025 Sjórseiðr/sjorseidr`; GitHub Pages
   `sortilege-inc/sjorseidr`, deploys from `main`.
 - Static, **no-build**: plain HTML per page + JSON fetched at runtime
   (`fetch('./x.json', {cache:'no-store'})`). No bundler/framework/runtime deps.
@@ -51,7 +51,7 @@ pages are otherwise untouched.
   familiar, activeWounds, biography }`. The chargen export is a **superset**: add a
   `chargen` block (type, budgets spent/remaining, House free-virtue, parameter
   choices, age math) without breaking the base fields.
-- `scripts/build_rules.py` is the extraction pattern.
+- `sjorseidr-support/scripts/build_rules.py` is the extraction pattern.
 
 ## Corpus (data source)
 `titterpig-corpora/armdef/0.5/armdef-0.5-full.resolved.json` (~10.5 MB — do NOT
@@ -92,7 +92,7 @@ type,value,modifiers}], blocks:[{keyword,value}], sources }`. Verbatim text = th
   Equipment per the corpus passages.
 
 ## Data pipeline
-Add `scripts/build_chargen.py` (mirror `build_rules.py`: same corpus path default,
+Add `sjorseidr-support/scripts/build_chargen.py` (mirror `build_rules.py`: same corpus path default,
 DESCRIPTION-block extraction, argv override, regenerate-after-update docstring).
 Emit `chargen.json` (characteristics + cost table, houses, arts, virtues, flaws,
 abilities, creationRules verbatim, budgets constants sourced to Detailed Character
@@ -114,7 +114,7 @@ clipboard. A finished character must render in `ships.html` if pasted into
 "Chargen") linking `chargen.html`.
 
 ## Verify (prove it)
-`python3 scripts/build_chargen.py` clean (report counts + sizes); serve locally and
+`python3 sjorseidr-support/scripts/build_chargen.py` clean (report counts + sizes); serve locally and
 drive the wizard end-to-end — budgets validate, House free-Virtue applies, export
 round-trips into `ships.html`; zero console errors; share proof. Document
 regenerating the derived JSON after any corpus update.
@@ -123,7 +123,7 @@ regenerating the derived JSON after any corpus update.
 - ✅ **Advisory-mode toggle** (decision 2) — Strict RAW vs Advisory switch in the
   rail; Advisory relaxes the characteristic caps and reframes RAW issues as
   informational. (commit eb39519)
-- ✅ **Foundry (arm5e) export** (decision 3) — `scripts/build_foundry_map.py` +
+- ✅ **Foundry (arm5e) export** (decision 3) — `sjorseidr-support/scripts/build_foundry_map.py` +
   `buildFoundryActor()`; importable Actor JSON for magi/companions/grogs.
   ⚠ verified structurally, not yet by a live Foundry import. (commit 4e5d3ce)
 - ✅ **Guideline-based spell design** (decision 4) — "Design from guidelines" mode

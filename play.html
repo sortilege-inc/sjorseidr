@@ -427,7 +427,7 @@ let FLEET_NOTE = null;
 let RULES_IDX = {}; // normalized rules-entity name -> verbatim DESCRIPTION text (from rules.json)
 
 // Verbatim virtue/flaw/spell text is pulled from rules.json (sliced from the
-// resolved armdef corpus by scripts/build_rules.py) so the sheets aren't
+// resolved armdef corpus by sjorseidr-support/scripts/build_rules.py) so the sheets aren't
 // hard-coding rules prose. Falls back to a character's own embedded description
 // for anything not in the (core-only) corpus — e.g. grog/3rd-party content.
 const rlNorm = s => (s==null?'':String(s)).toLowerCase().split(/\s+/).filter(Boolean).join(' ');

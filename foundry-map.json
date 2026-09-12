@@ -1,7 +1,7 @@
 {
  "meta": {
   "source": "arm5e arm5e-3.0.1-Stentorius",
-  "note": "arm5e Foundry export codes. Regenerate with scripts/build_foundry_map.py."
+  "note": "arm5e Foundry export codes. Regenerate with sjorseidr-support/scripts/build_foundry_map.py."
  },
  "houses": {
   "House Bjornaer": "bjo",
