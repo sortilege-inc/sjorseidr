@@ -2,7 +2,7 @@
   "meta": {
     "title": "Crew & Companion Sheets",
     "source": "Foundry VTT REST API (arm5e system), pulled 2026-07-13",
-    "note": "Covers grogs, companions, and NPC magi. Several are hand-authored non-Foundry cards (no Foundry actor sheet): Hilda and Solving Epicurusson (added 2026-08-12); Carl & Isaac Schmidt (Willhelm's field-research assistants) and the Cruachan magi Gráinne & Tadhg (added 2026-08-12); and Brussel, the púca Willhelm taught (no statblock); and Llewellyn ex Miscellanea (added 2026-08-24). Karl retains only a lightweight note card in ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets."
+    "note": "Covers grogs, companions, and NPC magi. Several are hand-authored non-Foundry cards (no Foundry actor sheet): Hilda and Solving Epicurusson (added 2026-08-12); Carl & Isaac Schmidt (Willhelm's field-research assistants) and the Cruachan magi Gráinne & Tadhg (added 2026-08-12); and Brussel, the púca Willhelm taught (no statblock); and Llewellyn ex Miscellanea (added 2026-08-24). Karl retains only a lightweight note card in ships.json. Tormente, Mímormr, the Capricorn, and Rody (a Faerie changeling) are GM-prep creature statblocks (added 2026-08-08), not Foundry-pulled sheets. Murfolk Hunter and Murfolk Tide-Speaker (aquatic Magic-Human GM-prep statblocks for the Carnac regio Level 3, on the RoP:Magic Atlantean chassis; added 2026-09-12)."
   },
   "npcs": {
     "Adam Smith": {
@@ -10473,6 +10473,483 @@
       "source": "First appears in play Summer 1224 — approached Dagmar at a night market and, after Redcap messages between Ghent and London, joined the ship's northward leg (p054 and the Zeno's-bargain event). Hand-authored non-Foundry card; no statblock established at the table.",
       "shortDescription": "A free-agent magus of House Ex Miscellanea out of the Stonehenge Tribunal — life-extended by a Zeno's-paradox working, and carrying a naturally magical time-quartz crystal.",
       "biography": "Llewellyn ex Miscellanea is a free agent out of the Stonehenge Tribunal (the British Isles) who approached Dagmar at a night market and, after Redcap messages passed between Ghent and London, came aboard the Tide of Memory for its northward leg in Summer 1224 — drawn by the promise of a Magic-aligned, Aquam-tinged regio and “a safe place to catch my breath.”\n\nOn the voyage he confided his secret: caught by Zeno's paradox, he has extended his life by only ever living half his remaining span — a working grown so onerous, and sustained so long, that a sudden failure could be catastrophic. He hopes a regio of irregular time-flow will let him “catch the tide going out.” His time-quartz crystal reads those flows; Dagmar's cursory study found it innately, naturally magical.\n\nHe joined the Fall 1224 expedition past the dragon Tormente into the Carnac regio, where his crystal registered the ‘temporal adjustments’ of the seven-planet conjunction lock and he helped solve it. His parens, sigil, and statblock are not yet established at the table."
+    },
+    "Murfolk Hunter": {
+      "name": "Murfolk Hunter",
+      "foundryName": null,
+      "charType": "entity",
+      "portrait": null,
+      "house": "gen",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 0,
+        "per": 2,
+        "str": 1,
+        "sta": 1,
+        "pre": 0,
+        "com": -1,
+        "dex": 2,
+        "qik": 1
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "Magic Human",
+          "impact": "special",
+          "description": "A distinct Magic-realm humanoid species (RoP:Magic, Magic Humans/Magic Kin) — NOT a warped or transformed human. Magic Resistance = Might (9)."
+        },
+        {
+          "name": "Water-Born",
+          "impact": "special",
+          "description": "Breathes water, swims as easily as others walk, and sees clearly in the murk. Native to the flooded regio; the party are the strange-looking ones here (s16)."
+        },
+        {
+          "name": "Tough (scales)",
+          "impact": "minor",
+          "description": "Webbed, wattled, scaled hide — folded into Soak."
+        },
+        {
+          "name": "Monstrous Appearance",
+          "impact": "minor",
+          "description": "A grotesque, intelligent frog-fish person to human eyes."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Magical Monster",
+          "impact": "special",
+          "description": "A Magic-might creature; subject to the usual vulnerabilities of Magic beings."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Swim",
+          "speciality": "murky water",
+          "xp": 15,
+          "score": 5
+        },
+        {
+          "name": "Hunt",
+          "speciality": "intruders",
+          "xp": 10,
+          "score": 4
+        },
+        {
+          "name": "Awareness",
+          "speciality": "ambush",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Stealth",
+          "speciality": "underwater",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Thrown Weapon",
+          "speciality": "dart",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Single Weapon",
+          "speciality": "barbed spear",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Brawl",
+          "speciality": "dodging",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Survival",
+          "speciality": "the flooded regio",
+          "xp": 6,
+          "score": 3
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": 9,
+      "mightRealm": "Magic",
+      "form": "Aquam",
+      "soak": 2,
+      "combat": [
+        {
+          "name": "Barbed spear (melee)",
+          "init": 3,
+          "attack": 8,
+          "defense": 6,
+          "damage": 6
+        },
+        {
+          "name": "Poisoned dart (thrown)",
+          "init": 1,
+          "attack": 7,
+          "defense": 4,
+          "damage": 1
+        }
+      ],
+      "powers": [
+        {
+          "name": "Water-Born",
+          "cost": "0 points",
+          "init": "n/a",
+          "form": "Aquam (inherent)",
+          "description": "Water-breathing, unhindered movement through water, clear sight in the murk. Always on."
+        },
+        {
+          "name": "Soporific Dart (natural venom)",
+          "cost": "— (natural venom, not a Might power)",
+          "init": "on a hit with the thrown dart",
+          "form": "Natural venom (no realm; resisted by Stamina, treated by Medicine)",
+          "description": "A capture/deter toxin on the dart-tips — the venom that dropped Dagmar into a waking hallucination (p086). It uses the standard ArM5 debilitating-agent frame (ArM5 core, Injury & Recovery): on a hit, the victim makes a Stamina + stress die check vs Ease Factor 12. On a SUCCESS, \"the character suffers nothing more than minor discomfort\" — a round of blurred vision, no lasting penalty. On a FAILURE, instead of a wound the victim falls into a hallucinatory but CONSCIOUS state: awake, seeing things that aren't there, unable to take coherent action (Dagmar's darted daze). It is NON-LETHAL by design and does not worsen like an injury. Shaking it off: the victim may re-roll Stamina + stress die vs Ease Factor 9 at the end of each round; otherwise it lasts the scene. Medicine (not Chirurgy) treats a lingering case. EF 12 is my design pick within the ArM5 poison band (3–15): potent enough to fell a grog or an unlucky magus, resistible by a hardy one. Raise toward 15 to make it frightening, drop toward 9 to make it a nuisance."
+        }
+      ],
+      "vis": "1 pawn of Aquam in the flesh.",
+      "appearance": "A webbed, wattled, scaled frog-fish person — intelligent eyes, a wide amphibian mouth, skin that beads and sheens. Moves between the deep pools and the light-framed underwater homesteads of Level 3.",
+      "source": "GM prep (2026-09-12). Built on the RoP:Magic Atlantean Character Guide (p.90) as an aquatic Magic Human, trimmed to a hunter/ambusher and calibrated against the campaign Capricorn (Might 14). Might/Soak/combat modifiers are my design calibration (adjust to taste); the Atlantean chassis (characteristics, aquatic abilities) is from RoP:Magic. For the Level 3 murfolk of the Carnac regio (s10/s16/p086).",
+      "shortDescription": "Aquatic Magic-Human ambusher of the Carnac regio's Level 3 colony — the many; use one block for the whole war-band.",
+      "biography": "The rank-and-file of the murfolk colony — the archers and dart-throwers who sprang the ambush at the water's edge (p086). Run one block for all of them; they fight as a war-band, not as individuals, and s16's whole point is that this is a PEOPLE defending its home, not a monster to be cleared.\n\nSTATBLOCK — Might 9 (Magic, Aquam); Magic Resistance 9; Size 0; Soak +2. Int 0, Per +2, Pre 0, Com -1, Str +1, Sta +1, Dex +2, Qik +1. Barbed spear: Init +3, Attack +8, Defense +6, Damage +6. Poisoned dart (thrown): Init +1, Attack +7, Defense +4, Damage +1 + toxin. Vis: 1 pawn Aquam in the flesh.\n\nPOWERS — Water-Born (water-breathing / murk-sight, always on); Soporific Dart (natural venom: Stamina vs EF 12; on failure, the waking hallucination — see the power entry).\n\nCALIBRATION — MR 9 is trivial for the magi to penetrate but a real threat to grogs; that matches the fiction (they dropped a grog-adjacent target and darted Dagmar, but it's a social gate, not a kill-box)."
+    },
+    "Murfolk Tide-Speaker": {
+      "name": "Murfolk Tide-Speaker",
+      "foundryName": null,
+      "charType": "entity",
+      "portrait": null,
+      "house": "gen",
+      "parens": "",
+      "sigil": "",
+      "born": null,
+      "age": null,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 2,
+        "per": 1,
+        "str": 0,
+        "sta": 1,
+        "pre": 3,
+        "com": 2,
+        "dex": 1,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "Magic Human",
+          "impact": "special",
+          "description": "A distinct Magic-realm humanoid species (RoP:Magic). Magic Resistance = Might (15)."
+        },
+        {
+          "name": "Water-Born",
+          "impact": "special",
+          "description": "Breathes water, moves through it unhindered, sees in the murk. Native to the regio."
+        },
+        {
+          "name": "Voice of the Ocean",
+          "impact": "minor",
+          "description": "Its voice carries and commands through and across water (RoP:Magic Atlantean virtue)."
+        },
+        {
+          "name": "Tough (scales)",
+          "impact": "minor",
+          "description": "Scaled hide — folded into Soak."
+        },
+        {
+          "name": "Monstrous Appearance",
+          "impact": "minor",
+          "description": "Grotesque and unmistakably non-human to the party."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Magical Monster",
+          "impact": "special",
+          "description": "A Magic-might creature."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Swim",
+          "speciality": "the deep pools",
+          "xp": 21,
+          "score": 6
+        },
+        {
+          "name": "Leadership",
+          "speciality": "the colony",
+          "xp": 10,
+          "score": 4
+        },
+        {
+          "name": "Awareness",
+          "speciality": "the regio boundary",
+          "xp": 10,
+          "score": 4
+        },
+        {
+          "name": "Survival",
+          "speciality": "the flooded regio",
+          "xp": 10,
+          "score": 4
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "water spirits & regiones",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "reading outsiders",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Guile",
+          "speciality": "a home-ground bluff",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Concentration",
+          "speciality": "holding a ritual",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "(Living Language)",
+          "speciality": "a large vocabulary",
+          "xp": 6,
+          "score": 3
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "might": 15,
+      "mightRealm": "Magic",
+      "form": "Aquam",
+      "soak": 3,
+      "combat": [
+        {
+          "name": "Coral staff",
+          "init": 2,
+          "attack": 5,
+          "defense": 4,
+          "damage": 2
+        }
+      ],
+      "powers": [
+        {
+          "name": "Command the Waters",
+          "cost": "6 points",
+          "init": "Qik−16 (Ritual)",
+          "form": "Aquam (Creo), Ritual",
+          "description": "VERBATIM (RoP:Magic p.94, Men of the Lake): \"Command the Waters 6 points, Init: Qik–16, Aquam R: Sight, D: Mom, T: Ind, Ritual. The character forms a volume of water he sees into a water elemental. This has the same effect as the spell Rarefy the Crude Water (see Chapter 8: Magic Things, Elementals), but with Sight Range. CrAq 40 (Base: 25, +3 Sight): Ritual Power (x2) (40 levels, –2 cost).\" — Slow and dramatic (Init Qik−16): the set-piece where the Tide-Speaker turns the regio's pools against intruders. The elemental it raises has Drown, below."
+        },
+        {
+          "name": "Drown — the raised water elemental's power",
+          "cost": "0 points",
+          "init": "Qik−2",
+          "form": "Aquam/Corpus (Rego)",
+          "description": "VERBATIM (RoP:Magic p.137): \"Drown 0 points, Init equal to (Qik – 2), Aquam R: Touch, D: Sun, T: Ind. After successful melee attack, the elemental can engulf a target whose Size is smaller than its own and attempt to drown him, necessitating a roll to avoid deprivation (ArM5, pages 180-181). The victim can attempt to escape from its clutches each round using the Grappling rules (ArM5, page 174). ReAq(Co) 30 (base 5, +1 Touch, +2 Sun, +1 requisite, +1 constant effect): Greater Power (30 levels, –3 Might cost, +1 Init).\" — Belongs to the elemental Command the Waters raises, not the Tide-Speaker directly: the shaman commands the water; the water drowns you."
+        },
+        {
+          "name": "Still the Shallows",
+          "cost": "1 point",
+          "init": "+0",
+          "form": "Aquam (Rego) — GM-flavor, my design",
+          "description": "An at-will lesser power (design, not from a book): the Tide-Speaker calms or roils the water in the immediate pools — steadying its own people's footing or fouling an intruder's (a modest penalty to a swimmer/wader's Attack and Defense, or clouding the water against sight). Set the exact modifier to taste; flagged as GM-flavor, not a verbatim RoP:Magic power."
+        }
+      ],
+      "vis": "3 pawns of Aquam (blood and coral staff).",
+      "appearance": "Larger and older than the hunters, its wattles grown into a ceremonial ruff, carrying a staff of living coral. It speaks — its voice carries through the water — and it would rather parley than fight on its own ground.",
+      "source": "GM prep (2026-09-12). Aquatic Magic Human on the RoP:Magic Atlantean chassis (p.90), promoted to a colony leader; powers Command the Waters (p.94) and Drown (p.137) reproduced VERBATIM from RoP:Magic. Might 15 set one step above the campaign Capricorn (Might 14) as the encounter's high-water mark; characteristics/abilities/combat are my design calibration. For the s16 negotiation at the Carnac regio Level 3.",
+      "shortDescription": "The murfolk colony's leader and negotiation partner (s16) — a water-shaman who can turn the regio's pools into a drowning elemental. The one that matters at the table.",
+      "biography": "The Tide-Speaker is the leader the party actually deals with once the ambush turns social (s16). It leads a PEOPLE, not a monster nest, and knows exactly what its colony is — voicing the party's likely misreading (that these are Ka'wa'ill's kin; they are convergent adaptation to the same aura, not shared ancestry) will insult it badly.\n\nIt is not a melee threat and knows it. Its leverage is the water itself: given a round it does not spend fighting, Command the Waters (a slow Ritual, Init Qik−16) raises a water elemental from the regio pools, and that elemental can Drown a Size-0 target. That is the stick behind the parley — the reason a negotiation \"you cannot avoid\" is exactly that.\n\nSTATBLOCK — Might 15 (Magic, Aquam); Magic Resistance 15; Size 0; Soak +3. Int +2, Per +1, Pre +3, Com +2, Str 0, Sta +1, Dex +1, Qik 0. Coral staff: Init +2, Attack +5, Defense +4, Damage +2. Vis: 3 pawns Aquam.\n\nPOWERS — Command the Waters (Ritual; raises a water elemental — VERBATIM RoP:Magic p.94); the elemental's Drown (VERBATIM RoP:Magic p.137); Still the Shallows (at-will minor, GM-flavor)."
     }
   }
 }
