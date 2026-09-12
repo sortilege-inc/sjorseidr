@@ -276,6 +276,7 @@ async function load(){
 
   renderFilters();
   render();
+  openFromHash();
   $('#foot').innerHTML = `${PERSONAE.length} characters not aboard the fleet, drawn live from <code>npcs.json</code> and cross-checked against <code>ships.json</code> — anyone later assigned to a ship's crew moves to the <a href="covenant_ledger.html#ships">Ledger's Ships &amp; Land</a> tab automatically. Virtue, flaw, and spell text is reproduced verbatim from the rules corpus where available.`;
 }
 
@@ -553,6 +554,10 @@ function closeSheet(){
 $('#sidebarClose').onclick = closeSheet;
 $('#overlay').onclick = closeSheet;
 document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeSheet(); });
+
+// Deep-link: dramatis_personae.html#<card name> opens that sheet (e.g. linked from a scene's Statblocks row).
+function openFromHash(){ const h=decodeURIComponent((location.hash||'').replace(/^#/,'')); if(h && NPCS[h]) openSheet(h); }
+window.addEventListener('hashchange', openFromHash);
 
 load();
 </script>

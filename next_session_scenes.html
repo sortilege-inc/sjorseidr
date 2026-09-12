@@ -217,6 +217,12 @@ function refLinks(refs){
     + refs.map(r=>`<a href="open_questions.html" title="See ${esc(r)} in Open Questions">${esc(r)}</a>`).join('')
     + `</div>`;
 }
+function statblockLinks(list){
+  if(!list||!list.length) return '';
+  return `<div class="refs"><span class="rl">Statblocks</span>`
+    + list.map(n=>`<a href="dramatis_personae.html#${encodeURIComponent(n)}" title="Open ${esc(n)} on Dramatis Personae">${esc(n)}</a>`).join('')
+    + `</div>`;
+}
 function sceneCard(s){
   const sc = statusClass(s.status);
   return `<div class="scene ${sc}" id="${esc(s.id)}">
@@ -233,6 +239,7 @@ function sceneCard(s){
     </div>
     <p class="hook">${esc(s.hook)}</p>
     ${detailHtml(s.detail)}
+    ${statblockLinks(s.statblocks)}
     ${refLinks(s.refs)}
   </div>`;
 }

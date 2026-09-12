@@ -188,7 +188,11 @@
     "t025",
     "t073"
    ],
-   "brief_section": "§7 — Level 3"
+   "brief_section": "§7 — Level 3",
+   "statblocks": [
+    "Murfolk Hunter",
+    "Murfolk Tide-Speaker"
+   ]
   },
   {
    "id": "s17",
