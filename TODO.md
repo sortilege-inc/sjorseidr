@@ -11,6 +11,22 @@ _Working list for the covenant site. Newest concerns at the top of each section.
   `open_questions.json` (q025). **Decide:** keep the redirect for old bookmarks/links, or
   delete `covenant.html` outright? Then document the canonical page so this doesn't come up again.
 
+## 2026-09-12 session — reconciliation pass (deferred)
+
+_Foundry XP for 1224 is pulled and the session is logged as proposed events p088–p095 (committed `104fe57`). Remaining, per owner decisions:_
+
+- [ ] **Retire** p086 (Regiones the Third cliffhanger — superseded by p088) and p074 (Dagmar learned Aquam, not Finesse).
+- [ ] **Verify** p076 (Éogan/Henri Magic Theory, spring–autumn 1224) and the Terram-reading half of p077/p073.
+- [ ] **Add event:** Dustin & Stijntje learn Aquam from Éogan in **Winter 1225** (not yet logged).
+- [ ] **Retire scene s16** (played as a fight, not a negotiation).
+- [ ] **Resolve t081** (Isle-of-Man title — Rǫgnvaldr's lifetime grant on a Christian oath; p093).
+- [ ] **t038 / t052** (Solving's disappearance): add a *minor* note on the smell-gap → Carnac-regio link (p090).
+- [ ] **New thread:** the Tide of Memory's unsigned enchantments — maker unknown, likely not Solving (p094).
+- [ ] Update scenes **s17** (throne room reached), **s18** (Level 5 / March 1226 active — date known, Llewellyn in situ), **s19** (London gold deferred: Tormente "ask in a few years").
+- [ ] **Llewellyn** now resident in the Carnac regio until Spring 1226 — update his npc card + fleet position.
+- [ ] Leave **t072 / c027** as-is (returning to the Mímormr errand / gold later).
+- [ ] Still not in Foundry: Fall-1224 regio-dive *adventuring* XP (Dagmar/Valdemar) and Wilhelm's integrations.
+
 ## 2026-08-22 session — verification & reconciliation
 
 - [ ] **Prep reconciliation** (deferred until events verified): retire the now-played scenes
