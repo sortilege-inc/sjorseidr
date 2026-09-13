@@ -448,7 +448,7 @@ type, the Maelstrom's Maw's hull type and current/former owner, Stijntje
 Kuiper's magus status.
 
 **Where to find things**, if this ever needs re-running: raw Notion export
-at `/home/hewhocutsdown/Working/Ars Magica/2026 Ars Magica/notion_export/`
+at `/home/hewhocutsdown/Sortilege/Titterpig/RAW/Ars Magica/Ars Magica/2026 Ars Magica/notion_export/`
 (125 Markdown files, outside this repo, not checked in — re-pull from the
 Notion API per the section above if it's gone) against the eight canon
 JSON files listed at the top of this section.
