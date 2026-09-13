@@ -3,9 +3,9 @@
   "title": "XP & Season Activity Tracker",
   "schema_version": 1,
   "note": "Per-member, per-season log of covenant activity and XP. Filter by type (magi / companions / grogs) and by current ship. Cells are empty until filled in a follow-up pass. For magi, a season also records whether the activity was a covenant service; every member records whether a season activity was undertaken and any XP (type + amount).",
-  "as_of": "Summer 1224",
-  "foundryConfirmed": "2026-08-24",
-  "reviewedThroughSeason": "1223-summer"
+  "as_of": "Winter 1224-25",
+  "foundryConfirmed": "2026-09-12",
+  "reviewedThroughSeason": "1224-winter"
  },
  "ships": {
   "tide-of-memory": {
@@ -2588,6 +2588,134 @@
     }
    ],
    "detail": "practice: Language: Latin+8",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dagmar::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 7,
+   "xpType": "Aquam",
+   "targets": [
+    {
+     "type": "Aquam",
+     "xp": 7
+    }
+   ],
+   "detail": "teaching: Aquam+7 (taught by Éogan)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 12,
+   "xpType": "Aquam",
+   "targets": [
+    {
+     "type": "Aquam",
+     "xp": 12
+    }
+   ],
+   "detail": "teaching: Aquam+12 (taught by Éogan)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 26,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 26
+    }
+   ],
+   "detail": "teaching: Magic Theory+26 (taught by Henri, part 1)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 26,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 26
+    }
+   ],
+   "detail": "teaching: Magic Theory+26 (taught by Henri, part 2)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 25,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 25
+    }
+   ],
+   "detail": "teaching: Magic Theory+25 (taught by Henri, part 3)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Teaching+2 (teaching Aquam to Valdemar & Dagmar)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 17,
+   "xpType": "Terram",
+   "targets": [
+    {
+     "type": "Terram",
+     "xp": 17
+    }
+   ],
+   "detail": "reading: Terram+17 (De Lapii)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 17,
+   "xpType": "Terram",
+   "targets": [
+    {
+     "type": "Terram",
+     "xp": 17
+    }
+   ],
+   "detail": "reading: Terram+17 (De Lapii)",
    "covenant": null,
    "source": "foundry"
   }

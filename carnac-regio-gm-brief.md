@@ -178,6 +178,16 @@ Cold, depth, drowning, a tide that does not negotiate. Fatigue and drowning rule
 
 **Two hazards, two clocks.** The tide can kill you today. The aura will change you over years. The party will only ever plan for the first.
 
+### Twilight — the magi's exposure
+
+The exemption means the magi take nothing from *living* here. Their hazard is **Wizard's Twilight**, and in a Magic regio that climbs toward a gateway, a Twilight is not a side effect — it is the crossing arriving early.
+
+The trigger is a botch, not the aura. A magus gains one Warping Point per zero on the botch dice, and (ArM5 p. 168): *"Whenever a maga gains two or more Warping Points from a single event, rather than from prolonged exposure, she must add them to her current total, possibly increasing her Warping Score, and then roll to avoid Twilight."* The aura is aligned, so casting is at a large bonus with **no doubled botch dice** (§8) — the danger is the stakes, not the odds. Elementals, poisoned darts, and pressured spellcasting all throw botches, and each is warping aimed at a Twilight.
+
+Avoiding it is **Stamina + Concentration + Vim Form Bonus + stress die**; once inside, comprehending it — getting out with a gain rather than a loss — is **Intelligence + Enigmatic Wisdom + stress die** (ArM5 p. 88). Comprehended: experience, a Mystical Virtue, or a new spell. Uncomprehended: lost experience, lost spells, or a Mystical Flaw.
+
+Twilight draws the magus into the Magic Realm's **Twilight Void** (RoP:Magic Ch. 3) — the Realm the ladder climbs toward, and the King in Yellow's address (§8). A Twilight taken in this regio can arrive at Level 4's occupant with no travel at all.
+
 ### Tormente
 
 Might 40. Stationed at the mouth. **It is not there to guard what comes in.**
@@ -362,6 +372,8 @@ That is exactly the ammunition Llewellyn needs and exactly the trap Erobos warne
 | Magic in regiones; doubled botch dice in foreign-realm regiones | Same |
 | Aura ratings 1–10; 10 as gateway to the realm | ArM5 p. 183–184 |
 | Warping from strong auras (6+); same-realm exemption | ArM5 p. 167–168 |
+| Wizard's Twilight; 2+ warping in one event triggers a check | ArM5 p. 168 |
+| Twilight avoidance (Sta + Concentration + Vim); comprehension (Int + Enigmatic Wisdom) | ArM5 p. 88 |
 | InVi guideline lvl 3 — detect regio boundaries; Vision target gives the route | Spell guidelines, Vim |
 | Tethers; natural/preternatural; Might ÷ 10; monuments per century | RoP:Magic Ch. 2 |
 | Aligned auras; Aquam alignment; difficulty leaving | RoP:Magic Ch. 2 |
