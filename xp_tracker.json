@@ -200,7 +200,8 @@
    "role": "Magus (Bonisagus), guest",
    "ship": "hound-of-cassel",
    "house": "Bonisagus), guest",
-   "firstYear": 1223
+   "firstYear": 1223,
+   "firstSeason": "1223-summer"
   },
   {
    "id": "Valerian de Castellane",
@@ -2240,18 +2241,18 @@
   "Valerian de Castellane::1222-fall": {
    "activity": true,
    "deferred": false,
-   "act": "practice",
-   "xp": 4,
+   "act": "exposure",
+   "xp": 2,
    "xpType": "Profession: Scribe",
    "targets": [
     {
      "type": "Profession: Scribe",
-     "xp": 4
+     "xp": 2
     }
    ],
-   "detail": "practice: Profession: Scribe+4",
+   "detail": "exposure: Profession: Scribe+2",
    "covenant": null,
-   "source": "gm-ruling"
+   "source": "foundry"
   },
   "Dustin Page::1222-fall": {
    "activity": true,
@@ -2315,7 +2316,7 @@
    ],
    "detail": "adventuring: Faerie Lore+5",
    "covenant": null,
-   "source": "gm-ruling"
+   "source": "foundry"
   },
   "Valerian de Castellane::1223-spring": {
    "activity": true,
@@ -2331,7 +2332,7 @@
    ],
    "detail": "adventuring: Guile+5",
    "covenant": null,
-   "source": "gm-ruling"
+   "source": "foundry"
   },
   "Valdemar Bjornsson::1220-winter": {
    "activity": true,
@@ -2741,15 +2742,103 @@
    "activity": true,
    "deferred": false,
    "act": "teaching",
-   "xp": 25,
+   "xp": 22,
    "xpType": "Teaching",
    "targets": [
     {
      "type": "Teaching",
-     "xp": 25
+     "xp": 22
     }
    ],
-   "detail": "teaching: Teaching+25",
+   "detail": "teaching: Teaching+22",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valdemar Bjornsson::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 5,
+   "xpType": "Ansuz",
+   "targets": [
+    {
+     "type": "Ansuz",
+     "xp": 5
+    }
+   ],
+   "detail": "practice: Ansuz+5",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Éogan Dobhartha::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "vis",
+   "xp": 15,
+   "xpType": "Aquam",
+   "targets": [
+    {
+     "type": "Aquam",
+     "xp": 15
+    }
+   ],
+   "detail": "vis study (fae Aquam vis): Aquam+15",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valdemar Bjornsson::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Leadership",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Leadership+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valerian de Castellane::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 5,
+   "xpType": "Swim",
+   "targets": [
+    {
+     "type": "Swim",
+     "xp": 5
+    }
+   ],
+   "detail": "practice: Swim+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valerian de Castellane::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 15,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Magic Sensitivity",
+     "xp": 5
+    },
+    {
+     "type": "Code of Hermes",
+     "xp": 5
+    },
+    {
+     "type": "Dead language (Latin)",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Magic Sensitivity+5, Code of Hermes+5, Dead language (Latin)+5",
    "covenant": null,
    "source": "foundry"
   }

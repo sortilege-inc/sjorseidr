@@ -153,7 +153,7 @@ function abbr(t){ if(!t) return ''; if(ART[t]) return ART[t];
 let DATA=null, SEASON_IDX={}, ASOF_IDX=0, REVIEW_IDX=0;
 let filter={type:'all',ship:'all',year:'all'};
 // Seasons before a character joined the covenant are "very dark" — we don't track XP there.
-function preCovenant(m,s){ return m.firstYear!=null && s.year < m.firstYear; }
+function preCovenant(m,s){ if(m.firstSeason && (m.firstSeason in SEASON_IDX)) return (SEASON_IDX[s.id]??1e9) < SEASON_IDX[m.firstSeason]; return m.firstYear!=null && s.year < m.firstYear; }
 // A blank in-covenant season is "no XP earned" (grey) when it's within the reviewed range
 // (meta.reviewedThroughSeason); otherwise just "not recorded". Magi never grey — a blank
 // magus season is an omission, not confirmed no-XP.
@@ -172,7 +172,7 @@ async function load(){
   catch(e){ $('#grid').outerHTML=`<div class="empty-note">Could not load xp_tracker.json — serve over http.<br>${esc(e.message)}</div>`; return; }
   $('#subtitle').textContent=DATA.meta.note||'';
   SEASON_IDX={}; DATA.seasons.forEach((s,i)=>SEASON_IDX[s.id]=i);
-  ASOF_IDX=DATA.seasons.findIndex(s=>(s.label||'').includes(DATA.meta.as_of||' '));
+  ASOF_IDX=DATA.seasons.findIndex(s=>(s.label||'').includes(DATA.meta.as_of||' '));
   if(ASOF_IDX<0) ASOF_IDX=DATA.seasons.length-1;
   REVIEW_IDX = (DATA.meta.reviewedThroughSeason in SEASON_IDX) ? SEASON_IDX[DATA.meta.reviewedThroughSeason] : ASOF_IDX;
   $('#foot').innerHTML=`As of <b>${esc(DATA.meta.as_of||'')}</b>. `
