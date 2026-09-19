@@ -2815,7 +2815,7 @@
   "sort_iso": "1224-05-05T12:00",
   "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
   "season_activity": true,
-  "status": "Incomplete",
+  "status": "Proposed",
   "body_text": "Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen.",
   "body_html": "<p>Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen.</p>"
  },
@@ -3099,5 +3099,102 @@
   "status": "Historical",
   "body_text": "The base sits at **Laxey** on the Isle of Man's east coast, on a Magic aura (GM: 'R3' — aura 3). It reads as a Norse settlement stepped back in time: longhouses built largely of local **stone** rather than scarce timber (a side-effect of the island's mining), giving it more of an English-country look than the arrivals expect.\nA stone slipway hauls ships out for cleaning and repair, and a small shipwright's operation is already running. Fields have been sown with the starting money, the grog families who chose to settle have their farmsteads up, and a small creek feeds the settlement in bracing, salt-laden sea air.\nThe great hall **Nóatún** ('place of ships') — finished the year before, where the coven means to winter — is itself dwarfed by **Undrahöll** ('Hall of Wonders') rising on the promontory above the harbour: Valdemar's laboratory-hall. One enormous longhouse (~4,500 sq ft), a single structure wider in the belly, with a gallery walk end to end and modern amenities (fireplaces); the working lab-chamber is walled off for Safety, living quarters are reserved for Valdemar and Rán, and the whole faces the sea for the idyllic-surroundings benefit. It is kitted with the best tools and equipment, which drive the cost far past the ~40£ structure toward the ~100£ total. The township is effectively built AROUND the lab — a covenant town.\nA mundane custos/majordomo runs the place (see the following event). The site's recorded history is thin enough that the covenant is effectively its founder — it may or may not have been a harbour before 1220.\nThe arrivals react in character: Wilhelm — a sophisticated urbanite — is seasick and does not even register the style as Norse; Dustin is awed by the scale and a little jealous of the space beside his cramped shipboard lab; Éogan is excited by what a proper laboratory makes possible (inventing spells).",
   "body_html": "<p>The base sits at <strong>Laxey</strong> on the Isle of Man&#39;s east coast, on a Magic aura (GM: &#39;R3&#39; — aura 3). It reads as a Norse settlement stepped back in time: longhouses built largely of local <strong>stone</strong> rather than scarce timber (a side-effect of the island&#39;s mining), giving it more of an English-country look than the arrivals expect.</p><p>A stone slipway hauls ships out for cleaning and repair, and a small shipwright&#39;s operation is already running. Fields have been sown with the starting money, the grog families who chose to settle have their farmsteads up, and a small creek feeds the settlement in bracing, salt-laden sea air.</p><p>The great hall <strong>Nóatún</strong> (&#39;place of ships&#39;) — finished the year before, where the coven means to winter — is itself dwarfed by <strong>Undrahöll</strong> (&#39;Hall of Wonders&#39;) rising on the promontory above the harbour: Valdemar&#39;s laboratory-hall. One enormous longhouse (~4,500 sq ft), a single structure wider in the belly, with a gallery walk end to end and modern amenities (fireplaces); the working lab-chamber is walled off for Safety, living quarters are reserved for Valdemar and Rán, and the whole faces the sea for the idyllic-surroundings benefit. It is kitted with the best tools and equipment, which drive the cost far past the ~40£ structure toward the ~100£ total. The township is effectively built AROUND the lab — a covenant town.</p><p>A mundane custos/majordomo runs the place (see the following event). The site&#39;s recorded history is thin enough that the covenant is effectively its founder — it may or may not have been a harbour before 1220.</p><p>The arrivals react in character: Wilhelm — a sophisticated urbanite — is seasick and does not even register the style as Norse; Dustin is awed by the scale and a little jealous of the space beside his cramped shipboard lab; Éogan is excited by what a proper laboratory makes possible (inventing spells).</p>"
+ },
+ {
+  "file": "",
+  "title": "Valdemar pitches an Isle-of-Man base — and the covenant authorizes it",
+  "icon": "🗺️",
+  "activity_type": "Narrative",
+  "cast": [
+   "Valdemar",
+   "Dagmar",
+   "Éogan",
+   "Dustin"
+  ],
+  "timeline": "❄️ Winter 1221-22",
+  "date": "Winter 1221-22",
+  "sort_iso": "1221-12-20T12:00",
+  "notes": "Split from the former p078 'base revealed' event (owner review 2026-08-23): the Winter 1221-22 pitch + authorization. Leads into the Summer 1222 survey ('Establishing a dock and base on the Isle of Man', now Incomplete) and the Spring 1224 arrival (the 'Isle-of-Man base revealed' event). Cost: 50 Mythic pounds — the authorized start-up outlay for the Isle-of-Man base (of a ~130£ full estimate). Transcript, 2026-08-22 session (backstory). · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Wintering in Bruges is expensive and yields little, so over the winter Valdemar proposes the covenant establish an anchorage of its own — a remote place to winter, haul ships up for repair, and house grog families — funded largely by his own piracy rather than the covenant purse.\nHe argues for seeking the local lord's PERMISSION and legitimate title rather than squatting a pirate's cove ('permission rather than forgiveness'), and asks for ~50 Mythic pounds to start (of a ~130£ full estimate — 5£ quarters per magus, 1£ per grog family, plus construction).\nThe magi debate: Dagmar is wary of tying resources to a stationary site (the covenant is deliberately mobile) unless it sits on a strong Magic aura they can claim; Éogan is for it if it pays its way; all agree it must generate income, not be a financial sink.\nPeripheral-Code note raised: magi may not swear fealty or serve as court wizards, but may hold a landed site; the Isle of Man's jurisdictional grey zone — not clearly in any Tribunal — is a feature Valdemar sought.\nThe covenant authorizes the venture; Valdemar will scout and establish it.",
+  "body_html": "<p>Wintering in Bruges is expensive and yields little, so over the winter Valdemar proposes the covenant establish an anchorage of its own — a remote place to winter, haul ships up for repair, and house grog families — funded largely by his own piracy rather than the covenant purse.</p><p>He argues for seeking the local lord&#39;s PERMISSION and legitimate title rather than squatting a pirate&#39;s cove (&#39;permission rather than forgiveness&#39;), and asks for ~50 Mythic pounds to start (of a ~130£ full estimate — 5£ quarters per magus, 1£ per grog family, plus construction).</p><p>The magi debate: Dagmar is wary of tying resources to a stationary site (the covenant is deliberately mobile) unless it sits on a strong Magic aura they can claim; Éogan is for it if it pays its way; all agree it must generate income, not be a financial sink.</p><p>Peripheral-Code note raised: magi may not swear fealty or serve as court wizards, but may hold a landed site; the Isle of Man&#39;s jurisdictional grey zone — not clearly in any Tribunal — is a feature Valdemar sought.</p><p>The covenant authorizes the venture; Valdemar will scout and establish it.</p>"
+ },
+ {
+  "file": "088_2026-09-12_the-murfolk-ambush,-fought-to-a-retreat.md",
+  "title": "The murfolk ambush, fought to a retreat",
+  "icon": "🐸",
+  "activity_type": "Adventuring",
+  "cast": [
+   "Dagmar",
+   "Valdemar Bjornsson",
+   "Llewellyn",
+   "Foxglove",
+   "Pieter",
+   "Garrett"
+  ],
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "sort_iso": "1224-10-07T12:00",
+  "notes": "Merges the former p086 cliffhanger (the Level-3 crossing and the sprung ambush) into the resolved fight. The negotiation of s16 did not happen — it went straight to a fight, then a withdrawal. Session recap 2026-09-12 (Ars Magica transcript). · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Past Tormente and the aligned second chamber, the party crosses into **Level 3**: a bioluminescent marsh — fungi above and below the water, shin-deep paths that dip between deep pools, and **underwater 'homesteads'** framed in light, with figures moving in the depths. The murfolk spring their ambush — an arrow at Garrett's feet, then a dart in Dagmar's neck (he is the least combat-capable), arrows and barbed spears from the reeds, and a **coral-staff shaman that summons a water elemental**. As the dart lands Dagmar locks eyes with the shooter — not a merman like Ka'wa'ill but a grotesque, intelligent **frog-fish person**.\n\nThe fight turns on a handful of strokes. **Pieter** cuts the dart out of Dagmar's neck; Dagmar's Stamina holds (a natural 18), and the venom takes him the *other* way — an innervating dose rather than a poison, **+3 to defense for the encounter**. **Llewellyn's Ball of Abysmal Flame** kills murfolk outright — they have no resistance worth the name against his penetration. **Dagmar** spontaneously casts Call to Slumber and drops the shaman. **Valdemar's** Hermetic attempt to command the water elemental fails; switching to **viktir Norse magic (the Laguz rune)** he restrains it instead — its water turned to wet cement. **Foxglove** is cut down to two heavy wounds and barely stabilized.\n\nDagmar calls the retreat. Killing through the colony is possible but ruinous; the covenant's people are bleeding.",
+  "body_html": "<p>Past Tormente and the aligned second chamber, the party crosses into <strong>Level 3</strong>: a bioluminescent marsh — fungi above and below the water, shin-deep paths that dip between deep pools, and <strong>underwater &#39;homesteads&#39;</strong> framed in light, with figures moving in the depths. The murfolk spring their ambush — an arrow at Garrett&#39;s feet, then a dart in Dagmar&#39;s neck (he is the least combat-capable), arrows and barbed spears from the reeds, and a <strong>coral-staff shaman that summons a water elemental</strong>. As the dart lands Dagmar locks eyes with the shooter — not a merman like Ka&#39;wa&#39;ill but a grotesque, intelligent <strong>frog-fish person</strong>.</p><p>The fight turns on a handful of strokes. <strong>Pieter</strong> cuts the dart out of Dagmar&#39;s neck; Dagmar&#39;s Stamina holds (a natural 18), and the venom takes him the <em>other</em> way — an innervating dose rather than a poison, <strong>+3 to defense for the encounter</strong>. <strong>Llewellyn&#39;s Ball of Abysmal Flame</strong> kills murfolk outright — they have no resistance worth the name against his penetration. <strong>Dagmar</strong> spontaneously casts Call to Slumber and drops the shaman. <strong>Valdemar&#39;s</strong> Hermetic attempt to command the water elemental fails; switching to <strong>viktir Norse magic (the Laguz rune)</strong> he restrains it instead — its water turned to wet cement. <strong>Foxglove</strong> is cut down to two heavy wounds and barely stabilized.</p><p>Dagmar calls the retreat. Killing through the colony is possible but ruinous; the covenant&#39;s people are bleeding.</p>"
+ },
+ {
+  "file": "089_2026-09-12_the-upper-path-and-the-empty-throne.md",
+  "title": "The upper path and the empty throne",
+  "icon": "👑",
+  "activity_type": "Exploration",
+  "cast": [
+   "Dagmar",
+   "Valdemar Bjornsson",
+   "Llewellyn"
+  ],
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "sort_iso": "1224-10-08T10:00",
+  "notes": "Level 4 reached — not through the colony but around it. Confirms the throne is empty and the deeper passage (Level 5) is locked. Merges the former p090 'the scent that is missing' — links the Carnac regio to Solving's vanishing and to the Bruges anomaly (feeds the Solving thread). Session recap 2026-09-12 (Ars Magica transcript). · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Dagmar's Piercing the Magic Veil shows a **second entrance above the one they came through**, a kept-but-unwalked path where the evidence of murfolk stops. It climbs out of the water into a cavern: a long drop to dark water, a **radiant quartz bridge with its own inner light**, a **giant nautilus shell** at the center, and a **magnificent, empty throne**. Planetary symbols hang in an arc above it, as in the second chamber — and, like there, they **drift subtly, tracking the true spheres**.\n\nThe aura here reads *weaker* than the colony below — magic at ebb, as if tidal. The passage on is a locked way into the deeper regio. The room is pristine, expectant, abandoned.\n\nWorking the throne room with a spontaneous **examine-the-regio** casting, Dagmar's sensory tests return **nothing for smell** — his own scent is being **leeched off him**, a gap where a sense should be. He recognizes it twice over: from **Bruges**, and from the space where **Solving vanished**, which the grogs led him to years ago — a place that was not electric or ozone-touched but *clean*, missing its natural smell. The same absence is here, in a regio whose magic runs tidal and whose deepest door is a gateway.",
+  "body_html": "<p>Dagmar&#39;s Piercing the Magic Veil shows a <strong>second entrance above the one they came through</strong>, a kept-but-unwalked path where the evidence of murfolk stops. It climbs out of the water into a cavern: a long drop to dark water, a <strong>radiant quartz bridge with its own inner light</strong>, a <strong>giant nautilus shell</strong> at the center, and a <strong>magnificent, empty throne</strong>. Planetary symbols hang in an arc above it, as in the second chamber — and, like there, they <strong>drift subtly, tracking the true spheres</strong>.</p><p>The aura here reads <em>weaker</em> than the colony below — magic at ebb, as if tidal. The passage on is a locked way into the deeper regio. The room is pristine, expectant, abandoned.</p><p>Working the throne room with a spontaneous <strong>examine-the-regio</strong> casting, Dagmar&#39;s sensory tests return <strong>nothing for smell</strong> — his own scent is being <strong>leeched off him</strong>, a gap where a sense should be. He recognizes it twice over: from <strong>Bruges</strong>, and from the space where <strong>Solving vanished</strong>, which the grogs led him to years ago — a place that was not electric or ozone-touched but <em>clean</em>, missing its natural smell. The same absence is here, in a regio whose magic runs tidal and whose deepest door is a gateway.</p>"
+ },
+ {
+  "file": "091_2026-09-12_the-conjunction-dated,-and-llewellyn-sta.md",
+  "title": "The conjunction dated, and Llewellyn stays behind",
+  "icon": "🪐",
+  "activity_type": "Plot",
+  "cast": [
+   "Llewellyn",
+   "Dagmar",
+   "Valdemar Bjornsson"
+  ],
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "sort_iso": "1224-10-09T12:00",
+  "notes": "Sets the March 1226 clock in play and parks Llewellyn at Carnac until it. Ties s18. Session recap 2026-09-12 (Ars Magica transcript). · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Reading the throne's drifting spheres against Abu Ma'shar's work on the great conjunctions, **Llewellyn** places the next one: **Spring 1226**. The regio's magic is cyclical and at ebb; the deeper door is keyed to that conjunction, not to the constant aura. Rather than leave and lose the thread, **Llewellyn elects to remain in the regio** — sustaining himself by magic — to be present when the way opens. Dagmar judges the party too hurt to press on, and undertakes to **return by the conjunction**, well under a year and a half off. From Autumn 1224, the clock reads to Spring 1226.",
+  "body_html": "<p>Reading the throne&#39;s drifting spheres against Abu Ma&#39;shar&#39;s work on the great conjunctions, <strong>Llewellyn</strong> places the next one: <strong>Spring 1226</strong>. The regio&#39;s magic is cyclical and at ebb; the deeper door is keyed to that conjunction, not to the constant aura. Rather than leave and lose the thread, <strong>Llewellyn elects to remain in the regio</strong> — sustaining himself by magic — to be present when the way opens. Dagmar judges the party too hurt to press on, and undertakes to <strong>return by the conjunction</strong>, well under a year and a half off. From Autumn 1224, the clock reads to Spring 1226.</p>"
+ },
+ {
+  "file": "093_2026-09-12_the-isle-of-man-title.md",
+  "title": "The Isle-of-Man title: Rǫgnvaldr's lifetime grant",
+  "icon": "📜",
+  "activity_type": "Diplomacy",
+  "cast": [
+   "Valdemar Bjornsson"
+  ],
+  "timeline": "☀️ Summer 1222",
+  "date": "Summer 1222 (recounted Winter 1224)",
+  "sort_iso": "1222-06-25T12:00",
+  "notes": "Fills in how Valdemar holds the Isle-of-Man land. Resolves t081. Session recap 2026-09-12 (Ars Magica transcript). · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "The lord Valdemar dealt with is **Rǫgnvaldr (Reginald), King of Man and the Isles** — Norse-Gaelic, a fair ruler whose island has stayed out of open conflict, though a rival **brother** angles for it. Valdemar offered presence and a taxpaying settlement, no fealty and no English alliance; the king, wanting a quiet defensive asset, agreed. The terms: the land is Valdemar's **for his lifetime only, not heritable**, sealed by a **Christian oath sworn on God's name not to ally with the king's enemies** — no court-wizard service. Valdemar, viktir and no Christian, gives the oath and means to keep his word regardless. The lack of a church in the settlement is left unremarked; with Father Lachlan and Christian covenfolk building there, one will come.",
+  "body_html": "<p>The lord Valdemar dealt with is <strong>Rǫgnvaldr (Reginald), King of Man and the Isles</strong> — Norse-Gaelic, a fair ruler whose island has stayed out of open conflict, though a rival <strong>brother</strong> angles for it. Valdemar offered presence and a taxpaying settlement, no fealty and no English alliance; the king, wanting a quiet defensive asset, agreed. The terms: the land is Valdemar&#39;s <strong>for his lifetime only, not heritable</strong>, sealed by a <strong>Christian oath sworn on God&#39;s name not to ally with the king&#39;s enemies</strong> — no court-wizard service. Valdemar, viktir and no Christian, gives the oath and means to keep his word regardless. The lack of a church in the settlement is left unremarked; with Father Lachlan and Christian covenfolk building there, one will come.</p>"
  }
 ]
