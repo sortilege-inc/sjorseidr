@@ -81,19 +81,18 @@
   "sort_iso": "1224-07-15T12:00",
   "session": "2026-08-08",
   "scene": "Summer 1224 — the Isle of Man",
-  "title": "Valdemar copies Legends of Brittany with the assistance of Valerian",
+  "title": "Valerian copies Legends of Brittany",
   "icon": "⚖️",
   "timeline": "☀️ Summer 1224",
   "date": "Summer 1224",
   "cast": [
-   "Valdemar",
    "Valerian"
   ],
-  "activity_type": "Trade",
+  "activity_type": "Copying",
   "status": "Proposed",
   "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed. · Retitled and rescoped to the book-copying (owner review 2026-08-23); the base-buildout is covered by the Isle-of-Man establishment events.",
-  "body_text": "With Valerian's help, Valdemar makes a surreptitious copy of Legends of Brittany to keep — exploiting cross-tribunal copy-law so the original can be returned while the covenant keeps the copy (see t076)."
+  "notes": "Reattributed to Valerian (owner, 2026-09-19); the copy is his covenant service. Continues in Fall 1224 and completes in Winter 1224-25. Foundry: Valerian 'Copying book: Legends of Brittany', Summer 1224 (no XP).",
+  "body_text": "Valerian — the covenant's scribe (a former Quaesitor) — begins a surreptitious copy of Legends of Brittany, exploiting cross-tribunal copy-law so the borrowed original can be returned while the covenant keeps the copy (see t076). A season of scribework, no experience gained."
  },
  {
   "id": "p072",
@@ -134,25 +133,6 @@
   "body_text": "Declared: Dustin returns to Oleron to collect the Terram summa won at Tribunal and settle in to study it."
  },
  {
-  "id": "p074",
-  "file": "",
-  "sort_iso": "1224-12-05T12:00",
-  "session": "2026-08-08",
-  "scene": "Winter 1224-25 — the Isle of Man",
-  "title": "Dagmar studies Finesse (declared)",
-  "icon": "📖",
-  "timeline": "❄️ Winter 1224-25",
-  "date": "Winter 1224-25",
-  "cast": [
-   "Dagmar"
-  ],
-  "activity_type": "Study",
-  "status": "Proposed",
-  "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Declared seasonal plan; not yet played.",
-  "body_text": "Declared: wintering at the Isle of Man, Dagmar studies a Finesse tractatus — a skill he can improve without needing an Art present."
- },
- {
   "id": "p075",
   "file": "",
   "sort_iso": "1224-12-06T12:00",
@@ -174,13 +154,13 @@
  {
   "id": "p076",
   "file": "",
-  "sort_iso": "1224-12-07T12:00",
+  "sort_iso": "1224-03-25T12:00",
   "session": "2026-08-08",
-  "scene": "Winter 1224-25 — the Isle of Man",
-  "title": "Éogan borrows Henry to study Magic Theory (declared)",
+  "scene": "Spring 1224 — the Isle of Man",
+  "title": "Éogan borrows Henri to study Magic Theory (declared)",
   "icon": "📖",
-  "timeline": "❄️ Winter 1224-25",
-  "date": "Winter 1224-25",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
   "cast": [
    "Éogan"
   ],
@@ -188,26 +168,7 @@
   "status": "Proposed",
   "source": "Seasonal activities, 2026-08-08 session.",
   "notes": "Declared seasonal plan. Magic Theory study Foundry-confirmed across Spring–Fall 1224 (MT +26/+26/+25). The reciprocal Aquam instruction for Stijntje & Dustin has been dropped from this event — Dustin/Stijntje taking Aquam instruction from Éogan is deferred to Winter 1225-26 (owner, 2026-09-19).",
-  "body_text": "Declared: Éogan borrows Henry as a personal tutor to raise his Magic Theory toward the talisman he wants."
- },
- {
-  "id": "p077",
-  "file": "",
-  "sort_iso": "1224-12-08T12:00",
-  "session": "2026-08-08",
-  "scene": "Winter 1224-25 — Oleron / the Isle of Man",
-  "title": "Dustin studies the Terram summa (declared)",
-  "icon": "📖",
-  "timeline": "❄️ Winter 1224-25",
-  "date": "Winter 1224-25",
-  "cast": [
-   "Dustin"
-  ],
-  "activity_type": "Study",
-  "status": "Proposed",
-  "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Declared seasonal plan. The Terram study (De Lapii) is Foundry-confirmed for Summer and Winter 1224-25 (Terram +17 each). Dustin/Stijntje taking Aquam instruction from Éogan is deferred to Winter 1225-26 (owner, 2026-09-19).",
-  "body_text": "Declared: Dustin continues with the Terram summa (De Lapii, Terram)."
+  "body_text": "Declared: Éogan borrows Henri as a personal tutor to raise his Magic Theory toward the talisman he wants."
  },
  {
   "id": "p092",
@@ -230,44 +191,60 @@
   "body_text": "Exiting past **Tormente**, the party finds it content — it does not ask after the member left behind. Dagmar raises the gold again: Tormente had expressed interest in trading it for something from the outside world. Asked what it wants, the dragon answers only **\"Ask me in a few years.\"** The brokering is not refused, only deferred; the covenant will convert the five bags on its own account in the meantime."
  },
  {
-  "id": "p094",
-  "file": "094_2026-09-12_the-tide-of-memorys-unsigned-enchantment.md",
-  "sort_iso": "1224-12-10T12:00",
-  "session": "2026-09-12",
-  "scene": "Winter 1224-25 — aboard the Tide of Memory",
-  "title": "The Tide of Memory's unsigned enchantments",
-  "icon": "🔍",
-  "timeline": "❄️ Winter 1224-25",
-  "date": "Winter 1224-25",
+  "id": "p096",
+  "file": "",
+  "sort_iso": "1224-10-15T12:00",
+  "session": "2026-09-19",
+  "scene": "Fall 1224 — the Isle of Man",
+  "title": "Valerian continues copying Legends of Brittany",
+  "icon": "✍️",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
   "cast": [
-   "Éogan Dobhartha",
-   "Dagmar"
+   "Valerian"
   ],
-  "activity_type": "Investigation",
+  "activity_type": "Copying",
   "status": "Proposed",
-  "notes": "New small mystery; complicates the assumption that Solving built the ship's items.",
-  "source": "Session recap 2026-09-12 (Ars Magica transcript).",
-  "body_text": "Éogan and Dagmar go looking for paperwork on the **custom magic items aboard the Tide of Memory** and find none. The likelier reading is that they **came with the ship** or were made by a covenant magus **before** the current company — not, as Dagmar had assumed, by **Solving**."
+  "source": "Owner direction 2026-09-19 (Valerian continues the copy).",
+  "notes": "Continuation of the Legends of Brittany copy; no XP (copying service).",
+  "body_text": "Valerian carries the copy of Legends of Brittany forward through the autumn — a second season of scribework, still no experience gained."
  },
  {
-  "id": "p095",
-  "file": "095_2026-09-12_éogan-teaches-aquam;-valdemar-and-dagmar.md",
-  "sort_iso": "1224-12-20T12:00",
-  "session": "2026-09-12",
-  "scene": "Winter 1224-25 — Undrahöll",
-  "title": "Éogan teaches Aquam; Valdemar and Dagmar study it",
-  "icon": "💧",
+  "id": "p097",
+  "file": "",
+  "sort_iso": "1224-12-15T12:00",
+  "session": "2026-09-19",
+  "scene": "Winter 1224-25 — the Isle of Man",
+  "title": "Valerian completes the copy of Legends of Brittany",
+  "icon": "📗",
   "timeline": "❄️ Winter 1224-25",
   "date": "Winter 1224-25",
   "cast": [
-   "Éogan Dobhartha",
-   "Valdemar Bjornsson",
-   "Dagmar"
+   "Valerian"
   ],
-  "activity_type": "Study",
+  "activity_type": "Copying",
   "status": "Proposed",
-  "notes": "The winter lesson at the Isle-of-Man lab. Foundry XP: Valdemar Aquam+12, Dagmar Aquam+7, Éogan Teaching+2 (covenant service).",
-  "source": "Session recap 2026-09-12 (Ars Magica transcript).",
-  "body_text": "His Hermetic command of the water elemental having failed where his viktir working held it, **Valdemar** resolves to lean into the form the Isle-of-Man lab most favors. **Éogan** — the covenant's strongest Aquam magus — teaches **Aquam** over the winter; **Valdemar** (declining to take the harder viktir-conversion route, this time learning Aquam straight) and **Dagmar** both study under him. It is Éogan's covenant service for the year."
+  "source": "Owner direction 2026-09-19 (Valerian continues the copy).",
+  "notes": "Completes the Legends of Brittany copy (three seasons of scribework, Summer–Winter 1224); no XP.",
+  "body_text": "Over the winter Valerian finishes the copy of Legends of Brittany. The covenant keeps the duplicate while the borrowed original can be returned — the copy-law gambit complete (see t076)."
+ },
+ {
+  "id": "p098",
+  "file": "",
+  "sort_iso": "1224-05-05T12:00",
+  "session": "2026-08-08",
+  "scene": "Spring 1224 — the Channel coast (the Diedne Garden)",
+  "title": "Valdemar harvests the Diedne Garden",
+  "icon": "🌿",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Valdemar"
+  ],
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Seasonal activity auto-logged from the session.",
+  "notes": "Moved back to proposed so it reads as a draft (owner, 2026-09-19); not yet owner-reviewed.",
+  "body_text": "Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen."
  }
 ]

@@ -2841,6 +2841,71 @@
    "detail": "adventuring: Magic Sensitivity+5, Code of Hermes+5, Dead language (Latin)+5",
    "covenant": null,
    "source": "foundry"
+  },
+  "Valerian de Castellane::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Dead language (Latin)",
+   "targets": [
+    {
+     "type": "Dead language (Latin)",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Dead language (Latin)+4",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valerian de Castellane::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Dead language (Latin)",
+   "targets": [
+    {
+     "type": "Dead language (Latin)",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Dead language (Latin)+4",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valerian de Castellane::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "copying",
+   "xp": 0,
+   "xpType": "Copying",
+   "targets": [],
+   "detail": "copying: Legends of Brittany",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valerian de Castellane::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "copying",
+   "xp": 0,
+   "xpType": "Copying",
+   "targets": [],
+   "detail": "copying: Legends of Brittany",
+   "covenant": null,
+   "source": "gm-ruling"
+  },
+  "Valerian de Castellane::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "copying",
+   "xp": 0,
+   "xpType": "Copying",
+   "targets": [],
+   "detail": "copying: Legends of Brittany",
+   "covenant": null,
+   "source": "gm-ruling"
   }
  }
 }

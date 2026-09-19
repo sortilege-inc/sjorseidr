@@ -2804,23 +2804,6 @@
  },
  {
   "file": "",
-  "title": "Valdemar harvests the Diedne Garden",
-  "icon": "🌿",
-  "activity_type": "Vis harvest",
-  "cast": [
-   "Valdemar"
-  ],
-  "timeline": "🌼 Spring 1224",
-  "date": "Spring 1224",
-  "sort_iso": "1224-05-05T12:00",
-  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-  "season_activity": true,
-  "status": "Proposed",
-  "body_text": "Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen.",
-  "body_html": "<p>Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen.</p>"
- },
- {
-  "file": "",
   "title": "The feast at Cruachan: Rody delivered, and the matching necklaces",
   "icon": "🍽️",
   "activity_type": "Diplomacy",
@@ -3196,5 +3179,59 @@
   "status": "Historical",
   "body_text": "The lord Valdemar dealt with is **Rǫgnvaldr (Reginald), King of Man and the Isles** — Norse-Gaelic, a fair ruler whose island has stayed out of open conflict, though a rival **brother** angles for it. Valdemar offered presence and a taxpaying settlement, no fealty and no English alliance; the king, wanting a quiet defensive asset, agreed. The terms: the land is Valdemar's **for his lifetime only, not heritable**, sealed by a **Christian oath sworn on God's name not to ally with the king's enemies** — no court-wizard service. Valdemar, viktir and no Christian, gives the oath and means to keep his word regardless. The lack of a church in the settlement is left unremarked; with Father Lachlan and Christian covenfolk building there, one will come.",
   "body_html": "<p>The lord Valdemar dealt with is <strong>Rǫgnvaldr (Reginald), King of Man and the Isles</strong> — Norse-Gaelic, a fair ruler whose island has stayed out of open conflict, though a rival <strong>brother</strong> angles for it. Valdemar offered presence and a taxpaying settlement, no fealty and no English alliance; the king, wanting a quiet defensive asset, agreed. The terms: the land is Valdemar&#39;s <strong>for his lifetime only, not heritable</strong>, sealed by a <strong>Christian oath sworn on God&#39;s name not to ally with the king&#39;s enemies</strong> — no court-wizard service. Valdemar, viktir and no Christian, gives the oath and means to keep his word regardless. The lack of a church in the settlement is left unremarked; with Father Lachlan and Christian covenfolk building there, one will come.</p>"
+ },
+ {
+  "file": "",
+  "title": "Dustin studies De Lapii",
+  "icon": "📖",
+  "activity_type": "Study",
+  "cast": [
+   "Dustin"
+  ],
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "sort_iso": "1224-12-08T12:00",
+  "notes": "Dustin's Winter 1224-25 study of De Lapii (Terram summa), Foundry-confirmed (Terram +17; also read Summer 1224). Seasonal activities, 2026-08-08 session. · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Wintering at the Isle of Man, Dustin studies **De Lapii** — the Terram summa won at Tribunal — gaining Terram. His second season with the book (see also Summer 1224).",
+  "body_html": "<p>Wintering at the Isle of Man, Dustin studies <strong>De Lapii</strong> — the Terram summa won at Tribunal — gaining Terram. His second season with the book (see also Summer 1224).</p>"
+ },
+ {
+  "file": "094_2026-09-12_the-tide-of-memorys-unsigned-enchantment.md",
+  "title": "The Tide of Memory's unsigned enchantments",
+  "icon": "🔍",
+  "activity_type": "Investigation",
+  "cast": [
+   "Éogan Dobhartha",
+   "Dagmar"
+  ],
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "sort_iso": "1224-12-10T12:00",
+  "notes": "New small mystery; complicates the assumption that Solving built the ship's items. Session recap 2026-09-12 (Ars Magica transcript). · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Éogan and Dagmar go looking for paperwork on the **custom magic items aboard the Tide of Memory** and find none. The likelier reading is that they **came with the ship** or were made by a covenant magus **before** the current company — not, as Dagmar had assumed, by **Solving**.",
+  "body_html": "<p>Éogan and Dagmar go looking for paperwork on the <strong>custom magic items aboard the Tide of Memory</strong> and find none. The likelier reading is that they <strong>came with the ship</strong> or were made by a covenant magus <strong>before</strong> the current company — not, as Dagmar had assumed, by <strong>Solving</strong>.</p>"
+ },
+ {
+  "file": "095_2026-09-12_éogan-teaches-aquam;-valdemar-and-dagmar.md",
+  "title": "Éogan teaches Aquam; Valdemar and Dagmar study it",
+  "icon": "💧",
+  "activity_type": "Study",
+  "cast": [
+   "Éogan Dobhartha",
+   "Valdemar Bjornsson",
+   "Dagmar"
+  ],
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "sort_iso": "1224-12-20T12:00",
+  "notes": "The winter lesson at the Isle-of-Man lab. Foundry XP: Valdemar Aquam +12, Dagmar Aquam +7, Éogan Teaching +2 (covenant service). Supersedes the retired declared plan of Dagmar studying Finesse — his diary confirms he studied Aquam from Éogan instead. Session recap 2026-09-12 (Ars Magica transcript). · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "His Hermetic command of the water elemental having failed where his viktir working held it, **Valdemar** resolves to lean into the form the Isle-of-Man lab most favors. **Éogan** — the covenant's strongest Aquam magus — teaches **Aquam** over the winter; **Valdemar** (declining to take the harder viktir-conversion route, this time learning Aquam straight) and **Dagmar** both study under him. It is Éogan's covenant service for the year.",
+  "body_html": "<p>His Hermetic command of the water elemental having failed where his viktir working held it, <strong>Valdemar</strong> resolves to lean into the form the Isle-of-Man lab most favors. <strong>Éogan</strong> — the covenant&#39;s strongest Aquam magus — teaches <strong>Aquam</strong> over the winter; <strong>Valdemar</strong> (declining to take the harder viktir-conversion route, this time learning Aquam straight) and <strong>Dagmar</strong> both study under him. It is Éogan&#39;s covenant service for the year.</p>"
  }
 ]
