@@ -187,8 +187,8 @@
   "activity_type": "Study",
   "status": "Proposed",
   "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Declared seasonal plan; not yet played.",
-  "body_text": "Declared: Éogan borrows Henry as a personal tutor to raise his Magic Theory toward the talisman he wants — trading Aquam instruction for Stijntje and Dustin in return."
+  "notes": "Declared seasonal plan. Magic Theory study Foundry-confirmed across Spring–Fall 1224 (MT +26/+26/+25). The reciprocal Aquam instruction for Stijntje & Dustin has been dropped from this event — Dustin/Stijntje taking Aquam instruction from Éogan is deferred to Winter 1225-26 (owner, 2026-09-19).",
+  "body_text": "Declared: Éogan borrows Henry as a personal tutor to raise his Magic Theory toward the talisman he wants."
  },
  {
   "id": "p077",
@@ -196,7 +196,7 @@
   "sort_iso": "1224-12-08T12:00",
   "session": "2026-08-08",
   "scene": "Winter 1224-25 — Oleron / the Isle of Man",
-  "title": "Dustin studies the Terram summa and learns Aquam (declared)",
+  "title": "Dustin studies the Terram summa (declared)",
   "icon": "📖",
   "timeline": "❄️ Winter 1224-25",
   "date": "Winter 1224-25",
@@ -206,8 +206,8 @@
   "activity_type": "Study",
   "status": "Proposed",
   "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Declared seasonal plan; not yet played.",
-  "body_text": "Declared: Dustin continues with the Terram summa and takes Aquam instruction from Éogan."
+  "notes": "Declared seasonal plan. The Terram study (De Lapii) is Foundry-confirmed for Summer and Winter 1224-25 (Terram +17 each). Dustin/Stijntje taking Aquam instruction from Éogan is deferred to Winter 1225-26 (owner, 2026-09-19).",
+  "body_text": "Declared: Dustin continues with the Terram summa (De Lapii, Terram)."
  },
  {
   "id": "p092",

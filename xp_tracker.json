@@ -4,7 +4,7 @@
   "schema_version": 1,
   "note": "Per-member, per-season log of covenant activity and XP. Filter by type (magi / companions / grogs) and by current ship. Cells are empty until filled in a follow-up pass. For magi, a season also records whether the activity was a covenant service; every member records whether a season activity was undertaken and any XP (type + amount).",
   "as_of": "Winter 1224-25",
-  "foundryConfirmed": "2026-09-12",
+  "foundryConfirmed": "2026-09-19",
   "reviewedThroughSeason": "1224-winter"
  },
  "ships": {
@@ -1138,8 +1138,21 @@
    "act": "adventuring",
    "xp": 12,
    "xpType": "Adventuring",
-   "targets": [],
-   "detail": "adventuring",
+   "targets": [
+    {
+     "type": "Code of Hermes",
+     "xp": 4
+    },
+    {
+     "type": "Magic Theory",
+     "xp": 4
+    },
+    {
+     "type": "Magic Lore",
+     "xp": 4
+    }
+   ],
+   "detail": "adventuring: Code of Hermes+4, Magic Theory+4, Magic Lore+4",
    "covenant": null,
    "source": "foundry"
   },
@@ -2245,11 +2258,16 @@
    "deferred": false,
    "act": "adventuring",
    "xp": 5,
-   "xpType": "unallocated",
-   "targets": [],
-   "detail": "adventuring: 5 XP, target pending",
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Corpus",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Corpus+5",
    "covenant": null,
-   "source": "gm-ruling"
+   "source": "foundry"
   },
   "Éogan Dobhartha::1222-spring": {
    "activity": true,
@@ -2716,6 +2734,22 @@
     }
    ],
    "detail": "reading: Terram+17 (De Lapii)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dustin Page::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 25,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 25
+    }
+   ],
+   "detail": "teaching: Teaching+25",
    "covenant": null,
    "source": "foundry"
   }
