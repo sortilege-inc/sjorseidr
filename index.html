@@ -142,17 +142,20 @@ fetch('./sitemap.json', {cache:'no-store'})
   .then(r => r.json())
   .then(map => {
     const secs = map.sections || [];
+    // a section with a top-level href is a direct link; otherwise → its landing page
+    const secHref = s => s.href ? s.href : `section.html?sec=${encodeURIComponent(s.id)}`;
     // top-nav links
     document.getElementById('topnav').insertAdjacentHTML('beforeend',
-      secs.map(s => `<a class="${s.gm?'gm':''}" href="section.html?sec=${encodeURIComponent(s.id)}">${esc(s.title)}</a>`).join(''));
+      secs.map(s => `<a class="${s.gm?'gm':''}" href="${esc(secHref(s))}">${esc(s.title)}</a>`).join(''));
     // one card per section
     document.getElementById('sectionGrid').innerHTML = secs.map(s => {
       const n = (s.cards||[]).length;
-      return `<a class="card ${s.gm?'gm':''}" href="section.html?sec=${encodeURIComponent(s.id)}">
+      const tag = s.href ? (s.tag || 'Open →') : `${n} ${n===1?'entry':'entries'}`;
+      return `<a class="card ${s.gm?'gm':''}" href="${esc(secHref(s))}">
         <span class="card-icon">${esc(s.icon||'')}</span>
         <p class="card-title">${esc(s.title)}</p>
         <p class="card-desc">${esc(s.blurb||'')}</p>
-        <span class="card-tag">${n} ${n===1?'entry':'entries'}</span>
+        <span class="card-tag">${esc(tag)}</span>
       </a>`;
     }).join('');
   })

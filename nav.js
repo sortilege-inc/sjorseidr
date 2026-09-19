@@ -1,31 +1,38 @@
-/* Shared site nav — injected on content subpages. Links point at each
-   section's landing page (section.html?sec=<section>); the current page's
-   section is highlighted. On the full-viewport map apps (.app { height:100vh })
-   the nav shrinks the app to sit below it so nothing overflows. */
+/* Shared site nav — injected on content subpages, driven by sitemap.json so it
+   can never drift from the home page / section landings. A section with a
+   top-level "href" is a direct nav item (its link goes straight to that page);
+   otherwise the link points at its section landing (section.html?sec=<id>).
+   The current page's section is highlighted by matching the filename against
+   each section's href or its cards' hrefs.
+
+   Some page pairs get an in-page toggle rendered as a second row inside the nav
+   (Chronicle of Events <-> Fleet Voyages, Covenant Sheet <-> XP Tracker). It
+   lives inside nav.stnav so the .app fit math (which subtracts nav.offsetHeight)
+   stays correct on the full-viewport map pages.
+
+   On the full-viewport map apps (.app { height:100vh }) the nav shrinks the app
+   to sit below it so nothing overflows. */
 (function () {
   if (document.querySelector('nav.stnav')) return; // idempotent
 
-  var LINKS = [
-    ['Chronicle', 'chronicle'],
-    ['Covenant', 'covenant'],
-    ['Normandy Tribunal', 'tribunal'],
-    ['Reference', 'reference'],
-    ['Tools', 'tools'],
-    ['Storyteller', 'storyteller', true] // gm-styled
-  ];
-  // which home section each page belongs to (for the active highlight)
-  var PAGE_SECTION = {
-    'sjorseidr_chronicle.html': 'chronicle', 'fleet_timeline.html': 'chronicle',
-    'xp_tracker.html': 'covenant',
-    'covenant_ledger.html': 'covenant', 'dramatis_personae.html': 'covenant',
-    'normandy_tribunal_1223.html': 'tribunal', 'tribunal_workbook.html': 'tribunal',
-    'normandy_tribunal_reference.html': 'tribunal',
-    'hiberian.html': 'reference', 'reference.html': 'reference', 'integrating_magic.html': 'reference',
-    'chargen.html': 'tools',
-    'open_questions.html': 'storyteller', 'next_session_scenes.html': 'storyteller'
-  };
   var here = (location.pathname.split('/').pop() || 'index.html');
-  var active = PAGE_SECTION[here];
+
+  // In-page pair toggles, keyed by filename. Each entry lists the two members
+  // (in display order); the current page's button renders active, the other links.
+  var PAIRS = {
+    'sjorseidr_chronicle.html': 'chronicle', 'fleet_timeline.html': 'chronicle',
+    'covenant_ledger.html': 'covenant', 'xp_tracker.html': 'covenant'
+  };
+  var PAIR_MEMBERS = {
+    chronicle: [
+      { href: 'sjorseidr_chronicle.html', label: 'Chronicle of Events', icon: '📖' },
+      { href: 'fleet_timeline.html', label: 'Fleet Voyages by Season', icon: '🚢' }
+    ],
+    covenant: [
+      { href: 'covenant_ledger.html', label: 'Covenant Sheet', icon: '🏛️' },
+      { href: 'xp_tracker.html', label: 'XP Tracker', icon: '📈' }
+    ]
+  };
 
   var css =
     '.stnav{position:sticky;top:0;z-index:1000;display:flex;flex-wrap:wrap;align-items:center;gap:2px;' +
@@ -41,34 +48,85 @@
     '.stnav a.gm{color:#e2a99c}' +
     '.stnav a.gm::before{content:"\\2694 "}' +
     '.stnav a.gm:hover{color:#f2c1b6}' +
-    '.stnav a.gm.active{color:#f2c1b6;border-bottom-color:#b54a32}';
+    '.stnav a.gm.active{color:#f2c1b6;border-bottom-color:#b54a32}' +
+    /* pair toggle: full-width second row inside the nav */
+    '.stnav .stnav-toggle{flex-basis:100%;display:flex;justify-content:center;gap:0;' +
+      'margin:7px 0 1px;padding-top:8px;border-top:1px solid rgba(198,155,63,.28)}' +
+    '.stnav .stnav-toggle .seg{display:inline-flex;border:1px solid #6b5436;border-radius:8px;overflow:hidden;' +
+      'box-shadow:0 1px 6px rgba(50,32,12,.35)}' +
+    '.stnav .stnav-toggle a,.stnav .stnav-toggle span{font-size:12px;letter-spacing:.03em;padding:6px 15px;' +
+      'border:0;border-radius:0;border-bottom:0;color:#e9d8b2;text-decoration:none;background:rgba(30,20,8,.35);' +
+      'display:inline-flex;align-items:center;gap:.4em;transition:.15s}' +
+    '.stnav .stnav-toggle a+a,.stnav .stnav-toggle a+span,.stnav .stnav-toggle span+a{border-left:1px solid #6b5436}' +
+    '.stnav .stnav-toggle a:hover{background:rgba(255,255,255,.08);color:#fff6df}' +
+    '.stnav .stnav-toggle .cur{background:#c69b3f;color:#2a1c0a;font-weight:600;cursor:default}';
   var style = document.createElement('style');
   style.textContent = css;
   document.head.appendChild(style);
 
   var nav = document.createElement('nav');
   nav.className = 'stnav';
-  var html = '<a class="stnav-brand" href="index.html">Sjórseiðr</a>';
-  LINKS.forEach(function (l) {
-    var cls = (l[2] ? 'gm' : '') + ((active === l[1]) ? ' active' : '');
-    var href = 'section.html?sec=' + l[1];
-    html += '<a class="' + cls.trim() + '" href="' + href + '">' + l[0] + '</a>';
-  });
-  nav.innerHTML = html;
+  nav.innerHTML = '<a class="stnav-brand" href="index.html">Sjórseiðr</a>';
   document.body.insertBefore(nav, document.body.firstChild);
 
-  // Full-viewport flex apps (the map pages): shrink so the app fits under the nav.
-  // The nav can wrap to 2 rows on narrow screens, and its height settles after
-  // the webfont loads, so track it with a ResizeObserver rather than measuring once.
-  var app = document.querySelector('.app');
-  if (app && Math.abs(app.getBoundingClientRect().height - window.innerHeight) < 3) {
-    var fit = function () {
-      app.style.height = 'calc(100vh - ' + nav.offsetHeight + 'px)';
-      window.dispatchEvent(new Event('resize')); // let the map re-fit to the new height
-    };
-    fit();
-    if (window.ResizeObserver) { new ResizeObserver(fit).observe(nav); }
-    else { window.addEventListener('resize', fit); }
-    if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fit); }
+  function fitApp() {
+    var app = document.querySelector('.app');
+    if (app && Math.abs(app.getBoundingClientRect().height - window.innerHeight) < 3 + nav.offsetHeight) {
+      var fit = function () {
+        app.style.height = 'calc(100vh - ' + nav.offsetHeight + 'px)';
+        window.dispatchEvent(new Event('resize')); // let the map re-fit to the new height
+      };
+      fit();
+      if (window.ResizeObserver) { new ResizeObserver(fit).observe(nav); }
+      else { window.addEventListener('resize', fit); }
+      if (document.fonts && document.fonts.ready) { document.fonts.ready.then(fit); }
+    }
   }
+
+  function esc(s){ return (s==null?'':String(s)).replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]; }); }
+
+  function render(sections) {
+    // active section: the one whose href, or one of whose card hrefs, is this page
+    var active = null;
+    sections.forEach(function (s) {
+      if (s.href === here) active = s.id;
+      (s.cards || []).forEach(function (c) { if (c.href === here) active = active || s.id; });
+    });
+
+    var html = '';
+    sections.forEach(function (s) {
+      var cls = (s.gm ? 'gm' : '') + ((active === s.id) ? ' active' : '');
+      var href = s.href ? s.href : 'section.html?sec=' + encodeURIComponent(s.id);
+      html += '<a class="' + cls.trim() + '" href="' + esc(href) + '">' + esc(s.title) + '</a>';
+    });
+
+    // in-page pair toggle (second row)
+    var pairId = PAIRS[here];
+    if (pairId && PAIR_MEMBERS[pairId]) {
+      var seg = PAIR_MEMBERS[pairId].map(function (m) {
+        if (m.href === here) return '<span class="cur">' + esc(m.icon) + ' ' + esc(m.label) + '</span>';
+        return '<a href="' + esc(m.href) + '">' + esc(m.icon) + ' ' + esc(m.label) + '</a>';
+      }).join('');
+      html += '<div class="stnav-toggle"><div class="seg">' + seg + '</div></div>';
+    }
+
+    nav.insertAdjacentHTML('beforeend', html);
+    fitApp();
+  }
+
+  fetch('./sitemap.json', { cache: 'no-store' })
+    .then(function (r) { return r.json(); })
+    .then(function (map) { render(map.sections || []); })
+    .catch(function () {
+      // Fallback: sitemap unavailable (e.g. file://). Render a minimal static nav
+      // so the page is still navigable; keeps direct links + the pair toggle.
+      render([
+        { id: 'chronicle', title: 'Chronicle', href: 'sjorseidr_chronicle.html', cards: [{ href: 'fleet_timeline.html' }] },
+        { id: 'dramatis', title: 'Dramatis Personae', href: 'dramatis_personae.html' },
+        { id: 'covenant', title: 'Covenant', href: 'covenant_ledger.html', cards: [{ href: 'xp_tracker.html' }] },
+        { id: 'reference', title: 'Reference' },
+        { id: 'tools', title: 'Tools' },
+        { id: 'storyteller', title: 'Storyteller', gm: true }
+      ]);
+    });
 })();

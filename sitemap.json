@@ -1,13 +1,15 @@
 {
   "meta": {
     "title": "Sjórseiðr — site map",
-    "note": "Single source of truth for the home page's section cards and each section landing page (section.html?sec=<id>). Add a card here and it appears in both the section page and the home-page count."
+    "note": "Single source of truth for the top nav (nav.js, index.html, section.html), the home page's section cards, and each section landing page (section.html?sec=<id>). A section with a top-level \"href\" is a direct nav item: its nav link and home card go straight to that page instead of a section landing, and its \"cards\" list its member pages (used for the active-nav highlight and the in-page pair toggle). Add a card here and it appears in the section page and the home-page count."
   },
   "sections": [
     {
       "id": "chronicle",
       "title": "Chronicle",
       "icon": "📖",
+      "href": "sjorseidr_chronicle.html",
+      "tag": "Chronicle & Fleet",
       "blurb": "The story so far, and where the ships have sailed — the event timeline and the season-by-season voyage map.",
       "cards": [
         { "icon": "📖", "title": "Chronicle of Events", "href": "sjorseidr_chronicle.html", "tag": "History",
@@ -17,43 +19,43 @@
       ]
     },
     {
-      "id": "covenant",
-      "title": "Covenant",
-      "icon": "🏛️",
-      "blurb": "The covenant itself and who crews its ships — the ledger, the playable sheets, the roster, and the dramatis personae.",
+      "id": "dramatis",
+      "title": "Dramatis Personae",
+      "icon": "🎭",
+      "href": "dramatis_personae.html",
+      "tag": "Roster",
+      "blurb": "Foreign magi, dragons, faeries, and spirits who move through the story but don't crew a ship — click any name for a full sheet.",
       "cards": [
-        { "icon": "🏛️", "title": "Covenant Sheet", "href": "covenant_ledger.html#covenant", "tag": "Covenant Sheet",
-          "desc": "Founding, charter, tribunal standing, aegis, loyalty, and covenant-wide virtues & flaws — the Ledger's Covenant tab." },
-        { "icon": "🎲", "title": "Playable Character Sheet", "href": "play.html", "tag": "Play",
-          "desc": "Live ArM5 sheets with dice, spell & combat rollers, in-play trackers, a roll log, and per-character export/import." },
         { "icon": "🎭", "title": "Dramatis Personae", "href": "dramatis_personae.html", "tag": "Dramatis Personae",
-          "desc": "Foreign magi, dragons, faeries, and spirits who move through the story but don't crew a ship — click for full sheets." },
-        { "icon": "📈", "title": "XP & Season Tracker", "href": "xp_tracker.html", "tag": "XP Tracker",
-          "desc": "Every member's season-by-season activity and XP — filterable by type and by ship." },
-        { "icon": "📚", "title": "Covenant Ledger", "href": "covenant_ledger.html#overview", "tag": "Ledger",
-          "desc": "The covenant's true complexity over time — ships & land, labs, inhabitants, library, vis, and economics, with a running change log." }
+          "desc": "Foreign magi, dragons, faeries, and spirits who move through the story but don't crew a ship — click for full sheets." }
       ]
     },
     {
-      "id": "tribunal",
-      "title": "Normandy Tribunal",
-      "icon": "🗺️",
-      "blurb": "The 1223 Tribunal — its covenants, its tournament, and its prizes.",
+      "id": "covenant",
+      "title": "Covenant",
+      "icon": "🏛️",
+      "href": "covenant_ledger.html",
+      "tag": "Sheet & XP",
+      "blurb": "The covenant itself — its sheet, ledger, ships, labs, library, vis and economics, plus the season-by-season XP tracker.",
       "cards": [
-        { "icon": "🗺️", "title": "The Normandy Tribunal — 1223", "href": "normandy_tribunal_1223.html", "tag": "Map & Standings",
-          "desc": "Interactive map of the Tribunal's covenants, with a toggle between covenant profiles and the tournament standings." },
-        { "icon": "📊", "title": "Tribunal Workbook — 1223", "href": "tribunal_workbook.html", "tag": "Workbook",
-          "desc": "Editable scoring workbook — vis sources, library prizes, and tournament brackets, loaded live from the data file." },
-        { "icon": "🕯️", "title": "Vis Sources & Library", "href": "normandy_tribunal_reference.html", "tag": "Reference",
-          "desc": "Reference catalogue of the Tribunal's known vis sources and library holdings." }
+        { "icon": "🏛️", "title": "Covenant Sheet & Ledger", "href": "covenant_ledger.html", "tag": "Covenant Sheet",
+          "desc": "Founding, charter, tribunal standing, aegis and loyalty, plus the covenant's true complexity over time — ships & land, labs, inhabitants, library, vis, and economics, with a running change log." },
+        { "icon": "📈", "title": "XP & Season Tracker", "href": "xp_tracker.html", "tag": "XP Tracker",
+          "desc": "Every member's season-by-season activity and XP — filterable by type and by ship." }
       ]
     },
     {
       "id": "reference",
       "title": "Reference",
       "icon": "📚",
-      "blurb": "Wider lore and rules — beyond the covenant's own waters.",
+      "blurb": "The Normandy Tribunal, wider lore, and rules — beyond the covenant's own waters.",
       "cards": [
+        { "icon": "🗺️", "title": "The Normandy Tribunal — 1223", "href": "normandy_tribunal_1223.html", "tag": "Map & Standings",
+          "desc": "Interactive map of the Tribunal's covenants, with a toggle between covenant profiles and the tournament standings." },
+        { "icon": "📊", "title": "Tribunal Workbook — 1223", "href": "tribunal_workbook.html", "tag": "Workbook",
+          "desc": "Editable scoring workbook — vis sources, library prizes, and tournament brackets, loaded live from the data file." },
+        { "icon": "🕯️", "title": "Vis Sources & Library", "href": "normandy_tribunal_reference.html", "tag": "Tribunal Reference",
+          "desc": "Reference catalogue of the Tribunal's known vis sources and library holdings." },
         { "icon": "🍀", "title": "The Contested Isle: The Hibernian Tribunal", "href": "hiberian.html", "tag": "Hibernia Reference",
           "desc": "Extracted reference data for the Hibernian Tribunal — overview and regional maps for Connacht, Leinster, Meath, Munster, and Ulster." },
         { "icon": "🧭", "title": "Reference", "href": "reference.html", "tag": "Sailing Tables",

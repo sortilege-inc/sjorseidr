@@ -89,11 +89,15 @@ fetch('./sitemap.json', {cache:'no-store'})
   .then(r => r.json())
   .then(map => {
     const secs = map.sections || [];
+    // a section with a top-level href is a direct link; otherwise → its landing page
+    const secHref = s => s.href ? s.href : `section.html?sec=${encodeURIComponent(s.id)}`;
     // top nav (whole site), current section highlighted
     document.getElementById('topnav').insertAdjacentHTML('beforeend',
-      secs.map(s => `<a class="${s.gm?'gm':''} ${s.id===wantId?'active':''}" href="section.html?sec=${encodeURIComponent(s.id)}">${esc(s.title)}</a>`).join(''));
+      secs.map(s => `<a class="${s.gm?'gm':''} ${s.id===wantId?'active':''}" href="${esc(secHref(s))}">${esc(s.title)}</a>`).join(''));
 
     const sec = secs.find(s => s.id === wantId);
+    // Direct sections have no landing page — bounce any stray ?sec= link to the page itself.
+    if(sec && sec.href){ location.replace(sec.href); return; }
     if(!sec){
       document.title = 'Sjórseiðr — section not found';
       document.getElementById('crumbSec').textContent = 'Unknown section';
