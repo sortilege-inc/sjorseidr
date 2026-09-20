@@ -674,25 +674,21 @@ const PANELS={
     let srcHtml;
     if(!avail.length) srcHtml='<p class="vis-none">No vis sources on record.</p>';
     else {
-      const years=[]; for(let y=1220;y<=NYr;y++) years.push(y); // per-year responsibility, backfilled to 1220
       const swatch=k=>`<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${artColor(k)};margin-right:6px;vertical-align:middle"></span>`;
       const useLabel={full:'Full',partial:'Partial'};
-      const head=`<tr><th>Source</th><th>Type</th><th>Season</th><th>Full / Partial</th><th>Yield</th>`+years.map(y=>`<th>${y}</th>`).join('')+`</tr>`;
+      const head=`<tr><th>Source</th><th>Type</th><th>Season</th><th>Full / Partial</th><th>Yield</th><th>Harvested by (${NYr})</th></tr>`;
       const rows=avail.map(v=>{
         const k=artKeyOf(v.art);
         const kind=v.kind==='prize'?'Tribunal prize':(v.kind==='seisin'?'seisin':'');
         const su=useLabel[v.seasonUse]||'Unknown';
-        const H=v.harvests||{};
-        const cells=years.map(y=>{
-          const who=H[String(y)];
-          return `<td class="vh">${who&&who.length?esc(who.join(', ')):'<span class="vh-none">—</span>'}</td>`;
-        }).join('');
+        const who=(v.harvests||{})[String(NYr)];
+        const whoCell=`<td class="vh">${who&&who.length?esc(who.join(', ')):'<span class="vh-none">—</span>'}</td>`;
         return `<tr><td class="vs-nm">${swatch(k)}${esc(v.name)}</td>`
           + `<td style="color:${artColor(k)};font-family:'Cinzel',serif">${esc(ART_NAME[k]||v.art)}</td>`
           + `<td>${esc(seasonName(v.season))}</td>`
           + `<td${su==='Unknown'?' class="vh-none"':''}>${su}</td>`
           + `<td class="vs-y">${esc(v.yield||'')}${kind?` <span class="vs-kind">${esc(kind)}</span>`:''}</td>`
-          + cells + `</tr>`;
+          + whoCell + `</tr>`;
       }).join('');
       srcHtml=`<div class="vissrc-wrap"><table class="vissrc"><thead>${head}</thead><tbody>${rows}</tbody></table></div>`;
     }
