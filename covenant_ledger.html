@@ -219,7 +219,7 @@ footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);
 <script>
 const $=s=>document.querySelector(s);
 const esc=s=>(s==null?'':String(s)).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let D=null, COV=null, DETAILS=null, HOLD=null, MAGI={}, NPCS={}, SHIPS_DATA=null, inhabSeason='year', tab='covenant', ledgerFilter='all', node='current';
+let D=null, COV=null, DETAILS=null, HOLD=null, MAGI={}, NPCS={}, SHIPS_DATA=null, VIS_SOURCES=[], inhabSeason='year', tab='covenant', ledgerFilter='all', node='current';
 const TABS=[['covenant','Covenant'],['overview','Overview'],['ships','Ships & Land'],['labs','Labs'],
   ['inhabitants','Inhabitants'],['library','Library'],['vis','Vis'],['trade','Trade'],
   ['economics','Economics'],['ledger','Ledger']];
@@ -256,14 +256,15 @@ async function load(){
   // Covenant sheet, per-ship lab detail, and land/proposed holdings — all optional;
   // the panels that use them degrade gracefully if a file is missing.
   const grab=async u=>{ try{ const r=await fetch(u,{cache:'no-store'}); return r.ok?await r.json():null; }catch(_){ return null; } };
-  let MJ, NJ, SJ;
-  [COV, DETAILS, HOLD, MJ, NJ, SJ] = await Promise.all([
+  let MJ, NJ, SJ, FT;
+  [COV, DETAILS, HOLD, MJ, NJ, SJ, FT] = await Promise.all([
     grab('./covenant.json'), grab('./ship_details.json'), grab('./holdings.json'),
-    grab('./magi.json'), grab('./npcs.json'), grab('./ships.json')
+    grab('./magi.json'), grab('./npcs.json'), grab('./ships.json'), grab('./fleet_timeline.json')
   ]);
   MAGI = (MJ && MJ.magi) || {};
   NPCS = (NJ && NJ.npcs) || {};
   SHIPS_DATA = SJ || null;
+  VIS_SOURCES = (FT && FT.vis_sources) || [];
   $('#cname').textContent=`${esc(D.meta.identity.name)} — Covenant Ledger`;
   $('#caveat').textContent=D.meta.baseline;
   $('#foot').innerHTML=`Baseline from the Foundry covenant actor (~${esc(D.meta.asOf)}). Each node is the covenant at that year's end of Winter; <b>Current</b> is live. Year nodes fill in as we reconstruct them.`;
@@ -655,32 +656,31 @@ const PANELS={
       }).join('');
     }
     const legend=`<div class="leg">${ART_ORDER.map(a=>`<span class="chip">${pawnSpan(a)}${ART_ABBR[a]}</span>`).join('')}</div>`;
+    // Vis-source catalogue — the canonical list from fleet_timeline.json, filtered to
+    // the sources the covenant has access to as of this node's year (seisin sources have
+    // no `from` and are always available; Tribunal prizes carry a `from` season).
+    const NYr=nodeYear();
+    const artKeyOf=n=>{ if(!n) return ''; const lc=String(n).toLowerCase(); return Object.keys(ART_NAME).find(k=>ART_NAME[k].toLowerCase()===lc)||lc.slice(0,2); };
+    const seasonName=x=>({spring:'Spring',summer:'Summer',fall:'Fall',autumn:'Fall',winter:'Winter'})[String(x||'').toLowerCase()]||'';
+    const avail=(VIS_SOURCES||[]).filter(v=>{ const y=parseInt(String(v.from||''),10); return !y || y<=NYr; });
     let srcHtml;
-    if(!sources.length) srcHtml='<p class="vis-none">No vis sources recorded at this node.</p>';
-    else srcHtml=sources.map(src=>{
-      const art=src.art, exp=src.expected, rec=src.received;
-      const hasNums = exp!=null || rec!=null;
-      let pawns='', cmp;
-      if(hasNums){
-        const r=rec==null?0:rec;
-        const base=exp==null?r:Math.min(r,exp);
-        const surplus=(exp!=null&&r>exp)?pawnSpan(art,'surplus').repeat(r-exp):'';
-        const ghosts=(exp!=null&&r<exp)?pawnSpan(art,'ghost').repeat(exp-r):'';
-        pawns=pawnRun(art,base)+surplus+ghosts;
-        const cls=exp==null?'':(r>=exp?'met':'short');
-        cmp=`<span class="cmp"><span class="${cls}">${rec==null?'—':r}</span> / ${exp==null?'—':exp}${art?` · ${ART_ABBR[art]||art}`:''}</span>`;
-      } else {
-        cmp=`<span class="cmp">received — / expected — <em>(not recorded)</em></span>`;
-      }
-      return `<div class="srcrow"><span class="nm">${esc(src.name)}</span><span class="pawns">${pawns}</span>${cmp}</div>`;
+    if(!avail.length) srcHtml='<p class="vis-none">No vis sources on record.</p>';
+    else srcHtml=avail.map(v=>{
+      const k=artKeyOf(v.art);
+      const kind=v.kind==='prize'?'Tribunal prize':(v.kind==='seisin'?'covenant seisin':'');
+      const meta=[seasonName(v.season), v.yield, kind].filter(Boolean).join(' · ');
+      return `<div class="visrow">`
+        + `<span class="vislabel" style="flex:0 0 230px"><span class="sw" style="background:${artColor(k)}"></span>${esc(v.name)}</span>`
+        + `<span style="flex:0 0 74px;font-family:'Cinzel',serif;font-size:12px;color:${artColor(k)}">${esc(ART_NAME[k]||v.art)}</span>`
+        + `<span class="q" style="color:var(--ink-soft);font-style:italic;font-size:12px">${esc(meta)}</span></div>`;
     }).join('');
-    return `<p class="section-sub">The covenant's raw vis — what's in the vaults, and what each source yielded this year against expectation.</p>
-      <h2 class="sh" style="margin-top:4px">Stock <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${totalPawns} pawn${totalPawns===1?'':'s'} in ${stock.length} lot${stock.length===1?'':'s'}</span></h2>
+    return `<p class="section-sub">The covenant's raw vis — the sources it can harvest and the vis expected from each, and what's in the vaults.</p>
+      <h2 class="sh" style="margin-top:4px">Vis Sources <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— current access &amp; expected yield</span></h2>
+      ${srcHtml}
+      <h2 class="sh">Stock <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— ${totalPawns} pawn${totalPawns===1?'':'s'} in ${stock.length} lot${stock.length===1?'':'s'}</span></h2>
       <div class="viewtoggle"><button class="fbtn ${view==='type'?'on':''}" data-view="type">By type</button><button class="fbtn ${view!=='type'?'on':''}" data-view="source">By source</button></div>
       ${stockHtml}
-      ${stock.length?legend:''}
-      <h2 class="sh">Sources <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— pawns received this year vs. expected</span></h2>
-      ${srcHtml}`;
+      ${stock.length?legend:''}`;
   },
   trade(){
     const yr=nodeYear();
