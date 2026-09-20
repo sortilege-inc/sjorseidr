@@ -490,6 +490,28 @@
       "raised_event": "Valdemar builds up the Isle of Man base",
       "status": "Resolved",
       "resolution": "Exercised: Valerian (the covenant's scribe) copied Legends of Brittany across Summer-Winter 1224 at the Isle of Man (Stonehenge Tribunal jurisdiction, which takes little interest), the covenant keeping the copy while the borrowed original can be returned. See the 'Valerian copies Legends of Brittany' chronicle events (Summer/Fall/Winter 1224)."
+    },
+    {
+      "id": "q033",
+      "type": "Question",
+      "category": "Rules",
+      "title": "How does the covenant price enchanted items bought from Verditius crafters (e.g. Wilhelm's stone sled)?",
+      "context": "Wilhelm wants to buy a stone sled (L20 enchanted, ~2-tonne flying slab) at Durenmar for Terram vis (p104). RAW (HoH:MC): “the standardized price of an item is twice the vis necessary to make it, in addition to the vis required for the project”; the worked wand example prices on the post-Craft-discount vis the maker actually spends, so RAW passes the Verditius Craft discount to the buyer — which makes high-Craft / high-level items feel implausibly cheap.",
+      "raised_in": "Player notes forwarded by owner, 2026-09-20",
+      "raised_event": "p104",
+      "status": "Resolved",
+      "resolution": "Ruling (owner, 2026-09-20): the covenant computes the 2× Verditius markup on the UNDISCOUNTED making cost (house rule), not the Craft-discounted figure — the crafter keeps the efficiency as profit. Price = 3× the undiscounted making cost. Wilhelm's stone sled (undiscounted making cost 2 pawns): 3 × 2 = 6 pawns of Terram vis, to be logged as a covenant expenditure once the purchase is played (p104)."
+    },
+    {
+      "id": "q034",
+      "type": "Question",
+      "category": "Rules",
+      "title": "What Level/Quality are the standard “Roots” (foundational Art summae) the covenant can acquire?",
+      "context": "Covenants (p.93, Standard Texts) describes the Roots but gives no numbers; a Redcap can arrange delivery “for a very small consideration.” By their description they must be at least L5/Q15. Wilhelm hopes to source one or more at Durenmar (p104).",
+      "raised_in": "Player notes forwarded by owner, 2026-09-20",
+      "raised_event": "p104",
+      "status": "Resolved",
+      "resolution": "Ruling (owner, 2026-09-20): the covenant's standard Roots are adopted as **L6 / Q24** summae, Redcap-deliverable for a small consideration. Q24 leaves cushion for quick apprentice copies (Juvenalia, ~-3 quality, stay readable). Exceptional Roots (L7/Q28, dragonskin-bound) are treated as effectively unobtainable in play. A specific Root enters the library only when actually acquired."
     }
   ]
 }

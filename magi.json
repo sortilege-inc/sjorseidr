@@ -2242,6 +2242,28 @@
           "target": "ind",
           "ritual": false,
           "description": "You cast this spell on a spell that you have already cast and are maintaining through concentration. The spell that requires concentration is then automatically maintained for the duration of this spell, whether you concentrate or not. You cannot change the effects of the first spell without concent"
+        },
+        {
+          "name": "Ward of the Secure Grainery",
+          "technique": "Rego",
+          "form": "Ignem",
+          "level": 25,
+          "range": "touch",
+          "duration": "ring",
+          "target": "circle",
+          "ritual": false,
+          "description": "A folk-magic protective ward laid in a ring around a granary, guarding the stored grain against four threats: foulment (Herbam), vermin (Animal), fire (Ignem), and spoilage/damp (Aquam). Design: Rego, base 3 (the fire ward), R: Touch (+1), D: Ring (+2), T: Circle (+0), +3 additional effects (the Herbam, Animal, and Aquam wards, each carried as a Form requisite) → Level 25, per the additional-effect / requisite rules (ArM5 Core Rules). Built for Wilhelm's ungifted-caster system: it can be cast as a formulaic spell to which the caster adds Artes Liberales + Philosophiae (dropping the folk-magic halving). Requisites: Herbam, Animal, Aquam."
+        },
+        {
+          "name": "Blessing of the Fine Harvest",
+          "technique": "Creo",
+          "form": "Herbam",
+          "level": 25,
+          "range": "touch",
+          "duration": "moon",
+          "target": "part",
+          "ritual": false,
+          "description": "A folk-magic ceremonial blessing that ensures well-grown crops across a farm. Design: Creo Herbam, base 1 (ensure well-grown crops), R: Touch (+1), D: Moon (+3), T: Part (+1), +3 Size → Level 25; at this size it can bless up to roughly 2,000 acres of farmland. Formulaic (Moon duration), so under Wilhelm's ungifted-caster system a caster adds Artes Liberales + Philosophiae to the roll. An earlier +4-Size / ~20,000-acre draft was set aside in favour of this version."
         }
       ],
       "personalityTraits": [],

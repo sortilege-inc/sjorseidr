@@ -273,7 +273,7 @@
   "sort_iso": "1225-04-07T12:00",
   "session": "2026-09-19",
   "scene": "1225 — Durenmar",
-  "title": "Wilhelm to Durenmar for books (declared)",
+  "title": "Wilhelm at Durenmar: books, Roots, and a stone sled (declared)",
   "icon": "📚",
   "timeline": "🌼 Spring 1225",
   "date": "1225",
@@ -282,9 +282,9 @@
   ],
   "activity_type": "Study",
   "status": "Proposed",
-  "notes": "Declared 1225 plan.",
+  "notes": "Declared 1225 plan; expands the Durenmar trip. Costs settled by ruling: **stone sled = 6 pawns Terram vis** — the saga prices the 2× Verditius markup on the UNdiscounted making cost (2 pawns), so 3×2 = 6, rather than passing the Craft discount to the buyer (ruling q033). **Roots = L6/Q24** (ruling q034). Both are covenant expenditures / acquisitions to log once the trip is played; specific Roots enter the library only when actually obtained. Not yet played.",
   "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "Declared: Wilhelm means to raise **Artes Liberales** and **Philosophiae**, travel to **Durenmar** to acquire books, and **reconnect with his research assistants**."
+  "body_text": "Declared: Wilhelm means to raise **Artes Liberales** and **Philosophiae**, travel to **Durenmar** to acquire books, and **reconnect with his research assistants**. Among the books he hopes to source are one or more **Roots** — the standard foundational Art summae described in *Covenants* (p.93, Standard Texts), adopted by the saga as **L6 / Q24** and Redcap-deliverable “for a very small consideration” (ruling q034). He also asks to take **6 pawns of Terram vis** to purchase a **stone sled** from a Verditius crafter: a level-20 enchanted two-tonne stone slab that flies at ~45 mph and carries ~2,000 lbs — a way to move small groups (magi) “at the speed of plot” to distant plot sources, and for Wilhelm to visit his family more readily."
  },
  {
   "id": "p105",
@@ -292,7 +292,7 @@
   "sort_iso": "1225-04-08T12:00",
   "session": "2026-09-19",
   "scene": "1225 — the Isle of Man",
-  "title": "Valdemar studies Hermetic law in depth (declared)",
+  "title": "Valdemar answers the charges: Code of Hermes, then Certamen (declared)",
   "icon": "⚖️",
   "timeline": "🌼 Spring 1225",
   "date": "1225",
@@ -301,9 +301,9 @@
   ],
   "activity_type": "Study",
   "status": "Proposed",
-  "notes": "Declared 1225 plan (Code of Hermes).",
+  "notes": "Declared 1225 plan; expands the earlier Code-of-Hermes declaration. Motivation ties the Confluensis complaint / forged-letter arc (c022, t078). Elements: study Code of Hermes (score 1) with Valerian if possible; then learn Certamen to answer the charge. Profession: Scribe is a further-out aside. No XP recorded yet (declared, not played).",
   "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "Declared: Valdemar sets himself to study **Hermetic law (the Code of Hermes)** in depth."
+  "body_text": "Declared: with a Hermetic **charge laid against him** — the Confluensis complaint the covenant has been bracing for (c022), whose planned opening gambit is a **forged Order-of-Odin letter manufactured to implicate Valdemar** (t078) — Valdemar sets himself to **study the Code of Hermes in depth**, ideally **alongside Valerian** should the opportunity arise. Once he has the law in hand he means to **learn some Certamen**, intending to get satisfaction from whoever dared bring the charge and settle the matter on his own terms. (He also muses he may eventually pick up **Profession: Scribe** to speed his copying of important books later.)"
  },
  {
   "id": "p106",
@@ -347,5 +347,24 @@
   "notes": "Declared 1225 roster; not yet harvested. Éogan is unassigned (in Ireland after the capricorn). Written into the vis-source harvest table as the 1225 column (shows when the current node advances to 1225).",
   "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
   "body_text": "Declared 1225 harvest roster: **Dustin** — Summer Fog, Black Horse, and Fire from the Sky (participant); **Valerian** — Norman Barrow Frost and the Mont-Saint-Michel tide pools; **Dagmar** — the Falcon's Cliff (taking the Vim); **Valdemar** — the Diedne Garden and Fire from the Sky; **Ka'wa'ill** — the Kraken's Egg. Éogan is unassigned this year (in Ireland chasing the capricorn)."
+ },
+ {
+  "id": "p108",
+  "file": "",
+  "sort_iso": "1224-03-21T12:00",
+  "session": "2026-09-20",
+  "scene": "1224 — revised study plan",
+  "title": "Valdemar revises 1224: study Insights from Twilight, not copy it (declared)",
+  "icon": "📖",
+  "timeline": "🌼 Spring & 🍂 Fall 1224",
+  "date": "Spring & Fall 1224",
+  "cast": [
+   "Valdemar Bjornsson"
+  ],
+  "activity_type": "Study",
+  "status": "Proposed",
+  "notes": "Declared/revised plan. Fall 1224 has NOT yet been played (ledger 'current' node = Summer 1224 live), so no XP is written to the tracker yet — record the two study cells once the seasons are played / confirmed in Foundry. Valdemar's Spring/Fall 1224 tracker cells are currently empty (no conflict). Supersedes any intent to copy the book. Insights from Twilight = Magic Theory summa L6/Q11 (Tribunal prize draft).",
+  "source": "Player notes forwarded by owner, 2026-09-20.",
+  "body_text": "Declared revision: rather than **copying** *Insights from Twilight* (the Magic Theory summa, L6 / Q11, won in the Tribunal prize draft), Valdemar will **study from it** in **Spring and Fall 1224**. At his Magic Theory 3 (45 xp) — well under the summa's Level 6 — that yields the full **Q11 per season, +22 Magic Theory XP** across the two seasons, carrying him to score 4 (partway to 5). He may later pick up **Profession: Scribe** to speed his copying of important books."
  }
 ]

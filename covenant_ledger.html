@@ -151,6 +151,7 @@ footer{margin-top:24px;padding-top:12px;border-top:1px solid rgba(120,90,40,.3);
 .mtile .ml{display:block;font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft)}
 .mtile .mv{display:block;font-size:15px;font-weight:600;color:var(--ink);margin-top:2px}
 .cov-sec{margin-bottom:18px}
+.cov-motto{font-family:'Cinzel',serif;font-style:italic;font-size:16px;line-height:1.5;text-align:center;color:var(--rust-bright,#8a4b2a);margin:2px 0 16px;padding:8px 12px;border-top:1px solid rgba(120,90,40,.25);border-bottom:1px solid rgba(120,90,40,.25)}
 .cov-p{font-size:14px;line-height:1.6;color:var(--ink);margin:10px 0}
 .cov-lbl{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft);margin:10px 0 4px}
 .cov-ol,.cov-ul{padding-left:22px;margin:6px 0}
@@ -509,6 +510,7 @@ const PANELS={
     const aegisNote=(!d.aegis||(d.aegis.level===0&&d.aegis.penetration===0))&&!d.regioLevels
       ? `<p class="lab-note" style="border-left-color:var(--rust-bright)">Aegis level, penetration, and regio levels are all recorded as 0 in Foundry — this may just mean they're unconfigured on the sheet rather than a narrative fact. Worth a GM check.</p>`:'';
     return `<p class="section-sub">The covenant sheet — charter, standing, and boons &amp; hooks. Yearly finances live on the <b>Economics</b> tab; assets are split across <b>Ships &amp; Land</b>, <b>Labs</b>, <b>Library</b>, and <b>Vis</b>.</p>
+      ${d.motto?`<p class="cov-motto">&ldquo;${esc(d.motto)}&rdquo;</p>`:''}
       <div class="cov-sec"><div class="lab-sec-t">Overview</div><div class="mtile-grid">${overviewTiles}</div>
         ${d.foundingNote?`<p class="cov-p">${esc(d.foundingNote)}</p>`:''}
         ${ports?`<p class="cov-lbl">Preferred ports</p><div>${ports}</div>`:''}</div>

@@ -5,6 +5,7 @@
     "note": "Meta/summary fields only — library, vis sources, and full inhabitant census are tracked elsewhere (tribunal_workbook.html, ships.json) and intentionally left out of this pull."
   },
   "name": "Sjórseiðr",
+  "motto": "On the Sea, All Men are Free, Neither Servant nor Liege",
   "foundationYear": 1209,
   "season": "winter",
   "tribunal": "Normandy",
