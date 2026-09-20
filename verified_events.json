@@ -3233,5 +3233,73 @@
   "status": "Historical",
   "body_text": "His Hermetic command of the water elemental having failed where his viktir working held it, **Valdemar** resolves to lean into the form the Isle-of-Man lab most favors. **Éogan** — the covenant's strongest Aquam magus — teaches **Aquam** over the winter; **Valdemar** (declining to take the harder viktir-conversion route, this time learning Aquam straight) and **Dagmar** both study under him. It is Éogan's covenant service for the year.",
   "body_html": "<p>His Hermetic command of the water elemental having failed where his viktir working held it, <strong>Valdemar</strong> resolves to lean into the form the Isle-of-Man lab most favors. <strong>Éogan</strong> — the covenant&#39;s strongest Aquam magus — teaches <strong>Aquam</strong> over the winter; <strong>Valdemar</strong> (declining to take the harder viktir-conversion route, this time learning Aquam straight) and <strong>Dagmar</strong> both study under him. It is Éogan&#39;s covenant service for the year.</p>"
+ },
+ {
+  "file": "",
+  "title": "Valerian copies Legends of Brittany",
+  "icon": "⚖️",
+  "activity_type": "Copying",
+  "cast": [
+   "Valerian"
+  ],
+  "timeline": "☀️ Summer 1224",
+  "date": "Summer 1224",
+  "sort_iso": "1224-07-15T12:00",
+  "notes": "Reattributed to Valerian; the copy is his covenant service, run across Summer-Winter 1224 (continues p096, completes p097). Foundry: Valerian 'Copying book: Legends of Brittany', Summer 1224 (no XP). · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Valerian — the covenant's scribe (a former Quaesitor) — begins a surreptitious copy of Legends of Brittany, exploiting cross-tribunal copy-law so the borrowed original can be returned while the covenant keeps the copy (see t076). A season of scribework, no experience gained.",
+  "body_html": "<p>Valerian — the covenant&#39;s scribe (a former Quaesitor) — begins a surreptitious copy of Legends of Brittany, exploiting cross-tribunal copy-law so the borrowed original can be returned while the covenant keeps the copy (see t076). A season of scribework, no experience gained.</p>"
+ },
+ {
+  "file": "",
+  "title": "Dustin fetches De Lapii and Radices Scientiae from Oleron",
+  "icon": "📖",
+  "activity_type": "Travel",
+  "cast": [
+   "Dustin"
+  ],
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "sort_iso": "1224-10-05T12:00",
+  "notes": "Dustin collects the two Oleron-parked prize summae (De Lapii, Terram; Radices Scientiae, Herbam) — Radices Scientiae added per owner (2026-09-19). Seasonal activities, 2026-08-08 session. · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Dustin returns to Oleron to collect two Tribunal-prize summae parked there — **De Lapii** (the Terram summa) and **Radices Scientiae** (the Herbam summa) — bringing them back for the covenant library.",
+  "body_html": "<p>Dustin returns to Oleron to collect two Tribunal-prize summae parked there — <strong>De Lapii</strong> (the Terram summa) and <strong>Radices Scientiae</strong> (the Herbam summa) — bringing them back for the covenant library.</p>"
+ },
+ {
+  "file": "",
+  "title": "Valerian continues copying Legends of Brittany",
+  "icon": "✍️",
+  "activity_type": "Copying",
+  "cast": [
+   "Valerian"
+  ],
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "sort_iso": "1224-10-15T12:00",
+  "notes": "Second season of the Legends of Brittany copy; no XP (copying service). · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Valerian carries the copy of Legends of Brittany forward through the autumn — a second season of scribework, still no experience gained.",
+  "body_html": "<p>Valerian carries the copy of Legends of Brittany forward through the autumn — a second season of scribework, still no experience gained.</p>"
+ },
+ {
+  "file": "",
+  "title": "Valerian completes the copy of Legends of Brittany",
+  "icon": "📗",
+  "activity_type": "Copying",
+  "cast": [
+   "Valerian"
+  ],
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "sort_iso": "1224-12-15T12:00",
+  "notes": "Completes the Legends of Brittany copy (three seasons, Summer-Winter 1224); the covenant keeps the duplicate, the original can be returned (t076); no XP. · Approved (owner review 2026-09-19).",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Over the winter Valerian finishes the copy of Legends of Brittany. The covenant keeps the duplicate while the borrowed original can be returned — the copy-law gambit complete (see t076).",
+  "body_html": "<p>Over the winter Valerian finishes the copy of Legends of Brittany. The covenant keeps the duplicate while the borrowed original can be returned — the copy-law gambit complete (see t076).</p>"
  }
 ]

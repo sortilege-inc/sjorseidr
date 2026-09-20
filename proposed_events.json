@@ -76,25 +76,6 @@
   "body_text": "Éogan's crew returns to summer trade (wool out of the Isle of Man) while he develops a spell to draw the juice from fruit."
  },
  {
-  "id": "p069",
-  "file": "",
-  "sort_iso": "1224-07-15T12:00",
-  "session": "2026-08-08",
-  "scene": "Summer 1224 — the Isle of Man",
-  "title": "Valerian copies Legends of Brittany",
-  "icon": "⚖️",
-  "timeline": "☀️ Summer 1224",
-  "date": "Summer 1224",
-  "cast": [
-   "Valerian"
-  ],
-  "activity_type": "Copying",
-  "status": "Proposed",
-  "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Reattributed to Valerian (owner, 2026-09-19); the copy is his covenant service. Continues in Fall 1224 and completes in Winter 1224-25. Foundry: Valerian 'Copying book: Legends of Brittany', Summer 1224 (no XP).",
-  "body_text": "Valerian — the covenant's scribe (a former Quaesitor) — begins a surreptitious copy of Legends of Brittany, exploiting cross-tribunal copy-law so the borrowed original can be returned while the covenant keeps the copy (see t076). A season of scribework, no experience gained."
- },
- {
   "id": "p072",
   "file": "",
   "sort_iso": "1224-10-01T12:00",
@@ -112,25 +93,6 @@
   "source": "Seasonal activities, 2026-08-08 session.",
   "notes": "Declared seasonal plan; not yet played.",
   "body_text": "Declared: Éogan volunteers for the fall claim on the Mont-Saint-Michel tide pools — not a full season's work, leaving him time for other study."
- },
- {
-  "id": "p073",
-  "file": "",
-  "sort_iso": "1224-10-05T12:00",
-  "session": "2026-08-08",
-  "scene": "Fall 1224 — Oleron",
-  "title": "Dustin fetches the Terram summa from Oleron (declared)",
-  "icon": "📖",
-  "timeline": "🍂 Fall 1224",
-  "date": "Fall 1224",
-  "cast": [
-   "Dustin"
-  ],
-  "activity_type": "Study",
-  "status": "Proposed",
-  "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Declared seasonal plan; not yet played.",
-  "body_text": "Declared: Dustin returns to Oleron to collect the Terram summa won at Tribunal and settle in to study it."
  },
  {
   "id": "p075",
@@ -189,44 +151,6 @@
   "notes": "Closes the Tormente errand and puts the dragon-gold brokering on hold. Bears on t072 / s19.",
   "source": "Session recap 2026-09-12 (Ars Magica transcript).",
   "body_text": "Exiting past **Tormente**, the party finds it content — it does not ask after the member left behind. Dagmar raises the gold again: Tormente had expressed interest in trading it for something from the outside world. Asked what it wants, the dragon answers only **\"Ask me in a few years.\"** The brokering is not refused, only deferred; the covenant will convert the five bags on its own account in the meantime."
- },
- {
-  "id": "p096",
-  "file": "",
-  "sort_iso": "1224-10-15T12:00",
-  "session": "2026-09-19",
-  "scene": "Fall 1224 — the Isle of Man",
-  "title": "Valerian continues copying Legends of Brittany",
-  "icon": "✍️",
-  "timeline": "🍂 Fall 1224",
-  "date": "Fall 1224",
-  "cast": [
-   "Valerian"
-  ],
-  "activity_type": "Copying",
-  "status": "Proposed",
-  "source": "Owner direction 2026-09-19 (Valerian continues the copy).",
-  "notes": "Continuation of the Legends of Brittany copy; no XP (copying service).",
-  "body_text": "Valerian carries the copy of Legends of Brittany forward through the autumn — a second season of scribework, still no experience gained."
- },
- {
-  "id": "p097",
-  "file": "",
-  "sort_iso": "1224-12-15T12:00",
-  "session": "2026-09-19",
-  "scene": "Winter 1224-25 — the Isle of Man",
-  "title": "Valerian completes the copy of Legends of Brittany",
-  "icon": "📗",
-  "timeline": "❄️ Winter 1224-25",
-  "date": "Winter 1224-25",
-  "cast": [
-   "Valerian"
-  ],
-  "activity_type": "Copying",
-  "status": "Proposed",
-  "source": "Owner direction 2026-09-19 (Valerian continues the copy).",
-  "notes": "Completes the Legends of Brittany copy (three seasons of scribework, Summer–Winter 1224); no XP.",
-  "body_text": "Over the winter Valerian finishes the copy of Legends of Brittany. The covenant keeps the duplicate while the borrowed original can be returned — the copy-law gambit complete (see t076)."
  },
  {
   "id": "p098",
