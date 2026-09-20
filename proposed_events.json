@@ -170,5 +170,182 @@
   "source": "Seasonal activity auto-logged from the session.",
   "notes": "Moved back to proposed so it reads as a draft (owner, 2026-09-19); not yet owner-reviewed.",
   "body_text": "Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen."
+ },
+ {
+  "id": "p099",
+  "file": "",
+  "sort_iso": "1224-12-22T12:00",
+  "session": "2026-09-19",
+  "scene": "Winter 1224-25 — the Isle of Man",
+  "title": "The dragon-gold goes to Heynric to fence",
+  "icon": "🪙",
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "cast": [
+   "Dagmar",
+   "Heynric the Merchant"
+  ],
+  "activity_type": "Diplomacy",
+  "status": "Proposed",
+  "notes": "The five bags of Roman gold are mundane (old coins, only adjacent to the Carnac regio/dragon). Ties s19, t072/c027, and p092 (Tormente deferred the brokering). No sale rolled yet.",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
+  "body_text": "Over the winter Dagmar brings the hoard of old Roman gold coins to Heynric the Merchant and, without quite having the words for it, asks him to convert it discreetly — Heynric understands he is being asked to fence it. Heynric advises the covenant to pause ordinary trade ventures and put its effort into quietly moving the gold, a far larger prize than a season's cargo. The plan: drop Heynric off with a couple of grogs to begin fencing it."
+ },
+ {
+  "id": "p100",
+  "file": "",
+  "sort_iso": "1224-12-23T12:00",
+  "session": "2026-09-19",
+  "scene": "Winter 1224-25 — recounted (Wilhelm's childhood)",
+  "title": "Wilhelm's capricorn: the Mill Pond goat named Joseph",
+  "icon": "🐐",
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25 (recounted)",
+  "cast": [
+   "Wilhelm Stienauer"
+  ],
+  "activity_type": "Lore",
+  "status": "Proposed",
+  "notes": "Surfaced when Éogan raised his capricorn hunt. Real capricorn lore for the saga; feeds t070 (Éogan's capricorn) and gives Wilhelm his own connection to the creatures.",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
+  "body_text": "When Éogan speaks of the capricorn, Wilhelm puts up his glasses and shares a childhood memory: he and his brother **Patrick** used to play, month after month, with a **capricorn** — \"Mr. Goat,\" whose name was **Joseph** — that appeared in the **Mill Pond** near their home on the **waxing moon**, three or four days at a time. A woman (likely a **dryad**) tended it; once, thinking the goat was drowning, the boys ran to save it, and she gently called them off — it was a **goat-fish**, not a goat. That wonder is why Wilhelm (and his brother) turned to magic.\nWhat Wilhelm has since read: capricorns are **associated with water**; one is said to have relayed **God's warning to Noah** to build the ark before the flood; they are known to **teach survival** to people in dire need far from civilization; and they are **tricksters** — of humans and of much greater beings alike. Different regions produce different capricorns depending on the local fish; despite the name, they are **not truly goats**."
+ },
+ {
+  "id": "p101",
+  "file": "",
+  "sort_iso": "1225-04-05T12:00",
+  "session": "2026-09-19",
+  "scene": "Spring 1225 — Ireland",
+  "title": "Éogan returns to Ireland for the capricorn (declared)",
+  "icon": "🍀",
+  "timeline": "🌼 Spring 1225",
+  "date": "Spring 1225",
+  "cast": [
+   "Éogan Dobhartha"
+  ],
+  "activity_type": "Adventuring",
+  "status": "Proposed",
+  "notes": "Declared Spring 1225 plan. Éogan can return to the exact river via an Arcane Connection and means to go alone. Feeds t070; ties p100 (capricorn lore).",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
+  "body_text": "Declared: in Spring 1225 Éogan sails back to **Ireland** to seek the **capricorn** at the river where he first met it — he holds an Arcane Connection to the spot and intends to go **alone**. Beforehand he will hunt up **books and lore about capricorns**. Around it: shipboard **trade**, **laboratory work toward his talisman**, and **replacing his ship's crew**, since many of the old hands have settled on the Isle of Man."
+ },
+ {
+  "id": "p102",
+  "file": "",
+  "sort_iso": "1224-12-24T12:00",
+  "session": "2026-09-19",
+  "scene": "Winter 1224-25 — via the Redcap",
+  "title": "Éogan trades the Redcap 6 Animal vis for 6 Vim",
+  "icon": "🔁",
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "cast": [
+   "Éogan Dobhartha"
+  ],
+  "activity_type": "Trade",
+  "status": "Proposed",
+  "notes": "Vis swap: covenant Animal -6, Vim +6 (via Redcap). Stock not yet adjusted in the ledger — pending verification.",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
+  "body_text": "Éogan trades the covenant's Redcap **6 pawns of Animal vis** for **6 pawns of Vim**."
+ },
+ {
+  "id": "p103",
+  "file": "",
+  "sort_iso": "1225-04-06T12:00",
+  "session": "2026-09-19",
+  "scene": "1225 — Oléron, then the sea",
+  "title": "Dagmar's 1225: teachers, then the sea-skeleton dive (declared)",
+  "icon": "💀",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "cast": [
+   "Dagmar"
+  ],
+  "activity_type": "Adventuring",
+  "status": "Proposed",
+  "notes": "Declared 1225 plan. The sea-skeleton is the sunken remains Dagmar has eyed; 'learn from vis' = studying vis at/from it. Dagmar goes to Oléron first.",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
+  "body_text": "Declared: Dagmar heads to **Oléron first** to find **teachers**, then plans to return to the **skeleton in the sea** — casting **Lungs of the Fish** to dive and **examine the skeleton**, and to **learn from vis** there."
+ },
+ {
+  "id": "p104",
+  "file": "",
+  "sort_iso": "1225-04-07T12:00",
+  "session": "2026-09-19",
+  "scene": "1225 — Durenmar",
+  "title": "Wilhelm to Durenmar for books (declared)",
+  "icon": "📚",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "cast": [
+   "Wilhelm Stienauer"
+  ],
+  "activity_type": "Study",
+  "status": "Proposed",
+  "notes": "Declared 1225 plan.",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
+  "body_text": "Declared: Wilhelm means to raise **Artes Liberales** and **Philosophiae**, travel to **Durenmar** to acquire books, and **reconnect with his research assistants**."
+ },
+ {
+  "id": "p105",
+  "file": "",
+  "sort_iso": "1225-04-08T12:00",
+  "session": "2026-09-19",
+  "scene": "1225 — the Isle of Man",
+  "title": "Valdemar studies Hermetic law in depth (declared)",
+  "icon": "⚖️",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "cast": [
+   "Valdemar Bjornsson"
+  ],
+  "activity_type": "Study",
+  "status": "Proposed",
+  "notes": "Declared 1225 plan (Code of Hermes).",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
+  "body_text": "Declared: Valdemar sets himself to study **Hermetic law (the Code of Hermes)** in depth."
+ },
+ {
+  "id": "p106",
+  "file": "",
+  "sort_iso": "1225-04-09T12:00",
+  "session": "2026-09-19",
+  "scene": "1225 — the Isle of Man / Oléron",
+  "title": "Dustin's 1225: teach Aquam and refit the Scholar's Wake lab (declared)",
+  "icon": "🧪",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "cast": [
+   "Dustin Page",
+   "Stijntje Kuiper"
+  ],
+  "activity_type": "Lab work",
+  "status": "Proposed",
+  "notes": "Declared 1225 plan. The Scholar's Wake lab has outstanding safety issues from Oléron.",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
+  "body_text": "Declared: Dustin **teaches Aquam in Spring 1225**, and refits the **Scholar's Wake's laboratory** (worked up at Oléron) to remove its outstanding **safety** problems; **Stijntje** will copy books."
+ },
+ {
+  "id": "p107",
+  "file": "",
+  "sort_iso": "1225-01-01T12:00",
+  "session": "2026-09-19",
+  "scene": "1225 — vis-harvest roster",
+  "title": "The 1225 vis-harvest assignments (declared)",
+  "icon": "🍇",
+  "timeline": "🗓️ 1225",
+  "date": "1225",
+  "cast": [
+   "Dustin Page",
+   "Valerian de Castellane",
+   "Dagmar",
+   "Valdemar Bjornsson",
+   "Ka'wa'ill"
+  ],
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "notes": "Declared 1225 roster; not yet harvested. Éogan is unassigned (in Ireland after the capricorn). Written into the vis-source harvest table as the 1225 column (shows when the current node advances to 1225).",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
+  "body_text": "Declared 1225 harvest roster: **Dustin** — Summer Fog, Black Horse, and Fire from the Sky (participant); **Valerian** — Norman Barrow Frost and the Mont-Saint-Michel tide pools; **Dagmar** — the Falcon's Cliff (taking the Vim); **Valdemar** — the Diedne Garden and Fire from the Sky; **Ka'wa'ill** — the Kraken's Egg. Éogan is unassigned this year (in Ireland chasing the capricorn)."
  }
 ]

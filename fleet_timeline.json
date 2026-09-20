@@ -975,6 +975,9 @@
         ],
         "1224": [
           "Valerian"
+        ],
+        "1225": [
+          "Ka'wa'ill"
         ]
       },
       "seasonUse": "full"
@@ -1005,6 +1008,9 @@
         "1224": [
           "Dustin",
           "Stijntje"
+        ],
+        "1225": [
+          "Dustin"
         ]
       },
       "seasonUse": "partial"
@@ -1030,6 +1036,9 @@
           "Dustin"
         ],
         "1222": [
+          "Dustin"
+        ],
+        "1225": [
           "Dustin"
         ]
       },
@@ -1067,6 +1076,10 @@
         "1223": [
           "Valdemar",
           "Valerian"
+        ],
+        "1225": [
+          "Valdemar",
+          "Dustin"
         ]
       },
       "seasonUse": "partial"
@@ -1090,6 +1103,9 @@
         ],
         "1224": [
           "Éogan"
+        ],
+        "1225": [
+          "Valerian"
         ]
       },
       "seasonUse": "partial"
@@ -1109,6 +1125,9 @@
       "note": "An overgrown garden at a ruined Diedne covenant site yields three unusual herbs each spring; politically contested (multiple covenants claim historical rights). Tribunal 1223 prize. Location approximate.",
       "harvests": {
         "1224": [
+          "Valdemar"
+        ],
+        "1225": [
           "Valdemar"
         ]
       },
@@ -1130,6 +1149,9 @@
       "harvests": {
         "1224": [
           "Dagmar"
+        ],
+        "1225": [
+          "Dagmar"
         ]
       },
       "seasonUse": "unknown"
@@ -1147,7 +1169,11 @@
         47.5
       ],
       "note": "Hoarfrost forming inside a Norman barrow's burial chamber on the winter solstice is Corpus vis, scraped free before dawn. Tribunal 1223 prize. Barrow location approximate.",
-      "harvests": {},
+      "harvests": {
+        "1225": [
+          "Valerian"
+        ]
+      },
       "seasonUse": "unknown"
     }
   ],
