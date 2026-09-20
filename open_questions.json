@@ -773,6 +773,28 @@
    "raised_event": "The upper path and the empty throne",
    "status": "Open",
    "resolution": ""
+  },
+  {
+   "id": "q035",
+   "type": "Question",
+   "category": "Covenant Business",
+   "title": "Which Roots does Wilhelm acquire at Durenmar — and add them to the library at L6/Q24?",
+   "context": "Wilhelm's declared 1225 Durenmar trip (p104) includes sourcing one or more Roots — the standard foundational Art summae, adopted as L6/Q24 and Redcap-deliverable “for a very small consideration” (ruling q034). The specific Arts are the owner's call and have not been chosen. FOLLOW-UP: once the trip is played, decide which Root(s) Wilhelm obtains, add each to the covenant library at L6/Q24 (covenant_ledger.json library.books), and log the “small consideration” cost.",
+   "raised_in": "Player notes forwarded by owner, 2026-09-20",
+   "raised_event": "p104",
+   "status": "Open",
+   "resolution": ""
+  },
+  {
+   "id": "q036",
+   "type": "Question",
+   "category": "Character",
+   "title": "Post Valdemar's +22 Magic Theory XP once his 1224 Insights study is played",
+   "context": "Valdemar's revised 1224 plan (p108) has him studying Insights from Twilight (Magic Theory summa L6/Q11) in Spring and Fall 1224 instead of copying it — the full Q11 per season, +22 MT XP (45 → 67, score 4 partway to 5). Held because Fall 1224 has not yet been played (ledger “current” = Summer 1224 live) and the values were not written ahead of play. FOLLOW-UP: once the seasons are played / confirmed in Foundry, write the two study cells into xp_tracker.json (Valdemar Bjornsson::1224-spring and ::1224-fall — activity study, Magic Theory +11 each) and migrate p108 out of the proposed queue.",
+   "raised_in": "Player notes forwarded by owner, 2026-09-20",
+   "raised_event": "p108",
+   "status": "Open",
+   "resolution": ""
   }
  ],
  "gmReference": {
