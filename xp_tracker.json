@@ -1014,22 +1014,40 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Éogan Dobhartha::1222-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "inventSpell",
-   "xp": 15,
-   "xpType": "Spell: Grip of Ice",
-   "targets": [
-    {
-     "type": "Spell: Grip of Ice",
-     "xp": 15
-    }
-   ],
-   "detail": "inventSpell: Spell: Grip of Ice+15 (season 1 of 2)",
-   "covenant": null,
-   "source": "foundry"
-  },
+  "Éogan Dobhartha::1222-winter": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "inventSpell",
+    "xp": 15,
+    "xpType": "Spell: Grip of Ice",
+    "targets": [
+     {
+      "type": "Spell: Grip of Ice",
+      "xp": 15
+     }
+    ],
+    "detail": "inventSpell: Spell: Grip of Ice+15",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "exposure",
+    "xp": 2,
+    "xpType": "Teaching",
+    "targets": [
+     {
+      "type": "Teaching",
+      "xp": 2
+     }
+    ],
+    "detail": "exposure: Teaching+2",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
   "Éogan Dobhartha::1223-spring": {
    "activity": true,
    "deferred": false,
@@ -1163,8 +1181,21 @@
    "act": "adventuring",
    "xp": 12,
    "xpType": "Adventuring",
-   "targets": [],
-   "detail": "adventuring",
+   "targets": [
+    {
+     "type": "Parma Magica",
+     "xp": 5
+    },
+    {
+     "type": "Magic Theory",
+     "xp": 5
+    },
+    {
+     "type": "Awareness",
+     "xp": 2
+    }
+   ],
+   "detail": "adventuring: Parma Magica+5, Magic Theory+5, Awareness+2",
    "covenant": null,
    "source": "foundry"
   },
@@ -1470,15 +1501,19 @@
    "activity": true,
    "deferred": false,
    "act": "adventuring",
-   "xp": 5,
-   "xpType": "Swim",
+   "xp": 10,
+   "xpType": "Adventuring",
    "targets": [
     {
      "type": "Swim",
      "xp": 5
+    },
+    {
+     "type": "Athletics",
+     "xp": 5
     }
    ],
-   "detail": "adventuring: Swim+5",
+   "detail": "adventuring: Swim+5, Athletics+5",
    "covenant": null,
    "source": "foundry"
   },
@@ -1578,44 +1613,22 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Ka'wa'ill::1220-fall": [
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "adventuring",
-    "xp": 7,
-    "xpType": "Adventuring",
-    "targets": [
-     {
-      "type": "Charm",
-      "xp": 2
-     },
-     {
-      "type": "Carouse",
-      "xp": 5
-     }
-    ],
-    "detail": "adventuring: Charm+2, Carouse+5",
-    "covenant": null,
-    "source": "foundry"
-   },
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "practice",
-    "xp": 3,
-    "xpType": "Language: (Norwegian)",
-    "targets": [
-     {
-      "type": "Language: (Norwegian)",
-      "xp": 3
-     }
-    ],
-    "detail": "practice: Language: (Norwegian)+3",
-    "covenant": null,
-    "source": "foundry"
-   }
-  ],
+  "Ka'wa'ill::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 3,
+   "xpType": "Language: (Norwegian)",
+   "targets": [
+    {
+     "type": "Language: (Norwegian)",
+     "xp": 3
+    }
+   ],
+   "detail": "practice: Language: (Norwegian)+3",
+   "covenant": null,
+   "source": "foundry"
+  },
   "Ka'wa'ill::1220-winter": [
    {
     "activity": true,
@@ -1658,22 +1671,6 @@
    {
     "activity": true,
     "deferred": false,
-    "act": "adventuring",
-    "xp": 5,
-    "xpType": "Awareness",
-    "targets": [
-     {
-      "type": "Awareness",
-      "xp": 5
-     }
-    ],
-    "detail": "adventuring: Awareness+5",
-    "covenant": null,
-    "source": "foundry"
-   },
-   {
-    "activity": true,
-    "deferred": false,
     "act": "practice",
     "xp": 3,
     "xpType": "Language: (English)",
@@ -1686,9 +1683,7 @@
     "detail": "practice: Language: (English)+3",
     "covenant": null,
     "source": "foundry"
-   }
-  ],
-  "Ka'wa'ill::1221-summer": [
+   },
    {
     "activity": true,
     "deferred": false,
@@ -1697,35 +1692,39 @@
     "xpType": "Adventuring",
     "targets": [
      {
-      "type": "Brawl",
+      "type": "Faerie Lore",
       "xp": 5
      },
      {
-      "type": "Athletics",
+      "type": "Swim",
       "xp": 5
      }
     ],
-    "detail": "adventuring: Brawl+5, Athletics+5",
-    "covenant": null,
-    "source": "foundry"
-   },
-   {
-    "activity": true,
-    "deferred": false,
-    "act": "practice",
-    "xp": 3,
-    "xpType": "Language: (English)",
-    "targets": [
-     {
-      "type": "Language: (English)",
-      "xp": 3
-     }
-    ],
-    "detail": "practice: Language: (English)+3",
+    "detail": "adventuring: Faerie Lore+5, Swim+5",
     "covenant": null,
     "source": "foundry"
    }
   ],
+  "Ka'wa'ill::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Brawl",
+     "xp": 5
+    },
+    {
+     "type": "Athletics",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Brawl+5, Athletics+5",
+   "covenant": null,
+   "source": "foundry"
+  },
   "Ka'wa'ill::1221-fall": {
    "activity": true,
    "deferred": false,
@@ -1774,22 +1773,40 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Ka'wa'ill::1222-summer": {
-   "activity": true,
-   "deferred": false,
-   "act": "practice",
-   "xp": 3,
-   "xpType": "Language: (Norwegian)",
-   "targets": [
-    {
-     "type": "Language: (Norwegian)",
-     "xp": 3
-    }
-   ],
-   "detail": "practice: Language: (Norwegian)+3",
-   "covenant": null,
-   "source": "foundry"
-  },
+  "Ka'wa'ill::1222-summer": [
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "practice",
+    "xp": 3,
+    "xpType": "Language: (Norwegian)",
+    "targets": [
+     {
+      "type": "Language: (Norwegian)",
+      "xp": 3
+     }
+    ],
+    "detail": "practice: Language: (Norwegian)+3",
+    "covenant": null,
+    "source": "foundry"
+   },
+   {
+    "activity": true,
+    "deferred": false,
+    "act": "adventuring",
+    "xp": 5,
+    "xpType": "Adventuring",
+    "targets": [
+     {
+      "type": "Leadership",
+      "xp": 5
+     }
+    ],
+    "detail": "adventuring: Leadership+5",
+    "covenant": null,
+    "source": "foundry"
+   }
+  ],
   "Ka'wa'ill::1222-fall": {
    "activity": true,
    "deferred": false,
@@ -2906,6 +2923,306 @@
    "detail": "copying: Legends of Brittany",
    "covenant": null,
    "source": "gm-ruling"
+  },
+  "Dagmar::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 7,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 4
+    },
+    {
+     "type": "Premonitions",
+     "xp": 3
+    }
+   ],
+   "detail": "adventuring: Magic Theory+4, Premonitions+3",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dagmar::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Premonitions",
+     "xp": 3
+    },
+    {
+     "type": "Scandinavian Lore",
+     "xp": 2
+    }
+   ],
+   "detail": "adventuring: Premonitions+3, Scandinavian Lore+2",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Dagmar::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 6,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Artes Liberales",
+     "xp": 3
+    },
+    {
+     "type": "Magic Theory",
+     "xp": 3
+    }
+   ],
+   "detail": "adventuring: Artes Liberales+3, Magic Theory+3",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Éogan Dobhartha::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 8,
+   "xpType": "Code of Hermes",
+   "targets": [
+    {
+     "type": "Code of Hermes",
+     "xp": 8
+    }
+   ],
+   "detail": "reading: Code of Hermes+8",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 13,
+   "xpType": "Bargain",
+   "targets": [
+    {
+     "type": "Bargain",
+     "xp": 13
+    }
+   ],
+   "detail": "teaching: Bargain+13",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 17,
+   "xpType": "Herbam",
+   "targets": [
+    {
+     "type": "Herbam",
+     "xp": 17
+    }
+   ],
+   "detail": "teaching: Herbam+17",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Valdemar Bjornsson::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 16,
+   "xpType": "Rego",
+   "targets": [
+    {
+     "type": "Rego",
+     "xp": 16
+    }
+   ],
+   "detail": "teaching: Rego+16",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Wilhelm Stienauer::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 8,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Faerie Lore",
+     "xp": 5
+    },
+    {
+     "type": "Parma Magica",
+     "xp": 3
+    }
+   ],
+   "detail": "adventuring: Faerie Lore+5, Parma Magica+3",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Rán::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Magic Theory+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Hilda::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Artes Liberales",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Artes Liberales+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Hilda::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Philosophiae",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Philosophiae+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Isaac::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Survival",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Survival+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Isaac::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 5
+    },
+    {
+     "type": "Folk Ken",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Teaching+5, Folk Ken+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Carl::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Hunt",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Hunt+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Carl::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 5
+    },
+    {
+     "type": "Brawl",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Teaching+5, Brawl+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Rembrant de Wees::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Concentration",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Concentration+5",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Garrat Coffin::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 6,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 5
+    },
+    {
+     "type": "Brawl",
+     "xp": 1
+    }
+   ],
+   "detail": "adventuring: Single Weapon+5, Brawl+1",
+   "covenant": null,
+   "source": "foundry"
   }
  }
 }
