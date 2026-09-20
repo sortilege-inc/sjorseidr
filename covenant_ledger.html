@@ -113,6 +113,14 @@ tr:hover td{background:rgba(198,155,63,.08)}
 .pawn{font-size:19px;line-height:1.15;filter:drop-shadow(0 1px 0 rgba(255,250,240,.5))}
 .pawn.ghost{opacity:.26} .pawn.surplus{filter:drop-shadow(0 0 2px rgba(181,74,50,.7))}
 .vis-none{color:var(--ink-soft);font-style:italic;font-size:12.5px;padding:4px 0}
+.vissrc-wrap{overflow-x:auto;margin:2px 0 8px}
+table.vissrc{border-collapse:collapse;font-size:12px;min-width:100%}
+table.vissrc th,table.vissrc td{border:1px solid rgba(120,90,40,.2);padding:4px 8px;text-align:left;vertical-align:top;white-space:nowrap}
+table.vissrc th{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.03em;color:var(--ink-soft);background:rgba(120,90,40,.08)}
+table.vissrc td.vs-nm{font-family:'Cinzel',serif;color:var(--ink)}
+table.vissrc td.vh{white-space:normal;min-width:78px}
+table.vissrc .vh-none{color:rgba(120,90,40,.5)}
+table.vissrc .vs-kind{font-size:10px;color:var(--gold);font-style:italic}
 .leg{display:flex;flex-wrap:wrap;gap:5px 11px;margin:11px 0 2px;font-size:11px;color:var(--ink-soft)}
 .leg .chip{display:inline-flex;align-items:center;gap:3px}
 .leg .pawn{font-size:15px}
@@ -665,15 +673,29 @@ const PANELS={
     const avail=(VIS_SOURCES||[]).filter(v=>{ const y=parseInt(String(v.from||''),10); return !y || y<=NYr; });
     let srcHtml;
     if(!avail.length) srcHtml='<p class="vis-none">No vis sources on record.</p>';
-    else srcHtml=avail.map(v=>{
-      const k=artKeyOf(v.art);
-      const kind=v.kind==='prize'?'Tribunal prize':(v.kind==='seisin'?'covenant seisin':'');
-      const meta=[seasonName(v.season), v.yield, kind].filter(Boolean).join(' · ');
-      return `<div class="visrow">`
-        + `<span class="vislabel" style="flex:0 0 230px"><span class="sw" style="background:${artColor(k)}"></span>${esc(v.name)}</span>`
-        + `<span style="flex:0 0 74px;font-family:'Cinzel',serif;font-size:12px;color:${artColor(k)}">${esc(ART_NAME[k]||v.art)}</span>`
-        + `<span class="q" style="color:var(--ink-soft);font-style:italic;font-size:12px">${esc(meta)}</span></div>`;
-    }).join('');
+    else {
+      const years=[]; for(let y=1220;y<=NYr;y++) years.push(y); // per-year responsibility, backfilled to 1220
+      const swatch=k=>`<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${artColor(k)};margin-right:6px;vertical-align:middle"></span>`;
+      const useLabel={full:'Full',partial:'Partial'};
+      const head=`<tr><th>Source</th><th>Type</th><th>Season</th><th>Full / Partial</th><th>Yield</th>`+years.map(y=>`<th>${y}</th>`).join('')+`</tr>`;
+      const rows=avail.map(v=>{
+        const k=artKeyOf(v.art);
+        const kind=v.kind==='prize'?'Tribunal prize':(v.kind==='seisin'?'seisin':'');
+        const su=useLabel[v.seasonUse]||'Unknown';
+        const H=v.harvests||{};
+        const cells=years.map(y=>{
+          const who=H[String(y)];
+          return `<td class="vh">${who&&who.length?esc(who.join(', ')):'<span class="vh-none">—</span>'}</td>`;
+        }).join('');
+        return `<tr><td class="vs-nm">${swatch(k)}${esc(v.name)}</td>`
+          + `<td style="color:${artColor(k)};font-family:'Cinzel',serif">${esc(ART_NAME[k]||v.art)}</td>`
+          + `<td>${esc(seasonName(v.season))}</td>`
+          + `<td${su==='Unknown'?' class="vh-none"':''}>${su}</td>`
+          + `<td class="vs-y">${esc(v.yield||'')}${kind?` <span class="vs-kind">${esc(kind)}</span>`:''}</td>`
+          + cells + `</tr>`;
+      }).join('');
+      srcHtml=`<div class="vissrc-wrap"><table class="vissrc"><thead>${head}</thead><tbody>${rows}</tbody></table></div>`;
+    }
     return `<p class="section-sub">The covenant's raw vis — the sources it can harvest and the vis expected from each, and what's in the vaults.</p>
       <h2 class="sh" style="margin-top:4px">Vis Sources <span style="font-weight:400;font-size:13px;color:var(--ink-soft)">— current access &amp; expected yield</span></h2>
       ${srcHtml}

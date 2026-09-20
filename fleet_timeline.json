@@ -954,7 +954,30 @@
         33.5,
         13.0
       ],
-      "note": "A kraken surfaces in the North Sea between Norway and Scotland each spring and lays a single egg; retrieved in time, the egg is vis. Art inferred from the egg (the chronicle names Muto/Animal/Aquam around the 1221 harvest). Point in the open sea is approximate."
+      "note": "A kraken surfaces in the North Sea between Norway and Scotland each spring and lays a single egg; retrieved in time, the egg is vis. Art inferred from the egg (the chronicle names Muto/Animal/Aquam around the 1221 harvest). Point in the open sea is approximate.",
+      "harvests": {
+        "1220": [
+          "Éogan",
+          "Ka'wa'ill"
+        ],
+        "1221": [
+          "Ka'wa'ill",
+          "Valdemar",
+          "Leofwin",
+          "Garrat"
+        ],
+        "1222": [
+          "Valerian",
+          "Valdemar"
+        ],
+        "1223": [
+          "Valerian"
+        ],
+        "1224": [
+          "Valerian"
+        ]
+      },
+      "seasonUse": "full"
     },
     {
       "id": "vis-fog",
@@ -968,7 +991,23 @@
         41.5,
         35.0
       ],
-      "note": "A cursed fog haunts a coastal village every summer; the mist is Mentem vis, netted before it can invade dreams. Coastal-village location approximate."
+      "note": "A cursed fog haunts a coastal village every summer; the mist is Mentem vis, netted before it can invade dreams. Coastal-village location approximate.",
+      "harvests": {
+        "1220": [
+          "Dustin"
+        ],
+        "1221": [
+          "Dustin"
+        ],
+        "1222": [
+          "Valdemar"
+        ],
+        "1224": [
+          "Dustin",
+          "Stijntje"
+        ]
+      },
+      "seasonUse": "partial"
     },
     {
       "id": "vis-blackhorse",
@@ -982,7 +1021,19 @@
         38.8,
         44.0
       ],
-      "note": "An annual Rego vis harvest at Boulogne."
+      "note": "An annual Rego vis harvest at Boulogne.",
+      "harvests": {
+        "1220": [
+          "Nequam"
+        ],
+        "1221": [
+          "Dustin"
+        ],
+        "1222": [
+          "Dustin"
+        ]
+      },
+      "seasonUse": "unknown"
     },
     {
       "id": "vis-firesky",
@@ -996,7 +1047,29 @@
         37.0,
         18.0
       ],
-      "note": "A hailstorm drops burning granite spheres into the northern sea each winter; the stones are Terram vis if collected before dawn."
+      "note": "A hailstorm drops burning granite spheres into the northern sea each winter; the stones are Terram vis if collected before dawn.",
+      "harvests": {
+        "1220": [
+          "all magi"
+        ],
+        "1221": [
+          "Éogan",
+          "Dagmar",
+          "Valdemar",
+          "Dustin"
+        ],
+        "1222": [
+          "Éogan",
+          "Dagmar",
+          "Valdemar",
+          "Dustin"
+        ],
+        "1223": [
+          "Valdemar",
+          "Valerian"
+        ]
+      },
+      "seasonUse": "partial"
     },
     {
       "id": "vis-msm",
@@ -1010,7 +1083,16 @@
         28.2,
         50.2
       ],
-      "note": "Salt crystals that crystallize in the tide pools at the foot of the mount during the great spring tides (a tidal event, not the spring season). Tribunal 1223 prize (first pick). Placed in Fall per the season table. Location approximate."
+      "note": "Salt crystals that crystallize in the tide pools at the foot of the mount during the great spring tides (a tidal event, not the spring season). Tribunal 1223 prize (first pick). Placed in Fall per the season table. Location approximate.",
+      "harvests": {
+        "1223": [
+          "Valerian"
+        ],
+        "1224": [
+          "Éogan"
+        ]
+      },
+      "seasonUse": "partial"
     },
     {
       "id": "vis-diedne",
@@ -1024,13 +1106,19 @@
         28.5,
         56.0
       ],
-      "note": "An overgrown garden at a ruined Diedne covenant site yields three unusual herbs each spring; politically contested (multiple covenants claim historical rights). Tribunal 1223 prize. Location approximate."
+      "note": "An overgrown garden at a ruined Diedne covenant site yields three unusual herbs each spring; politically contested (multiple covenants claim historical rights). Tribunal 1223 prize. Location approximate.",
+      "harvests": {
+        "1224": [
+          "Valdemar"
+        ]
+      },
+      "seasonUse": "full"
     },
     {
       "id": "vis-falcon",
       "name": "The Falcon's Cliff",
       "art": "Animal",
-      "yield": "annual",
+      "yield": "annual — Animal or Vim, chosen each harvest",
       "season": "spring",
       "from": "1223-fall",
       "kind": "prize",
@@ -1038,7 +1126,13 @@
         33.0,
         46.5
       ],
-      "note": "A falcon nests on a cliff ledge; a serpent tries to steal an egg the same day. Prevent it and the egg is Animal vis; if the serpent wins, Vim (if the serpent is caught). Tribunal 1223 prize; Dagmar harvested it in Spring 1224. Cliff location approximate."
+      "note": "A falcon nests on a cliff ledge; a serpent tries to steal an egg the same day. Prevent it and the egg is Animal vis; if the serpent wins, Vim (if the serpent is caught). Tribunal 1223 prize; Dagmar harvested it in Spring 1224. Cliff location approximate.",
+      "harvests": {
+        "1224": [
+          "Dagmar"
+        ]
+      },
+      "seasonUse": "unknown"
     },
     {
       "id": "vis-barrow",
@@ -1052,7 +1146,9 @@
         35.5,
         47.5
       ],
-      "note": "Hoarfrost forming inside a Norman barrow's burial chamber on the winter solstice is Corpus vis, scraped free before dawn. Tribunal 1223 prize. Barrow location approximate."
+      "note": "Hoarfrost forming inside a Norman barrow's burial chamber on the winter solstice is Corpus vis, scraped free before dawn. Tribunal 1223 prize. Barrow location approximate.",
+      "harvests": {},
+      "seasonUse": "unknown"
     }
   ],
   "covenants": [
