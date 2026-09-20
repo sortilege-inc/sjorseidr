@@ -8160,6 +8160,62 @@
    "ship": "scholars-wake",
    "result": 20,
    "detail": "Trade from winter quarters at Carrick"
+  },
+  {
+   "year": 1224,
+   "season": "Spring",
+   "ship": "scholars-wake",
+   "result": 15,
+   "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Spring",
+   "ship": "adamant",
+   "result": -25,
+   "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Summer",
+   "ship": "tide-of-memory",
+   "result": 0,
+   "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Summer",
+   "ship": "scholars-wake",
+   "result": -3,
+   "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Summer",
+   "ship": "adamant",
+   "result": -8,
+   "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Fall",
+   "ship": "tide-of-memory",
+   "result": -3,
+   "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Fall",
+   "ship": "scholars-wake",
+   "result": 0,
+   "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Fall",
+   "ship": "adamant",
+   "result": -16,
+   "detail": "Seasonal trade venture (net profit per GM)."
   }
  ]
 }
