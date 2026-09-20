@@ -8216,6 +8216,27 @@
    "ship": "adamant",
    "result": -16,
    "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Spring",
+   "ship": "storm-dragon",
+   "result": 3,
+   "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Summer",
+   "ship": "storm-dragon",
+   "result": 3,
+   "detail": "Seasonal trade venture (net profit per GM)."
+  },
+  {
+   "year": 1224,
+   "season": "Fall",
+   "ship": "storm-dragon",
+   "result": 0,
+   "detail": "Seasonal trade venture (net profit per GM)."
   }
  ]
 }
