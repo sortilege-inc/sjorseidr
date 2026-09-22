@@ -198,6 +198,7 @@ header{
   font-family:'Cinzel',serif;font-weight:700;font-size:13px;color:#fbeede;
   background:linear-gradient(150deg,var(--ink-soft),var(--ink));box-shadow:0 1px 3px var(--shadow)}
 .magus.f .sigil{background:linear-gradient(150deg,#7a4a64,#52283c)}
+.magus .mug{flex:none;width:30px;height:30px;border-radius:7px;object-fit:cover;box-shadow:0 1px 3px var(--shadow)}
 .magus .mn{font-size:14.5px}
 .magus .mh{font-size:12px;font-style:italic;color:var(--ink-soft)}
 
@@ -287,6 +288,17 @@ const DATA = {"covenants": {"Fudarus": {"name": "Fudarus", "role": "liege", "fou
 const C = DATA.covenants;
 const roleLabel = {liege:'Great Liege Covenant',vassal:'Vassal Covenant','vassal-of-vassal':'Vassal-of-Vassal',independent:'Independent Covenant',player:'Player Covenant'};
 const maxEvent = {Certamen:26,Dimicatio:23,Hastiludium:20,Joust:20,Melee:6,'Norman Conquest':12};
+// Portraits for tribunal magi (keyed by exact DATA name). Art archived under sjorseidr-support/archive/art.
+const MAGI_PORTRAITS = {
+  "Guillaume le Pro":"portraits/tribunal_guillaume.png",
+  "Cadoc":"portraits/tribunal_cadoc.png",
+  "Tactitus":"portraits/tribunal_tactitus.png",
+  "Emma":"portraits/tribunal_emma.png",
+  "Frettigesis":"portraits/tribunal_frettigesis.png",
+  "Eutropius":"portraits/tribunal_eutropius.png",
+  "Leonidas":"portraits/tribunal_leonidas.png",
+  "Bridget":"portraits/tribunal_bridget.png"
+};
 
 /* ---------- tournament normalization ---------- */
 // Norman Conquest was cancelled — zero points across the board
@@ -468,7 +480,9 @@ function render(){
     h+=`<div class="section-h">Magi in Attendance</div><div class="magi-list">`;
     c.magi.forEach(m=>{
       const [nm,house,sex]=m;
-      h+=`<div class="magus ${sex==='f'?'f':''}"><div class="sigil">${initials(nm)}</div>
+      const pp = MAGI_PORTRAITS[nm];
+      const avatar = pp ? `<img class="mug" src="${esc(pp)}" alt="${esc(nm)}">` : `<div class="sigil">${initials(nm)}</div>`;
+      h+=`<div class="magus ${sex==='f'?'f':''}">${avatar}
         <div><div class="mn">${esc(nm)}</div><div class="mh">${esc(house)}${sex==='f'?' &middot; she':''}</div></div></div>`;
     });
     h+=`</div>`;
