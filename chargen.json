@@ -18991,7 +18991,104 @@
      "source": "Realms of Power: Magic",
      "page": "39"
     }
-   ]
+   ],
+   "creation": {
+    "characteristicPoints": 7,
+    "characteristicMax": 3,
+    "startingExperienceBySeason": {
+     "spring": 120,
+     "summer": 360,
+     "autumn": 720,
+     "winter": 1200
+    },
+    "qualityPoints": "equal to Might Score",
+    "minorQualityPoints": 1,
+    "majorQualityPoints": 3,
+    "grogMajorsAllowed": "No",
+    "text": "Characteristics: 7 points assigned as in standard Detailed Character Creation (see ArM5 page 29), no Characteristic more than +3 or less than -3. Virtues and Flaws: Assign the character's Virtues and Flaws as in standard Detailed Character Creation, including a Social Status Virtue or Flaw. Size: Assign Size, with 0 indicating an average adult human. Add twice this value to the character's Strength, and subtract it from Quickness. Season determines the magic character's starting experience points, which are used to assign it scores in any Abilities the character can learn, based on its Virtues and Flaws. A spring character receives 120 experience points, a summer character receives 360, an autumn character receives 720, and a winter character receives 1200. Magic Might Score depends upon the power level of the saga and the character's role within it. Then choose Magic Qualities, magical powers, and other advantages, taking a number of Quality points equal to the character's Might Score. Magic Inferiorities give the character additional points to spend on Magic Qualities; like Virtues and Flaws, Minor Qualities and Inferiorities are worth 1 point, Major Qualities and Inferiorities are worth 3 points. Grog characters cannot take Major Inferiorities or Qualities.",
+    "source": "Realms of Power: Magic",
+    "page": 30,
+    "mightMinimumSize": [
+     {
+      "mightScore": "0",
+      "minimumSize": "–21"
+     },
+     {
+      "mightScore": "1",
+      "minimumSize": "–18"
+     },
+     {
+      "mightScore": "2",
+      "minimumSize": "–15"
+     },
+     {
+      "mightScore": "3",
+      "minimumSize": "–12"
+     },
+     {
+      "mightScore": "4",
+      "minimumSize": "–9"
+     },
+     {
+      "mightScore": "5",
+      "minimumSize": "–6"
+     },
+     {
+      "mightScore": "10",
+      "minimumSize": "–3"
+     },
+     {
+      "mightScore": "15",
+      "minimumSize": "0"
+     },
+     {
+      "mightScore": "(+5)",
+      "minimumSize": "(+3)"
+     }
+    ],
+    "auraRecovery": [
+     {
+      "subtotal": "0",
+      "recoveryTime": "24 hours"
+     },
+     {
+      "subtotal": "1",
+      "recoveryTime": "12 hours"
+     },
+     {
+      "subtotal": "2",
+      "recoveryTime": "6 hours"
+     },
+     {
+      "subtotal": "3",
+      "recoveryTime": "3 hours"
+     },
+     {
+      "subtotal": "4",
+      "recoveryTime": "90 minutes"
+     },
+     {
+      "subtotal": "5",
+      "recoveryTime": "45 minutes"
+     },
+     {
+      "subtotal": "6",
+      "recoveryTime": "22 minutes"
+     },
+     {
+      "subtotal": "7",
+      "recoveryTime": "10 minutes"
+     },
+     {
+      "subtotal": "8",
+      "recoveryTime": "5 minutes"
+     },
+     {
+      "subtotal": "9",
+      "recoveryTime": "2 minutes"
+     }
+    ]
+   }
   },
   "faerie": {
    "powers": [
