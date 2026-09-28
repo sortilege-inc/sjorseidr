@@ -177,6 +177,11 @@ const charCost = n => (Math.abs(n)*(Math.abs(n)+1))/2 * (n<0?-1:1);
 const charPoolCost = n => charCost(Math.max(-3, Math.min(3, n)));
 const xpForScore = s => 5*(s*(s+1))/2;
 const scoreFromXp = xp => { let s=0; while(xpForScore(s+1)<=xp) s++; return s; };
+// Hermetic Arts use the pyramid WITHOUT the ×5 that Abilities carry: an Art score
+// n costs n(n+1)/2 XP (ArM5), i.e. one-fifth of the Ability cost. Keep these
+// separate from xpForScore/scoreFromXp, which are Ability-cost only.
+const artXpForScore = s => (s*(s+1))/2;
+const artScoreFromXp = xp => { let s=0; while(artXpForScore(s+1)<=xp) s++; return s; };
 const vfPoints = vf => (vf.size==='Major'?3:vf.size==='Free'?0:1);
 const isMagus = () => C.type==='magus';
 const NATIVE='Native Language';
@@ -406,7 +411,7 @@ function vLYears(){ if(!isMagus()) return {ok:true,msgs:[]};
   return {ok:spent<=pool, msgs:[{level:spent>pool?'warn':'ok',text:`Later-years points: ${spent} / ${pool} (30×${C.laterYears.years} yrs).`}]}; }
 function spellCap(sp){
   const mt=abilityXp('Magic Theory'), at=artTotals();
-  return scoreFromXp(at[artKey(sp.technique)]||0)+scoreFromXp(at[artKey(sp.form)]||0)+(C.characteristics.int||0)+scoreFromXp(mt)+3;
+  return artScoreFromXp(at[artKey(sp.technique)]||0)+artScoreFromXp(at[artKey(sp.form)]||0)+(C.characteristics.int||0)+scoreFromXp(mt)+3;
 }
 function vSpells(){ if(!isMagus()) return {ok:true,msgs:[]};
   const lvls=C.spells.reduce((a,s)=>a+(+s.level||0),0), budget=spellBudget();
@@ -500,7 +505,7 @@ function loadTemplate(name){
   if(t.type==='magus'){
     if(t.house)C.house=t.house; if(t.sigil)C.sigil=t.sigil;
     if(t.confidenceScore!=null)C.confidence={score:t.confidenceScore,points:t.confidencePoints||0};
-    for(const an in (t.arts||{})){ const k=artKey(an); if(k)C.apprentice.arts[k]=xpForScore(t.arts[an]); }
+    for(const an in (t.arts||{})){ const k=artKey(an); if(k)C.apprentice.arts[k]=artXpForScore(t.arts[an]); }
     C.spells=(t.spells||[]).map(s=>({name:`${s.technique} ${s.form} ${s.level}`.trim(),technique:s.technique,form:s.form,level:+s.level||0,range:'',duration:'',target:'',ritual:false,description:''}));
   } else { C.house=null; C.spells=[]; }
   save();
@@ -1143,7 +1148,7 @@ function renderAppr(el){
    Lets each phase's Art stepper continue from the accumulated total, spending only its own points. */
 function artOtherXp(artObj, key){ let t=0; [C.apprentice.arts, C.laterYears.arts].forEach(o=>{ if(o!==artObj) t+=(+o[key]||0); }); return t; }
 function artRow(a, artObj){ const xp=+artObj[a.key]||0, prior=artOtherXp(artObj,a.key);
-  const sc=scoreFromXp(prior+xp), priorSc=scoreFromXp(prior);
+  const sc=artScoreFromXp(prior+xp), priorSc=artScoreFromXp(prior);
   return `<div class="art-row"><span class="an" data-artdesc="${esc(a.name)}" style="cursor:help">${esc(a.name)}</span>
   <span class="lvlstep"><button data-artdec="${a.key}" ${sc<=priorSc?'disabled':''}>−</button><span class="lvlval">${sc}</span><button data-artinc="${a.key}">+</button></span>
   <input type="number" data-artxp="${a.key}" value="${xp}"><span class="mini">xp</span>${prior?`<span class="mini" style="opacity:.65" title="already score ${priorSc} from other phases">+${priorSc} prior</span>`:''}</div>`; }
@@ -1153,12 +1158,12 @@ function artRows(list, artObj){ return list.map(a=>artRow(a, artObj)).join(''); 
 function wireArtObj(el, artObj, attr, rerender){
   const done=rerender||function(){}, priorOf=k=>artOtherXp(artObj,k);
   el.querySelectorAll(`[data-${attr}]`).forEach(inp=>inp.oninput=()=>{const k=inp.dataset[attr]; artObj[k]=+inp.value||0;
-    const lv=inp.closest('.art-row').querySelector('.lvlval'); if(lv) lv.textContent=scoreFromXp(priorOf(k)+(+inp.value||0));
+    const lv=inp.closest('.art-row').querySelector('.lvlval'); if(lv) lv.textContent=artScoreFromXp(priorOf(k)+(+inp.value||0));
     save();renderBudget();updatePoolLine();renderMsgs(visibleSteps()[step]);});
   el.querySelectorAll('[data-artinc]').forEach(b=>b.onclick=()=>{const k=b.dataset.artinc, p=priorOf(k);
-    const total=scoreFromXp(p+(+artObj[k]||0)); artObj[k]=Math.max(0, xpForScore(total+1)-p); save();renderBudget();done();});
+    const total=artScoreFromXp(p+(+artObj[k]||0)); artObj[k]=Math.max(0, artXpForScore(total+1)-p); save();renderBudget();done();});
   el.querySelectorAll('[data-artdec]').forEach(b=>b.onclick=()=>{const k=b.dataset.artdec, p=priorOf(k);
-    const total=scoreFromXp(p+(+artObj[k]||0)), nt=Math.max(scoreFromXp(p), total-1); artObj[k]=Math.max(0, xpForScore(nt)-p); save();renderBudget();done();});
+    const total=artScoreFromXp(p+(+artObj[k]||0)), nt=Math.max(artScoreFromXp(p), total-1); artObj[k]=Math.max(0, artXpForScore(nt)-p); save();renderBudget();done();});
   el.querySelectorAll('[data-artdesc]').forEach(s=>s.onclick=()=>{const a=[...DATA.arts.techniques,...DATA.arts.forms].find(x=>x.name===s.dataset.artdesc);
     $('#artDesc').innerHTML=a&&a.text?`<div class="rules-note"><strong>${esc(a.name)}</strong><br>${mdRules(a.text)}</div>`:'';});
 }
@@ -1471,7 +1476,7 @@ function buildActorFile(){
   if(isMagus()){
     const at=artTotals();
     L.push(`${T(3)}^"Hermetic Arts" DEF {`);
-    [...DATA.arts.techniques,...DATA.arts.forms].forEach(a=>L.push(`${T(4)}^"${a.name}" INTEGER ${scoreFromXp(at[a.key]||0)}`));
+    [...DATA.arts.techniques,...DATA.arts.forms].forEach(a=>L.push(`${T(4)}^"${a.name}" INTEGER ${artScoreFromXp(at[a.key]||0)}`));
     L.push(`${T(3)}}`);
   }
   L.push(`${T(2)}}`);
@@ -1504,7 +1509,7 @@ function buildActorFile(){
 }
 function exportObject(){
   const at=artTotals(), artsObj={};
-  [...DATA.arts.techniques,...DATA.arts.forms].forEach(a=>{const xp=at[a.key]||0;artsObj[a.key]={label:a.name,score:scoreFromXp(xp),xp};});
+  [...DATA.arts.techniques,...DATA.arts.forms].forEach(a=>{const xp=at[a.key]||0;artsObj[a.key]={label:a.name,score:artScoreFromXp(xp),xp};});
   const abil=abilityTotals().map(t=>({name:t.name,param:t.param||'',speciality:t.name===NATIVE?C.childhood.nativeLang:(t.spec||''),xp:t.xp,score:scoreFromXp(t.xp)}));
   return {
     key:(C.name||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,''),
