@@ -763,6 +763,19 @@ function magicBudget(){
   const i=C.magic.inferiorities.reduce((a,c)=>a+magPts(toolkitMag(T.inferiorities,c.name))*(c.count||1),0);
   return {qpts:q, ipts:i, budget:(+C.might||0)+i};
 }
+// Minimum Size for a magic *thing* of stationary matter at a given Might, read from
+// the corpus (realmToolkits.magic.creation.mightMinimumSize, RoP:Magic). Returns the
+// row for the largest listed Might threshold <= the character's Might, or null.
+function magicMinSize(might){
+  const rows=((DATA.realmToolkits.magic.creation||{}).mightMinimumSize)||[];
+  const num=s=>parseInt(String(s).replace(/[–—]/g,'-').replace(/[^0-9-]/g,''),10);
+  let best=null;
+  for(const r of rows){
+    const ms=num(r.mightScore), sz=num(r.minimumSize);
+    if(Number.isFinite(ms)&&Number.isFinite(sz)&&ms<=(+might||0)&&(best===null||ms>best.ms)) best={ms,sz};
+  }
+  return best;
+}
 function faeriePretenseBudget(){
   const fc=DATA.realmToolkits.faerie.creation||{};
   const age=+C.faerie.avgAge||fc.defaultMagusAge||21;
@@ -809,7 +822,12 @@ function wireRealmPicker(el,key,src,chosen,badgeKey){
 function renderRealm(el){ return C.realm==='faerie'?renderFaerie(el):renderMagic(el); }
 function renderMagic(el){
   const T=DATA.realmToolkits.magic, b=magicBudget();
-  const seasons=[['Spring',120],['Summer',360],['Autumn',720],['Winter',1200]];
+  const CR=T.creation||{}, sx=CR.startingExperienceBySeason||{};
+  const seasons=(sx.spring!=null)
+    ?[['Spring',sx.spring],['Summer',sx.summer],['Autumn',sx.autumn],['Winter',sx.winter]]
+    :[['Spring',120],['Summer',360],['Autumn',720],['Winter',1200]];
+  const mm=magicMinSize(+C.might||0);
+  const rec=CR.auraRecovery||[];
   const beings=(DATA.magicBeings||[]).filter(x=>!beingFilter||norm(x.name).includes(norm(beingFilter)));
   el.innerHTML=`<p class="step-help">A Magic-realm being. Load a defined magic being from Realms of Power: Magic, or set <strong>Magic Might</strong> and take <strong>Quality points equal to your Might</strong> (Minor Quality 1, Major 3). Magic Inferiorities give extra points to spend. Powers are the being's innate magical abilities (each with a Might-point activation cost).</p>
     <label class="fld">Load a defined magic being — optional</label>
@@ -819,6 +837,8 @@ function renderMagic(el){
     <div class="row2" style="margin-top:12px"><div><label class="fld">Magic Might</label><input type="number" id="mMight" value="${+C.might||0}"></div>
       <div><label class="fld">Season <span class="mini">(ability XP)</span></label><select id="mSeason"><option value="">—</option>${seasons.map(s=>`<option value="${s[0]}" ${C.season===s[0]?'selected':''}>${s[0]} — ${s[1]} XP</option>`).join('')}</select></div></div>
     <div class="alloc-pool ${b.qpts>b.budget?'bad':''}">Magic Quality points: ${b.qpts} / ${b.budget} <span class="mini">(Might ${+C.might||0} + ${b.ipts} from Inferiorities)</span></div>
+    ${mm?`<div class="mini" style="margin-top:6px">Minimum Size for a magic <em>thing</em> of stationary matter at Might ${+C.might||0}: <strong>${mm.sz}</strong> <span class="mini">(RoP:Magic${CR.page?', p.'+CR.page:''})</span>${(C.size!=null&&+C.size<mm.sz)?` — <span style="color:var(--rust-bright)">current Size ${C.size} is below this minimum</span>`:''}</div>`:''}
+    ${rec.length?`<details style="margin-top:6px"><summary class="mini" style="cursor:pointer">Might recovery in a Magic aura — reference</summary><div class="rules-note"><span class="mini">Subtotal = Aura − (Might Score / 5), then read the chart.</span><table class="mini" style="width:auto;border-collapse:collapse;margin-top:4px"><tr><th style="text-align:right;padding:1px 10px 1px 0">Subtotal</th><th style="text-align:left;padding:1px 0">Recovery time</th></tr>${rec.map(r=>`<tr><td style="padding:1px 10px 1px 0;text-align:right">${esc(String(r.subtotal))}</td><td style="padding:1px 0">${esc(String(r.recoveryTime))}</td></tr>`).join('')}</table></div></details>`:''}
     ${C.magic.loadedPowers.length?`<h4 class="mini" style="margin-top:12px">${esc(C.magic.beingName)}'s Powers <span class="count-pill">from statblock</span></h4>${C.magic.loadedPowers.map((pw,i)=>`<div class="rules-note"><button class="x" data-lprm="${i}" style="float:right">×</button><strong>${esc(pw.name)}</strong>${pw.cost?` <span class="mini">(${esc(pw.cost)}${pw.initiative?', '+esc(pw.initiative):''}${pw.form?', '+esc(pw.form):''}${pw.range?', R: '+esc(pw.range):''})</span>`:''}<br>${mdRules(pw.text||'—')}</div>`).join('')}`:''}
     ${realmPickerHtml('qualities','Magic Qualities',T.qualities,C.magic.qualities,'magnitude')}
     ${realmPickerHtml('inferiorities','Magic Inferiorities',T.inferiorities,C.magic.inferiorities,'magnitude')}
