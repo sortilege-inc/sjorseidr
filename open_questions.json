@@ -828,6 +828,39 @@
    "raised_event": null,
    "status": "Open",
    "resolution": ""
+  },
+  {
+   "id": "t084",
+   "type": "Thread",
+   "category": "Character",
+   "title": "Furtum — Tremere lineage, his parens, and the bishopric",
+   "context": "Three threads around Furtum's origins (he is secretly Tremere; apprenticeship begun under a Tremere parens and completed by a Bonisagus — see q037): (1) He keeps a POSITIVE relationship with that pragmatic parens, who is now at CONFLUENSIS — the very covenant assembling a complaint against Sjórseiðr (s11 / c022). A live back-channel to the rival, and a source of divided loyalty. (2) As Tremere-lineage he is strongly AGAINST human sacrifice — yet his House holds the Diedne records (Tremere absorbed House Diedne after the Schism War), so he can ACCESS Diedne lore others cannot (ties to Valdemar's possible discovery, t085). (3) His Tremere parens feels strongly about what is happening with the BISHOPRIC of the liege (ties to the Scarem Montem / Lotharingia separatist thread, t086).",
+   "raised_in": "Storyteller notes, 2026-09-30",
+   "raised_event": null,
+   "status": "Open",
+   "resolution": ""
+  },
+  {
+   "id": "t085",
+   "type": "Thread",
+   "category": "Research",
+   "title": "Valdemar — possible Discovery: the Diedne secret of consuming a human for vis",
+   "context": "A candidate Discovery / Original-Research seed for Valdemar (House Diedne): the Diedne secret of CONSUMING A HUMAN FOR VIS. Candidate in-fiction sources: the DIEDNE GARDEN (the old druidic circle / Herbam vis source he has been visiting, s12) plus texts from VALERIAN's stash. Scope it as original research/integration (breakthrough points = magnitudes of stabilized discovery; rule-of-thumb Minor 30 / Major 45 / Hermetic 60 — SG sets the secret target) and decide the moral/legal fallout — human sacrifice is a grave line under the Code and cuts against Furtum's Tremere anti-sacrifice stance (t084). NOTE: Furtum's Tremere lineage has access to Diedne records (t084), a possible route or complication.",
+   "raised_in": "Storyteller notes, 2026-09-30",
+   "raised_event": null,
+   "status": "Open",
+   "resolution": ""
+  },
+  {
+   "id": "t086",
+   "type": "Thread",
+   "category": "Plot",
+   "title": "Scarem Montem & Wilhelm's thesis — serfs, madness turned to the Divine, and the bishopric",
+   "context": "What Scarem Montem is doing with Wilhelm's (stolen Latin) folk-magic thesis. The direction to develop: combine Scarem Montem with what is happening to the SERFS — they have REDUCED the folk-casting madness/death toll BY turning it TOWARD THE DIVINE (a Divine-aligned adaptation of the ungifted folk system). The BISHOPRIC is interested but does not want the heat from LOTHARINGIA over the separatists. Possible hook: DIETRICH (Wilhelm's brother, the thesis's public voice at Cologne) writes to Wilhelm about this. Cross-refs: the thesis provenance (Hilda gave Fettelmid the Latin copy at the 1223 Tribunal), the folk-magic madness/death toll (t019 / t020 / q028), and Furtum's parens & the bishopric (t084).",
+   "raised_in": "Storyteller notes, 2026-09-30",
+   "raised_event": null,
+   "status": "Open",
+   "resolution": ""
   }
  ],
  "gmReference": {
