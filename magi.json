@@ -2259,12 +2259,12 @@
           "name": "Blessing of the Fine Harvest",
           "technique": "Creo",
           "form": "Herbam",
-          "level": 25,
+          "level": 20,
           "range": "touch",
           "duration": "moon",
           "target": "ind",
           "ritual": false,
-          "description": "A folk-magic ceremonial blessing that ensures well-grown crops. Design: Creo Herbam base 1 (ensure a plant grows well — the guideline already bakes in +3 Size), R: Touch (+1), D: Moon (+3), T: Individual, +4 Size → Level 25. The +4 Size sits on the guideline's built-in +3 (seven size magnitudes in all, ×10^7 by mass), reaching roughly 2,000 acres of standing crops. Affects a SINGLE crop type at a time; to bless several crop types at once, switch to Target: Group for +1 more magnitude (Level 30). Formulaic (Moon duration), so under Wilhelm's ungifted folk-caster system the caster adds Artes Liberales + Philosophiae to the roll (a standard Hermetic magus would need the Ceremonial Casting Spell Mastery). Ruling 2026-09-30 (q038)."
+          "description": "A folk-magic ceremonial blessing that ensures well-grown crops. Design: Creo Herbam base 1 (ensure a plant grows well — the guideline already bakes in +3 Size), R: Touch (+1), D: Moon (+3), T: Individual, +3 Size → Level 20. The +3 Size sits on the guideline's built-in +3 (six size magnitudes in all, ×10^6 by mass), reaching roughly 200 acres of standing crops. Affects a SINGLE crop type at a time; to bless several crop types at once, switch to Target: Group for +1 more magnitude (Level 25). Formulaic (Moon duration), so under Wilhelm's ungifted folk-caster system the caster adds Artes Liberales + Philosophiae to the roll (a standard Hermetic magus would need the Ceremonial Casting Spell Mastery). Ruling 2026-09-30 (q038)."
         }
       ],
       "personalityTraits": [],
