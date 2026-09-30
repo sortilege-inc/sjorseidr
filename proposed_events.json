@@ -366,5 +366,41 @@
   "notes": "Declared/revised plan. Fall 1224 has NOT yet been played (ledger 'current' node = Summer 1224 live), so no XP is written to the tracker yet — record the two study cells once the seasons are played / confirmed in Foundry. Valdemar's Spring/Fall 1224 tracker cells are currently empty (no conflict). Supersedes any intent to copy the book. Insights from Twilight = Magic Theory summa L6/Q11 (Tribunal prize draft).",
   "source": "Player notes forwarded by owner, 2026-09-20.",
   "body_text": "Declared revision: rather than **copying** *Insights from Twilight* (the Magic Theory summa, L6 / Q11, won in the Tribunal prize draft), Valdemar will **study from it** in **Spring and Fall 1224**. At his Magic Theory 3 (45 xp) — well under the summa's Level 6 — that yields the full **Q11 per season, +22 Magic Theory XP** across the two seasons, carrying him to score 4 (partway to 5). He may later pick up **Profession: Scribe** to speed his copying of important books."
+ },
+ {
+  "id": "p109",
+  "file": "",
+  "sort_iso": "1228-07-01T12:00",
+  "session": "",
+  "scene": "1228 — Grand Tribunal",
+  "title": "The Grand Tribunal at Durenmar (upcoming)",
+  "icon": "⚖️",
+  "timeline": "☀️ Summer 1228",
+  "date": "1228",
+  "cast": [],
+  "activity_type": "Tribunal",
+  "status": "Proposed",
+  "notes": "Upcoming fixture, not yet played. The Order-wide Grand Tribunal convenes at Durenmar in 1228 (per the Winter 1221-22 debate record). Sjórseiðr is exposed: Confluensis intends to bring a bundled quaesitorial complaint here — Rán's open faerie association, the stolen dragon-gold's provenance, and Wilhelm's ungifted folk-magic teaching and its toll (see s11 / c022) — and the Scarem Montem secession question is expected to be raised. Placed in Summer 1228 (Grand Tribunals canonically convene in summer at Durenmar); adjust if the saga sets another season.",
+  "source": "verified_events 'Debates about Valerian, new Tribunal, Chests' (Winter 1221-22) + next_session s11 (c022).",
+  "body_text": "The Grand Tribunal — the Order-wide assembly of the Order of Hermes — convenes at Durenmar in 1228. Sjórseiðr goes in exposed on several fronts, with Confluensis assembling a quaesitorial complaint against the covenant (see s11) and the Scarem Montem secession question expected to come forward."
+ },
+ {
+  "id": "p110",
+  "file": "",
+  "sort_iso": "1226-03-04T20:00",
+  "session": "",
+  "scene": "1226 — The Great Conjunction",
+  "title": "The Great Conjunction of Jupiter & Saturn (upcoming)",
+  "icon": "🌌",
+  "timeline": "❄️ Winter 1225-26",
+  "date": "4–5 March 1226",
+  "cast": [
+   "Dagmar"
+  ],
+  "activity_type": "Astrology",
+  "status": "Proposed",
+  "notes": "Upcoming celestial event / campaign clock, not yet reached. Jupiter and Saturn close to ~2.1 arcminutes in Aquarius on the evening of 4–5 March 1226 — the closest observable great conjunction between 1226 and 2020. It makes the deepest (level-5) crossing of the Carnac Regio survivable for a single night: the lock is on the PATH, not the aura (Magic auras do not fluctuate cyclically). Anchored at Aldebaran (a Behenian fixed star); the Hyades are the classical rainy stars, matching the covenant's maritime regio grammar. Dagmar's premonitions + astrology make the date his to discover in character. (4–5 March falls in the saga's Winter, which runs to ~19 March.)",
+  "source": "next_session_scenes.json → meta.campaign_clock ('The Great Conjunction of 4–5 March 1226').",
+  "body_text": "On the evening of 4–5 March 1226, Jupiter and Saturn draw within ~2.1 arcminutes in Aquarius — the closest observable great conjunction between 1226 and 2020. For one night it makes the deepest (level-5) crossing of the Carnac Regio survivable."
  }
 ]
