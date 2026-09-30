@@ -784,6 +784,17 @@ function spellsHtml(list){
   `;}).join('');
 }
 
+function discoveriesHtml(list){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  return list.map(d=>`
+    <div class="disc-item" style="margin-bottom:11px;padding:8px 10px;background:rgba(244,235,213,.5);border-radius:6px;border:1px solid rgba(120,90,40,.25)">
+      <div style="font-weight:600;font-size:13.5px;color:var(--ink)">${esc(d.title)}${d.status?` <span style="font-weight:400;font-size:11px;color:var(--ink-soft)">— ${esc(d.status)}</span>`:''}</div>
+      ${d.breakthrough?`<div style="font-size:11px;color:var(--rust);font-family:'Cinzel',serif;letter-spacing:.02em;margin:2px 0">${esc(d.breakthrough)}</div>`:''}
+      ${d.narrative?`<div style="font-size:12.5px;color:var(--ink-soft);line-height:1.45;margin-top:3px">${esc(d.narrative)}</div>`:''}
+      ${d.mechanics?`<div style="font-size:12.5px;color:var(--ink);line-height:1.45;margin-top:5px"><em>Mechanics:</em> ${esc(d.mechanics)}</div>`:''}
+    </div>`).join('');
+}
+
 function magusSheetHtml(m){
   const portrait = m.portrait
     ? `<img class="sheet-portrait" src="${esc(m.portrait)}" alt="${esc(m.name)}">`
@@ -854,12 +865,14 @@ function magusSheetHtml(m){
       <button class="sheet-tab" data-stab="virtues">Virtues <span class="st-n">${(m.virtues||[]).length}</span></button>
       <button class="sheet-tab" data-stab="flaws">Flaws <span class="st-n">${(m.flaws||[]).length}</span></button>
       <button class="sheet-tab" data-stab="spells">Spells <span class="st-n">${(m.spells||[]).length}</span></button>
+      ${m.discoveries && m.discoveries.length ? `<button class="sheet-tab" data-stab="discoveries">Discoveries <span class="st-n">${m.discoveries.length}</span></button>` : ''}
       ${m.reputations && m.reputations.length ? `<button class="sheet-tab" data-stab="reputations">Reputations <span class="st-n">${m.reputations.length}</span></button>` : ''}
     </div>
     <div class="sheet-tp on" data-stab="abilities">${abilitiesHtml(m.abilities)}</div>
     <div class="sheet-tp" data-stab="virtues">${vfListHtml(m.virtues,'virtue')}</div>
     <div class="sheet-tp" data-stab="flaws">${vfListHtml(m.flaws,'flaw')}</div>
     <div class="sheet-tp" data-stab="spells">${spellsHtml(m.spells)}</div>
+    ${m.discoveries && m.discoveries.length ? `<div class="sheet-tp" data-stab="discoveries">${discoveriesHtml(m.discoveries)}</div>` : ''}
     ${m.reputations && m.reputations.length ? `<div class="sheet-tp" data-stab="reputations"><div class="vf-list">${m.reputations.map(r=>`<div class="vf-item"><span class="vf-name">${esc(r.name)}</span>${r.description?`<span class="vf-desc">${esc(r.description)}</span>`:''}</div>`).join('')}</div></div>` : ''}
 
     <p class="sheet-source">Pulled from the live Foundry sheet — treat as a snapshot, not a live view. Some scores may still reflect character-creation defaults rather than in-play advancement.</p>

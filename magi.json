@@ -1061,7 +1061,8 @@
         {
           "name": "Personal Vis Source (Aquam)",
           "impact": "minor",
-          "description": "You have exclusive access to a supply of raw vis. Determine the amount and type with the help of your troupe; the yield should be about one tenth as much as the player covenant expects to gather per year at the beginning of the saga. The yield of your source does not normally change over the course of time, even if the covenant uncovers new sources."
+          "description": "You have exclusive access to a supply of raw vis. Determine the amount and type with the help of your troupe; the yield should be about one tenth as much as the player covenant expects to gather per year at the beginning of the saga. The yield of your source does not normally change over the course of time, even if the covenant uncovers new sources.",
+          "note": "Rán’s Tribute — 2 pawns of Aquam vis per year, gifted by Rán (the sea-fae) and gathered at sea. Sized per RAW at ~1/10 of the covenant’s founding seisin gather (24 pawns/yr: Kraken’s Egg 5 + Summer Fog 5 + Black Horse of Boulogne 4 + Fire from the Sky 10). Personal to Éogan; not part of the covenant vis harvest table."
         },
         {
           "name": "Inoffensive To Magical Creatures - Hermetic",
@@ -2261,16 +2262,46 @@
           "level": 25,
           "range": "touch",
           "duration": "moon",
-          "target": "part",
+          "target": "ind",
           "ritual": false,
-          "description": "A folk-magic ceremonial blessing that ensures well-grown crops across a farm. Design: Creo Herbam, base 1 (ensure well-grown crops), R: Touch (+1), D: Moon (+3), T: Part (+1), +3 Size → Level 25; at this size it can bless up to roughly 2,000 acres of farmland. Formulaic (Moon duration), so under Wilhelm's ungifted-caster system a caster adds Artes Liberales + Philosophiae to the roll. An earlier +4-Size / ~20,000-acre draft was set aside in favour of this version."
+          "description": "A folk-magic ceremonial blessing that ensures well-grown crops. Design: Creo Herbam base 1 (ensure a plant grows well — the guideline already bakes in +3 Size), R: Touch (+1), D: Moon (+3), T: Individual, +4 Size → Level 25. The +4 Size sits on the guideline's built-in +3 (seven size magnitudes in all, ×10^7 by mass), reaching roughly 2,000 acres of standing crops. Affects a SINGLE crop type at a time; to bless several crop types at once, switch to Target: Group for +1 more magnitude (Level 30). Formulaic (Moon duration), so under Wilhelm's ungifted folk-caster system the caster adds Artes Liberales + Philosophiae to the roll (a standard Hermetic magus would need the Ceremonial Casting Spell Mastery). Ruling 2026-09-30 (q038)."
         }
       ],
       "personalityTraits": [],
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "discoveries": [
+        {
+          "title": "The Ever-Full Grain Dish",
+          "status": "Complete (in casual use)",
+          "breakthrough": null,
+          "narrative": "Wilhelm's Durenmar graduation project: a large stone dish that is always full of grain — some six million cubic yards' worth before it would run dry. He had it out in casual use for weeks before it occurred to him, without irony, to mention it to his Durenmar hosts.",
+          "mechanics": "A standard Hermetic ritual delay-cast (Creo Herbam) effect that delays the created grain's release by the volume poured out rather than by elapsed time — not a homebrew 'virtual' spell. Magically-produced content by any Tribunal's reckoning, and a trade/arbitrage asset alongside the covenant's enchanted freshwater barrels."
+        },
+        {
+          "title": "Folk-Magic System / Thesis",
+          "status": "Public (Cologne cathedral school)",
+          "breakthrough": null,
+          "narrative": "Wilhelm's folk-magic thesis, carried publicly by his brother Dietrich, a Cologne professor of medicine and philosophy who is its rhetorical voice. Dietrich takes initiation into a minor virtue so he can formally teach the folk-magic system at his cathedral school.",
+          "mechanics": "A non-Hermetic magic system. Folding its methods into Hermetic magic is Breakthrough work — see the integration research below."
+        },
+        {
+          "title": "Reverse-engineering the shared structure of formulaic/ritual magic",
+          "status": "In progress (Original Research)",
+          "breakthrough": "Original Research — Breakthrough pending",
+          "narrative": "A research track reverse-engineering the underlying structure of formulaic (ritual) magic by close study of Hermetic ritual, spontaneous, potion, and enchantment sub-systems plus the semi-integrated longevity-ritual and Parma Magica traditions — looking for the shared principle beneath all of it.",
+          "mechanics": "Original Research toward a Breakthrough. You gain breakthrough points equal to the magnitude of each stabilized discovery; rule-of-thumb thresholds are Minor 30 / Major 45 / Hermetic 60 points, with the exact target the storyguide's secret number. Each stabilization also risks Warping (magnitude − simple die)."
+        },
+        {
+          "title": "Integrating ceremonial magic & lesser enchantments into the folk system",
+          "status": "Proposed",
+          "breakthrough": "Major Breakthrough (~45 pts) if pursued as integration",
+          "narrative": "Extending the folk system with 'real' ceremonial magic (props + prepared spaces, Societates pp.58–60) and with lesser-enchantment / thing-of-virtue enrichment.",
+          "mechanics": "Incorporating a non-Hermetic casting method into Hermetic magic is a Major Breakthrough (~45 breakthrough points) that then becomes a teachable Supernatural/Hermetic Virtue. Several building blocks already exist RAW and need no breakthrough: applying ceremonial casting (Artes Liberales + Philosophiae) to an individual formulaic spell is a Spell Mastery ability (no initiation — Societates/Mysteries); enriching a Thing of Virtue is an un-Gifted Magic Lore activity (RoP:M p.125); vis transfer is a basic Magic Theory lab activity. 'Lesser Integration ~20 points' is not a RAW tier."
+        }
+      ]
     },
     "Valerian de Castellane": {
       "key": "valerian",
@@ -2763,7 +2794,7 @@
       "house": "Bonisagus",
       "parens": null,
       "sigil": null,
-      "born": 1196,
+      "born": 1198,
       "age": 28,
       "apparentAge": 28,
       "characteristics": {
@@ -2924,7 +2955,7 @@
           "name": "Restriction",
           "impact": "major",
           "description": "The lab either forbids certain activities (one category of lab activity cannot be performed), or otherwise tiresome or expensive rituals or practices are required in order to perform lab work. –1 General Quality or +2 Upkeep as appropriate.",
-          "note": "Triggering condition not yet specified on the sheet (\"restriction-???\")."
+          "note": "Condition: Aquatic Mammals (per Furtum v4)."
         },
         {
           "name": "Lycanthrope",
@@ -2940,7 +2971,7 @@
           "name": "Magical Animal Companion",
           "impact": "minor",
           "description": "You are accompanied by a magical animal that's smart enough to follow your orders or to disobey them on its own initiative. The smaller and more innocuous the creature, the more intelligent it is. A ferret or crow is as intelligent as a human, a wolf is very cunning, and an animal the size of a horse is simply more intelligent than normal. The creature has a Magic Might score of 10 - Size.",
-          "note": "Species not yet specified on the sheet (\"Magical Animal Companion-???\")."
+          "note": "Species: Shadow Owl (per Furtum v4)."
         },
         {
           "name": "Covenant Upbringing",
@@ -2962,7 +2993,7 @@
         },
         {
           "name": "Animal Handling",
-          "speciality": "???",
+          "speciality": "Shadow Owls",
           "xp": 15,
           "score": 2
         },
@@ -3022,7 +3053,7 @@
         },
         {
           "name": "Living Language: German",
-          "speciality": "??? ",
+          "speciality": "Dialects",
           "xp": 30,
           "score": 3
         },
@@ -3263,7 +3294,7 @@
       "sanctum": "",
       "familiar": null,
       "activeWounds": null,
-      "biography": "Player: Chan. Spanish-born magus of House Bonisagus (b. 1196, Spain; Christian). Newly associated with Sjórseiðr and not yet assigned to a hull (\"No Ship\" — covenant household). Trained at Durenmar. His apprenticeship was begun under a Tremere magus before a Bonisagus took him on and completed his training; he retains the Tremere Minor Magical Focus in Certamen as his free House virtue (ST-approved) and is, quietly, still Tremere in temperament. Build recorded at covenant parity (established magus). OPEN ITEMS: Restriction condition unspecified; Magical Animal Companion species unspecified; specialties for Animal Handling / Bargain / German unset; \"Annoyed\" personality trait unconfirmed; Flawless Magic grants Mastery 1 in every spell — each spell still needs a chosen Mastery ability."
+      "biography": "Sheet current as of Summer 1226 (b. 1198, age 28). Player: Chan. Spanish-born magus of House Bonisagus (b. 1198, Spain; Christian). Newly associated with Sjórseiðr and not yet assigned to a hull (\"No Ship\" — covenant household). Trained at Durenmar. His apprenticeship was begun under a Tremere magus before a Bonisagus took him on and completed his training; he retains the Tremere Minor Magical Focus in Certamen as his free House virtue (ST-approved) and is, quietly, still Tremere in temperament. Build recorded at covenant parity (established magus). OPEN ITEMS (per Furtum v4): Bargain specialty still \"Bartering???\"; \"Annoyed\" personality trait unconfirmed; Flawless Magic grants Mastery 1 in every spell — each spell still needs a chosen Mastery ability. (Resolved in v4: Restriction = Aquatic Mammals; companion = Shadow Owl; Animal Handling & German specialties.)"
     }
   }
 }

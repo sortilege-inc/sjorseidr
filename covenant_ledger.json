@@ -6877,7 +6877,7 @@
       "category": "magi",
       "job": "House Bonisagus",
       "points": 5,
-      "yearBorn": 1196,
+      "yearBorn": 1198,
       "qty": 1,
       "actorId": null,
       "ship": null,
@@ -7192,6 +7192,17 @@
       "qty": 1,
       "actorId": null,
       "ship": "hound-of-cassel"
+     },
+     {
+      "name": "Sama",
+      "category": "companions",
+      "job": "Scribe / teacher (Sidhe-blooded)",
+      "points": 5,
+      "yearBorn": 1191,
+      "qty": 1,
+      "actorId": null,
+      "ship": "hound-of-cassel",
+      "standing": "active"
      }
     ],
     "library": {
@@ -7744,6 +7755,11 @@
        "name": "The Diedne Garden",
        "q": 3,
        "art": "he"
+      },
+      {
+       "name": "Rán's Tribute (Éogan's gift, 1222–1225)",
+       "q": 8,
+       "art": "aq"
       }
      ],
      "sources": []

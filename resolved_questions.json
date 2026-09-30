@@ -512,6 +512,17 @@
       "raised_event": "p104",
       "status": "Resolved",
       "resolution": "Ruling (owner, 2026-09-20): the covenant's standard Roots are adopted as **L6 / Q24** summae, Redcap-deliverable for a small consideration. Q24 leaves cushion for quick apprentice copies (Juvenalia, ~-3 quality, stay readable). Exceptional Roots (L7/Q28, dragonskin-bound) are treated as effectively unobtainable in play. A specific Root enters the library only when actually acquired."
+    },
+    {
+      "id": "q038",
+      "type": "Tool",
+      "category": "Rules",
+      "title": "Blessing of the Fine Harvest — confirm mechanics (Wilhelm)",
+      "context": "Acreage re-checked against the definitive DSL: the Creo Herbam Level-1 guideline ('ensure a plant grows well') already bakes in a +3 Size enhancement (affects a plant up to ten paces / a large tree ≈ 1,000 pace³). With the sheet's added +3 Size (×1,000) and a further +1 magnitude, that is +7 Size magnitudes total = ×10^7 ≈ ~2,000 acres of standing crops — so the '2,000 acres' figure is broadly correct (SG size estimates are intentionally rough). REMAINING MECHANICS TO CONFIRM: (1) the '+1 part (sizable to target)' should be a +1 SIZE magnitude, not Target: Part — Part affects part of a single whole, it is not a size multiplier; (2) a field of many separate crop-plants is really Target: Group (or Boundary, which requires a ritual), not Individual — a Group of the same mass costs +1 magnitude over the Individual calc, so a RAW-clean field version is +5 levels higher; (3) Moon duration keeps it formulaic and the effect reverts after a month (a growth boost, not a permanent harvest); (4) adding AL+PH to a FORMULAIC spell needs the Ceremonial Casting Spell Mastery (no initiation) or the folk mechanic — fine in Wilhelm's context.",
+      "raised_in": "Player-sheet & rules review, 2026-09-30",
+      "raised_event": null,
+      "status": "Resolved",
+      "resolution": "Ruling (owner, 2026-09-30): finalized as CrHe base 1 (the Level-1 guideline already includes +3 Size) + R: Touch (+1) + D: Moon (+3) + T: Individual + **+4 Size** = Level 25. The +4 Size on the guideline's built-in +3 is seven size magnitudes in all (×10^7 by mass), giving a scope of ~2,000 acres. The spell affects a SINGLE crop type at a time; to cover MULTIPLE crop types, switch to Target: Group for +1 magnitude (Level 30). Moon duration keeps it formulaic; AL+PH is added via Wilhelm's folk-caster system (or the Ceremonial Casting Spell Mastery for a standard magus). Mass-scaling basis: arm5e spell-rules 'Targets and Sizes' (×10/magnitude by mass) + the CrHe Level-1 guideline's built-in +3 Size; the acres figure is a troupe estimate under the book's explicit 'a rough guess is fine' allowance."
     }
   ]
 }

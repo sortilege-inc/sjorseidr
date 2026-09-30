@@ -800,9 +800,31 @@
    "id": "q037",
    "type": "Tool",
    "category": "Character",
-   "title": "Finish Furtum Bonisagus's character sheet (player Chan) — open build items",
-   "context": "Furtum Bonisagus (player Chan) was created from 'Furtum v2.pdf' and added to magi.json + the current-node roster (No Ship / Covenant household). Build is legal and recorded at covenant parity; House Bonisagus with the free Minor Magical Focus (Certamen) carried over from a Tremere parens (ST-approved). Remaining to finalize with the player before the sheet is done: (1) RESTRICTION — the Major Hermetic flaw's triggering condition is unspecified ('restriction-???'); needs a defined trigger (e.g. open salt water, thematic for a sea covenant). (2) MAGICAL ANIMAL COMPANION — species unspecified; keep it distinct from his Lycanthrope form and any future familiar (RAW: companion Might = 10 - Size). (3) SPECIALTIES blank — Animal Handling, Bargain, Living Language: German. (4) PERSONALITY TRAIT 'Annoyed???' (+2) is a placeholder; needs a real trait. (5) SPELL MASTERY — Flawless Magic grants Mastery 1 in every spell, so all 11 spells need a chosen Mastery ability (all blank). Once resolved, update magi.json accordingly. (Foundry sync deferred until the sheet is finished.)",
+   "title": "Finish Furtum Bonisagus's character sheet (player Chan) — remaining open items",
+   "context": "Furtum Bonisagus (player Chan) is in magi.json + the current-node roster (No Ship / Covenant household). RESOLVED in Furtum v4: Restriction = Aquatic Mammals; Magical Animal Companion = Shadow Owl; Animal Handling specialty = Shadow Owls; Living Language: German specialty = Dialects; year born set to 1198. STILL OPEN: (1) Bargain specialty still 'Bartering???'; (2) 'Annoyed???' personality trait (+2) is a placeholder; (3) Flawless Magic grants Mastery 1 in every spell, so all 11 spells need a chosen Mastery ability (all blank). Foundry sync deferred until the sheet is finished. | BONISAGUS FREE VIRTUE: Furtum does NOT have the standard Bonisagus free benefit (Puissant Magic Theory or Puissant Intrigue); his free House-virtue slot holds the Tremere Minor Magical Focus (Certamen), ST-approved via his Tremere-parens backstory. If you'd rather he also/instead take the Bonisagus freebie, that's a swap to decide. SHEET BASIS: current as of Summer 1226 (b. 1198, age 28).",
    "raised_in": "Character sheet 'Furtum v2.pdf' submitted by player Chan, 2026-09-29",
+   "raised_event": null,
+   "status": "Open",
+   "resolution": ""
+  },
+  {
+   "id": "q039",
+   "type": "Tool",
+   "category": "Rules",
+   "title": "Wilhelm's folk-magic integration — breakthrough scoping (Lesser Enchantments & Ceremonial)",
+   "context": "Recorded on Wilhelm's sheet under Discoveries. Breakthrough points = the magnitude of each stabilized discovery; rule-of-thumb thresholds Minor 30 / Major 45 / Hermetic 60 (SG sets the secret exact number). Incorporating a non-Hermetic casting method (e.g. the folk ceremonial system) into Hermetic magic is a MAJOR Breakthrough (~45 pts) that becomes a teachable Supernatural/Hermetic Virtue. LESSER ENCHANTMENTS INTEGRATION notes: enriching a Thing of Virtue (RoP:M p.125, un-Gifted Magic Lore) and vis transfer (basic Magic Theory) already exist RAW and need no breakthrough; building a Hermetic lesser enchanted device (e.g. the stone sled) is standard Hermetic magic, not itself folk-integration — at most a possible Insight source (SG call); 'Lesser Integration ~20 points' is not a RAW tier. CEREMONIAL: applying AL+PH to individual formulaic spells is already a Spell Mastery ability (no initiation); 'real' ceremonial magic (props + prepared spaces) is Societates pp.58–60. DECISION: set the breakthrough targets/points for Wilhelm's integration goals.",
+   "raised_in": "Player-sheet & rules review, 2026-09-30",
+   "raised_event": null,
+   "status": "Open",
+   "resolution": ""
+  },
+  {
+   "id": "q040",
+   "type": "Tool",
+   "category": "Character",
+   "title": "Sama — outstanding character-sheet items (Hound of Cassel companion)",
+   "context": "Sama (Sidhe-blooded companion, added to npcs.json + Hound of Cassel). OPEN: (1) no player name on the sheet — is she a PC companion or an NPC? (2) characteristics run ~2 points over a standard 7 + Improved-Characteristics(3) budget (Great Communication covers Com's 4th point) — confirm the Improved Characteristics count or trim; (3) clarify what 'L21' denotes (who cast her longevity ritual and its Lab Total) given she already has Unaging + Faerie-Blood natural longevity.",
+   "raised_in": "Player-sheet & rules review, 2026-09-30",
    "raised_event": null,
    "status": "Open",
    "resolution": ""

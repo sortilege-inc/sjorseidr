@@ -10950,6 +10950,334 @@
       "source": "GM prep (2026-09-12). Aquatic Magic Human on the RoP:Magic Atlantean chassis (p.90), promoted to a colony leader; powers Command the Waters (p.94) and Drown (p.137) reproduced VERBATIM from RoP:Magic. Might 15 set one step above the campaign Capricorn (Might 14) as the encounter's high-water mark; characteristics/abilities/combat are my design calibration. For the s16 negotiation at the Carnac regio Level 3.",
       "shortDescription": "The murfolk colony's leader and negotiation partner (s16) — a water-shaman who can turn the regio's pools into a drowning elemental. The one that matters at the table.",
       "biography": "The Tide-Speaker is the leader the party actually deals with once the ambush turns social (s16). It leads a PEOPLE, not a monster nest, and knows exactly what its colony is — voicing the party's likely misreading (that these are Ka'wa'ill's kin; they are convergent adaptation to the same aura, not shared ancestry) will insult it badly.\n\nIt is not a melee threat and knows it. Its leverage is the water itself: given a round it does not spend fighting, Command the Waters (a slow Ritual, Init Qik−16) raises a water elemental from the regio pools, and that elemental can Drown a Size-0 target. That is the stick behind the parley — the reason a negotiation \"you cannot avoid\" is exactly that.\n\nSTATBLOCK — Might 15 (Magic, Aquam); Magic Resistance 15; Size 0; Soak +3. Int +2, Per +1, Pre +3, Com +2, Str 0, Sta +1, Dex +1, Qik 0. Coral staff: Init +2, Attack +5, Defense +4, Damage +2. Vis: 3 pawns Aquam.\n\nPOWERS — Command the Waters (Ritual; raises a water elemental — VERBATIM RoP:Magic p.94); the elemental's Drown (VERBATIM RoP:Magic p.137); Still the Shallows (at-will minor, GM-flavor)."
+    },
+    "Sama": {
+      "name": "Sama",
+      "foundryName": null,
+      "charType": "companion",
+      "portrait": null,
+      "house": null,
+      "parens": null,
+      "sigil": null,
+      "born": 1191,
+      "age": 35,
+      "apparentAge": null,
+      "characteristics": {
+        "int": 3,
+        "per": 1,
+        "str": -2,
+        "sta": 1,
+        "pre": 2,
+        "com": 4,
+        "dex": 1,
+        "qik": -2
+      },
+      "size": -1,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 0,
+          "xp": 0
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 0,
+          "xp": 0
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 0,
+          "xp": 0
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 0,
+          "xp": 0
+        },
+        "re": {
+          "label": "Rego",
+          "score": 0,
+          "xp": 0
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 0,
+          "xp": 0
+        },
+        "au": {
+          "label": "Auram",
+          "score": 0,
+          "xp": 0
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 0,
+          "xp": 0
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 0,
+          "xp": 0
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 0,
+          "xp": 0
+        },
+        "te": {
+          "label": "Terram",
+          "score": 0,
+          "xp": 0
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 0,
+          "xp": 0
+        }
+      },
+      "virtues": [
+        {
+          "name": "Strong Faerie Blood (Sidhe)",
+          "impact": "major",
+          "description": "The blood of the fay is strong in you. Perhaps one of your parents was actually a faerie, or maybe you were conceived or born in a place of great faerie power. This ancestry grants you several abilities. First, you have natural longevity. You start making aging rolls at the age of fifty, rather than the normal 35, and get -3 to Aging Rolls, cumulative with any other bonuses. Second, you have faerie eyes. This gives you the Virtue Second Sight at no cost, and you can see normally in darkness or semi-darkness, such as in deep woods or at night. Your eyes look mostly normal, but are an unusual and vivid color. Third, you may learn Faerie Lore during character generation. Finally, you get the benefits of a particular type of fay heritage, as given in the Virtue Faerie Blood. Your specific fay heritage is clearly visible. Choose one physical quirk, such as small horns, literally blue blood, or eyes without irises and pupils, appropriate to the faeries from which you are descended. You may not have both Faerie Blood and Strong Faerie Blood. This is a Supernatural Virtue, and you cannot lose it when being trained as a magus.",
+          "note": "Physical quirk: amber eyes with no pupils. Grants Second Sight for free."
+        },
+        {
+          "name": "Sense Holiness and Unholiness",
+          "impact": "minor",
+          "description": "You are able to feel the presence of good and evil. In auras of particularly strong divine or infernal influence, your sensitivity may overwhelm you. Choosing this Virtue confers the Ability Sense Holiness and Unholiness 1."
+        },
+        {
+          "name": "Educated",
+          "impact": "minor",
+          "description": "You have been educated in a grammar school, and may have attended a university or cathedral school. You may purchase Academic Abilities during character generation. During character generation you get an additional 50 experience points, which must be spent on Latin and Artes Liberales."
+        },
+        {
+          "name": "Good Teacher",
+          "impact": "minor",
+          "description": "You can explain new concepts and skills with great facility. Add three to the Quality of any books that you write, and five to the Source Quality for anyone who studies with you."
+        },
+        {
+          "name": "Great Communication",
+          "impact": "minor",
+          "description": "You may raise any Characteristic that already has a score of at least +3 by one point, to no more than +5. Make sure you describe what it is about you that causes that increase. You may take this Virtue twice for the same Characteristic, and for more than one Characteristic."
+        },
+        {
+          "name": "Improved Characteristics",
+          "impact": "minor",
+          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Privileged Upbringing",
+          "impact": "minor",
+          "description": "You grew up in an environment where you had access to teachers and free time for study. You have an additional 50 experience points, which may be spent on General, Academic, or Martial Abilities. You may not, however, buy Academic or Martial Abilities with your normal pool of experience points unless you have another Virtue or Flaw permitting that. The most common reason for this Virtue is that your family was wealthy while you were a child, but if you are wealthy now, you should take the Wealthy Virtue (page 115)."
+        },
+        {
+          "name": "Unaging",
+          "impact": "minor",
+          "description": "You do not suffer the effects of age. In game terms, your aging points do not decrease your Characteristics, only building up to give you Decrepitude points. If a crisis is not potentially fatal, you suffer no ill-effects. You may die from terminal and potentially fatal crises, according to the normal rules. You are not enfeebled when you reach four Decrepitude points, but you die as normal when you reach five. You may choose your apparent age freely, although if you are basically human it should be less than or equal to your actual age."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Outsider (Moor)",
+          "impact": "major",
+          "description": "You belong to a group that is both readily identifiable and distrusted or disliked. Examples include Saracens, Jews, and Moors. You are shunned and often persecuted because of this, and your life and freedom may occasionally be in peril. You have a bad Reputation of level 1 to 3 (depending upon how easy it is to identify you) among members of the dominant social group of your area. There is no way for you to ever remove that stain, and you are marked by it wherever you go."
+        },
+        {
+          "name": "Pious",
+          "impact": "major",
+          "description": "You are a fervent follower of your religion. You avoid the things it prohibits, and enthusiastically do the things it commands."
+        },
+        {
+          "name": "Faerie Friend",
+          "impact": "minor",
+          "description": "You have an ally among the fay. How much assistance you can get depends on the power of the friend. Your ally is fully sentient, has its own powers, and can speak when it chooses. While a faerie companion can be a great boon, it can also be a terrible burden. Characters with this Flaw can purchase the Arcane Knowledge Faerie Lore, even if they are normally restricted from purchasing it."
+        },
+        {
+          "name": "Noncombatant",
+          "impact": "minor",
+          "description": "You have no interest in combat, nor do you have any ability with it. You might be unreasonably afraid of combat, or a complete pacifist, or prone to freezing and doing nothing."
+        },
+        {
+          "name": "Ability Block (Martial)",
+          "impact": "minor",
+          "description": "You are completely unable to learn a certain class of Abilities, for some reason. This may be Martial Abilities, or a more limited set of the others. It must be possible for your character to learn the abilities in question, but she need have no intention of doing so. You may only take this Flaw once."
+        },
+        {
+          "name": "Small Frame",
+          "impact": "minor",
+          "description": "You are of a lighter-thanaverage build. Your Size is reduced to –1. This means that the severity of wounds you take increases in four point increments, rather than five point. (See page 404). You cannot take this Flaw and Giant Blood (page 83), Large (page 89), or Dwarf (page 126)."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Native Language",
+          "speciality": "Arabic (Dialects)",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Awareness",
+          "speciality": "Searching",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Books",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Charm",
+          "speciality": "First Impressions",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Chirurgy",
+          "speciality": "Binding Wounds",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Etiquette",
+          "speciality": "Faeries",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Magi",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Living Language: English",
+          "speciality": "Dialects",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Living Language: French",
+          "speciality": "Dialects",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Living Language: Greek",
+          "speciality": "Dialects",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Living Language: Spanish",
+          "speciality": "Dialects",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Music",
+          "speciality": "Sing",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Profession: Sailor",
+          "speciality": "Knots",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Profession: Scribe",
+          "speciality": "Illumination",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Swim",
+          "speciality": "Staying Afloat",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Teaching",
+          "speciality": "Magi",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Music",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Dead Language: Latin",
+          "speciality": "Hermetic Usage",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Dead Language: Classical Greek",
+          "speciality": "Academic Usage",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Dead Language: Hebrew",
+          "speciality": "Academic Usage",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Second Sight",
+          "speciality": "Regiones",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Sense Holiness and Unholiness",
+          "speciality": "Evil",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Quiet +1",
+        "Tidy +3",
+        "Pious +5"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": null,
+      "shortDescription": "Sidhe-blooded Arabic scribe and teacher aboard the Hound of Cassel — a pious, non-combatant illuminator and polyglot (Strong Faerie Blood; amber eyes, no pupils).",
+      "biography": "Player: (unlisted). Companion. Arabic-born (b. 1191), Christian, a Scribe by profession; small of frame (Size -1). Strong Faerie Blood of the Sidhe — amber eyes without pupils, Second Sight, natural longevity — reinforced by an Unaging virtue and, per the sheet, a longevity ritual ('L21'). Devout to the point of a Major Pious flaw, and an Outsider (Moor) wherever the Latin west holds sway. Assigned to the Hound of Cassel. OPEN ITEMS: no player name on the sheet; characteristics run ~2 points over a 7 + Improved-Characteristics(3) budget (Great Communication covers Com's 4th point) — confirm the Improved Characteristics count; clarify what 'L21' denotes (who cast the longevity ritual and its Lab Total) given she already has Unaging + Faerie-Blood longevity."
     }
   }
 }

@@ -188,6 +188,25 @@
     "t073",
     "c027"
    ]
+  },
+  {
+   "id": "s-durenmar-roots",
+   "title": "Durenmar — Roots for the taking",
+   "seasons": [
+    "Spring 1225"
+   ],
+   "magi": [
+    "Wilhelm"
+   ],
+   "npcs": [],
+   "thread": "Wilhelm's Durenmar trip (p104)",
+   "status": "Developed",
+   "hook": "At Durenmar, Wilhelm can acquire one or more Roots — the standard foundational Art summae (L6 / Q24, Redcap-deliverable for a small consideration). Pick which he leaves with.",
+   "detail": "Roots available to select (all L6 / Q24): Creo — The Wellspring of Making; Intellego — On the Discernment of Truths; Muto — Proteus Bound; Perdo — The Ashes of All Things; Rego — The Ordered Hand; Animal — Of Beasts and Their Natures; Aquam — The Courses of Water; Auram — The Root of Wind and Tempest; Corpus — The Fabric of the Body; Herbam — The Green Mantle; Ignem — First Sparks; Imaginem — The Play of Images; Mentem — The Antechamber of the Mind; Terram — The Bones of the Earth; Vim — The Raw Stuff of Magic. NOTE: a Root (cap 6) only advances an Art Wilhelm can still study up to ~5, so his Rego 17 / Vim 16 gain nothing; his low Arts (Creo, Intellego, Muto, Perdo, Animal, Aquam, Auram, Corpus, Herbam, Ignem, Imaginem, Mentem, Terram — all ≤3) are the useful picks. A specific Root enters the library only when actually acquired (q034).",
+   "refs": [
+    "p104",
+    "q034"
+   ]
   }
  ]
 }
