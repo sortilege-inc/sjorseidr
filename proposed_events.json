@@ -326,29 +326,6 @@
   "body_text": "Declared: Dustin **teaches Aquam in Spring 1225**, and refits the **Scholar's Wake's laboratory** (worked up at Oléron) to remove its outstanding **safety** problems; **Stijntje** will copy books."
  },
  {
-  "id": "p107",
-  "file": "",
-  "sort_iso": "1225-01-01T12:00",
-  "session": "2026-09-19",
-  "scene": "1225 — vis-harvest roster",
-  "title": "The 1225 vis-harvest assignments (declared)",
-  "icon": "🍇",
-  "timeline": "🗓️ 1225",
-  "date": "1225",
-  "cast": [
-   "Dustin Page",
-   "Valerian de Castellane",
-   "Dagmar",
-   "Valdemar Bjornsson",
-   "Ka'wa'ill"
-  ],
-  "activity_type": "Vis harvest",
-  "status": "Proposed",
-  "notes": "Declared 1225 roster; not yet harvested. Éogan is unassigned (in Ireland after the capricorn). Written into the vis-source harvest table as the 1225 column (shows when the current node advances to 1225).",
-  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "Declared 1225 harvest roster: **Dustin** — Summer Fog, Black Horse, and Fire from the Sky (participant); **Valerian** — Norman Barrow Frost and the Mont-Saint-Michel tide pools; **Dagmar** — the Falcon's Cliff (taking the Vim); **Valdemar** — the Diedne Garden and Fire from the Sky; **Ka'wa'ill** — the Kraken's Egg. Éogan is unassigned this year (in Ireland chasing the capricorn)."
- },
- {
   "id": "p108",
   "file": "",
   "sort_iso": "1224-03-21T12:00",
@@ -402,5 +379,158 @@
   "notes": "Upcoming celestial event / campaign clock, not yet reached. Jupiter and Saturn close to ~2.1 arcminutes in Aquarius on the evening of 4–5 March 1226 — the closest observable great conjunction between 1226 and 2020. It makes the deepest (level-5) crossing of the Carnac Regio survivable for a single night: the lock is on the PATH, not the aura (Magic auras do not fluctuate cyclically). Anchored at Aldebaran (a Behenian fixed star); the Hyades are the classical rainy stars, matching the covenant's maritime regio grammar. Dagmar's premonitions + astrology make the date his to discover in character. (Placed in Spring 1226 by GM decision — filed after Winter — though the conjunction is technically 4–5 March.)",
   "source": "next_session_scenes.json → meta.campaign_clock ('The Great Conjunction of 4–5 March 1226').",
   "body_text": "On the evening of 4–5 March 1226, Jupiter and Saturn draw within ~2.1 arcminutes in Aquarius — the closest observable great conjunction between 1226 and 2020. For one night it makes the deepest (level-5) crossing of the Carnac Regio survivable."
+ },
+ {
+  "id": "p111",
+  "sort_iso": "1225-04-15T12:00",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "title": "1225 harvest: The Kraken's Egg — Ka'wa'ill (Animal)",
+  "cast": [
+   "Ka'wa'ill"
+  ],
+  "body_text": "Declared 1225 harvest: Ka'wa'ill harvests the Kraken's Egg (Animal, ~5 pawns) in Spring 1225.",
+  "notes": "Declared 1225 harvest, not yet played. Spring source (Animal, ~5 pawns/yr).",
+  "file": "",
+  "session": "2026-09-19",
+  "scene": "1225 — vis-harvest roster",
+  "icon": "🍇",
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes; split from the former combined roster (p107)."
+ },
+ {
+  "id": "p112",
+  "sort_iso": "1225-04-16T12:00",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "title": "1225 harvest: The Diedne Garden — Valdemar (Herbam)",
+  "cast": [
+   "Valdemar Bjornsson"
+  ],
+  "body_text": "Declared 1225 harvest: Valdemar harvests the Diedne Garden (Herbam, ~3 pawns) in Spring 1225 — the druidic circle on the Channel coast (see s12).",
+  "notes": "Declared 1225 harvest, not yet played. Spring source (Herbam, ~3 pawns/yr).",
+  "file": "",
+  "session": "2026-09-19",
+  "scene": "1225 — vis-harvest roster",
+  "icon": "🍇",
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes; split from the former combined roster (p107)."
+ },
+ {
+  "id": "p113",
+  "sort_iso": "1225-04-17T12:00",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "title": "1225 harvest: The Falcon's Cliff — Dagmar (Vim)",
+  "cast": [
+   "Dagmar"
+  ],
+  "body_text": "Declared 1225 harvest: Dagmar harvests the Falcon's Cliff in Spring 1225, taking the Vim (the source yields Animal or Vim, chosen each harvest).",
+  "notes": "Declared 1225 harvest, not yet played. Spring source (Animal or Vim, chosen; Dagmar takes Vim).",
+  "file": "",
+  "session": "2026-09-19",
+  "scene": "1225 — vis-harvest roster",
+  "icon": "🍇",
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes; split from the former combined roster (p107)."
+ },
+ {
+  "id": "p114",
+  "sort_iso": "1225-07-15T12:00",
+  "timeline": "☀️ Summer 1225",
+  "date": "1225",
+  "title": "1225 harvest: The Summer Fog — Dustin (Mentem)",
+  "cast": [
+   "Dustin Page"
+  ],
+  "body_text": "Declared 1225 harvest: Dustin harvests the Summer Fog (Mentem, ~5 pawns) in Summer 1225.",
+  "notes": "Declared 1225 harvest, not yet played. Summer source (Mentem, ~5 pawns/yr).",
+  "file": "",
+  "session": "2026-09-19",
+  "scene": "1225 — vis-harvest roster",
+  "icon": "🍇",
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes; split from the former combined roster (p107)."
+ },
+ {
+  "id": "p115",
+  "sort_iso": "1225-10-15T12:00",
+  "timeline": "🍂 Fall 1225",
+  "date": "1225",
+  "title": "1225 harvest: The Black Horse of Boulogne — Dustin (Rego)",
+  "cast": [
+   "Dustin Page"
+  ],
+  "body_text": "Declared 1225 harvest: Dustin harvests the Black Horse of Boulogne (Rego, ~4 pawns) in Fall 1225.",
+  "notes": "Declared 1225 harvest, not yet played. Fall source (Rego, ~4 pawns/yr).",
+  "file": "",
+  "session": "2026-09-19",
+  "scene": "1225 — vis-harvest roster",
+  "icon": "🍇",
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes; split from the former combined roster (p107)."
+ },
+ {
+  "id": "p116",
+  "sort_iso": "1225-10-16T12:00",
+  "timeline": "🍂 Fall 1225",
+  "date": "1225",
+  "title": "1225 harvest: Mont-Saint-Michel Tide Pools — Valerian (Aquam)",
+  "cast": [
+   "Valerian de Castellane"
+  ],
+  "body_text": "Declared 1225 harvest: Valerian harvests the Mont-Saint-Michel tide pools (Aquam, ~5 pawns) in Fall 1225.",
+  "notes": "Declared 1225 harvest, not yet played. Fall source (Aquam, ~5 pawns/yr).",
+  "file": "",
+  "session": "2026-09-19",
+  "scene": "1225 — vis-harvest roster",
+  "icon": "🍇",
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes; split from the former combined roster (p107)."
+ },
+ {
+  "id": "p117",
+  "sort_iso": "1225-12-15T12:00",
+  "timeline": "❄️ Winter 1225-26",
+  "date": "1225",
+  "title": "1225 harvest: Norman Barrow Frost — Valerian (Corpus)",
+  "cast": [
+   "Valerian de Castellane"
+  ],
+  "body_text": "Declared 1225 harvest: Valerian harvests the Norman Barrow Frost (Corpus, ~2 pawns) in Winter 1225-26.",
+  "notes": "Declared 1225 harvest, not yet played. Winter source (Corpus, ~2 pawns/yr).",
+  "file": "",
+  "session": "2026-09-19",
+  "scene": "1225 — vis-harvest roster",
+  "icon": "🍇",
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes; split from the former combined roster (p107)."
+ },
+ {
+  "id": "p118",
+  "sort_iso": "1225-12-16T12:00",
+  "timeline": "❄️ Winter 1225-26",
+  "date": "1225",
+  "title": "1225 harvest: Fire from the Sky — Valdemar & Dustin (Terram)",
+  "cast": [
+   "Valdemar Bjornsson",
+   "Dustin Page"
+  ],
+  "body_text": "Declared 1225 harvest: the covenant-wide Fire from the Sky harvest (Terram, ~10 pawns) in Winter 1225-26 — Valdemar assigned, Dustin participating.",
+  "notes": "Declared 1225 harvest, not yet played. Winter source (Terram, ~10 pawns/yr), a full-covenant harvest. Note: Éogan is unassigned across the 1225 harvests (in Ireland after the capricorn).",
+  "file": "",
+  "session": "2026-09-19",
+  "scene": "1225 — vis-harvest roster",
+  "icon": "🍇",
+  "activity_type": "Vis harvest",
+  "status": "Proposed",
+  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes; split from the former combined roster (p107)."
  }
 ]
