@@ -668,5 +668,26 @@
   "activity_type": "Vis harvest",
   "status": "Proposed",
   "source": "Covenant recurring vis sources (fleet_timeline.json). Stub pending harvester assignment."
+ },
+ {
+  "id": "p127",
+  "file": "",
+  "sort_iso": "1226-12-20T12:00",
+  "session": "",
+  "scene": "1226 — teaching",
+  "title": "Éogan teaches Aquam to Stijntje and Dustin",
+  "icon": "📖",
+  "timeline": "❄️ Winter 1226-27",
+  "date": "1226",
+  "cast": [
+   "Éogan Dobhartha",
+   "Stijntje Kuiper",
+   "Dustin Page"
+  ],
+  "activity_type": "Teaching",
+  "status": "Proposed",
+  "notes": "Declared, not yet played. Pays down the standing IOU for Stijntje to learn Aquam from Éogan (formerly open question q030, now closed). Dustin sits in as well.",
+  "source": "Owner notes 2026-09-30 (resolves q030).",
+  "body_text": "In Winter 1226-27, Éogan teaches Aquam to Stijntje (Dustin's apprentice) and to Dustin himself — settling the long-standing IOU for Stijntje's Aquam instruction."
  }
 ]

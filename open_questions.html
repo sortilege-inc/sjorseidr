@@ -223,6 +223,15 @@ let activeRefTab = 'roster';
 // Status filter. Resolved = ruled/answered; Archived = reference/background;
 // Closed = set aside / not being pursued.
 const HIDDEN_STATUSES = ['Resolved','Archived','Closed'];
+// File-wins-on-load: the local cache is stamped with a signature of the file
+// data. If the files change (e.g. items archived/closed/edited), the signature
+// no longer matches and the stale cache is discarded so the files win.
+let FILE_SIG = '';
+function fileSignature(items){
+  const s = JSON.stringify(items || []);
+  let h = 0; for(let i=0;i<s.length;i++){ h = ((h<<5)-h+s.charCodeAt(i))|0; }
+  return String(h>>>0);
+}
 
 async function load(){
   try{
@@ -238,15 +247,20 @@ async function load(){
       gmReference: openData.gmReference,
       items: [...(openData.items||[]), ...(resolvedData.items||[])],
     };
+    FILE_SIG = fileSignature(STATE.items);
     const cached = localStorage.getItem(LS_KEY);
     if(cached){
       try{
         const c = JSON.parse(cached);
-        const byId = {}; (c.items||[]).forEach(q=>byId[q.id]=q);
-        STATE.items.forEach(q=>{
-          if(byId[q.id]){ q.status = byId[q.id].status; q.resolution = byId[q.id].resolution; }
-        });
-      }catch(_){}
+        if(c && c.sig === FILE_SIG){
+          const byId = {}; (c.items||[]).forEach(q=>byId[q.id]=q);
+          STATE.items.forEach(q=>{
+            if(byId[q.id]){ q.status = byId[q.id].status; q.resolution = byId[q.id].resolution; }
+          });
+        } else {
+          localStorage.removeItem(LS_KEY); // files changed since last local edit — files win
+        }
+      }catch(_){ localStorage.removeItem(LS_KEY); }
     }
     const nOpen = STATE.items.filter(q=>!HIDDEN_STATUSES.includes(q.status)).length;
     $('#status').textContent = `${nOpen} open`;
@@ -262,7 +276,7 @@ async function load(){
 }
 
 function autosave(){
-  localStorage.setItem(LS_KEY, JSON.stringify(STATE));
+  localStorage.setItem(LS_KEY, JSON.stringify({sig: FILE_SIG, items: STATE.items}));
 }
 
 function typeClass(t){ return 'type-' + (t||'').toLowerCase(); }
