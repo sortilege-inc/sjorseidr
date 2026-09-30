@@ -2755,6 +2755,515 @@
       "sanctum": "The Adamant's Laboratory (10 pts)",
       "familiar": null,
       "activeWounds": []
+    },
+    "Furtum Bonisagus": {
+      "key": "furtum",
+      "name": "Furtum Bonisagus",
+      "portrait": null,
+      "house": "Bonisagus",
+      "parens": null,
+      "sigil": null,
+      "born": 1196,
+      "age": 28,
+      "apparentAge": 28,
+      "characteristics": {
+        "int": 3,
+        "per": -1,
+        "str": 0,
+        "sta": 2,
+        "pre": 2,
+        "com": 1,
+        "dex": -3,
+        "qik": 1
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {
+        "cr": {
+          "label": "Creo",
+          "score": 12,
+          "xp": 78
+        },
+        "in": {
+          "label": "Intellego",
+          "score": 2,
+          "xp": 3
+        },
+        "mu": {
+          "label": "Muto",
+          "score": 5,
+          "xp": 15
+        },
+        "pe": {
+          "label": "Perdo",
+          "score": 1,
+          "xp": 1
+        },
+        "re": {
+          "label": "Rego",
+          "score": 5,
+          "xp": 15
+        },
+        "an": {
+          "label": "Animal",
+          "score": 0,
+          "xp": 0
+        },
+        "aq": {
+          "label": "Aquam",
+          "score": 6,
+          "xp": 21
+        },
+        "au": {
+          "label": "Auram",
+          "score": 6,
+          "xp": 21
+        },
+        "co": {
+          "label": "Corpus",
+          "score": 12,
+          "xp": 78
+        },
+        "he": {
+          "label": "Herbam",
+          "score": 0,
+          "xp": 0
+        },
+        "ig": {
+          "label": "Ignem",
+          "score": 2,
+          "xp": 3
+        },
+        "im": {
+          "label": "Imaginem",
+          "score": 0,
+          "xp": 0
+        },
+        "me": {
+          "label": "Mentem",
+          "score": 5,
+          "xp": 15
+        },
+        "te": {
+          "label": "Terram",
+          "score": 1,
+          "xp": 1
+        },
+        "vi": {
+          "label": "Vim",
+          "score": 5,
+          "xp": 15
+        }
+      },
+      "virtues": [
+        {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "You have the ability to work magic. See earlier, page 63, for full details."
+        },
+        {
+          "name": "Hermetic Magus",
+          "impact": "free",
+          "description": "You are a member of the Order of Hermes. All magi must take this as their Social Status, and only magi may take it."
+        },
+        {
+          "name": "Minor Magical Focus (Certamen)",
+          "impact": "free",
+          "description": "Your magic is particularly attuned to some narrow field, such as self-transformation, birds of prey, or healing. In general, the field should be slightly narrower than a single Technique and Form combination, although it may include restricted areas of several such combinations. Healing, for example, is a part of Creo Corpus, Creo Animal, and possibly Creo Herbam. You cannot be focused on a laboratory activity, such as creating charged items, although a focus does apply to laboratory activities. When you cast a spell or generate a Lab Total within your focus, add the lowest applicable Art score twice, as for a Major Magical Focus. A magus may only have one Magical Focus, whether major or minor, regardless of the source of the focus.",
+          "note": "ST-approved as his free House virtue in place of the standard Bonisagus benefit (Puissant Magic Theory/Intrigue): Furtum's apprenticeship was begun under a Tremere magus — whose House grants a free Minor Magical Focus in Certamen — before a Bonisagus took him on and completed his training."
+        },
+        {
+          "name": "Flawless Magic",
+          "impact": "major",
+          "description": "You automatically master every spell that you learn. All your spells start with a score of 1 in the corresponding Spell Mastery Ability. You may choose a different special ability for every spell you have. Further, all your Advancement Totals for Spell Mastery Abilities are doubled."
+        },
+        {
+          "name": "Affinity With Creo",
+          "impact": "minor",
+          "description": "Your Advancement Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts."
+        },
+        {
+          "name": "Affinity With Corpus",
+          "impact": "minor",
+          "description": "Your Advancement Totals for one Hermetic Art are increased by one half, rounded up. At character creation, any experience points you put into that Art are also increased by one half (rounded up), and you may exceed the normal recommended limits. You may take this Virtue twice, for two different Arts."
+        },
+        {
+          "name": "Affinity With Magic Theory",
+          "impact": "minor",
+          "description": "All Study Totals for one Ability are increased by half, as are any experience points you put in that Ability at character creation. You may only take this Virtue once for a given Ability, but may take it again for different Abilities. If you take this Virtue for an Ability, you may exceed the normal age-based cap during character generation by two points for that Ability."
+        },
+        {
+          "name": "Inventive Genius",
+          "impact": "minor",
+          "description": "Invention comes naturally to you. You get +3 to your Lab Total if you are not using a Laboratory Text or being taught. If you experiment, you get +6."
+        },
+        {
+          "name": "Personal Vis Source (Creo)",
+          "impact": "minor",
+          "description": "You have exclusive access to a supply of raw vis. Determine the amount and type with the help of your troupe; the yield should be about one tenth as much as the player covenant expects to gather per year at the beginning of the saga. The yield of your source does not normally change over the course of time, even if the covenant uncovers new sources."
+        },
+        {
+          "name": "Skilled Parens",
+          "impact": "minor",
+          "description": "Your parens was more powerful, or a better teacher, than is common. You gain an additional 60 experience points and 30 spell levels during apprenticeship. This Virtue has no effect on your study after apprenticeship, but you still have a close relationship with a powerful magus."
+        },
+        {
+          "name": "Book Learner",
+          "impact": "minor",
+          "description": "You have a talent for comprehending the writings of others. When studying from books, treat them as if they were three Quality levels higher than they actually are."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Restriction",
+          "impact": "major",
+          "description": "The lab either forbids certain activities (one category of lab activity cannot be performed), or otherwise tiresome or expensive rituals or practices are required in order to perform lab work. –1 General Quality or +2 Upkeep as appropriate.",
+          "note": "Triggering condition not yet specified on the sheet (\"restriction-???\")."
+        },
+        {
+          "name": "Lycanthrope",
+          "impact": "major",
+          "description": "You have been cursed to change form into a dangerous predator (such as a wolf, lynx, or bear) on nights of the full moon (or similar, monthly, astrological events). No items or clothing transform between shapes, and it takes one full round for the full transformation to take effect. You are not immune to normal weapons, and the curse does not infect bite victims. The animal may be detected as a cursed human with an InAn or InCo spell.\n\nYou have the intelligence of an animal while changed, react to all stimuli as an animal, and do not retain any memory of actions taken in animal form, save occasionally in dreams. You may not even realize that you are under this curse. You can still recognize both friends and enemies when changed.\n\nLycanthropes may transform into a non-magical animal between Size –1 (wolf) and Size +2 (bear). You have the normal physical characteristics of a shapeshifter (see page 107), except that +3 is added to your Soak score (in animal form only). Furthermore, you are fully healed of all wounds incurred in animal form upon resuming human form (which happens at dawn)."
+        },
+        {
+          "name": "Weird Magic",
+          "impact": "minor",
+          "description": "Your control over magic is somewhat loose, perhaps due to Twilight effects or idiosyncratic training. Roll one extra botch die when you roll a zero on stressed spell casting rolls, apart from your other botch dice. Botches from this die should be strange or bizarre rather than dangerous, and if the Weird Magic botch occurs along with a regular botch, the results could be truly spectacular."
+        },
+        {
+          "name": "Magical Animal Companion",
+          "impact": "minor",
+          "description": "You are accompanied by a magical animal that's smart enough to follow your orders or to disobey them on its own initiative. The smaller and more innocuous the creature, the more intelligent it is. A ferret or crow is as intelligent as a human, a wolf is very cunning, and an animal the size of a horse is simply more intelligent than normal. The creature has a Magic Might score of 10 - Size.",
+          "note": "Species not yet specified on the sheet (\"Magical Animal Companion-???\")."
+        },
+        {
+          "name": "Covenant Upbringing",
+          "impact": "minor",
+          "description": "You were raised in a large, old covenant that has little contact with the outside world. You might have very strange religious beliefs, and you certainly find medieval social and political structures very odd. You may take Latin and Order of Hermes Lore at character creation. While Latin cannot be your native language, you may speak a language closely related to Latin that is spoken only at your home covenant."
+        },
+        {
+          "name": "Nocturnal",
+          "impact": "minor",
+          "description": "Your natural body rhythms try to keep you sleeping until noon. You are at –1 on all rolls made between dawn and midday. Conversely, you have little difficulty staying up at night. Though you enjoy no special benefits in the dark, your companions may decide to saddle you with night guard duty on a regular basis to use your attributes to best effect."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Native Language",
+          "speciality": "Spanish (Dialects)",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Animal Handling",
+          "speciality": "???",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Bartering (???)",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Charm",
+          "speciality": "First Impressions",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Chirurgy",
+          "speciality": "Setting Bones",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Concentration",
+          "speciality": "Spell Concentration",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Etiquette",
+          "speciality": "Faeries",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Magi",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Guile",
+          "speciality": "Lying to Authority",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Intrigue",
+          "speciality": "Plotting",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Leadership",
+          "speciality": "In Combat",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Living Language: German",
+          "speciality": "??? ",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Personalities",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Profession: Scribe",
+          "speciality": "Hermetic Usage (Latin)",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Stealth",
+          "speciality": "Sneak",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Swim",
+          "speciality": "Underwater Maneuvering",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Teaching",
+          "speciality": "Grogs",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Rhetoric",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Language: Latin",
+          "speciality": "Hermetic Usage",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Medicine",
+          "speciality": "Apothecary",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Single Weapon",
+          "speciality": "Short Spear",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Code of Hermes",
+          "speciality": "Apprentices",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Finesse",
+          "speciality": "Terram",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Regiones",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Magic Theory",
+          "speciality": "Inventing Spells",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Parma Magica",
+          "speciality": "Mentem",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Penetration",
+          "speciality": "Mentem",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Area Lore: Durenmar",
+          "speciality": "Library",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Awareness",
+          "speciality": "Alertness",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [
+        {
+          "name": "The Chirurgeon's Healing Touch",
+          "technique": "Creo",
+          "form": "Corpus",
+          "level": 20,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": true,
+          "description": ""
+        },
+        {
+          "name": "Agility of the Cheetah",
+          "technique": "Creo",
+          "form": "Corpus",
+          "level": 35,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": true,
+          "description": "",
+          "note": "Recorded from the sheet as a CrCo 35 Ritual; sits exactly at his level cap (Te+Fo+Int+MT+3 = 35). Name/level unusual for a characteristic-boost ritual — confirm intended effect."
+        },
+        {
+          "name": "The Chamber of Spring Breezes",
+          "technique": "Creo",
+          "form": "Auram",
+          "level": 5,
+          "range": "touch",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "name": "Clear Sight of the Naiad",
+          "technique": "Intellego",
+          "form": "Aquam",
+          "level": 5,
+          "range": "personal",
+          "duration": "moment",
+          "target": "boundary",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "name": "Reveal the Flaws of Mortal Flesh",
+          "technique": "Intellego",
+          "form": "Corpus",
+          "level": 5,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "name": "Scales of the Magical Weight",
+          "technique": "Intellego",
+          "form": "Vim",
+          "level": 5,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "name": "Sense the Nature of Vis",
+          "technique": "Intellego",
+          "form": "Vim",
+          "level": 5,
+          "range": "touch",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "name": "Doublet of Impenetrable Silk",
+          "technique": "Muto",
+          "form": "Animal",
+          "level": 15,
+          "range": "touch",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "name": "Lungs of the Fish",
+          "technique": "Muto",
+          "form": "Aquam",
+          "level": 20,
+          "range": "touch",
+          "duration": "sun",
+          "target": "part",
+          "ritual": false,
+          "description": "",
+          "note": "Auram requisite (MuAq(Au))."
+        },
+        {
+          "name": "Aura of Rightful Authority",
+          "technique": "Rego",
+          "form": "Mentem",
+          "level": 20,
+          "range": "eye",
+          "duration": "sun",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "name": "Call to Slumber",
+          "technique": "Rego",
+          "form": "Mentem",
+          "level": 10,
+          "range": "voice",
+          "duration": "moment",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        }
+      ],
+      "personalityTraits": [
+        "Brave +2",
+        "Tidy +3",
+        "Annoyed (+2) — trait unconfirmed (\"Annoyed???\")"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": null,
+      "biography": "Player: Chan. Spanish-born magus of House Bonisagus (b. 1196, Spain; Christian). Newly associated with Sjórseiðr and not yet assigned to a hull (\"No Ship\" — covenant household). Trained at Durenmar. His apprenticeship was begun under a Tremere magus before a Bonisagus took him on and completed his training; he retains the Tremere Minor Magical Focus in Certamen as his free House virtue (ST-approved) and is, quietly, still Tremere in temperament. Build recorded at covenant parity (established magus). OPEN ITEMS: Restriction condition unspecified; Magical Animal Companion species unspecified; specialties for Animal Handling / Bargain / German unset; \"Annoyed\" personality trait unconfirmed; Flawless Magic grants Mastery 1 in every spell — each spell still needs a chosen Mastery ability."
     }
   }
 }

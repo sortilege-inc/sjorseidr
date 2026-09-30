@@ -6873,6 +6873,17 @@
       "standing": "apprentice"
      },
      {
+      "name": "Furtum Bonisagus",
+      "category": "magi",
+      "job": "House Bonisagus",
+      "points": 5,
+      "yearBorn": 1196,
+      "qty": 1,
+      "actorId": null,
+      "ship": null,
+      "standing": "active"
+     },
+     {
       "name": "Reinier",
       "category": "turbula",
       "job": "Silent sellsword",

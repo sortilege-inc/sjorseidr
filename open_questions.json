@@ -795,6 +795,17 @@
    "raised_event": "p108",
    "status": "Open",
    "resolution": ""
+  },
+  {
+   "id": "q037",
+   "type": "Tool",
+   "category": "Character",
+   "title": "Finish Furtum Bonisagus's character sheet (player Chan) — open build items",
+   "context": "Furtum Bonisagus (player Chan) was created from 'Furtum v2.pdf' and added to magi.json + the current-node roster (No Ship / Covenant household). Build is legal and recorded at covenant parity; House Bonisagus with the free Minor Magical Focus (Certamen) carried over from a Tremere parens (ST-approved). Remaining to finalize with the player before the sheet is done: (1) RESTRICTION — the Major Hermetic flaw's triggering condition is unspecified ('restriction-???'); needs a defined trigger (e.g. open salt water, thematic for a sea covenant). (2) MAGICAL ANIMAL COMPANION — species unspecified; keep it distinct from his Lycanthrope form and any future familiar (RAW: companion Might = 10 - Size). (3) SPECIALTIES blank — Animal Handling, Bargain, Living Language: German. (4) PERSONALITY TRAIT 'Annoyed???' (+2) is a placeholder; needs a real trait. (5) SPELL MASTERY — Flawless Magic grants Mastery 1 in every spell, so all 11 spells need a chosen Mastery ability (all blank). Once resolved, update magi.json accordingly. (Foundry sync deferred until the sheet is finished.)",
+   "raised_in": "Character sheet 'Furtum v2.pdf' submitted by player Chan, 2026-09-29",
+   "raised_event": null,
+   "status": "Open",
+   "resolution": ""
   }
  ],
  "gmReference": {
