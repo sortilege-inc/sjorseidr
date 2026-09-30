@@ -102,6 +102,8 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .qtag.cat{background:rgba(120,90,40,.15);color:var(--ink-soft);border:1px solid rgba(120,90,40,.25)}
 .qtag.status-delete{background:rgba(181,74,50,.22);color:var(--rust-bright);border:1px solid rgba(181,74,50,.55);font-weight:600}
 .qtag.status-idea{background:rgba(154,107,31,.2);color:var(--gold);border:1px solid rgba(154,107,31,.5);font-weight:600}
+.qtag.status-archived{background:rgba(120,90,40,.16);color:var(--ink-soft);border:1px solid rgba(120,90,40,.45);font-weight:600}
+.qtag.status-closed{background:rgba(62,107,53,.16);color:var(--green);border:1px solid rgba(62,107,53,.45);font-weight:600}
 .qquestion{font-weight:600;font-size:16.5px;line-height:1.35;margin:0 0 6px}
 .qcontext{font-size:14px;line-height:1.5;color:var(--ink-soft);margin:0 0 8px}
 .qcontext:last-of-type{margin-bottom:0}
@@ -217,6 +219,10 @@ let STATE = null;
 let activeType = 'all';
 let filter = {category:'all', status:'all'};
 let activeRefTab = 'roster';
+// Statuses parked outside the active list: hidden by default, viewable via the
+// Status filter. Resolved = ruled/answered; Archived = reference/background;
+// Closed = set aside / not being pursued.
+const HIDDEN_STATUSES = ['Resolved','Archived','Closed'];
 
 async function load(){
   try{
@@ -242,7 +248,7 @@ async function load(){
         });
       }catch(_){}
     }
-    const nOpen = STATE.items.filter(q=>q.status!=='Resolved').length;
+    const nOpen = STATE.items.filter(q=>!HIDDEN_STATUSES.includes(q.status)).length;
     $('#status').textContent = `${nOpen} open`;
     // deep-link / storyteller rail: open a specific type view
     const wantType = new URLSearchParams(location.search).get('type');
@@ -264,7 +270,10 @@ function typeClass(t){ return 'type-' + (t||'').toLowerCase(); }
 // Resolved items are archived to resolved_questions.json and are NOT shown in
 // the interface — they're a GM-only reference. We still LOAD them (so "Save
 // Resolved" round-trips the full archive), but every view draws from live().
-function live(){ return STATE.items.filter(q=>q.status!=='Resolved'); }
+function live(){ return STATE.items.filter(q=>!HIDDEN_STATUSES.includes(q.status)); }
+// Base pool for a view: the hidden archive when a hidden status is selected,
+// otherwise the live (active) list.
+function viewBase(){ return HIDDEN_STATUSES.includes(filter.status) ? STATE.items.filter(q=>HIDDEN_STATUSES.includes(q.status)) : live(); }
 
 function categories(){
   const pool = activeType==='all' ? live() : live().filter(i=>i.type===activeType);
@@ -299,9 +308,9 @@ function renderTypeTabs(){
 function renderFilterbar(){
   const cats = ['all', ...categories()];
   const catBtns = cats.map(c=>`<button class="fbtn ${filter.category===c?'on':''}" data-cat="${esc(c)}">${c==='all'?'All Categories':esc(c)}</button>`).join('');
-  const statuses = ['all','Open','Idea','Confirm to delete'];
+  const statuses = ['all','Open','Idea','Confirm to delete','Archived','Closed'];
   const statusBtns = statuses.map(s=>`<button class="fbtn ${filter.status===s?'on':''}" data-status="${esc(s)}">${s==='all'?'All Status':esc(s)}</button>`).join('');
-  const pool = activeType==='all' ? live() : live().filter(i=>i.type===activeType);
+  const pool = (activeType==='all' ? viewBase() : viewBase().filter(i=>i.type===activeType)).filter(i=>filter.status==='all' || (i.status||'Open')===filter.status);
   $('#filterbar').innerHTML = `
     <span class="label">Category:</span> ${catBtns}
     <span class="label" style="margin-left:8px">Status:</span> ${statusBtns}
@@ -316,6 +325,8 @@ function qCard(q){
   const resolved = q.status === 'Resolved';
   const flaggedDelete = q.status === 'Confirm to delete';
   const isIdea = q.status === 'Idea';
+  const isArchived = q.status === 'Archived';
+  const isClosed = q.status === 'Closed';
   const tc = typeClass(q.type);
   const resolveLabel = q.type === 'Question' ? 'Answered' : (q.type === 'Thread' ? 'Picked up' : 'Resolved');
   return `<div class="qcard ${tc} ${resolved?'resolved':''} ${flaggedDelete?'flagged-delete':''}" data-id="${esc(q.id)}">
@@ -325,6 +336,8 @@ function qCard(q){
         <span class="qtag cat">${esc(q.category)}</span>
         ${flaggedDelete ? `<span class="qtag status-delete">🗑️ Confirm to delete</span>` : ''}
         ${isIdea ? `<span class="qtag status-idea">💡 Idea</span>` : ''}
+        ${isArchived ? `<span class="qtag status-archived">🗄️ Archived</span>` : ''}
+        ${isClosed ? `<span class="qtag status-closed">✔ Closed</span>` : ''}
       </div>
       <div class="qanswer-toggle">
         <input type="checkbox" id="chk-${esc(q.id)}" ${resolved?'checked':''}>
@@ -442,7 +455,7 @@ function render(){
   renderTypeTabs();
   if(activeType === 'reference'){ renderReference(); return; }
   renderFilterbar();
-  let list = live().filter(q=>{
+  let list = viewBase().filter(q=>{
     if(activeType!=='all' && q.type!==activeType) return false;
     if(filter.category!=='all' && q.category!==filter.category) return false;
     if(filter.status!=='all' && (q.status||'Open')!==filter.status) return false;
@@ -452,7 +465,12 @@ function render(){
     ? `<div class="qsection"><h2 class="qsection-head">${title} <span class="n">(${items.length})</span></h2>
        <p class="qsection-sub">${sub}</p>${items.map(qCard).join('')}</div>`
     : '';
-  const html = section('Open &amp; In-Play', 'Threads, questions, and to-dos still live — <code>open_questions.json</code>. Resolved items are archived to <code>resolved_questions.json</code> and hidden here.', list);
+  const viewingHidden = HIDDEN_STATUSES.includes(filter.status);
+  const secTitle = viewingHidden ? esc(filter.status) : 'Open &amp; In-Play';
+  const secSub = viewingHidden
+    ? 'Parked items, kept in <code>resolved_questions.json</code> and hidden from the active list by default.'
+    : 'Threads, questions, and to-dos still live — <code>open_questions.json</code>. Resolved / Archived / Closed items live in <code>resolved_questions.json</code> and are hidden here (use the Status filter to view them).';
+  const html = section(secTitle, secSub, list);
   $('#qlist').innerHTML = html || `<div class="empty">Nothing matches this filter.</div>`;
 
   $$('.qcard').forEach(card=>{

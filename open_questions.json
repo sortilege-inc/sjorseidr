@@ -22,39 +22,6 @@
    "resolution": ""
   },
   {
-   "id": "t011",
-   "type": "Thread",
-   "category": "Plot",
-   "title": "Dagmar has never surfaced what he saw of Valerian's contraband trade.",
-   "context": "Dagmar caught Valerian trading Rhine-Tribunal-contraband books with an unidentified Montverte magus and quietly walked away without confronting him or reporting it. A second, untrusted axis through the Montverte relationship that's never been addressed.\n\nUpdate (2026-07-25): GM flagged this as a live thread to FOLLOW UP (has a direction in mind). Kept Open as an active plot thread, not latent — the covenant will do something with Dagmar's filed-away knowledge of Valerian's Rhine-contraband trade.",
-   "raised_in": "Session 2 (2026-02-21)",
-   "raised_event": "Dagmar spots Valerian trading contraband",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "t018",
-   "type": "Thread",
-   "category": "Diplomacy",
-   "title": "Llewellyn's time-crystal offer to Dagmar is still on the table.",
-   "context": "A quartz crystal \"resonant with the platonic ideal of time\" — effectively a magical atomic clock for detecting time dilation in regiones, directly complementing Dagmar's commission with Paulus. Price: accompany Llewellyn into a regio of Dagmar's choosing. Dagmar expressed cautious interest; nothing signed.\n\nUpdate (2026-07-25) — GM: tee this up as potential PREP for the upcoming venture into the regio near Carnac (t025). The pairing: Dagmar can satisfy Llewellyn's price (\"accompany me into a regio of your choosing\") by choosing the Carnac regio, and the time-crystal (a time-dilation detector) is exactly the kit that exploration wants. Develop t018 and t025 together. Kept Open.\n\nUpdate (session 2026-07-25): Dagmar now INTENDS to cash it in. Rather than bringing Llewellyn into Carnac, the plan that emerged is to sail NORTH for Tormente's errand (t066) and route via STONEHENGE to collect Llewellyn on the way — a different season's expedition, as Llewellyn is up at Stonehenge. So the redeemed regio is likely to be the dragon-kin site off NE England (or a later Carnac re-entry), not necessarily Carnac itself. Still not signed/redeemed; kept Open.\n\nUpdate (2026-08-08 session): Advanced. Llewellyn joined the northern voyage and the regio expedition. His secret: a Zeno's-paradox longevity working (always living half his remaining span), now dangerously fragile — he hopes a time-irregular regio can let him 'catch the tide going out.' The time-quartz crystal reads time-flows; Dagmar's cursory study finds it innately, naturally magical — a FOUND object, not a made artifact, and not Llewellyn's own discovery.\n\nUpdate (2026-08-23, verified play): Llewellyn joined the northern voyage and his time-quartz crystal proved central — it read the temporal 'warmer/cooler' at Carnac's Level 2 and guided the conjunction solve. His Zeno's-paradox longevity gambit ('catch the tide going out') is still unresolved; the Carnac time-flow reads as depth-linked, which feeds it. Paulus ex Merinita's separate ward commission (referenced above) was never picked up and is closed (2026-08-23).",
-   "raised_in": "Session 5 (2026-05-09)",
-   "raised_event": "Llewellyn's time-crystal offer to Dagmar",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "c012",
-   "type": "Consequence",
-   "category": "Plot",
-   "title": "The three magically-sealed chests from the Hound of Cassel raid — Liège–Scarem Montem cipher letters.",
-   "context": "Legal status is a deliberately fuzzy area; the covenant decided to hold them \"for now,\" prepared to return them if Scarem Montem comes asking. Never revisited since. (Worth noting: Normandy Tribunal custom holds it's legal to raid non-magical items from another covenant — part of why keeping the chests was even a live option rather than an obvious violation.)\n\nUpdate (2026-07-25) — GM: still unexplored; contents NOT yet defined. To be figured out once the open-questions backlog pass is complete (flagged for end-of-pass follow-up, alongside t032). Includes deciding the wrinkle: do the chests return with the Hound of Cassel (now going back to Scarem Montem under Wilhelm, t002), get kept/opened first, or become their own negotiation. Kept Open.\n\nCONTENTS DEFINED (2026-08-08, developing q027 #6). The three chests hold MISSIVES from the BISHOPRIC OF LIÈGE to SCAREM MONTEM — correspondence in which Scarem Montem is exploring a similar SUBORNING OF CHURCH OR STATE, a wild violation of the Code of Hermes (interfering with the mundanes / meddling with the Church). Liège being a prince-bishopric adjacent to Brabant, this ties directly into the existing conspiracy web: the Duke-of-Brabant / Church infiltration (t028 Reynald de Grimbergen, c023, t027) and the Lotharingian-Tribunal manoeuvring (t010, t017). The letters were intercepted IN TRANSIT (Summer 1221 piracy) and never reached their recipient.\n\nTHE CIPHER — magical public/private-key cryptography via MATCHED RINGS. Each correspondent holds a pair. Enclosed WITH each letter is a ring that functions as the SENDER'S PUBLIC KEY: the recipient wears it to VERIFY WHO WROTE the letter (an unforgeable signature). The recipient's OWN ring is their PRIVATE KEY: it DECRYPTS letters that were written to them — but only letters the sender composed while holding that recipient's public-key ring, so that only the matching private ring can read them. Reading a letter thus needs BOTH: the enclosed sender-ring (to verify) and the intended recipient's private ring (to decrypt).\n\nWHAT THE COVENANT ACTUALLY HAS: the letters plus the enclosed LIÈGE (sender) public-key rings — but NOT Scarem Montem's PRIVATE rings, which stayed with the intended recipient. Consequence: they can VERIFY authorship and so hold UNASSAILABLE PROOF OF AT LEAST ONE PARTY — that the Bishopric of Liège was corresponding with Scarem Montem, and which Liège hands signed — even though they generally CANNOT read the ciphertext itself. Getting plaintext would require capturing Scarem Montem's private ring, coercing a decrypt, or a hard magical break (Intellego Vim / Mentem against a cipher likely built so only the intended mind can read). The rings are themselves magical items now in the covenant's possession.\n\nTHE SCENE-6 WRINKLE: these chests are Scarem Montem's own property, riding Scarem Montem's own stolen hull (the Hound of Cassel), which WILHELM is now sailing back to Scarem Montem to settle the ship-for-book/thesis debt (t002). So Wilhelm may be about to hand Scarem Montem back the very (mostly-unreadable) evidence that proves them guilty of a hanging-level Code violation — unless he realises what he carries and keeps it as leverage in the swap, or turns it over to the Tribunal / the Brabant-conspiracy investigators. Open: does Wilhelm know what's in the hold, and does he return, keep, or weaponise it? Kept Open.\n\nMOTIVE LINK (2026-08-08): this is a hidden cause of Scarem Montem's rushed TRIBUNAL ESCALATION. Their incriminating Liège correspondence went missing with the pirated ship (the Hound of Cassel) and they never learned what became of it — so, unable to risk their Church/State-suborning plans being exposed and not knowing who held the evidence, they FORCED THE PACE at the 1223 Normandy Tribunal (see verified event 'Scarem Montem steals the Tapestry and declares for Lotharingia', 1223-06-26, and Bridget's Lotharingian pitch, t010): moving openly for Lotharingia and seizing the Tapestry rather than playing the long game. In hindsight their haste reads as a tell — they were running scared of exactly what is sitting in these three chests. The covenant still doesn't know it holds the leash.\n\nUpdate (2026-08-08 session): Found and secured. Wilhelm discovered the three sealed boxes aboard the Hound of Cassel (his new ship) at the Isle of Man. They remain magically sealed and UNOPENED in-fiction (the Liège-cipher content above is GM prep, not yet revealed). Legal status: taken in Valdemar's raid on a Scarem Montem vessel; magical goods are protected by the Code, so they were held in trust and never returned — now awkward since Scarem Montem left the Tribunal. Wilhelm laid a month-long Vim ward on the hull as a deterrent/legal fig-leaf.\n\nUpdate (2026-08-23, verified play): RETURNED. On the Summer 1224 delivery run (verified 'Wilhelm returns the Hound of Cassel and recovers his thesis'), Wilhelm handed the three still-sealed chests back to Scarem Montem — sealed and UNREAD, apparently without the covenant ever realizing what they held; the Liège-cipher contents above were GM prep and never surfaced in-fiction. GM OPEN NOTE (Scarem Montem): the covenant has unknowingly handed its own leverage straight back — Scarem Montem holds the incriminating Liège correspondence again and the covenant kept no copy. The Church/State-suborning plot and the Liège tie can still be resurfaced later (if the covenant learns what it briefly held, or the correspondence surfaces elsewhere). Kept Open as a latent thread.",
-   "raised_in": "Earlier session (pre-Tribunal)",
-   "raised_event": "Debates about Valerian, new Tribunal, Chests, etc",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
    "id": "c019",
    "type": "Consequence",
    "category": "Diplomacy",
@@ -110,17 +77,6 @@
    "resolution": ""
   },
   {
-   "id": "q018",
-   "type": "Question",
-   "category": "Rules",
-   "title": "Where did the mystery 15 XP (\"an unending supply of 11xp\") come from?",
-   "context": "Flagged live by the GM during Fall 1223 XP allocation — a stray, unexplained pool of pending experience showed up on at least one character sheet. The GM made a note to chase it down rather than let it get spent without knowing the source.\n\nUpdate (2026-07-25): Data-checked: the stray XP pool is NOT present in the exported magi.json (no '11xp'/'unending'/pending-XP field anywhere in it), so it's a Foundry-side sheet artifact, not something reconcilable from this repo. Needs a look at the live Foundry actor to trace the source; leaving Open with that pointer.",
-   "raised_in": "Session 8 (2026-07-11)",
-   "raised_event": "Tribunal experience spent: Finesse, an Aquam push, and a magic-theory boost",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
    "id": "t023",
    "type": "Thread",
    "category": "Plot",
@@ -128,61 +84,6 @@
    "context": "The party chose not to interrogate or trade with the changeling directly, planning instead to quietly brief the receiving Hermetic magi near the Hill of Uisneach once the delivery completes. Whether that briefing happens, and whether anyone actually goes looking for the real child, is entirely unresolved.\n\nUpdate (2026-07-25) — GM confirms current canon: BOTH prongs remain live/unresolved. (1) The briefing to the receiving Hermetic magi — the covenant near the Hill of Uisneach, where Rody was 'owed delivery' — has NOT yet happened. (2) No one has gone looking for the real Gifted child Rody replaced (whose Gifted older brother was 'eaten by goblins' before his own handover). Stays an active open thread to develop in play. Source: proposed_events p16, 'The changeling boy: Rody.'\n\nPLAYED FURTHER (session 2026-07-25, proposed_events p051 'A ward drawn around Rody'): Wilhelm was brought in on the changeling (none of the three has fae-binding magic; Wilhelm's folk wards only hold low-Might sprites). Wilhelm demonstrated folk wards at camp and, casually, cast a ~base-10 Ward against Faeries and stepped out of the circle to TEST whether Rody can cross it — CLIFFHANGER, resolves top of next session (whether Rody steps out of the ring). Delivery still pending. LOCATION FLAG: this session's play had the party heading east to the Hill of TARA to hand the boy on and meet the returning research assistants, whereas the verified 'Rody' event and this thread say the receiving covenant is near the Hill of UISNEACH. Tara vs Uisneach needs a one-word GM reconciliation (they are different hills — Tara = Tribunal seat; Uisneach = the fire-festival/augury site). See also q026. [2026-08-08: Rody now has a Faerie-changeling statblock in npcs.json (Might 15, built on RoP:Faerie's Toy Soldier + Gerontified-Faerie rules), including 'The Stolen Thread' bond back to the real child.]\n\nUpdate (2026-08-08 session): Delivered. The party brought Rody to the covenant at Cruachan and left him with magi Gráinne and Tadhg, who have Faerie expertise and will hold and question him. Rody is confirmed FULLY Fae (not merely Fae-touched). The real, taken child is still missing; the plan is to get its whereabouts from the changeling via Cruachan's specialists.",
    "raised_in": "Session 8 (2026-07-11)",
    "raised_event": "The changeling boy: Rody",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "q026",
-   "type": "Question",
-   "category": "Plot / Fae",
-   "title": "How was Rody mistaken for a Gifted child when he's a Fae changeling?",
-   "context": "Follow-up to t023 (raised 2026-07-25). The Connacht→Hermetic delivery custom passed the party a changeling — Rody — as an \"owed\" Gifted-child delivery. Open question: how did a Fae changeling come to be treated as Gifted in the first place, i.e. where and how the mis-identification entered the delivery chain. Flagged open; no explanation settled. [2026-08-08: Rody now has a Faerie-changeling statblock in npcs.json (Might 15, built on RoP:Faerie's Toy Soldier + Gerontified-Faerie rules), including 'The Stolen Thread' bond back to the real child.]\n\nUpdate (2026-08-08 session): Still open. Rody passed as a Gifted-youth delivery under the Hibernian 7-for-7 treaty; his cover story was that his older brother (the intended youth) had been taken/eaten by the Fae, and Rody presented as the replacement. How a changeling came to be handed over as Gifted is unresolved and now in the hands of the Cruachan magi.",
-   "raised_in": "Open-questions review (2026-07-25)",
-   "raised_event": "Follow-up to t023 (the changeling boy, Rody)",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "t028",
-   "type": "Thread",
-   "category": "NPC / Identity",
-   "title": "Magister Reynald de Grimbergen — the Duke of Brabant's double-agent counsel — was never confronted.",
-   "context": "GM prep names Reynald, a failed Rhine apprentice turned ducal advisor, as the one who forged the documents used to imprison Valerian, while quietly feeding intelligence back to his old Rhine handlers. His current status — exposed, still embedded, retaliating — is unaddressed.\n\nClassification — LATENT (2026-07-25): GM likes the idea but has no need of it for now. Treat as probably-canon-but-unconfirmed: Reynald stays available prep (a clean fit as the Rhine-trained hand connecting the sect → Church request → Duke's court per t027), and only becomes firm canon if/when he actually comes up in play. No development required now. Kept status Open.",
-   "raised_in": "GM's Notion prep notes (undated), \"The Situation with Valerian\"",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "t029",
-   "type": "Thread",
-   "category": "Plot",
-   "title": "Captain Absalom's possession-like episode was never surfaced — and may explain the missing Maelstrom's Maw.",
-   "context": "Undated GM notes describe Captain Absalom secretly buying and then destroying psalters, reliquaries, and other consecrated items at sea while apparently not himself (\"his eyes were... wrong\"). Absalom is already tied to the unresolved fate of the missing Maelstrom's Maw and Kor Ex Flambeau (see c013), and the covenant carries a \"Possession Victim\" flaw that's never been played out — this reads as unused foreshadowing for what actually happened to that ship.\n\nUpdate (2026-07-25) — GM ruling: the possession is CANON and live — there genuinely is a possession-victim aboard one of the covenant's ships (the covenant's active \"Possession Victim\" Story Flaw). However, the victim's IDENTITY is currently UNDETERMINED: Captain Absalom's prep episode makes him a candidate, not the confirmed answer. There are deliberate mechanical reasons the victim hasn't been detected yet (GM withholding specifics for now). Keep Open as a live, unresolved thread — pick the victim when the GM is ready; not tied to the Maelstrom's Maw (see c013).",
-   "raised_in": "GM's Notion prep notes (undated), \"Evildoers\"",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "t032",
-   "type": "Thread",
-   "category": "Diplomacy",
-   "title": "Guillaume le Preux's mid-tournament alliance offer to Sjórseiðr was never pitched at the table.",
-   "context": "GM prep for the 1223 Tourney has Montverte's Praeco, Guillaume le Preux, approaching the young, liege-less covenant with an alliance offer once his own covenant's prestige started crumbling during the standings. Unclear whether this was ever actually raised in play — worth a GM check before treating it as live.",
-   "raised_in": "GM's Notion prep notes (undated), \"Opponent Profile ideas\"",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "c025",
-   "type": "Consequence",
-   "category": "Character",
-   "title": "Magus Benedictus read Stijntje's name from her mind, unprompted.",
-   "context": "When Benedictus of House Jerbiton approached the covenant's apprentice-candidate during a Southampton visit (not Bruges — corrected per verified_events.json's confirmed location) and conjured a small flame to entice her, he knew her name without being told — apparently lifted from her mind. Dustin drove him off before further contact. What else Benedictus perceived, and why he specifically targeted her (GM notes describe a deliberate courtship campaign — letters, gifts, an open invitation to Southampton \"for a season or two\"), was never established. See also t031.\n\nUpdate (2026-07-25) — GM: canon extended. Benedictus's unprompted mind-read pulled not just her first name but her GENDER and FAMILY NAME as well. OPEN IMPLICATION (ties to t036): whether the family name he lifted is her nunnery-given name (Kuiper) or her true lineage (van Damme) is undecided — if the latter, Benedictus holds a lever on the latent parentage secret. Kept Open as an active thread (his courtship campaign — letters/gifts/open invitation — and what he does with what he read are still live; see t031).",
-   "raised_in": "Verified chronicle, \"Stijntje and Benedictus\"; GM's Notion prep notes on Benedictus (undated)",
-   "raised_event": "Stijntje and Benedictus",
    "status": "Open",
    "resolution": ""
   },
@@ -231,44 +132,11 @@
    "resolution": ""
   },
   {
-   "id": "t038",
-   "type": "Thread",
-   "category": "World Detail",
-   "title": "Was Solving's original wealth really a sea-fae bargain over a sunken Roman wreck — and might the fae still be owed?",
-   "context": "Unconfirmed GM speculation, never promoted to settled fact: Solving may have parlayed with sea-fae guarding a sunken Roman gold wreck in the English Channel, trading stories or prophecies for access, with the recovered gold funding one of the fleet's ships (possibly the Maelstrom's Maw). If true, the fae may consider a debt still outstanding. Surfaced while accounting for the root Notion page's GM-planning content (2026-07-13); flagged as speculative, not merged into covenant.json's founding note as settled history.\n\nUpdate (2026-07-25) — GM: reclassified to a DEFERRED IDEA. Parked speculation, not canon and not in active development — hold in reserve as a possible future hook (the sea-fae/outstanding-debt angle plays well against t052's underwater-Faerie-aura motif and Rán, and against Solving being in Twilight per t034). Revisit only if the GM chooses to activate it.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page",
-   "raised_event": "",
-   "status": "Idea",
-   "resolution": ""
-  },
-  {
-   "id": "t040",
-   "type": "Thread",
-   "category": "World Detail",
-   "title": "Unused arc idea: Normandy Tribunal challenges the covenant's independent status as jurisdiction-violating upstarts.",
-   "context": "From an early 3-year speculative arc outline (never followed as written): the covenant begins near \"Bridge,\" and Normandy sees them as upstarts possibly violating Tribunal jurisdiction, demanding they justify their presence.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page",
-   "raised_event": "",
-   "status": "Idea",
-   "resolution": ""
-  },
-  {
    "id": "t042",
    "type": "Thread",
    "category": "Plot",
    "title": "Unused arc idea: \"Infernal Corruption on Board\" — a ship suffers misfortunes and a crew member descends into madness.",
    "context": "From the same early arc outline: cursed cargo, unexplained accidents, whispers at night, strange symbols on the hull, possibly ending in an exorcism or the ship being purged in fire. This reads as an early draft of what became the confirmed Possession Victim flaw and Captain Absalom's episode (see t029) — may be superseded by how that thread actually resolves, or may still hold unused specifics worth folding in. (2026-07-14: GM confirms still planning to use this.)",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page",
-   "raised_event": "",
-   "status": "Idea",
-   "resolution": ""
-  },
-  {
-   "id": "t043",
-   "type": "Thread",
-   "category": "World Detail",
-   "title": "Unused arc idea: a Baltic expedition, with an ancient faerie kingdom beneath the North Sea demanding toll for passage.",
-   "context": "From the same early arc outline (Year 2): merfolk warn the magi the faerie ruler is unpredictable and vengeful; resolution options floated were a Faerie Pact, trickery, or risky combat.",
    "raised_in": "GM's Notion prep notes (undated), root campaign page",
    "raised_event": "",
    "status": "Idea",
@@ -294,17 +162,6 @@
    "raised_in": "GM's Notion prep notes (undated), root campaign page",
    "raised_event": "",
    "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "t055",
-   "type": "Thread",
-   "category": "Character",
-   "title": "Unused beat: Dustin's apprentice adopts a ship cat in a future port.",
-   "context": "A small planned flavor beat from the GM's early prep (\"Upcoming\" list) — never confirmed as having happened.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page",
-   "raised_event": "",
-   "status": "Idea",
    "resolution": ""
   },
   {
@@ -352,17 +209,6 @@
    "resolution": ""
   },
   {
-   "id": "tl001",
-   "type": "Tool",
-   "category": "System / Tooling",
-   "title": "Weapon/Armor stats don't automatically adjust for the character when equipped in Foundry.",
-   "context": "Flagged in the GM's Foundry Notes as an unverified system quirk.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
    "id": "tl002",
    "type": "Tool",
    "category": "System / Tooling",
@@ -390,17 +236,6 @@
    "category": "System / Tooling",
    "title": "Can 'Affinity with Art' be configured for companions in Foundry?",
    "context": "An open configuration question from early prep.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "tl005",
-   "type": "Tool",
-   "category": "System / Tooling",
-   "title": "Combat/fights don't auto-calculate in Foundry.",
-   "context": "An open system quirk from early prep.",
    "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
    "raised_event": "",
    "status": "Open",
