@@ -371,6 +371,14 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
 .sheet-tab:hover{color:var(--ink)}
 .sheet-tab.on{color:var(--rust-bright);border-color:var(--rust-bright);font-weight:600}
 .sheet-tab .st-n{font-family:'EB Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-soft)}
+.forms-toggle{display:flex;gap:6px;margin:4px 0 12px;flex-wrap:wrap}
+.fbtn-form{font-family:'Cinzel',serif;font-size:12px;cursor:pointer;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.4);border-radius:14px;padding:4px 12px;color:var(--ink-soft)}
+.fbtn-form.on{background:var(--rust);color:#fff;border-color:var(--rust)}
+.sb-combat,.sb-line{font-size:13px;color:var(--ink);margin:3px 0}
+.sb-line em{color:var(--ink-soft);font-style:italic}
+.sb-power{font-size:12.5px;color:var(--ink);margin:3px 0;line-height:1.45}
+.sb-power .sb-cost{font-size:10.5px;color:var(--rust);font-family:'Cinzel',serif}
+.sb-note{font-size:12px;color:var(--ink-soft);font-style:italic;margin-top:8px;border-top:1px solid rgba(120,90,40,.2);padding-top:6px}
 .sheet-tp{display:none}
 .sheet-tp.on{display:block}
 
@@ -836,6 +844,37 @@ function questionsHtml(list){
   </div>`;
 }
 
+// Animal-form statblocks (Magical Animal Companion + Lycanthrope form), with a
+// toggle between forms. Characteristics render from whatever keys are present.
+function statblockHtml(f){
+  const CH={int:'Int',cun:'Cun',per:'Per',pre:'Pre',com:'Com',str:'Str',sta:'Sta',dex:'Dex',qik:'Qik'};
+  const chars=Object.entries(f.characteristics||{}).map(([k,v])=>`<div class="char-stat"><span class="cs-label">${CH[k]||k}</span><span class="cs-val">${signed(v)}</span></div>`).join('');
+  const meta=[f.role, f.size!=null?`Size ${signed(f.size)}`:'', f.might!=null?`Might ${f.might}${f.mightRealm?' ('+f.mightRealm+')':''}`:'', f.form?`Form ${f.form}`:'', f.soak!=null?`Soak ${signed(f.soak)}`:''].filter(Boolean).map(t=>`<span class="meta-chip">${esc(t)}</span>`).join('');
+  const combat=(f.combat||[]).map(c=>`<div class="sb-combat">⚔ ${esc(c.name)} — Init ${signed(c.init)}, Atk ${signed(c.attack)}, Def ${signed(c.defense)}, Dam ${signed(c.damage)}</div>`).join('');
+  const powers=(f.powers||[]).map(p=>`<div class="sb-power"><b>${esc(p.name)}</b>${p.cost?` <span class="sb-cost">${esc(p.cost)}</span>`:''}${p.detail?` — ${esc(p.detail)}`:''}</div>`).join('');
+  const abil=(f.abilities||[]).map(a=>`<div class="ability-row"><span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span><span class="ab-score">${a.score}</span></div>`).join('');
+  return `
+    <div class="sheet-meta">${meta}</div>
+    <div class="sheet-section-title">Characteristics</div>
+    <div class="char-grid">${chars}</div>
+    ${combat?`<div class="sheet-section-title">Combat</div>${combat}`:''}
+    ${f.fatigue?`<div class="sb-line"><em>Fatigue:</em> ${esc(f.fatigue)}</div>`:''}
+    ${f.wounds?`<div class="sb-line"><em>Wounds:</em> ${esc(f.wounds)}</div>`:''}
+    ${powers?`<div class="sheet-section-title">Powers</div>${powers}`:''}
+    ${abil?`<div class="sheet-section-title">Abilities</div>${abil}`:''}
+    ${f.vis?`<div class="sb-line"><em>Vis:</em> ${esc(f.vis)}</div>`:''}
+    ${f.appearance?`<div class="sb-line"><em>Appearance:</em> ${esc(f.appearance)}</div>`:''}
+    ${f.personality&&f.personality.length?`<div class="sb-line"><em>Personality:</em> ${f.personality.map(esc).join(', ')}</div>`:''}
+    ${f.notes?`<div class="sb-note">${esc(f.notes)}</div>`:''}
+  `;
+}
+function animalFormsHtml(af){
+  if(!af||!af.order||!af.forms) return '';
+  const btns=af.order.map((k,i)=>`<button class="fbtn-form ${i===0?'on':''}" data-form="${i}">${esc(af.forms[k].label)}</button>`).join('');
+  const blocks=af.order.map((k,i)=>`<div class="form-block" data-form="${i}"${i===0?'':' hidden'}>${statblockHtml(af.forms[k])}</div>`).join('');
+  return `<div class="forms-toggle">${btns}</div>${blocks}`;
+}
+
 function discoveriesHtml(list){
   if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
   return list.map(d=>`
@@ -924,6 +963,7 @@ function magusSheetHtml(m){
       <button class="sheet-tab" data-stab="virtues">Virtues <span class="st-n">${(m.virtues||[]).length}</span></button>
       <button class="sheet-tab" data-stab="flaws">Flaws <span class="st-n">${(m.flaws||[]).length}</span></button>
       <button class="sheet-tab" data-stab="spells">Spells <span class="st-n">${(m.spells||[]).length}</span></button>
+      ${m.animalForms ? `<button class="sheet-tab" data-stab="forms">${esc(m.animalForms.tabLabel||'Forms')}</button>` : ''}
       ${m.discoveries && m.discoveries.length ? `<button class="sheet-tab" data-stab="discoveries">Discoveries <span class="st-n">${m.discoveries.length}</span></button>` : ''}
       ${m.reputations && m.reputations.length ? `<button class="sheet-tab" data-stab="reputations">Reputations <span class="st-n">${m.reputations.length}</span></button>` : ''}
     </div>
@@ -931,6 +971,7 @@ function magusSheetHtml(m){
     <div class="sheet-tp" data-stab="virtues">${vfListHtml(m.virtues,'virtue')}</div>
     <div class="sheet-tp" data-stab="flaws">${vfListHtml(m.flaws,'flaw')}</div>
     <div class="sheet-tp" data-stab="spells">${spellsHtml(m.spells)}</div>
+    ${m.animalForms ? `<div class="sheet-tp" data-stab="forms">${animalFormsHtml(m.animalForms)}</div>` : ''}
     ${m.discoveries && m.discoveries.length ? `<div class="sheet-tp" data-stab="discoveries">${discoveriesHtml(m.discoveries)}</div>` : ''}
     ${m.reputations && m.reputations.length ? `<div class="sheet-tp" data-stab="reputations"><div class="vf-list">${m.reputations.map(r=>`<div class="vf-item"><span class="vf-name">${esc(r.name)}</span>${r.description?`<span class="vf-desc">${esc(r.description)}</span>`:''}</div>`).join('')}</div></div>` : ''}
 
@@ -1758,6 +1799,15 @@ $('#sheet').addEventListener('click', e=>{
     const key = stab.dataset.stab;
     $$('#sheet .sheet-tab').forEach(t=>t.classList.toggle('on', t===stab));
     $$('#sheet .sheet-tp').forEach(p=>p.classList.toggle('on', p.dataset.stab===key));
+    return;
+  }
+  const fbtn = e.target.closest('.fbtn-form');
+  if(fbtn){
+    const idx = fbtn.dataset.form, tp = fbtn.closest('.sheet-tp');
+    if(tp){
+      tp.querySelectorAll('.fbtn-form').forEach(b=>b.classList.toggle('on', b===fbtn));
+      tp.querySelectorAll('.form-block').forEach(b=>{ b.hidden = (b.dataset.form!==idx); });
+    }
     return;
   }
   const row = e.target.closest('.rollable');
