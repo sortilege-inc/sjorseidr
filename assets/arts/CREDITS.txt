@@ -1,0 +1,19 @@
+Hermetic Art symbols (Techniques & Forms)
+=========================================
+
+Source: the Ars Magica 5e Foundry VTT system "arm5e" (assets/magic/),
+        https://github.com/Xzotl42/arm5e
+Per the arm5e system, the use and inclusion of logo, icon and art elements
+was expressly authorized by Holocubierta Ediciones, S.L., the licensee of
+Ars Magica 5th Edition.
+
+Files are named by the arm5e Art code:
+  Techniques — cr Creo, in Intellego, mu Muto, pe Perdo, re Rego
+  Forms      — an Animal, aq Aquam, au Auram, co Corpus, he Herbam,
+               ig Ignem, im Imaginem, me Mentem, te Terram, vi Vim
+
+Recolored here to the site ink tone (#221a12), preserving transparency, to
+match the House sigils (see ../houses/CREDITS.txt).
+
+Ars Magica is a trademark of Trident, Inc. d/b/a Atlas Games. Reproduced for
+a private, non-commercial campaign reference site.

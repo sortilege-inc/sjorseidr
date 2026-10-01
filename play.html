@@ -191,6 +191,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .sp-group-label:first-child{margin-top:0}
 .rune-glyphs{font-size:30px;line-height:1;color:var(--rust);margin:0 0 3px;letter-spacing:.12em}
 .art-cell .rune-mini{display:block;font-size:19px;line-height:1;color:var(--rust);margin-bottom:2px}
+.art-cell .art-sym{display:block;height:19px;width:19px;object-fit:contain;margin:0 auto 2px}
 
 .vf-list{display:flex;flex-direction:column;gap:6px}
 .vf-item{font-size:12.5px;line-height:1.45;padding:6px 9px;border-radius:6px;background:rgba(244,235,213,.5);
@@ -752,7 +753,7 @@ function artsGridHtml(arts){
     const a = arts[code];
     const sc = a?a.score:0, info = xpInfo(sc, a?a.xp:0, 'art');
     const tip = `${info.spent} XP spent · ${info.toward} of ${info.band} toward score ${info.next} (${info.remaining} more)`;
-    return `<div class="art-cell ${cls}"><span class="a-label">${a?a.label:code}</span><span class="a-val">${sc}</span><span class="a-xp" title="${esc(tip)}">${info.spent}xp · ${info.toward}/${info.band}</span></div>`;
+    return `<div class="art-cell ${cls}"><img class="art-sym" src="assets/arts/${code}.webp" alt="" aria-hidden="true"><span class="a-label">${a?a.label:code}</span><span class="a-val">${sc}</span><span class="a-xp" title="${esc(tip)}">${info.spent}xp · ${info.toward}/${info.band}</span></div>`;
   }).join('')}</div>`;
   return `
     <div class="arts-row-label">Techniques</div>
