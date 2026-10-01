@@ -828,10 +828,12 @@ function spellsHtml(list){
 const QUESTIONS_ENABLED = new Set(['Furtum Bonisagus']);
 function characterQuestions(name){
   if(!name || !OPEN_Q.length) return [];
+  // "Tagged to" = the character is named in the TITLE (so cross-references in a
+  // question's body don't pull it onto an unrelated character's sheet).
   const nm = name.toLowerCase(), first = name.split(' ')[0].toLowerCase();
   return OPEN_Q.filter(q=>{
-    const hay = ((q.title||'') + ' ' + (q.context||'')).toLowerCase();
-    return hay.includes(nm) || hay.includes(first);
+    const title = (q.title||'').toLowerCase();
+    return title.includes(nm) || title.includes(first);
   });
 }
 function questionsHtml(list){
@@ -840,19 +842,18 @@ function questionsHtml(list){
       <div class="sq-title"><span class="sq-tag">${esc(q.type||'')}</span><span class="sq-cat">${esc(q.category||'')}</span> ${esc(q.title||'')}</div>
       ${q.context?`<div class="sq-ctx">${esc(String(q.context).slice(0,320))}${String(q.context).length>320?'…':''}</div>`:''}
     </div>`).join('')}
-    <a class="sq-link" href="open_questions.html">Open the full Storyteller list →</a>
   </div>`;
 }
 
 // Animal-form statblocks (Magical Animal Companion + Lycanthrope form), with a
 // toggle between forms. Characteristics render from whatever keys are present.
-function statblockHtml(f){
+function statblockHtml(f, fk){
   const CH={int:'Int',cun:'Cun',per:'Per',pre:'Pre',com:'Com',str:'Str',sta:'Sta',dex:'Dex',qik:'Qik'};
   const chars=Object.entries(f.characteristics||{}).map(([k,v])=>`<div class="char-stat"><span class="cs-label">${CH[k]||k}</span><span class="cs-val">${signed(v)}</span></div>`).join('');
   const meta=[f.role, f.size!=null?`Size ${signed(f.size)}`:'', f.might!=null?`Might ${f.might}${f.mightRealm?' ('+f.mightRealm+')':''}`:'', f.form?`Form ${f.form}`:'', f.soak!=null?`Soak ${signed(f.soak)}`:''].filter(Boolean).map(t=>`<span class="meta-chip">${esc(t)}</span>`).join('');
   const combat=(f.combat||[]).map(c=>`<div class="sb-combat">⚔ ${esc(c.name)} — Init ${signed(c.init)}, Atk ${signed(c.attack)}, Def ${signed(c.defense)}, Dam ${signed(c.damage)}</div>`).join('');
   const powers=(f.powers||[]).map(p=>`<div class="sb-power"><b>${esc(p.name)}</b>${p.cost?` <span class="sb-cost">${esc(p.cost)}</span>`:''}${p.detail?` — ${esc(p.detail)}`:''}</div>`).join('');
-  const abil=(f.abilities||[]).map(a=>`<div class="ability-row"><span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span><span class="ab-score">${a.score}</span></div>`).join('');
+  const abil=(f.abilities||[]).map((a,ai)=>`<div class="ability-row rollable" data-roll="formability" data-fk="${esc(fk||'')}" data-aidx="${ai}" title="Click to roll"><span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span><span class="ab-score">${a.score}</span></div>`).join('');
   return `
     <div class="sheet-meta">${meta}</div>
     <div class="sheet-section-title">Characteristics</div>
@@ -871,7 +872,7 @@ function statblockHtml(f){
 function animalFormsHtml(af){
   if(!af||!af.order||!af.forms) return '';
   const btns=af.order.map((k,i)=>`<button class="fbtn-form ${i===0?'on':''}" data-form="${i}">${esc(af.forms[k].label)}</button>`).join('');
-  const blocks=af.order.map((k,i)=>`<div class="form-block" data-form="${i}"${i===0?'':' hidden'}>${statblockHtml(af.forms[k])}</div>`).join('');
+  const blocks=af.order.map((k,i)=>`<div class="form-block" data-form="${i}"${i===0?'':' hidden'}>${statblockHtml(af.forms[k], k)}</div>`).join('');
   return `<div class="forms-toggle">${btns}</div>${blocks}`;
 }
 
@@ -1132,8 +1133,14 @@ const TOGGLE_HIDE = /^(the gift|hermetic magus|improved characteristics|great (i
 function openRollModal(){ $('#rollModal').classList.add('open'); }
 function closeRollModal(){ $('#rollModal').classList.remove('open'); }
 
-function charOptions(sel){
-  return CHAR_ORDER.map(k=>`<option value="${k}" ${k===sel?'selected':''}>${CHAR_FULL[k]} (${signed((CURRENT_SHEET.characteristics||{})[k])})</option>`).join('');
+function charOptions(sel, chars){
+  chars = chars || (CURRENT_SHEET.characteristics||{});
+  return CHAR_ORDER.map(k=>`<option value="${k}" ${k===sel?'selected':''}>${CHAR_FULL[k]} (${signed(chars[k])})</option>`).join('');
+}
+// Normalize an animal-form's Characteristics to the roll keys (Cunning → Int slot).
+function formChars(f){
+  const c=(f&&f.characteristics)||{};
+  return {int:(c.int!=null?c.int:(c.cun!=null?c.cun:0)),per:c.per||0,str:c.str||0,sta:c.sta||0,pre:c.pre||0,com:c.com||0,dex:c.dex||0,qik:c.qik||0};
 }
 
 // Names auto-handled for a given roll context → hidden from the manual toggle list.
@@ -1170,11 +1177,14 @@ function castingFlags(sheet){
 }
 
 // ── Ability roll dialog ─────────────────────────────────
-function abilityDialog(ab){
+function abilityDialog(ab, opts){
+  opts = opts || {};
   const sheet = CURRENT_SHEET;
+  const chars = opts.chars || (sheet.characteristics||{});
+  const noVF = !!opts.noVF;
   const defChar = defaultCharFor(ab.name);
-  const puiss = puissantAbilityBonus(sheet, ab.name);   // 0 or 2
-  const cautious = cautiousAbility(sheet, ab.name);
+  const puiss = noVF ? 0 : puissantAbilityBonus(sheet, ab.name);   // 0 or 2
+  const cautious = noVF ? false : cautiousAbility(sheet, ab.name);
   const baseBotch = Math.max(0, 1 - (cautious?2:0));
   $('#rollDialog').innerHTML = `
     <button class="rd-close" onclick="closeRollModal()">✕</button>
@@ -1183,13 +1193,13 @@ function abilityDialog(ab){
 
     <div class="rd-row">
       <label>Characteristic</label>
-      <select id="rdChar">${charOptions(defChar)}</select>
+      <select id="rdChar">${charOptions(defChar, chars)}</select>
     </div>
     <div class="rd-row"><label>Ability score</label><span class="rd-val" style="color:var(--teal);font-weight:600">${signed(ab.score)}</span></div>
     ${ab.speciality ? `<label class="rd-check on"><input type="checkbox" id="rdSpec"><span>Specialty (+1) — ${esc(ab.speciality)}</span></label>` : ''}
     ${puiss ? `<label class="rd-check on"><input type="checkbox" id="rdPuiss" checked><span>Puissant ${esc(ab.name)} <span class="rd-val">+2</span></span></label>` : ''}
     ${cautious ? `<div class="rd-row"><label>Cautious with ${esc(ab.name)}</label><span class="rd-hint">−2 botch dice (auto)</span></div>` : ''}
-    ${vfToggles(sheet, {kind:'ability', ability:ab.name})}
+    ${noVF ? '' : vfToggles(sheet, {kind:'ability', ability:ab.name})}
     <div class="rd-row"><label>Other modifier</label><input type="number" id="rdMod" value="0" step="1"></div>
     <div class="rd-row"><label>Botch dice <span class="rd-hint">(stress only)</span></label><input type="number" id="rdBotch" value="${baseBotch}" min="0" step="1"></div>
 
@@ -1238,7 +1248,7 @@ function collectVF(){
 function doAbilityRoll(stress){
   const sheet = CURRENT_SHEET;
   const charKey = $('#rdChar').value;
-  const charVal = (sheet.characteristics||{})[charKey]||0;
+  const charVal = (ROLL_CTX.chars || sheet.characteristics || {})[charKey]||0;
   const ab = ROLL_CTX.ab;
   const spec = $('#rdSpec') && $('#rdSpec').checked ? 1 : 0;
   const puiss = $('#rdPuiss') && $('#rdPuiss').checked ? 2 : 0;
@@ -1819,6 +1829,10 @@ $('#sheet').addEventListener('click', e=>{
   } else if(row.dataset.roll==='spell'){
     const sp = (CURRENT_SHEET.spells||[])[idx];
     if(sp){ ROLL_CTX = {sp}; spellDialog(sp); }
+  } else if(row.dataset.roll==='formability'){
+    const f = ((CURRENT_SHEET.animalForms||{}).forms||{})[row.dataset.fk];
+    const ab = f && (f.abilities||[])[parseInt(row.dataset.aidx,10)];
+    if(ab){ const chars = formChars(f); ROLL_CTX = {ab, chars}; abilityDialog(ab, {chars, noVF:true}); }
   }
 });
 $('#rollModal').addEventListener('click', e=>{ if(e.target.id==='rollModal') closeRollModal(); });
