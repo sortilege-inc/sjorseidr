@@ -156,6 +156,9 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .sheet-portrait.placeholder{display:flex;align-items:center;justify-content:center;
   background:rgba(120,90,40,.12);font-size:26px;color:var(--ink-soft)}
 .sheet-name{font-family:'Cinzel',serif;font-weight:600;font-size:19px;color:var(--rust-bright);margin:0 0 2px}
+.sheet-headmain{display:flex;flex-direction:column;justify-content:center}
+.sheet-subrow{display:flex;align-items:center;gap:8px;margin:0}
+.house-sigil{flex:none;height:34px;width:34px;object-fit:contain;background:#f4ebd5;border:1px solid rgba(120,90,40,.45);border-radius:6px;padding:2px;box-shadow:0 1px 2px rgba(60,40,10,.18)}
 .sheet-sub{font-style:italic;color:var(--ink-soft);font-size:12.5px;line-height:1.4;margin:0}
 .sheet-tagline{font-size:12.5px;color:var(--ink);line-height:1.4;margin:4px 0 0}
 .sheet-meta{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0 4px}
@@ -884,6 +887,21 @@ function discoveriesHtml(list){
     </div>`).join('');
 }
 
+// Hermetic House sigils (5th-edition symbols, from the Ars Magica wiki, CC-BY-SA;
+// see assets/houses/CREDITS.txt). Keyed by the house name slug. Diedne has no 5e
+// sigil, so Valdemar's House Diedne falls back to Ex Miscellanea (GM ruling).
+const HOUSE_SLUGS = new Set(['bjornaer','bonisagus','criamon','flambeau','guernicus','jerbiton','mercere','merinita','tremere','tytalus','verditius','ex-miscellanea']);
+function houseSlug(house){
+  if(!house) return '';
+  if(/^diedne$/i.test(house.trim())) return 'ex-miscellanea';
+  return String(house).toLowerCase().replace(/[^a-z]+/g,'-').replace(/^-|-$/g,'');
+}
+function houseSigilHtml(house){
+  const slug = houseSlug(house);
+  if(!slug || !HOUSE_SLUGS.has(slug)) return '';
+  return `<img class="house-sigil" src="assets/houses/${slug}.webp" alt="House ${esc(house)} sigil" title="House ${esc(house)}">`;
+}
+
 function magusSheetHtml(m){
   const portrait = m.portrait
     ? `<img class="sheet-portrait" src="${esc(m.portrait)}" alt="${esc(m.name)}">`
@@ -987,7 +1005,7 @@ function magusSheetHtml(m){
       ${portrait}
       <div class="sheet-headmain">
         <div class="sheet-name">${esc(m.name)}</div>
-        <p class="sheet-sub">${esc(sub)}</p>
+        <div class="sheet-subrow">${isMagus ? houseSigilHtml(m.house) : ''}${sub ? `<p class="sheet-sub">${esc(sub)}</p>` : ''}</div>
         ${m.shortDescription ? `<p class="sheet-tagline">${esc(m.shortDescription)}</p>` : ''}
       </div>
       ${personaSwitch}

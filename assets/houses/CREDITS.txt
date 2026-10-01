@@ -1,0 +1,17 @@
+Hermetic House sigils — 5th Edition symbols
+===========================================
+
+Source: Ars Magica Wiki, "Ars Magica symbols"
+        https://arsmagica.fandom.com/wiki/Ars_Magica_symbols
+License: CC-BY-SA (Fandom community content)
+
+These are the 4th/5th-edition House symbols. Files are named by House slug:
+  bjornaer, bonisagus, criamon, flambeau, guernicus, jerbiton,
+  mercere, merinita, tremere, tytalus, verditius, ex-miscellanea
+
+Note: House Diedne has no 5th-edition sigil (the House predates 5e canon as a
+destroyed line), so on this site Valdemar's House Diedne displays the
+Ex Miscellanea sigil as a stand-in (GM ruling).
+
+Ars Magica is a trademark of Trident, Inc. d/b/a Atlas Games. These symbols are
+reproduced here for a private, non-commercial campaign reference site.
