@@ -1828,7 +1828,9 @@
           "duration": "moment",
           "target": "ind",
           "page": 129,
-          "description": "The vitki causes himself to grow with the sun, so that in the morning and afternoon he is +1 Size (essentially gaining the Large Virtue), and at noon he is Size +2. However, for the duration he will always return to his normal size by sunset, and remain that way until the sun rises again. During some months of the year in the extreme north, the sun never sets, and in that case the vitki may remain a giant for as long as an entire season."
+          "description": "The vitki causes himself to grow with the sun, so that in the morning and afternoon he is +1 Size (essentially gaining the Large Virtue), and at noon he is Size +2. However, for the duration he will always return to his normal size by sunset, and remain that way until the sun rises again. During some months of the year in the extreme north, the sun never sets, and in that case the vitki may remain a giant for as long as an entire season.",
+          "method": "I",
+          "source": "Hedge Magic [Revised Edition]"
         },
         {
           "tradition": "Runic",
@@ -1847,12 +1849,14 @@
           "name": "I, Valdemar, Ask for Freya's Blessing",
           "rune": "Fehu",
           "secondaryRune": "",
-          "level": 1,
+          "level": "General",
           "range": "personal",
           "duration": "moment",
           "target": "ind",
           "page": 130,
-          "description": ""
+          "description": "For as long as the rune endures, you receive a bonus equal to the effect’s magnitude on all rolls that directly involve the vitki’s pursuit of wealth. This might include rolls associated with business, such as Bargain or Folk Ken, or Awareness rolls when searching for treasure. Freya also has associations with fertility, and children might be considered a form of wealth. Thus, this bonus might also boost Stamina rolls associated with a mother giving birth.",
+          "method": "I",
+          "source": "Hedge Magic [Revised Edition]"
         },
         {
           "tradition": "Runic",
@@ -1871,24 +1875,28 @@
           "name": "I, Valdemar, Carve the Runes to Mend Flesh",
           "rune": "Berkanan",
           "secondaryRune": "",
-          "level": 1,
+          "level": 20,
           "range": "personal",
           "duration": "moment",
           "target": "ind",
           "page": 128,
-          "description": ""
+          "description": "This spell is usually carved onto an amulet and placed inside a piece of the target’s clothing. The target heals a Light Wound, and as long as the runes last for at least a week (the recovery period for a Light Wound) the effect is permanent. If the amulet is removed or damaged during this time, before the wound would have healed naturally, the character must make an immediate recovery roll for that injury. If this equals or exceeds the Improvement Ease Factor, then the wound remains healed. If the roll equals or exceeds the Stable Ease Factor, then the Light Wound reopens. If this roll is less than the Stable Ease Factor then the wound worsens, becoming a Medium Wound.",
+          "method": "I",
+          "source": "Hedge Magic [Revised Edition]"
         },
         {
           "tradition": "Runic",
           "name": "I, Valdemar, Speak of Friendship Among Men",
           "rune": "Ehwaz",
-          "secondaryRune": "",
-          "level": 1,
+          "secondaryRune": "Ansuz",
+          "level": "General",
           "range": "personal",
           "duration": "moment",
           "target": "ind",
           "page": 129,
-          "description": ""
+          "description": "All those who hear the target’s words feel trust and goodwill toward him, for as long as the runes endure. Note that if anyone in this audience has Magic Resistance, the spell must still Penetrate and it is treated as either an Imaginem or Mentem effect, whichever is higher. In ancient times, vitkir would inscribe these runes on a baton carried by one of their followers before sending them to negotiate with rival tribes, to ensure that they would receive him as a friend. The effects of this spell are largely swamped by the effects of The Gift, although some vitkir believe it does make things a little bit better.",
+          "method": "II",
+          "source": "Hedge Magic [Revised Edition]"
         },
         {
           "tradition": "Runic",
@@ -1955,24 +1963,28 @@
           "name": "I, Valdemar, Tame the Wild Waves",
           "rune": "Laguz",
           "secondaryRune": "",
-          "level": 1,
+          "level": 25,
           "range": "personal",
           "duration": "moment",
           "target": "ind",
           "page": 133,
-          "description": ""
+          "description": "The runes are carved into a piece of wood mounted on the prow of a ship, which ensures that the craft travels at incredible speeds through the water, doubling its natural movement rate.",
+          "method": "I",
+          "source": "Hedge Magic [Revised Edition]"
         },
         {
           "tradition": "Runic",
           "name": "I, Valdemar, am Thrice-Blessed",
           "rune": "Gebo",
           "secondaryRune": "",
-          "level": 1,
+          "level": 15,
           "range": "personal",
           "duration": "moment",
           "target": "ind",
           "page": 130,
-          "description": ""
+          "description": "The vitki receives a +3 bonus to his rolls when meeting and influencing others. This is the most common level for this effect, as it offsets some of the negative social effects of The Gift. A vitki always faces initial dislike and hostility from strangers, but with this magical boost he is at least not further hindered in his attempts to convince others that he means well. It is often cast without description, simply inscribing the Gebo rune three times for luck. This confers a –14 penalty to the vitki’s Casting Total, but is very subtle and easy for a vitkir with good knowledge of Gebo to do on a stone or stick before an important event takes place.",
+          "method": "I",
+          "source": "Hedge Magic [Revised Edition]"
         },
         {
           "tradition": "Runic",

@@ -189,6 +189,8 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .section-note{font-family:'EB Garamond',serif;font-weight:400;font-size:11px;font-style:italic;letter-spacing:0;text-transform:none;color:var(--ink-soft)}
 .sp-group-label{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--rust);margin:10px 0 4px}
 .sp-group-label:first-child{margin-top:0}
+.rune-glyphs{font-size:30px;line-height:1;color:var(--rust);margin:0 0 3px;letter-spacing:.12em}
+.art-cell .rune-mini{display:block;font-size:19px;line-height:1;color:var(--rust);margin-bottom:2px}
 
 .vf-list{display:flex;flex-direction:column;gap:6px}
 .vf-item{font-size:12.5px;line-height:1.45;padding:6px 9px;border-radius:6px;background:rgba(244,235,213,.5);
@@ -760,6 +762,14 @@ function artsGridHtml(arts){
   `;
 }
 
+// Elder Futhark glyphs (Unicode Runic block) keyed by rune name.
+const RUNE_GLYPH = {fehu:'ᚠ',uruz:'ᚢ',thurisaz:'ᚦ',ansuz:'ᚨ',raido:'ᚱ',kauno:'ᚲ',kaunan:'ᚲ',kenaz:'ᚲ',gebo:'ᚷ',wunjo:'ᚹ',hagalaz:'ᚺ',naudiz:'ᚾ',isa:'ᛁ',jera:'ᛃ',ihwaz:'ᛇ',eihwaz:'ᛇ',iwaz:'ᛇ',perth:'ᛈ',perthro:'ᛈ',algiz:'ᛉ',sowilo:'ᛊ',tiwaz:'ᛏ',berkanan:'ᛒ',ehwaz:'ᛖ',mannaz:'ᛗ',laguz:'ᛚ',ingwaz:'ᛜ',othila:'ᛟ',othala:'ᛟ',dagaz:'ᛞ'};
+function runeGlyph(name){ return RUNE_GLYPH[String(name||'').toLowerCase().trim()] || ''; }
+function runeScore(name){
+  const r = (CURRENT_SHEET && CURRENT_SHEET.runes || []).find(x=>x.name.toLowerCase()===String(name||'').toLowerCase());
+  return r ? (r.score||0) : 0;
+}
+
 // Vitkir runes (Hedge Magic Revised) are Accelerated Abilities — they advance on
 // the ART XP track (1/3/6/10…), so they render in the Arts-style grid, above Arts.
 function runesGridHtml(runes){
@@ -767,7 +777,8 @@ function runesGridHtml(runes){
   const cells = runes.map(r=>{
     const info = xpInfo(r.score, r.xp, 'art');
     const tip = `${info.spent} XP spent · ${info.toward} of ${info.band} toward score ${info.next} (${info.remaining} more)`;
-    return `<div class="art-cell rune"><span class="a-label">${esc(r.name)}</span><span class="a-val">${r.score}</span><span class="a-xp" title="${esc(tip)}">${info.spent}xp · ${info.toward}/${info.band}</span></div>`;
+    const g = runeGlyph(r.name);
+    return `<div class="art-cell rune">${g?`<span class="rune-mini">${g}</span>`:''}<span class="a-label">${esc(r.name)}</span><span class="a-val">${r.score}</span><span class="a-xp" title="${esc(tip)}">${info.spent}xp · ${info.toward}/${info.band}</span></div>`;
   }).join('');
   return `<div class="arts-grid">${cells}</div>`;
 }
@@ -840,10 +851,13 @@ function spellItemHtml(sp, i){
   const lvl = sp.level!=null ? ` <span style="font-weight:400;color:var(--ink-soft);font-size:11.5px">(lvl ${esc(sp.level)})</span>` : '';
   if((sp.tradition||'').toLowerCase()==='runic'){
     const runes = esc(sp.rune||'') + (sp.secondaryRune?` + ${esc(sp.secondaryRune)}`:'');
+    const glyphs = [sp.rune, sp.secondaryRune].filter(Boolean).map(runeGlyph).filter(Boolean).join(' ');
+    const meth = sp.method?` · Method ${esc(sp.method)}`:'';
     return `
-    <div class="spell-item">
+    <div class="spell-item rune-script rollable" data-roll="runecast" data-idx="${i}" title="Click to cast (rune Casting Total)">
+      ${glyphs?`<div class="rune-glyphs">${glyphs}</div>`:''}
       <div class="sp-name">${esc(sp.name)}${lvl}</div>
-      <div class="sp-meta">Rune: ${runes} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}</div>
+      <div class="sp-meta">Rune: ${runes}${meth} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}</div>
       ${txt?`<div class="sp-desc">${mdRules(txt)}</div>`:''}
     </div>`;
   }
@@ -1877,6 +1891,55 @@ function formCombatRoll(kind){
   showCombat(res);
 }
 
+// ── Rune casting (Vitkir) ── Casting Total = stress die + Stamina + lowest rune.
+// If the Total ≥ the script's level it is cast with no Fatigue; within 10, cast but
+// lose a Fatigue level; more than 10 below, it fails and still costs a Fatigue level.
+function runeCastDialog(sp){
+  if(!sp) return;
+  ROLL_CTX = {runecast: sp};
+  const sta = (CURRENT_SHEET.characteristics||{}).sta || 0;
+  const used = [sp.rune, sp.secondaryRune].filter(Boolean);
+  const scored = used.map(r=>({name:r, glyph:runeGlyph(r), score:runeScore(r)}));
+  const lowest = scored.length ? Math.min(...scored.map(s=>s.score)) : 0;
+  const general = (sp.level==='General' || typeof sp.level!=='number');
+  const runeList = scored.map(s=>`${s.glyph} ${esc(s.name)} ${signed(s.score)}`).join(' · ') || '—';
+  $('#rollDialog').innerHTML = `
+    <button class="rd-close" onclick="closeRollModal()">✕</button>
+    <h3>ᚱ Rune Casting — ${esc(sp.name)}</h3>
+    <p class="rd-sub">Casting Total = stress die + Stamina + lowest rune${general?' · General level — set the target.':''}</p>
+    <div class="rd-row"><label>Runes</label><span class="rd-val">${runeList}</span></div>
+    <div class="rd-row"><label>Stamina</label><span class="rd-val">${signed(sta)}</span></div>
+    <div class="rd-row"><label>Lowest rune</label><span class="rd-val">${signed(lowest)}</span></div>
+    <div class="rd-row"><label>Target level</label><input type="number" id="rcLevel" value="${general?15:sp.level}" step="1" style="width:62px"></div>
+    <div class="rd-row"><label>Modifier <span class="rd-hint">(inscription, focus…)</span></label><input type="number" id="rcMod" value="0" step="1"></div>
+    <div class="rd-row"><label>Vis (makt) <span class="rd-hint">(+2 each, +1 botch die)</span></label><input type="number" id="rcVis" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice</label><input type="number" id="rcBotch" value="1" min="0" step="1"></div>
+    <div class="rd-buttons"><button class="rd-btn" onclick="runeCastRoll()">Cast the runes</button></div>
+    <div class="rd-result" id="rdResult"></div>
+  `;
+  openRollModal();
+}
+function runeCastRoll(){
+  const sp = ROLL_CTX.runecast; if(!sp) return;
+  const sta = (CURRENT_SHEET.characteristics||{}).sta || 0;
+  const used = [sp.rune, sp.secondaryRune].filter(Boolean);
+  const lowest = used.length ? Math.min(...used.map(runeScore)) : 0;
+  const mod = parseInt(($('#rcMod')||{}).value,10)||0;
+  const vis = Math.max(0, parseInt(($('#rcVis')||{}).value,10)||0);
+  const botchDice = parseInt(($('#rcBotch')||{}).value,10)||0;
+  const level = parseInt(($('#rcLevel')||{}).value,10)||0;
+  const die = rollStress(botchDice + vis);  // each pawn of vis adds a botch die
+  const base = sta + lowest + mod + vis*2;
+  const total = die.botch ? Math.min(0, base) : base + die.value;
+  let outcome;
+  if(die.botch) outcome = {cls:'bad', text:'✗ Botch — the carving goes dangerously wrong (Nátt-thel risk on 2+ Warping).'};
+  else if(total >= level) outcome = {cls:'good', text:`✓ Cast — Total ${total} ≥ level ${level}. No Fatigue lost.`};
+  else if(total >= level-10) outcome = {cls:'good', text:`✓ Cast (strained) — Total ${total} within 10 of level ${level}. Lose 1 Fatigue level.`};
+  else outcome = {cls:'bad', text:`✗ Fails — Total ${total} is more than 10 below level ${level}. Lose 1 Fatigue level; no effect.`};
+  const breakdown = `Sta ${signed(sta)} · lowest rune ${signed(lowest)}${mod?` · mod ${signed(mod)}`:''}${vis?` · vis +${vis*2}`:''} · ${die.detail}`;
+  showCombat({title:'Casting Total', total, botched:die.botch, breakdown, outcome});
+}
+
 // ── Trackers, roll log, export/import (per character + persona, in localStorage) ──
 // Trackers (fatigue / wounds / confidence / notes) are kept PER PERSONA: the magus
 // and each shape-shift form track their own state, so switching forms shows that
@@ -2035,6 +2098,9 @@ $('#sheet').addEventListener('click', e=>{
   } else if(row.dataset.roll==='spell'){
     const sp = (CURRENT_SHEET.spells||[])[idx];
     if(sp){ ROLL_CTX = {sp}; spellDialog(sp); }
+  } else if(row.dataset.roll==='runecast'){
+    const sp = (CURRENT_SHEET.spells||[])[idx];
+    if(sp) runeCastDialog(sp);
   } else if(row.dataset.roll==='formability'){
     const f = ((CURRENT_SHEET.animalForms||{}).forms||{})[row.dataset.fk];
     const ab = f && (f.abilities||[])[parseInt(row.dataset.aidx,10)];
