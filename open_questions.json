@@ -209,44 +209,11 @@
    "resolution": ""
   },
   {
-   "id": "tl002",
-   "type": "Tool",
-   "category": "System / Tooling",
-   "title": "Fae cannot currently be fully implemented as PCs in Foundry.",
-   "context": "Flagged in the GM's Foundry Notes — relevant if a fae companion (Rán, Ka'wa'ill) is ever meant to gauntlet or otherwise get a full PC-style sheet.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
    "id": "tl003",
    "type": "Tool",
    "category": "Character Build",
    "title": "Ships-Captain grog template cleanup: delete all but one flaw and all but one virtue when copying from the Spare Grogs folder.",
    "context": "Per the GM's own note: pick one of (Feud / Favor / Plagued by Supernatural Entity / Fury) as the flaw, and one of (Factor / Partner / Capo) as the virtue, when generating a new ship's captain.\n\nUpdate (2026-07-25) — GM: BLOCKED on the sourcebook→DSL conversion (same dependency as t019/t020). Revisit once those resources are in-hand. Kept Open.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "tl004",
-   "type": "Tool",
-   "category": "System / Tooling",
-   "title": "Can 'Affinity with Art' be configured for companions in Foundry?",
-   "context": "An open configuration question from early prep.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "tl006",
-   "type": "Tool",
-   "category": "System / Tooling",
-   "title": "Dustin's Flawless Magic (Mastery 1) doesn't seem to apply automatically in Foundry.",
-   "context": "Needs manual confirmation each time it should trigger, per early prep notes.",
    "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
    "raised_event": "",
    "status": "Open",
@@ -269,28 +236,6 @@
    "category": "Rules",
    "title": "The Magical Astrolabe's enchantment level is inconsistent across sources.",
    "context": "The sourcebook default suggests level 40, the GM's own math came to 28, and the live Foundry item (ship_details.json) is configured at level 10 — three different numbers, never reconciled.\n\nUpdate (2026-07-25): Not a rules lookup — the ArM5e core corpus only gives the astrolabe's Shape & Material bonus (+5 astrology / measure the heavens / navigation), not a \"correct\" enchantment level. The Magical Astrolabe's level (sourcebook 40 vs GM-math 28 vs live 10) is a build-reconciliation decision, not a rules fact; pick the intended number and set it. Keeping Open as a build decision.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "tl013",
-   "type": "Tool",
-   "category": "Character Build",
-   "title": "Casting Tablets — a to-do with no further detail.",
-   "context": "From early prep; unclear what specifically needed doing.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
-   "id": "tl017",
-   "type": "Tool",
-   "category": "Rules",
-   "title": "Expand on the Famous Resident and Local Ally virtues.",
-   "context": "From early prep; no detail on what needed expanding.\n\nUpdate (2026-07-25): Not in the ArM5e core corpus — \"Famous Resident\" and \"Local Ally\" are not core Virtues; they are covenant Boons from the Covenants supplement. Needs that book to expand. Keeping Open.",
    "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
    "raised_event": "",
    "status": "Open",

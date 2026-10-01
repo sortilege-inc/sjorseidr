@@ -855,14 +855,14 @@ function statblockHtml(f, fk){
   const CH={int:'Int',cun:'Cun',per:'Per',pre:'Pre',com:'Com',str:'Str',sta:'Sta',dex:'Dex',qik:'Qik'};
   const chars=Object.entries(f.characteristics||{}).map(([k,v])=>`<div class="char-stat"><span class="cs-label">${CH[k]||k}</span><span class="cs-val">${signed(v)}</span></div>`).join('');
   const meta=[f.role, f.size!=null?`Size ${signed(f.size)}`:'', f.might!=null?`Might ${f.might}${f.mightRealm?' ('+f.mightRealm+')':''}`:'', f.form?`Form ${f.form}`:'', f.soak!=null?`Soak ${signed(f.soak)}`:''].filter(Boolean).map(t=>`<span class="meta-chip">${esc(t)}</span>`).join('');
-  const combat=(f.combat||[]).map(c=>`<div class="sb-combat">⚔ ${esc(c.name)} — Init ${signed(c.init)}, Atk ${signed(c.attack)}, Def ${signed(c.defense)}, Dam ${signed(c.damage)}</div>`).join('');
   const powers=(f.powers||[]).map(p=>`<div class="sb-power"><b>${esc(p.name)}</b>${p.cost?` <span class="sb-cost">${esc(p.cost)}</span>`:''}${p.detail?` — ${esc(p.detail)}`:''}</div>`).join('');
   const abil=(f.abilities||[]).map((a,ai)=>`<div class="ability-row rollable" data-roll="formability" data-fk="${esc(fk||'')}" data-aidx="${ai}" title="Click to roll"><span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span><span class="ab-score">${a.score}</span></div>`).join('');
   return `
     <div class="sheet-meta">${meta}</div>
     <div class="sheet-section-title">Characteristics</div>
     <div class="char-grid">${chars}</div>
-    ${combat?`<div class="sheet-section-title">Combat</div>${combat}`:''}
+    ${(f.combat||[]).length?`<div class="sheet-section-title">Combat</div>
+    <button class="combat-open" onclick="formCombatDialog('${esc(fk||'')}')">⚔ Open combat roller</button>`:''}
     ${f.fatigue?`<div class="sb-line"><em>Fatigue:</em> ${esc(f.fatigue)}</div>`:''}
     ${f.wounds?`<div class="sb-line"><em>Wounds:</em> ${esc(f.wounds)}</div>`:''}
     ${powers?`<div class="sheet-section-title">Powers</div>${powers}`:''}
@@ -947,13 +947,13 @@ function magusSheetHtml(m){
     <div class="sheet-section-title">Characteristics</div>
     ${charGridHtml(m.characteristics||{})}
 
+    <div class="sheet-section-title">Combat</div>
+    <button class="combat-open" onclick="combatDialog(CURRENT_SHEET)">⚔ Open combat roller</button>
+
     ${(!m.charType || m.charType==='magus' || Object.values(m.arts||{}).some(a=>a.score>0)) ? `
     <div class="sheet-section-title">Arts</div>
     ${artsGridHtml(m.arts||{})}
     ` : ''}
-
-    <div class="sheet-section-title">Combat</div>
-    <button class="combat-open" onclick="combatDialog(CURRENT_SHEET)">⚔ Open combat roller</button>
 
     ${m.personalityTraits && m.personalityTraits.length ? `
     <div class="sheet-section-title">Personality</div>
@@ -978,14 +978,9 @@ function magusSheetHtml(m){
     <p class="sheet-source">Pulled from the live Foundry sheet — treat as a snapshot, not a live view. Some scores may still reflect character-creation defaults rather than in-play advancement.</p>
   `;
 
-  const formBodies = hasForms ? af.order.map((k,i)=>{
-    const f = af.forms[k];
-    const roller = (f.combat||[]).length
-      ? `<div class="sheet-section-title">Combat roller</div>
-         <button class="combat-open" onclick="formCombatDialog('${esc(k)}')">⚔ Open combat roller — ${esc(f.label)}</button>`
-      : '';
-    return `<div class="persona-body" data-persona="${i}" hidden>${statblockHtml(f, k)}${roller}</div>`;
-  }).join('') : '';
+  const formBodies = hasForms
+    ? af.order.map((k,i)=>`<div class="persona-body" data-persona="${i}" hidden>${statblockHtml(af.forms[k], k)}</div>`).join('')
+    : '';
 
   return `
     <div class="sheet-header">
@@ -1823,23 +1818,41 @@ function formCombatRoll(kind){
   showCombat(res);
 }
 
-// ── Trackers, roll log, export/import (per character, in localStorage) ──
+// ── Trackers, roll log, export/import (per character + persona, in localStorage) ──
+// Trackers (fatigue / wounds / confidence / notes) are kept PER PERSONA: the magus
+// and each shape-shift form track their own state, so switching forms shows that
+// form's condition. The roll log stays shared across personas (one dice history).
 let STATE = {}, LOG = [], LAST_RESULT = null;
 const stKey  = id => 'sjor_sheet_' + id;
 const logKey = id => 'sjor_log_' + id;
 const stripTags = s => String(s==null?'':s).replace(/<[^>]+>/g,'').replace(/\s+/g,' ').trim();
+function isBasePersona(){ return CURRENT_PERSONA==='base'; }
+function activeForm(){
+  if(isBasePersona() || !CURRENT_SHEET || !CURRENT_SHEET.animalForms) return null;
+  const af = CURRENT_SHEET.animalForms;
+  const k = af.order && af.order[parseInt(CURRENT_PERSONA,10)];
+  return k ? {key:k, form:af.forms[k], idx:CURRENT_PERSONA} : null;
+}
+function personaLabel(){
+  const f = activeForm();
+  return f ? f.form.label : ((CURRENT_SHEET&&CURRENT_SHEET.name)||'');
+}
+function personaStoreId(){
+  const f = activeForm();
+  return CUR_ID + (f ? ('__f'+f.idx) : '');
+}
 function defaultState(sheet){
   return { fatigue:0, wounds:{light:0,medium:0,heavy:0,incap:0},
-    confidence:(sheet && sheet.confidence && sheet.confidence.score)||0, notes:'' };
+    confidence: isBasePersona() ? ((sheet && sheet.confidence && sheet.confidence.score)||0) : 0, notes:'' };
 }
 function loadState(){
   const d = defaultState(CURRENT_SHEET);
-  try{ STATE = Object.assign({}, d, JSON.parse(localStorage.getItem(stKey(CUR_ID))||'null')||{}); }
+  try{ STATE = Object.assign({}, d, JSON.parse(localStorage.getItem(stKey(personaStoreId()))||'null')||{}); }
   catch(_){ STATE = d; }
   STATE.wounds = Object.assign({}, d.wounds, STATE.wounds||{});
   try{ LOG = JSON.parse(localStorage.getItem(logKey(CUR_ID))||'[]') || []; }catch(_){ LOG = []; }
 }
-function saveState(){ try{ localStorage.setItem(stKey(CUR_ID), JSON.stringify(STATE)); }catch(_){} }
+function saveState(){ try{ localStorage.setItem(stKey(personaStoreId()), JSON.stringify(STATE)); }catch(_){} }
 function saveLog(){ try{ localStorage.setItem(logKey(CUR_ID), JSON.stringify(LOG)); }catch(_){} }
 
 const FATIGUE_LEVELS = ['Fresh','Winded','Weary','Tired','Dazed','Unconscious'];
@@ -1854,14 +1867,14 @@ function renderTrackers(){
   // Fatigue: the level name (Fresh…Unconscious) sits to the LEFT of the stepper.
   const fatRow = `<div class="tk-row"><span class="tk-l">Fatigue</span><span class="tk-tag">${esc(fat)}</span>${stepper('fat-','fat+',st.fatigue)}</div>`;
   $('#trackers').innerHTML =
-    `<div class="tk-title">In play <span class="tk-who">— ${esc((CURRENT_SHEET&&CURRENT_SHEET.name)||'')}</span></div>`
+    `<div class="tk-title">In play <span class="tk-who">— ${esc(personaLabel())}</span></div>`
     + fatRow
-    + step('Confidence', 'conf-', 'conf+', st.confidence)
+    + (isBasePersona() ? step('Confidence', 'conf-', 'conf+', st.confidence) : '')
     + `<div class="tk-wsub">Wounds</div>`
     + WOUND_KEYS.map(([k,l])=>step(l, 'w-'+k, 'w+'+k, st.wounds[k]||0)).join('')
     + `<button class="tk-reset" id="tkReset">Reset trackers</button>`;
   $$('#trackers [data-tk]').forEach(b=> b.onclick=()=>adjustTracker(b.dataset.tk));
-  $('#tkReset').onclick = ()=>{ if(confirm('Reset fatigue, wounds, confidence, and notes for '+((CURRENT_SHEET&&CURRENT_SHEET.name)||'this character')+'?')){ STATE = defaultState(CURRENT_SHEET); saveState(); renderTrackers(); renderNotes(); } };
+  $('#tkReset').onclick = ()=>{ if(confirm('Reset trackers and notes for '+esc(personaLabel())+'?')){ STATE = defaultState(CURRENT_SHEET); saveState(); renderTrackers(); renderNotes(); } };
 }
 function renderNotes(){ const t=$('#tkNotes'); if(t) t.value = STATE.notes||''; }
 function adjustTracker(cmd){
@@ -1950,6 +1963,8 @@ $('#sheet').addEventListener('click', e=>{
     $$('#sheet .persona-btn').forEach(b=>b.classList.toggle('on', b===pbtn));
     $$('#sheet .persona-body').forEach(b=>{ b.hidden = (b.dataset.persona!==key); });
     CURRENT_PERSONA = key;
+    // Swap the In-Play trackers to this persona's own fatigue/wounds/notes.
+    loadState(); renderTrackers(); renderNotes();
     return;
   }
   const row = e.target.closest('.rollable');

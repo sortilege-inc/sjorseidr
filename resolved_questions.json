@@ -820,6 +820,61 @@
       "raised_event": "The crown delivered: Mímormr freed",
       "status": "Archived",
       "resolution": "Archived as reference/background (2026-09-30): parked — may resurface; removed from the active list."
+    },
+    {
+      "id": "tl002",
+      "type": "Tool",
+      "category": "System / Tooling",
+      "title": "Fae cannot currently be fully implemented as PCs in Foundry.",
+      "context": "Flagged in the GM's Foundry Notes — relevant if a fae companion (Rán, Ka'wa'ill) is ever meant to gauntlet or otherwise get a full PC-style sheet.",
+      "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
+      "raised_event": "",
+      "status": "Closed",
+      "resolution": "Closed (2026-09-30): Foundry tooling limitation set aside; not a blocker for play. Revisit only if a fae companion (Rán, Ka’wa’ill) ever needs a full PC-style sheet."
+    },
+    {
+      "id": "tl004",
+      "type": "Tool",
+      "category": "System / Tooling",
+      "title": "Can 'Affinity with Art' be configured for companions in Foundry?",
+      "context": "An open configuration question from early prep.",
+      "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
+      "raised_event": "",
+      "status": "Closed",
+      "resolution": "Closed (2026-09-30): Foundry configuration question set aside; handle case-by-case if an Affinity-with-Art companion actually comes up."
+    },
+    {
+      "id": "tl006",
+      "type": "Tool",
+      "category": "System / Tooling",
+      "title": "Dustin's Flawless Magic (Mastery 1) doesn't seem to apply automatically in Foundry.",
+      "context": "Needs manual confirmation each time it should trigger, per early prep notes.",
+      "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
+      "raised_event": "",
+      "status": "Closed",
+      "resolution": "Closed (2026-09-30): Foundry automation limitation set aside; apply Dustin’s Flawless Magic (Mastery 1) bonus manually when it should trigger."
+    },
+    {
+      "id": "tl013",
+      "type": "Tool",
+      "category": "Character Build",
+      "title": "Casting Tablets — a to-do with no further detail.",
+      "context": "From early prep; unclear what specifically needed doing.",
+      "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
+      "raised_event": "",
+      "status": "Closed",
+      "resolution": "Closed (2026-09-30): stale early-prep to-do with no actionable detail; removed from the active list."
+    },
+    {
+      "id": "tl017",
+      "type": "Tool",
+      "category": "Rules",
+      "title": "Expand on the Famous Resident and Local Ally virtues.",
+      "context": "From early prep; no detail on what needed expanding.\n\nUpdate (2026-07-25): Not in the ArM5e core corpus — \"Famous Resident\" and \"Local Ally\" are not core Virtues; they are covenant Boons from the Covenants supplement. Needs that book to expand. Keeping Open.\n\nUpdate (2026-09-30): Data-checked — Local Ally has a full description in covenant.json; Famous Resident: Solving Epicurusson is covered by the founder’s Twilight narrative in covenant_ledger.json (Spring 1220). Both are substantively handled in the covenant, so this “expand on” to-do is closed. (covenant.json’s Famous Resident description field remains empty — optional tidy-up.)",
+      "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
+      "raised_event": "",
+      "status": "Closed",
+      "resolution": "Closed (2026-09-30): both virtues are handled in the covenant data. Local Ally is fully described in covenant.json; the Famous Resident (Solving Epicurusson) boon is explained by the founder’s Twilight narrative in covenant_ledger.json (Spring 1220, “Solving Epicurusson vanishes into Twilight”). Minor optional cleanup: covenant.json’s Famous Resident description field is still blank and could carry that ledger note."
     }
   ]
 }
