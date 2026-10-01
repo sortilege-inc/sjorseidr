@@ -3405,7 +3405,7 @@
             "size": -1,
             "characteristics": {
               "int": 3,
-              "per": -1,
+              "per": 3,
               "pre": 2,
               "com": 1,
               "str": 0,
