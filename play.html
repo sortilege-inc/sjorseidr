@@ -180,6 +180,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .art-cell .a-label{display:block;font-size:10px;color:var(--ink-soft)}
 .art-cell .a-val{display:block;font-size:14.5px;font-weight:600;color:var(--teal)}
 .art-cell.technique .a-val{color:var(--rust)}
+.art-cell .a-xp{display:block;font-size:9px;color:var(--ink-soft);margin-top:1px;letter-spacing:-.02em}
 
 .vf-list{display:flex;flex-direction:column;gap:6px}
 .vf-item{font-size:12.5px;line-height:1.45;padding:6px 9px;border-radius:6px;background:rgba(244,235,213,.5);
@@ -196,6 +197,8 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .ability-row .ab-name{color:var(--ink)}
 .ability-row .ab-spec{color:var(--ink-soft);font-style:italic;font-size:11.5px}
 .ability-row .ab-score{font-weight:600;color:var(--teal);flex:none}
+.ability-row .ab-right{display:flex;gap:8px;align-items:baseline;flex:none}
+.ability-row .ab-xp{color:var(--ink-soft);font-size:10.5px;white-space:nowrap}
 .rollable{cursor:pointer;transition:background .12s}
 .rollable:hover{background:rgba(198,155,63,.16)}
 .ability-row.rollable{border-radius:4px;padding-left:4px;padding-right:4px;margin:0 -4px}
@@ -290,6 +293,12 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .sheet-bio{font-size:13.5px;line-height:1.6;color:var(--ink)}
 .sheet-bio p{margin:0 0 10px}
 .sheet-bio p:last-child{margin-bottom:0}
+.sheet-questions{font-size:13px;line-height:1.5;color:var(--ink)}
+.sheet-questions .sq-item{padding:6px 0;border-bottom:1px solid rgba(120,90,40,.18)}
+.sheet-questions .sq-title{font-weight:600;color:var(--ink)}
+.sheet-questions .sq-tag,.sheet-questions .sq-cat{font-family:'Cinzel',serif;font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;padding:1px 6px;border-radius:8px;margin-right:4px;background:rgba(120,90,40,.14);color:var(--ink-soft);border:1px solid rgba(120,90,40,.3)}
+.sheet-questions .sq-ctx{font-size:12px;color:var(--ink-soft);margin-top:3px}
+.sheet-questions .sq-link{display:inline-block;margin-top:8px;font-size:12px;color:var(--teal)}
 
 footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);opacity:.75}
 
@@ -425,6 +434,7 @@ let NPCS = null; // name -> full sheet, keyed by ships.json canonical name
 let SHIP_DETAILS = null; // ships.json ship id -> hull/devices/lab detail
 let FLEET_NOTE = null;
 let RULES_IDX = {}; // normalized rules-entity name -> verbatim DESCRIPTION text (from rules.json)
+let OPEN_Q = []; // active open_questions.json items, for the per-character Outstanding Questions section
 
 // Verbatim virtue/flaw/spell text is pulled from rules.json (sliced from the
 // resolved armdef corpus by sjorseidr-support/scripts/build_rules.py) so the sheets aren't
@@ -469,11 +479,13 @@ function findCharacterSheet(name){
 
 async function load(){
   try{
-    const [magiRes, npcsRes, rulesRes] = await Promise.all([
+    const [magiRes, npcsRes, rulesRes, oqRes] = await Promise.all([
       fetch('./magi.json', {cache:'no-store'}).catch(()=>null),
       fetch('./npcs.json', {cache:'no-store'}).catch(()=>null),
       fetch('./rules.json', {cache:'no-store'}).catch(()=>null),
+      fetch('./open_questions.json', {cache:'no-store'}).catch(()=>null),
     ]);
+    if(oqRes && oqRes.ok){ try{ OPEN_Q = (await oqRes.json()).items || []; }catch(_){ OPEN_Q = []; } }
     if(rulesRes && rulesRes.ok){
       const rulesJson = await rulesRes.json();
       Object.entries(rulesJson.entities || {}).forEach(([name, e]) => {
@@ -699,10 +711,26 @@ function charGridHtml(chars){
   `).join('')}</div>`;
 }
 
+// XP math: Art score n costs n(n+1)/2 total; Ability score n costs 5·n(n+1)/2.
+// Band s→s+1 is therefore (s+1) for Arts and 5(s+1) for Abilities. The score is
+// authoritative, so if the stored total lags it, clamp spent up to the score's cost.
+function artThr(n){ return n*(n+1)/2; }
+function abThr(n){ return 5*n*(n+1)/2; }
+function xpInfo(score, xp, kind){
+  const thr = kind==='art' ? artThr : abThr;
+  const s = Math.max(0, score||0);
+  const spent = Math.max(xp||0, thr(s));
+  const base = thr(s), band = thr(s+1) - base;
+  const toward = Math.min(spent - base, band);
+  return {spent, toward, band, next: s+1, remaining: band - toward};
+}
+
 function artsGridHtml(arts){
   const row = (codes, cls) => `<div class="arts-grid">${codes.map(code=>{
     const a = arts[code];
-    return `<div class="art-cell ${cls}"><span class="a-label">${a?a.label:code}</span><span class="a-val">${a?a.score:0}</span></div>`;
+    const sc = a?a.score:0, info = xpInfo(sc, a?a.xp:0, 'art');
+    const tip = `${info.spent} XP spent · ${info.toward} of ${info.band} toward score ${info.next} (${info.remaining} more)`;
+    return `<div class="art-cell ${cls}"><span class="a-label">${a?a.label:code}</span><span class="a-val">${sc}</span><span class="a-xp" title="${esc(tip)}">${info.spent}xp · ${info.toward}/${info.band}</span></div>`;
   }).join('')}</div>`;
   return `
     <div class="arts-row-label">Techniques</div>
@@ -761,9 +789,11 @@ function abilitiesHtml(list){
   let out = '', lastCat = null;
   for(const {a,i,cat} of rows){
     if(cat !== lastCat){ out += `<div class="ability-cat">${esc(cat)}</div>`; lastCat = cat; }
+    const info = xpInfo(a.score, a.xp, 'ability');
+    const tip = `${info.spent} XP spent · ${info.toward} of ${info.band} toward score ${info.next} (${info.remaining} more)`;
     out += `<div class="ability-row rollable" data-roll="ability" data-idx="${i}" title="Click to roll">
       <span><span class="ab-name">${esc(a.name)}</span>${a.speciality?` <span class="ab-spec">(${esc(a.speciality)})</span>`:''}</span>
-      <span class="ab-score">${a.score}</span>
+      <span class="ab-right"><span class="ab-xp" title="${esc(tip)}">${info.spent} xp · ${info.toward}/${info.band}</span><span class="ab-score">${a.score}</span></span>
     </div>`;
   }
   return out;
@@ -782,6 +812,28 @@ function spellsHtml(list){
       ${txt?`<div class="sp-desc">${mdRules(txt)}</div>`:''}
     </div>
   `;}).join('');
+}
+
+// Open questions "tagged" to a character = its name appears in the question's
+// title or context (open_questions.json holds only active items). Shown only for
+// the characters in QUESTIONS_ENABLED for now.
+const QUESTIONS_ENABLED = new Set(['Furtum Bonisagus']);
+function characterQuestions(name){
+  if(!name || !OPEN_Q.length) return [];
+  const nm = name.toLowerCase(), first = name.split(' ')[0].toLowerCase();
+  return OPEN_Q.filter(q=>{
+    const hay = ((q.title||'') + ' ' + (q.context||'')).toLowerCase();
+    return hay.includes(nm) || hay.includes(first);
+  });
+}
+function questionsHtml(list){
+  return `<div class="sheet-questions">${list.map(q=>`
+    <div class="sq-item">
+      <div class="sq-title"><span class="sq-tag">${esc(q.type||'')}</span><span class="sq-cat">${esc(q.category||'')}</span> ${esc(q.title||'')}</div>
+      ${q.context?`<div class="sq-ctx">${esc(String(q.context).slice(0,320))}${String(q.context).length>320?'…':''}</div>`:''}
+    </div>`).join('')}
+    <a class="sq-link" href="open_questions.html">Open the full Storyteller list →</a>
+  </div>`;
 }
 
 function discoveriesHtml(list){
@@ -841,6 +893,13 @@ function magusSheetHtml(m){
     <details class="sheet-collapsible">
       <summary>Biography</summary>
       <div class="sheet-bio">${m.biography.split('\n\n').map(p=>`<p>${esc(p)}</p>`).join('')}</div>
+    </details>
+    ` : ''}
+
+    ${(QUESTIONS_ENABLED.has(m.name) && characterQuestions(m.name).length) ? `
+    <details class="sheet-collapsible">
+      <summary>Outstanding Questions (${characterQuestions(m.name).length})</summary>
+      ${questionsHtml(characterQuestions(m.name))}
     </details>
     ` : ''}
 
