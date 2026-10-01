@@ -692,9 +692,9 @@
  },
  {
   "id": "p128",
-  "sort_iso": "1227-04-15T12:00",
-  "timeline": "🌼 Spring 1227",
-  "date": "1227",
+  "sort_iso": "1225-04-15T12:00",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
   "title": "Éogan's Talisman (1/3): prepare the jade-and-rowan necklace for enchantment",
   "body_text": "Éogan prepares his talisman-to-be — a jade cross in a rowan-wood jacket on a leather strap — for enchantment.",
   "notes": "No Lab Total required, so ~20 days are free this season — he spends them pursuing the capricorn (t070). If the capricorn runs long, this preparation slips a season (no issue). First of three consecutive talisman seasons; see t063.",
@@ -707,13 +707,13 @@
   "cast": [
    "Éogan Dobhartha"
   ],
-  "source": "Player design note 2026-09-30 (talisman build plan); see t063. Seasons are a best-estimate consecutive run."
+  "source": "Player design note (talisman build plan); see t063. Seasons per owner: Spring–Fall 1225, around the Ireland/capricorn trip."
  },
  {
   "id": "p129",
-  "sort_iso": "1227-07-15T12:00",
-  "timeline": "☀️ Summer 1227",
-  "date": "1227",
+  "sort_iso": "1225-07-15T12:00",
+  "timeline": "☀️ Summer 1225",
+  "date": "1225",
   "title": "Éogan's Talisman (2/3): attune it as his talisman",
   "body_text": "Éogan attunes the prepared necklace as his personal talisman.",
   "notes": "No Lab Total required (~20 free days again). Second of three consecutive talisman seasons; see t063.",
@@ -726,13 +726,13 @@
   "cast": [
    "Éogan Dobhartha"
   ],
-  "source": "Player design note 2026-09-30 (talisman build plan); see t063. Seasons are a best-estimate consecutive run."
+  "source": "Player design note (talisman build plan); see t063. Seasons per owner: Spring–Fall 1225, around the Ireland/capricorn trip."
  },
  {
   "id": "p130",
-  "sort_iso": "1227-10-15T12:00",
-  "timeline": "🍂 Fall 1227",
-  "date": "1227",
+  "sort_iso": "1225-10-15T12:00",
+  "timeline": "🍂 Fall 1225",
+  "date": "1225",
   "title": "Éogan's Talisman (3/3): instill 'Lungs of the Fish' + the jade +4 Aquam bonus",
   "body_text": "Éogan instills the first effect: a semi-permanent 'Lungs of the Fish', run as a constant effect with an environmental trigger (submerged in water) to avoid 24/7 Warping. This season also instills the +4 Aquam bonus from the jade material. First of his intended deep-diving enchantments.",
   "notes": "Needs a Lab Total (unlike the first two seasons). Final trigger/Warping handling to confirm with the group. Third of three consecutive talisman seasons; see t063.",
@@ -745,6 +745,6 @@
   "cast": [
    "Éogan Dobhartha"
   ],
-  "source": "Player design note 2026-09-30 (talisman build plan); see t063. Seasons are a best-estimate consecutive run."
+  "source": "Player design note (talisman build plan); see t063. Seasons per owner: Spring–Fall 1225, around the Ireland/capricorn trip."
  }
 ]
