@@ -183,7 +183,12 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .art-cell .a-label{display:block;font-size:10px;color:var(--ink-soft)}
 .art-cell .a-val{display:block;font-size:14.5px;font-weight:600;color:var(--teal)}
 .art-cell.technique .a-val{color:var(--rust)}
+.art-cell.rune .a-val{color:var(--ink)}
+.art-cell.rune{box-shadow:inset 0 0 0 1px rgba(120,90,40,.18)}
 .art-cell .a-xp{display:block;font-size:9px;color:var(--ink-soft);margin-top:1px;letter-spacing:-.02em}
+.section-note{font-family:'EB Garamond',serif;font-weight:400;font-size:11px;font-style:italic;letter-spacing:0;text-transform:none;color:var(--ink-soft)}
+.sp-group-label{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--rust);margin:10px 0 4px}
+.sp-group-label:first-child{margin-top:0}
 
 .vf-list{display:flex;flex-direction:column;gap:6px}
 .vf-item{font-size:12.5px;line-height:1.45;padding:6px 9px;border-radius:6px;background:rgba(244,235,213,.5);
@@ -755,6 +760,18 @@ function artsGridHtml(arts){
   `;
 }
 
+// Vitkir runes (Hedge Magic Revised) are Accelerated Abilities — they advance on
+// the ART XP track (1/3/6/10…), so they render in the Arts-style grid, above Arts.
+function runesGridHtml(runes){
+  if(!runes || !runes.length) return '';
+  const cells = runes.map(r=>{
+    const info = xpInfo(r.score, r.xp, 'art');
+    const tip = `${info.spent} XP spent · ${info.toward} of ${info.band} toward score ${info.next} (${info.remaining} more)`;
+    return `<div class="art-cell rune"><span class="a-label">${esc(r.name)}</span><span class="a-val">${r.score}</span><span class="a-xp" title="${esc(tip)}">${info.spent}xp · ${info.toward}/${info.band}</span></div>`;
+  }).join('');
+  return `<div class="arts-grid">${cells}</div>`;
+}
+
 function vfListHtml(list, cls){
   if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
   return `<div class="vf-list">${list.map(v=>{
@@ -816,17 +833,38 @@ function abilitiesHtml(list){
 
 const RDT = s => (s||'').replace(/^\w/, c=>c.toUpperCase());
 
-function spellsHtml(list){
-  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
-  return list.map((sp,i)=>{
-    const txt = ruleText(sp.name, sp.description);
+// A single spell row. Hermetic spells are rollable (Technique/Form casting total);
+// Runic rune-scripts (Vitkir) show their rune(s) and are not Hermetically cast.
+function spellItemHtml(sp, i){
+  const txt = ruleText(sp.name, sp.description);
+  const lvl = sp.level!=null ? ` <span style="font-weight:400;color:var(--ink-soft);font-size:11.5px">(lvl ${esc(sp.level)})</span>` : '';
+  if((sp.tradition||'').toLowerCase()==='runic'){
+    const runes = esc(sp.rune||'') + (sp.secondaryRune?` + ${esc(sp.secondaryRune)}`:'');
     return `
+    <div class="spell-item">
+      <div class="sp-name">${esc(sp.name)}${lvl}</div>
+      <div class="sp-meta">Rune: ${runes} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}</div>
+      ${txt?`<div class="sp-desc">${mdRules(txt)}</div>`:''}
+    </div>`;
+  }
+  return `
     <div class="spell-item rollable" data-roll="spell" data-idx="${i}" title="Click to cast">
-      <div class="sp-name">${esc(sp.name)} <span style="font-weight:400;color:var(--ink-soft);font-size:11.5px">(lvl ${sp.level})</span></div>
+      <div class="sp-name">${esc(sp.name)}${lvl}</div>
       <div class="sp-meta">${esc(sp.technique)}${sp.form?'/'+esc(sp.form):''} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${sp.ritual?' · Ritual':''}</div>
       ${txt?`<div class="sp-desc">${mdRules(txt)}</div>`:''}
-    </div>
-  `;}).join('');
+    </div>`;
+}
+function spellsHtml(list){
+  if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
+  const tagged = list.map((sp,i)=>({sp,i}));
+  const runic = tagged.filter(x=>(x.sp.tradition||'').toLowerCase()==='runic');
+  // Split only when there actually are runic scripts; otherwise render a flat list.
+  if(!runic.length) return tagged.map(x=>spellItemHtml(x.sp,x.i)).join('');
+  const hermetic = tagged.filter(x=>(x.sp.tradition||'').toLowerCase()!=='runic');
+  let out = '';
+  if(hermetic.length) out += `<div class="sp-group-label">Hermetic</div>` + hermetic.map(x=>spellItemHtml(x.sp,x.i)).join('');
+  out += `<div class="sp-group-label">Runic — rune scripts</div>` + runic.map(x=>spellItemHtml(x.sp,x.i)).join('');
+  return out;
 }
 
 // Open questions "tagged" to a character = its name appears in the question's
@@ -866,8 +904,6 @@ function statblockHtml(f, fk){
     <div class="char-grid">${chars}</div>
     ${(f.combat||[]).length?`<div class="sheet-section-title">Combat</div>
     <button class="combat-open" onclick="formCombatDialog('${esc(fk||'')}')">⚔ Open combat roller</button>`:''}
-    ${f.fatigue?`<div class="sb-line"><em>Fatigue:</em> ${esc(f.fatigue)}</div>`:''}
-    ${f.wounds?`<div class="sb-line"><em>Wounds:</em> ${esc(f.wounds)}</div>`:''}
     ${powers?`<div class="sheet-section-title">Powers</div>${powers}`:''}
     ${abil?`<div class="sheet-section-title">Abilities</div>${abil}`:''}
     ${f.vis?`<div class="sb-line"><em>Vis:</em> ${esc(f.vis)}</div>`:''}
@@ -967,6 +1003,11 @@ function magusSheetHtml(m){
 
     <div class="sheet-section-title">Combat</div>
     <button class="combat-open" onclick="combatDialog(CURRENT_SHEET)">⚔ Open combat roller</button>
+
+    ${m.runes && m.runes.length ? `
+    <div class="sheet-section-title">Runes <span class="section-note">— Accelerated Abilities (Art track) · Casting Total = stress die + Sta + lowest rune</span></div>
+    ${runesGridHtml(m.runes)}
+    ` : ''}
 
     ${(!m.charType || m.charType==='magus' || Object.values(m.arts||{}).some(a=>a.score>0)) ? `
     <div class="sheet-section-title">Arts</div>

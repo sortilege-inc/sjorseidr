@@ -1709,60 +1709,6 @@
           "score": 1
         },
         {
-          "name": "Fehu",
-          "speciality": "",
-          "xp": 10,
-          "score": 1
-        },
-        {
-          "name": "Ansuz",
-          "speciality": "",
-          "xp": 10,
-          "score": 1
-        },
-        {
-          "name": "Raido",
-          "speciality": "",
-          "xp": 10,
-          "score": 1
-        },
-        {
-          "name": "Hagalaz",
-          "speciality": "",
-          "xp": 10,
-          "score": 1
-        },
-        {
-          "name": "Tiwaz",
-          "speciality": "",
-          "xp": 6,
-          "score": 1
-        },
-        {
-          "name": "Berkanan",
-          "speciality": "",
-          "xp": 6,
-          "score": 1
-        },
-        {
-          "name": "Ehwaz",
-          "speciality": "",
-          "xp": 6,
-          "score": 1
-        },
-        {
-          "name": "Laguz",
-          "speciality": "",
-          "xp": 6,
-          "score": 1
-        },
-        {
-          "name": "Othila",
-          "speciality": "",
-          "xp": 6,
-          "score": 1
-        },
-        {
           "name": "Athletics",
           "speciality": "Running",
           "xp": 5,
@@ -1845,50 +1791,296 @@
           "speciality": "Sailor Jargon",
           "xp": 5,
           "score": 1
-        },
-        {
-          "name": "Uruz",
-          "speciality": "",
-          "xp": 3,
-          "score": 0
-        },
-        {
-          "name": "Algiz",
-          "speciality": "",
-          "xp": 3,
-          "score": 0
-        },
-        {
-          "name": "Gebo",
-          "speciality": "",
-          "xp": 1,
-          "score": 0
-        },
-        {
-          "name": "Jera",
-          "speciality": "",
-          "xp": 1,
-          "score": 0
-        },
-        {
-          "name": "Ingwaz",
-          "speciality": "",
-          "xp": 1,
-          "score": 0
-        },
-        {
-          "name": "Dagaz",
-          "speciality": "",
-          "xp": 1,
-          "score": 0
         }
       ],
-      "spells": [],
+      "spells": [
+        {
+          "tradition": "Hermetic",
+          "name": "Direct the Storm",
+          "technique": "Rego",
+          "form": "Auram",
+          "level": null,
+          "range": "sight",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "tradition": "Hermetic",
+          "name": "Freeze Water in the Ship",
+          "technique": "Muto",
+          "form": "Aquam",
+          "level": null,
+          "range": "touch",
+          "duration": "conc",
+          "target": "ind",
+          "ritual": false,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Carve the Runes of Giants",
+          "rune": "Dagaz",
+          "secondaryRune": "",
+          "level": 20,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 129,
+          "description": "The vitki causes himself to grow with the sun, so that in the morning and afternoon he is +1 Size (essentially gaining the Large Virtue), and at noon he is Size +2. However, for the duration he will always return to his normal size by sunset, and remain that way until the sun rises again. During some months of the year in the extreme north, the sun never sets, and in that case the vitki may remain a giant for as long as an entire season."
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Command the Winds!",
+          "rune": "Hagalaz",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 0,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Ask for Freya's Blessing",
+          "rune": "Fehu",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 130,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Can Speak to Anyone",
+          "rune": "Ansuz",
+          "secondaryRune": "",
+          "level": 4,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 0,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Carve the Runes to Mend Flesh",
+          "rune": "Berkanan",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 128,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Speak of Friendship Among Men",
+          "rune": "Ehwaz",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 129,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, am the Master of Mounted Combat",
+          "rune": "Ehwaz",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 130,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, am Swifter than any Horse",
+          "rune": "Ehwaz",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 130,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Call Down the Wrath of the Storm",
+          "rune": "Hagalaz",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 131,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Call Upon Thor's Wrath",
+          "rune": "Hagalaz",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 131,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "My Sword Smites with Thor's Might!",
+          "rune": "Hagalaz",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 131,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Tame the Wild Waves",
+          "rune": "Laguz",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 133,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, am Thrice-Blessed",
+          "rune": "Gebo",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 130,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Strike Swift and Sure",
+          "rune": "Raido",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 135,
+          "description": ""
+        },
+        {
+          "tradition": "Runic",
+          "name": "I, Valdemar, Give my Horse Eight Legs",
+          "rune": "Ehwaz",
+          "secondaryRune": "",
+          "level": 1,
+          "range": "personal",
+          "duration": "moment",
+          "target": "ind",
+          "page": 136,
+          "description": ""
+        }
+      ],
       "personalityTraits": [],
       "reputations": [],
       "sanctum": "Laboratory (10 pts)",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "runes": [
+        {
+          "name": "Algiz",
+          "xp": 3,
+          "score": 2
+        },
+        {
+          "name": "Ansuz",
+          "xp": 10,
+          "score": 4
+        },
+        {
+          "name": "Berkanan",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Dagaz",
+          "xp": 1,
+          "score": 1
+        },
+        {
+          "name": "Ehwaz",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Fehu",
+          "xp": 10,
+          "score": 4
+        },
+        {
+          "name": "Gebo",
+          "xp": 1,
+          "score": 1
+        },
+        {
+          "name": "Hagalaz",
+          "xp": 10,
+          "score": 4
+        },
+        {
+          "name": "Ingwaz",
+          "xp": 1,
+          "score": 1
+        },
+        {
+          "name": "Jera",
+          "xp": 1,
+          "score": 1
+        },
+        {
+          "name": "Laguz",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Othila",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Raido",
+          "xp": 10,
+          "score": 4
+        },
+        {
+          "name": "Tiwaz",
+          "xp": 6,
+          "score": 3
+        },
+        {
+          "name": "Uruz",
+          "xp": 3,
+          "score": 2
+        }
+      ]
     },
     "Willhelm Stienauer": {
       "key": "wilhelm",
@@ -3288,7 +3480,7 @@
       "personalityTraits": [
         "Brave +2",
         "Tidy +3",
-        "Annoyed (+2) — trait unconfirmed (\"Annoyed???\")"
+        "Annoyed +2"
       ],
       "reputations": [],
       "sanctum": "",
@@ -3402,7 +3594,9 @@
           "wolf": {
             "label": "White Wolf — Lycanthrope form",
             "role": "Furtum's Lycanthrope transformation",
-            "size": -1,
+            "size": 0,
+            "might": 10,
+            "mightRealm": "Magic",
             "characteristics": {
               "int": 3,
               "per": 3,
