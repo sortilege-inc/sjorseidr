@@ -371,9 +371,12 @@ footer{text-align:center;margin-top:44px;font-size:12.5px;color:var(--ink-soft);
 .sheet-tab:hover{color:var(--ink)}
 .sheet-tab.on{color:var(--rust-bright);border-color:var(--rust-bright);font-weight:600}
 .sheet-tab .st-n{font-family:'EB Garamond',serif;font-style:italic;font-size:12px;color:var(--ink-soft)}
-.forms-toggle{display:flex;gap:6px;margin:4px 0 12px;flex-wrap:wrap}
-.fbtn-form{font-family:'Cinzel',serif;font-size:12px;cursor:pointer;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.4);border-radius:14px;padding:4px 12px;color:var(--ink-soft)}
-.fbtn-form.on{background:var(--rust);color:#fff;border-color:var(--rust)}
+/* Persona switcher (magus ⇄ shape-shift forms) — buttons ride the top-right of the header */
+.persona-switch{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;align-self:flex-start;max-width:52%}
+.persona-btn{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.02em;cursor:pointer;background:rgba(244,235,213,.55);border:1px solid rgba(120,90,40,.4);border-radius:14px;padding:4px 11px;color:var(--ink-soft);white-space:nowrap}
+.persona-btn:hover{filter:brightness(1.04)}
+.persona-btn.on{background:var(--rust);color:#fff;border-color:var(--rust)}
+.persona-body[hidden]{display:none}
 .sb-combat,.sb-line{font-size:13px;color:var(--ink);margin:3px 0}
 .sb-line em{color:var(--ink-soft);font-style:italic}
 .sb-power{font-size:12.5px;color:var(--ink);margin:3px 0;line-height:1.45}
@@ -539,6 +542,7 @@ function selectChar(key){
   if(!found){ $('#sheet').innerHTML = `<div class="sheet-empty" style="padding:24px">No sheet for “${esc(key)}”.</div>`; return; }
   CUR_ID = key;
   CURRENT_SHEET = found.sheet;
+  CURRENT_PERSONA = 'base';
   history.replaceState(null, '', '?char='+encodeURIComponent(key));
   $('#charPick').value = key;
   $('#sheet').innerHTML = magusSheetHtml(found.sheet);
@@ -869,13 +873,6 @@ function statblockHtml(f, fk){
     ${f.notes?`<div class="sb-note">${esc(f.notes)}</div>`:''}
   `;
 }
-function animalFormsHtml(af){
-  if(!af||!af.order||!af.forms) return '';
-  const btns=af.order.map((k,i)=>`<button class="fbtn-form ${i===0?'on':''}" data-form="${i}">${esc(af.forms[k].label)}</button>`).join('');
-  const blocks=af.order.map((k,i)=>`<div class="form-block" data-form="${i}"${i===0?'':' hidden'}>${statblockHtml(af.forms[k], k)}</div>`).join('');
-  return `<div class="forms-toggle">${btns}</div>${blocks}`;
-}
-
 function discoveriesHtml(list){
   if(!list || !list.length) return `<div class="sheet-empty">— none recorded —</div>`;
   return list.map(d=>`
@@ -916,15 +913,19 @@ function magusSheetHtml(m){
   if(m.playedBy) extras.push(`<div><em>Played by:</em> ${esc(m.playedBy)}</div>`);
   if(m.familiar) extras.push(`<div><em>Familiar:</em> ${esc(m.familiar)}</div>`);
 
-  return `
-    <div class="sheet-header">
-      ${portrait}
-      <div>
-        <div class="sheet-name">${esc(m.name)}</div>
-        <p class="sheet-sub">${esc(sub)}</p>
-        ${m.shortDescription ? `<p class="sheet-tagline">${esc(m.shortDescription)}</p>` : ''}
-      </div>
-    </div>
+  // Shape-shift forms (heartbeast, lycanthrope, magical-animal companion) become
+  // top-level personas: buttons at the top-right swap the whole body in place of
+  // the magus's own Characteristics/Arts/Combat/tabs, and back again.
+  const af = m.animalForms;
+  const hasForms = !!(af && af.forms && af.order && af.order.length);
+  const baseLabel = esc((m.name||'').split(/\s+/)[0] || m.name || '—');
+  const personaSwitch = hasForms ? `
+    <div class="persona-switch">
+      <button class="persona-btn on" data-persona="base" title="${esc(m.name)}">${baseLabel}</button>
+      ${af.order.map((k,i)=>`<button class="persona-btn" data-persona="${i}" data-fk="${esc(k)}">${esc(af.forms[k].label)}</button>`).join('')}
+    </div>` : '';
+
+  const baseBody = `
     <div class="sheet-meta">${metaChips}</div>
     ${wounds}
     ${extras.length?`<p class="sb-note" style="font-size:12.5px;margin:8px 0">${extras.join('<br>')}</p>`:''}
@@ -964,7 +965,6 @@ function magusSheetHtml(m){
       <button class="sheet-tab" data-stab="virtues">Virtues <span class="st-n">${(m.virtues||[]).length}</span></button>
       <button class="sheet-tab" data-stab="flaws">Flaws <span class="st-n">${(m.flaws||[]).length}</span></button>
       <button class="sheet-tab" data-stab="spells">Spells <span class="st-n">${(m.spells||[]).length}</span></button>
-      ${m.animalForms ? `<button class="sheet-tab" data-stab="forms">${esc(m.animalForms.tabLabel||'Forms')}</button>` : ''}
       ${m.discoveries && m.discoveries.length ? `<button class="sheet-tab" data-stab="discoveries">Discoveries <span class="st-n">${m.discoveries.length}</span></button>` : ''}
       ${m.reputations && m.reputations.length ? `<button class="sheet-tab" data-stab="reputations">Reputations <span class="st-n">${m.reputations.length}</span></button>` : ''}
     </div>
@@ -972,15 +972,38 @@ function magusSheetHtml(m){
     <div class="sheet-tp" data-stab="virtues">${vfListHtml(m.virtues,'virtue')}</div>
     <div class="sheet-tp" data-stab="flaws">${vfListHtml(m.flaws,'flaw')}</div>
     <div class="sheet-tp" data-stab="spells">${spellsHtml(m.spells)}</div>
-    ${m.animalForms ? `<div class="sheet-tp" data-stab="forms">${animalFormsHtml(m.animalForms)}</div>` : ''}
     ${m.discoveries && m.discoveries.length ? `<div class="sheet-tp" data-stab="discoveries">${discoveriesHtml(m.discoveries)}</div>` : ''}
     ${m.reputations && m.reputations.length ? `<div class="sheet-tp" data-stab="reputations"><div class="vf-list">${m.reputations.map(r=>`<div class="vf-item"><span class="vf-name">${esc(r.name)}</span>${r.description?`<span class="vf-desc">${esc(r.description)}</span>`:''}</div>`).join('')}</div></div>` : ''}
 
     <p class="sheet-source">Pulled from the live Foundry sheet — treat as a snapshot, not a live view. Some scores may still reflect character-creation defaults rather than in-play advancement.</p>
   `;
+
+  const formBodies = hasForms ? af.order.map((k,i)=>{
+    const f = af.forms[k];
+    const roller = (f.combat||[]).length
+      ? `<div class="sheet-section-title">Combat roller</div>
+         <button class="combat-open" onclick="formCombatDialog('${esc(k)}')">⚔ Open combat roller — ${esc(f.label)}</button>`
+      : '';
+    return `<div class="persona-body" data-persona="${i}" hidden>${statblockHtml(f, k)}${roller}</div>`;
+  }).join('') : '';
+
+  return `
+    <div class="sheet-header">
+      ${portrait}
+      <div class="sheet-headmain">
+        <div class="sheet-name">${esc(m.name)}</div>
+        <p class="sheet-sub">${esc(sub)}</p>
+        ${m.shortDescription ? `<p class="sheet-tagline">${esc(m.shortDescription)}</p>` : ''}
+      </div>
+      ${personaSwitch}
+    </div>
+    <div class="persona-body" data-persona="base">${baseBody}</div>
+    ${formBodies}
+  `;
 }
 
 let CURRENT_SHEET = null;
+let CURRENT_PERSONA = 'base';   // 'base' (the magus) or an animalForms index
 
 function openSidebar(name){
   const found = findCharacterSheet(name);
@@ -1690,6 +1713,116 @@ function showCombat({title, total, botched, breakdown, outcome, text}){
   };
 }
 
+// ── Combat roller for a shape-shift form ──
+// A form's statblock carries baked combat totals (Init/Atk/Def/Dam) and a flat
+// Soak, so the roller just adds a stress die rather than rebuilding from
+// Characteristics + weapon the way the magus roller does.
+function formCombatDerived(){
+  const ctx = ROLL_CTX.formCombat; if(!ctx) return null;
+  const f = ctx.form;
+  const combat = f.combat || [];
+  const sel = combat.length ? (combat[parseInt(($('#fcAtk')||{}).value,10)||0] || combat[0]) : null;
+  const wound = parseInt(($('#fcWound')||{}).value,10)||0;
+  return {
+    f, sel, wound,
+    init: (sel?(sel.init||0):0) - wound,
+    atk:  sel ? (sel.attack||0) - wound : null,
+    def:  (sel?(sel.defense||0):0) - wound,
+    damBase: sel ? (sel.damage||0) : null,
+    soak: f.soak!=null ? f.soak : null
+  };
+}
+function updateFormCombatSummary(){
+  const el=$('#fcSummary'); if(!el) return;
+  const d=formCombatDerived(); if(!d) return;
+  el.innerHTML =
+    `<span>Init ${signed(d.init)}</span>`
+    + (d.sel?`<span>Atk ${signed(d.atk)}</span><span>Def ${signed(d.def)}</span><span>Dam ${signed(d.damBase)} <span class="rd-hint">+adv</span></span>`:`<span>Def ${signed(d.def)}</span>`)
+    + (d.soak!=null?`<span>Soak ${signed(d.soak)}</span>`:'');
+}
+function formCombatDialog(fk){
+  const af = CURRENT_SHEET && CURRENT_SHEET.animalForms;
+  const f = af && af.forms && af.forms[fk];
+  if(!f) return;
+  const combat = f.combat || [];
+  ROLL_CTX = {formCombat:{form:f, fk}};
+  const atkOpts = combat.map((c,i)=>`<option value="${i}">${esc(c.name)}</option>`).join('');
+  $('#rollDialog').innerHTML = `
+    <button class="rd-close" onclick="closeRollModal()">✕</button>
+    <h3>⚔ Combat — ${esc(f.label||CURRENT_SHEET.name)}</h3>
+    <p class="rd-sub">The form's totals are baked into its statblock; each roll adds a stress die.</p>
+    ${combat.length>1?`<div class="rd-row"><label>Attack</label><select id="fcAtk">${atkOpts}</select></div>`:(combat.length?`<input type="hidden" id="fcAtk" value="0">`:'')}
+    <div class="rd-row"><label>Wound penalty <span class="rd-hint">(as positive)</span></label><input type="number" id="fcWound" value="0" min="0" step="1"></div>
+    <div class="rd-row"><label>Botch dice</label><input type="number" id="fcBotch" value="1" min="0" step="1"></div>
+    <div id="fcSummary" class="cb-summary"></div>
+    <div class="rd-buttons">
+      <button class="rd-btn simple" onclick="formCombatRoll('init')">Initiative</button>
+      ${combat.length?`<button class="rd-btn" onclick="formCombatRoll('attack')">Attack</button>`:''}
+      <button class="rd-btn simple" onclick="formCombatRoll('defense')">Defense</button>
+    </div>
+    ${combat.length?`
+    <div class="rd-section-label" style="margin-top:14px">Attack resolution (optional — fill before rolling Attack)</div>
+    <div class="rd-row"><label>Target Defense Total</label><input type="number" id="fcTgtDef" placeholder="—" step="1" style="width:62px"></div>
+    <div class="rd-row"><label>Target Soak Total</label><input type="number" id="fcTgtSoak" placeholder="—" step="1" style="width:62px"></div>
+    <div class="rd-row"><label>Target Size</label><input type="number" id="fcTgtSize" value="0" step="1" style="width:62px"></div>`:''}
+    <div class="rd-result" id="rdResult"></div>
+  `;
+  updateFormCombatSummary();
+  openRollModal();
+}
+function formCombatRoll(kind){
+  const d = formCombatDerived(); if(!d) return;
+  const botchDice = parseInt(($('#fcBotch')||{}).value,10)||0;
+  const woundBit = d.wound?` · wound −${d.wound}`:'';
+  const label = esc(d.f.label||'');
+  const nm = d.sel?esc(d.sel.name):'';
+
+  if(kind==='init'){
+    const die = rollStress(botchDice);
+    const total = die.botch ? Math.min(0,d.init) : d.init + die.value;
+    return showCombat({title:'Initiative', total, botched:die.botch,
+      breakdown:`${label} — Init ${signed(d.sel?d.sel.init:0)}${woundBit} · ${die.detail}`});
+  }
+  if(kind==='defense'){
+    const die = rollStress(botchDice);
+    const total = die.botch ? Math.min(0,d.def) : d.def + die.value;
+    return showCombat({title:'Defense', total, botched:die.botch,
+      breakdown:`${label} — Def ${signed(d.sel?d.sel.defense:0)}${woundBit} · ${die.detail}`,
+      outcome: die.botch ? {cls:'bad', text:'✗ Botch on defense — very dangerous; the attacker gains a large advantage.'} : null});
+  }
+  // attack
+  if(!d.sel) return;
+  const die = rollStress(botchDice);
+  const atk = die.botch ? Math.min(0,d.atk) : d.atk + die.value;
+  const breakdown = `${label} — ${nm} Atk ${signed(d.sel.attack||0)}${woundBit} · ${die.detail}`;
+  const res = {title:'Attack', total:atk, botched:die.botch, breakdown};
+  const tdRaw = ($('#fcTgtDef')||{}).value;
+  if(die.botch){
+    res.outcome = {cls:'bad', text:'✗ Botch — a combat botch is dangerous (dropped weapon, lost footing, an opening for the foe).'};
+  } else if(tdRaw!==''){
+    const tgtDef = parseInt(tdRaw,10)||0;
+    const aa = atk - tgtDef;
+    if(aa <= 0){
+      res.outcome = {cls:'bad', text:`✗ Miss — Attack ${atk} vs Defense ${tgtDef} (advantage ${signed(aa)}; hit needs advantage &gt; 0).`};
+    } else {
+      const damTotal = d.damBase + aa;
+      let txt = `✓ Hit — Attack Advantage +${aa}. Damage Total <b>${damTotal}</b> (${nm} ${signed(d.damBase)} · advantage +${aa})`;
+      const tsRaw = ($('#fcTgtSoak')||{}).value;
+      if(tsRaw!==''){
+        const tgtSoak = parseInt(tsRaw,10)||0;
+        const tSize = parseInt(($('#fcTgtSize')||{}).value,10)||0;
+        const through = damTotal - tgtSoak;
+        const w = woundLevel(through, tSize);
+        txt += `. Past Soak ${tgtSoak}: ${Math.max(0,through)} → Size ${signed(tSize)} → <b>${w.level}</b>${w.note?` (${w.note})`:''}`;
+      } else {
+        txt += ` — enter Target Soak for the wound.`;
+      }
+      res.outcome = {cls:'good', text:txt};
+    }
+  }
+  showCombat(res);
+}
+
 // ── Trackers, roll log, export/import (per character, in localStorage) ──
 let STATE = {}, LOG = [], LAST_RESULT = null;
 const stKey  = id => 'sjor_sheet_' + id;
@@ -1811,13 +1944,12 @@ $('#sheet').addEventListener('click', e=>{
     $$('#sheet .sheet-tp').forEach(p=>p.classList.toggle('on', p.dataset.stab===key));
     return;
   }
-  const fbtn = e.target.closest('.fbtn-form');
-  if(fbtn){
-    const idx = fbtn.dataset.form, tp = fbtn.closest('.sheet-tp');
-    if(tp){
-      tp.querySelectorAll('.fbtn-form').forEach(b=>b.classList.toggle('on', b===fbtn));
-      tp.querySelectorAll('.form-block').forEach(b=>{ b.hidden = (b.dataset.form!==idx); });
-    }
+  const pbtn = e.target.closest('.persona-btn');
+  if(pbtn){
+    const key = pbtn.dataset.persona;
+    $$('#sheet .persona-btn').forEach(b=>b.classList.toggle('on', b===pbtn));
+    $$('#sheet .persona-body').forEach(b=>{ b.hidden = (b.dataset.persona!==key); });
+    CURRENT_PERSONA = key;
     return;
   }
   const row = e.target.closest('.rollable');
@@ -1850,9 +1982,11 @@ $('#rollDialog').addEventListener('change', e=>{
       if(!on) wrap.querySelectorAll('input').forEach(i=>{ i.checked=false; }); }
   }
   if(e.target.id && e.target.id.startsWith('cb')) updateCombatSummary();
+  if(e.target.id && e.target.id.startsWith('fc')) updateFormCombatSummary();
 });
 $('#rollDialog').addEventListener('input', e=>{
   if(e.target.id && e.target.id.startsWith('cb')) updateCombatSummary();
+  if(e.target.id && e.target.id.startsWith('fc')) updateFormCombatSummary();
 });
 
 load();
