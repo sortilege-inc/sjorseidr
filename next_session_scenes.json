@@ -1,7 +1,7 @@
 {
  "meta": {
   "title": "Next Session — Candidate Scenes",
-  "subtitle": "The GM's working slate for the 22nd (into Fall 1224), built on three spines: Wilhelm's delivery run to Scarem Montem, Dagmar's push into the regiones gated behind Tormente, and Confluensis turning the screws on the home front. The Carnac material is now backed by a full five-level site brief (see meta.source_briefs) — scenes s8–s10 have been rewritten against it and s15–s18 added for the deeper levels. Forward-looking only — beats played in the 2026-08-08 session have moved to the Chronicle and the Open Questions. Derived from the Open Questions prep hub (q027, t078).",
+  "subtitle": "The GM's working slate for the 22nd (into Fall 1224), built on three spines: Wilhelm's delivery run to Scarem Montem, Dagmar's push into the regiones gated behind Tormente, and Confluensis turning the screws on the home front. The Carnac material is now backed by a full five-level site brief (see meta.source_briefs) — the umbrella ladder frame now lives in the Open Questions (t088). Forward-looking only — beats played in the 2026-08-08 session have moved to the Chronicle and the Open Questions. Derived from the Open Questions prep hub (q027, t078).",
   "as_of": "End of Summer 1224",
   "source": "open_questions.json → q027 \"What are we preparing for next session?\" + t078 (Confluensis's reprisal)",
   "schema_version": 2,
@@ -37,11 +37,12 @@
    "player_facing": "Dagmar's established method is premonitions plus astrology, so the date is his to discover in character. Aldebaran (a Behenian fixed star) is the anchor the conjunction points at; the Hyades are the classical rainy stars, which matches the covenant's maritime regio grammar.",
    "optional": "Halley's Comet passed in 1222 — usable in retrospect as what woke the lower levels and produced the 1224 mirror-flash."
   },
-  "scene_count": 9,
+  "scene_count": 6,
   "corrections": [
    "2026-08-19 — The Diedne Garden is on the SOUTH COAST OF THE ENGLISH CHANNEL, not within the Ránargarðr holding on the Isle of Man. Earlier s13 text asserting otherwise has been struck.",
    "2026-08-19 — Scarem Montem left the 1223 Tribunal with the Latin manuscript of Wilhelm's thesis and has held it for roughly a year by the time of the delivery. See s6.",
-   "2026-08-19 — Valdemar's Isle-of-Man site carries a MAGIC AURA OF 3 (confirmed). Recorded in s13."
+   "2026-08-19 — Valdemar's Isle-of-Man site carries a MAGIC AURA OF 3 (confirmed). Recorded in s13.",
+   "2026-10-03 — The Carnac ladder umbrella frame (ex scene s10) was folded into the Open Questions as t088 and removed from the slate."
   ]
  },
  "scenes": [
@@ -66,32 +67,6 @@
     "t037",
     "t025"
    ]
-  },
-  {
-   "id": "s10",
-   "title": "The Carnac ladder — five levels, and the inversion",
-   "seasons": [
-    "Fall 1224"
-   ],
-   "magi": [
-    "Dagmar",
-    "Valdemar"
-   ],
-   "npcs": [
-    "Tormente"
-   ],
-   "thread": "The dragon errand / the Carnac regio",
-   "status": "Developed",
-   "hook": "Umbrella frame for the whole Carnac arc. Five nested Magic levels under the drowned alignments. The party will enter believing the goal is to reach level five. By the time they understand the building, the goal is to make sure it never opens.",
-   "detail": "UPDATE (owner review 2026-09-19): Levels 1-4 have been explored (Fall 1224) — L1 the cave (Tormente), L2 the alignments, L3 the murfolk colony (fought through, not negotiated), L4 the empty throne room reached; L5 remains sealed until the 4-5 March 1226 conjunction (the party will return; Llewellyn is in situ). The scene-17 throne-room secret has moved to thread t083. The frame below stands.\n\nTHE LADDER (Regio Sight Roll: Per + appropriate Ability + stress die vs EF 5 + 2× aura difference; Second Sight, Magic Sensitivity, or the InVi lvl-3 boundary guideline — Vision target gives the route):\n  L1 The Cave — aura 7 — EF 7 — Tormente resident, tidal.\n  L2 The Alignments — aura 8 — EF 9 — the sightline apparatus.\n  L3 The Colony — aura 9 — EF 7 — murfolk; social gate.\n  L4 The Throne Room — aura 10 — empty, waiting.\n  L5 The Road — 10+ — not a room; conjunction only.\n\nAuras are built from RoP:Magic tethers, not asserted: caves/water/astrological alignment on the natural side (cap 5), the megalithic monument at 1 per century of active use on the preternatural side (comfortably capped at 5 by a millennium of murfolk worship). Level 1 is the ONLY level where a living creature does any of the work.\n\nTHE WALL: the mechanical wall and the social wall are the same wall. Level 3 is the only floor from which level 4 can be reached, and the murfolk own it.\n\nNON-LINEARITY: the lock is operated from level 2 but acts on level 5, so the party must fight up, learn what the lock is, and come back DOWN to set it — crossing level 3 twice, with the murfolk's disposition possibly changed in between.\n\nREACH ON THE 22nd: levels 1 and 2 are plausibly in play. Level 3 is the pacing wall and probably the session's end. Levels 4–5 are staged (s17, s18) and should stay out of reach.\n\nOFFSTAGE BACKSTORY (do not resolve here): c. 225 AD Jörmungandr shifted position; the fae were displaced west into Atlantic waters; the merfolk were squeezed out of the sea and retreated UP into the already-ancient Carnac stack. None of the three tiers knows about the tier above it. The correction is a millennium away and out at sea.",
-   "refs": [
-    "t025",
-    "t073",
-    "t018",
-    "t070",
-    "t068"
-   ],
-   "brief_section": "§1–§4 — pitch, cascade, astronomy, aura structure"
   },
   {
    "id": "s11",
