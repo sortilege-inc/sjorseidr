@@ -8761,7 +8761,8 @@
     },
     "Capricorn": {
       "name": "Capricorn",
-      "foundryName": null,
+      "foundryName": "Capricorn",
+      "foundryUuid": "Actor.eAFuSwQtYL70W0OS",
       "charType": "entity",
       "portrait": null,
       "house": "gen",
