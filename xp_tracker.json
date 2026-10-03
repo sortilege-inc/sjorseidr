@@ -3,8 +3,8 @@
   "title": "XP & Season Activity Tracker",
   "schema_version": 1,
   "note": "Per-member, per-season log of covenant activity and XP. Filter by type (magi / companions / grogs) and by current ship. Cells are empty until filled in a follow-up pass. For magi, a season also records whether the activity was a covenant service; every member records whether a season activity was undertaken and any XP (type + amount).",
-  "as_of": "Winter 1224-25",
-  "foundryConfirmed": "2026-09-19",
+  "as_of": "Summer 1226",
+  "foundryConfirmed": "2026-10-03",
   "reviewedThroughSeason": "1224-winter"
  },
  "ships": {
@@ -154,6 +154,46 @@
    "id": "1224-winter",
    "label": "❄️ Winter 1224-25",
    "year": 1224
+  },
+  {
+   "id": "1225-spring",
+   "label": "🌼 Spring 1225",
+   "year": 1225
+  },
+  {
+   "id": "1225-summer",
+   "label": "☀️ Summer 1225",
+   "year": 1225
+  },
+  {
+   "id": "1225-fall",
+   "label": "🍂 Fall 1225",
+   "year": 1225
+  },
+  {
+   "id": "1225-winter",
+   "label": "❄️ Winter 1225-26",
+   "year": 1225
+  },
+  {
+   "id": "1226-spring",
+   "label": "🌼 Spring 1226",
+   "year": 1226
+  },
+  {
+   "id": "1226-summer",
+   "label": "☀️ Summer 1226",
+   "year": 1226
+  },
+  {
+   "id": "1226-fall",
+   "label": "🍂 Fall 1226",
+   "year": 1226
+  },
+  {
+   "id": "1226-winter",
+   "label": "❄️ Winter 1226-27",
+   "year": 1226
   }
  ],
  "members": [
