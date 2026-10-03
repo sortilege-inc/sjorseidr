@@ -52,6 +52,11 @@
    "name": "Covenfolk",
    "aka": "",
    "status": "Covenant staff (ashore)"
+  },
+  "no-ship": {
+   "name": "No ship",
+   "aka": "",
+   "status": "Unassigned"
   }
  },
  "seasons": [
@@ -549,6 +554,36 @@
    "house": "Merinita",
    "firstYear": 1219,
    "lastYear": 1219
+  },
+  {
+   "id": "Furtum Bonisagus",
+   "name": "Furtum Bonisagus",
+   "type": "magus",
+   "role": "Magus (Bonisagus)",
+   "ship": "no-ship",
+   "house": "Bonisagus",
+   "firstYear": 1226,
+   "firstSeason": "1226-summer"
+  },
+  {
+   "id": "Sama",
+   "name": "Sama",
+   "type": "companion",
+   "role": "Companion",
+   "ship": "no-ship",
+   "house": "",
+   "firstYear": 1226,
+   "firstSeason": "1226-summer"
+  },
+  {
+   "id": "Philippe",
+   "name": "Philippe",
+   "type": "grog",
+   "role": "Grog",
+   "ship": "scholars-wake",
+   "house": "",
+   "firstYear": 1226,
+   "firstSeason": "1226-summer"
   }
  ],
  "entries": {
