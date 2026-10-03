@@ -513,6 +513,17 @@
    "raised_in": "Storyteller notes, 2026-09-30",
    "raised_event": null,
    "resolution": ""
+  },
+  {
+   "id": "tl028",
+   "type": "Tool",
+   "category": "System / Tooling",
+   "title": "Foundry follow-ups for Sama, Philippe, and the Shadow Owl / White Wolf actors",
+   "context": "Furtum’s Foundry actor has been fixed by the GM. The rest of the Foundry push (2026-10-03, via the REST relay; all five actors are in the “No Ship” folder — move as needed) has these loose ends to review:\n\nSAMA (companion): the “Sense Holiness and Unholiness” ability has no arm5e system key, so it shows on the sheet but won’t auto-compute or roll — re-pick it from the system’s ability list. Five V/F were imported with verbatim text but a generic category (the ability + virtue “Sense Holiness and Unholiness”, and flaws Outsider (Moor), Pious, Faerie Friend) — recategorize on the sheet.\n\nPHILIPPE (grog): Confidence set to 0/0 (Tough Guy template has none); the other covenant grogs show 1/3 — adjust if desired. Otherwise complete (abilities, Axe + Heater Shield, full leather scale).\n\nSHADOW OWL & WHITE WOLF (new npc/“entity” Magic-Might creatures): combat is a GM draft — each natural-weapon item carries the statblock’s FINAL totals (Owl: Init +4/Atk +8/Def +10/Dam +1; Wolf: Bite Init +2/Atk +9/Def +8/Dam +4), but arm5e computes a weapon total as Characteristic + Ability + weapon, so the sheet’s figure will differ — reconcile by hand. The Owl has no Brawl ability, so its attack won’t auto-roll. The Owl’s Cunning is stored in the Int slot (arm5e has no separate Cunning field). The Owl’s four powers are lightweight ‘power’ items (Might cost only; Penetration/active effects not modeled). Both carry appearance/vis/personality/notes in the biography. The White Wolf is modeled as a standalone creature though narratively it is Furtum’s lycanthrope form.\n\nActor UUIDs: Sama DSs8meB7K7tLyz8U; Philippe rXGWVLdLnjqoOH8z; Shadow Owl 9qdV1J2mnnVyAlp2; White Wolf RaBOg5EmkLPG328L.",
+   "raised_in": "Foundry relay push review, 2026-10-03",
+   "raised_event": null,
+   "status": "Open",
+   "resolution": ""
   }
  ],
  "gmReference": {
