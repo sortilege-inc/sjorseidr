@@ -303,25 +303,6 @@
   "body_text": "On the evening of 4–5 March 1226, Jupiter and Saturn draw within ~2.1 arcminutes in Aquarius — the closest observable great conjunction between 1226 and 2020. For one night it makes the deepest (level-5) crossing of the Carnac Regio survivable."
  },
  {
-  "id": "p111",
-  "sort_iso": "1225-04-15T12:00",
-  "timeline": "🌼 Spring 1225",
-  "date": "1225",
-  "title": "1225 harvest: The Kraken's Egg — Ka'wa'ill (Animal)",
-  "cast": [
-   "Ka'wa'ill"
-  ],
-  "body_text": "Declared 1225 harvest: Ka'wa'ill harvests the Kraken's Egg (Animal, ~5 pawns) in Spring 1225.",
-  "notes": "Declared 1225 harvest, not yet played. Spring source (Animal, ~5 pawns/yr).",
-  "file": "",
-  "session": "2026-09-19",
-  "scene": "1225 — vis-harvest roster",
-  "icon": "🍇",
-  "activity_type": "Vis harvest",
-  "status": "Proposed",
-  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes; split from the former combined roster (p107)."
- },
- {
   "id": "p112",
   "sort_iso": "1225-04-16T12:00",
   "timeline": "🌼 Spring 1225",

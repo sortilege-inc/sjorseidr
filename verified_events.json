@@ -3351,10 +3351,27 @@
   "timeline": "❄️ Winter 1224-25",
   "date": "Winter 1224-25",
   "sort_iso": "1224-12-24T12:00",
-  "notes": "Vis swap: covenant Animal -6, Vim +6 (via Redcaps). Stock not yet adjusted in the ledger — pending verification.",
+  "notes": "Vis swap: covenant Animal -6, Vim +6 (via Redcaps). Applied to the covenant's vis stock: The Kraken's Egg (Animal) 30 → 24; Via Redcap (Vim) 8 → 14.",
   "season_activity": false,
   "status": "Historical",
   "body_text": "Éogan trades the covenant's Redcaps **6 pawns of Animal vis** for **6 pawns of Vim**.",
   "body_html": "<p>Éogan trades the covenant&#39;s Redcaps <strong>6 pawns of Animal vis</strong> for <strong>6 pawns of Vim</strong>.</p>"
+ },
+ {
+  "file": "",
+  "title": "1225 harvest: The Kraken's Egg — Ka'wa'ill (Animal)",
+  "icon": "🥚",
+  "activity_type": "Vis harvest",
+  "cast": [
+   "Ka'wa'ill"
+  ],
+  "timeline": "🌼 Spring 1225",
+  "date": "Spring 1225",
+  "sort_iso": "1225-04-15T12:00",
+  "notes": "5 Animal vis (the source's standard yield). Added to the covenant's vis stock: The Kraken's Egg 25 → 30.",
+  "season_activity": true,
+  "status": "Historical",
+  "body_text": "Ka'wa'ill makes the annual run for the Kraken's Egg, retrieved from the sea between Norway and Scotland when the kraken surfaces and lays: **5 pawns of Animal vis**.",
+  "body_html": "<p>Ka&#39;wa&#39;ill makes the annual run for the Kraken&#39;s Egg, retrieved from the sea between Norway and Scotland when the kraken surfaces and lays: <strong>5 pawns of Animal vis</strong>.</p>"
  }
 ]

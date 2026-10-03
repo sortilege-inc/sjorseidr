@@ -6613,7 +6613,7 @@
   {
    "id": "current",
    "label": "Current",
-   "sub": "Summer 1224 (live)",
+   "sub": "Spring 1225 (live)",
    "cutoff": "9999",
    "populated": true,
    "state": {
@@ -7713,7 +7713,7 @@
       },
       {
        "name": "Via Redcap",
-       "q": 8,
+       "q": 14,
        "art": "vi"
       },
       {
@@ -7723,7 +7723,7 @@
       },
       {
        "name": "The Kraken's Egg",
-       "q": 25,
+       "q": 24,
        "art": "an"
       },
       {
@@ -7762,7 +7762,15 @@
        "art": "aq"
       }
      ],
-     "sources": []
+     "sources": [
+      {
+       "name": "The Kraken's Egg",
+       "art": "an",
+       "expected": 5,
+       "received": 5,
+       "note": "Ka'wa'ill, Spring 1225 (standard yield)"
+      }
+     ]
     },
     "possessions": [],
     "virtues": [],
