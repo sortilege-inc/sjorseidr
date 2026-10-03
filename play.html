@@ -224,6 +224,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .spell-item .sp-name{font-weight:600;font-size:13px;color:var(--ink)}
 .spell-item.rollable:hover .sp-name::before{content:'✨ ';font-size:11px}
 .spell-item .sp-meta{font-size:11px;color:var(--ink-soft);margin:1px 0 3px}
+.spell-item .sp-mastery{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.02em;color:var(--teal);margin:0 0 3px}
 .spell-item .sp-desc{font-size:12px;color:var(--ink-soft);line-height:1.4}
 
 /* ── Dice-roll modal ─────────────────────────────────────── */
@@ -866,6 +867,7 @@ function spellItemHtml(sp, i){
     <div class="spell-item rollable" data-roll="spell" data-idx="${i}" title="Click to cast">
       <div class="sp-name">${esc(sp.name)}${lvl}</div>
       <div class="sp-meta">${esc(sp.technique)}${sp.form?'/'+esc(sp.form):''} · ${RDT(sp.range)}/${RDT(sp.duration)}/${RDT(sp.target)}${sp.ritual?' · Ritual':''}</div>
+      ${sp.masteryScore?`<div class="sp-mastery">Mastery ${esc(sp.masteryScore)}${sp.masteryAbilities?` · ${esc(sp.masteryAbilities)}`:''}</div>`:''}
       ${txt?`<div class="sp-desc">${mdRules(txt)}</div>`:''}
     </div>`;
 }

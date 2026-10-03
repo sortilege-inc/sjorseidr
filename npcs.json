@@ -10961,7 +10961,7 @@
       "sigil": null,
       "born": 1191,
       "age": 35,
-      "apparentAge": null,
+      "apparentAge": 21,
       "characteristics": {
         "int": 3,
         "per": 1,
@@ -11278,6 +11278,188 @@
       "activeWounds": null,
       "shortDescription": "Sidhe-blooded Arabic scribe and teacher aboard the Hound of Cassel — a pious, non-combatant illuminator and polyglot (Strong Faerie Blood; amber eyes, no pupils).",
       "biography": "Player: (unlisted). Companion. Arabic-born (b. 1191), Christian, a Scribe by profession; small of frame (Size -1). Strong Faerie Blood of the Sidhe — amber eyes without pupils, Second Sight, natural longevity — reinforced by an Unaging virtue and, per the sheet, a longevity ritual ('L21'). Devout to the point of a Major Pious flaw, and an Outsider (Moor) wherever the Latin west holds sway. Assigned to the Hound of Cassel. OPEN ITEMS: no player name on the sheet; characteristics run ~2 points over a 7 + Improved-Characteristics(3) budget (Great Communication covers Com's 4th point) — confirm the Improved Characteristics count; clarify what 'L21' denotes (who cast the longevity ritual and its Lab Total) given she already has Unaging + Faerie-Blood longevity."
+    },
+    "Philippe": {
+      "name": "Philippe",
+      "foundryName": null,
+      "charType": "grog",
+      "portrait": null,
+      "house": "",
+      "parens": null,
+      "sigil": null,
+      "born": 1207,
+      "age": 19,
+      "apparentAge": 19,
+      "characteristics": {
+        "int": -1,
+        "per": 0,
+        "str": 1,
+        "sta": 3,
+        "pre": 1,
+        "com": -1,
+        "dex": 0,
+        "qik": 1
+      },
+      "size": 1,
+      "confidence": {
+        "label": "Confidence",
+        "score": 0,
+        "points": 0
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {},
+      "virtues": [
+        {
+          "name": "Covenfolk",
+          "impact": "free",
+          "description": "You are a member of the covenant \n\nstaff, and may have lived there all your life. You are supported by the covenant, and so your standard of living is determined by the covenant’s resources rather than your own. You may not take the Wealthy Major Virtue or the Poor Major Flaw."
+        },
+        {
+          "name": "Large",
+          "impact": "minor",
+          "description": "Your Size is +1 instead of 0, so you are between six and seven feet tall. This means that the severity of wounds you take increases in six point intervals rather than five point intervals. (See page 171). You cannot take both this Virtue and Giant Blood, Small Frame, or Dwarf."
+        },
+        {
+          "name": "Tough",
+          "impact": "minor",
+          "description": "You can take physical punishment better than most people. You get a +3 bonus on your Soak score."
+        },
+        {
+          "name": "Warrior",
+          "impact": "minor",
+          "description": "You have been trained to fight, and may have spent some time campaigning, perhaps on one of the Crusades. You may acquire Martial Abilities during character creation, and gain an additional 50 experience points which must be spent on Martial Abilities."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Overconfident",
+          "impact": "minor",
+          "description": "You have a completely unshakable faith in your own abilities. You believe that you will always perform at, or slightly above, the peak of your abilities, and cannot imagine failure. If you actually botch, you come up with some rationalization as to what “really” happened.",
+          "note": "thinks he can’t really be hurt"
+        },
+        {
+          "name": "No Sense of Direction",
+          "impact": "minor",
+          "description": "You are completely unable to follow directions. North, south, east, and west have no meaning to you, and you often confuse right and left. You frequently get lost while traveling unfamiliar paths by yourself, or with others following your lead, and often have to reason your way home or to your destination from first principles. This Flaw is incompatible with the Well-Traveled Virtue."
+        },
+        {
+          "name": "Weakness",
+          "impact": "minor",
+          "description": "You have a soft spot for some sort of object or person. In the face of this, all else is unimportant: promises are forgotten, duties neglected, and common sense cast to the winds. Examples include poets and storytellers, food, flattery, or a pretty face.",
+          "note": "drinking"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Area Lore",
+          "speciality": "brewers",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Athletics",
+          "speciality": "running",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Awareness",
+          "speciality": "in combat",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Bows",
+          "speciality": "shortbow",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Brawl",
+          "speciality": "grappling",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Carouse",
+          "speciality": "drinking",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Charm",
+          "speciality": "when drunk",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "magi",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Great Weapon",
+          "speciality": "pole axe",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Guile",
+          "speciality": "lying to magi",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Native Language: French",
+          "speciality": "talking about fighting",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Music",
+          "speciality": "drinking songs",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Single Weapon",
+          "speciality": "heater shield",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Survival",
+          "speciality": "on rivers",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Swim",
+          "speciality": "staying afloat",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Thrown Weapon",
+          "speciality": "axe",
+          "xp": 15,
+          "score": 2
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Brave +3",
+        "Loyal +2",
+        "Subtle -2"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "shortDescription": "Tough Guy turb grog aboard The Scholar’s Wake — big, brave, loyal, and fond of drink; carries an axe, heater shield, and full leather scale (Soak 11).",
+      "biography": "A Tough Guy–template turb grog (ArM5 core): built like a brick outhouse, brave and loyal, none too clever, with a soft spot for drink. Posted to The Scholar’s Wake.\n\nGear: short axe, heater shield, and full leather scale armour (downgraded from the template’s full metal scale). Soak 11 = Stamina 3 + Tough +3 + leather scale 5; the lighter armour (Load 5 vs 7) also eases his Encumbrance and Initiative versus the standard metal-scale build. Also carries a shortbow."
     }
   }
 }

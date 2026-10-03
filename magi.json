@@ -2997,14 +2997,14 @@
       "portrait": null,
       "house": "Bonisagus",
       "parens": null,
-      "sigil": null,
+      "sigil": "Eyes very briefly glow a brighter amber (like they are reflecting fire light)",
       "born": 1198,
       "age": 28,
       "apparentAge": 28,
       "characteristics": {
         "int": 3,
-        "per": -1,
-        "str": 0,
+        "per": 0,
+        "str": -1,
         "sta": 2,
         "pre": 2,
         "com": 1,
@@ -3197,13 +3197,13 @@
         },
         {
           "name": "Animal Handling",
-          "speciality": "Shadow Owls",
+          "speciality": "Wolves",
           "xp": 15,
           "score": 2
         },
         {
           "name": "Bargain",
-          "speciality": "Bartering (???)",
+          "speciality": "Bartering",
           "xp": 15,
           "score": 2
         },
@@ -3256,7 +3256,7 @@
           "score": 3
         },
         {
-          "name": "Living Language: German",
+          "name": "Living Language: French",
           "speciality": "Dialects",
           "xp": 30,
           "score": 3
@@ -3293,7 +3293,7 @@
         },
         {
           "name": "Artes Liberales",
-          "speciality": "Rhetoric",
+          "speciality": "Ritual Casting",
           "xp": 5,
           "score": 1
         },
@@ -3352,7 +3352,7 @@
           "score": 2
         },
         {
-          "name": "Area Lore: Durenmar",
+          "name": "Area Lore: Oléron",
           "speciality": "Library",
           "xp": 5,
           "score": 1
@@ -3374,7 +3374,9 @@
           "duration": "moment",
           "target": "ind",
           "ritual": true,
-          "description": ""
+          "description": "",
+          "masteryScore": 1,
+          "masteryAbilities": "Precise Casting"
         },
         {
           "name": "Agility of the Cheetah",
@@ -3386,7 +3388,9 @@
           "target": "ind",
           "ritual": true,
           "description": "",
-          "note": "Recorded from the sheet as a CrCo 35 Ritual; sits exactly at his level cap (Te+Fo+Int+MT+3 = 35). Name/level unusual for a characteristic-boost ritual — confirm intended effect."
+          "note": "Recorded from the sheet as a CrCo 35 Ritual; sits exactly at his level cap (Te+Fo+Int+MT+3 = 35). Name/level unusual for a characteristic-boost ritual — confirm intended effect.",
+          "masteryScore": 1,
+          "masteryAbilities": "Precise Casting"
         },
         {
           "name": "The Chamber of Spring Breezes",
@@ -3397,7 +3401,9 @@
           "duration": "sun",
           "target": "ind",
           "ritual": false,
-          "description": ""
+          "description": "",
+          "masteryScore": 1,
+          "masteryAbilities": "Quiet Casting"
         },
         {
           "name": "Clear Sight of the Naiad",
@@ -3408,7 +3414,9 @@
           "duration": "moment",
           "target": "boundary",
           "ritual": false,
-          "description": ""
+          "description": "",
+          "masteryScore": 1,
+          "masteryAbilities": "Quiet Casting"
         },
         {
           "name": "Reveal the Flaws of Mortal Flesh",
@@ -3419,7 +3427,9 @@
           "duration": "moment",
           "target": "ind",
           "ritual": false,
-          "description": ""
+          "description": "",
+          "masteryScore": 1,
+          "masteryAbilities": "Quiet Casting"
         },
         {
           "name": "Scales of the Magical Weight",
@@ -3430,7 +3440,9 @@
           "duration": "moment",
           "target": "ind",
           "ritual": false,
-          "description": ""
+          "description": "",
+          "masteryScore": 1,
+          "masteryAbilities": "Penetration"
         },
         {
           "name": "Sense the Nature of Vis",
@@ -3441,7 +3453,9 @@
           "duration": "moment",
           "target": "ind",
           "ritual": false,
-          "description": ""
+          "description": "",
+          "masteryScore": 1,
+          "masteryAbilities": "Penetration"
         },
         {
           "name": "Doublet of Impenetrable Silk",
@@ -3452,7 +3466,9 @@
           "duration": "sun",
           "target": "ind",
           "ritual": false,
-          "description": ""
+          "description": "",
+          "masteryScore": 1,
+          "masteryAbilities": "Multiple Casting"
         },
         {
           "name": "Lungs of the Fish",
@@ -3464,7 +3480,9 @@
           "target": "part",
           "ritual": false,
           "description": "",
-          "note": "Auram requisite (MuAq(Au))."
+          "note": "Auram requisite (MuAq(Au)).",
+          "masteryScore": 1,
+          "masteryAbilities": "Multiple Casting"
         },
         {
           "name": "Aura of Rightful Authority",
@@ -3475,7 +3493,9 @@
           "duration": "sun",
           "target": "ind",
           "ritual": false,
-          "description": ""
+          "description": "",
+          "masteryScore": 1,
+          "masteryAbilities": "Still Casting"
         },
         {
           "name": "Call to Slumber",
@@ -3486,7 +3506,9 @@
           "duration": "moment",
           "target": "ind",
           "ritual": false,
-          "description": ""
+          "description": "",
+          "masteryScore": 1,
+          "masteryAbilities": "Magic Resistance"
         }
       ],
       "personalityTraits": [
