@@ -37,7 +37,7 @@
    "player_facing": "Dagmar's established method is premonitions plus astrology, so the date is his to discover in character. Aldebaran (a Behenian fixed star) is the anchor the conjunction points at; the Hyades are the classical rainy stars, which matches the covenant's maritime regio grammar.",
    "optional": "Halley's Comet passed in 1222 — usable in retrospect as what woke the lower levels and produced the 1224 mirror-flash."
   },
-  "scene_count": 6,
+  "scene_count": 7,
   "corrections": [
    "2026-08-19 — The Diedne Garden is on the SOUTH COAST OF THE ENGLISH CHANNEL, not within the Ránargarðr holding on the Isle of Man. Earlier s13 text asserting otherwise has been struck.",
    "2026-08-19 — Scarem Montem left the 1223 Tribunal with the Latin manuscript of Wilhelm's thesis and has held it for roughly a year by the time of the delivery. See s6.",
@@ -181,6 +181,34 @@
    "refs": [
     "p104",
     "q034"
+   ]
+  },
+  {
+   "id": "s20",
+   "title": "Wilhelm's research — clarifying Winter 1223-24 → Winter 1224-25",
+   "seasons": [
+    "Winter 1223-24",
+    "Spring 1224",
+    "Winter 1224-25"
+   ],
+   "magi": [
+    "Wilhelm Stienauer"
+   ],
+   "npcs": [
+    "Dietrich",
+    "Carl & Isaac"
+   ],
+   "thread": "Wilhelm's folk-magic research / integration",
+   "status": "Needs prep",
+   "hook": "Wilhelm's folk-magic research exists on record only as unreviewed proposed events across three winters and a spring. Clarify what actually landed each season — Insights, written integrations, breakthrough points — and promote it before any of it can be logged.",
+   "detail": "THE GAP: the research is captured only as proposed events, unreviewed. Nothing is logged in the XP tracker or the library until the mechanical outcome of each season is pinned down and the entries are promoted.\n\nTHE THREE SEASONS:\nWinter 1223-24 (p049) — wintering at Carrick, Wilhelm cracks the formulaic-ritual integration (drop the divide-by-two; add Artes Liberales + Philosophiae), judging it \"really easy — someone just needed to point it out,\" and sends the assistants out to gather. The real labor is formalizing the Artes Liberales / Philosophiae contribution.\nSpring 1224 (p066) — newly aboard the Hound of Cassel, he begins writing two integrations: one to add Artes Liberales, one to let spells be cast \"virtually,\" aiming to finish them as a Factus by year's end.\nWinter 1224-25 (p075) — wintering at the Isle of Man, he gets the integrations up and running and sets Carl & Isaac back to gathering.\n\nTO CLARIFY (per the q039 cheat sheet): for each season, which step of the Insight → Integration loop actually happened — an Insight gained (Int + Magic Theory vs EF 18), an effect created, or breakthrough points banked — and against which secret target (Minor 30 / Major 45 / Hermetic 60). Decide what, if anything, is a finished, shareable Insight Lab Text or tractatus by now, and log the XP and any library additions. Fold in the confirmed madness/death cost (q028) as the system's price.\n\nFORWARD: Spring 1225 (p104) has Wilhelm at Durenmar raising Artes Liberales + Philosophiae and sourcing Roots (q035) — the research continues there, and on publication it may earn him a Bonisagus reputation (t087).",
+   "refs": [
+    "t019",
+    "t009",
+    "q039",
+    "q028",
+    "q035",
+    "t087"
    ]
   }
  ]

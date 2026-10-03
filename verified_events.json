@@ -3286,5 +3286,75 @@
   "status": "Historical",
   "body_text": "Over the winter Valerian finishes the copy of Legends of Brittany. The covenant keeps the duplicate while the borrowed original can be returned — the copy-law gambit complete (see t076).",
   "body_html": "<p>Over the winter Valerian finishes the copy of Legends of Brittany. The covenant keeps the duplicate while the borrowed original can be returned — the copy-law gambit complete (see t076).</p>"
+ },
+ {
+  "file": "",
+  "title": "Tormente defers its price for the gold",
+  "icon": "🐉",
+  "activity_type": "Diplomacy",
+  "cast": [
+   "Dagmar",
+   "Tormente"
+  ],
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "sort_iso": "1224-10-10T09:00",
+  "notes": "Closes the Tormente errand and puts the dragon-gold brokering on hold. Bears on t072 / s19.",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Exiting past **Tormente**, the party finds it content — it does not ask after the member left behind. Dagmar raises the gold again: Tormente had expressed interest in trading it for something from the outside world. Asked what it wants, the dragon answers only **\"Ask me in a few years.\"** The brokering is not refused, only deferred; the covenant will convert the five bags on its own account in the meantime.",
+  "body_html": "<p>Exiting past <strong>Tormente</strong>, the party finds it content — it does not ask after the member left behind. Dagmar raises the gold again: Tormente had expressed interest in trading it for something from the outside world. Asked what it wants, the dragon answers only <strong>&quot;Ask me in a few years.&quot;</strong> The brokering is not refused, only deferred; the covenant will convert the five bags on its own account in the meantime.</p>"
+ },
+ {
+  "file": "",
+  "title": "The dragon-gold goes to Heynric to fence",
+  "icon": "🪙",
+  "activity_type": "Diplomacy",
+  "cast": [
+   "Dagmar",
+   "Heynric the Merchant"
+  ],
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "sort_iso": "1224-12-22T12:00",
+  "notes": "The five bags of Roman gold are mundane (old coins, only adjacent to the Carnac regio/dragon). Ties s19, t072/c027, and p092 (Tormente deferred the brokering). No sale rolled yet.",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Over the winter Dagmar brings the hoard of old Roman gold coins to Heynric the Merchant and, without quite having the words for it, asks him to convert it discreetly — Heynric understands he is being asked to fence it. Heynric advises the covenant to pause ordinary trade ventures and put its effort into quietly moving the gold, a far larger prize than a season's cargo. The plan: drop Heynric off with a couple of grogs to begin fencing it.",
+  "body_html": "<p>Over the winter Dagmar brings the hoard of old Roman gold coins to Heynric the Merchant and, without quite having the words for it, asks him to convert it discreetly — Heynric understands he is being asked to fence it. Heynric advises the covenant to pause ordinary trade ventures and put its effort into quietly moving the gold, a far larger prize than a season&#39;s cargo. The plan: drop Heynric off with a couple of grogs to begin fencing it.</p>"
+ },
+ {
+  "file": "",
+  "title": "Wilhelm's capricorn: the Mill Pond goat named Joseph",
+  "icon": "🐐",
+  "activity_type": "Lore",
+  "cast": [
+   "Wilhelm Stienauer"
+  ],
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "sort_iso": "1224-12-23T12:00",
+  "notes": "Surfaced when Éogan raised his capricorn hunt. Real capricorn lore for the saga; feeds t070 (Éogan's capricorn) and gives Wilhelm his own connection to the creatures.",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "When Éogan speaks of the capricorn, Wilhelm puts up his glasses and shares a childhood memory: he and his brother **Patrick** used to play, month after month, with a **capricorn** — \"Mr. Goat,\" whose name was **Joseph** — that appeared in the **Mill Pond** near their home on the **waxing moon**, three or four days at a time. A woman (likely a **dryad**) tended it; once, thinking the goat was drowning, the boys ran to save it, and she gently called them off — it was a **goat-fish**, not a goat. That wonder is why Wilhelm (and his brother) turned to magic.\nWhat Wilhelm has since read: capricorns are **associated with water**; one is said to have relayed **God's warning to Noah** to build the ark before the flood; they are known to **teach survival** to people in dire need far from civilization; and they are **tricksters** — of humans and of much greater beings alike. Different regions produce different capricorns depending on the local fish; despite the name, they are **not truly goats**.",
+  "body_html": "<p>When Éogan speaks of the capricorn, Wilhelm puts up his glasses and shares a childhood memory: he and his brother <strong>Patrick</strong> used to play, month after month, with a <strong>capricorn</strong> — &quot;Mr. Goat,&quot; whose name was <strong>Joseph</strong> — that appeared in the <strong>Mill Pond</strong> near their home on the <strong>waxing moon</strong>, three or four days at a time. A woman (likely a <strong>dryad</strong>) tended it; once, thinking the goat was drowning, the boys ran to save it, and she gently called them off — it was a <strong>goat-fish</strong>, not a goat. That wonder is why Wilhelm (and his brother) turned to magic.</p><p>What Wilhelm has since read: capricorns are <strong>associated with water</strong>; one is said to have relayed <strong>God&#39;s warning to Noah</strong> to build the ark before the flood; they are known to <strong>teach survival</strong> to people in dire need far from civilization; and they are <strong>tricksters</strong> — of humans and of much greater beings alike. Different regions produce different capricorns depending on the local fish; despite the name, they are <strong>not truly goats</strong>.</p>"
+ },
+ {
+  "file": "",
+  "title": "Éogan trades the Redcaps 6 Animal vis for 6 Vim",
+  "icon": "🔁",
+  "activity_type": "Trade",
+  "cast": [
+   "Éogan Dobhartha"
+  ],
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "sort_iso": "1224-12-24T12:00",
+  "notes": "Vis swap: covenant Animal -6, Vim +6 (via Redcaps). Stock not yet adjusted in the ledger — pending verification.",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Éogan trades the covenant's Redcaps **6 pawns of Animal vis** for **6 pawns of Vim**.",
+  "body_html": "<p>Éogan trades the covenant&#39;s Redcaps <strong>6 pawns of Animal vis</strong> for <strong>6 pawns of Vim</strong>.</p>"
  }
 ]

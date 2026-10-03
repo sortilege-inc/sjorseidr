@@ -444,6 +444,23 @@
    ]
   },
   {
+   "id": "t089",
+   "type": "Thread",
+   "category": "Covenant Business",
+   "title": "Tormente deferred its price for the dragon-gold — \"ask me in a few years.\"",
+   "context": "Exiting Carnac in **Fall 1224**, Dagmar raised the five bags of recovered Roman gold with **Tormente**, which had earlier shown interest in trading it for something from the outside world. Asked what it wants, the dragon answered only **\"Ask me in a few years.\"** — the brokering is deferred, not refused.\n\nIn the meantime the covenant converts the gold on its own account: over **Winter 1224-25** Dagmar brought the hoard to **Heynric the Merchant** to fence discreetly. The coins are mundane old Roman gold, only adjacent to the Carnac regio and the dragon.\n\n**FOLLOW-UP:** revisit the dragon's price when Tormente next surfaces — what it eventually wants in exchange, and whether the covenant has already converted the gold by then. Ties the London brokering thread and the wider dragon thread (t072).",
+   "raised_in": "Session recap 2026-09-12",
+   "raised_event": "Exiting Carnac — Tormente defers the dragon-gold brokering (\"ask me in a few years\").",
+   "status": "Open",
+   "resolution": "",
+   "sceneLinks": [
+    {
+     "id": "s19",
+     "title": "London — brokering the dragon's gold"
+    }
+   ]
+  },
+  {
    "id": "q035",
    "type": "Question",
    "category": "Covenant Business",

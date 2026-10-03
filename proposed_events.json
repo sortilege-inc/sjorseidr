@@ -133,26 +133,6 @@
   "body_text": "Declared: Éogan borrows Henri as a personal tutor to raise his Magic Theory toward the talisman he wants."
  },
  {
-  "id": "p092",
-  "file": "092_2026-09-12_tormente-defers-its-price-for-the-gold.md",
-  "sort_iso": "1224-10-10T09:00",
-  "session": "2026-09-12",
-  "scene": "Fall 1224 — leaving Carnac",
-  "title": "Tormente defers its price for the gold",
-  "icon": "🐉",
-  "timeline": "🍂 Fall 1224",
-  "date": "Fall 1224",
-  "cast": [
-   "Dagmar",
-   "Tormente"
-  ],
-  "activity_type": "Diplomacy",
-  "status": "Proposed",
-  "notes": "Closes the Tormente errand and puts the dragon-gold brokering on hold. Bears on t072 / s19.",
-  "source": "Session recap 2026-09-12 (Ars Magica transcript).",
-  "body_text": "Exiting past **Tormente**, the party finds it content — it does not ask after the member left behind. Dagmar raises the gold again: Tormente had expressed interest in trading it for something from the outside world. Asked what it wants, the dragon answers only **\"Ask me in a few years.\"** The brokering is not refused, only deferred; the covenant will convert the five bags on its own account in the meantime."
- },
- {
   "id": "p098",
   "file": "",
   "sort_iso": "1224-05-05T12:00",
@@ -172,45 +152,6 @@
   "body_text": "Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen."
  },
  {
-  "id": "p099",
-  "file": "",
-  "sort_iso": "1224-12-22T12:00",
-  "session": "2026-09-19",
-  "scene": "Winter 1224-25 — the Isle of Man",
-  "title": "The dragon-gold goes to Heynric to fence",
-  "icon": "🪙",
-  "timeline": "❄️ Winter 1224-25",
-  "date": "Winter 1224-25",
-  "cast": [
-   "Dagmar",
-   "Heynric the Merchant"
-  ],
-  "activity_type": "Diplomacy",
-  "status": "Proposed",
-  "notes": "The five bags of Roman gold are mundane (old coins, only adjacent to the Carnac regio/dragon). Ties s19, t072/c027, and p092 (Tormente deferred the brokering). No sale rolled yet.",
-  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "Over the winter Dagmar brings the hoard of old Roman gold coins to Heynric the Merchant and, without quite having the words for it, asks him to convert it discreetly — Heynric understands he is being asked to fence it. Heynric advises the covenant to pause ordinary trade ventures and put its effort into quietly moving the gold, a far larger prize than a season's cargo. The plan: drop Heynric off with a couple of grogs to begin fencing it."
- },
- {
-  "id": "p100",
-  "file": "",
-  "sort_iso": "1224-12-23T12:00",
-  "session": "2026-09-19",
-  "scene": "Winter 1224-25 — recounted (Wilhelm's childhood)",
-  "title": "Wilhelm's capricorn: the Mill Pond goat named Joseph",
-  "icon": "🐐",
-  "timeline": "❄️ Winter 1224-25",
-  "date": "Winter 1224-25 (recounted)",
-  "cast": [
-   "Wilhelm Stienauer"
-  ],
-  "activity_type": "Lore",
-  "status": "Proposed",
-  "notes": "Surfaced when Éogan raised his capricorn hunt. Real capricorn lore for the saga; feeds t070 (Éogan's capricorn) and gives Wilhelm his own connection to the creatures.",
-  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "When Éogan speaks of the capricorn, Wilhelm puts up his glasses and shares a childhood memory: he and his brother **Patrick** used to play, month after month, with a **capricorn** — \"Mr. Goat,\" whose name was **Joseph** — that appeared in the **Mill Pond** near their home on the **waxing moon**, three or four days at a time. A woman (likely a **dryad**) tended it; once, thinking the goat was drowning, the boys ran to save it, and she gently called them off — it was a **goat-fish**, not a goat. That wonder is why Wilhelm (and his brother) turned to magic.\nWhat Wilhelm has since read: capricorns are **associated with water**; one is said to have relayed **God's warning to Noah** to build the ark before the flood; they are known to **teach survival** to people in dire need far from civilization; and they are **tricksters** — of humans and of much greater beings alike. Different regions produce different capricorns depending on the local fish; despite the name, they are **not truly goats**."
- },
- {
   "id": "p101",
   "file": "",
   "sort_iso": "1225-04-05T12:00",
@@ -228,25 +169,6 @@
   "notes": "Declared Spring 1225 plan. Éogan can return to the exact river via an Arcane Connection and means to go alone. Feeds t070; ties p100 (capricorn lore).",
   "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
   "body_text": "Declared: in Spring 1225 Éogan sails back to **Ireland** to seek the **capricorn** at the river where he first met it — he holds an Arcane Connection to the spot and intends to go **alone**. Beforehand he will hunt up **books and lore about capricorns**. Around it: shipboard **trade**, **laboratory work toward his talisman**, and **replacing his ship's crew**, since many of the old hands have settled on the Isle of Man."
- },
- {
-  "id": "p102",
-  "file": "",
-  "sort_iso": "1224-12-24T12:00",
-  "session": "2026-09-19",
-  "scene": "Winter 1224-25 — via the Redcap",
-  "title": "Éogan trades the Redcap 6 Animal vis for 6 Vim",
-  "icon": "🔁",
-  "timeline": "❄️ Winter 1224-25",
-  "date": "Winter 1224-25",
-  "cast": [
-   "Éogan Dobhartha"
-  ],
-  "activity_type": "Trade",
-  "status": "Proposed",
-  "notes": "Vis swap: covenant Animal -6, Vim +6 (via Redcap). Stock not yet adjusted in the ledger — pending verification.",
-  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "Éogan trades the covenant's Redcap **6 pawns of Animal vis** for **6 pawns of Vim**."
  },
  {
   "id": "p103",
@@ -301,9 +223,9 @@
   ],
   "activity_type": "Study",
   "status": "Proposed",
-  "notes": "Declared 1225 plan; expands the earlier Code-of-Hermes declaration. Motivation ties the Confluensis complaint / forged-letter arc (c022, t078). Elements: study Code of Hermes (score 1) with Valerian if possible; then learn Certamen to answer the charge. Profession: Scribe is a further-out aside. No XP recorded yet (declared, not played).",
+  "notes": "Declared 1225 plan; expands the earlier Code-of-Hermes declaration. Motivation: the anticipated Hermetic charge against him. Elements: study Code of Hermes (score 1) with Valerian if possible; then learn Certamen to answer the charge. Profession: Scribe is a further-out aside. No XP recorded yet (declared, not played).",
   "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "Declared: with a Hermetic **charge laid against him** — the Confluensis complaint the covenant has been bracing for (c022), whose planned opening gambit is a **forged Order-of-Odin letter manufactured to implicate Valdemar** (t078) — Valdemar sets himself to **study the Code of Hermes in depth**, ideally **alongside Valerian** should the opportunity arise. Once he has the law in hand he means to **learn some Certamen**, intending to get satisfaction from whoever dared bring the charge and settle the matter on his own terms. (He also muses he may eventually pick up **Profession: Scribe** to speed his copying of important books later.)"
+  "body_text": "Declared: with a Hermetic **charge laid against him**, Valdemar sets himself to **study the Code of Hermes in depth**, ideally **alongside Valerian** should the opportunity arise. Once he has the law in hand he means to **learn some Certamen**, intending to get satisfaction from whoever dared bring the charge and settle the matter on his own terms. (He also muses he may eventually pick up **Profession: Scribe** to speed his copying of important books later.)"
  },
  {
   "id": "p106",
