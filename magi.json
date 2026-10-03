@@ -27,8 +27,8 @@
       "size": 0,
       "confidence": {
         "label": "Confidence",
-        "score": 2,
-        "points": 2
+        "score": 3,
+        "points": 4
       },
       "decrepitude": 1,
       "warping": 0,
@@ -479,8 +479,8 @@
       "size": 0,
       "confidence": {
         "label": "Confidence",
-        "score": 1,
-        "points": 3
+        "score": 2,
+        "points": 4
       },
       "decrepitude": 0,
       "warping": 0,
@@ -960,8 +960,8 @@
       "size": 0,
       "confidence": {
         "label": "Confidence",
-        "score": 1,
-        "points": 2
+        "score": 2,
+        "points": 4
       },
       "decrepitude": 0,
       "warping": 0,
@@ -1406,7 +1406,7 @@
       "confidence": {
         "label": "Confidence",
         "score": 4,
-        "points": 2
+        "points": 4
       },
       "decrepitude": 1,
       "warping": 301,
@@ -2117,7 +2117,7 @@
       "size": 0,
       "confidence": {
         "label": "Confidence",
-        "score": 1,
+        "score": 2,
         "points": 3
       },
       "decrepitude": 0,
@@ -2531,7 +2531,7 @@
       "size": 0,
       "confidence": {
         "label": "Confidence",
-        "score": 1,
+        "score": 2,
         "points": 3
       },
       "decrepitude": 0,
