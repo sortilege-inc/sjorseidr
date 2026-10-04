@@ -133,42 +133,46 @@
   "body_text": "Declared: Éogan borrows Henri as a personal tutor to raise his Magic Theory toward the talisman he wants."
  },
  {
-  "id": "p098",
   "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p098",
   "sort_iso": "1224-05-05T12:00",
-  "session": "2026-08-08",
-  "scene": "Spring 1224 — the Channel coast (the Diedne Garden)",
-  "title": "Valdemar harvests the Diedne Garden",
+  "scene": "Spring 1224 — the Diedne Garden, the first visit",
+  "title": "The Diedne Garden's first harvest — five pawns, and bones under the stones",
   "icon": "🌿",
   "timeline": "🌼 Spring 1224",
   "date": "Spring 1224",
   "cast": [
-   "Valdemar"
+   "Valdemar Bjornsson",
+   "Ka'wa'ill",
+   "Garrat Coffin",
+   "Eric"
   ],
   "activity_type": "Vis harvest",
-  "status": "Proposed",
-  "source": "Seasonal activity auto-logged from the session.",
-  "notes": "Moved back to proposed so it reads as a draft (owner, 2026-09-19); not yet owner-reviewed.",
-  "body_text": "Valdemar harvests the contested Diedne Garden (three Herbam herbs) and means to look closer at the ruined Diedne site — curious whether the vanished founder Solving left anything there unseen."
+  "notes": "Played 2026-10-03 (the recording starts at the herb rolls; the arrival comes from the owner, 2026-10-04). Vis: 5 Herbam (mistletoe 3, selago 0, samolus 2 after 2 Confidence spent), applied to the covenant's vis stock (The Diedne Garden 3 → 5). An unusually strong yield (owner). No initiation step was attempted.",
+  "body_text": "The covenant had directions by road from **Flanders**, but the party came in **by sea and upriver** instead and explored the last stretch on foot. They nearly missed the place: the garden was **overgrown**, and its **stones had been broken and buried**.\n**The rites.** Where his own memory of the rite differs from Pliny's account, **Valdemar** follows his memory — the memory of someone who has actually seen it done, over a secondhand description.\n• **Mistletoe** — a superb harvest: **3 pawns** of Herbam.\n• **Selago** — his memory is partial at best; the herbs are viable but hold **no vis**.\n• **Samolus** — taken the next morning, and it comes through only once he spends **Confidence**: **2 pawns**.\n**Under the stones.** Digging after the failed selago, **Ka'wa'ill** and **Garrat** turn up **human bones**, a thigh bone and a skull, with no marker, no clothing, no weapons and no grave goods; only broken stone. **Eric** the minstrel puzzles the stones together, and one reading is an **altar**: about three feet wide, eight or nine feet long and a couple of feet thick.\nValdemar forbids any exhumation. The dead are **carefully reburied**, the stones set back in order, and the altar left **upside down**, since that is the stable way to lay it.\n**Five pawns** of Herbam in all, an unusually strong yield for a source that gives three a year. Before leaving, the party spends a couple of days **replanting** the herbs and their seeds so the garden will bear again next year, and Valdemar tells the covenant the garden is in disarray and its destruction was **deliberate**."
  },
  {
-  "id": "p101",
   "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p101",
   "sort_iso": "1225-04-05T12:00",
-  "session": "2026-09-19",
   "scene": "Spring 1225 — Ireland",
-  "title": "Éogan returns to Ireland for the capricorn (declared)",
-  "icon": "🍀",
+  "title": "Éogan finds the capricorn again",
+  "icon": "🐐",
   "timeline": "🌼 Spring 1225",
   "date": "Spring 1225",
   "cast": [
-   "Éogan Dobhartha"
+   "Éogan Dobhartha",
+   "Ronan"
   ],
   "activity_type": "Adventuring",
-  "status": "Proposed",
-  "notes": "Declared Spring 1225 plan. Éogan can return to the exact river via an Arcane Connection and means to go alone. Feeds t070; ties p100 (capricorn lore).",
-  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "Declared: in Spring 1225 Éogan sails back to **Ireland** to seek the **capricorn** at the river where he first met it — he holds an Arcane Connection to the spot and intends to go **alone**. Beforehand he will hunt up **books and lore about capricorns**. Around it: shipboard **trade**, **laboratory work toward his talisman**, and **replacing his ship's crew**, since many of the old hands have settled on the Isle of Man."
+  "notes": "Played 2026-10-03. Approaching it: Communication in place of Presence, +3 for the capricorn lore Wilhelm shared over the winter. Courted, not bonded. Unnamed for now; its player may name it.",
+  "body_text": "The **Brineborn** had spent the past year at the Isle of Man helping to raise the base while **Éogan** studied **Magic Theory** with Henri. For **Spring 1225** he plans a trading circuit of the North Sea starting from **Dublin**, but first, with a single grog, the silent hunter **Ronan**, he goes north on wizard's business.\nWith last year's water sample he casts **Call of the Rushing Waters** to lead him back to the river where he first saw the **capricorn**, and camps there about a week, scouting upstream and in a small boat off the coast. On the **fifth day**, near sunset, a head crests the waves a couple of hundred feet out.\nHe casts **Lungs of the Fish** (it holds, at the cost of Fatigue) and **Eyes of the Merfolk**, and swims out with a **pawn of Aquam vis** in his hand. The capricorn comes to him and **nuzzles the hand that holds the vis**: curious, not enamoured. They play for a while; then it drifts away toward open water, and he chases it until his strength gives out, staggering ashore aching and elated.\nNext morning a chirping, more chirp than bray, carries over the water. Over the following days its curiosity becomes **familiarity**. Wilhelm's childhood story that these creatures love **turnips** gets its test: after a few tries the capricorn drags its forequarters onto the shore and eats one. Whether it likes turnips is unproven; that it will eat almost anything, like any goat, is not.\nÉogan heads back hugging the coast with the capricorn following, using **Push of the Gentle Wave** to keep pace and paying out snacks at intervals. It is **unnamed** for now."
  },
  {
   "id": "p103",
@@ -190,23 +194,24 @@
   "body_text": "Declared: Dagmar heads to **Oléron first** to find **teachers**, then plans to return to the **skeleton in the sea** — casting **Lungs of the Fish** to dive and **examine the skeleton**, and to **learn from vis** there."
  },
  {
-  "id": "p104",
   "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p104",
   "sort_iso": "1225-04-07T12:00",
-  "session": "2026-09-19",
-  "scene": "1225 — Durenmar",
-  "title": "Wilhelm at Durenmar: books, Roots, and a stone sled (declared)",
+  "scene": "Spring 1225 — Durenmar",
+  "title": "Wilhelm at Durenmar — two stone sleds, the Roots, and thesis 1.0",
   "icon": "📚",
   "timeline": "🌼 Spring 1225",
-  "date": "1225",
+  "date": "Spring 1225",
   "cast": [
-   "Wilhelm Stienauer"
+   "Wilhelm Stienauer",
+   "Dietrich"
   ],
-  "activity_type": "Study",
-  "status": "Proposed",
-  "notes": "Declared 1225 plan; expands the Durenmar trip. Costs settled by ruling. **Stone sled = 6 pawns Terram vis.** As a lesser enchanted device (single L20 effect) its cost is the instilling cost alone — 2 pawns, no opening step — so no Craft discount applies, and the Verditius sale price is a flat 3× = 6 pawns (ruling q033). The undiscounted-markup house rule in q033 only bites on greater/invested builds, not this one. **Roots = L6/Q24** (ruling q034). Both are covenant expenditures / acquisitions to log once the trip is played; specific Roots enter the library only when actually obtained. Not yet played.",
-  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "Declared: Wilhelm means to raise **Artes Liberales** and **Philosophiae**, travel to **Durenmar** to acquire books, and **reconnect with his research assistants**. Among the books he hopes to source are one or more **Roots** — the standard foundational Art summae described in *Covenants* (p.93, Standard Texts), adopted by the saga as **L6 / Q24** and Redcap-deliverable “for a very small consideration” (ruling q034). He also asks to take **6 pawns of Terram vis** to purchase a **stone sled** from a Verditius crafter: a level-20 enchanted two-tonne stone slab that flies at ~45 mph and carries ~2,000 lbs — a way to move small groups (magi) “at the speed of plot” to distant plot sources, and for Wilhelm to visit his family more readily."
+  "activity_type": "Lab Work",
+  "notes": "Played 2026-10-03. Stone sleds: built by Wilhelm himself at 2 pawns each (owner, 2026-10-04), not bought from a Verditius at 6 (the q033 purchase price). 4 Terram applied to the covenant's vis stock (Fire From the Sky 37 → 33); the other 2 pawns he took are unspent. The Roots' titles are still to be entered in the library.",
+  "body_text": "In **Spring 1225** Wilhelm returns to **Durenmar**, where he did his original thesis work, meaning to finish publishing his papers and have stone sleds built. Once there he realises he still has a **laboratory** at Durenmar and can build them himself: the library holds a **lab text for the stone sled**, a Rego effect within his reach.\nHe had brought **six pawns of Terram vis** to buy one. Building them himself, each costs **two**, so he makes **two sleds** for **four pawns**, his Lab Total just scraping **40**. As with everything he does, he experiments: nothing blows up, but the experiment throws up a **special story event**, still to be revealed.\nHe orders the **Roots**, and brings them home without difficulty. He sends **thesis 1.0**, now with a spellbook written up for it, round the circle of scholars he worked with: here it finally is.\nDurenmar's welcome is lukewarm. Few share his obsession with folk magic and bringing magic to the masses, but there is a **grudging respect** that he has actually produced something.\nHe spends the year readying his work for publication, and goes to **Cologne** to see how **Dietrich**'s university classes are going. Dietrich has been practising what Wilhelm taught him and has ideas about **teaching more people more quickly**: scaling up the teaching itself, independent of what is being taught."
  },
  {
   "id": "p105",
@@ -649,5 +654,230 @@
    "Éogan Dobhartha"
   ],
   "source": "Player design note (talisman build plan); see t063. Seasons per owner: Spring–Fall 1225, around the Ireland/capricorn trip."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p131",
+  "sort_iso": "1224-05-06T12:00",
+  "scene": "Spring 1224 — the Diedne Garden, the first visit",
+  "title": "Wolves at dusk in the Diedne Garden",
+  "icon": "🐺",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Valdemar Bjornsson",
+   "Oliver",
+   "Leofwin",
+   "Ka'wa'ill",
+   "Garrat Coffin"
+  ],
+  "activity_type": "Encounter",
+  "notes": "Played 2026-10-03. Ka'wa'ill botched (trident set down; −3, far from the sea).",
+  "body_text": "Wolves had hung about the garden since the first day's harvesting, never desperate enough to rush a group of armed men. At **dusk**, with the party bent over its digging, they come in.\n• **Oliver**, on lookout with his English longbow, looses first.\n• **Leofwin**, the pirate cook, kills one with his shortsword.\n• **Ka'wa'ill** is caught off guard, his enchanted trident set down while he searched the grass, and fights badly, far from the sea.\n• **Garrat** works to spook the rest.\n• **Valdemar** sheathes his blade in **Thor's lightning** with a rune and strides out with it crackling, ordering the wolves in Norse back to **their master's kennel**: trouble us not, or face the wrath of the bear.\nThe pack breaks and flees. The dead wolf is skinned for its pelt."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p132",
+  "sort_iso": "1224-05-07T12:00",
+  "scene": "Spring 1224 — the Diedne Garden, the first visit",
+  "title": "Eric's ballad, and what Valdemar tells him",
+  "icon": "🎶",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "cast": [
+   "Valdemar Bjornsson",
+   "Eric"
+  ],
+  "activity_type": "Intrigue",
+  "notes": "Played 2026-10-03. Eric's roll of 21 against Valdemar's failed Guile.",
+  "body_text": "While the others dig, **Eric**, the covenant's minstrel (a five-foot-three hunchback with a startlingly deep voice), drafts a lurid ballad about the garden. In it the altar is cracked by the righteous hammer of the Order, the **devil-worshipping Diedne** are smashed, and brave adventurers are set upon by **evil spirits in the shape of beasts** for trying to carry the truth home.\nValdemar usually has plenty to say about Eric's work. This time he says nothing, and his attempt to keep a straight face fails. Eric realises that Valdemar is taking it **personally**, and soon each knows that the other knows.\nValdemar is blunt. The Diedne as the other Hermetics remember them **are not the truth**, and the Diedne **live**; but everyone believes the lie, so he must play along, **and so must Eric**. \"As you say.\""
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p133",
+  "sort_iso": "1223-06-26T20:00",
+  "scene": "Summer 1223 — the Normandy Tribunal",
+  "title": "Furtum's Gauntlet at the Normandy Tribunal",
+  "icon": "🎓",
+  "timeline": "☀️ Summer 1223",
+  "date": "Summer 1223",
+  "cast": [
+   "Furtum Bonisagus",
+   "Stijntje Kuiper",
+   "Dustin Page"
+  ],
+  "activity_type": "Tribunal",
+  "notes": "Backstory, played 2026-10-03. Parentage per the owner (2026-10-04): first parens a Tremere at Durenmar, final parens a Bonisagus at Oléron.",
+  "body_text": "**Furtum** came to the 1223 Normandy Tribunal still an apprentice, weeks from the end of some **fifteen years** of training. It began at **Durenmar** under a **Tremere** parens and finished at **Oléron**, where he had lived since about 1221, under a **Bonisagus**.\nIt was his first Normandy Tribunal, and a riotous one: the Tribunal games with real stakes in vis and books; a vassal covenant of the hosts walking out halfway through to found a tribunal of its own; and a crew of very young sea-going magi, tied to no liege covenant, taking first place.\nNot wanting to stay in his home covenant, he sounded out the Bonisagi and the other apprentices. He met **Stijntje**, who brought him to **Dustin**. Dustin, always glad to talk with apprentices, said Sjórseiðr was always looking for members and shared its laws with him.\nFurtum passed his **Gauntlet** at the Tribunal, his own man for the first time in fifteen years."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p134",
+  "sort_iso": "1223-12-21T12:00",
+  "scene": "Winter 1223-24 — Oléron",
+  "title": "Furtum and Dagmar winter at Oléron",
+  "icon": "🌀",
+  "timeline": "❄️ Winter 1223-24",
+  "date": "Winter 1223-24",
+  "cast": [
+   "Furtum Bonisagus",
+   "Dagmar"
+  ],
+  "activity_type": "Character Development",
+  "notes": "Backstory, played 2026-10-03.",
+  "body_text": "Having lost his Tribunal mirror-match to Oléron's Criamon, **Dagmar** winters at **Oléron**, reading and working in its library. **Furtum**, newly gauntleted and wondering what comes next, spends the season alongside him.\nDagmar's conversation is scattered, but the two connect over **regiones**. Dagmar leaves come spring."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p135",
+  "sort_iso": "1224-12-21T12:00",
+  "scene": "Fall 1224 → Winter 1224-25 — the Isle of Man",
+  "title": "Furtum comes to the Isle of Man",
+  "icon": "⚓",
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "cast": [
+   "Furtum Bonisagus",
+   "Dustin Page",
+   "Valdemar Bjornsson",
+   "Dagmar"
+  ],
+  "activity_type": "Travel",
+  "notes": "Backstory, played 2026-10-03.",
+  "body_text": "In **Fall 1224** Dustin returns to Oléron aboard the **Scholar's Wake** to swap books in and out of the library held there in trust. Furtum, wanting no part of his old covenant, sails north with him to winter on **Man**.\nWhat he finds: a natural harbor where a small river comes down, and a village rising in Norse–Germanic wood and stone. In the harbor are two cogs (the Scholar's Wake and the Tide of Memory), the hulks Brineborn and Adamant, and, at the centre dock, the longest ship there: Valdemar's **drakkar**, thirty or forty shields along its sides.\nThe largest building is **Nóatún**, the wizards' hall: a wizard's tower laid on its side as a Norse hall, with quarters for every magus, room to grow, a great meeting hall through the middle, and a vast laboratory space still being fitted out. Up on the hill overlooking the harbor stands **Undrahöll**, the great laboratory longhouse. It is a village built around the wizards' needs, not wizards shoehorned into a village.\nOver the winter he watches the covenant at work: **Éogan** teaching **Valdemar** Aquam, the business of **Heynric** and the dragon-gold, Wilhelm's stories of capricorns, and **Wilhelm**'s formal joining ceremony.\n**Dagmar** describes the Carnac regio for him. **Tormente** guards the way; then come the chamber of boiling water, the chamber of planetary stones, and the marsh city of frogs and toads, \"who are not friends,\" with a strong magical aura; then the upper walkway and the throne."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p136",
+  "sort_iso": "1224-12-22T12:00",
+  "scene": "Winter 1224-25 — the Isle of Man",
+  "title": "Wilhelm formally joins Sjórseiðr",
+  "icon": "🤝",
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "cast": [
+   "Wilhelm Stienauer",
+   "Furtum Bonisagus"
+  ],
+  "activity_type": "Covenant Business",
+  "notes": "Played 2026-10-03; follows 'Wilhelm invited to formalize covenant membership' (Spring 1224). Log the membership in the covenant ledger when this is approved.",
+  "body_text": "Over **Winter 1224-25** at the Isle of Man, **Wilhelm** formally joins the covenant, with a ceremony. He came from Durenmar with work of his own, and he joins partly because the covenant's requirements don't cut against it: the trade-offs suit him. **Furtum** is there to see it."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p137",
+  "sort_iso": "1225-04-09T12:00",
+  "scene": "1224–1225 — the Isle of Man",
+  "title": "Furtum takes on the shipyard",
+  "icon": "🔨",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "cast": [
+   "Furtum Bonisagus"
+  ],
+  "activity_type": "Covenant Business",
+  "notes": "Played 2026-10-03. Furtum's player is sending notes on his 1225.",
+  "body_text": "Sjórseiðr asks one thing of its members: that they have a ship. **Furtum** doesn't have one yet. But the harbor on Man would easily take a **shipyard**, and the first one is already begun.\nHe spends the rest of his 1224 coordinating the dockyards by the harbor, and he means in time to build a **laboratory at the shipyard**, since enchanting a ship will need one. Until then the island's lab stands free in spring, summer and autumn while its owners are at sea.\nHe stays in the exploring stage of membership for now and enters the story proper in **1225**. By **Winter 1225-26** the shipyard is well underway."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p138",
+  "sort_iso": "1225-04-10T12:00",
+  "scene": "1225 — the Isle of Man",
+  "title": "Valdemar drills the grogs to fight as one",
+  "icon": "🛡️",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "cast": [
+   "Valdemar Bjornsson"
+  ],
+  "activity_type": "Covenant Business",
+  "notes": "Declared 2026-10-03; no XP recorded yet.",
+  "body_text": "**Valdemar** starts regular training, daily or weekly, so the covenant's grogs learn to fight as a unit alongside magi, and alongside **Rán**, without everybody panicking.\nEach ship leaves a few hands behind for a couple of seasons, aiming at a trained group of about **five per ship**. Valdemar has the Leadership, the Teaching and the fighting for it, but can teach only a few at a time.\nBy **Winter 1225-26** grogs can be seen at martial drill in the town square."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p139",
+  "sort_iso": "1225-04-08T12:00",
+  "scene": "Spring 1225 — Durenmar",
+  "title": "Wilhelm overhears the complaint against Valdemar",
+  "icon": "📜",
+  "timeline": "🌼 Spring 1225",
+  "date": "Spring 1225",
+  "cast": [
+   "Wilhelm Stienauer"
+  ],
+  "activity_type": "Intelligence",
+  "notes": "Played 2026-10-03.",
+  "body_text": "Durenmar is already busy with the **Grand Tribunal**, two and a half to three years off, and with its paperwork. A colleague grumbles about the extra work: this time it is some **Normandy** covenant complaining about another Normandy covenant.\nHe describes the accusations. A magus is said to be a member of the **Order of Odin**, in opposition to the Order of Hermes and its Oaths, and to have engaged in **molestation of the fae** at a Tribunal. Wilhelm is fairly sure they mean **Valdemar**.\nHe joins the conversation without saying so and probes. The colleague admits his details are limited: he sees no sign of widespread destruction and no damning evidence. It reads as largely accusatory, \"basically a placeholder,\" with **supplements** promised later. What he shares is effectively public record, which the parties should have been told anyway.\nWilhelm **copies the formal paperwork**."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p140",
+  "sort_iso": "1225-12-21T12:00",
+  "scene": "Winter 1225-26 — the Isle of Man",
+  "title": "Wilhelm brings his family to Man by stone sled",
+  "icon": "🪨",
+  "timeline": "❄️ Winter 1225-26",
+  "date": "Winter 1225-26",
+  "cast": [
+   "Wilhelm Stienauer",
+   "Dietrich",
+   "Rán"
+  ],
+  "activity_type": "Travel",
+  "notes": "Played 2026-10-03. The arrival is at the beginning of Winter 1225-26.",
+  "body_text": "At the start of **Winter 1225-26** Wilhelm brings his family to winter at the covenant:\n• his father **Carl**, a farmer turned mercenary, who made his money taking a hostage (the man stayed with the family a couple of years until he was ransomed, and is still a good friend) and who is the reason neither son became a soldier;\n• his mother **Elise**, the local miller's daughter and the smart one of the family, from whom the children got their brains;\n• his brother **Dietrich**;\n• his younger sisters **Angelina**, married in Cologne to a man she met through Dietrich, and **Catherine**, who is considering taking vows.\nThey fly by **stone sled**: cart-sized stone slabs that carry up to 2,000 lb each, fitted with a light covered wooden frame and flown by hired grogs with **Finesse** (Teamster adds). Someone must be aboard at sunrise and sunset to renew the effect. They follow the coasts rather than fly over forests and towns, so the trip takes two or three days. The **Hound of Cassel** is left free to trade or winter as its captain sees fit.\nThe covenant watches the procession land beside the wizards' hall. The shipyard is well underway, and grogs drill in the square.\n**Rán** comes out to greet them. At first glance she is a blonde woman, until the almost translucent skin and tendril-like hair register, and the family gets a full dose of the uncanny as she plays hostess by a roaring fire over a great spread of grain and fish."
+ },
+ {
+  "file": "",
+  "session": "2026-10-03",
+  "status": "Proposed",
+  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
+  "id": "p141",
+  "sort_iso": "1225-12-22T12:00",
+  "scene": "Winter 1225-26 — the Isle of Man",
+  "title": "The charges weighed — the Order of Odin, and who can speak for Valdemar",
+  "icon": "⚖️",
+  "timeline": "❄️ Winter 1225-26",
+  "date": "Winter 1225-26",
+  "cast": [
+   "Valdemar Bjornsson",
+   "Wilhelm Stienauer",
+   "Valerian de Castellane"
+  ],
+  "activity_type": "Politics",
+  "notes": "Played 2026-10-03. Scores from the character sheets: Valerian, Code of Hermes 3 (Political Intrigue), Civil & Canon Law 6, Common Law 4; Wilhelm, Code of Hermes 2.",
+  "body_text": "Wilhelm shares what he learned at Durenmar, including his copy of the complaint. It gives Valdemar more to work with than he had: an **Order of Odin** accusation and a **molestation of the fae** accusation.\n**The Order of Odin, as the covenant generally understands it**, is a catch-all, not a structure, closer to what goes on at Carnac than to anything the Order of Hermes does. Some groups outside the Order have come into the fold, under ex Miscellanea or by training under other magi, and most have let their older traditions go. A few stubborn holdouts keep bespoke amalgams of magic, not unlike Valdemar's mix of Hermetic Arts and viktir.\nGenerally they are treated as a milder, far-off version of the Diedne: wrong-headed and in need of correction, a nuisance rather than an existential threat. Should they become a threat, the Order would do it all again.\nWilhelm's reading, from casual digging at Durenmar, is that the term is a **convenient catch-all**: closer to a geographical label than an organisation, lumping together distinct practices that would never get along, and at times a historical bogeyman.\n**Valdemar's line**: you accuse me of belonging to an order that doesn't exist; and as for the fae, she married me. She is my wife. Leave us alone.\n**Who can defend him?** **Valerian** knows the law best: Code of Hermes 3 (Political Intrigue), Civil & Canon Law 6, Common Law 4. But he is not in good standing. He knows that members of the Rhine Tribunal have suborned the bishopric of Liège; he was imprisoned for it until the covenant rescued him; and the only place to bring that charge would be the Grand Tribunal. Wilhelm has Code of Hermes 2.\n**Wilhelm's worry**: the charge may be a pretext to make Valdemar show his rune magic in public. Integrating rune magic would be a big prize, and forcing him to write it up could leave him too useful to the Order to be let go: an anchor for years, perhaps for life."
  }
 ]

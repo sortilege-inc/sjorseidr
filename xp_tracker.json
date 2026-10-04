@@ -2702,22 +2702,6 @@
    "covenant": null,
    "source": "foundry"
   },
-  "Dagmar::1224-winter": {
-   "activity": true,
-   "deferred": false,
-   "act": "teaching",
-   "xp": 7,
-   "xpType": "Aquam",
-   "targets": [
-    {
-     "type": "Aquam",
-     "xp": 7
-    }
-   ],
-   "detail": "teaching: Aquam+7 (taught by Éogan)",
-   "covenant": null,
-   "source": "foundry"
-  },
   "Valdemar Bjornsson::1224-winter": {
    "activity": true,
    "deferred": false,

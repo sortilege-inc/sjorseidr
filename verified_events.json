@@ -3202,22 +3202,21 @@
  },
  {
   "file": "095_2026-09-12_éogan-teaches-aquam;-valdemar-and-dagmar.md",
-  "title": "Éogan teaches Aquam; Valdemar and Dagmar study it",
+  "title": "Éogan teaches Aquam; Valdemar studies it",
   "icon": "💧",
   "activity_type": "Study",
   "cast": [
    "Éogan Dobhartha",
-   "Valdemar Bjornsson",
-   "Dagmar"
+   "Valdemar Bjornsson"
   ],
   "timeline": "❄️ Winter 1224-25",
   "date": "Winter 1224-25",
   "sort_iso": "1224-12-20T12:00",
-  "notes": "The winter lesson at the Isle-of-Man lab. Foundry XP: Valdemar Aquam +12, Dagmar Aquam +7, Éogan Teaching +2 (covenant service). Supersedes the retired declared plan of Dagmar studying Finesse — his diary confirms he studied Aquam from Éogan instead. Session recap 2026-09-12 (Ars Magica transcript). · Approved (owner review 2026-09-19).",
+  "notes": "The winter lesson at the Isle-of-Man lab. Foundry XP: Valdemar Aquam +12, Éogan Teaching +2 (covenant service). Session recap 2026-09-12 (Ars Magica transcript). · Approved (owner review 2026-09-19). · Retcon (owner, 2026-10-04): Dagmar dropped from the lesson, since Hermetic Arts are taught only one-on-one (ArM5 core, Teaching); his Aquam +7 is removed, and he will take a different activity that winter.",
   "season_activity": false,
   "status": "Historical",
-  "body_text": "His Hermetic command of the water elemental having failed where his viktir working held it, **Valdemar** resolves to lean into the form the Isle-of-Man lab most favors. **Éogan** — the covenant's strongest Aquam magus — teaches **Aquam** over the winter; **Valdemar** (declining to take the harder viktir-conversion route, this time learning Aquam straight) and **Dagmar** both study under him. It is Éogan's covenant service for the year.",
-  "body_html": "<p>His Hermetic command of the water elemental having failed where his viktir working held it, <strong>Valdemar</strong> resolves to lean into the form the Isle-of-Man lab most favors. <strong>Éogan</strong> — the covenant&#39;s strongest Aquam magus — teaches <strong>Aquam</strong> over the winter; <strong>Valdemar</strong> (declining to take the harder viktir-conversion route, this time learning Aquam straight) and <strong>Dagmar</strong> both study under him. It is Éogan&#39;s covenant service for the year.</p>"
+  "body_text": "His Hermetic command of the water elemental having failed where his viktir working held it, **Valdemar** resolves to lean into the form the Isle-of-Man lab most favors. **Éogan** — the covenant's strongest Aquam magus — teaches **Aquam** over the winter, and **Valdemar** (declining to take the harder viktir-conversion route, this time learning Aquam straight) studies under him. It is Éogan's covenant service for the year.",
+  "body_html": "<p>His Hermetic command of the water elemental having failed where his viktir working held it, <strong>Valdemar</strong> resolves to lean into the form the Isle-of-Man lab most favors. <strong>Éogan</strong> — the covenant&#39;s strongest Aquam magus — teaches <strong>Aquam</strong> over the winter, and <strong>Valdemar</strong> (declining to take the harder viktir-conversion route, this time learning Aquam straight) studies under him. It is Éogan&#39;s covenant service for the year.</p>"
  },
  {
   "file": "",

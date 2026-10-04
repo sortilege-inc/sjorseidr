@@ -1,6 +1,7 @@
 /* Storyteller rail — a sticky table-of-contents down the left margin of the
-   Storyteller pages (Open Questions, Next-Session Scenes, Reference Guide). It links
-   the whole Storyteller area: the pages, plus the Open-Questions type views.
+   Storyteller pages (Open Questions, Next-Session Scenes). It links the whole
+   Storyteller area: the pages (including the Reference Guide, which has no rail of
+   its own), plus the Open-Questions type views.
    On Open Questions the type links switch the view in-place (via window.stSetType);
    from the Scenes page they deep-link with ?type=. Hidden when the window is
    too narrow to hold a rail beside the centred column. */
@@ -9,8 +10,7 @@
   var here = (location.pathname.split('/').pop() || '');
   var onOQ = here === 'open_questions.html';
   var onNS = here === 'next_session_scenes.html';
-  var onRG = here === 'reference_guide.html';
-  if (!onOQ && !onNS && !onRG) return;
+  if (!onOQ && !onNS) return;
 
   var TYPES = [
     ['all', 'All', '▦'], ['Question', 'Questions', '❓'], ['Thread', 'Threads', '🧵'],
@@ -52,7 +52,7 @@
     '<a class="str-page ' + (onOQ ? 'cur' : '') + '" href="open_questions.html">❓ Open Questions</a>' +
     '<div class="str-subs">' + subs + '</div>' +
     '<a class="str-page ' + (onNS ? 'cur' : '') + '" href="next_session_scenes.html">🎬 Next-Session Scenes</a>' +
-    '<a class="str-page ' + (onRG ? 'cur' : '') + '" href="reference_guide.html">📜 Reference Guide</a>';
+    '<a class="str-page" href="reference_guide.html">📜 Reference Guide</a>';
   document.body.appendChild(nav);
 
   function highlight(t) {

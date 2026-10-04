@@ -6541,7 +6541,7 @@
       },
       {
        "name": "The Diedne Garden",
-       "q": 3,
+       "q": 5,
        "art": "he"
       }
      ],
@@ -6592,8 +6592,8 @@
        "name": "The Diedne Garden",
        "art": "he",
        "expected": 3,
-       "received": 3,
-       "note": "Valdemar, Spring 1224 (three Herbam herbs)"
+       "received": 5,
+       "note": "Valdemar, Spring 1224 — mistletoe 3, selago 0, samolus 2 (after Confidence): an unusually strong yield"
       },
       {
        "name": "Norman Barrow Frost",
@@ -7718,7 +7718,7 @@
       },
       {
        "name": "Fire From the Sky",
-       "q": 37,
+       "q": 33,
        "art": "te"
       },
       {
@@ -7753,7 +7753,7 @@
       },
       {
        "name": "The Diedne Garden",
-       "q": 3,
+       "q": 5,
        "art": "he"
       },
       {
