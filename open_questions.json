@@ -747,17 +747,6 @@
    "resolution": ""
   },
   {
-   "id": "q059",
-   "type": "Tool",
-   "category": "Special Handling",
-   "status": "Open",
-   "title": "Stijntje Kuiper — apprentice XP seasons (special handling)",
-   "raised_in": "Companion XP review, 2026-10-04",
-   "raised_event": "",
-   "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** they are an apprentice, so the two-work, two-free pattern doesn't fit. *Apprentices*: 'One convention that has become standard throughout the Order is to have the apprentice assist the parens when not being instructed. In long-term advancement terms this means one season of Teaching experience points and three seasons of Exposure experience points.' And: 'In the first year, the parens Opens the Arts, so the apprentice gains Exposure experience in every season, for 8 experience points.' Their Arts opened in Summer 1222.\n\n**RECOMMENDED (14 seasons):**\n\n- **Before their Opening** (Spring, Summer and Fall 1221; Spring 1222): treated like any character. Exposure +2 Latin in Spring 1221, Practice +4 Latin otherwise.\n- **Summer 1222 to Winter 1222-23** (their first apprentice year): Exposure +2 Magic Theory each season.\n- **Spring 1224 conflict:** Dustin's Foundry diary has him teaching them the Inventive Genius Virtue (no XP) that season, and the Virtue is on their sheet; they are also in the Rody and Cruachan stories. Recommended: the teaching season, as Foundry has it.\n- **Summer 1224:** adventure, +5 to allocate (Dustin gathers the Summer Fog and brings them along to learn Aquam by doing).\n- **Winter 1224-25; Summer, Fall and Winter 1225:** Exposure +2 Magic Theory, assisting their parens.\n- **Spring 1225 (pending):** Dustin's declared plan has him 'teaches Aquam in Spring 1225', and 'Stijntje will copy books'. Core: 'A magus must personally teach the apprentice for at least one season per year'. 1225 has no teaching season for them unless they are that Aquam student. Ask Dustin's player.",
-   "resolution": ""
-  },
-  {
    "id": "q060",
    "type": "Tool",
    "category": "Special Handling",
@@ -800,6 +789,17 @@
    "raised_event": "",
    "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** her 1225 seasons follow her player's declared plan, which still has two open questions: q051 (the Source Quality of her English practice, and her Winter teaching exposure) and q056 (teaching Dagmar's crew instead).\n\n**RECOMMENDED (4 seasons), once those settle:**\n\n- **Spring 1225:** Exposure +2 English (settling in).\n- **Summer and Fall 1225:** Practice English, +4 unless q051 grants 8.\n- **Winter 1225-26:** teaching Furtum, Exposure +2 Teaching.",
    "resolution": ""
+  },
+  {
+   "id": "q065",
+   "type": "Tool",
+   "category": "System / Tooling",
+   "status": "Open",
+   "title": "Henri's Good Teacher in Foundry — review how lesson entries apply it",
+   "raised_in": "Stijntje XP review, 2026-10-04",
+   "raised_event": "",
+   "resolution": "",
+   "context": "Core teaching: 'Teacher's Communication + Teaching + 3 + bonus', with 'a +6 bonus' for a single student; Good Teacher adds 'five to the Advancement Total of anyone who studies with you.' Henri (Com 4, Teaching 7, Good Teacher) should give a single student 25, or 26 with a specialty.\n\n**WHAT FOUNDRY SHOWS** (every lesson naming Henri as teacher):\n\n- **Working:** Dustin, Winter 1222-23 (+25) and Fall 1223 (+26); Éogan, Spring, Summer and Fall 1224 (+26, +26, +25). Each is the entry's Source Quality + 6 + 5.\n- **Broken, now fixed:** Stijntje, Spring 1223 Magic Theory gave 14, the Source Quality alone. The entry's option was 'standard' rather than 'single student', and Good Teacher did not apply. Corrected to 25 in Foundry and the tracker (2026-10-04).\n- **Correct at 20:** Stijntje's 1220 lessons (Latin, Artes Liberales, Philosophiae) each stopped at the Gain Limit, Henri's own score ('may not gain any experience points towards the next level from that source').\n- **Tracker mismatch:** Dustin, Winter 1222-23 reads +22 in the tracker (marked GM ruling) against +25 in Foundry. Confirm which stands.\n\n**TO SETTLE:** check in Foundry whether Good Teacher comes from the teacher's sheet automatically or has to be added by hand on each lesson, so future lessons come out right (Sama and Father Lachlan have Good Teacher too)."
   }
  ],
  "gmReference": {

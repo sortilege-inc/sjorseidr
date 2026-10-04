@@ -1410,17 +1410,17 @@
    "activity": true,
    "deferred": false,
    "act": "teaching",
-   "xp": 14,
+   "xp": 25,
    "xpType": "Magic Theory",
    "targets": [
     {
      "type": "Magic Theory",
-     "xp": 14
+     "xp": 25
     }
    ],
-   "detail": "teaching: Magic Theory+14",
+   "detail": "teaching: Magic Theory+25 (taught by Henri; corrected from 14)",
    "covenant": null,
-   "source": "foundry"
+   "source": "owner-corrected 2026-10-04"
   },
   "Stijntje Kuiper::1223-summer": {
    "activity": true,
@@ -11351,14 +11351,14 @@
    "deferred": false,
    "act": "practice",
    "xp": 4,
-   "xpType": "Magic Theory*",
+   "xpType": "Magic Theory",
    "targets": [
     {
-     "type": "Magic Theory*",
+     "type": "Magic Theory",
      "xp": 4
     }
    ],
-   "detail": "practice: Magic Theory*+4",
+   "detail": "practice: Magic Theory+4",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
   },
@@ -11367,14 +11367,14 @@
    "deferred": false,
    "act": "practice",
    "xp": 4,
-   "xpType": "Magic Theory*",
+   "xpType": "Magic Theory",
    "targets": [
     {
-     "type": "Magic Theory*",
+     "type": "Magic Theory",
      "xp": 4
     }
    ],
-   "detail": "practice: Magic Theory*+4",
+   "detail": "practice: Magic Theory+4",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
   },
@@ -11415,14 +11415,14 @@
    "deferred": false,
    "act": "practice",
    "xp": 4,
-   "xpType": "Magic Theory*",
+   "xpType": "Magic Theory",
    "targets": [
     {
-     "type": "Magic Theory*",
+     "type": "Magic Theory",
      "xp": 4
     }
    ],
-   "detail": "practice: Magic Theory*+4",
+   "detail": "practice: Magic Theory+4",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
   },
@@ -11431,14 +11431,14 @@
    "deferred": false,
    "act": "practice",
    "xp": 4,
-   "xpType": "Magic Theory*",
+   "xpType": "Magic Theory",
    "targets": [
     {
-     "type": "Magic Theory*",
+     "type": "Magic Theory",
      "xp": 4
     }
    ],
-   "detail": "practice: Magic Theory*+4",
+   "detail": "practice: Magic Theory+4",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
   },
@@ -11479,14 +11479,14 @@
    "deferred": false,
    "act": "practice",
    "xp": 4,
-   "xpType": "Magic Theory*",
+   "xpType": "Magic Theory",
    "targets": [
     {
-     "type": "Magic Theory*",
+     "type": "Magic Theory",
      "xp": 4
     }
    ],
-   "detail": "practice: Magic Theory*+4",
+   "detail": "practice: Magic Theory+4",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
   },
@@ -11511,14 +11511,14 @@
    "deferred": false,
    "act": "practice",
    "xp": 4,
-   "xpType": "Magic Theory*",
+   "xpType": "Magic Theory",
    "targets": [
     {
-     "type": "Magic Theory*",
+     "type": "Magic Theory",
      "xp": 4
     }
    ],
-   "detail": "practice: Magic Theory*+4",
+   "detail": "practice: Magic Theory+4",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
   },
@@ -11575,14 +11575,14 @@
    "deferred": false,
    "act": "practice",
    "xp": 4,
-   "xpType": "Magic Theory*",
+   "xpType": "Magic Theory",
    "targets": [
     {
-     "type": "Magic Theory*",
+     "type": "Magic Theory",
      "xp": 4
     }
    ],
-   "detail": "practice: Magic Theory*+4",
+   "detail": "practice: Magic Theory+4",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
   },
@@ -11607,14 +11607,14 @@
    "deferred": false,
    "act": "practice",
    "xp": 4,
-   "xpType": "Magic Theory*",
+   "xpType": "Magic Theory",
    "targets": [
     {
-     "type": "Magic Theory*",
+     "type": "Magic Theory",
      "xp": 4
     }
    ],
-   "detail": "practice: Magic Theory*+4",
+   "detail": "practice: Magic Theory+4",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
   },
@@ -11623,14 +11623,14 @@
    "deferred": false,
    "act": "practice",
    "xp": 4,
-   "xpType": "Magic Theory*",
+   "xpType": "Magic Theory",
    "targets": [
     {
-     "type": "Magic Theory*",
+     "type": "Magic Theory",
      "xp": 4
     }
    ],
-   "detail": "practice: Magic Theory*+4",
+   "detail": "practice: Magic Theory+4",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
   },
@@ -12023,6 +12023,225 @@
    "detail": "exposure: Theology - Christian+2",
    "covenant": null,
    "source": "owner-approved companion recommendation 2026-10-04"
+  },
+  "Stijntje Kuiper::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Language: Latin+2",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Language: Latin+4",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Language: Latin+4",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Language: Latin",
+   "targets": [
+    {
+     "type": "Language: Latin",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Language: Latin+4",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Magic Theory+2 (Opening of the Arts)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Magic Theory+2 (first apprentice year)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Magic Theory+2 (first apprentice year)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 0,
+   "xpType": "Virtue",
+   "targets": [],
+   "detail": "teaching: the Inventive Genius Virtue, taught by Dustin (no XP)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Aquam",
+   "targets": [
+    {
+     "type": "Aquam",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Aquam+5 (the Summer Fog)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Magic Theory+2 (assisting her parens)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 10,
+   "xpType": "Aquam",
+   "targets": [
+    {
+     "type": "Aquam",
+     "xp": 10
+    }
+   ],
+   "detail": "teaching: Aquam+10 (taught by Dustin; capped at his Aquam score of 5)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Magic Theory+2 (assisting her parens)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Magic Theory+2 (assisting her parens)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Stijntje Kuiper::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Magic Theory+2 (assisting her parens)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
   }
  }
 }
