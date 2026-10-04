@@ -159,20 +159,20 @@
   "id": "p103",
   "file": "",
   "sort_iso": "1225-04-06T12:00",
-  "session": "2026-09-19",
-  "scene": "1225 — Oléron, then the sea",
-  "title": "Dagmar's 1225: teachers, then the sea-skeleton dive (declared)",
-  "icon": "💀",
+  "session": "2026-10-04",
+  "scene": "Spring 1225 — the Falcon's Cliff, Oléron, and north to Éogan",
+  "title": "Dagmar's Spring 1225: the Falcon's Cliff, Oléron, Éogan, and a spell to read auras (declared)",
+  "icon": "🧭",
   "timeline": "🌼 Spring 1225",
-  "date": "1225",
+  "date": "Spring 1225",
   "cast": [
    "Dagmar"
   ],
-  "activity_type": "Adventuring",
+  "activity_type": "Lab Work",
   "status": "Proposed",
-  "notes": "Declared 1225 plan. The sea-skeleton is the sunken remains Dagmar has eyed; 'learn from vis' = studying vis at/from it. Dagmar goes to Oléron first.",
-  "source": "Session recap 2026-09-19 (Ars Magica transcript) + owner notes.",
-  "body_text": "Declared: Dagmar heads to **Oléron first** to find **teachers**, then plans to return to the **skeleton in the sea** — casting **Lungs of the Fish** to dive and **examine the skeleton**, and to **learn from vis** there."
+  "notes": "Declared. Owner ruling 2026-10-04: the spring works because Dagmar is in his lab aboard the Tide of Memory while it sails. The teachers he meant to find for his crew are no longer needed, since Sama is joining the Tide of Memory. The spell's level is still to be confirmed with his player; at Lab Total 37 a level-15 spell takes one season and a level-20 spell two.",
+  "source": "Session recap 2026-09-19 + owner notes; revised per Dagmar's player's notes, forwarded by the owner 2026-10-04; owner rulings 2026-10-04.",
+  "body_text": "• **The Falcon's Cliff:** Dagmar harvests the source, taking the **Vim**, and does some trading along the way.\n• **Oléron:** his route takes him south to touch base briefly, then back **north to meet Éogan** and collect a **Lungs of the Fish** talisman.\n• **In the lab:** the travel takes only a week or two of his own time, so he spends the season in his laboratory aboard the Tide of Memory **researching a new Intellego Vim spell to analyze the nature of auras** (his Intellego Vim Lab Total is 37)."
  },
  {
   "file": "",
@@ -920,5 +920,43 @@
   "activity_type": "Study",
   "notes": "Player notes 2026-10-04; Sama's start moved to Spring 1225 and she joins the Tide of Memory (owner). Player's XP: Spring exposure English +2; Summer and Fall practice English (Source Quality to be set by the owner with the player); Winter teaching exposure +2, which must go to Teaching or the language of instruction (under GM review). Not in the XP tracker until approved.",
   "body_text": "• **Spring 1225:** Sama sets up her home with the covenant, picking up English.\n• **Summer and Fall 1225:** practises her English.\n• **Winter 1225-26:** teaches Furtum the Teaching ability."
+ },
+ {
+  "file": "",
+  "session": "2026-10-04",
+  "status": "Proposed",
+  "source": "Dagmar's player's notes, forwarded by the owner 2026-10-04; owner rulings 2026-10-04.",
+  "id": "p146",
+  "sort_iso": "1225-06-25T12:00",
+  "scene": "Summer 1225 — the sea-serpent skeleton",
+  "title": "Dagmar's Summer 1225: studying raw vis at the sea-serpent skeleton (declared)",
+  "icon": "💀",
+  "timeline": "☀️ Summer 1225",
+  "date": "Summer 1225",
+  "cast": [
+   "Dagmar"
+  ],
+  "activity_type": "Study",
+  "notes": "Declared. Owner ruling 2026-10-04: Dagmar has a Lungs of the Fish talisman in his possession, made by Éogan. The study details are to be reviewed together with the GM.",
+  "body_text": "Dagmar takes the **Lungs of the Fish** talisman and some pawns of **Vim, Rego and Aquam vis** to the **sea-serpent skeleton** and its powerful magical aura (where he studied the Aegis in 1221), and spends the season **studying from raw vis**.\nHe means to study **Rego**, but if the aura proves more conducive to **Vim** or **Aquam** he will study one of those instead."
+ },
+ {
+  "file": "",
+  "session": "2026-10-04",
+  "status": "Proposed",
+  "source": "Dagmar's player's notes, forwarded by the owner 2026-10-04; owner rulings 2026-10-04.",
+  "id": "p147",
+  "sort_iso": "1225-04-13T12:00",
+  "scene": "1225 — a major city",
+  "title": "Heynric takes the dragon-gold to market, and looks for traders (declared)",
+  "icon": "🪙",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "cast": [
+   "Heynric the Merchant"
+  ],
+  "activity_type": "Trade",
+  "notes": "Declared. Which ship and which city are still to be decided.",
+  "body_text": "Heynric is dispatched on a ship heading to or past a **major city** to see what he can do with the **gold**, with a couple of grogs for protection.\nHis secondary mission: find people who can, and would be willing to, **join the covenant as professional traders and financial advisers**. After last year's trading (the fleet's 1224 trade seasons came to −34 overall), the covenant wants them."
  }
 ]
