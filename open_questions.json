@@ -582,17 +582,6 @@
    "resolution": ""
   },
   {
-   "id": "q043",
-   "type": "Question",
-   "category": "Covenant Business",
-   "status": "Open",
-   "title": "Furtum's ship, shipyard lab, and his 1224–1225 seasons",
-   "raised_in": "Session transcript 2026-10-03 + owner answers 2026-10-04",
-   "raised_event": "p137",
-   "context": "Furtum came to Man with Dustin in Fall 1224 and spends his 1224 coordinating the start of a **shipyard** in the natural harbor. He enters the story proper in **1225**. He has no ship yet, and owning one is the covenant's requirement, so he means to build a **lab at the shipyard** in order to enchant one. The island's lab is free for his use in spring, summer and autumn while its owners sail. By Winter 1225-26 the shipyard is well underway.\n\n**Timing:** his player is set up to enter at 1226 (the XP tracker starts him Summer 1226). The GM's fallback is to treat his 1224–1225 XP as what he gets over the next couple of years, or to move his birth year earlier.\n\n**FOLLOW-UP:** his player is sending notes on his 1225. Then decide the ship (built here?), the shipyard lab's rules, and how his 1224–1225 seasons are logged.\n\n**Update (owner, 2026-10-04):** Furtum's start moves to **Spring 1225**. His player's 1225 seasons are drafted as p144: shipyard and lab (Spring, Summer), recruiting the master shipwright **Fuchs Scipwyrhta** (Fall), taught Teaching by Sama (Winter). Open: the lab figures (q052), the teaching numbers (q051), and the ship itself.",
-   "resolution": ""
-  },
-  {
    "id": "tl029",
    "type": "Tool",
    "category": "System / Tooling",
@@ -686,10 +675,10 @@
    "id": "q052",
    "type": "Question",
    "category": "Rules",
-   "title": "Furtum's shipyard lab — the numbers (review together)",
+   "title": "Furtum's shipyard — its lab, his ship, and how his 1224–1225 seasons are logged (review together)",
    "raised_in": "Player notes forwarded by the owner, 2026-10-04.",
    "raised_event": "p144",
-   "context": "Player's lab: Spacious; Exposed; Empty ×3; Damp. Size ×6 (+1), Refinement 0, General Quality 0, Upkeep +2, Safety +2, Warping 0, Health −6, Aesthetics −5; +1 Auram, +1 Aquam (cites Hermetic Projects p.60).\n\nAgainst *Covenants*:\n\n- Spacious: '+2 Safety, +1 Aesthetics.' Exposed: '–1 Safety, +1 Upkeep, –2 Health, –1 Aesthetics; +1 Au.' Empty (each): '–1 Aesthetics, either +1 Upkeep or –1 Health.' Damp: '+1 Upkeep, –1 Health, –1 Aesthetics; +1 Aq.'\n- Taking each Empty as −1 Health: **Upkeep +2 and Health −6 match**, but **Safety comes to +1 (not +2) and Aesthetics to −4 (not −5)**.\n- The +1 Auram and +1 Aquam come from Exposed and Damp themselves. Hermetic Projects isn't in my corpus, so its p.60 is unchecked.\n- Spacious is allowed for a new lab: 'If building a lab from scratch and if space permits, you may choose to start with this Virtue, without needing an extra season of work.'\n- 'Size ×6 (+1)' needs confirming. Empty is taken 'for every full two points by which the Size of the lab exceeds the occupied Size', so three Empties means 6 points of unused Size.\n\n**FOLLOW-UP:** settle the figures, then record the lab."
+   "context": "**BACKGROUND (merged from q043, 2026-10-04):** Furtum came to Man with Dustin in Fall 1224 and spent the rest of his 1224 coordinating the start of a **shipyard** in the natural harbor (p137). Owning a ship is the covenant's one requirement and he has none yet, so he means to build a **lab at the shipyard** to enchant one. The island's lab is free for his use in spring, summer and autumn while its owners sail. His start date is now **Spring 1225** (owner, 2026-10-04); his player's 1225 seasons are drafted as p144, including recruiting the master shipwright **Fuchs Scipwyrhta** in the fall. By Winter 1225-26 the shipyard is well underway.\n\n**THE LAB — the numbers:**\n\nPlayer's lab: Spacious; Exposed; Empty ×3; Damp. Size ×6 (+1), Refinement 0, General Quality 0, Upkeep +2, Safety +2, Warping 0, Health −6, Aesthetics −5; +1 Auram, +1 Aquam (cites Hermetic Projects p.60).\n\nAgainst *Covenants*:\n\n- Spacious: '+2 Safety, +1 Aesthetics.' Exposed: '–1 Safety, +1 Upkeep, –2 Health, –1 Aesthetics; +1 Au.' Empty (each): '–1 Aesthetics, either +1 Upkeep or –1 Health.' Damp: '+1 Upkeep, –1 Health, –1 Aesthetics; +1 Aq.'\n- Taking each Empty as −1 Health: **Upkeep +2 and Health −6 match**, but **Safety comes to +1 (not +2) and Aesthetics to −4 (not −5)**.\n- The +1 Auram and +1 Aquam come from Exposed and Damp themselves. Hermetic Projects isn't in my corpus, so its p.60 is unchecked.\n- Spacious is allowed for a new lab: 'If building a lab from scratch and if space permits, you may choose to start with this Virtue, without needing an extra season of work.'\n- 'Size ×6 (+1)' needs confirming. Empty is taken 'for every full two points by which the Size of the lab exceeds the occupied Size', so three Empties means 6 points of unused Size.\n\n**STILL OPEN:**\n\n- The lab figures above.\n- **The ship itself:** is it built at this shipyard, and when?\n- **His Fall 1224 – Winter 1224-25 shipyard work** falls before his Spring 1225 start: log it, or let it stand as backstory?\n- The teaching numbers for Winter 1225-26 are q051.\n\n**FOLLOW-UP:** settle these, then record the lab and approve p144."
   },
   {
    "status": "Open",

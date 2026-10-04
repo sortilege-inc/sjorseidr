@@ -908,6 +908,17 @@
       "raised_event": "p108",
       "status": "Resolved",
       "resolution": "Resolved 2026-10-04 (owner): Valdemar reads Insights from Twilight in Spring 1224 only (+11 Magic Theory, recorded). Summer and Fall 1224 were adventures and take adventure XP (see q050). Foundry still needs the +11 (tl030)."
+    },
+    {
+      "id": "q043",
+      "type": "Question",
+      "category": "Covenant Business",
+      "status": "Resolved",
+      "title": "Furtum's ship, shipyard lab, and his 1224–1225 seasons",
+      "raised_in": "Session transcript 2026-10-03 + owner answers 2026-10-04",
+      "raised_event": "p137",
+      "context": "Furtum came to Man with Dustin in Fall 1224 and spends his 1224 coordinating the start of a **shipyard** in the natural harbor. He enters the story proper in **1225**. He has no ship yet, and owning one is the covenant's requirement, so he means to build a **lab at the shipyard** in order to enchant one. The island's lab is free for his use in spring, summer and autumn while its owners sail. By Winter 1225-26 the shipyard is well underway.\n\n**Timing:** his player is set up to enter at 1226 (the XP tracker starts him Summer 1226). The GM's fallback is to treat his 1224–1225 XP as what he gets over the next couple of years, or to move his birth year earlier.\n\n**FOLLOW-UP:** his player is sending notes on his 1225. Then decide the ship (built here?), the shipyard lab's rules, and how his 1224–1225 seasons are logged.\n\n**Update (owner, 2026-10-04):** Furtum's start moves to **Spring 1225**. His player's 1225 seasons are drafted as p144: shipyard and lab (Spring, Summer), recruiting the master shipwright **Fuchs Scipwyrhta** (Fall), taught Teaching by Sama (Winter). Open: the lab figures (q052), the teaching numbers (q051), and the ship itself.",
+      "resolution": "Merged into q052 (owner, 2026-10-04): its background and open points — the ship, the shipyard lab, how his 1224 seasons are logged — now live there."
     }
   ]
 }

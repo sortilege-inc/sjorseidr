@@ -75,6 +75,38 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .chips{grid-column:2;display:flex;flex-wrap:wrap;gap:4px}
 .chip{font-size:12px;padding:1px 7px;border-radius:9px;background:rgba(74,107,138,.12);color:#2f4a63;white-space:nowrap}
 body.hide-done .item.done{display:none}
+
+/* season × character calendar */
+.cal{margin:4px 0 6px;background:linear-gradient(180deg,rgba(255,250,236,.8),rgba(246,236,212,.8));border:1px solid rgba(120,90,40,.32);
+  border-radius:10px;padding:10px 12px 8px}
+.cal-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.cal-head h2{font-family:'Cinzel',serif;font-weight:600;font-size:15px;color:var(--teal);margin:0}
+.cal-head .hint{font-size:12.5px;font-style:italic;color:var(--ink-soft)}
+.cal-scroll{overflow-x:auto;max-width:100%}
+.cal table{border-collapse:separate;border-spacing:2px;font-size:12px;line-height:1}
+.cal th,.cal td{padding:0;text-align:center;white-space:nowrap}
+.cal thead th{font-family:'Cinzel',serif;font-weight:500;font-size:10px;letter-spacing:.03em;color:var(--ink-soft);padding:2px 0}
+.cal thead tr:first-child th{font-size:11px;color:var(--ink);border-bottom:1px solid rgba(120,90,40,.35)}
+.cal .who{text-align:left;position:sticky;left:0;background:#f4ead3;z-index:1;padding:0 8px 0 2px;font-family:'EB Garamond',Georgia,serif;
+  font-size:13px;color:var(--ink);cursor:pointer;max-width:170px;overflow:hidden;text-overflow:ellipsis}
+.cal .who:hover{color:var(--rust)}
+.cal .who.all{font-weight:600}
+.cal .who .t{font-size:10.5px;color:var(--ink-soft);font-style:italic;margin-left:4px}
+.cal td.c{width:24px;height:20px;border-radius:4px;cursor:pointer;color:var(--ink);font-weight:600;background:rgba(120,90,40,.05)}
+.cal td.c.z{cursor:default;color:transparent}
+.cal td.c:not(.z):hover{outline:2px solid var(--gold-bright)}
+.cal td.c.yr{border-left:1px dashed rgba(120,90,40,.35)}
+.cal td.c.any{border-left:2px solid rgba(120,90,40,.35)}
+.cal td.c.on, .cal .who.on, .cal th.on{outline:2px solid var(--rust-bright);outline-offset:-1px}
+.cal th.s{cursor:pointer}
+.cal th.s:hover{color:var(--rust)}
+.cal tr.sep td{height:4px}
+.cal-more{font-size:12.5px;color:var(--teal);cursor:pointer;background:none;border:none;padding:4px 0 0;font-family:'EB Garamond',Georgia,serif}
+@media (max-width:560px){.cal .who{max-width:112px;font-size:12px}.cal .who .t{display:none}}
+.filterbar{display:none;margin:8px 0 2px;padding:6px 10px;border-radius:8px;background:rgba(181,74,50,.1);border:1px solid rgba(181,74,50,.35);font-size:14px}
+.filterbar.on{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.filterbar button{font-family:'Cinzel',serif;font-size:11px;padding:3px 9px;border-radius:6px;border:1px solid rgba(120,90,40,.45);background:#f3e8cc;cursor:pointer}
+.item.nomatch, .group.nomatch, .sec.nomatch{display:none}
 .empty{font-style:italic;color:var(--ink-soft);padding:8px 0}
 footer{margin-top:34px;border-top:1px solid rgba(120,90,40,.4);padding-top:12px;font-size:13px;color:var(--ink-soft);line-height:1.45}
 </style>
@@ -86,6 +118,8 @@ footer{margin-top:34px;border-top:1px solid rgba(120,90,40,.4);padding-top:12px;
     <h1>Action Items</h1>
     <p class="subtitle">One checklist of everything waiting on a decision or an edit, gathered from the Open Questions, the proposed Chronicle events, the XP tracker and the Next-Session slate. Nothing here is new; every row links back to where it lives.</p>
   </header>
+  <section class="cal" id="cal" aria-label="Open items by season and character"></section>
+  <div class="filterbar" id="filterbar"></div>
   <div class="toolbar">
     <span id="jumps"></span>
     <span class="tools">
@@ -126,7 +160,7 @@ function itemHtml(o){
     const k = o.key + '#' + hash(t), d = !!TICKS[k];
     return `<label class="sub ${d?'done':''}"><input type="checkbox" data-key="${esc(k)}" ${d?'checked':''}><span>${md(t)}</span></label>`;
   }).join('');
-  return `<div class="item k-${o.kind} ${done?'done':''}">
+  return `<div class="item k-${o.kind} ${done?'done':''}" data-key="${esc(o.key)}">
     <input type="checkbox" data-key="${esc(o.key)}" ${done?'checked':''} aria-label="Done: ${esc(o.title)}">
     <div class="ttl">${o.id?`<span class="id">${esc(o.id)}</span>`:''}${md(o.title)}</div>
     ${o.meta||o.link?`<div class="meta">${o.meta?esc(o.meta):''}${o.meta&&o.link?' · ':''}${o.link?`<a href="${esc(o.link)}">${esc(o.linkText||'open')} →</a>`:''}</div>`:''}
@@ -138,6 +172,7 @@ function itemHtml(o){
 
 function section(id, title, blurb, groups){
   const all = groups.flatMap(g => g.items);
+  ALL.push(...all);
   const done = all.filter(o => TICKS[o.key]).length;
   const body = groups.map(g => {
     if (!g.items.length) return '';
@@ -157,12 +192,21 @@ async function load(){
   const [OQ, P, X, NS] = await Promise.all([get('open_questions.json'), get('proposed_events.json'), get('xp_tracker.json'), get('next_session_scenes.json')]);
   const HIDDEN = ['Resolved','Archived','Closed'];
   const live = OQ.items.filter(q => !HIDDEN.includes(q.status));
-  const oqItem = q => ({
-    key: 'oq:'+q.id, kind: (q.type||'').toLowerCase(), id: q.id, title: q.title,
-    meta: [q.category, q.status && q.status!=='Open' ? q.status : ''].filter(Boolean).join(' · '),
-    link: 'open_questions.html?q='+encodeURIComponent(q.id), linkText: 'Open Questions',
-    next: nextSteps(q.context), subs: bullets(q.context)
-  });
+  ALL = [];
+  ROSTER = buildRoster(X.members);
+  const evById = Object.fromEntries(P.map(e => [e.id, e]));
+  const oqItem = q => {
+    const ev = evById[q.raised_event];
+    const chars = new Set(namesIn(q.title));
+    if (ev) (ev.cast || []).forEach(n => chars.add(resolveName(n)));
+    const seasons = new Set([...parseSeasons(q.title), ...(ev ? eventSeasons(ev) : [])]);
+    return {
+      key: 'oq:'+q.id, kind: (q.type||'').toLowerCase(), id: q.id, title: q.title,
+      meta: [q.category, q.status && q.status!=='Open' ? q.status : ''].filter(Boolean).join(' · '),
+      link: 'open_questions.html?q='+encodeURIComponent(q.id), linkText: 'Open Questions',
+      next: nextSteps(q.context), subs: bullets(q.context), chars: [...chars], seasons: [...seasons]
+    };
+  };
   const byType = t => live.filter(q => q.type === t).map(oqItem);
   const secs = [];
 
@@ -187,7 +231,8 @@ async function load(){
         key: 'ev:'+e.id+':'+hash(e.title+(e.body_text||'')), kind: 'event', id: e.id, title: e.title,
         meta: [e.date, (e.cast||[]).join(', ')].filter(Boolean).join(' · '),
         link: 'sjorseidr_chronicle.html', linkText: 'Chronicle',
-        next: /⚠|Check before approving|to be chosen|still to be/i.test(e.notes||'') ? [e.notes] : []
+        next: /⚠|Check before approving|to be chosen|still to be/i.test(e.notes||'') ? [e.notes] : [],
+        chars: [...new Set((e.cast||[]).map(resolveName))], seasons: eventSeasons(e)
       }))
     }))));
 
@@ -210,7 +255,8 @@ async function load(){
       items: (gaps[t] || []).map(({ m, miss }) => ({
         key: 'xp:'+m.id+':'+hash(miss.map(s=>s.id).join()), kind: 'xp', title: m.name,
         meta: `${miss.length} season${miss.length>1?'s':''} without an entry${m.role ? ' · ' + m.role : ''}`,
-        link: 'xp_tracker.html', linkText: 'XP tracker', chips: miss.map(s => s.label)
+        link: 'xp_tracker.html', linkText: 'XP tracker', chips: miss.map(s => s.label),
+        chars: [m.id], seasons: miss.map(s => s.id)
       }))
     }))));
 
@@ -222,7 +268,9 @@ async function load(){
       key: 'ns:'+s.id+':'+hash(paras.join()+s.status), kind: 'scene', id: s.id, title: s.title,
       meta: [s.status, (s.seasons||[]).join(', ')].filter(Boolean).join(' · '),
       link: 'next_session_scenes.html#'+encodeURIComponent(s.id), linkText: 'Next Session',
-      next: paras.length ? paras : (s.hook ? [s.hook] : [])
+      next: paras.length ? paras : (s.hook ? [s.hook] : []),
+      chars: [...new Set([...(s.magi||[]), ...(s.npcs||[])].map(resolveName))],
+      seasons: [...new Set((s.seasons||[]).flatMap(parseSeasons))]
     });
   }
   secs.push(section('prep', 'Scene prep', 'Next-Session scenes marked Needs prep, plus every scene’s STILL TO PREP list.', [{ items: prep }]));
@@ -233,7 +281,158 @@ async function load(){
 
   $('#content').innerHTML = secs.map(s => s.html).join('');
   $('#jumps').innerHTML = secs.map(s => `<a class="jump" href="#${s.id}">${esc(s.title)} <b>${s.n}</b></a>`).join(' ');
+  renderCal();
+  applyFilter();
 }
+
+/* ── tagging: characters and seasons ─────────────────────────────── */
+let ALL = [], ROSTER = null;
+let FILTER = { char: null, season: null }, SHOW_ALL_ROWS = false;
+const SEASON_ORDER = ['spring', 'summer', 'fall', 'winter'];
+const SEASON_ABBR = { spring: 'Sp', summer: 'Su', fall: 'Fa', winter: 'Wi', year: 'yr' };
+const SEASON_NAME = { spring: 'Spring', summer: 'Summer', fall: 'Fall', winter: 'Winter' };
+const normKey = s => String(s || '').normalize('NFC').toLowerCase().replace(/[’‘]/g, "'").trim();
+// Names on the site that refer to the same person as a roster entry.
+const ALIAS = { 'willhelm stienauer': 'Wilhelm Stienauer', 'willhelm': 'Wilhelm Stienauer', 'erik aelfson': 'Eric', 'erik': 'Eric',
+  'garrett': 'Garrat Coffin', 'garrat': 'Garrat Coffin', 'isabeau': 'Isabeau (aka Foxglove)', 'foxglove': 'Isabeau (aka Foxglove)',
+  'henri': 'Henri (failed apprentice)', 'carl schmidt': 'Carl', 'isaac schmidt': 'Isaac', 'rónán': 'Ronan', 'carl & isaac': 'Carl' };
+const FIRST_STOP = new Set(['father', 'captain', 'sister', 'the']);
+function buildRoster(members) {
+  const byKey = {}, first = {}, type = {};
+  for (const m of members) {
+    byKey[normKey(m.id)] = m.id; byKey[normKey(m.name)] = m.id; type[m.id] = m.type;
+    const f = normKey(m.name.split(/[\s(]/)[0]);
+    if (f.length >= 3 && !FIRST_STOP.has(f)) (first[f] ||= []).push(m.id);
+  }
+  const firstUnique = Object.fromEntries(Object.entries(first).filter(([, v]) => v.length === 1).map(([k, v]) => [k, v[0]]));
+  // Title-scan vocabulary: full names, unique first names, and the aliases.
+  const vocab = new Map();
+  for (const m of members) vocab.set(normKey(m.name), m.id);
+  for (const [k, v] of Object.entries(firstUnique)) vocab.set(k, v);
+  for (const [k, v] of Object.entries(ALIAS)) vocab.set(k, v);
+  ['eric', 'fuchs', 'heynric', 'rán', 'ronan'].forEach(k => { if (!vocab.has(k)) vocab.set(k, k === 'rán' ? 'Rán' : k[0].toUpperCase() + k.slice(1)); });
+  return { byKey, firstUnique, type, vocab };
+}
+function resolveName(n) {
+  const k = normKey(n);
+  if (ROSTER.byKey[k]) return ROSTER.byKey[k];
+  if (ALIAS[k]) return ALIAS[k];
+  const f = normKey(String(n).split(/[\s(]/)[0]);
+  if (ROSTER.firstUnique[f]) return ROSTER.firstUnique[f];
+  return String(n).trim();
+}
+function namesIn(text) {
+  const t = normKey(text), out = new Set();
+  for (const [k, id] of ROSTER.vocab) {
+    const re = new RegExp('(?<![\\p{L}\\p{N}])' + k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?![\\p{L}\\p{N}])', 'u');
+    if (re.test(t)) out.add(id);
+  }
+  return [...out];
+}
+// "Spring 1225", "Spring & Fall 1224", "Winter 1224-25" → season ids; a bare year or "1225–1226" → year ids.
+function parseSeasons(txt) {
+  const out = new Set(); let pending = [];
+  const re = /(spring|summer|fall|autumn|winter)|\b(12\d\d)(?:\s*[-–]\s*(\d{2,4}))?\b/gi;
+  let m;
+  while ((m = re.exec(String(txt || '')))) {
+    if (m[1]) { pending.push(m[1].toLowerCase() === 'autumn' ? 'fall' : m[1].toLowerCase()); continue; }
+    const y = +m[2];
+    if (pending.length) { pending.forEach(p => out.add(y + '-' + p)); pending = []; }
+    else {
+      out.add(y + '-year');
+      if (m[3] && m[3].length === 4) for (let z = y + 1; z <= +m[3]; z++) out.add(z + '-year');
+    }
+  }
+  return [...out];
+}
+const eventSeasons = e => { const d = parseSeasons(e.date); return d.length ? d : parseSeasons(e.timeline); };
+const seasonLabel = id => { const [y, s] = id.split('-'); return s === 'year' ? `${y} (whole year)` : s === 'winter' ? `Winter ${y}-${String(+y + 1).slice(2)}` : `${SEASON_NAME[s]} ${y}`; };
+
+/* ── the calendar ───────────────────────────────────────────────── */
+function renderCal() {
+  const prevScroll = document.querySelector('.cal-scroll')?.scrollLeft;
+  const open = ALL.filter(o => !TICKS[o.key]);
+  const years = new Set(), yearOnly = new Set(), cnt = {}, rowTot = {};
+  const add = (c, s) => { cnt[c + '|' + s] = (cnt[c + '|' + s] || 0) + 1; };
+  for (const o of open) {
+    o.seasons.forEach(s => { const [y, k] = s.split('-'); years.add(+y); if (k === 'year') yearOnly.add(+y); });
+    const ss = o.seasons.length ? o.seasons : ['any'];
+    const cs = o.chars.length ? o.chars : ['Covenant-wide'];
+    for (const c of cs) { rowTot[c] = (rowTot[c] || 0) + 1; ss.forEach(s => add(c, s)); }
+    ss.forEach(s => add('*', s));
+  }
+  if (!open.length) { $('#cal').innerHTML = '<p class="empty">No open items.</p>'; return; }
+  const ys = [...years].sort((a, b) => a - b);
+  const yrange = ys.length ? Array.from({ length: ys[ys.length - 1] - ys[0] + 1 }, (_, i) => ys[0] + i) : [];
+  const cols = [];
+  for (const y of yrange) { SEASON_ORDER.forEach(s => cols.push(y + '-' + s)); if (yearOnly.has(y)) cols.push(y + '-year'); }
+  cols.push('any');
+  const TYPE_RANK = { magus: 0, companion: 1, grog: 2, familiar: 3 };
+  const rank = c => c === 'Covenant-wide' ? 1.5 : (TYPE_RANK[ROSTER.type[c]] ?? 4);
+  const rows = Object.keys(rowTot).sort((a, b) => rank(a) - rank(b) || rowTot[b] - rowTot[a] || a.localeCompare(b));
+  const mainRows = rows.filter(c => rank(c) <= 1.5 || c === FILTER.char);
+  const shown = SHOW_ALL_ROWS ? rows : mainRows;
+  const max = Math.max(1, ...Object.entries(cnt).filter(([k]) => !k.startsWith('*|')).map(([, v]) => v));
+  const cell = (c, s) => {
+    const n = cnt[c + '|' + s] || 0;
+    const on = (FILTER.season === s) && (c === '*' ? !FILTER.char : FILTER.char === c);
+    const a = n ? (0.15 + 0.6 * Math.min(1, n / max)).toFixed(2) : 0;
+    const cls = ['c', n ? '' : 'z', s.endsWith('-year') ? 'yr' : '', s === 'any' ? 'any' : '', on ? 'on' : ''].join(' ');
+    const lbl = s === 'any' ? 'no season' : seasonLabel(s);
+    return `<td class="${cls}" ${n ? `data-c="${esc(c)}" data-s="${esc(s)}" title="${esc((c === '*' ? 'All' : c) + ' · ' + lbl + ': ' + n + ' open')}" style="background:rgba(181,74,50,${a})"` : ''}>${n || ''}</td>`;
+  };
+  const typeTag = c => ({ magus: 'magus', companion: 'comp.', grog: 'grog', familiar: 'fam.' }[ROSTER.type[c]] || '');
+  const yearHead = yrange.map(y => `<th colspan="${4 + (yearOnly.has(y) ? 1 : 0)}">${y}</th>`).join('') + '<th rowspan="2" class="s" data-s="any">any</th>';
+  const seasonHead = cols.filter(s => s !== 'any').map(s => `<th class="s ${FILTER.season === s && !FILTER.char ? 'on' : ''}" data-s="${s}" title="${esc(seasonLabel(s))}">${SEASON_ABBR[s.split('-')[1]]}</th>`).join('');
+  const body = [`<tr><th class="who all ${!FILTER.char && !FILTER.season ? '' : ''}" data-c="*">All</th>${cols.map(s => cell('*', s)).join('')}</tr>`, '<tr class="sep"><td></td></tr>']
+    .concat(shown.map(c => `<tr><th class="who ${FILTER.char === c && !FILTER.season ? 'on' : ''}" data-c="${esc(c)}" title="${esc(c)} — ${rowTot[c]} open">${esc(c)}<span class="t">${typeTag(c)} ${rowTot[c]}</span></th>${cols.map(s => cell(c, s)).join('')}</tr>`)).join('');
+  const hidden = rows.length - shown.length;
+  $('#cal').innerHTML = `<div class="cal-head"><h2>Open items by season & character</h2><span class="hint">Click a count, a name or a season to filter the list below. Ticked items aren't counted.</span></div>
+    <div class="cal-scroll"><table><thead><tr><th></th>${yearHead}</tr><tr><th></th>${seasonHead}</tr></thead><tbody>${body}</tbody></table></div>
+    ${rows.length > mainRows.length ? `<button class="cal-more" type="button" id="calMore">${SHOW_ALL_ROWS ? 'Show magi & companions only' : `Show grogs and others too (${hidden} more)`}</button>` : ''}`;
+  // keep the reader's place; on first draw, open on the most recent seasons
+  const sc = document.querySelector('.cal-scroll');
+  if (sc) sc.scrollLeft = prevScroll != null ? prevScroll : sc.scrollWidth;
+}
+function itemMatches(o) {
+  if (FILTER.char && !(o.chars.length ? o.chars : ['Covenant-wide']).includes(FILTER.char)) return false;
+  if (FILTER.season) {
+    if (FILTER.season === 'any') return !o.seasons.length;
+    if (!o.seasons.includes(FILTER.season)) return false;
+  }
+  return true;
+}
+function applyFilter() {
+  const on = FILTER.char || FILTER.season;
+  const byKey = Object.fromEntries(ALL.map(o => [o.key, o]));
+  let shown = 0;
+  document.querySelectorAll('.item[data-key]').forEach(el => {
+    const o = byKey[el.dataset.key]; const ok = !on || (o && itemMatches(o));
+    el.classList.toggle('nomatch', !ok); if (ok && o) shown++;
+  });
+  document.querySelectorAll('.group, .sec').forEach(g => {
+    const any = g.querySelector('.item[data-key]:not(.nomatch)');
+    g.classList.toggle('nomatch', !!on && !any);
+    if (on && any && g.tagName === 'DETAILS') g.open = true;
+  });
+  const fb = $('#filterbar');
+  if (!on) { fb.classList.remove('on'); fb.innerHTML = ''; return; }
+  const what = [FILTER.char && FILTER.char !== '*' ? FILTER.char : '', FILTER.season ? (FILTER.season === 'any' ? 'no season' : seasonLabel(FILTER.season)) : ''].filter(Boolean).join(' · ');
+  fb.innerHTML = `<span>Showing <b>${shown}</b> item${shown === 1 ? '' : 's'} for <b>${esc(what)}</b>.</span><button type="button" id="clearFilter">Show everything</button>`;
+  fb.classList.add('on');
+}
+document.addEventListener('click', e => {
+  if (e.target.id === 'clearFilter') { FILTER = { char: null, season: null }; renderCal(); applyFilter(); return; }
+  if (e.target.id === 'calMore') { SHOW_ALL_ROWS = !SHOW_ALL_ROWS; renderCal(); return; }
+  const t = e.target.closest('#cal [data-c], #cal [data-s]');
+  if (!t) return;
+  let c = t.dataset.c || null, s = t.dataset.s || null;
+  if (c === '*') c = null;
+  const same = FILTER.char === c && FILTER.season === s;
+  FILTER = same ? { char: null, season: null } : { char: c, season: s };
+  renderCal(); applyFilter();
+  if (!same) document.querySelector('.sec:not(.nomatch)')?.scrollIntoView({ block: 'start' });
+});
 
 document.addEventListener('change', e => {
   const k = e.target && e.target.dataset && e.target.dataset.key;
@@ -247,6 +446,7 @@ document.addEventListener('change', e => {
     const boxes = [...sec.querySelectorAll('.item > input[type=checkbox]')];
     sec.querySelector('.tally').textContent = `${boxes.filter(b=>b.checked).length} of ${boxes.length} ticked`;
   }
+  if (e.target.closest('.item > input')) renderCal();
 });
 $('#hideDone').onclick = () => { const on = document.body.classList.toggle('hide-done'); $('#hideDone').classList.toggle('on', on); };
 $('#clearTicks').onclick = () => { if (confirm('Clear every tick on this page?')) { TICKS = {}; saveTicks(); load(); } };
