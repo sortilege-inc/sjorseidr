@@ -461,17 +461,6 @@
    ]
   },
   {
-   "id": "q035",
-   "type": "Question",
-   "category": "Covenant Business",
-   "title": "Which Roots did Wilhelm bring back from Durenmar? Enter them in the library at L6/Q24.",
-   "context": "Wilhelm's declared 1225 Durenmar trip (p104) includes sourcing one or more Roots — the standard foundational Art summae, adopted as L6/Q24 and Redcap-deliverable “for a very small consideration” (ruling q034). The specific Arts are the owner's call and have not been chosen.\n\n**FOLLOW-UP:** once the trip is played, decide which Root(s) Wilhelm obtains, add each to the covenant library at L6/Q24 (covenant_ledger.json library.books), and log the “small consideration” cost.\n\n**Update (2026-10-03 session):** played. Wilhelm ordered the Roots at Durenmar and brought them home without difficulty. The GM has the list in a separate file. **FOLLOW-UP:** add each title to the library at L6/Q24 and log the 'small consideration' cost. The nine-Arts problem in the Durenmar scene (only nine Arts have a Root; the fifteen titles there are placeholders) still applies.",
-   "raised_in": "Player notes forwarded by owner, 2026-09-20",
-   "raised_event": "p104",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
    "id": "q037",
    "type": "Tool",
    "category": "Character",

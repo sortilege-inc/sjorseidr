@@ -7501,6 +7501,46 @@
        "level": null,
        "quality": 11,
        "topic": "Spell Mastery"
+      },
+      {
+       "title": "On the Discernment of Truths",
+       "location": "With Wilhelm (copied at Durenmar)",
+       "type": "Summa",
+       "level": 6,
+       "quality": 23,
+       "topic": "Intellego"
+      },
+      {
+       "title": "Proteus Bound",
+       "location": "With Wilhelm (copied at Durenmar)",
+       "type": "Summa",
+       "level": 6,
+       "quality": 23,
+       "topic": "Muto"
+      },
+      {
+       "title": "The Green Mantle",
+       "location": "With Wilhelm (copied at Durenmar)",
+       "type": "Summa",
+       "level": 6,
+       "quality": 23,
+       "topic": "Herbam"
+      },
+      {
+       "title": "First Sparks",
+       "location": "With Wilhelm (copied at Durenmar)",
+       "type": "Summa",
+       "level": 6,
+       "quality": 23,
+       "topic": "Ignem"
+      },
+      {
+       "title": "Of Beasts and Their Natures",
+       "location": "With Wilhelm (copied at Durenmar)",
+       "type": "Summa",
+       "level": 6,
+       "quality": 23,
+       "topic": "Animal"
       }
      ],
      "labTexts": [
@@ -8022,6 +8062,15 @@
    "kind": "note",
    "summary": "Wilhelm's household joins",
    "detail": "Wilhelm's scribe Hilda, research assistants Carl and Isaac, and his brother Dietrich travel with him (aboard the Brineborn in 1223, the Hound of Cassel from 1224). Guests — not counted against ship crew.",
+   "refs": []
+  },
+  {
+   "season": "Spring 1225",
+   "sort_iso": "1225-04-07",
+   "facet": "library",
+   "kind": "add",
+   "summary": "Five Roots of the Arts copied at Durenmar",
+   "detail": "With the librarian's permission, Wilhelm's scribe Hilda copies the five Roots held at Durenmar in one season, copying quickly (Quality 23 rather than 24): Intellego, Muto, Herbam, Ignem and Animal, each a Level 6 summa. They come home with Wilhelm in Winter 1225-26. The titles are placeholders.",
    "refs": []
   }
  ],
