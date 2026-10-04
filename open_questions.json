@@ -740,10 +740,76 @@
    "type": "Tool",
    "category": "Character Build",
    "status": "Open",
-   "title": "Grog adventure XP — choose what the +5s apply to; Maelstrom's Maw crew; grogs possibly on adventures",
+   "title": "Adventure XP (grogs and companions) — choose what the +5s apply to; grogs possibly on adventures",
    "raised_in": "Grog XP fill, owner-approved 2026-10-04",
    "raised_event": "",
-   "context": "The grog XP tracker was filled through Winter 1225-26 (owner, 2026-10-04): every missing season got Exposure +2 or Practice +4 by the core pattern (two working seasons and two free ones a year), and Oliver, Erik Aelfson, Rónán and Philippe are now tracked from Winter 1224-25.\n\n**ALLOCATE (+5 each, recorded but unassigned).** Adventure experience 'may be split between any number of Abilities', with 'a maximum of five Adventure experience points to a single Ability or Art.' In Foundry each is an unapplied diary entry at Source Quality 5, ready to allocate there:\n\n- **Isaac**, 🌼 Spring 1224: The assistants return: the madness cost, and the brass acorn\n- **Carl**, 🌼 Spring 1224: The assistants return: the madness cost, and the brass acorn\n- **Leofwin**, 🌼 Spring 1224: Wolves at dusk in the Diedne Garden *(draft event — confirm)*\n- **Isabeau (aka Foxglove)**, 🌼 Spring 1224: Foxglove robs the dragon\n- **Isabeau (aka Foxglove)**, ☀️ Summer 1224: Foxglove fences the dragon's gold in London; The crown delivered: Mímormr freed\n- **Rónán the Slender**, 🌼 Spring 1225: Éogan finds the capricorn again *(draft event — confirm)*\n\n**CONFIRM:**\n\n- **The Maelstrom's Maw crew** (Hob, Cy, Galan, Rostan) have no entries from Winter 1221-22, assumed away with Kor on sabbatical (68 seasons). If they stayed in covenant service, they need routine seasons.\n- **Named in an approved event but not in its cast**, so given a routine season: Hilda (Summer 1223, the Tribunal), Angus (Spring and Fall 1224, Carnac), Isabeau (Spring 1221). (Absalom's Summer 1221 and 1222 turned out to be adventures already recorded in Foundry; the tracker now matches.) Switch any to adventure if they were there.\n- **Valdemar's grog drills** (p138) would add a Single Weapon teaching season for drilled grogs in 1225 once approved.\n\n**Note:** six grog seasons already had allocated adventure diary entries in Foundry that the tracker lacked (Isabeau Fall 1224, Gerard and Adam Summer 1223, Leonhardt Spring 1221, Absalom Summer 1221 and 1222). The tracker now copies Foundry for those.",
+   "context": "The grog XP tracker was filled through Winter 1225-26 (owner, 2026-10-04): every missing season got Exposure +2 or Practice +4 by the core pattern (two working seasons and two free ones a year), and Oliver, Erik Aelfson, Rónán and Philippe are now tracked from Winter 1224-25.\n\n**ALLOCATE (+5 each, recorded but unassigned).** Adventure experience 'may be split between any number of Abilities', with 'a maximum of five Adventure experience points to a single Ability or Art.' In Foundry each is an unapplied diary entry at Source Quality 5, ready to allocate there:\n\n- **Isaac**, 🌼 Spring 1224: The assistants return: the madness cost, and the brass acorn\n- **Carl**, 🌼 Spring 1224: The assistants return: the madness cost, and the brass acorn\n- **Leofwin**, 🌼 Spring 1224: Wolves at dusk in the Diedne Garden *(draft event — confirm)*\n- **Isabeau (aka Foxglove)**, 🌼 Spring 1224: Foxglove robs the dragon\n- **Isabeau (aka Foxglove)**, ☀️ Summer 1224: Foxglove fences the dragon's gold in London; The crown delivered: Mímormr freed\n- **Rónán the Slender**, 🌼 Spring 1225: Éogan finds the capricorn again *(draft event — confirm)*\n\n**COMPANIONS (+5 each, unapplied in Foundry, Source Quality 5):**\n\n- **Garrat Coffin**, 🌼 Spring 1224: the Diedne Garden harvest and the wolves at dusk *(draft events — confirm)*. Independent Study: 'add three to the Source Quality of his Adventure experience.'\n- **Heynric the Merchant**, 🌼 Spring 1225: takes the dragon-gold to market and looks for traders *(draft event — confirm)*\n\n**CONFIRM:**\n\n- **Named in an approved event but not in its cast**, so given a routine season: Hilda (Summer 1223, the Tribunal), Angus (Spring and Fall 1224, Carnac), Isabeau (Spring 1221). (Absalom's Summer 1221 and 1222 turned out to be adventures already recorded in Foundry; the tracker now matches.) Switch any to adventure if they were there.\n- **Valdemar's grog drills** (p138) would add a Single Weapon teaching season for drilled grogs in 1225 once approved.\n\n**Note:** six grog seasons already had allocated adventure diary entries in Foundry that the tracker lacked (Isabeau Fall 1224, Gerard and Adam Summer 1223, Leonhardt Spring 1221, Absalom Summer 1221 and 1222). The tracker now copies Foundry for those.\n\n**Settled (owner, 2026-10-04):** the Maelstrom's Maw crew (Hob, Cy, Galan, Rostan) went with Kor on sabbatical, so they have no entries from Winter 1221-22.\n\n**Companion XP (owner, 2026-10-04):** Garrat, Pieter, Heynric, Henri and Father Lachlan are filled through Winter 1225-26 and pushed to Foundry. Father Lachlan's Spring 1221 keeps both Foundry adventures (Kraken's Egg, and Meeting the Duke of Limburg), although core says an adventure 'takes a whole season'. Heynric was given a Teaching ability in Foundry for his Spring 1223 lessons to Valdemar.",
+   "resolution": ""
+  },
+  {
+   "id": "q059",
+   "type": "Tool",
+   "category": "Special Handling",
+   "status": "Open",
+   "title": "Stijntje Kuiper — apprentice XP seasons (special handling)",
+   "raised_in": "Companion XP review, 2026-10-04",
+   "raised_event": "",
+   "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** they are an apprentice, so the two-work, two-free pattern doesn't fit. *Apprentices*: 'One convention that has become standard throughout the Order is to have the apprentice assist the parens when not being instructed. In long-term advancement terms this means one season of Teaching experience points and three seasons of Exposure experience points.' And: 'In the first year, the parens Opens the Arts, so the apprentice gains Exposure experience in every season, for 8 experience points.' Their Arts opened in Summer 1222.\n\n**RECOMMENDED (14 seasons):**\n\n- **Before their Opening** (Spring, Summer and Fall 1221; Spring 1222): treated like any character. Exposure +2 Latin in Spring 1221, Practice +4 Latin otherwise.\n- **Summer 1222 to Winter 1222-23** (their first apprentice year): Exposure +2 Magic Theory each season.\n- **Spring 1224 conflict:** Dustin's Foundry diary has him teaching them the Inventive Genius Virtue (no XP) that season, and the Virtue is on their sheet; they are also in the Rody and Cruachan stories. Recommended: the teaching season, as Foundry has it.\n- **Summer 1224:** adventure, +5 to allocate (Dustin gathers the Summer Fog and brings them along to learn Aquam by doing).\n- **Winter 1224-25; Summer, Fall and Winter 1225:** Exposure +2 Magic Theory, assisting their parens.\n- **Spring 1225 (pending):** Dustin's declared plan has him 'teaches Aquam in Spring 1225', and 'Stijntje will copy books'. Core: 'A magus must personally teach the apprentice for at least one season per year'. 1225 has no teaching season for them unless they are that Aquam student. Ask Dustin's player.",
+   "resolution": ""
+  },
+  {
+   "id": "q060",
+   "type": "Tool",
+   "category": "Special Handling",
+   "status": "Open",
+   "title": "Ka'wa'ill — XP pattern and adventures (special handling)",
+   "raised_in": "Companion XP review, 2026-10-04",
+   "raised_event": "",
+   "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** his player's 1220–22 Foundry entries put every non-adventure season into language practice at **+3**, four seasons a year. Core: 'In almost all cases, the Source Quality for practice is four', and 'practicing a language in a community where it is the native tongue merits a Source Quality of eight, until your score in the language reaches 5.'\n\n**RECOMMENDED (14 seasons):**\n\n- **Choose the pattern:** two working seasons a year (Exposure +1 Awareness / +1 Single Weapon, the guard default) and two free (Practice +4 English), leaving his past entries as they are. The alternative is four practice seasons a year, treating his background as genuinely free.\n- **Spring 1220:** Foundry has 'Meeting the Covenant and the Kraken Egg Hunt' applied with **no XP allocated**. Allocate it (+5 recommended).\n- **Spring 1224:** adventure, +5 to allocate (the Diedne Garden harvest and the wolves at dusk; draft events).\n- **Spring 1225:** adventure, +5 to allocate (the annual Kraken's Egg run).",
+   "resolution": ""
+  },
+  {
+   "id": "q061",
+   "type": "Tool",
+   "category": "Special Handling",
+   "status": "Open",
+   "title": "Rán — no Foundry sheet to aim XP at (special handling)",
+   "raised_in": "Companion XP review, 2026-10-04",
+   "raised_event": "",
+   "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** Rán's Foundry sheet is blank (one ability, Magic Theory 5, and no Virtues or Flaws), so there is nothing to aim routine XP at. 15 seasons are missing, from Spring 1222 (their one entry is the Summer 1223 adventure).\n\n**TO SETTLE:**\n\n- Build Rán's sheet (role, Virtues and Flaws, abilities), or confirm Rán stays a sketch.\n- Then fill their seasons by the same pattern: two working (Exposure +2 in their trade), two free (Practice +4).",
+   "resolution": ""
+  },
+  {
+   "id": "q062",
+   "type": "Tool",
+   "category": "Special Handling",
+   "status": "Open",
+   "title": "Rosie — whether familiars are XP-tracked (special handling)",
+   "raised_in": "Companion XP review, 2026-10-04",
+   "raised_event": "",
+   "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** Rosie is Dustin's familiar, not a companion. The tracker lists her from Spring 1220 with no entries (24 seasons). Her Foundry sheet has Awareness, Hunt, Survival and Athletics.\n\n**TO SETTLE:**\n\n- Decide whether familiars are tracked season by season. If not, drop her from the XP gaps; if so, choose a pattern for her.",
+   "resolution": ""
+  },
+  {
+   "id": "q063",
+   "type": "Tool",
+   "category": "Special Handling",
+   "status": "Open",
+   "title": "Dietrich — blank Foundry sheet; teaching seasons (special handling)",
+   "raised_in": "Companion XP review, 2026-10-04",
+   "raised_event": "",
+   "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** his Foundry sheet ('Deitrich Stienauer') is blank and still carries The Gift (see tl030). 12 seasons are missing, from Spring 1223.\n\n**TO SETTLE:**\n\n- Build his sheet first (un-Gifted; companion).\n- His card says he is a Cologne master 'who must teach at least two seasons a year to keep his standing', so his working seasons are teaching: 'A teacher may gain exposure to Teaching or the language of instruction, but cannot do anything else in a season when she is teaching.'\n- His free seasons in 1224–25 include self-initiation via Magic Lore (from his card), which needs your ruling on what it costs and teaches.",
+   "resolution": ""
+  },
+  {
+   "id": "q064",
+   "type": "Tool",
+   "category": "Special Handling",
+   "status": "Open",
+   "title": "Sama — 1225 seasons wait on q051 and q056 (special handling)",
+   "raised_in": "Companion XP review, 2026-10-04",
+   "raised_event": "",
+   "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** her 1225 seasons follow her player's declared plan, which still has two open questions: q051 (the Source Quality of her English practice, and her Winter teaching exposure) and q056 (teaching Dagmar's crew instead).\n\n**RECOMMENDED (4 seasons), once those settle:**\n\n- **Spring 1225:** Exposure +2 English (settling in).\n- **Summer and Fall 1225:** Practice English, +4 unless q051 grants 8.\n- **Winter 1225-26:** teaching Furtum, Exposure +2 Teaching.",
    "resolution": ""
   }
  ],

@@ -207,8 +207,12 @@ async function load(){
       next: nextSteps(q.context), subs: bullets(q.context), chars: [...chars], seasons: [...seasons]
     };
   };
-  const byType = t => live.filter(q => q.type === t).map(oqItem);
+  const SPECIAL = q => q.category === 'Special Handling';
+  const byType = t => live.filter(q => q.type === t && !SPECIAL(q)).map(oqItem);
   const secs = [];
+
+  secs.push(section('special', 'Special handling', 'Characters held out of a routine pass because they need individual treatment (the Open Questions’ Special Handling items).',
+    [{ items: live.filter(SPECIAL).map(oqItem) }]));
 
   secs.push(section('rulings', 'Rulings & decisions', 'Open Questions that need your call before play can rely on them.',
     [{ items: byType('Question') }]));
@@ -242,7 +246,8 @@ async function load(){
   const gaps = {};
   for (const m of X.members) {
     const start = (m.firstSeason && SI[m.firstSeason] != null) ? SI[m.firstSeason] : S.findIndex(s => s.year >= (m.firstYear ?? 0));
-    const last = m.lastYear != null ? S.map(s => s.year).lastIndexOf(m.lastYear) : S.length - 1;
+    let last = m.lastYear != null ? S.map(s => s.year).lastIndexOf(m.lastYear) : S.length - 1;
+    if (m.awayFrom && SI[m.awayFrom] != null) last = Math.min(last, SI[m.awayFrom] - 1);  // away (e.g. on sabbatical): no entries expected
     const miss = [];
     for (let i = Math.max(0, start); i <= Math.min(end, last); i++) if (!X.entries[m.id + '::' + S[i].id]) miss.push(S[i]);
     if (miss.length) (gaps[m.type] ||= []).push({ m, miss });
