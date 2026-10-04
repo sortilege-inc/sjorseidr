@@ -245,6 +245,7 @@ async function load(){
   const end = SI[X.meta.reviewedThroughSeason] ?? S.length - 1;
   const gaps = {};
   for (const m of X.members) {
+    if (m.xpUntracked) continue;  // e.g. a familiar whose Might cancels routine XP
     const start = (m.firstSeason && SI[m.firstSeason] != null) ? SI[m.firstSeason] : S.findIndex(s => s.year >= (m.firstYear ?? 0));
     let last = m.lastYear != null ? S.map(s => s.year).lastIndexOf(m.lastYear) : S.length - 1;
     if (m.awayFrom && SI[m.awayFrom] != null) last = Math.min(last, SI[m.awayFrom] - 1);  // away (e.g. on sabbatical): no entries expected

@@ -930,6 +930,17 @@
       "raised_event": "p104",
       "status": "Resolved",
       "resolution": "Resolved 2026-10-04 (owner): option (a). With the librarian's permission, Hilda copied the five Durenmar Roots (Intellego, Muto, Herbam, Ignem, Animal) quickly in Spring 1225 — 30 points, one season, no vis — and they are in the covenant library at Level 6 / Quality 23. The other four Roots (Auram, Rego, Aquam, Vim) remain available by Redcap for 'a very small consideration', price unset. Hilda's season is not yet in the XP tracker (1225 seasons aren't reviewed)."
+    },
+    {
+      "id": "q062",
+      "type": "Tool",
+      "category": "Special Handling",
+      "status": "Resolved",
+      "title": "Rosie — whether familiars are XP-tracked (special handling)",
+      "raised_in": "Companion XP review, 2026-10-04",
+      "raised_event": "",
+      "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** Rosie is Dustin's familiar, not a companion. The tracker lists her from Spring 1220 with no entries (24 seasons). Her Foundry sheet has Awareness, Hunt, Survival and Athletics.\n\n**TO SETTLE:**\n\n- Decide whether familiars are tracked season by season. If not, drop her from the XP gaps; if so, choose a pattern for her.",
+      "resolution": "Owner, 2026-10-04: Rosie is not tracked season by season, and she is dropped from the XP gaps. Core lets familiars learn ('Familiars can learn Abilities in the same way as humans'), but she is a magic animal with Magic Might 7 (Foundry), and Realms of Power: Magic says 'the character's Might Score is always subtracted from its Advancement Total'. Routine Exposure (2) and Practice (4) therefore give her nothing. It also says animal-minded characters 'rarely gain experience points through any means other than Exposure'. Record a season for her only if a source clears her Might, such as Dustin teaching her, or vis she consumes ('If the character consumes a pawn of magic vis of any type, he may reduce the penalty to his Advancement Total by two')."
     }
   ]
 }

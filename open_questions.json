@@ -780,17 +780,6 @@
    "resolution": ""
   },
   {
-   "id": "q062",
-   "type": "Tool",
-   "category": "Special Handling",
-   "status": "Open",
-   "title": "Rosie — whether familiars are XP-tracked (special handling)",
-   "raised_in": "Companion XP review, 2026-10-04",
-   "raised_event": "",
-   "context": "The companion XP review (2026-10-04) filled every missing season for Garrat, Pieter, Heynric, Henri and Father Lachlan. The owner held this character back for special handling.\n\n**WHY SPECIAL:** Rosie is Dustin's familiar, not a companion. The tracker lists her from Spring 1220 with no entries (24 seasons). Her Foundry sheet has Awareness, Hunt, Survival and Athletics.\n\n**TO SETTLE:**\n\n- Decide whether familiars are tracked season by season. If not, drop her from the XP gaps; if so, choose a pattern for her.",
-   "resolution": ""
-  },
-  {
    "id": "q063",
    "type": "Tool",
    "category": "Special Handling",

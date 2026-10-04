@@ -282,7 +282,9 @@
    "role": "Familiar",
    "ship": "scholars-wake",
    "house": "",
-   "firstYear": 1220
+   "firstYear": 1220,
+   "xpUntracked": true,
+   "xpNote": "Not tracked season by season (owner, 2026-10-04): her Magic Might 7 is subtracted from every Advancement Total, so routine Exposure and Practice give nothing. Record only a season that clears it (teaching, or vis consumed)."
   },
   {
    "id": "Hilda",
