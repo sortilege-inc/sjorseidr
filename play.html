@@ -732,7 +732,7 @@ function signed(n){ n = n||0; return n>0 ? `+${n}` : `${n}`; }
 
 function charGridHtml(chars){
   return `<div class="char-grid">${CHAR_ORDER.map(k=>`
-    <div class="char-stat"><span class="cs-label">${CHAR_LABELS[k]}</span><span class="cs-val">${signed(chars[k])}</span></div>
+    <div class="char-stat"><span class="cs-label">${CHAR_LABELS[k]}</span><span class="cs-val">${chars[k]==null?'—':signed(chars[k])}</span></div>
   `).join('')}</div>`;
 }
 
@@ -1067,7 +1067,7 @@ function magusSheetHtml(m){
       ${m.discoveries && m.discoveries.length ? `<button class="sheet-tab" data-stab="discoveries">Discoveries <span class="st-n">${m.discoveries.length}</span></button>` : ''}
       ${m.reputations && m.reputations.length ? `<button class="sheet-tab" data-stab="reputations">Reputations <span class="st-n">${m.reputations.length}</span></button>` : ''}
     </div>
-    <div class="sheet-tp on" data-stab="abilities">${abilitiesHtml(m.abilities)}</div>
+    <div class="sheet-tp on" data-stab="abilities">${(!(m.abilities||[]).length && m.abilityPlan) ? `<div class="sheet-empty">${esc(m.abilityPlan)}</div>` : abilitiesHtml(m.abilities)}</div>
     <div class="sheet-tp" data-stab="virtues">${vfListHtml(m.virtues,'virtue')}</div>
     <div class="sheet-tp" data-stab="flaws">${vfListHtml(m.flaws,'flaw')}</div>
     ${m.qualities && m.qualities.length ? `<div class="sheet-tp" data-stab="qualities">${vfListHtml(m.qualities,'virtue')}</div>` : ''}

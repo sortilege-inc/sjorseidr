@@ -1231,19 +1231,10 @@
       "parens": "",
       "sigil": "A flash of blue light.",
       "biography": "Dietrich is Willhelm Stienauer's older brother — a mundane (un-Gifted) scholar, a professor of medicine and philosophy at a Cologne cathedral school, and a master there who must teach at least two seasons a year to keep his standing.\n\nHe is the polished public face of Willhelm's folk-magic thesis: at the 1223 Normandy Tribunal he worked the crowd of mundane scholars and Redcaps with formal scholastic rhetoric — pitching that the system lets the un-Gifted mine vis, find arcane connections, and do basic lab work, and that it is syncretic enough to function in Divine auras — while Willhelm himself kept a low profile. The whole project traces to the book Willhelm wrote so his mundane brother could learn magic; the technique survived Willhelm's own Gift-opening, which is why he can research it.\n\nReturned to Cologne to teach after the Tribunal (Spring 1224) — his plan to self-initiate via Magic Lore so he could formally teach the folk system alongside Magic Theory there went ahead as intended. Cologne is his home base, but he travels to give guest lectures — including a stint in Prague — so he may turn up teaching elsewhere for a season.",
-      "born": 1198,
-      "age": 25,
-      "apparentAge": 25,
-      "characteristics": {
-        "int": 0,
-        "per": 0,
-        "str": 0,
-        "sta": 0,
-        "pre": 0,
-        "com": 0,
-        "dex": 0,
-        "qik": 0
-      },
+      "born": 1194,
+      "age": 29,
+      "apparentAge": 29,
+      "characteristics": {},
       "size": 0,
       "confidence": {
         "label": "Confidence",
@@ -1329,8 +1320,60 @@
           "xp": 0
         }
       },
-      "virtues": [],
-      "flaws": [],
+      "virtues": [
+        {
+          "name": "Magister in Artibus (Art & Academe)",
+          "impact": "free (Social Status)",
+          "description": "You have incepted Master of Arts in one of the universities of Europe (Paris, Bologna, Oxford, Cambridge, Montpellier, Arezzo or Salamanca) and completed your two years’ regency of compulsory teaching. You are entitled to be addressed as Magister, are subject only to canon law, and may teach anywhere in Europe.\n\nYou are at least (25 – Int) years old, and must have scores of at least 5 in Latin and Artes Liberales. You have, however, spent eight years in a university, and gain an additional 30 experience points in each of those years, for a total of 240 additional experience points over and above your allowance based on age. You may buy Academic Abilities during character generation, and must spend your additional experience points on Academic Abilities or Teaching.\n\nYou must spend two seasons teaching to maintain yourself and your reputation as a dependable instructor. These two seasons are spread between September and June, so you are genuinely free in the summer. If you take the Poor flaw, you are still genuinely free in the summer. If you take the Wealthy virtue, you can maintain your reputation with a single season’s teaching.\n\nThis Virtue is only available to male characters, and is compatible with the Hermetic Magus, Mendicant Friar, and Priest Virtues.\n\n*Art & Academe:* In addition to the description of this Virtue in the regular rules (**ArM5**, page 45), the character begins with an Academic Reputation of 2. This Virtue is compatible with the Hermetic Magus, Mendicant Friar, and Priest Virtues."
+        },
+        {
+          "name": "Mythic (Intelligence)",
+          "impact": "minor (Heroic) — specialty still to choose",
+          "description": "Because of your great innate potential, you may take a specialty for one of your positive Characteristics, similar to an Ability specialty. Whenever this specific circumstance applies to one of your rolls for that Characteristic, you may treat your score as if it were one greater, and if you roll a potential botch, you reduce the number of dice by one. You may take this virtue more than once, though not for the same Characteristic.\n\nHere are some specialty suggestions for each Characteristic. *Intelligence:* brilliant ideas, quick thinker, great knowledge *Perception:* notices details, big picture, attuned to change *Strength:* killing blows, athletic prowess, brute strength *Stamina:* tireless will, iron constitution, Bacchus’s\n\nendurance *Presence:* alluring eyes, commanding presence, terrifying\n\nvisage *Communication:* prolific author, stirring speaker, strong\n\nleader *Dexterity:* nimble fingers, legendary aim, relentless attacker *Quickness:* lightning-fast defense, sudden strikes, short-distance runner"
+        },
+        {
+          "name": "Improved Characteristics",
+          "impact": "minor",
+          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Improved Characteristics",
+          "impact": "minor",
+          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+        },
+        {
+          "name": "True Beauty",
+          "impact": "minor — pending: not in the rulebook (nearest: Venus' Blessing)",
+          "description": "From the family lore note: 'strong/handsome as his father'."
+        },
+        {
+          "name": "Good Teacher",
+          "impact": "minor",
+          "description": "You can explain new concepts and skills with great facility. Add three to the Quality of any books that you write, and five to the Advancement Total of anyone who studies with you."
+        },
+        {
+          "name": "Book Learner",
+          "impact": "minor",
+          "description": "You have a talent for comprehending the writings of others. When studying from books, treat them as if they were three Quality levels higher than they actually are."
+        },
+        {
+          "name": "Puissant Ability (Philosophiae)",
+          "impact": "minor",
+          "description": "You are particularly adept with one Ability, and add 2 to its value whenever you use it. Note that you do not, in general, use an Ability when learning it, teaching it, or writing about it. You may only take this Virtue once for a given Ability, but may take it more than once for different Abilities."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Jealous",
+          "impact": "minor (Personality) — pending: the nearest named Flaw is Envious",
+          "description": "From the family lore note: 'Was jealous of his younger brother, but self-aware of it, and guilty about it.' Rated Minor, 'self-aware - used to be Major, but he went on pilgrimage'."
+        },
+        {
+          "name": "Close Family Ties",
+          "impact": "minor (Story)",
+          "description": "Your family is one of the most important things in your life, and still supports and aids you whenever possible, even at personal risk. Family members do not hesitate to do you any favor that is within their power, and can call on their friends and neighbors to help you. It works both ways, however; your family may require help from you some day."
+        }
+      ],
       "abilities": [],
       "spells": [],
       "personalityTraits": [
@@ -1338,12 +1381,19 @@
         "Formidable orator",
         "Protective of Willhelm"
       ],
-      "reputations": [],
+      "reputations": [
+        {
+          "name": "Academic 2",
+          "description": "From Magister in Artibus (Art & Academe): 'the character begins with an Academic Reputation of 2'."
+        }
+      ],
       "sanctum": "",
       "familiar": null,
       "activeWounds": [],
       "shortDescription": "Willhelm Stienauer's elder brother — a mundane Cologne professor of medicine and philosophy, and the public rhetorical voice of Willhelm's folk-magic thesis.",
-      "appearance": "Rugged and vigorous; strides about robustly pontificating on points of magical theory, covering good scholarship with genial banter."
+      "appearance": "Rugged and vigorous; strides about robustly pontificating on points of magical theory, covering good scholarship with genial banter.",
+      "abilityPlan": "Not yet bought. Planned (family lore note): high Artes Liberales and Philosophiae, medium Teaching, low Magic Lore and Magic Theory; the chronicle adds Medicine. Magister in Artibus requires 'scores of at least 5 in Latin and Artes Liberales'.",
+      "buildNote": "PARTIAL sheet (owner, 2026-10-04): Virtues and Flaws from the family lore note, with Art & Academe's free Magister in Artibus. Unbalanced — Virtues 7 points against Flaws 2; Characteristics and Abilities still to be bought. Not yet in Foundry."
     },
     "Drest": {
       "name": "Drest",
