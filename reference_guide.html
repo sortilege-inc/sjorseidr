@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reference Guide</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,500;0,600;1,400;1,500&display=swap');
+
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;
+  min-height:100vh;
+}
+.wrap{position:relative;z-index:1;max-width:1180px;margin:0 auto;padding:32px 20px 80px}
+a{color:var(--teal-bright)}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:14px}
+.crumb{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--rust-bright);margin:4px 0 2px}
+.subtitle{font-style:italic;color:var(--ink-soft);font-size:14.5px;margin:0}
+
+/* sticky toolbar: search + section jumps */
+.toolbar{position:sticky;top:0;z-index:5;background:linear-gradient(180deg,#efe3c6 85%,rgba(239,227,198,0));
+  padding:10px 0 12px;margin-bottom:6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.toolbar input{font-family:'EB Garamond',Georgia,serif;font-size:15px;padding:7px 11px;border:1.5px solid rgba(120,90,40,.45);
+  border-radius:8px;background:#f7efdb;color:var(--ink);min-width:220px;flex:1 1 220px;max-width:340px}
+.toolbar input:focus{outline:2px solid var(--gold-bright);outline-offset:1px}
+.jump{font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.03em;padding:5px 10px;border-radius:14px;
+  border:1px solid rgba(120,90,40,.4);background:rgba(255,250,235,.55);color:var(--ink-soft);text-decoration:none;white-space:nowrap}
+.jump:hover{background:rgba(198,155,63,.22);color:var(--ink)}
+.count{font-family:'Cinzel',serif;font-size:11.5px;color:var(--ink-soft);margin-left:auto}
+
+/* sections & panels */
+.sec{margin:22px 0 8px;scroll-margin-top:70px}
+.sec>h2{font-family:'Cinzel',serif;font-weight:600;font-size:21px;color:var(--rust-bright);margin:0 0 10px;
+  border-bottom:1px solid rgba(120,90,40,.35);padding-bottom:4px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,430px),1fr));gap:14px;align-items:start}
+.panel{background:linear-gradient(180deg,rgba(255,250,236,.78),rgba(246,236,212,.78));border:1.5px solid rgba(120,90,40,.4);
+  border-radius:10px;box-shadow:0 2px 6px rgba(50,32,12,.16);padding:12px 14px 12px;scroll-margin-top:70px;min-width:0}
+.panel.wide{grid-column:1/-1}
+.panel>h3{font-family:'Cinzel',serif;font-weight:600;font-size:15.5px;color:var(--teal);margin:0 0 8px;
+  display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.panel>h3 .ref{font-family:'EB Garamond',Georgia,serif;font-style:italic;font-weight:500;font-size:12px;color:var(--ink-soft);white-space:nowrap}
+.panel h4{font-family:'Cinzel',serif;font-weight:600;font-size:13px;color:var(--rust);margin:10px 0 4px}
+.panel p{margin:0 0 5px;font-size:14.5px;line-height:1.38}
+.panel p.ind{padding-left:18px}
+.panel p.note{font-style:italic;color:var(--ink-soft);font-size:13.5px}
+.panel ul{margin:2px 0 6px 0;padding-left:20px}
+.panel li{font-size:14.5px;line-height:1.36;margin:2px 0}
+.seq{font-size:14.5px;line-height:1.36;margin:2px 0;display:flex;gap:6px}
+.seq .m{flex:none;font-weight:600;color:var(--rust)}
+.seq.l1{padding-left:20px}.seq.l2{padding-left:40px}
+.formula{display:grid;grid-template-columns:minmax(120px,38%) 1fr;gap:3px 12px;align-items:baseline;
+  padding:5px 8px;margin:3px 0;background:rgba(198,155,63,.10);border-left:3px solid var(--gold-bright);border-radius:4px}
+.formula .lab{font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.03em;color:var(--ink-soft);text-transform:uppercase}
+.formula .eq{font-weight:600;font-size:14.5px;line-height:1.35}
+@media (max-width:560px){.formula{grid-template-columns:1fr}}
+.tw{overflow-x:auto;margin:6px 0 8px}
+table{border-collapse:collapse;width:100%;font-size:13.8px;line-height:1.3}
+th,td{border-bottom:1px solid rgba(120,90,40,.25);padding:4px 7px;text-align:left;vertical-align:top}
+thead th, tr.hr td{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.03em;font-weight:600;color:var(--ink-soft);
+  text-transform:uppercase;border-bottom:1.5px solid rgba(120,90,40,.5);background:rgba(198,155,63,.12)}
+tr.sp td{border:none;padding:3px}
+tbody tr:hover td{background:rgba(198,155,63,.08)}
+mark{background:#f3d97a;padding:0 1px;border-radius:2px}
+.hidden{display:none!important}
+.empty{font-style:italic;color:var(--ink-soft);padding:20px 0}
+footer{margin-top:34px;border-top:1px solid rgba(120,90,40,.4);padding-top:12px;font-size:13px;color:var(--ink-soft);line-height:1.45}
+footer p{margin:0 0 6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="crumb"><a href="index.html">Sjórseiðr</a> · <a href="section.html?sec=storyteller">Storyteller</a></div>
+    <h1>Reference Guide</h1>
+    <p class="subtitle">Every formula and table from <i>Ars Magica: Definitive Edition</i>, Appendix D, as a quick reference. Page references read as printed: Fifth Edition page / Definitive Edition page.</p>
+  </header>
+  <div class="toolbar">
+    <input id="q" type="search" placeholder="Search formulae and tables… (e.g. Penetration, botch, aging)" aria-label="Search the reference guide">
+    <span id="jumps"></span>
+    <span class="count" id="count"></span>
+  </div>
+  <main id="content"><p class="empty">Loading the reference guide…</p></main>
+  <footer>
+    <p><b>Source.</b> Transcribed verbatim from <i>Ars Magica: Definitive Edition</i>, Appendix D: Reference Guide (pp. 539–552), checked word for word against the book. Ars Magica is released under the Ars Magica Open License, the <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">Creative Commons Attribution-ShareAlike 4.0 International</a> licence.</p>
+    <p><b>Changes.</b> Re-typeset for the web: the appendix's panels are arranged as cards and grouped under their sections; the text, numbers and page references are unchanged. This page is likewise shared under <a href="https://creativecommons.org/licenses/by-sa/4.0/" rel="license">CC BY-SA 4.0</a>; its source is <a href="reference_guide.md">reference_guide.md</a>.</p>
+  </footer>
+</div>
+<script>
+(function(){
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+// inline markup: \* literal asterisk, **bold**, *italic*, <br> (tables only)
+function inl(s){
+  let t = esc(s).replace(/\\\*/g, '\u0000');
+  t = t.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>').replace(/\*([^*]+?)\*/g, '<em>$1</em>');
+  return t.replace(/\u0000/g, '*').replace(/&lt;br&gt;/g, '<br>');
+}
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+
+function table(lines){
+  const rows = lines.filter(l => !/^\|\s*-/.test(l)).map(l => {
+    const hdr = l.startsWith('|!');
+    const cells = l.replace(/^\|!?/, '').replace(/\|\s*$/, '').split('|').map(c => c.trim());
+    return {hdr, cells};
+  });
+  const head = rows.shift();
+  const showHead = head.cells.some(c => c);
+  let h = '<div class="tw"><table>';
+  if (showHead) h += '<thead><tr>' + head.cells.map(c => '<th>' + inl(c) + '</th>').join('') + '</tr></thead>';
+  h += '<tbody>' + rows.map(r => {
+    if (!r.cells.some(c => c)) return '<tr class="sp"><td colspan="' + r.cells.length + '"></td></tr>';
+    return '<tr' + (r.hdr ? ' class="hr"' : '') + '>' + r.cells.map(c => '<td>' + inl(c) + '</td>').join('') + '</tr>';
+  }).join('') + '</tbody></table></div>';
+  return {html: h, cols: head.cells.length};
+}
+
+function render(md){
+  md = md.replace(/<!--[\s\S]*?-->/g, '');
+  const L = md.split('\n');
+  const secs = []; let sec = null, panel = null;
+  const out = h => { if (panel) panel.body.push(h); else if (sec) sec.loose.push(h); };
+  for (let i = 0; i < L.length; i++){
+    const line = L[i];
+    if (!line.trim()) continue;
+    let m;
+    if ((m = line.match(/^## (.+)/))) { sec = {title: m[1].trim(), panels: [], loose: []}; secs.push(sec); panel = null; continue; }
+    if ((m = line.match(/^### (.+?)(?:\s*\{([^}]*)\})?\s*$/))) {
+      panel = {title: m[1], ref: m[2] || '', body: [], wide: false};
+      if (!sec) { sec = {title: '', panels: [], loose: []}; secs.push(sec); }
+      sec.panels.push(panel); continue;
+    }
+    if (!panel && sec && sec.panels.length) panel = sec.panels[sec.panels.length - 1];
+    if ((m = line.match(/^#### (.+)/))) { out('<h4>' + inl(m[1]) + '</h4>'); continue; }
+    if (line.startsWith('|')) {
+      const block = [line]; while (i + 1 < L.length && L[i+1].startsWith('|')) block.push(L[++i]);
+      const t = table(block); if (t.cols >= 6 && panel) panel.wide = true; out(t.html); continue;
+    }
+    if ((m = line.match(/^%\s*(.+?)\s*::\s*(.+)$/))) {
+      out('<div class="formula"><span class="lab">' + inl(m[1].replace(/:$/, '::')) + '</span><span class="eq">' + inl(m[2]) + '</span></div>'); continue;
+    }
+    if ((m = line.match(/^(\s*)(\d+|[a-z]|[ivx]+)\.\s+(.+)$/)) && (m[1].length || /^\d+$/.test(m[2]))) {
+      const lvl = Math.min(2, Math.floor(m[1].length / 4));
+      out('<div class="seq l' + lvl + '"><span class="m">' + esc(m[2]) + '.</span><span>' + inl(m[3]) + '</span></div>'); continue;
+    }
+    if ((m = line.match(/^- (.+)/))) {
+      const items = [m[1]]; while (i + 1 < L.length && /^- /.test(L[i+1])) items.push(L[++i].slice(2));
+      out('<ul>' + items.map(x => '<li>' + inl(x) + '</li>').join('') + '</ul>'); continue;
+    }
+    const ind = /^\s{4}/.test(line);
+    const note = /^\*[^*].*\*$/.test(line.trim()) || /^\*\\\*/.test(line.trim());
+    out('<p class="' + (ind ? 'ind' : '') + (note ? ' note' : '') + '">' + inl(line.trim()) + '</p>');
+  }
+  const html = secs.map(s => {
+    const id = slug(s.title || 'misc');
+    return '<section class="sec" id="' + id + '">' + (s.title ? '<h2>' + inl(s.title) + '</h2>' : '') + '<div class="grid">' +
+      s.panels.map(p => '<article class="panel' + (p.wide ? ' wide' : '') + '" id="' + slug(p.title) + '"><h3><span>' + inl(p.title) + '</span>' +
+        (p.ref ? '<span class="ref" title="Fifth Edition page / Definitive Edition page">' + esc(p.ref) + '</span>' : '') + '</h3>' + p.body.join('') + '</article>').join('') +
+      '</div></section>';
+  }).join('');
+  document.getElementById('content').innerHTML = html;
+  document.getElementById('jumps').innerHTML = secs.filter(s => s.title).map(s => '<a class="jump" href="#' + slug(s.title) + '">' + esc(s.title) + '</a>').join(' ');
+  setCount();
+}
+
+function setCount(){
+  const all = document.querySelectorAll('.panel'), vis = document.querySelectorAll('.panel:not(.hidden)');
+  document.getElementById('count').textContent = (vis.length === all.length ? all.length + ' panels' : vis.length + ' of ' + all.length + ' panels');
+}
+function filter(q){
+  q = q.trim().toLowerCase();
+  document.querySelectorAll('.panel').forEach(p => p.classList.toggle('hidden', !!q && !p.textContent.toLowerCase().includes(q)));
+  document.querySelectorAll('.sec').forEach(s => s.classList.toggle('hidden', !s.querySelector('.panel:not(.hidden)')));
+  setCount();
+}
+document.getElementById('q').addEventListener('input', e => filter(e.target.value));
+
+fetch('reference_guide.md', {cache: 'no-store'}).then(r => { if (!r.ok) throw new Error(r.status); return r.text(); })
+  .then(render)
+  .catch(e => { document.getElementById('content').innerHTML = '<p class="empty">Could not load reference_guide.md — open this page over http, not file://. (' + esc(e.message) + ')</p>'; });
+})();
+</script>
+<script src="nav.js"></script>
+<script src="storyteller-rail.js"></script>
+</body>
+</html>

@@ -86,7 +86,9 @@
         { "icon": "❓", "title": "Open Questions for the Storyteller", "href": "open_questions.html", "tag": "Open Questions",
           "desc": "Questions needing a ruling, threads nobody's picked back up, and consequences still waiting to land." },
         { "icon": "🎬", "title": "Next Session — Candidate Scenes", "href": "next_session_scenes.html", "tag": "Session Prep",
-          "desc": "The Storyteller's working slate of scenes to stage next session, filterable by season and by magus." }
+          "desc": "The Storyteller's working slate of scenes to stage next session, filterable by season and by magus." },
+        { "icon": "📜", "title": "Reference Guide — Formulae & Tables", "href": "reference_guide.html", "tag": "Rules Reference",
+          "desc": "Every formula and table from Ars Magica: Definitive Edition, Appendix D, as a searchable quick reference." }
       ]
     }
   ]
