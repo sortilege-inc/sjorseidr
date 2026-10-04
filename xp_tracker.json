@@ -582,8 +582,8 @@
    "role": "Grog",
    "ship": "scholars-wake",
    "house": "",
-   "firstYear": 1226,
-   "firstSeason": "1226-summer"
+   "firstYear": 1224,
+   "firstSeason": "1224-winter"
   },
   {
    "id": "Fuchs Scipwyrhta",
@@ -594,6 +594,36 @@
    "house": "",
    "firstYear": 1225,
    "firstSeason": "1225-fall"
+  },
+  {
+   "id": "Oliver",
+   "name": "Oliver",
+   "type": "grog",
+   "role": "Grog (lookout, longbowman)",
+   "ship": "storm-dragon",
+   "house": "",
+   "firstYear": 1224,
+   "firstSeason": "1224-winter"
+  },
+  {
+   "id": "Erik Aelfson",
+   "name": "Erik Aelfson (Eric)",
+   "type": "grog",
+   "role": "Minstrel",
+   "ship": "storm-dragon",
+   "house": "",
+   "firstYear": 1224,
+   "firstSeason": "1224-winter"
+  },
+  {
+   "id": "Rónán the Slender",
+   "name": "Rónán the Slender",
+   "type": "grog",
+   "role": "Hunter / scout",
+   "ship": "brineborn",
+   "house": "",
+   "firstYear": 1224,
+   "firstSeason": "1224-winter"
   }
  ],
  "entries": {
@@ -3364,6 +3394,6904 @@
    "detail": "exposure: Teaching+2 (writing his new summa) — the choice of Teaching is under GM review; the extra +1 Folk Magic Theory is held pending GM review.",
    "covenant": null,
    "source": "player notes 2026-10-04"
+  },
+  "Hilda::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Teaching+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hilda::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Teaching+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hilda::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hilda::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Teaching+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hilda::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Teaching+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hilda::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hilda::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2 (copying the Roots at Durenmar)",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hilda::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Teaching+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hilda::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Teaching+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hilda::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [],
+   "detail": "adventuring: +5 to allocate — The assistants return: the madness cost, and the brass acorn",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isaac::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [],
+   "detail": "adventuring: +5 to allocate — The assistants return: the madness cost, and the brass acorn",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Artes Liberales*",
+   "targets": [
+    {
+     "type": "Artes Liberales*",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Artes Liberales*+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Carl::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Scribe",
+   "targets": [
+    {
+     "type": "Profession: Scribe",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Scribe+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Drest::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erc::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rembrant de Wees::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Angus McPeterson::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Angus McPeterson::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Angus McPeterson::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Angus McPeterson::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Angus McPeterson::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Angus McPeterson::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Angus McPeterson::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Angus McPeterson::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Angus McPeterson::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Giden::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [],
+   "detail": "adventuring: +5 to allocate — Wolves at dusk in the Diedne Garden (draft event)",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leofwin::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapons",
+   "targets": [
+    {
+     "type": "Great Weapons",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapons+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Reinier::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapons",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapons+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Willem 'Sour' Jensen::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [],
+   "detail": "adventuring: +5 to allocate — Foxglove robs the dragon",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [],
+   "detail": "adventuring: +5 to allocate — Foxglove fences the dragon's gold in London; The crown delivered: Mímormr freed",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 6,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Brawl",
+     "xp": 3
+    },
+    {
+     "type": "Swim",
+     "xp": 3
+    }
+   ],
+   "detail": "adventuring: Brawl+3, Swim+3 (Region Adventuring)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Isabeau (aka Foxglove)::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Isabeau (aka Foxglove)::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 5
+    },
+    {
+     "type": "Brawl",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Great Weapon+5, Brawl+5 (Normandy Tribunal)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Gerard \"The Mule\"::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Gerard \"The Mule\"::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Udo Ironhand::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Runi the Moody::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Carouse",
+     "xp": 5
+    },
+    {
+     "type": "Legerdemain",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Carouse+5, Legerdemain+5 (Normandy Tribunal)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Adam Smith::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Adam Smith::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Carouse",
+     "xp": 5
+    },
+    {
+     "type": "Athletics",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Carouse+5, Athletics+5 (Meeting the Duke of Limburg)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Leonhardt Ansgar Von Hahn::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Leonhardt Ansgar Von Hahn::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 10,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Bargain",
+     "xp": 5
+    },
+    {
+     "type": "Profession: Sailor",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Bargain+5, Profession: Sailor+5 (Trade)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Absalom::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1221-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1222-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [
+    {
+     "type": "Artes Liberales",
+     "xp": 5
+    }
+   ],
+   "detail": "adventuring: Artes Liberales+5 (Researching Past Tribunals)",
+   "covenant": null,
+   "source": "foundry"
+  },
+  "Absalom::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Absalom::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Sailor",
+   "targets": [
+    {
+     "type": "Profession: Sailor",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Sailor+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hob::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Bows",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Bows+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hob::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Bows",
+   "targets": [
+    {
+     "type": "Bows",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Bows+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hob::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Bows",
+   "targets": [
+    {
+     "type": "Bows",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Bows+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hob::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Bows",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Bows+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hob::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Bows",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Bows+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hob::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Bows",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Bows+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Hob::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Bows",
+   "targets": [
+    {
+     "type": "Bows",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Bows+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Cy::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Cy::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Cy::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Cy::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Cy::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Cy::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Cy::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Galan::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Galan::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Galan::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Galan::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Galan::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Galan::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Galan::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rostan::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rostan::1220-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rostan::1220-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rostan::1220-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rostan::1221-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rostan::1221-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Great Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Great Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rostan::1221-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Great Weapon",
+   "targets": [
+    {
+     "type": "Great Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Great Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Philippe::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Philippe::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Philippe::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Philippe::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Philippe::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Awareness",
+     "xp": 1
+    },
+    {
+     "type": "Single Weapon",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Awareness+1, Single Weapon+1",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Fuchs Scipwyrhta::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Shipwright",
+   "targets": [
+    {
+     "type": "Profession: Shipwright",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Shipwright+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Fuchs Scipwyrhta::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Shipwright",
+   "targets": [
+    {
+     "type": "Profession: Shipwright",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Shipwright+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Oliver::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Oliver::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Oliver::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Oliver::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Single Weapon",
+   "targets": [
+    {
+     "type": "Single Weapon",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Single Weapon+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Oliver::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Profession: Pirate",
+   "targets": [
+    {
+     "type": "Profession: Pirate",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Profession: Pirate+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erik Aelfson::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Music",
+   "targets": [
+    {
+     "type": "Music",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Music+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erik Aelfson::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Music",
+   "targets": [
+    {
+     "type": "Music",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Music+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erik Aelfson::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Enchanting Music",
+   "targets": [
+    {
+     "type": "Enchanting Music",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Enchanting Music+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erik Aelfson::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Enchanting Music",
+   "targets": [
+    {
+     "type": "Enchanting Music",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Enchanting Music+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Erik Aelfson::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Music",
+   "targets": [
+    {
+     "type": "Music",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Music+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rónán the Slender::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Hunt",
+   "targets": [
+    {
+     "type": "Hunt",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Hunt+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rónán the Slender::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [],
+   "detail": "adventuring: +5 to allocate — Éogan finds the capricorn again (draft event)",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rónán the Slender::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Bows",
+   "targets": [
+    {
+     "type": "Bows",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Bows+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rónán the Slender::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "practice",
+   "xp": 4,
+   "xpType": "Bows",
+   "targets": [
+    {
+     "type": "Bows",
+     "xp": 4
+    }
+   ],
+   "detail": "practice: Bows+4",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
+  },
+  "Rónán the Slender::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Hunt",
+   "targets": [
+    {
+     "type": "Hunt",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Hunt+2",
+   "covenant": null,
+   "source": "owner-approved recommendation 2026-10-04"
   }
  }
 }

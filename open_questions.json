@@ -734,6 +734,17 @@
    "raised_in": "Dagmar's player's notes, forwarded by the owner 2026-10-04; owner rulings 2026-10-04.",
    "raised_event": "p147",
    "context": "To decide:\n\n- **Which ship** takes him, and **which city**. The Next Session slate's London scene (s19) makes London the nearest gold market, where 'the covenant already has form'.\n- **The escort:** which grogs go.\n- **The recruits:** whether he finds professional traders or financial advisers willing to join, and on what terms (new covenfolk).\n\n**GM-only:** the stolen Roman dragon-gold is one of the exposed edges Confluensis is bundling into its complaint (c026, t078). Tormente has deferred its price for the gold, 'ask me in a few years' (t089). Selling it in a major city is where either thread can catch up with the covenant."
+  },
+  {
+   "id": "q058",
+   "type": "Tool",
+   "category": "Character Build",
+   "status": "Open",
+   "title": "Grog adventure XP — choose what the +5s apply to; Maelstrom's Maw crew; grogs possibly on adventures",
+   "raised_in": "Grog XP fill, owner-approved 2026-10-04",
+   "raised_event": "",
+   "context": "The grog XP tracker was filled through Winter 1225-26 (owner, 2026-10-04): every missing season got Exposure +2 or Practice +4 by the core pattern (two working seasons and two free ones a year), and Oliver, Erik Aelfson, Rónán and Philippe are now tracked from Winter 1224-25.\n\n**ALLOCATE (+5 each, recorded but unassigned).** Adventure experience 'may be split between any number of Abilities', with 'a maximum of five Adventure experience points to a single Ability or Art.' In Foundry each is an unapplied diary entry at Source Quality 5, ready to allocate there:\n\n- **Isaac**, 🌼 Spring 1224: The assistants return: the madness cost, and the brass acorn\n- **Carl**, 🌼 Spring 1224: The assistants return: the madness cost, and the brass acorn\n- **Leofwin**, 🌼 Spring 1224: Wolves at dusk in the Diedne Garden *(draft event — confirm)*\n- **Isabeau (aka Foxglove)**, 🌼 Spring 1224: Foxglove robs the dragon\n- **Isabeau (aka Foxglove)**, ☀️ Summer 1224: Foxglove fences the dragon's gold in London; The crown delivered: Mímormr freed\n- **Rónán the Slender**, 🌼 Spring 1225: Éogan finds the capricorn again *(draft event — confirm)*\n\n**CONFIRM:**\n\n- **The Maelstrom's Maw crew** (Hob, Cy, Galan, Rostan) have no entries from Winter 1221-22, assumed away with Kor on sabbatical (68 seasons). If they stayed in covenant service, they need routine seasons.\n- **Named in an approved event but not in its cast**, so given a routine season: Hilda (Summer 1223, the Tribunal), Angus (Spring and Fall 1224, Carnac), Isabeau (Spring 1221). (Absalom's Summer 1221 and 1222 turned out to be adventures already recorded in Foundry; the tracker now matches.) Switch any to adventure if they were there.\n- **Valdemar's grog drills** (p138) would add a Single Weapon teaching season for drilled grogs in 1225 once approved.\n\n**Note:** six grog seasons already had allocated adventure diary entries in Foundry that the tracker lacked (Isabeau Fall 1224, Gerard and Adam Summer 1223, Leonhardt Spring 1221, Absalom Summer 1221 and 1222). The tracker now copies Foundry for those.",
+   "resolution": ""
   }
  ],
  "gmReference": {
