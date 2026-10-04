@@ -2868,17 +2868,17 @@
    "activity": true,
    "deferred": false,
    "act": "teaching",
-   "xp": 22,
+   "xp": 25,
    "xpType": "Teaching",
    "targets": [
     {
      "type": "Teaching",
-     "xp": 22
+     "xp": 25
     }
    ],
-   "detail": "teaching: Teaching+22",
+   "detail": "teaching: Teaching+25 (taught by Henri; corrected from 22)",
    "covenant": null,
-   "source": "gm-ruling"
+   "source": "owner-corrected 2026-10-04"
   },
   "Valdemar Bjornsson::1221-fall": {
    "activity": true,
