@@ -4140,16 +4140,6 @@
           "description": "You have been trained to fight, and may have spent some time campaigning, perhaps on one of the Crusades. You may acquire Martial Abilities during character creation, and gain an additional 50 experience points which must be spent on Martial Abilities."
         },
         {
-          "name": "Improved Characteristics (Magical Quality)",
-          "impact": "minor",
-          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
-        },
-        {
-          "name": "Improved Characteristics (Magical Quality)",
-          "impact": "minor",
-          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
-        },
-        {
           "name": "Magical Covenfolk",
           "impact": "free",
           "description": "Only characters designed using the rules for Magic Character Creation may take this Virtue.\n\nThe character is a magical being that is generally accepted by the other people at the covenant as an equal.  The character does not command any special respect because of its magical nature, however, and how outsiders treat it depends upon its appearance, if it looks human it will be treated like a person, otherwise it will be seen as either a dumb beast or a monster.\n\nThis Virtue may be combined with other Social Status Virtues and Flaws that are appropriate to the character's form."
@@ -4160,24 +4150,9 @@
           "description": "In Merfolk society, Knights are members of the Noble caste who do not own land, and thus do not command subjects. Most serve a liege lord as a household retainer, technically they are vassals, not subjects, but because they are wholly dependent on their liege they are afforded little autonomy. Inheritance is not a feature of Merfolk society; to obtain land Nobles must seize it from other Nobles, thus Knights tend to be eager to start wide scale conflicts which carry the opportunity for social advancement.\n\nDespite being the lowest order of the Noble caste, Knights still benefit from the privileges that caste brings, such as the right to wield magical arms and armor. Exiled Knights are allowed to keep their arms when they go into exile. Beyond this, the status affords little benefit in the surface world, except among other merfolk who still fear and respect a Noble in their midst, whether exiled or not."
         },
         {
-          "name": "Personal Power (Human Shape)",
-          "impact": "minor",
-          "description": "1 point, Init equal to (Qik – 2), Corpus\n\n R: Per, D: Sun, T: Ind\n\n The character transforms itself into the shape of a normal human being, allowing it to move through mundane society relatively unnoticed.\n\n This power can be made constant, meaning the shape is maintained perpetually, costing one might point at sunrise and sunset.  If Incapacitated or out of Might Points, the form reverts back at this time instead.\n\n MuCo 20 (base 10, +2 Sun): Personal Power (20 levels, –1 Might cost)\n\n(You don't need to roll to use this power, the \"level\" is used to determine how many qualities are needed to put toward the power.  As a personal power, you get 25 points to spend, the cost in might points is magnitude/2 (so 2), 20 points are used to get the power and the last 5 are used to reduce the might cost further (from 2 to 1).)\n\n(Ka'wa'ill has a pool of 5 might points, the same as his might score, which replenishes over 24 hours, so one every 4 hours and 48 minutes.  Since this is the only power he has, he can effectively use it at will unless his might points get depleted somehow)"
-        },
-        {
           "name": "Voice of the Ocean",
           "impact": "minor",
           "description": "The character can speak with any creature whose natural habitat is a particular environment associated with this Virtue (including animals and magic beings), and the character is not normally perceived as either a threat or a prey object by these creatures."
-        },
-        {
-          "name": "Improved Soak (Magical Quality)",
-          "impact": "minor",
-          "description": "The character’s natural protection is magically enhanced, making it more effective at warding away blows and physical injury. Increase the character’s Soak by 2. This Quality may be taken more than once."
-        },
-        {
-          "name": "Lightning Reflexes (Magical Quality)",
-          "impact": "minor",
-          "description": "You respond to surprises almost instantly. In fact, your reflexes are sometimes so fast that you don\n\n’t have a chance to think about how you are going to respond. Whenever you are surprised or startled, roll a stress die + Quickness. If you get a 3 or better, you respond reflexively. You must tell the storyguide on each occasion what one type of action (attacking, blocking, running, etc.) you would like to respond with. If attacking in response, you gain +9 to your Initiative Total. The storyguide is the final arbiter of what happens (though it is always in the best interests of your immediate self-preservation). You only react to threats that you are not fully aware of, so you don’t get a bonus against an assassin you watch sneak up on you. Note that you do not get a choice about whether to react. You could just as easily skewer a friend sneaking up in fun as you would an assassin about to strike. Also note that you must perceive an action to react to it — you can still be easily killed in your sleep. This Virtue gives you no special powers of perception."
         },
         {
           "name": "Atlantean Advantages",
@@ -4205,11 +4180,6 @@
           "name": "Driven (Minor) To free the enslaved",
           "impact": "minor",
           "description": "You have some goal which you are determined to bring about. This has to be the sort of big goal that could shape an entire life, but if you do accomplish it you will immediately turn to a new project."
-        },
-        {
-          "name": "Monstrous Appearance",
-          "impact": "free",
-          "description": "Something about the character looks strange and frightening, be it horns, scales, sharp teeth, claws, an enormous head, double-jointed arms, unnaturally colored skin, or other supernatural features. These qualities give the character a –6 penalty in all social situations, or to any rolls involving the trust or loyalty of others. Most people will attack or run away from the character on sight, rather than engage it in conversation.\n\nAll Magic Humans have this Inferiority inherently, for no benefit.\n\n(Ka'wa'ill can assume a Human Shape to avoid this penalties)"
         }
       ],
       "abilities": [
@@ -4363,7 +4333,57 @@
           "description": ""
         }
       ],
-      "shortDescription": "The merman prince. Magical being, not fae."
+      "shortDescription": "The merman prince. Magical being, not fae.",
+      "qualities": [
+        {
+          "name": "Improved Characteristics (Magical Quality)",
+          "impact": "minor quality (1 point)",
+          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Improved Characteristics (Magical Quality)",
+          "impact": "minor quality (1 point)",
+          "description": "You have an additional three points to spend on buying Characteristics, but you are still limited to a maximum score of +3 in any single Characteristic unless you take the Virtue Great Characteristic. You may take this Virtue multiple times."
+        },
+        {
+          "name": "Personal Power (Human Shape)",
+          "impact": "minor quality (1 point)",
+          "description": "1 point, Init equal to (Qik – 2), Corpus\n\n R: Per, D: Sun, T: Ind\n\n The character transforms itself into the shape of a normal human being, allowing it to move through mundane society relatively unnoticed.\n\n This power can be made constant, meaning the shape is maintained perpetually, costing one might point at sunrise and sunset.  If Incapacitated or out of Might Points, the form reverts back at this time instead.\n\n MuCo 20 (base 10, +2 Sun): Personal Power (20 levels, –1 Might cost)\n\n(You don't need to roll to use this power, the \"level\" is used to determine how many qualities are needed to put toward the power.  As a personal power, you get 25 points to spend, the cost in might points is magnitude/2 (so 2), 20 points are used to get the power and the last 5 are used to reduce the might cost further (from 2 to 1).)\n\n(Ka'wa'ill has a pool of 5 might points, the same as his might score, which replenishes over 24 hours, so one every 4 hours and 48 minutes.  Since this is the only power he has, he can effectively use it at will unless his might points get depleted somehow)"
+        },
+        {
+          "name": "Improved Soak (Magical Quality)",
+          "impact": "minor quality (1 point)",
+          "description": "The character’s natural protection is magically enhanced, making it more effective at warding away blows and physical injury. Increase the character’s Soak by 2. This Quality may be taken more than once."
+        },
+        {
+          "name": "Lightning Reflexes (Magical Quality)",
+          "impact": "minor quality (1 point)",
+          "description": "You respond to surprises almost instantly. In fact, your reflexes are sometimes so fast that you don\n\n’t have a chance to think about how you are going to respond. Whenever you are surprised or startled, roll a stress die + Quickness. If you get a 3 or better, you respond reflexively. You must tell the storyguide on each occasion what one type of action (attacking, blocking, running, etc.) you would like to respond with. If attacking in response, you gain +9 to your Initiative Total. The storyguide is the final arbiter of what happens (though it is always in the best interests of your immediate self-preservation). You only react to threats that you are not fully aware of, so you don’t get a bonus against an assassin you watch sneak up on you. Note that you do not get a choice about whether to react. You could just as easily skewer a friend sneaking up in fun as you would an assassin about to strike. Also note that you must perceive an action to react to it — you can still be easily killed in your sleep. This Virtue gives you no special powers of perception."
+        }
+      ],
+      "inferiorities": [
+        {
+          "name": "Monstrous Appearance",
+          "impact": "major inferiority (inherent to Magic Humans, for no benefit)",
+          "description": "Something about the character looks strange and frightening, be it horns, scales, sharp teeth, claws, an enormous head, double-jointed arms, unnaturally colored skin, or other supernatural features. These qualities give the character a –6 penalty in all social situations, or to any rolls involving the trust or loyalty of others. Most people will attack or run away from the character on sight, rather than engage it in conversation.\n\nAll Magic Humans have this Inferiority inherently, for no benefit.\n\n(Ka'wa'ill can assume a Human Shape to avoid this penalties)"
+        }
+      ],
+      "might": 5,
+      "mightRealm": "Magic",
+      "form": "Aquam",
+      "magicResistance": 5,
+      "season": "Summer",
+      "seasonNote": "Summer (360 starting experience points), plus a GM fiat bonus to his starting experience (owner, 2026-10-04).",
+      "advancementNote": "Magic Might 5 is subtracted from every Advancement Total (RoP: Magic: 'You must subtract the character's Might Score from all Advancement Totals, including exposure, adventure, and other forms of study.'). His seasons already on record for 1220–1225 stand as GM fiat grants; any other season gives XP only if it exceeds 5, and from Spring 1226 the subtraction applies throughout (owner, 2026-10-04).",
+      "powers": [
+        {
+          "name": "Human Shape",
+          "cost": "1 point",
+          "init": "Qik – 2",
+          "form": "Corpus",
+          "description": "R: Per, D: Sun, T: Ind The character transforms itself into the shape of a normal human being, allowing it to move through mundane society relatively unnoticed.\n\nMuFo 20 (base 10, +2 Sun): Personal Power (20 levels, –1 Might cost)\n\n**Player's notes (Foundry sheet):** This power can be made constant, meaning the shape is maintained perpetually, costing one might point at sunrise and sunset.  If Incapacitated or out of Might Points, the form reverts back at this time instead.\n\n(You don't need to roll to use this power, the \"level\" is used to determine how many qualities are needed to put toward the power.  As a personal power, you get 25 points to spend, the cost in might points is magnitude/2 (so 2), 20 points are used to get the power and the last 5 are used to reduce the might cost further (from 2 to 1).)\n\n(Ka'wa'ill has a pool of 5 might points, the same as his might score, which replenishes over 24 hours, so one every 4 hours and 48 minutes.  Since this is the only power he has, he can effectively use it at will unless his might points get depleted somehow)"
+        }
+      ]
     },
     "Kor Ex Flambeau": {
       "name": "Kor Ex Flambeau",
@@ -7389,25 +7409,21 @@
       "house": "gen",
       "parens": "",
       "sigil": "",
-      "born": 1198,
-      "age": 25,
+      "born": null,
+      "age": null,
       "apparentAge": 25,
       "characteristics": {
-        "int": 0,
-        "per": 0,
-        "str": 0,
+        "int": 1,
+        "per": 1,
+        "str": -1,
         "sta": 0,
-        "pre": 0,
+        "pre": 3,
         "com": 0,
         "dex": 0,
         "qik": 0
       },
       "size": 0,
-      "confidence": {
-        "label": "Confidence",
-        "score": 1,
-        "points": 3
-      },
+      "confidence": null,
       "decrepitude": 0,
       "warping": 0,
       "arts": {
@@ -7487,15 +7503,170 @@
           "xp": 0
         }
       },
-      "virtues": [],
-      "flaws": [],
-      "abilities": [],
+      "virtues": [
+        {
+          "name": "Humanoid Faerie",
+          "impact": "minor",
+          "description": "The character has a material body of roughly human shape. It has all of the advantages of being a faerie, and of having a faerie body."
+        },
+        {
+          "name": "Increased Faerie Might",
+          "impact": "minor",
+          "description": "As a Minor Virtue, this increases the faerie's Might Score by 5. As a Major Virtue, it increases Might by 15. With the approval of the troupe, this Virtue may be taken multiple times."
+        },
+        {
+          "name": "Faerie Sight",
+          "impact": "minor",
+          "description": "This Virtue, which works constantly at no cost to the faerie, is used in conjunction with the Awareness Pretense. It allows faeries to:\n\n• Tell mundane from glamourous things. (Automatic success: no roll required.) • See the borders of glamour, so that they know which faerie that props and territories belong to. (Automatic success: no roll required.) • See Arcane Connections, so that they know which objects belong to a human (automatic success), and also to which human they belong. (If human and object can be observed, automatic success.) • Read each other's glamour. Faerie Lore is a body of knowledge that humans learn through experience, so very few faeries have it. (Ease Factor = Might of other faerie/5) Faeries use the ability to read each other's glamour to guide their interactions, instead of using Faerie Lore. • See mundane things hidden by glamour. (Ease Factor = 3 + (Might of Faerie causing the glamour – Might of the faerie attempting to see through the glamour)/5)"
+        },
+        {
+          "name": "Greater Power",
+          "impact": "major",
+          "description": "The character has spell-like powers designed, at character creation, like formulaic spells. Taking this Virtue gives the character 50 spell levels to spend on these powers, and this Virtue may be selected repeatedly, to allow effects of higher level. Each power has a Might Point cost equal to (the magnitude of the effect / 2), and an Initiative score equal to the character's Quickness – (the magnitude of the effect / 2). Players should note the Forms associated with the effect, to calculate Magic Resistance.\n\nAny spell levels that are left over may converted into intricacy points, with 5 full spell levels equal to 1 intricacy point.\n\nRán's 50 levels: Torrent from the Lungs (25), Allure (10), Send Message (15)."
+        },
+        {
+          "name": "Narrowly Cognizant",
+          "impact": "free",
+          "description": "The character is able to improve itself in ways traditional for characters of this type. A dwarf may seek to become a dwarf king, for example. Or a faerie maid may wish to steal a child to raise as her own."
+        },
+        {
+          "name": "Observant",
+          "impact": "free",
+          "description": "A typical faerie player character increases its Pretenses in two seasons per year. In the other season, it completes the tasks set by its role."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Negative Reaction",
+          "impact": "minor (Social Interaction)",
+          "description": "People find something about the character disturbing. This causes a –3 on all social rolls. In many communities, all obvious faeries suffer this reaction."
+        },
+        {
+          "name": "Traditional Ward: Manx folk charms",
+          "impact": "minor (taboo)",
+          "description": "If a taboo is selected as a Minor Flaw, then the faerie may not touch a thing protected by the ward with its glamour. The faerie is likely uncomfortable in the presence of the ward, but is not compelled to flee. The faerie cannot regenerate Might points in the presence of a traditional ward. If forced to touch the ward, the glamour holding the faerie's body together begins to break down: its body begins to flake away. Prolonged contact with the ward destroys the body of the faerie by unpicking the glamour holding its body together.\n\nThis may appear to humans as if the ward is burning the faerie. The damage to the faerie's body can be simulated with the Heat and Corrosion rules found on page 181 of ArM5. Assume that the object acts as a source of damage with an intensity of +6.\n\nIf a faerie receives an Incapacitating wound from an item that is a Traditional Ward, then in addition to the usual effects of Incapacitating wounds (ArM5, page 178–179) the faerie cannot spend any further Might points. It can still activate powers with a zero cost, though. If the character has constant-effect powers with a non-zero cost, they expire at the next sunrise or sunset and cannot be reactivated until the character is no longer Incapacitated. The character may heal at a human rate, or may remove the injury with an appropriate story event.\n\nRán's ward: the Isle of Man's folk charms against faeries, the tree once sacred to Thor planted by the door and the fishbone that looks a little like Thor's hammer (RoP: Faerie, Taboos: Folk Charms)."
+        },
+        {
+          "name": "Restricted Might: away from the sea",
+          "impact": "major",
+          "description": "The faerie is nearly powerless at certain times or under certain conditions. At the onset of these disadvantageous conditions, any ongoing supernatural effects that the creature has started with its powers immediately end, except for those that constantly affect the creature itself. As long as the conditions last, the creature is unable to spend or recover Might points.\n\nThis Flaw may be Major or Minor. If it is Major, the creature's Might is restricted under relatively common circumstances, such as when exposed to daylight or during the winter. The conditions should be in effect at least one-quarter of the time. For the Minor version of this Flaw, the conditions are uncommon, such as during a thunderstorm or on the night of the new moon.\n\nRán's condition: out of sight and sound of the sea."
+        },
+        {
+          "name": "Avaricious (Minor)",
+          "impact": "minor",
+          "description": "You want money, lots of money. When you have it, you do not spend it, but hoard it so that you can count it. You can be avaricious about physical things other than money, such as books or raw vis. In this case, you do not use the things you hoard, nor do you allow others to use them.\n\nRán's hoard: the gold of the drowned."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Living Language: Old Norse",
+          "speciality": "",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Guile",
+          "speciality": "",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Charm",
+          "speciality": "",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Swim",
+          "speciality": "",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Awareness",
+          "speciality": "",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Etiquette",
+          "speciality": "",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Area Lore: North Sea",
+          "speciality": "",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Language: English",
+          "speciality": "",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Penetration",
+          "speciality": "",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Music",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Magic Theory",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        }
+      ],
       "spells": [],
       "personalityTraits": [],
       "reputations": [],
       "sanctum": "",
       "familiar": null,
-      "activeWounds": []
+      "activeWounds": [],
+      "might": 10,
+      "mightRealm": "Faerie",
+      "form": "Aquam",
+      "magicResistance": 10,
+      "powers": [
+        {
+          "name": "Torrent from the Lungs",
+          "cost": "3 points",
+          "init": "–3",
+          "form": "Aquam",
+          "description": "As Curse of the Desert. Draws the water forth from the human body, causing +15 Damage that armor does not protect against. If the target does not drink within a few minutes, he dies. The name comes from the surprising quantity of water that pours out of the victim’s mouth.\n\nCosts 25 spell levels (PeAq Base 10, +2 Voice +1 Part) See ArM5 page 123."
+        },
+        {
+          "name": "Allure",
+          "cost": "1 point",
+          "init": "–1",
+          "form": "Mentem",
+          "description": "This power causes the faerie to seem more attractive and pleasant than it really is, granting a +3 bonus on all rolls that involve impressing or convincing others.\n\nCosts 10 spell levels (Base 3 +1 Touch +2 Sun)"
+        },
+        {
+          "name": "Send Message",
+          "cost": "2 points",
+          "init": "–2",
+          "form": "Imaginem",
+          "description": "This power allows the faerie to send short verbal messages to beings to which it has Arcane Connections.\n\nCosts 15 spell levels. (CrMe Base 3, +4 Arcane)"
+        }
+      ],
+      "shortDescription": "Valdemar's wife: a deep-sea faerie, a Drifter, above water in human form since 1222 (Faerie Might 10, Aquam).",
+      "advancementNote": "A faerie: she has Pretenses, not Abilities, and gains Pretense rather than experience ('Faeries cannot gain experience from study, training, or practice'). Her Pretense is tracked separately from the XP tracker; her Foundry diary enters those seasons as study, training or practice (owner, 2026-10-04).",
+      "buildNote": "Owner-approved build, 2026-10-04 (package B, with Avaricious as the balancing Flaw): Virtues 6 points, Flaws 6 points."
     },
     "Stijntje Kuiper": {
       "name": "Stijntje Kuiper",

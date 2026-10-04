@@ -264,7 +264,9 @@
    "role": "Companion",
    "ship": "storm-dragon",
    "house": "",
-   "firstYear": 1222
+   "firstYear": 1222,
+   "xpNote": "Faerie (RoP: Faerie): she gains Pretense, not experience. Pretense is tracked separately; her Foundry diary records those seasons as study, training or practice (owner, 2026-10-04). Her build is a draft awaiting the owner.",
+   "pretense": true
   },
   {
    "id": "Stijntje Kuiper",
@@ -383,7 +385,9 @@
    "role": "Companion, merfolk",
    "ship": "storm-dragon",
    "house": "",
-   "firstYear": 1219
+   "firstYear": 1219,
+   "xpNote": "Magic Human, Magic Might 5 (Aquam). From Spring 1226 his Might is subtracted from every Advancement Total; his 1220–1225 experience stands as GM fiat grants (owner, 2026-10-04).",
+   "mightFromSeason": "1226-spring"
   },
   {
    "id": "Leofwin",
@@ -12240,6 +12244,160 @@
     }
    ],
    "detail": "exposure: Magic Theory+2 (assisting her parens)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1220-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "adventuring",
+   "xp": 5,
+   "xpType": "Adventuring",
+   "targets": [],
+   "detail": "adventuring: +5 to allocate — Meeting the Covenant and the Kraken Egg Hunt (Foundry entry has no XP allocated yet) (GM fiat grant)",
+   "covenant": null,
+   "source": "GM fiat grant (owner, 2026-10-04)"
+  },
+  "Ka'wa'ill::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1223-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Ka'wa'ill::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "none",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
    "covenant": null,
    "source": "owner ruling 2026-10-04"
   }

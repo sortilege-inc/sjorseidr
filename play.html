@@ -165,6 +165,7 @@ h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);col
 .meta-chip{font-family:'Cinzel',serif;font-size:10px;letter-spacing:.03em;text-transform:uppercase;
   padding:2px 8px;border-radius:9px;background:rgba(120,90,40,.1);color:var(--ink-soft);
   border:1px solid rgba(120,90,40,.3);white-space:nowrap}
+.meta-chip.might{background:rgba(44,107,102,.13);color:var(--teal);border-color:rgba(44,107,102,.4)}
 .sheet-source{font-size:11px;font-style:italic;color:var(--ink-soft);opacity:.75;margin:2px 0 16px}
 
 .sheet-section-title{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.07em;text-transform:uppercase;
@@ -797,6 +798,15 @@ function vfListHtml(list, cls){
   `;}).join('')}</div>`;
 }
 
+// Supernatural powers (RoP: Magic / Faerie): name, Might cost, Initiative, Form, then the text.
+function powersListHtml(list){
+  return `<div class="vf-list">${list.map(p=>{
+    const stats = [p.cost, p.init?`Init ${p.init}`:'', p.form].filter(Boolean).join(' · ');
+    return `<div class="vf-item virtue"><span class="vf-name">${esc(p.name)}</span>${stats?`<span class="vf-impact">${esc(stats)}</span>`:''}
+      ${p.description?`<span class="vf-desc">${mdRules(p.description)}</span>`:''}</div>`;
+  }).join('')}</div>`;
+}
+
 // ArM5 ability categories, in display order (General first).
 const ABILITY_CATEGORIES = ['General','Academic','Arcane','Martial','Supernatural'];
 // Valdemar's viktir runes (Elder Futhark) render as Supernatural abilities.
@@ -971,7 +981,14 @@ function magusSheetHtml(m){
     m.size!=null?`Size ${signed(m.size)}`:'',
     m.decrepitude?`Decrepitude ${m.decrepitude}`:'',
     m.warping?`Warping ${m.warping}`:'',
-  ].filter(Boolean).map(t=>`<span class="meta-chip">${esc(t)}</span>`).join('');
+  ].filter(Boolean).map(t=>`<span class="meta-chip">${esc(t)}</span>`).join('')
+  // Supernatural beings (RoP: Magic / Faerie): Might, its Form, Season, Magic Resistance.
+  + [
+    m.might!=null?`${m.mightRealm?m.mightRealm+' ':''}Might ${m.might}${m.form?' ('+m.form+')':''}`:'',
+    m.magicResistance!=null?`Magic Resistance ${m.magicResistance}`:'',
+    m.season?`Season: ${m.season}`:'',
+  ].filter(Boolean).map(t=>`<span class="meta-chip might">${esc(t)}</span>`).join('');
+  const isFaerie = m.mightRealm === 'Faerie';   // faeries have Pretenses, not Abilities (RoP: Faerie)
 
   const wounds = (m.activeWounds && m.activeWounds.length)
     ? m.activeWounds.map(w=>`<div class="wound-warn">⚕ ${esc(w.gravity)} wound${w.description?' — '+esc(w.description):''}</div>`).join('')
@@ -983,6 +1000,9 @@ function magusSheetHtml(m){
   if(m.originallyFrom) extras.push(`<div><em>Originally from:</em> ${esc(m.originallyFrom)}</div>`);
   if(m.playedBy) extras.push(`<div><em>Played by:</em> ${esc(m.playedBy)}</div>`);
   if(m.familiar) extras.push(`<div><em>Familiar:</em> ${esc(m.familiar)}</div>`);
+  if(m.seasonNote) extras.push(`<div><em>Season:</em> ${esc(m.seasonNote)}</div>`);
+  if(m.advancementNote) extras.push(`<div><em>Advancement:</em> ${esc(m.advancementNote)}</div>`);
+  if(m.buildNote) extras.push(`<div><em>Build:</em> ${esc(m.buildNote)}</div>`);
 
   // Shape-shift forms (heartbeast, lycanthrope, magical-animal companion) become
   // top-level personas: buttons at the top-right swap the whole body in place of
@@ -1037,9 +1057,12 @@ function magusSheetHtml(m){
     ` : ''}
 
     <div class="sheet-tabs" role="tablist">
-      <button class="sheet-tab on" data-stab="abilities">Abilities <span class="st-n">${(m.abilities||[]).length}</span></button>
+      <button class="sheet-tab on" data-stab="abilities">${isFaerie?'Pretenses':'Abilities'} <span class="st-n">${(m.abilities||[]).length}</span></button>
       <button class="sheet-tab" data-stab="virtues">Virtues <span class="st-n">${(m.virtues||[]).length}</span></button>
       <button class="sheet-tab" data-stab="flaws">Flaws <span class="st-n">${(m.flaws||[]).length}</span></button>
+      ${m.qualities && m.qualities.length ? `<button class="sheet-tab" data-stab="qualities">Qualities <span class="st-n">${m.qualities.length}</span></button>` : ''}
+      ${m.inferiorities && m.inferiorities.length ? `<button class="sheet-tab" data-stab="inferiorities">Inferiorities <span class="st-n">${m.inferiorities.length}</span></button>` : ''}
+      ${m.powers && m.powers.length ? `<button class="sheet-tab" data-stab="powers">Powers <span class="st-n">${m.powers.length}</span></button>` : ''}
       <button class="sheet-tab" data-stab="spells">Spells <span class="st-n">${(m.spells||[]).length}</span></button>
       ${m.discoveries && m.discoveries.length ? `<button class="sheet-tab" data-stab="discoveries">Discoveries <span class="st-n">${m.discoveries.length}</span></button>` : ''}
       ${m.reputations && m.reputations.length ? `<button class="sheet-tab" data-stab="reputations">Reputations <span class="st-n">${m.reputations.length}</span></button>` : ''}
@@ -1047,6 +1070,9 @@ function magusSheetHtml(m){
     <div class="sheet-tp on" data-stab="abilities">${abilitiesHtml(m.abilities)}</div>
     <div class="sheet-tp" data-stab="virtues">${vfListHtml(m.virtues,'virtue')}</div>
     <div class="sheet-tp" data-stab="flaws">${vfListHtml(m.flaws,'flaw')}</div>
+    ${m.qualities && m.qualities.length ? `<div class="sheet-tp" data-stab="qualities">${vfListHtml(m.qualities,'virtue')}</div>` : ''}
+    ${m.inferiorities && m.inferiorities.length ? `<div class="sheet-tp" data-stab="inferiorities">${vfListHtml(m.inferiorities,'flaw')}</div>` : ''}
+    ${m.powers && m.powers.length ? `<div class="sheet-tp" data-stab="powers">${powersListHtml(m.powers)}</div>` : ''}
     <div class="sheet-tp" data-stab="spells">${spellsHtml(m.spells)}</div>
     ${m.discoveries && m.discoveries.length ? `<div class="sheet-tp" data-stab="discoveries">${discoveriesHtml(m.discoveries)}</div>` : ''}
     ${m.reputations && m.reputations.length ? `<div class="sheet-tp" data-stab="reputations"><div class="vf-list">${m.reputations.map(r=>`<div class="vf-item"><span class="vf-name">${esc(r.name)}</span>${r.description?`<span class="vf-desc">${esc(r.description)}</span>`:''}</div>`).join('')}</div></div>` : ''}
