@@ -1,7 +1,7 @@
 /* Storyteller rail — a sticky table-of-contents down the left margin of the
    Storyteller pages (Open Questions, Next-Session Scenes). It links the whole
-   Storyteller area: the pages (including the Reference Guide, which has no rail of
-   its own), plus the Open-Questions type views.
+   Storyteller area: the pages (including the Reference Guide and Action Items, which have
+   no rail of their own), plus the Open-Questions type views.
    On Open Questions the type links switch the view in-place (via window.stSetType);
    from the Scenes page they deep-link with ?type=. Hidden when the window is
    too narrow to hold a rail beside the centred column. */
@@ -52,7 +52,8 @@
     '<a class="str-page ' + (onOQ ? 'cur' : '') + '" href="open_questions.html">❓ Open Questions</a>' +
     '<div class="str-subs">' + subs + '</div>' +
     '<a class="str-page ' + (onNS ? 'cur' : '') + '" href="next_session_scenes.html">🎬 Next-Session Scenes</a>' +
-    '<a class="str-page" href="reference_guide.html">📜 Reference Guide</a>';
+    '<a class="str-page" href="reference_guide.html">📜 Reference Guide</a>' +
+    '<a class="str-page" href="action_items.html">✅ Action Items</a>';
   document.body.appendChild(nav);
 
   function highlight(t) {

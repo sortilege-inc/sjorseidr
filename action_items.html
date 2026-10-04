@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Action Items</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,500;0,600;1,400;1,500&display=swap');
+
+:root{
+  --parch:#ede0c4; --parch-deep:#d8c39a;
+  --ink:#221a12; --ink-soft:#4a3c2c;
+  --gold:#9a6b1f; --gold-bright:#c69b3f;
+  --rust:#8a3324; --rust-bright:#b54a32;
+  --teal:#2c6b66; --teal-bright:#3f8f86;
+  --purple:#5b3a8a; --green:#3e6b35;
+  --line:#6b5436; --shadow:rgba(50,32,12,.45);
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{
+  font-family:'EB Garamond',Georgia,serif;color:var(--ink);
+  background:radial-gradient(120% 120% at 20% 0%, #f1e6cb 0%, #e6d6b3 55%, #d8c49b 100%) fixed;
+  min-height:100vh;
+}
+.wrap{position:relative;z-index:1;max-width:980px;margin:0 auto;padding:32px 16px 80px}
+a{color:var(--teal-bright)}
+header{border-bottom:2px solid var(--line);padding-bottom:14px;margin-bottom:14px}
+.crumb{font-family:'Cinzel',serif;font-size:12px;letter-spacing:.06em;color:var(--ink-soft)}
+.crumb a{text-decoration:none}
+h1{font-family:'Cinzel',serif;font-weight:600;font-size:clamp(22px,4vw,30px);color:var(--rust-bright);margin:4px 0 2px}
+.subtitle{font-style:italic;color:var(--ink-soft);font-size:14.5px;margin:0}
+
+.toolbar{padding:10px 0 12px;margin-bottom:6px;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.jump{font-family:'Cinzel',serif;font-size:11.5px;letter-spacing:.03em;padding:5px 10px;border-radius:14px;
+  border:1px solid rgba(120,90,40,.4);background:rgba(255,250,235,.55);color:var(--ink-soft);text-decoration:none;white-space:nowrap}
+.jump:hover{background:rgba(198,155,63,.22);color:var(--ink)}
+.jump b{color:var(--rust)}
+.tbtn{font-family:'Cinzel',serif;font-size:11px;letter-spacing:.03em;padding:5px 10px;border-radius:6px;cursor:pointer;
+  border:1px solid rgba(120,90,40,.45);background:#f3e8cc;color:var(--ink-soft)}
+.tbtn.on{background:rgba(154,107,31,.2);color:var(--rust);border-color:var(--gold)}
+.tools{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+
+.sec{margin:24px 0 8px;scroll-margin-top:64px}
+.sec>h2{font-family:'Cinzel',serif;font-weight:600;font-size:20px;color:var(--rust-bright);margin:0 0 4px;
+  border-bottom:1px solid rgba(120,90,40,.35);padding-bottom:4px;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.sec>h2 .tally{font-family:'EB Garamond',Georgia,serif;font-size:13.5px;font-weight:500;color:var(--ink-soft);font-style:italic;white-space:nowrap}
+.sec>.blurb{font-style:italic;color:var(--ink-soft);font-size:14px;margin:0 0 10px}
+.group{margin:12px 0 4px}
+.group>summary,.group>.gh{font-family:'Cinzel',serif;font-size:12.5px;letter-spacing:.04em;color:var(--teal);cursor:pointer;margin:0 0 6px;list-style-position:inside}
+.group>.gh{cursor:default}
+
+.item{display:grid;grid-template-columns:22px 1fr;gap:4px 8px;padding:8px 10px;margin:0 0 6px;
+  background:linear-gradient(180deg,rgba(255,250,236,.8),rgba(246,236,212,.8));border:1px solid rgba(120,90,40,.32);
+  border-left:4px solid var(--gold-bright);border-radius:8px}
+.item.k-question{border-left-color:var(--rust-bright)} .item.k-tool{border-left-color:var(--green)}
+.item.k-consequence{border-left-color:var(--purple)} .item.k-thread{border-left-color:var(--teal)}
+.item.k-event{border-left-color:var(--gold)} .item.k-xp{border-left-color:#4a6b8a} .item.k-scene{border-left-color:#8a5a2f}
+.item input[type=checkbox]{width:17px;height:17px;margin:2px 0 0;accent-color:var(--rust)}
+.item.done{opacity:.55}
+.item.done .ttl{text-decoration:line-through}
+.ttl{font-size:15.5px;font-weight:600;line-height:1.3}
+.id{font-family:'Cinzel',serif;font-size:10.5px;letter-spacing:.03em;padding:1px 6px;border-radius:9px;background:rgba(120,90,40,.12);
+  color:var(--ink-soft);margin-right:6px;font-weight:500;white-space:nowrap}
+.meta{grid-column:2;font-size:13px;color:var(--ink-soft);line-height:1.35}
+.meta a{white-space:nowrap}
+.next{grid-column:2;font-size:14px;line-height:1.38;background:rgba(198,155,63,.1);border-left:2px solid var(--gold-bright);padding:4px 8px;border-radius:3px}
+.next p{margin:0 0 4px} .next p:last-child{margin:0}
+.subs{grid-column:2;margin:2px 0 0}
+.subs summary{font-size:13px;color:var(--teal);cursor:pointer}
+.sub{display:grid;grid-template-columns:20px 1fr;gap:6px;font-size:14px;line-height:1.36;padding:3px 0 3px 2px;border-top:1px dotted rgba(120,90,40,.25)}
+.sub input{width:15px;height:15px;margin:3px 0 0;accent-color:var(--rust)}
+.sub.done span{text-decoration:line-through;opacity:.6}
+.chips{grid-column:2;display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:12px;padding:1px 7px;border-radius:9px;background:rgba(74,107,138,.12);color:#2f4a63;white-space:nowrap}
+body.hide-done .item.done{display:none}
+.empty{font-style:italic;color:var(--ink-soft);padding:8px 0}
+footer{margin-top:34px;border-top:1px solid rgba(120,90,40,.4);padding-top:12px;font-size:13px;color:var(--ink-soft);line-height:1.45}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="crumb"><a href="index.html">Sjórseiðr</a> · <a href="section.html?sec=storyteller">Storyteller</a></div>
+    <h1>Action Items</h1>
+    <p class="subtitle">One checklist of everything waiting on a decision or an edit, gathered from the Open Questions, the proposed Chronicle events, the XP tracker and the Next-Session slate. Nothing here is new; every row links back to where it lives.</p>
+  </header>
+  <div class="toolbar">
+    <span id="jumps"></span>
+    <span class="tools">
+      <button class="tbtn" id="hideDone" type="button">Hide ticked</button>
+      <button class="tbtn" id="clearTicks" type="button">Clear ticks</button>
+    </span>
+  </div>
+  <main id="content"><p class="empty">Gathering the open items…</p></main>
+  <footer>
+    Built live from <code>open_questions.json</code>, <code>proposed_events.json</code>, <code>xp_tracker.json</code> and <code>next_session_scenes.json</code>, so it updates whenever they do. Ticks are a personal to-do aid saved in this browser only; an item leaves the list when its source is resolved, approved or filled in.
+  </footer>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+const esc = s => (s==null?'':String(s)).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const md = s => esc(s).replace(/\*\*([^*\n]+)\*\*/g,'<strong>$1</strong>').replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g,'$1<em>$2</em>');
+const LS = 'sjorseidr_action_items_v1';
+let TICKS = {};
+try { TICKS = JSON.parse(localStorage.getItem(LS) || '{}') || {}; } catch(_) { TICKS = {}; }
+const saveTicks = () => { try { localStorage.setItem(LS, JSON.stringify(TICKS)); } catch(_){} };
+const hash = s => { let h = 0; for (const c of String(s)) h = (h*31 + c.codePointAt(0)) | 0; return (h>>>0).toString(36); };
+
+// Open-question paragraphs that state the next step.
+const NEXT_RE = /^(\*\*)?(FOLLOW-UP|STILL OPEN|STILL TO PREP|TO CLARIFY|TO SETTLE|Options|Owner decision|⚠)/i;
+function nextSteps(ctx){
+  const paras = String(ctx||'').split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean);
+  return paras.filter(p => NEXT_RE.test(p) || /\*\*(FOLLOW-UP|STILL OPEN)\b/.test(p)).slice(-2);
+}
+function bullets(ctx){
+  return String(ctx||'').split('\n').map(l=>l.trim()).filter(l=>/^-\s+/.test(l)).map(l=>l.replace(/^-\s+/,''));
+}
+
+function itemHtml(o){
+  // o: {key, kind, id, title, meta, link, linkText, next[], subs[], chips[]}
+  const done = !!TICKS[o.key];
+  const subs = (o.subs||[]).map(t => {
+    const k = o.key + '#' + hash(t), d = !!TICKS[k];
+    return `<label class="sub ${d?'done':''}"><input type="checkbox" data-key="${esc(k)}" ${d?'checked':''}><span>${md(t)}</span></label>`;
+  }).join('');
+  return `<div class="item k-${o.kind} ${done?'done':''}">
+    <input type="checkbox" data-key="${esc(o.key)}" ${done?'checked':''} aria-label="Done: ${esc(o.title)}">
+    <div class="ttl">${o.id?`<span class="id">${esc(o.id)}</span>`:''}${md(o.title)}</div>
+    ${o.meta||o.link?`<div class="meta">${o.meta?esc(o.meta):''}${o.meta&&o.link?' · ':''}${o.link?`<a href="${esc(o.link)}">${esc(o.linkText||'open')} →</a>`:''}</div>`:''}
+    ${o.chips&&o.chips.length?`<div class="chips">${o.chips.map(c=>`<span class="chip">${esc(c)}</span>`).join('')}</div>`:''}
+    ${o.next&&o.next.length?`<div class="next">${o.next.map(p=>`<p>${p.split('\n').map(md).join('<br>')}</p>`).join('')}</div>`:''}
+    ${subs?`<details class="subs" ${(o.subs.length<=6)?'open':''}><summary>${o.subs.length} sub-items</summary>${subs}</details>`:''}
+  </div>`;
+}
+
+function section(id, title, blurb, groups){
+  const all = groups.flatMap(g => g.items);
+  const done = all.filter(o => TICKS[o.key]).length;
+  const body = groups.map(g => {
+    if (!g.items.length) return '';
+    const inner = g.items.map(itemHtml).join('');
+    if (!g.title) return inner;
+    return g.collapsed
+      ? `<details class="group"><summary>${esc(g.title)} (${g.items.length})</summary>${inner}</details>`
+      : `<div class="group"><div class="gh">${esc(g.title)} (${g.items.length})</div>${inner}</div>`;
+  }).join('') || `<p class="empty">Nothing outstanding.</p>`;
+  return { id, title, n: all.length, html:
+    `<section class="sec" id="${id}"><h2><span>${esc(title)}</span><span class="tally">${done} of ${all.length} ticked</span></h2>
+     <p class="blurb">${blurb}</p>${body}</section>` };
+}
+
+async function load(){
+  const get = f => fetch(f, {cache:'no-cache'}).then(r => { if(!r.ok) throw new Error(f+' '+r.status); return r.json(); });
+  const [OQ, P, X, NS] = await Promise.all([get('open_questions.json'), get('proposed_events.json'), get('xp_tracker.json'), get('next_session_scenes.json')]);
+  const HIDDEN = ['Resolved','Archived','Closed'];
+  const live = OQ.items.filter(q => !HIDDEN.includes(q.status));
+  const oqItem = q => ({
+    key: 'oq:'+q.id, kind: (q.type||'').toLowerCase(), id: q.id, title: q.title,
+    meta: [q.category, q.status && q.status!=='Open' ? q.status : ''].filter(Boolean).join(' · '),
+    link: 'open_questions.html?q='+encodeURIComponent(q.id), linkText: 'Open Questions',
+    next: nextSteps(q.context), subs: bullets(q.context)
+  });
+  const byType = t => live.filter(q => q.type === t).map(oqItem);
+  const secs = [];
+
+  secs.push(section('rulings', 'Rulings & decisions', 'Open Questions that need your call before play can rely on them.',
+    [{ items: byType('Question') }]));
+
+  secs.push(section('fixes', 'Sheets, data & discrepancies', 'Character-sheet, Foundry and site-data fixes, including discrepancies waiting to be adjudicated (the Open Questions’ Tool items).',
+    [{ items: byType('Tool') }]));
+
+  secs.push(section('consequences', 'Consequences to land', 'Things that have already happened whose fallout hasn’t played out yet.',
+    [{ items: byType('Consequence') }]));
+
+  // Proposed chronicle events, grouped by session (newest first).
+  const bySess = {};
+  for (const e of P) (bySess[e.session || 'undated'] ||= []).push(e);
+  const sessKeys = Object.keys(bySess).sort().reverse();
+  secs.push(section('events', 'Proposed events to review', 'Draft Chronicle entries waiting for approval (approve → verified), edit, or cut.',
+    sessKeys.map(s => ({
+      title: s === 'undated' ? 'No session recorded' : 'From the ' + s + ' session',
+      collapsed: false,
+      items: bySess[s].sort((a,b) => String(a.sort_iso).localeCompare(String(b.sort_iso))).map(e => ({
+        key: 'ev:'+e.id+':'+hash(e.title+(e.body_text||'')), kind: 'event', id: e.id, title: e.title,
+        meta: [e.date, (e.cast||[]).join(', ')].filter(Boolean).join(' · '),
+        link: 'sjorseidr_chronicle.html', linkText: 'Chronicle',
+        next: /⚠|Check before approving|to be chosen|still to be/i.test(e.notes||'') ? [e.notes] : []
+      }))
+    }))));
+
+  // XP tracker: seasons with no entry, from each member's start through the reviewed-through season.
+  const S = X.seasons, SI = Object.fromEntries(S.map((s,i) => [s.id, i]));
+  const end = SI[X.meta.reviewedThroughSeason] ?? S.length - 1;
+  const gaps = {};
+  for (const m of X.members) {
+    const start = (m.firstSeason && SI[m.firstSeason] != null) ? SI[m.firstSeason] : S.findIndex(s => s.year >= (m.firstYear ?? 0));
+    const last = m.lastYear != null ? S.map(s => s.year).lastIndexOf(m.lastYear) : S.length - 1;
+    const miss = [];
+    for (let i = Math.max(0, start); i <= Math.min(end, last); i++) if (!X.entries[m.id + '::' + S[i].id]) miss.push(S[i]);
+    if (miss.length) (gaps[m.type] ||= []).push({ m, miss });
+  }
+  const TYPE_LABEL = { magus: 'Magi', companion: 'Companions', familiar: 'Familiars', grog: 'Grogs' };
+  const reviewedLabel = (S[end] || {}).label || X.meta.reviewedThroughSeason;
+  secs.push(section('xp', 'XP not recorded', `Seasons with no XP-tracker entry, from each member’s first season through ${esc(reviewedLabel)} (the tracker’s reviewed-through point; later seasons aren’t reviewed yet).`,
+    ['magus','companion','familiar','grog'].map(t => ({
+      title: TYPE_LABEL[t], collapsed: t !== 'magus',
+      items: (gaps[t] || []).map(({ m, miss }) => ({
+        key: 'xp:'+m.id+':'+hash(miss.map(s=>s.id).join()), kind: 'xp', title: m.name,
+        meta: `${miss.length} season${miss.length>1?'s':''} without an entry${m.role ? ' · ' + m.role : ''}`,
+        link: 'xp_tracker.html', linkText: 'XP tracker', chips: miss.map(s => s.label)
+      }))
+    }))));
+
+  // Next-session prep: scenes flagged Needs prep, and any scene's STILL TO PREP paragraph.
+  const prep = [];
+  for (const s of NS.scenes) {
+    const paras = String(s.detail||'').split(/\n\s*\n/).map(p=>p.trim()).filter(p => /^STILL TO PREP/i.test(p));
+    if (s.status === 'Needs prep' || paras.length) prep.push({
+      key: 'ns:'+s.id+':'+hash(paras.join()+s.status), kind: 'scene', id: s.id, title: s.title,
+      meta: [s.status, (s.seasons||[]).join(', ')].filter(Boolean).join(' · '),
+      link: 'next_session_scenes.html#'+encodeURIComponent(s.id), linkText: 'Next Session',
+      next: paras.length ? paras : (s.hook ? [s.hook] : [])
+    });
+  }
+  secs.push(section('prep', 'Scene prep', 'Next-Session scenes marked Needs prep, plus every scene’s STILL TO PREP list.', [{ items: prep }]));
+
+  secs.push(section('threads', 'Threads & ideas', 'Dangling hooks nobody is blocked on. Pick them up when there’s room.',
+    [{ title: 'Threads', collapsed: true, items: live.filter(q => q.type === 'Thread' && q.status !== 'Idea').map(oqItem) },
+     { title: 'Ideas', collapsed: true, items: live.filter(q => q.type === 'Thread' && q.status === 'Idea').map(oqItem) }]));
+
+  $('#content').innerHTML = secs.map(s => s.html).join('');
+  $('#jumps').innerHTML = secs.map(s => `<a class="jump" href="#${s.id}">${esc(s.title)} <b>${s.n}</b></a>`).join(' ');
+}
+
+document.addEventListener('change', e => {
+  const k = e.target && e.target.dataset && e.target.dataset.key;
+  if (!k) return;
+  if (e.target.checked) TICKS[k] = Date.now(); else delete TICKS[k];
+  saveTicks();
+  e.target.closest('.item, .sub')?.classList.toggle('done', e.target.checked);
+  // refresh the section tally in place
+  const sec = e.target.closest('.sec');
+  if (sec) {
+    const boxes = [...sec.querySelectorAll('.item > input[type=checkbox]')];
+    sec.querySelector('.tally').textContent = `${boxes.filter(b=>b.checked).length} of ${boxes.length} ticked`;
+  }
+});
+$('#hideDone').onclick = () => { const on = document.body.classList.toggle('hide-done'); $('#hideDone').classList.toggle('on', on); };
+$('#clearTicks').onclick = () => { if (confirm('Clear every tick on this page?')) { TICKS = {}; saveTicks(); load(); } };
+load().catch(err => { $('#content').innerHTML = `<p class="empty">Could not load the data files — open this page through the site (not file://). ${esc(err.message)}</p>`; });
+</script>
+<script src="nav.js"></script>
+</body>
+</html>

@@ -88,7 +88,9 @@
         { "icon": "🎬", "title": "Next Session — Candidate Scenes", "href": "next_session_scenes.html", "tag": "Session Prep",
           "desc": "The Storyteller's working slate of scenes to stage next session, filterable by season and by magus." },
         { "icon": "📜", "title": "Reference Guide — Formulae & Tables", "href": "reference_guide.html", "tag": "Rules Reference",
-          "desc": "Every formula and table from Ars Magica: Definitive Edition, Appendix D, as a searchable quick reference." }
+          "desc": "Every formula and table from Ars Magica: Definitive Edition, Appendix D, as a searchable quick reference." },
+        { "icon": "✅", "title": "Action Items", "href": "action_items.html", "tag": "Checklist",
+          "desc": "One checklist of everything awaiting a decision or an edit — rulings, sheet discrepancies, proposed events, unrecorded XP, and scene prep — gathered from across the Storyteller pages." }
       ]
     }
   ]

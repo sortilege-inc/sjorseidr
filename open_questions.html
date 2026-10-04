@@ -271,8 +271,16 @@ async function load(){
     // deep-link / storyteller rail: open a specific type view
     const wantType = new URLSearchParams(location.search).get('type');
     if(wantType && (wantType==='all' || wantType==='reference' || TYPE_ORDER.includes(wantType))) activeType = wantType;
+    // deep-link from the Action Items checklist: ?q=<id> opens that item's type and scrolls to it
+    const wantQ = new URLSearchParams(location.search).get('q');
+    const qItem = wantQ && STATE.items.find(x=>x.id===wantQ);
+    if(qItem){ activeType = qItem.type; filter.category='all'; filter.status='all'; }
     render();
     if(window.stRailHighlight) window.stRailHighlight(activeType);
+    if(qItem) setTimeout(()=>{
+      const el = document.querySelector(`.qcard[data-id="${CSS.escape(qItem.id)}"]`);
+      if(el){ el.scrollIntoView({block:'center'}); el.style.boxShadow='0 0 0 2.5px var(--gold-bright), 0 2px 6px var(--shadow)'; }
+    }, 0);
   }catch(e){
     $('#qlist').innerHTML = `<div class="empty">Could not load open_questions.json / resolved_questions.json — open this page via a local server, not file://.<br>${esc(e.message)}</div>`;
     $('#status').textContent = 'Load failed';
