@@ -5,7 +5,7 @@
   "sort_iso": "1223-11-20T12:00",
   "session": "2026-07-25",
   "scene": "Winter 1223-24 — Carrick",
-  "title": "Wilhelm cracks the ritual integration over the winter",
+  "title": "Wilhelm integrates Ward of the Secure Grainery",
   "icon": "📐",
   "timeline": "❄️ Winter 1223-24",
   "date": "Winter 1223-24",
@@ -14,47 +14,28 @@
   ],
   "activity_type": "Research",
   "status": "Proposed",
-  "notes": "Wilhelm's winter work at Carrick: the folk system stops being spontaneous-only. He judges the formulaic-ritual step 'really easy — someone just needed to point it out'; the remaining work is formalizing the Artes Liberales / Philosophiae contribution.",
-  "source": "Session recap 2026-07-25 (Ars Magica transcript), winter-1223 downtime.",
-  "body_text": "Wintering at **Carrick** while his research assistants are out gathering material, Wilhelm spends the season on **integration and research** — turning his folk system from a curiosity into something with proper mechanics.\n**The breakthrough he's most confident about:** his current system knows only **spontaneous, ritual-style casting** (roll halved). Proper **formulaic** magic would let a caster add **Artes Liberales** and **Philosophiae** to the effort *and* drop the divide-by-two — roughly tripling the effective pool. Over the winter he works out that this ritual integration is, in his own estimate, **\"really easy — someone just needed to point it out\"**: give a caster the finished formula rather than making them improvise it each time.\n**The Artes Liberales angle** is the part still taking his time: the obvious-once-said refinements a folk caster never bothered to name. If a ceremony wants a circle, it helps to know **geometry** enough to draw a true one; if it wants words of power, it helps to know **rhetoric** enough to project the voice. Formalizing how Artes Liberales and Philosophiae feed the working is the winter's real labor.\n**Logistics.** His assistants are sent west and south to gather hedge-magic insight, carrying **sacks of grain and silver** as payment for anyone willing to teach the \"easy stuff.\" Wilhelm writes letters — to the loose **wizard-circle** he keeps looped in on the project, to his family, and to **Dietrich** (his brother/scribe, back at his teaching post), whom he promises a **tractatus of the generated folk-magic spells** once it's finished. He intends to set up a **lab on shore** (he is chronically seasick and will not stay aboard ship an hour longer than he must), and has arranged for his research materials to be relocated from home toward wherever the covenant next bases itself. Feeds t019, t009, and the mundane vis-factory pitch (t020)."
- },
- {
-  "id": "p063",
-  "file": "",
-  "sort_iso": "1223-12-10T12:00",
-  "session": "2026-08-08",
-  "scene": "Winter 1223-24 — the Isle of Man",
-  "title": "Valdemar studies Legends of Brittany",
-  "icon": "📖",
-  "timeline": "❄️ Winter 1223-24",
-  "date": "Winter 1223-24",
-  "cast": [
-   "Valdemar"
-  ],
-  "activity_type": "Study",
-  "status": "Proposed",
-  "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-  "body_text": "Over winter Valdemar studies Legends of Brittany, the Faerie Lore summa he took as his share of the tribunal prizes."
+  "notes": "Player notes 2026-10-04. XP recorded: exposure Creo +1, Herbam +1. Open: the spell's level and the '+3 Additional Effects' (under GM review); breakthrough points for it (under GM review); the extra +1 Folk Magic Theory from letters (under GM review).",
+  "source": "Seasonal activities, 2026-08-08 session; detail from player notes 2026-10-04.",
+  "body_text": "Wintering over **Winter 1223-24**, Wilhelm works out a **stabilized integration** to protect stored grain.\n**Ward of the Secure Grainery**: protects a granary against foulment (Herbam, level 1), vermin (Animal, level 2), fire (Ignem, level 3) and spoilage (Aquam, level 1). Base effect 3, Circle +0, Touch +1, Ring +2, +3 additional effects: **level 25**. No alternate effects. It can be cast as a formulaic spell to which the caster adds Artes Liberales + Philosophiae."
  },
  {
   "id": "p066",
   "file": "",
-  "sort_iso": "1224-06-18T12:00",
+  "sort_iso": "1224-06-25T12:00",
   "session": "2026-08-08",
-  "scene": "Spring 1224 — the Isle of Man",
-  "title": "Wilhelm writes up two folk-magic integrations",
+  "scene": "Summer 1224 — the second integration",
+  "title": "Wilhelm integrates Blessing of the Fine Harvest",
   "icon": "⚗️",
-  "timeline": "🌼 Spring 1224",
-  "date": "Spring 1224",
+  "timeline": "☀️ Summer 1224",
+  "date": "Summer 1224",
   "cast": [
    "Wilhelm"
   ],
   "activity_type": "Research",
   "status": "Proposed",
-  "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Seasonal activity auto-logged from the session; not yet owner-reviewed.",
-  "body_text": "Newly set up on the Hound of Cassel, Wilhelm begins writing two integrations of his folk system — one to add Artes Liberales, one to let spells be cast 'virtually' — aiming to finish them as a Factus by year's end and send them out."
+  "source": "Seasonal activities, 2026-08-08 session; moved to Summer 1224 and detailed per player notes 2026-10-04.",
+  "notes": "Player notes 2026-10-04 (moved from Spring 1224, which the tracker records as adventuring). XP recorded: exposure Creo +1, Herbam +1. ⚠ Check: Wilhelm also sailed the Hound of Cassel to Scarem Montem this summer, and lab work allows 'up to ten days' away. Open: the spell's level (under GM review); breakthrough points (under GM review); the extra +1 Folk Magic Theory (under GM review).",
+  "body_text": "In **Summer 1224** Wilhelm integrates a second granary spell.\n**Blessing of the Fine Harvest**: ensures well-grown crops (CrHe 1), +1 Touch, +3 Moon, +3 Size (1,000×), +1 Part (sizable to the target); it can affect up to 2,000 acres of farmland. No alternate effects. It can be cast as a formulaic spell to which the caster adds Artes Liberales + Philosophiae."
  },
  {
   "id": "p067",
@@ -110,7 +91,7 @@
   "activity_type": "Lab work",
   "status": "Proposed",
   "source": "Seasonal activities, 2026-08-08 session.",
-  "notes": "Declared seasonal plan; not yet played.",
+  "notes": "Declared 2026-08-08. Owner ruling 2026-10-04: the Durenmar trip and the sled-building are Spring 1225 (p104), so Winter 1224-25 stays on Man. The player's Winter exposure (Rego +1, Terram +1) belongs to the sleds in Spring 1225; this winter's activity and XP still need choosing (under GM review).",
   "body_text": "Declared: Wilhelm winters at the Isle of Man, getting his integrations up and running and setting the research assistants (Carl & Isaac) back to gathering."
  },
  {
@@ -210,8 +191,8 @@
    "Dietrich"
   ],
   "activity_type": "Lab Work",
-  "notes": "Played 2026-10-03. Stone sleds: built by Wilhelm himself at 2 pawns each (owner, 2026-10-04), not bought from a Verditius at 6 (the q033 purchase price). 4 Terram applied to the covenant's vis stock (Fire From the Sky 37 → 33); the other 2 pawns he took are unspent. The Roots' titles are still to be entered in the library.",
-  "body_text": "In **Spring 1225** Wilhelm returns to **Durenmar**, where he did his original thesis work, meaning to finish publishing his papers and have stone sleds built. Once there he realises he still has a **laboratory** at Durenmar and can build them himself: the library holds a **lab text for the stone sled**, a Rego effect within his reach.\nHe had brought **six pawns of Terram vis** to buy one. Building them himself, each costs **two**, so he makes **two sleds** for **four pawns**, his Lab Total just scraping **40**. As with everything he does, he experiments: nothing blows up, but the experiment throws up a **special story event**, still to be revealed.\nHe orders the **Roots**, and brings them home without difficulty. He sends **thesis 1.0**, now with a spellbook written up for it, round the circle of scholars he worked with: here it finally is.\nDurenmar's welcome is lukewarm. Few share his obsession with folk magic and bringing magic to the masses, but there is a **grudging respect** that he has actually produced something.\nHe spends the year readying his work for publication, and goes to **Cologne** to see how **Dietrich**'s university classes are going. Dietrich has been practising what Wilhelm taught him and has ideas about **teaching more people more quickly**: scaling up the teaching itself, independent of what is being taught."
+  "notes": "Played 2026-10-03; player detail 2026-10-04. Durenmar is Spring 1225, as played (owner ruling 2026-10-04; the player had it in Winter 1224-25). Stone sleds: built by Wilhelm himself at 2 pawns each (owner, 2026-10-04), not bought from a Verditius at 6 (the earlier purchase ruling). 4 Terram applied to the covenant's vis stock (Fire From the Sky 37 → 33). Player's XP for the season: exposure Rego +1, Terram +1 (+1 Folk Magic Theory pending GM review). The player reports a Magic Theory roll of 23 against 18 (flagged for GM review). The Roots' titles are still to be entered in the library.",
+  "body_text": "In **Spring 1225** Wilhelm returns to **Durenmar**, where he did his original thesis work, meaning to finish publishing his papers and have stone sleds built. Once there he realises he still has a **laboratory** at Durenmar and can build them himself: the library holds a **lab text for the stone sled**, a Rego effect within his reach.\nHe had brought **six pawns of Terram vis** to buy one. Building them himself, each costs **two**, so he makes **two sleds** for **four pawns**, his Lab Total just scraping **40**. He spends the season studying the lab text and using it as his source. As with everything he does, he experiments: nothing blows up, but the experiment throws up a **special story event** on the Extraordinary Results chart, still to be revealed.\nHe orders the **Roots**, and brings them home without difficulty. He sends **thesis 1.0**, now with a spellbook written up for it, round the circle of scholars he worked with: here it finally is.\nDurenmar's welcome is lukewarm. Few share his obsession with folk magic and bringing magic to the masses, but there is a **grudging respect** that he has actually produced something.\nHe spends the year readying his work for publication, and goes to **Cologne** to see how **Dietrich**'s university classes are going. Dietrich has been practising what Wilhelm taught him and has ideas about **teaching more people more quickly**: scaling up the teaching itself, independent of what is being taught."
  },
  {
   "id": "p105",
@@ -257,19 +238,19 @@
   "file": "",
   "sort_iso": "1224-03-21T12:00",
   "session": "2026-09-20",
-  "scene": "1224 — revised study plan",
-  "title": "Valdemar revises 1224: study Insights from Twilight, not copy it (declared)",
+  "scene": "Spring 1224 — reading Insights from Twilight",
+  "title": "Valdemar reads Insights from Twilight (Spring 1224)",
   "icon": "📖",
-  "timeline": "🌼 Spring & 🍂 Fall 1224",
-  "date": "Spring & Fall 1224",
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
   "cast": [
    "Valdemar Bjornsson"
   ],
   "activity_type": "Study",
   "status": "Proposed",
-  "notes": "Declared/revised plan. Fall 1224 has NOT yet been played (ledger 'current' node = Summer 1224 live), so no XP is written to the tracker yet — record the two study cells once the seasons are played / confirmed in Foundry. Valdemar's Spring/Fall 1224 tracker cells are currently empty (no conflict). Supersedes any intent to copy the book. Insights from Twilight = Magic Theory summa L6/Q11 (Tribunal prize draft).",
-  "source": "Player notes forwarded by owner, 2026-09-20.",
-  "body_text": "Declared revision: rather than **copying** *Insights from Twilight* (the Magic Theory summa, L6 / Q11, won in the Tribunal prize draft), Valdemar will **study from it** in **Spring and Fall 1224**. At his Magic Theory 3 (45 xp) — well under the summa's Level 6 — that yields the full **Q11 per season, +22 Magic Theory XP** across the two seasons, carrying him to score 4 (partway to 5). He may later pick up **Profession: Scribe** to speed his copying of important books."
+  "notes": "Owner ruling 2026-10-04: reading in Spring 1224 only (+11 Magic Theory, recorded in the XP tracker). Summer 1224 (the crown delivered to Mímormr) and Fall 1224 (Carnac) were adventures, so those seasons take adventure XP, which his player still has to choose. Reading instead of copying frees no season: a careful copy of this Level 6 summa would take one season (6 + Profession: Scribe points a season).",
+  "source": "Player notes forwarded by owner, 2026-09-20; revised per owner ruling 2026-10-04.",
+  "body_text": "In **Spring 1224** Valdemar studies *Insights from Twilight*, the Magic Theory summa (L6 / Q11) won in the Tribunal prize draft, rather than copying it: **+11 Magic Theory**. The rest of his 1224 goes to adventure: delivering the crown to Mímormr in the summer and the Carnac regiones in the fall."
  },
  {
   "id": "p109",
@@ -857,7 +838,7 @@
   ],
   "activity_type": "Travel",
   "notes": "Played 2026-10-03. The arrival is at the beginning of Winter 1225-26.",
-  "body_text": "At the start of **Winter 1225-26** Wilhelm brings his family to winter at the covenant:\n• his father **Carl**, a farmer turned mercenary, who made his money taking a hostage (the man stayed with the family a couple of years until he was ransomed, and is still a good friend) and who is the reason neither son became a soldier;\n• his mother **Elise**, the local miller's daughter and the smart one of the family, from whom the children got their brains;\n• his brother **Dietrich**;\n• his younger sisters **Angelina**, married in Cologne to a man she met through Dietrich, and **Catherine**, who is considering taking vows.\nThey fly by **stone sled**: cart-sized stone slabs that carry up to 2,000 lb each, fitted with a light covered wooden frame and flown by hired grogs with **Finesse** (Teamster adds). Someone must be aboard at sunrise and sunset to renew the effect. They follow the coasts rather than fly over forests and towns, so the trip takes two or three days. The **Hound of Cassel** is left free to trade or winter as its captain sees fit.\nThe covenant watches the procession land beside the wizards' hall. The shipyard is well underway, and grogs drill in the square.\n**Rán** comes out to greet them. At first glance she is a blonde woman, until the almost translucent skin and tendril-like hair register, and the family gets a full dose of the uncanny as she plays hostess by a roaring fire over a great spread of grain and fish."
+  "body_text": "At the start of **Winter 1225-26** Wilhelm brings his family to winter at the covenant:\n• his father **Carl**, a farmer turned mercenary, who made his money taking a hostage (the man stayed with the family a couple of years until he was ransomed, and is still a good friend) and who is the reason neither son became a soldier;\n• his mother **Eloise**, the local miller's daughter and the smart one of the family, from whom the children got their brains;\n• his brother **Dietrich**;\n• his younger sisters **Angelina**, married in Cologne to a man she met through Dietrich, and **Catherine**, who is considering taking vows.\nThey fly by **stone sled**: cart-sized stone slabs that carry up to 2,000 lb each, fitted with a light covered wooden frame and flown by hired grogs with **Finesse** (Teamster adds). Someone must be aboard at sunrise and sunset to renew the effect. They follow the coasts rather than fly over forests and towns, so the trip takes two or three days. The **Hound of Cassel** is left free to trade or winter as its captain sees fit.\nThe covenant watches the procession land beside the wizards' hall. The shipyard is well underway, and grogs drill in the square.\n**Rán** comes out to greet them. At first glance she is a blonde woman, until the almost translucent skin and tendril-like hair register, and the family gets a full dose of the uncanny as she plays hostess by a roaring fire over a great spread of grain and fish."
  },
  {
   "file": "",
@@ -879,5 +860,65 @@
   "activity_type": "Politics",
   "notes": "Played 2026-10-03. Scores from the character sheets: Valerian, Code of Hermes 3 (Political Intrigue), Civil & Canon Law 6, Common Law 4; Wilhelm, Code of Hermes 2.",
   "body_text": "Wilhelm shares what he learned at Durenmar, including his copy of the complaint. It gives Valdemar more to work with than he had: an **Order of Odin** accusation and a **molestation of the fae** accusation.\n**The Order of Odin, as the covenant generally understands it**, is a catch-all, not a structure, closer to what goes on at Carnac than to anything the Order of Hermes does. Some groups outside the Order have come into the fold, under ex Miscellanea or by training under other magi, and most have let their older traditions go. A few stubborn holdouts keep bespoke amalgams of magic, not unlike Valdemar's mix of Hermetic Arts and viktir.\nGenerally they are treated as a milder, far-off version of the Diedne: wrong-headed and in need of correction, a nuisance rather than an existential threat. Should they become a threat, the Order would do it all again.\nWilhelm's reading, from casual digging at Durenmar, is that the term is a **convenient catch-all**: closer to a geographical label than an organisation, lumping together distinct practices that would never get along, and at times a historical bogeyman.\n**Valdemar's line**: you accuse me of belonging to an order that doesn't exist; and as for the fae, she married me. She is my wife. Leave us alone.\n**Who can defend him?** **Valerian** knows the law best: Code of Hermes 3 (Political Intrigue), Civil & Canon Law 6, Common Law 4. But he is not in good standing. He knows that members of the Rhine Tribunal have suborned the bishopric of Liège; he was imprisoned for it until the covenant rescued him; and the only place to bring that charge would be the Grand Tribunal. Wilhelm has Code of Hermes 2.\n**Wilhelm's worry**: the charge may be a pretext to make Valdemar show his rune magic in public. Integrating rune magic would be a big prize, and forcing him to write it up could leave him too useful to the Order to be let go: an anchor for years, perhaps for life."
+ },
+ {
+  "id": "p143",
+  "file": "",
+  "sort_iso": "1224-09-25T12:00",
+  "session": "2026-10-04",
+  "scene": "Fall 1224 — writing",
+  "title": "Wilhelm writes his new summa",
+  "icon": "📜",
+  "timeline": "🍂 Fall 1224",
+  "date": "Fall 1224",
+  "cast": [
+   "Wilhelm Stienauer"
+  ],
+  "activity_type": "Documentation",
+  "status": "Proposed",
+  "source": "Player notes forwarded by the owner, 2026-10-04.",
+  "notes": "Player notes 2026-10-04. XP recorded: exposure Teaching +2 (under GM review). Open: the claimed Level 4 against the core cap of half the author's score (under GM review); entering the book in the library.",
+  "body_text": "In **Fall 1224** Wilhelm writes up his new summa: effectively **Level 4 / Quality 12**, with spell notes (ceremonial and formulaic magic) for **10 spells**: 2 healing effects, 2 wards, 2 crop blessings, 2 scrying, 2 curses."
+ },
+ {
+  "file": "",
+  "session": "2026-10-04",
+  "status": "Proposed",
+  "source": "Player notes forwarded by the owner, 2026-10-04.",
+  "id": "p144",
+  "sort_iso": "1225-04-11T12:00",
+  "scene": "1225 — the Isle of Man",
+  "title": "Furtum's 1225: the shipyard, its lab, and a master shipwright",
+  "icon": "⚓",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "cast": [
+   "Furtum Bonisagus",
+   "Fuchs Scipwyrhta",
+   "Sama"
+  ],
+  "activity_type": "Covenant Business",
+  "notes": "Player notes 2026-10-04; Furtum's start moved to Spring 1225 (owner). Player's XP: Spring and Summer exposure Magic Theory +3 each (2, ×1.5 for Affinity with Magic Theory); Fall exposure Area Lore: Isle of Man +2; Winter taught Teaching by Sama — the player had +21 (Teaching 5 → 26), which is under GM review. The lab figures are under GM review. Not in the XP tracker until approved.",
+  "body_text": "• **Spring 1225:** works on the shipyard and sets up a laboratory as part of it.\n• **Summer 1225:** finishes the lab and keeps on with the shipyard.\n• **Fall 1225:** finds a master shipwright, making liberal use of Aura of Rightful Authority: **Fuchs Scipwyrhta**, an English guild master.\n• **Winter 1225-26:** Sama teaches him the Teaching ability.\nThe lab, as built: Spacious; Exposed; Empty ×3; Damp. The covenant's grogs can do carpentry and ship repair, so they know something of what a real shipyard needs; the master shipwright supplies the rest."
+ },
+ {
+  "file": "",
+  "session": "2026-10-04",
+  "status": "Proposed",
+  "source": "Player notes forwarded by the owner, 2026-10-04.",
+  "id": "p145",
+  "sort_iso": "1225-04-12T12:00",
+  "scene": "1225 — the Isle of Man",
+  "title": "Sama's 1225: settling in, English, and teaching Furtum",
+  "icon": "🌙",
+  "timeline": "🌼 Spring 1225",
+  "date": "1225",
+  "cast": [
+   "Sama",
+   "Furtum Bonisagus"
+  ],
+  "activity_type": "Study",
+  "notes": "Player notes 2026-10-04; Sama's start moved to Spring 1225 and she joins the Tide of Memory (owner). Player's XP: Spring exposure English +2; Summer and Fall practice English (Source Quality to be set by the owner with the player); Winter teaching exposure +2, which must go to Teaching or the language of instruction (under GM review). Not in the XP tracker until approved.",
+  "body_text": "• **Spring 1225:** Sama sets up her home with the covenant, picking up English.\n• **Summer and Fall 1225:** practises her English.\n• **Winter 1225-26:** teaches Furtum the Teaching ability."
  }
 ]

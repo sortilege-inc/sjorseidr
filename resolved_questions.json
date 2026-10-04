@@ -886,6 +886,28 @@
       "raised_event": null,
       "status": "Closed",
       "resolution": "Closed (2026-10-03): Sama is a PC companion (owner). Character sheet is finalized and matches Sama fin.pdf; the earlier flags are resolved — the ~2 extra characteristic points are a Strong Faerie Blood (Sidhe) bump, and “L21” is her apparent age under Unaging (actual 35 / apparent 21)."
+    },
+    {
+      "id": "q041",
+      "type": "Question",
+      "category": "Character Build",
+      "status": "Resolved",
+      "title": "Valdemar's free Winter 1223-24 activity (the Legends of Brittany retcon)",
+      "raised_in": "Session transcript 2026-10-03 + owner answers 2026-10-04",
+      "raised_event": "p063",
+      "context": "Valdemar had already got everything he could from Legends of Brittany, so his Winter 1223-24 study of it (p063) yields nothing. The GM offered to let him retcon that winter into something else, for example studying a rune source. **FOLLOW-UP:** Valdemar's player names the activity, then p063 is rewritten and his diary updated.",
+      "resolution": "Resolved 2026-10-04: Winter 1223-24 was already reallocated to studying Rego with Valerian (Rego +16 in the XP tracker), so there is no free season. The Legends of Brittany event (p063) has been dropped."
+    },
+    {
+      "id": "q036",
+      "type": "Question",
+      "category": "Character",
+      "title": "Post Valdemar's +22 Magic Theory XP once his 1224 Insights study is played",
+      "context": "Valdemar's revised 1224 plan (p108) has him studying Insights from Twilight (Magic Theory summa L6/Q11) in Spring and Fall 1224 instead of copying it — the full Q11 per season, +22 MT XP (45 → 67, score 4 partway to 5). Held because Fall 1224 has not yet been played (ledger “current” = Summer 1224 live) and the values were not written ahead of play.\n\n**FOLLOW-UP:** once the seasons are played / confirmed in Foundry, write the two study cells into xp_tracker.json (Valdemar Bjornsson::1224-spring and ::1224-fall — activity study, Magic Theory +11 each) and migrate p108 out of the proposed queue.",
+      "raised_in": "Player notes forwarded by owner, 2026-09-20",
+      "raised_event": "p108",
+      "status": "Resolved",
+      "resolution": "Resolved 2026-10-04 (owner): Valdemar reads Insights from Twilight in Spring 1224 only (+11 Magic Theory, recorded). Summer and Fall 1224 were adventures and take adventure XP (see q050). Foundry still needs the +11 (tl030)."
     }
   ]
 }

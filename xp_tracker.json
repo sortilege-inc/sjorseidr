@@ -562,18 +562,18 @@
    "role": "Magus (Bonisagus)",
    "ship": "no-ship",
    "house": "Bonisagus",
-   "firstYear": 1226,
-   "firstSeason": "1226-summer"
+   "firstYear": 1225,
+   "firstSeason": "1225-spring"
   },
   {
    "id": "Sama",
    "name": "Sama",
    "type": "companion",
    "role": "Companion",
-   "ship": "no-ship",
+   "ship": "tide-of-memory",
    "house": "",
-   "firstYear": 1226,
-   "firstSeason": "1226-summer"
+   "firstYear": 1225,
+   "firstSeason": "1225-spring"
   },
   {
    "id": "Philippe",
@@ -584,6 +584,16 @@
    "house": "",
    "firstYear": 1226,
    "firstSeason": "1226-summer"
+  },
+  {
+   "id": "Fuchs Scipwyrhta",
+   "name": "Fuchs Scipwyrhta",
+   "type": "grog",
+   "role": "Master Shipwright",
+   "ship": "no-ship",
+   "house": "",
+   "firstYear": 1225,
+   "firstSeason": "1225-fall"
   }
  ],
  "entries": {
@@ -2778,7 +2788,7 @@
      "xp": 2
     }
    ],
-   "detail": "exposure: Teaching+2 (teaching Aquam to Valdemar & Dagmar)",
+   "detail": "exposure: Teaching+2 (teaching Aquam to Valdemar)",
    "covenant": null,
    "source": "foundry"
   },
@@ -2937,18 +2947,18 @@
   "Valerian de Castellane::1223-winter": {
    "activity": true,
    "deferred": false,
-   "act": "practice",
-   "xp": 4,
-   "xpType": "Dead language (Latin)",
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Teaching",
    "targets": [
     {
-     "type": "Dead language (Latin)",
-     "xp": 4
+     "type": "Teaching",
+     "xp": 2
     }
    ],
-   "detail": "practice: Dead language (Latin)+4",
+   "detail": "exposure: Teaching+2 (teaching Rego to Valdemar) — replaces the earlier practice: Latin+4",
    "covenant": null,
-   "source": "foundry"
+   "source": "owner ruling 2026-10-04"
   },
   "Valerian de Castellane::1224-summer": {
    "activity": true,
@@ -3103,7 +3113,7 @@
      "xp": 16
     }
    ],
-   "detail": "teaching: Rego+16",
+   "detail": "teaching: Rego+16 (taught by Valerian: Com 2 + Teaching 0 + 3 + 6 single student = 11, + Apt Student 5)",
    "covenant": null,
    "source": "foundry"
   },
@@ -3282,6 +3292,78 @@
    "detail": "adventuring: Single Weapon+5, Brawl+1",
    "covenant": null,
    "source": "foundry"
+  },
+  "Valdemar Bjornsson::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 11,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 11
+    }
+   ],
+   "detail": "reading: Magic Theory+11 (Insights from Twilight, L6/Q11)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Wilhelm Stienauer::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Creo",
+     "xp": 1
+    },
+    {
+     "type": "Herbam",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Creo+1, Herbam+1 (lab: integrating Ward of the Secure Grainery). The player's extra +1 Folk Magic Theory from letters is held pending GM review.",
+   "covenant": null,
+   "source": "player notes 2026-10-04"
+  },
+  "Wilhelm Stienauer::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Exposure",
+   "targets": [
+    {
+     "type": "Creo",
+     "xp": 1
+    },
+    {
+     "type": "Herbam",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Creo+1, Herbam+1 (lab: integrating Blessing of the Fine Harvest). The extra +1 Folk Magic Theory is held pending GM review.",
+   "covenant": null,
+   "source": "player notes 2026-10-04"
+  },
+  "Wilhelm Stienauer::1224-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Teaching+2 (writing his new summa) — the choice of Teaching is under GM review; the extra +1 Folk Magic Theory is held pending GM review.",
+   "covenant": null,
+   "source": "player notes 2026-10-04"
   }
  }
 }

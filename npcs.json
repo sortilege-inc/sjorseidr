@@ -11461,6 +11461,196 @@
       "activeWounds": [],
       "shortDescription": "Tough Guy turb grog aboard The Scholar’s Wake — big, brave, loyal, and fond of drink; carries an axe, heater shield, and full leather scale (Soak 11).",
       "biography": "A Tough Guy–template turb grog (ArM5 core): built like a brick outhouse, brave and loyal, none too clever, with a soft spot for drink. Posted to The Scholar’s Wake.\n\nGear: short axe, heater shield, and full leather scale armour (downgraded from the template’s full metal scale). Soak 11 = Stamina 3 + Tough +3 + leather scale 5; the lighter armour (Load 5 vs 7) also eases his Encumbrance and Initiative versus the standard metal-scale build. Also carries a shortbow."
+    },
+    "Fuchs Scipwyrhta": {
+      "name": "Fuchs Scipwyrhta",
+      "foundryName": "Fuchs Scipwyrhta",
+      "charType": "grog",
+      "portrait": null,
+      "house": "",
+      "parens": "",
+      "sigil": "",
+      "born": 1196,
+      "age": 30,
+      "apparentAge": 30,
+      "characteristics": {
+        "int": 2,
+        "per": 2,
+        "str": 0,
+        "sta": 0,
+        "pre": 2,
+        "com": 2,
+        "dex": 1,
+        "qik": -3
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 0,
+        "points": 0
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {},
+      "virtues": [
+        {
+          "name": "Guild Master"
+        },
+        {
+          "name": "Puissant (Profession: Shipwright)"
+        },
+        {
+          "name": "Eye of Hephaestus (Eye of St. Dunstan)"
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Driven (Minor)"
+        },
+        {
+          "name": "Ability Block (Martial)"
+        },
+        {
+          "name": "Nocturnal"
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Native Language: English",
+          "speciality": "",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Area Lore",
+          "speciality": "",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Area Lore",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Crafts People",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Living Language: Gaelic",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Survival",
+          "speciality": "Urban",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Astronomy",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Dead Language: Latin",
+          "speciality": "Translation",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Profession: Shipwright",
+          "speciality": "Designing",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Crafts People",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Shipwright Guild Lore",
+          "speciality": "Current rates",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Raw Materials",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Common Law",
+          "speciality": "Wages",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Awareness",
+          "speciality": "",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Charm",
+          "speciality": "First Impressions",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Animal Handling",
+          "speciality": "Dogs",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Teaching",
+          "speciality": "Prof. Ship Builder",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Carouse",
+          "speciality": "Staying Sober",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Swim",
+          "speciality": "Staying Afloat",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Intrigue",
+          "speciality": "Alliances",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Craft: Sail Making",
+          "speciality": "Lateen",
+          "xp": 5,
+          "score": 1
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": null,
+      "shortDescription": "Master Shipwright and guild master; builds the covenant shipyard on Man (from Fall 1225)",
+      "biography": "Master Shipwright and guild master, recruited by Furtum in Fall 1225 (with liberal use of Aura of Rightful Authority) to build the covenant shipyard on the Isle of Man. English, Christian; born 1196. Sheet from his player (Fuchs.pdf), with the owner's fixes of 2026-10-04: Puissant applies to Profession: Shipwright, and the second Area Lore (5 xp) is score 1. Both Area Lores are unnamed on the sheet.",
+      "foundryUuid": "Actor.rYzDGyWYuj1bEotB"
     }
   }
 }
