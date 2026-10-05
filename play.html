@@ -999,7 +999,10 @@ function magusSheetHtml(m){
   if(m.sanctum) extras.push(`<div><em>Sanctum:</em> ${esc(m.sanctum)}</div>`);
   if(m.originallyFrom) extras.push(`<div><em>Originally from:</em> ${esc(m.originallyFrom)}</div>`);
   if(m.playedBy) extras.push(`<div><em>Played by:</em> ${esc(m.playedBy)}</div>`);
-  if(m.familiar) extras.push(`<div><em>Familiar:</em> ${esc(m.familiar)}</div>`);
+  // A familiar with its own sheet links to it; the familiar's sheet links back to its magus.
+  const charLink=(key,label)=>findCharacterSheet(key)?`<a href="?char=${encodeURIComponent(key)}" class="char-link" data-char="${esc(key)}">${esc(label)}</a>`:esc(label);
+  if(m.familiar) extras.push(`<div><em>Familiar:</em> ${m.familiarKey?charLink(m.familiarKey,m.familiar):esc(m.familiar)}</div>`);
+  if(m.familiarOf) extras.push(`<div><em>Familiar of:</em> ${charLink(m.familiarOf,m.familiarOf)}</div>`);
   if(m.seasonNote) extras.push(`<div><em>Season:</em> ${esc(m.seasonNote)}</div>`);
   if(m.advancementNote) extras.push(`<div><em>Advancement:</em> ${esc(m.advancementNote)}</div>`);
   if(m.buildNote) extras.push(`<div><em>Build:</em> ${esc(m.buildNote)}</div>`);

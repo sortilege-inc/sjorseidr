@@ -3551,5 +3551,95 @@
   "status": "Historical",
   "body_text": "Valdemar leads the covenant's Fire from the Sky harvest, with Dustin, gathering the burning stones before dawn: **10 pawns of Terram vis**.",
   "body_html": "<p>Valdemar leads the covenant&#39;s Fire from the Sky harvest, with Dustin, gathering the burning stones before dawn: <strong>10 pawns of Terram vis</strong>.</p>"
+ },
+ {
+  "file": "",
+  "title": "Furtum comes to the Isle of Man",
+  "icon": "⚓",
+  "activity_type": "Travel",
+  "cast": [
+   "Furtum Bonisagus",
+   "Dustin Page",
+   "Valdemar Bjornsson",
+   "Dagmar"
+  ],
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "sort_iso": "1224-12-21T12:00",
+  "notes": "Backstory, played 2026-10-03. Approved by the owner, 2026-10-04.",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "In **Fall 1224** Dustin returns to Oléron aboard the **Scholar's Wake** to swap books in and out of the library held there in trust. Furtum, wanting no part of his old covenant, sails north with him to winter on **Man**.\nWhat he finds: a natural harbor where a small river comes down, and a village rising in Norse–Germanic wood and stone. In the harbor are two cogs (the Scholar's Wake and the Tide of Memory), the hulks Brineborn and Adamant, and, at the centre dock, the longest ship there: Valdemar's **drakkar**, thirty or forty shields along its sides.\nThe largest building is **Nóatún**, the wizards' hall: a wizard's tower laid on its side as a Norse hall, with quarters for every magus, room to grow, a great meeting hall through the middle, and a vast laboratory space still being fitted out. Up on the hill overlooking the harbor stands **Undrahöll**, the great laboratory longhouse. It is a village built around the wizards' needs, not wizards shoehorned into a village.\nOver the winter he watches the covenant at work: **Éogan** teaching **Valdemar** Aquam, the business of **Heynric** and the dragon-gold, Wilhelm's stories of capricorns, and **Wilhelm**'s formal joining ceremony.\n**Dagmar** describes the Carnac regio for him. **Tormente** guards the way; then come the chamber of boiling water, the chamber of planetary stones, and the marsh city of frogs and toads, \"who are not friends,\" with a strong magical aura; then the upper walkway and the throne.",
+  "body_html": "<p>In <strong>Fall 1224</strong> Dustin returns to Oléron aboard the <strong>Scholar&#39;s Wake</strong> to swap books in and out of the library held there in trust. Furtum, wanting no part of his old covenant, sails north with him to winter on <strong>Man</strong>.</p><p>What he finds: a natural harbor where a small river comes down, and a village rising in Norse–Germanic wood and stone. In the harbor are two cogs (the Scholar&#39;s Wake and the Tide of Memory), the hulks Brineborn and Adamant, and, at the centre dock, the longest ship there: Valdemar&#39;s <strong>drakkar</strong>, thirty or forty shields along its sides.</p><p>The largest building is <strong>Nóatún</strong>, the wizards&#39; hall: a wizard&#39;s tower laid on its side as a Norse hall, with quarters for every magus, room to grow, a great meeting hall through the middle, and a vast laboratory space still being fitted out. Up on the hill overlooking the harbor stands <strong>Undrahöll</strong>, the great laboratory longhouse. It is a village built around the wizards&#39; needs, not wizards shoehorned into a village.</p><p>Over the winter he watches the covenant at work: <strong>Éogan</strong> teaching <strong>Valdemar</strong> Aquam, the business of <strong>Heynric</strong> and the dragon-gold, Wilhelm&#39;s stories of capricorns, and <strong>Wilhelm</strong>&#39;s formal joining ceremony.</p><p><strong>Dagmar</strong> describes the Carnac regio for him. <strong>Tormente</strong> guards the way; then come the chamber of boiling water, the chamber of planetary stones, and the marsh city of frogs and toads, &quot;who are not friends,&quot; with a strong magical aura; then the upper walkway and the throne.</p>"
+ },
+ {
+  "file": "",
+  "title": "Wilhelm formally joins Sjórseiðr",
+  "icon": "🤝",
+  "activity_type": "Covenant Business",
+  "cast": [
+   "Wilhelm Stienauer",
+   "Furtum Bonisagus"
+  ],
+  "timeline": "❄️ Winter 1224-25",
+  "date": "Winter 1224-25",
+  "sort_iso": "1224-12-22T12:00",
+  "notes": "Played 2026-10-03; follows 'Wilhelm invited to formalize covenant membership' (Spring 1224). Logged in the covenant ledger. Approved by the owner, 2026-10-04.",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Over **Winter 1224-25** at the Isle of Man, **Wilhelm** formally joins the covenant, with a ceremony. He came from Durenmar with work of his own, and he joins partly because the covenant's requirements don't cut against it: the trade-offs suit him. **Furtum** is there to see it.",
+  "body_html": "<p>Over <strong>Winter 1224-25</strong> at the Isle of Man, <strong>Wilhelm</strong> formally joins the covenant, with a ceremony. He came from Durenmar with work of his own, and he joins partly because the covenant&#39;s requirements don&#39;t cut against it: the trade-offs suit him. <strong>Furtum</strong> is there to see it.</p>"
+ },
+ {
+  "file": "",
+  "title": "Wilhelm overhears the complaint against Valdemar",
+  "icon": "📜",
+  "activity_type": "Intelligence",
+  "cast": [
+   "Wilhelm Stienauer"
+  ],
+  "timeline": "🌼 Spring 1225",
+  "date": "Spring 1225",
+  "sort_iso": "1225-04-08T12:00",
+  "notes": "Played 2026-10-03. Approved by the owner, 2026-10-04.",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Durenmar is already busy with the **Grand Tribunal**, two and a half to three years off, and with its paperwork. A colleague grumbles about the extra work: this time it is some **Normandy** covenant complaining about another Normandy covenant.\nHe describes the accusations. A magus is said to be a member of the **Order of Odin**, in opposition to the Order of Hermes and its Oaths, and to have engaged in **molestation of the fae** at a Tribunal. Wilhelm is fairly sure they mean **Valdemar**.\nHe joins the conversation without saying so and probes. The colleague admits his details are limited: he sees no sign of widespread destruction and no damning evidence. It reads as largely accusatory, \"basically a placeholder,\" with **supplements** promised later. What he shares is effectively public record, which the parties should have been told anyway.\nWilhelm **copies the formal paperwork**.",
+  "body_html": "<p>Durenmar is already busy with the <strong>Grand Tribunal</strong>, two and a half to three years off, and with its paperwork. A colleague grumbles about the extra work: this time it is some <strong>Normandy</strong> covenant complaining about another Normandy covenant.</p><p>He describes the accusations. A magus is said to be a member of the <strong>Order of Odin</strong>, in opposition to the Order of Hermes and its Oaths, and to have engaged in <strong>molestation of the fae</strong> at a Tribunal. Wilhelm is fairly sure they mean <strong>Valdemar</strong>.</p><p>He joins the conversation without saying so and probes. The colleague admits his details are limited: he sees no sign of widespread destruction and no damning evidence. It reads as largely accusatory, &quot;basically a placeholder,&quot; with <strong>supplements</strong> promised later. What he shares is effectively public record, which the parties should have been told anyway.</p><p>Wilhelm <strong>copies the formal paperwork</strong>.</p>"
+ },
+ {
+  "file": "",
+  "title": "Éogan finds the capricorn again",
+  "icon": "🐐",
+  "activity_type": "Adventuring",
+  "cast": [
+   "Éogan Dobhartha",
+   "Ronan"
+  ],
+  "timeline": "🌼 Spring 1225",
+  "date": "Spring 1225",
+  "sort_iso": "1225-04-05T12:00",
+  "notes": "Played 2026-10-03. Approaching it: Communication in place of Presence, +3 for the capricorn lore Wilhelm shared over the winter. Courted, not bonded. Unnamed for now; its player may name it. Owner, 2026-10-04: the capricorn is entered on Éogan's sheet as his familiar. Approved by the owner, 2026-10-04.",
+  "season_activity": true,
+  "status": "Historical",
+  "body_text": "The **Brineborn** had spent the past year at the Isle of Man helping to raise the base while **Éogan** studied **Magic Theory** with Henri. For **Spring 1225** he plans a trading circuit of the North Sea starting from **Dublin**, but first, with a single grog, the silent hunter **Ronan**, he goes north on wizard's business.\nWith last year's water sample he casts **Call of the Rushing Waters** to lead him back to the river where he first saw the **capricorn**, and camps there about a week, scouting upstream and in a small boat off the coast. On the **fifth day**, near sunset, a head crests the waves a couple of hundred feet out.\nHe casts **Lungs of the Fish** (it holds, at the cost of Fatigue) and **Eyes of the Merfolk**, and swims out with a **pawn of Aquam vis** in his hand. The capricorn comes to him and **nuzzles the hand that holds the vis**: curious, not enamoured. They play for a while; then it drifts away toward open water, and he chases it until his strength gives out, staggering ashore aching and elated.\nNext morning a chirping, more chirp than bray, carries over the water. Over the following days its curiosity becomes **familiarity**. Wilhelm's childhood story that these creatures love **turnips** gets its test: after a few tries the capricorn drags its forequarters onto the shore and eats one. Whether it likes turnips is unproven; that it will eat almost anything, like any goat, is not.\nÉogan heads back hugging the coast with the capricorn following, using **Push of the Gentle Wave** to keep pace and paying out snacks at intervals. It is **unnamed** for now.",
+  "body_html": "<p>The <strong>Brineborn</strong> had spent the past year at the Isle of Man helping to raise the base while <strong>Éogan</strong> studied <strong>Magic Theory</strong> with Henri. For <strong>Spring 1225</strong> he plans a trading circuit of the North Sea starting from <strong>Dublin</strong>, but first, with a single grog, the silent hunter <strong>Ronan</strong>, he goes north on wizard&#39;s business.</p><p>With last year&#39;s water sample he casts <strong>Call of the Rushing Waters</strong> to lead him back to the river where he first saw the <strong>capricorn</strong>, and camps there about a week, scouting upstream and in a small boat off the coast. On the <strong>fifth day</strong>, near sunset, a head crests the waves a couple of hundred feet out.</p><p>He casts <strong>Lungs of the Fish</strong> (it holds, at the cost of Fatigue) and <strong>Eyes of the Merfolk</strong>, and swims out with a <strong>pawn of Aquam vis</strong> in his hand. The capricorn comes to him and <strong>nuzzles the hand that holds the vis</strong>: curious, not enamoured. They play for a while; then it drifts away toward open water, and he chases it until his strength gives out, staggering ashore aching and elated.</p><p>Next morning a chirping, more chirp than bray, carries over the water. Over the following days its curiosity becomes <strong>familiarity</strong>. Wilhelm&#39;s childhood story that these creatures love <strong>turnips</strong> gets its test: after a few tries the capricorn drags its forequarters onto the shore and eats one. Whether it likes turnips is unproven; that it will eat almost anything, like any goat, is not.</p><p>Éogan heads back hugging the coast with the capricorn following, using <strong>Push of the Gentle Wave</strong> to keep pace and paying out snacks at intervals. It is <strong>unnamed</strong> for now.</p>"
+ },
+ {
+  "file": "",
+  "title": "Valdemar reads Insights from Twilight",
+  "icon": "📖",
+  "activity_type": "Study",
+  "cast": [
+   "Valdemar Bjornsson"
+  ],
+  "timeline": "🌼 Spring 1224",
+  "date": "Spring 1224",
+  "sort_iso": "1224-03-21T12:00",
+  "notes": "Owner ruling 2026-10-04: reading in Spring 1224 only (+11 Magic Theory, recorded in the XP tracker). Summer 1224 (the crown delivered to Mímormr) and Fall 1224 (Carnac) were adventures, so those seasons take adventure XP, which his player still has to choose. Reading instead of copying frees no season: a careful copy of this Level 6 summa would take one season (6 + Profession: Scribe points a season). Approved by the owner, 2026-10-04.",
+  "season_activity": true,
+  "status": "Historical",
+  "body_text": "In **Spring 1224** Valdemar studies *Insights from Twilight*, the Magic Theory summa (L6 / Q11) won in the Tribunal prize draft, rather than copying it: **+11 Magic Theory**. The rest of his 1224 goes to adventure: delivering the crown to Mímormr in the summer and the Carnac regiones in the fall.",
+  "body_html": "<p>In <strong>Spring 1224</strong> Valdemar studies <em>Insights from Twilight</em>, the Magic Theory summa (L6 / Q11) won in the Tribunal prize draft, rather than copying it: <strong>+11 Magic Theory</strong>. The rest of his 1224 goes to adventure: delivering the crown to Mímormr in the summer and the Carnac regiones in the fall.</p>"
  }
 ]

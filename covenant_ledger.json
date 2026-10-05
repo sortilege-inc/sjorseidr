@@ -6848,7 +6848,7 @@
       "qty": 1,
       "actorId": null,
       "ship": "hound-of-cassel",
-      "standing": "guest"
+      "standing": "active"
      },
      {
       "name": "Kor Ex Flambeau",
@@ -7052,6 +7052,16 @@
       "qty": 1,
       "actorId": null,
       "ship": "scholars-wake"
+     },
+     {
+      "name": "The capricorn",
+      "category": "familiars",
+      "job": "Éogan's familiar (capricorn; unnamed)",
+      "points": 0,
+      "yearBorn": null,
+      "qty": 1,
+      "actorId": null,
+      "ship": "brineborn"
      },
      {
       "name": "Leofwin",
@@ -8125,6 +8135,15 @@
    "kind": "add",
    "summary": "Five Roots of the Arts copied at Durenmar",
    "detail": "With the librarian's permission, Wilhelm's scribe Hilda copies the five Roots held at Durenmar in one season, copying quickly (Quality 23 rather than 24): Intellego, Muto, Herbam, Ignem and Animal, each a Level 6 summa. They come home with Wilhelm in Winter 1225-26. The titles are placeholders.",
+   "refs": []
+  },
+  {
+   "season": "Winter 1224-25",
+   "sort_iso": "1224-12-22",
+   "facet": "inhabitants",
+   "kind": "note",
+   "summary": "Wilhelm Stienauer formally joins the covenant",
+   "detail": "A guest magus since Summer 1223, Wilhelm formally joins Sjórseiðr at the Isle of Man with a ceremony, Furtum present. Standing: guest → member.",
    "refs": []
   }
  ],
