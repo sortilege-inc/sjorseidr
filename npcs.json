@@ -7679,6 +7679,30 @@
           "speciality": "",
           "xp": 5,
           "score": 1
+        },
+        {
+          "name": "Leadership",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Diedne Lore",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Bargain",
+          "speciality": "",
+          "xp": 13,
+          "score": 1
+        },
+        {
+          "name": "Scandinavian Lore",
+          "speciality": "",
+          "xp": 5,
+          "score": 1
         }
       ],
       "spells": [],

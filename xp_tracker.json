@@ -265,8 +265,9 @@
    "ship": "storm-dragon",
    "house": "",
    "firstYear": 1222,
-   "xpNote": "Faerie (RoP: Faerie): she gains Pretense, not experience. Pretense is tracked separately; her Foundry diary records those seasons as study, training or practice (owner, 2026-10-04). Her build is a draft awaiting the owner.",
-   "pretense": true
+   "xpNote": "Faerie (RoP: Faerie): her row in this tracker records Pretense, not experience (owner, 2026-10-04). She starts in Summer 1222, when she came above the water and boarded the Storm Dragon, and may copy anyone aboard the ship. Her Foundry diary enters Pretense seasons as study, training or practice.",
+   "pretense": true,
+   "firstSeason": "1222-summer"
   },
   {
    "id": "Stijntje Kuiper",
@@ -3184,7 +3185,7 @@
   "Rán::1223-summer": {
    "activity": true,
    "deferred": false,
-   "act": "adventuring",
+   "act": "pretense",
    "xp": 5,
    "xpType": "Adventuring",
    "targets": [
@@ -3193,9 +3194,9 @@
      "xp": 5
     }
    ],
-   "detail": "adventuring: Magic Theory+5",
+   "detail": "Pretense: Magic Theory+5 (copied on the Tribunal journey)",
    "covenant": null,
-   "source": "foundry"
+   "source": "foundry; relabelled as Pretense (owner ruling 2026-10-04)"
   },
   "Hilda::1223-fall": {
    "activity": true,
@@ -12398,6 +12399,125 @@
    "xpType": "",
    "targets": [],
    "detail": "no XP: his Might 5 cancels any gain of 5 or less (owner ruling)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Rán::1222-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "pretense",
+   "xp": 5,
+   "xpType": "Leadership",
+   "targets": [
+    {
+     "type": "Leadership",
+     "xp": 5
+    }
+   ],
+   "detail": "Pretense: Leadership+5 (copied from Valdemar's adventure, the season she came above the water)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Rán::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "pretense",
+   "xp": 5,
+   "xpType": "Diedne Lore",
+   "targets": [
+    {
+     "type": "Diedne Lore",
+     "xp": 5
+    }
+   ],
+   "detail": "Pretense: Diedne Lore+5 (copied from Valdemar's reading in Diedne Lore)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Rán::1223-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "pretense",
+   "xp": 13,
+   "xpType": "Bargain",
+   "targets": [
+    {
+     "type": "Bargain",
+     "xp": 13
+    }
+   ],
+   "detail": "Pretense: Bargain+13 (copied from Valdemar's lesson in Bargaining from Heynric)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Rán::1222-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "role",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "role season — no Pretense gain",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Rán::1223-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "role",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "role season — no Pretense gain",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Rán::1223-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "role",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "role season — no Pretense gain",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Rán::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "role",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "role season — no Pretense gain",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Rán::1224-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "role",
+   "xp": 0,
+   "xpType": "",
+   "targets": [],
+   "detail": "role season — no Pretense gain",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04"
+  },
+  "Rán::1224-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "pretense",
+   "xp": 5,
+   "xpType": "Scandinavian Lore",
+   "targets": [
+    {
+     "type": "Scandinavian Lore",
+     "xp": 5
+    }
+   ],
+   "detail": "Pretense: Scandinavian Lore+5 (copied from Dagmar's Scandinavian Lore on the Mímormr adventure)",
    "covenant": null,
    "source": "owner ruling 2026-10-04"
   }
