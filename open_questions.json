@@ -784,22 +784,11 @@
    "type": "Tool",
    "category": "System / Tooling",
    "status": "Open",
-   "title": "Henri's Good Teacher in Foundry — review how lesson entries apply it",
+   "title": "Heynric's Bargain lesson to Valdemar (Spring 1223) — one student or two?",
    "raised_in": "Stijntje XP review, 2026-10-04",
    "raised_event": "",
    "resolution": "",
-   "context": "Core teaching: 'Teacher's Communication + Teaching + 3 + bonus', with 'a +6 bonus' for a single student; Good Teacher adds 'five to the Advancement Total of anyone who studies with you.' Henri (Com 4, Teaching 7, Good Teacher) should give a single student 25, or 26 with a specialty.\n\n**WHAT FOUNDRY SHOWS** (every lesson naming Henri as teacher):\n\n- **Working:** Dustin, Winter 1222-23 (+25) and Fall 1223 (+26); Éogan, Spring, Summer and Fall 1224 (+26, +26, +25). Each is the entry's Source Quality + 6 + 5.\n- **Broken, now fixed:** Stijntje, Spring 1223 Magic Theory gave 14, the Source Quality alone. The entry's option was 'standard' rather than 'single student', and Good Teacher did not apply. Corrected to 25 in Foundry and the tracker (2026-10-04).\n- **Correct at 20:** Stijntje's 1220 lessons (Latin, Artes Liberales, Philosophiae) each stopped at the Gain Limit, Henri's own score ('may not gain any experience points towards the next level from that source').\n- **Tracker corrected:** Dustin, Winter 1222-23 was +22 in the tracker against +25 in Foundry; the owner ruled +25 (2026-10-04).\n\n**TO SETTLE:** check in Foundry whether Good Teacher comes from the teacher's sheet automatically or has to be added by hand on each lesson, so future lessons come out right (Sama and Father Lachlan have Good Teacher too)."
-  },
-  {
-   "id": "q066",
-   "type": "Tool",
-   "category": "Character Build",
-   "status": "Open",
-   "title": "Player sheets — name Fuchs's two Area Lores; rule on Oliver's Finding Hidden Loot",
-   "raised_in": "Player sheets of 2026-10-04 (Fuchs.pdf, Oliver the Pirate.pdf)",
-   "raised_event": "",
-   "resolution": "",
-   "context": "Both PDFs were re-saved on 2026-10-04. Fuchs's matches his Foundry sheet apart from the two fixes already ruled (Puissant names Profession: Shipwright; the second Area Lore is score 1). Oliver's Foundry sheet now has his Virtues and Flaws, personality traits (Brave +3, Paranoid +2, Careful +2), Reputation (Pirate 2), specialties, Craft: Cooking, long sword and throwing axe (2026-10-04).\n\n**TO SETTLE:**\n\n- **Fuchs:** both Area Lores are unnamed on his sheet and in Foundry (15 XP, score 2; and 5 XP, score 1). Ask his player which areas they are.\n- **Oliver — Finding Hidden Loot:** the Virtue isn't in the rules corpus, so it is not on his Foundry sheet yet. Rule on what it is (or have his player name its source), then add it.\n- **Oliver — long sword:** his sheet lists Ability 8; Single Weapon 4 + Puissant 2 + specialty 1 = 7. Mention to his player."
+   "context": "**SETTLED (owner, 2026-10-04):** Good Teacher is automatic in Foundry — the Virtue carries an active effect, so a correctly entered lesson already includes its +5. Foundry's Source Quality field holds Com + Teaching + 3 (+1 for a specialty); the +6/+3 class bonus and Virtue effects (Good Teacher, Apt Student: 'When being taught by someone else, add five to your Advancement Total.') are added on top. Henri, single student: Com 4 (3 + Great Communication) + Teaching 7 + 3 + 1 ('one-on-one') = 15; + 6 + 5 = 26.\n\n**CORRECTED (owner, 2026-10-04; Foundry and the tracker):**\n\n- Éogan ← Henri, Magic Theory, Fall 1224: 25 → 26 (one-on-one specialty).\n- Dustin ← Henri, Teaching, Winter 1222-23: 25 → 26 (one-on-one specialty).\n- Stijntje ← Henri, Magic Theory, Spring 1223: 25 → 26 (one-on-one specialty).\n- Éogan ← Father Lachlan, Latin, Summer 1221: 14 → 19 (Good Teacher had been left out).\n- Valdemar ← Éogan, Aquam, Winter 1224-25: 12 → 15 (one student: 'Hermetic Arts can be taught, but only one-on-one').\n- Stijntje ← Dustin, Auram, Fall 1224: 14 → 15 (Dustin's 'Apprentices' specialty; held at his Auram score of 5).\n- Housekeeping, no XP change: the Source Quality fields of Valdemar's Spring 1225 lesson from Valerian (11 → 5) and Stijntje's Spring 1225 Aquam lesson (9 → 10).\n\n**STILL OPEN:** Valdemar ← Heynric, Bargain, Spring 1223 is entered as two students (5 + 3 + 5 Apt Student = 13). If Valdemar was the only student it is 5 + 6 + 5 = 16, held by the Gain Limit (Heynric's Bargain score 3 at the time) to +15 (Valdemar 15 → 30). Who was the second student?"
   }
  ],
  "gmReference": {

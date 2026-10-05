@@ -1084,17 +1084,17 @@
    "activity": true,
    "deferred": false,
    "act": "teaching",
-   "xp": 14,
+   "xp": 19,
    "xpType": "Dead language (Latin)",
    "targets": [
     {
      "type": "Dead language (Latin)",
-     "xp": 14
+     "xp": 19
     }
    ],
-   "detail": "teaching: Dead language (Latin)+14",
+   "detail": "teaching: Dead language (Latin)+19 (taught by Father Lachlan; Good Teacher)",
    "covenant": null,
-   "source": "foundry"
+   "source": "owner-corrected 2026-10-04"
   },
   "Éogan Dobhartha::1221-fall": {
    "activity": true,
@@ -1415,15 +1415,15 @@
    "activity": true,
    "deferred": false,
    "act": "teaching",
-   "xp": 25,
+   "xp": 26,
    "xpType": "Magic Theory",
    "targets": [
     {
      "type": "Magic Theory",
-     "xp": 25
+     "xp": 26
     }
    ],
-   "detail": "teaching: Magic Theory+25 (taught by Henri; corrected from 14)",
+   "detail": "teaching: Magic Theory+26 (taught by Henri; one-on-one specialty)",
    "covenant": null,
    "source": "owner-corrected 2026-10-04"
   },
@@ -1507,17 +1507,17 @@
    "activity": true,
    "deferred": false,
    "act": "teaching",
-   "xp": 14,
+   "xp": 15,
    "xpType": "Auram",
    "targets": [
     {
      "type": "Auram",
-     "xp": 14
+     "xp": 15
     }
    ],
-   "detail": "teaching: Auram+14",
+   "detail": "teaching: Auram+15 (taught by Dustin; Apprentices specialty)",
    "covenant": null,
-   "source": "foundry"
+   "source": "owner-corrected 2026-10-04"
   },
   "Stijntje Kuiper::1220-spring": {
    "activity": true,
@@ -2761,17 +2761,17 @@
    "activity": true,
    "deferred": false,
    "act": "teaching",
-   "xp": 12,
+   "xp": 15,
    "xpType": "Aquam",
    "targets": [
     {
      "type": "Aquam",
-     "xp": 12
+     "xp": 15
     }
    ],
-   "detail": "teaching: Aquam+12 (taught by Éogan)",
+   "detail": "teaching: Aquam+15 (taught by Éogan, one-on-one)",
    "covenant": null,
-   "source": "foundry"
+   "source": "owner-corrected 2026-10-04"
   },
   "Éogan Dobhartha::1224-spring": {
    "activity": true,
@@ -2809,17 +2809,17 @@
    "activity": true,
    "deferred": false,
    "act": "teaching",
-   "xp": 25,
+   "xp": 26,
    "xpType": "Magic Theory",
    "targets": [
     {
      "type": "Magic Theory",
-     "xp": 25
+     "xp": 26
     }
    ],
-   "detail": "teaching: Magic Theory+25 (taught by Henri, part 3)",
+   "detail": "teaching: Magic Theory+26 (taught by Henri, part 3; one-on-one specialty)",
    "covenant": null,
-   "source": "foundry"
+   "source": "owner-corrected 2026-10-04"
   },
   "Éogan Dobhartha::1224-winter": {
    "activity": true,
@@ -2873,15 +2873,15 @@
    "activity": true,
    "deferred": false,
    "act": "teaching",
-   "xp": 25,
+   "xp": 26,
    "xpType": "Teaching",
    "targets": [
     {
      "type": "Teaching",
-     "xp": 25
+     "xp": 26
     }
    ],
-   "detail": "teaching: Teaching+25 (taught by Henri; corrected from 22)",
+   "detail": "teaching: Teaching+26 (taught by Henri; one-on-one specialty)",
    "covenant": null,
    "source": "owner-corrected 2026-10-04"
   },
