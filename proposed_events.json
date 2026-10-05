@@ -118,28 +118,6 @@
   "session": "2026-10-03",
   "status": "Proposed",
   "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
-  "id": "p098",
-  "sort_iso": "1224-05-05T12:00",
-  "scene": "Spring 1224 — the Diedne Garden, the first visit",
-  "title": "The Diedne Garden's first harvest — five pawns, and bones under the stones",
-  "icon": "🌿",
-  "timeline": "🌼 Spring 1224",
-  "date": "Spring 1224",
-  "cast": [
-   "Valdemar Bjornsson",
-   "Ka'wa'ill",
-   "Garrat Coffin",
-   "Eric"
-  ],
-  "activity_type": "Vis harvest",
-  "notes": "Played 2026-10-03 (the recording starts at the herb rolls; the arrival comes from the owner, 2026-10-04). Vis: 5 Herbam (mistletoe 3, selago 0, samolus 2 after 2 Confidence spent), applied to the covenant's vis stock (The Diedne Garden 3 → 5). An unusually strong yield (owner). No initiation step was attempted.",
-  "body_text": "The covenant had directions by road from **Flanders**, but the party came in **by sea and upriver** instead and explored the last stretch on foot. They nearly missed the place: the garden was **overgrown**, and its **stones had been broken and buried**.\n**The rites.** Where his own memory of the rite differs from Pliny's account, **Valdemar** follows his memory — the memory of someone who has actually seen it done, over a secondhand description.\n• **Mistletoe** — a superb harvest: **3 pawns** of Herbam.\n• **Selago** — his memory is partial at best; the herbs are viable but hold **no vis**.\n• **Samolus** — taken the next morning, and it comes through only once he spends **Confidence**: **2 pawns**.\n**Under the stones.** Digging after the failed selago, **Ka'wa'ill** and **Garrat** turn up **human bones**, a thigh bone and a skull, with no marker, no clothing, no weapons and no grave goods; only broken stone. **Eric** the minstrel puzzles the stones together, and one reading is an **altar**: about three feet wide, eight or nine feet long and a couple of feet thick.\nValdemar forbids any exhumation. The dead are **carefully reburied**, the stones set back in order, and the altar left **upside down**, since that is the stable way to lay it.\n**Five pawns** of Herbam in all, an unusually strong yield for a source that gives three a year. Before leaving, the party spends a couple of days **replanting** the herbs and their seeds so the garden will bear again next year, and Valdemar tells the covenant the garden is in disarray and its destruction was **deliberate**."
- },
- {
-  "file": "",
-  "session": "2026-10-03",
-  "status": "Proposed",
-  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
   "id": "p101",
   "sort_iso": "1225-04-05T12:00",
   "scene": "Spring 1225 — Ireland",
@@ -635,90 +613,6 @@
    "Éogan Dobhartha"
   ],
   "source": "Player design note (talisman build plan); see t063. Seasons per owner: Spring–Fall 1225, around the Ireland/capricorn trip."
- },
- {
-  "file": "",
-  "session": "2026-10-03",
-  "status": "Proposed",
-  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
-  "id": "p131",
-  "sort_iso": "1224-05-06T12:00",
-  "scene": "Spring 1224 — the Diedne Garden, the first visit",
-  "title": "Wolves at dusk in the Diedne Garden",
-  "icon": "🐺",
-  "timeline": "🌼 Spring 1224",
-  "date": "Spring 1224",
-  "cast": [
-   "Valdemar Bjornsson",
-   "Oliver",
-   "Leofwin",
-   "Ka'wa'ill",
-   "Garrat Coffin"
-  ],
-  "activity_type": "Encounter",
-  "notes": "Played 2026-10-03. Ka'wa'ill botched (trident set down; −3, far from the sea).",
-  "body_text": "Wolves had hung about the garden since the first day's harvesting, never desperate enough to rush a group of armed men. At **dusk**, with the party bent over its digging, they come in.\n• **Oliver**, on lookout with his English longbow, looses first.\n• **Leofwin**, the pirate cook, kills one with his shortsword.\n• **Ka'wa'ill** is caught off guard, his enchanted trident set down while he searched the grass, and fights badly, far from the sea.\n• **Garrat** works to spook the rest.\n• **Valdemar** sheathes his blade in **Thor's lightning** with a rune and strides out with it crackling, ordering the wolves in Norse back to **their master's kennel**: trouble us not, or face the wrath of the bear.\nThe pack breaks and flees. The dead wolf is skinned for its pelt."
- },
- {
-  "file": "",
-  "session": "2026-10-03",
-  "status": "Proposed",
-  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
-  "id": "p132",
-  "sort_iso": "1224-05-07T12:00",
-  "scene": "Spring 1224 — the Diedne Garden, the first visit",
-  "title": "Eric's ballad, and what Valdemar tells him",
-  "icon": "🎶",
-  "timeline": "🌼 Spring 1224",
-  "date": "Spring 1224",
-  "cast": [
-   "Valdemar Bjornsson",
-   "Eric"
-  ],
-  "activity_type": "Intrigue",
-  "notes": "Played 2026-10-03. Eric's roll of 21 against Valdemar's failed Guile.",
-  "body_text": "While the others dig, **Eric**, the covenant's minstrel (a five-foot-three hunchback with a startlingly deep voice), drafts a lurid ballad about the garden. In it the altar is cracked by the righteous hammer of the Order, the **devil-worshipping Diedne** are smashed, and brave adventurers are set upon by **evil spirits in the shape of beasts** for trying to carry the truth home.\nValdemar usually has plenty to say about Eric's work. This time he says nothing, and his attempt to keep a straight face fails. Eric realises that Valdemar is taking it **personally**, and soon each knows that the other knows.\nValdemar is blunt. The Diedne as the other Hermetics remember them **are not the truth**, and the Diedne **live**; but everyone believes the lie, so he must play along, **and so must Eric**. \"As you say.\""
- },
- {
-  "file": "",
-  "session": "2026-10-03",
-  "status": "Proposed",
-  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
-  "id": "p133",
-  "sort_iso": "1223-06-26T20:00",
-  "scene": "Summer 1223 — the Normandy Tribunal",
-  "title": "Furtum's Gauntlet at the Normandy Tribunal",
-  "icon": "🎓",
-  "timeline": "☀️ Summer 1223",
-  "date": "Summer 1223",
-  "cast": [
-   "Furtum Bonisagus",
-   "Stijntje Kuiper",
-   "Dustin Page"
-  ],
-  "activity_type": "Tribunal",
-  "notes": "Backstory, played 2026-10-03. Parentage per the owner (2026-10-04): first parens a Tremere at Durenmar, final parens a Bonisagus at Oléron.",
-  "body_text": "**Furtum** came to the 1223 Normandy Tribunal still an apprentice, weeks from the end of some **fifteen years** of training. It began at **Durenmar** under a **Tremere** parens and finished at **Oléron**, where he had lived since about 1221, under a **Bonisagus**.\nIt was his first Normandy Tribunal, and a riotous one: the Tribunal games with real stakes in vis and books; a vassal covenant of the hosts walking out halfway through to found a tribunal of its own; and a crew of very young sea-going magi, tied to no liege covenant, taking first place.\nNot wanting to stay in his home covenant, he sounded out the Bonisagi and the other apprentices. He met **Stijntje**, who brought him to **Dustin**. Dustin, always glad to talk with apprentices, said Sjórseiðr was always looking for members and shared its laws with him.\nFurtum passed his **Gauntlet** at the Tribunal, his own man for the first time in fifteen years."
- },
- {
-  "file": "",
-  "session": "2026-10-03",
-  "status": "Proposed",
-  "source": "Session transcript 2026-10-03 (Ars Magica) + owner answers 2026-10-04.",
-  "id": "p134",
-  "sort_iso": "1223-12-21T12:00",
-  "scene": "Winter 1223-24 — Oléron",
-  "title": "Furtum and Dagmar winter at Oléron",
-  "icon": "🌀",
-  "timeline": "❄️ Winter 1223-24",
-  "date": "Winter 1223-24",
-  "cast": [
-   "Furtum Bonisagus",
-   "Dagmar"
-  ],
-  "activity_type": "Character Development",
-  "notes": "Backstory, played 2026-10-03.",
-  "body_text": "Having lost his Tribunal mirror-match to Oléron's Criamon, **Dagmar** winters at **Oléron**, reading and working in its library. **Furtum**, newly gauntleted and wondering what comes next, spends the season alongside him.\nDagmar's conversation is scattered, but the two connect over **regiones**. Dagmar leaves come spring."
  },
  {
   "file": "",
