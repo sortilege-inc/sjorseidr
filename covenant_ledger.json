@@ -6613,7 +6613,7 @@
   {
    "id": "current",
    "label": "Current",
-   "sub": "Spring 1225 (live)",
+   "sub": "Spring 1226 (live)",
    "cutoff": "9999",
    "populated": true,
    "state": {
@@ -7758,7 +7758,7 @@
       },
       {
        "name": "Fire From the Sky",
-       "q": 33,
+       "q": 43,
        "art": "te"
       },
       {
@@ -7768,12 +7768,12 @@
       },
       {
        "name": "The Summer Fog",
-       "q": 24,
+       "q": 29,
        "art": "me"
       },
       {
        "name": "The Black Horse of Boulogne",
-       "q": 16,
+       "q": 20,
        "art": "re"
       },
       {
@@ -7783,23 +7783,28 @@
       },
       {
        "name": "Mont-Saint-Michel Tide Pools",
-       "q": 5,
+       "q": 10,
        "art": "aq"
       },
       {
        "name": "The Falcon's Cliff",
-       "q": 2,
+       "q": 4,
        "art": "vi"
       },
       {
        "name": "The Diedne Garden",
-       "q": 5,
+       "q": 8,
        "art": "he"
       },
       {
        "name": "Rán's Tribute (Éogan's gift, 1222–1225)",
        "q": 8,
        "art": "aq"
+      },
+      {
+       "name": "Norman Barrow Frost",
+       "q": 2,
+       "art": "co"
       }
      ],
      "sources": [
@@ -7809,6 +7814,55 @@
        "expected": 5,
        "received": 5,
        "note": "Ka'wa'ill, Spring 1225 (standard yield)"
+      },
+      {
+       "name": "The Diedne Garden",
+       "art": "he",
+       "expected": 3,
+       "received": 3,
+       "note": "Valdemar, Spring 1225 (standard yield)"
+      },
+      {
+       "name": "The Falcon's Cliff",
+       "art": "vi",
+       "expected": 2,
+       "received": 2,
+       "note": "Dagmar, Spring 1225 (as in 1224)"
+      },
+      {
+       "name": "The Summer Fog",
+       "art": "me",
+       "expected": 5,
+       "received": 5,
+       "note": "Dustin, Summer 1225 (standard yield)"
+      },
+      {
+       "name": "The Black Horse of Boulogne",
+       "art": "re",
+       "expected": 4,
+       "received": 4,
+       "note": "Dustin, Fall 1225 (standard yield)"
+      },
+      {
+       "name": "Mont-Saint-Michel Tide Pools",
+       "art": "aq",
+       "expected": 5,
+       "received": 5,
+       "note": "Valerian, Fall 1225 (standard yield)"
+      },
+      {
+       "name": "Norman Barrow Frost",
+       "art": "co",
+       "expected": 2,
+       "received": 2,
+       "note": "Valerian, Winter 1225-26 (standard yield)"
+      },
+      {
+       "name": "Fire from the Sky",
+       "art": "te",
+       "expected": 10,
+       "received": 10,
+       "note": "Valdemar, Dustin, Winter 1225-26 (standard yield)"
       }
      ]
     },

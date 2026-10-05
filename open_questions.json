@@ -800,6 +800,39 @@
    "raised_event": "",
    "resolution": "",
    "context": "Owner to-do (2026-10-04): create sample grogs from the City & Guild book.\n\n**WHAT THE CORPUS HAS:** City & Guild's sample characters (arm5e-city-and-guild-0.5-guilds-characters.actor): **Julian, Apprentice Carpenter**; **Obano, Journeyman Swordsmith**; **Doolin, Guild Master Clothier**; **Banco, Dean of the Goldsmith's Guild**.\n\n**TO SETTLE:**\n\n- Which of them to create, and in what role — for example craftsmen for Furtum's shipyard on Man.\n- Where: site cards (npcs.json), Foundry actors, or both.\n- Whether to add them to the XP tracker as grogs."
+  },
+  {
+   "id": "q068",
+   "type": "Tool",
+   "category": "Covenant Business",
+   "title": "Record the 1225 trade seasons",
+   "status": "Open",
+   "raised_in": "Owner, 2026-10-04",
+   "raised_event": "",
+   "resolution": "",
+   "context": "Owner to-do (2026-10-04): the covenant sheet's Current state is now Spring 1226, but its trade log stops at Fall 1224.\n\n**ON RECORD:** trade results for 1220–1224 (1224: Scholar's Wake, Adamant, Tide of Memory, Veðrdreki). Nothing for 1225; Current income is 44 (Fleet trade & transport).\n\n**TO SETTLE:**\n\n- Each active hull's 1225 trade seasons and results (Tide of Memory, Brineborn, Scholar's Wake, Veðrdreki, Adamant). The Maelstrom's Maw is on sabbatical with Kor; the Hound of Cassel is Wilhelm's and en route to Scarem Montem.\n- Heynric taking the dragon-gold to market (p147, still a proposed event).\n- Whether Current income (44) changes for 1226."
+  },
+  {
+   "id": "q069",
+   "type": "Tool",
+   "category": "Covenant Business",
+   "title": "Update covenant expenses for 1225",
+   "status": "Open",
+   "raised_in": "Owner, 2026-10-04",
+   "raised_event": "",
+   "resolution": "",
+   "context": "Owner to-do (2026-10-04): the covenant sheet's Current state is now Spring 1226; its yearly expenses still reflect the 1224 set-up (total 244: 6 active hulls, 6 labs incl. Valdemar's Isle of Man lab, 9 magi + 2 scribes).\n\n**1225 CHANGES TO CHECK** (all still proposed events unless noted):\n\n- Furtum takes on the shipyard, with its lab and a master shipwright (p137, p144): buildings, laboratories, wages.\n- Sama settling in (p145) and Furtum joining: inhabitants, writing materials.\n- Wilhelm bringing his family to Man (p140): provisions, inhabitants.\n- Dustin refitting the Scholar's Wake lab (p106): laboratories.\n- The Hound of Cassel leaving the fleet for Scarem Montem: hull maintenance.\n- The Line of Credit (Bruges, 275): anything drawn or repaid in 1225."
+  },
+  {
+   "id": "q070",
+   "type": "Tool",
+   "category": "Covenant Business",
+   "title": "Deduct 1225 vis spending from the covenant's stock",
+   "status": "Open",
+   "raised_in": "Owner, 2026-10-04",
+   "raised_event": "",
+   "resolution": "",
+   "context": "Owner to-do (2026-10-04): the covenant sheet's Current stock (Spring 1226) includes every 1225 harvest but no 1225 vis spending except Wilhelm's stone sleds (4 Terram, p104, already applied). As each 1225 event below is approved, take its vis out of the stock.\n\n**TO CHECK** (all still proposed events):\n\n- Dagmar studying raw vis at the sea-serpent skeleton, Summer 1225 (p146): which Art, and how many pawns of Vim, Rego or Aquam (see q054).\n- Éogan's talisman, three seasons (p128–p130; thread t063): vis for opening, attuning and instilling 'Lungs of the Fish'.\n- Éogan and the capricorn (p101): whether the pawn of Aquam he carried was spent or given.\n- Any other 1225 lab work that uses vis: Dagmar's aura spell (p103), Dustin's lab refit (p106)."
   }
  ],
  "gmReference": {
