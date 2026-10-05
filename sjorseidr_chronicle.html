@@ -168,6 +168,10 @@ header{display:flex;align-items:center;gap:16px;padding:16px 4px 12px;border-bot
 .evt-title{font-family:'Cinzel',serif;font-size:15px;font-weight:600;color:var(--ink);flex:1}
 .evt.proposed .evt-title{color:var(--proposed)}
 .evt-date{font-style:italic;color:var(--ink-soft);font-size:12.5px;white-space:nowrap}
+.evt-link{flex:none;background:none;border:0;padding:0 2px;cursor:pointer;font-size:13px;line-height:1;color:var(--ink-soft);opacity:.35}
+.evt:hover .evt-link,.evt-link:focus-visible{opacity:.9}
+.evt-link.copied{opacity:1;color:var(--gold)}
+.evt.linked{border-color:var(--gold);box-shadow:0 0 0 2px var(--gold-bright);scroll-margin-top:16px}
 .evt-meta{font-size:12.5px;color:var(--ink-soft);margin-top:4px;display:flex;flex-wrap:wrap;gap:8px}
 .evt-meta .tag{display:inline-block;background:rgba(120,90,40,.15);padding:1px 7px;border-radius:9px;font-size:11px;border:1px solid rgba(120,90,40,.25)}
 .evt-meta .tag.proposed{background:rgba(91,58,138,.16);color:var(--proposed);border-color:rgba(91,58,138,.4)}
@@ -286,11 +290,52 @@ const $ = (s,r=document)=>r.querySelector(s);
 const $$ = (s,r=document)=>Array.from(r.querySelectorAll(s));
 const esc = s => String(s==null?'':s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 
+/* ---- event anchors ------------------------------------------------
+   Each event gets a stable anchor from its title (titles are unique on
+   approval), so sjorseidr_chronicle.html#e-<slug> links straight to it.
+   A slug shared by two events takes the event's date as a suffix. */
+let ANCHOR = new Map();
+function slugify(t){
+  return String(t||'').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/['\u2019]/g,'').toLowerCase()
+    .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,80) || 'event';
+}
+function buildAnchors(){
+  ANCHOR = new Map();
+  const all = [...VERIFIED, ...PROPOSED].slice().sort(byChron);
+  const count = new Map();
+  all.forEach(e=>{ const b=slugify(e.title); count.set(b,(count.get(b)||0)+1); });
+  const used = new Set();
+  all.forEach(e=>{
+    let a = slugify(e.title);
+    if(count.get(a)>1) a += '-' + String(e.sort_iso||'').slice(0,10);
+    let k = a, n = 2;
+    while(used.has(k)) k = a + '-' + (n++);
+    used.add(k); ANCHOR.set(e, 'e-' + k);
+  });
+}
+function eventUrl(anchor){ return location.href.split('#')[0] + '#' + anchor; }
+// Open, reveal and highlight the event named in the URL hash.
+function goToHash(){
+  const id = decodeURIComponent(location.hash.slice(1));
+  if(!id.startsWith('e-')) return;
+  let el = document.getElementById(id);
+  if(!el && (filter.q || filter.type!=='all')){
+    const ev = [...ANCHOR].find(([,a])=>a===id);
+    if(ev){ filter.q=''; filter.type='all'; $('#search').value=''; render(); el = document.getElementById(id); }
+  }
+  if(!el) return;
+  $$('.evt.linked').forEach(x=>x.classList.remove('linked'));
+  el.closest('.season')?.classList.remove('closed');
+  el.classList.add('open','linked');
+  el.scrollIntoView({block:'start'});
+}
+window.addEventListener('hashchange', goToHash);
+
 async function load(){
   if(window.__VERIFIED__ && window.__PROPOSED__){
     VERIFIED = window.__VERIFIED__;
     PROPOSED = window.__PROPOSED__;
-    render(); return;
+    buildAnchors(); render(); goToHash(); return;
   }
   try{
     const [vRes, pRes] = await Promise.all([
@@ -299,7 +344,7 @@ async function load(){
     ]);
     VERIFIED = vRes.ok ? await vRes.json() : [];
     PROPOSED = pRes.ok ? await pRes.json() : [];
-    render();
+    buildAnchors(); render(); goToHash();
   } catch(e){
     $('#content').innerHTML = `<div class="loading"><span class="big">⚠</span>
       Could not load the JSON files. Open this page through a local server, or via a Chromium browser that allows file:// fetches.<br><br><code>${esc(e.message)}</code></div>`;
@@ -420,6 +465,13 @@ function render(){
 
   $$('.season-head').forEach(h=>{h.onclick = ()=>h.parentElement.classList.toggle('closed');});
   $$('.evt-head').forEach(h=>{h.onclick = ()=>h.parentElement.classList.toggle('open');});
+  $$('.evt-link').forEach(b=>{b.onclick = ev=>{
+    ev.stopPropagation();
+    const url = eventUrl(b.dataset.anchor);
+    history.replaceState(null, '', '#' + b.dataset.anchor);
+    const done = ()=>{ b.classList.add('copied'); b.title='Link copied'; setTimeout(()=>{b.classList.remove('copied'); b.title='Copy a link to this event';},1500); };
+    if(navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(url).then(done, done); else done();
+  };});
 
   attachScrollSpy();
 }
@@ -695,11 +747,13 @@ function renderEvent(e){
     }
   }
 
-  return `<div class="evt ${isP?'proposed':''}">
+  const anchor = ANCHOR.get(e) || '';
+  return `<div class="evt ${isP?'proposed':''}"${anchor?` id="${esc(anchor)}"`:''}>
     <div class="evt-head">
       <span class="evt-icon">${esc(e.icon||'•')}</span>
       <div class="evt-title">${esc(e.title)}</div>
       <div class="evt-date">${esc(e.date||'')}</div>
+      ${anchor?`<button class="evt-link" data-anchor="${esc(anchor)}" title="Copy a link to this event" aria-label="Copy a link to this event">🔗</button>`:''}
     </div>
     <div class="evt-meta">${statusTag}${lifeTag}${tagsHtml}</div>
     ${notes}

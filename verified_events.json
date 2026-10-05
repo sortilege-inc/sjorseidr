@@ -3641,5 +3641,73 @@
   "status": "Historical",
   "body_text": "In **Spring 1224** Valdemar studies *Insights from Twilight*, the Magic Theory summa (L6 / Q11) won in the Tribunal prize draft, rather than copying it: **+11 Magic Theory**. The rest of his 1224 goes to adventure: delivering the crown to Mímormr in the summer and the Carnac regiones in the fall.",
   "body_html": "<p>In <strong>Spring 1224</strong> Valdemar studies <em>Insights from Twilight</em>, the Magic Theory summa (L6 / Q11) won in the Tribunal prize draft, rather than copying it: <strong>+11 Magic Theory</strong>. The rest of his 1224 goes to adventure: delivering the crown to Mímormr in the summer and the Carnac regiones in the fall.</p>"
+ },
+ {
+  "file": "",
+  "title": "Éogan's Talisman (1/3): prepare the jade-and-rowan necklace for enchantment",
+  "icon": "🔮",
+  "activity_type": "Enchantment",
+  "cast": [
+   "Éogan Dobhartha"
+  ],
+  "timeline": "🌼 Spring 1225",
+  "date": "Spring 1225",
+  "sort_iso": "1225-04-15T12:00",
+  "notes": "No Lab Total required, so about twenty days of the season were free; he spent them finding the capricorn. First of three consecutive talisman seasons. Approved by the owner, 2026-10-04.",
+  "season_activity": true,
+  "status": "Historical",
+  "body_text": "Éogan prepares his talisman-to-be — a jade cross in a rowan-wood jacket on a leather strap — for enchantment.",
+  "body_html": "<p>Éogan prepares his talisman-to-be — a jade cross in a rowan-wood jacket on a leather strap — for enchantment.</p>"
+ },
+ {
+  "file": "",
+  "title": "Éogan's Talisman (2/3): attune it as his talisman",
+  "icon": "🔮",
+  "activity_type": "Enchantment",
+  "cast": [
+   "Éogan Dobhartha"
+  ],
+  "timeline": "☀️ Summer 1225",
+  "date": "Summer 1225",
+  "sort_iso": "1225-07-15T12:00",
+  "notes": "No Lab Total required (about twenty free days again). Second of three consecutive talisman seasons. Approved by the owner, 2026-10-04.",
+  "season_activity": true,
+  "status": "Historical",
+  "body_text": "Éogan attunes the prepared necklace as his personal talisman.",
+  "body_html": "<p>Éogan attunes the prepared necklace as his personal talisman.</p>"
+ },
+ {
+  "file": "",
+  "title": "Éogan's Talisman (3/3): instill 'Lungs of the Fish' + the jade +4 Aquam bonus",
+  "icon": "🔮",
+  "activity_type": "Enchantment",
+  "cast": [
+   "Éogan Dobhartha"
+  ],
+  "timeline": "🍂 Fall 1225",
+  "date": "Fall 1225",
+  "sort_iso": "1225-10-15T12:00",
+  "notes": "Needs a Lab Total, unlike the first two seasons. The final trigger and Warping handling are still to confirm with the group. Third of three consecutive talisman seasons. Approved by the owner, 2026-10-04.",
+  "season_activity": true,
+  "status": "Historical",
+  "body_text": "Éogan instills the first effect: a semi-permanent 'Lungs of the Fish', run as a constant effect with an environmental trigger (submerged in water) to avoid 24/7 Warping. This season also instills the +4 Aquam bonus from the jade material. First of his intended deep-diving enchantments.",
+  "body_html": "<p>Éogan instills the first effect: a semi-permanent &#39;Lungs of the Fish&#39;, run as a constant effect with an environmental trigger (submerged in water) to avoid 24/7 Warping. This season also instills the +4 Aquam bonus from the jade material. First of his intended deep-diving enchantments.</p>"
+ },
+ {
+  "file": "",
+  "title": "Furtum takes on the shipyard",
+  "icon": "🔨",
+  "activity_type": "Covenant Business",
+  "cast": [
+   "Furtum Bonisagus"
+  ],
+  "timeline": "🌼 Spring 1225",
+  "date": "Spring 1225",
+  "sort_iso": "1225-04-09T12:00",
+  "notes": "Played 2026-10-03. Furtum's player is sending notes on his 1225. Approved by the owner, 2026-10-04.",
+  "season_activity": false,
+  "status": "Historical",
+  "body_text": "Sjórseiðr asks one thing of its members: that they have a ship. **Furtum** doesn't have one yet. But the harbor on Man would easily take a **shipyard**, and the first one is already begun.\nHe spends the rest of his 1224 coordinating the dockyards by the harbor, and he means in time to build a **laboratory at the shipyard**, since enchanting a ship will need one. Until then the island's lab stands free in spring, summer and autumn while its owners are at sea.\nHe stays in the exploring stage of membership for now and enters the story proper in **1225**. By **Winter 1225-26** the shipyard is well underway.",
+  "body_html": "<p>Sjórseiðr asks one thing of its members: that they have a ship. <strong>Furtum</strong> doesn&#39;t have one yet. But the harbor on Man would easily take a <strong>shipyard</strong>, and the first one is already begun.</p><p>He spends the rest of his 1224 coordinating the dockyards by the harbor, and he means in time to build a <strong>laboratory at the shipyard</strong>, since enchanting a ship will need one. Until then the island&#39;s lab stands free in spring, summer and autumn while its owners are at sea.</p><p>He stays in the exploring stage of membership for now and enters the story proper in <strong>1225</strong>. By <strong>Winter 1225-26</strong> the shipyard is well underway.</p>"
  }
 ]
