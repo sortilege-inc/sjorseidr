@@ -12520,6 +12520,118 @@
    "detail": "Pretense: Scandinavian Lore+5 (copied from Dagmar's Scandinavian Lore on the Mímormr adventure)",
    "covenant": null,
    "source": "owner ruling 2026-10-04"
+  },
+  "Valerian de Castellane::1222-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Magic Theory",
+   "targets": [
+    {
+     "type": "Magic Theory",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Magic Theory+2 (Arcane Experimentation)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04 (Menu B')"
+  },
+  "Valerian de Castellane::1224-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Swim",
+   "targets": [
+    {
+     "type": "Swim",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Swim+2 (the Kraken's Egg run)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04 (Menu B')"
+  },
+  "Valerian de Castellane::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Teaching",
+   "targets": [
+    {
+     "type": "Teaching",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Teaching+2 (teaching Valdemar Code of Hermes)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04 (Menu B')"
+  },
+  "Valerian de Castellane::1225-summer": {
+   "activity": true,
+   "deferred": false,
+   "act": "reading",
+   "xp": 12,
+   "xpType": "Code of Hermes",
+   "targets": [
+    {
+     "type": "Code of Hermes",
+     "xp": 12
+    }
+   ],
+   "detail": "reading: Code of Hermes+12 (The Authority Granted to the Tribunal by its Members, tractatus Q12)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04 (Menu B')"
+  },
+  "Valerian de Castellane::1225-fall": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Aquam",
+   "targets": [
+    {
+     "type": "Aquam",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Aquam+2 (harvesting the Mont-Saint-Michel tide pools)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04 (Menu B')"
+  },
+  "Valerian de Castellane::1225-winter": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Corpus",
+   "targets": [
+    {
+     "type": "Corpus",
+     "xp": 2
+    }
+   ],
+   "detail": "exposure: Corpus+2 (harvesting the Norman Barrow Frost)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04 (Menu B')"
+  },
+  "Valdemar Bjornsson::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "teaching",
+   "xp": 16,
+   "xpType": "Code of Hermes",
+   "targets": [
+    {
+     "type": "Code of Hermes",
+     "xp": 16
+    }
+   ],
+   "detail": "teaching: Code of Hermes+16 (taught by Valerian: Com 2 + Teaching 0 + 3 + 6 single student = 11, + Apt Student 5)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04 (Menu B')"
   }
  }
 }
