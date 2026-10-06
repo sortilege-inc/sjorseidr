@@ -915,12 +915,12 @@
    "id": "q078",
    "type": "Tool",
    "category": "System / Tooling",
-   "title": "Covenant ledger: carry the Boons and Hooks forward from 1221",
+   "title": "Covenant ledger: show Boons and Hooks from the covenant sheet at every node",
    "status": "Open",
    "raised_in": "Owner, 2026-10-06",
    "raised_event": "",
    "resolution": "",
-   "context": "Owner to-do (2026-10-06): the covenant ledger (covenant_ledger.json) holds the covenant's Boons and Hooks only at the **1221** node (9 Boons, 6 Hooks). The 1222, 1223 and 1224 nodes and **Current** have none. The covenant sheet (covenant.json) has the full set.\n\n**TO DO**\n\n- Carry the Boons and Hooks into the 1222–1224 nodes and Current. Decide whether the 1219 and 1220 nodes should hold them too.\n- Record any change since 1221 as a ledger entry. For example, Missing Aura ('the covenant has a base magical aura of zero') may no longer describe a covenant with a Magic aura 3 base at Laxey on the Isle of Man.\n- Check the Covenant tab's Boons & Hooks card renders at every node."
+   "context": "Owner to-do (2026-10-06; approach chosen by the owner): the covenant ledger shows the covenant's Virtues and Flaws in two places. The **Covenant Virtues & Flaws** section reads the covenant sheet (covenant.json) and is always complete. The overview's **Boons & Hooks** card reads the selected node's own list (state.virtues / state.flaws), and only the **1221** node has one (9 Boons, 6 Hooks). At 1219, 1220, 1222, 1223, 1224 and Current the card is blank.\n\n**TO DO**\n\n- **Ledger page:** make the Boons & Hooks card read the covenant sheet (covenant.json) instead of the node's state, as the full section already does. One source to edit, nothing to keep in sync.\n- **Data:** remove the now-unused virtues and flaws lists from the node states (the 1221 node's copy included) so nothing stale remains.\n- **History:** record any change to the covenant's Boons and Hooks as a ledger entry (season, what changed, why), not as per-node copies.\n- **Missing Aura:** settle separately. The Hook says 'the covenant has a base magical aura of zero', but the base at Laxey on the Isle of Man sits on a Magic aura of 3. Decide whether it still applies (the fleet is at sea much of the year) or should be revised, and log the change.\n- **Browser-check** that the card renders at every node."
   }
  ],
  "gmReference": {
