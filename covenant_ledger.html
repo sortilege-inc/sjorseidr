@@ -549,8 +549,10 @@ const PANELS={
         <div class="econ-row"><span>Income · Expenditure</span><b>${hasEcon()?`${e.totalIncome} · ${e.totalExpenditure} £`:na}</b></div>
       </div>
       <div class="card"><h2 class="sh" style="margin-top:0">Boons &amp; Hooks</h2>
-        <div><b style="font-family:Cinzel">Virtues</b><br>${s().virtues.length?s().virtues.map(v=>`<span class="pill">${esc(v)}</span>`).join(''):na}</div>
-        <div style="margin-top:8px"><b style="font-family:Cinzel">Flaws</b><br>${s().flaws.length?s().flaws.map(v=>`<span class="pill">${esc(v)}</span>`).join(''):na}</div>
+        ${(()=>{ // Boons & Hooks come from the covenant sheet (covenant.json), not the node; changes are logged as ledger entries.
+          const pills=l=>(l||[]).length?l.map(v=>`<span class="pill" title="${esc(v.impact||'')}">${esc(v.name)}</span>`).join(''):'<span style="color:var(--ink-soft);font-style:italic">none recorded</span>';
+          return COV?`<div><b style="font-family:Cinzel">Virtues</b><br>${pills(COV.virtues)}</div>
+        <div style="margin-top:8px"><b style="font-family:Cinzel">Flaws</b><br>${pills(COV.flaws)}</div>`:na; })()}
       </div>
       <div class="card"><h2 class="sh" style="margin-top:0">Notable possessions</h2>
         ${s().possessions.length?s().possessions.map(p=>`<div>· ${esc(p)}</div>`).join(''):na}</div>

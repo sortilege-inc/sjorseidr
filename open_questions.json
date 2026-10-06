@@ -910,17 +910,6 @@
    "raised_event": "",
    "resolution": "",
    "context": "Owner to-do (2026-10-06): Henri's sheet carries **Companion Animal** (Minor), but in *Grogs* it is a 'Social Status, animals only' Flaw: 'The character is the Animal Companion of another character (either a player character or a storyguide character) and therefore has little control over his own life.' Henri is human, and his Social Status is already Failed Apprentice.\n\n**TO DO**\n\n- Ask the player which Minor Flaw replaces it, to keep his Virtues and Flaws balanced.\n- Update the site card (npcs.json) and his Foundry actor.\n\n**FOR REFERENCE:** his other Flaws are Noncombatant and Small Frame; his Virtues are Failed Apprentice, Good Teacher and Great Communication."
-  },
-  {
-   "id": "q078",
-   "type": "Tool",
-   "category": "System / Tooling",
-   "title": "Covenant ledger: show Boons and Hooks from the covenant sheet at every node",
-   "status": "Open",
-   "raised_in": "Owner, 2026-10-06",
-   "raised_event": "",
-   "resolution": "",
-   "context": "Owner to-do (2026-10-06; approach chosen by the owner): the covenant ledger shows the covenant's Virtues and Flaws in two places. The **Covenant Virtues & Flaws** section reads the covenant sheet (covenant.json) and is always complete. The overview's **Boons & Hooks** card reads the selected node's own list (state.virtues / state.flaws), and only the **1221** node has one (9 Boons, 6 Hooks). At 1219, 1220, 1222, 1223, 1224 and Current the card is blank.\n\n**TO DO**\n\n- **Ledger page:** make the Boons & Hooks card read the covenant sheet (covenant.json) instead of the node's state, as the full section already does. One source to edit, nothing to keep in sync.\n- **Data:** remove the now-unused virtues and flaws lists from the node states (the 1221 node's copy included) so nothing stale remains.\n- **History:** record any change to the covenant's Boons and Hooks as a ledger entry (season, what changed, why), not as per-node copies.\n- **Missing Aura:** settle separately. The Hook says 'the covenant has a base magical aura of zero', but the base at Laxey on the Isle of Man sits on a Magic aura of 3. Decide whether it still applies (the fleet is at sea much of the year) or should be revised, and log the change.\n- **Browser-check** that the card renders at every node."
   }
  ],
  "gmReference": {

@@ -974,6 +974,17 @@
       "raised_event": "",
       "resolution": "Owner, 2026-10-04: Fuchs's Area Lores are Isle of Man Lore (15 XP, score 2) and North Sea Lore (5 XP, score 1), in Foundry and on his card. Oliver's Finding Hidden Loot is a Minor General Virtue in ArM5 Definitive ('A character with this Virtue gains a +9 bonus to Awareness rolls when searching a confined space for hidden items, provided they can move the contents of the space about undisturbed.'), now on his Foundry sheet. His long sword is linked to Single Weapon in Foundry (it had been linked to Brawl), giving Ability 7: Single Weapon 4 + Puissant 2 + specialty 1. Oliver is done.",
       "context": "Both PDFs were re-saved on 2026-10-04. Fuchs's matches his Foundry sheet apart from the two fixes already ruled (Puissant names Profession: Shipwright; the second Area Lore is score 1). Oliver's Foundry sheet now has his Virtues and Flaws, personality traits (Brave +3, Paranoid +2, Careful +2), Reputation (Pirate 2), specialties, Craft: Cooking, long sword and throwing axe (2026-10-04).\n\n**TO SETTLE:**\n\n- **Fuchs:** both Area Lores are unnamed on his sheet and in Foundry (15 XP, score 2; and 5 XP, score 1). Ask his player which areas they are.\n- **Oliver — Finding Hidden Loot:** the Virtue isn't in the rules corpus, so it is not on his Foundry sheet yet. Rule on what it is (or have his player name its source), then add it.\n- **Oliver — long sword:** his sheet lists Ability 8; Single Weapon 4 + Puissant 2 + specialty 1 = 7. Mention to his player."
+    },
+    {
+      "id": "q078",
+      "type": "Tool",
+      "category": "System / Tooling",
+      "title": "Covenant ledger: show Boons and Hooks from the covenant sheet at every node",
+      "status": "Resolved",
+      "raised_in": "Owner, 2026-10-06",
+      "raised_event": "",
+      "resolution": "Resolved (2026-10-06): the Boons & Hooks card on the covenant ledger now reads the covenant sheet (covenant.json), so it shows all 9 Boons and 6 Hooks at every node. The per-node virtues/flaws lists were removed from covenant_ledger.json. Future changes go in as ledger entries. Missing Aura stays (owner): the covenant is more than the Isle of Man, and at sea it generally has to find its own auras.",
+      "context": "Owner to-do (2026-10-06; approach chosen by the owner): the covenant ledger shows the covenant's Virtues and Flaws in two places. The **Covenant Virtues & Flaws** section reads the covenant sheet (covenant.json) and is always complete. The overview's **Boons & Hooks** card reads the selected node's own list (state.virtues / state.flaws), and only the **1221** node has one (9 Boons, 6 Hooks). At 1219, 1220, 1222, 1223, 1224 and Current the card is blank.\n\n**TO DO**\n\n- **Ledger page:** make the Boons & Hooks card read the covenant sheet (covenant.json) instead of the node's state, as the full section already does. One source to edit, nothing to keep in sync.\n- **Data:** remove the now-unused virtues and flaws lists from the node states (the 1221 node's copy included) so nothing stale remains.\n- **History:** record any change to the covenant's Boons and Hooks as a ledger entry (season, what changed, why), not as per-node copies.\n- **Missing Aura:** settle separately. The Hook says 'the covenant has a base magical aura of zero', but the base at Laxey on the Isle of Man sits on a Magic aura of 3. Decide whether it still applies (the fleet is at sea much of the year) or should be revised, and log the change.\n- **Browser-check** that the card renders at every node."
     }
   ]
 }
