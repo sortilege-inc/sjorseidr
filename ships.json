@@ -47,7 +47,8 @@
       "status": "Active",
       "description": "Valerian's ship — confirmed to be the fleet's fifth hull, commissioned at Bergen and given to Valerian on his arrival in 1222. Per Solving's own notes, the hull was earmarked from the start for \"the Guernicus mage\" — which, since Valerian is House Guernicus, is exactly who it ended up with.",
       "standing_crew": [
-        "Valerian de Castellane"
+        "Valerian de Castellane",
+        "Captain Leopold Bergman"
       ]
     },
     {
@@ -64,7 +65,9 @@
         "Garrat Coffin",
         "Giden",
         "Ka'wa'ill",
-        "Leofwin"
+        "Leofwin",
+        "Oliver",
+        "Erik Aelfson"
       ]
     },
     {
@@ -124,7 +127,8 @@
       "standing_crew": [
         "Wilhelm Stienauer",
         "Carl Schmidt",
-        "Isaac Schmidt"
+        "Isaac Schmidt",
+        "Hilda"
       ],
       "former_crew": [
         "Joris Van Damme (captain)",
@@ -342,6 +346,21 @@
       "role": "Crew",
       "affiliation": "Maelstrom's Maw — on sabbatical",
       "note": ""
+    },
+    "Oliver": {
+      "role": "Grog",
+      "affiliation": "Veðrdreki (Storm Dragon)",
+      "note": "English longbowman, on lookout."
+    },
+    "Erik Aelfson": {
+      "role": "Grog",
+      "affiliation": "Veðrdreki (Storm Dragon)",
+      "note": "Minstrel (Eric in the chronicle)."
+    },
+    "Captain Leopold Bergman": {
+      "role": "Sailing captain",
+      "affiliation": "Adamant",
+      "note": "Captains the Adamant for Valerian."
     }
   },
   "snapshots": [

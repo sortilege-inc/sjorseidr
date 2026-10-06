@@ -5437,6 +5437,11 @@
       },
       "virtues": [
         {
+          "name": "The Gift",
+          "impact": "free",
+          "description": "The Gift is a special Virtue, because it has no cost. The character suffers all the penalties of The Gift, just as magi do (see page @@), but can be taught Supernatural Abilities without having to take the corresponding Virtues (see page @@ for rules). Most importantly, the character can be taught Hermetic Magic, so all magi must have this Virtue. A character with The Gift, even if he is not a mag"
+        },
+        {
           "name": "Major Magical Focus (Cooking)",
           "impact": "major",
           "description": "Your magic is much more potent in a fairly limited area, such as weather, necromancy, birds, or emotions. This area should be smaller than a single Art, but may be spread over several Arts – necromancy, for example, covers both Corpus and Mentem effects. You cannot be focused on laboratory activities, although a focus does apply to laboratory activities.\n\n \n\nSample Major Magical Foci :\n\nThis list is merely exemplary. Other foci are possible.\n\n Animal: Birds, or mammals, or domesticated animals.\n\n Aquam: Salt water or fresh water.\n\n Auram: Weather.\n\n Corpus: Men or women.\n\n Herbam: Trees or food plants.\n\n Imaginem: Visual images, auditory images, tactile images, or taste and smell together.\n\n Mentem: Emotions or memories.\n\n Terram: Metals or stone.\n\n Necromancy: Corpus and Mentem as applied to the bodies and spirits of dead people.\n\n Damage: Any Art, as long as the effect does damage directly, either by inflicting a wound or doing a certain amount of damage which can be soaked.\n\n Disguise: Changing the appearance of something, by any means.\n\n When you cast a spell or generate a Lab Total within your focus, add the lowest applicable Art score twice. If a spell has requisites, the lowest applicable score may be one of the requisites, rather than one of the primary Arts. Thus, if a magus with a focus on birds was casting a spell to turn a bird into pure flame, MuAn (Ig), with Muto 14, An 18, and Ig 10, his final total would be 34 + other modifiers: 14 from Muto, and 20 from adding Ignem twice. If he was casting a spell to turn a bird into another sort of bird, MuAn with no requisites, his total would be 46 + other modifiers, 18 from Animal and 28 from adding Muto twice.\n\n A character can have only one Magical Focus, either major or minor, regardless of the source of the focus."
@@ -9603,8 +9608,30 @@
           "xp": 0
         }
       },
-      "virtues": [],
-      "flaws": [],
+      "virtues": [
+        {
+          "name": "Educated",
+          "impact": "minor",
+          "description": "You have been educated in a grammar school, and may have attended a university or cathedral school. You may purchase Academic Abilities during character generation. During character generation you get an additional 50 experience points, which must be spent on Latin and Artes Liberales."
+        },
+        {
+          "name": "Puissant (Profession: Scribe)",
+          "impact": "minor",
+          "description": "You are particularly adept with one Ability, and add 2 to its value whenever you use it. Note that you do not, in general, use an Ability when learning it, writing about it, or helping someone else to improve it. You may only take this Virtue once for a given Ability, but may take it more than once for different Abilities."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Covenant Upbringing",
+          "impact": "minor",
+          "description": "You were raised in a large, old covenant that has little contact with the outside world. You might have very strange religious beliefs, and you certainly find medieval social and political structures very odd. You may take Latin at character creation, and are likely to have a score in Order of Hermes Lore. While Latin cannot be your native language, you may speak a language closely related to Latin that is spoken only at your home covenant."
+        },
+        {
+          "name": "Ambitious - Scribal glory",
+          "impact": "minor",
+          "description": "You want to be the most successful or powerful person in the world in some respect. You will not be distracted into doing things that do not contribute to your ambition, and are very eager to do things that advance it."
+        }
+      ],
       "abilities": [],
       "spells": [],
       "personalityTraits": [
