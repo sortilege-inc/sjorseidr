@@ -3176,7 +3176,7 @@
           "name": "Magical Animal Companion",
           "impact": "minor",
           "description": "You are accompanied by a magical animal that's smart enough to follow your orders or to disobey them on its own initiative. The smaller and more innocuous the creature, the more intelligent it is. A ferret or crow is as intelligent as a human, a wolf is very cunning, and an animal the size of a horse is simply more intelligent than normal. The creature has a Magic Might score of 10 - Size.",
-          "note": "Species: Shadow Owl (per Furtum v4)."
+          "note": "Wraith, a white wolf (from 2026-10-06; replaced the Shadow Owl)."
         },
         {
           "name": "Covenant Upbringing",
@@ -3521,110 +3521,82 @@
       "sanctum": "",
       "familiar": null,
       "activeWounds": null,
-      "biography": "Sheet current as of Summer 1226 (b. 1198, age 28). Player: Chan. Spanish-born magus of House Bonisagus (b. 1198, Spain; Christian). Newly associated with Sjórseiðr and not yet assigned to a hull (\"No Ship\" — covenant household). His apprenticeship of some fifteen years was begun at Durenmar under a Tremere parens and completed at Oléron (where he lived from about 1221) under a Bonisagus parens; he passed his Gauntlet at the 1223 Normandy Tribunal; he retains the Tremere Minor Magical Focus in Certamen as his free House virtue (ST-approved) and is, quietly, still Tremere in temperament. Build recorded at covenant parity (established magus). OPEN ITEMS (per Furtum v4): Bargain specialty still \"Bartering???\"; \"Annoyed\" personality trait unconfirmed; Flawless Magic grants Mastery 1 in every spell — each spell still needs a chosen Mastery ability. (Resolved in v4: Restriction = Aquatic Mammals; companion = Shadow Owl; Animal Handling & German specialties.)",
+      "biography": "Sheet current as of Summer 1226 (b. 1198, age 28). Player: Chan. Spanish-born magus of House Bonisagus (b. 1198, Spain; Christian). Newly associated with Sjórseiðr and not yet assigned to a hull (\"No Ship\" — covenant household). His apprenticeship of some fifteen years was begun at Durenmar under a Tremere parens and completed at Oléron (where he lived from about 1221) under a Bonisagus parens; he passed his Gauntlet at the 1223 Normandy Tribunal; he retains the Tremere Minor Magical Focus in Certamen as his free House virtue (ST-approved) and is, quietly, still Tremere in temperament. Build recorded at covenant parity (established magus). OPEN ITEMS (per Furtum v4): Bargain specialty still \"Bartering???\"; \"Annoyed\" personality trait unconfirmed; Flawless Magic grants Mastery 1 in every spell — each spell still needs a chosen Mastery ability. (Resolved in v4: Restriction = Aquatic Mammals; companion = Wraith, a white wolf (was the Shadow Owl); Animal Handling & German specialties.)",
       "animalForms": {
-        "tabLabel": "Shadow Owl",
+        "tabLabel": "Wraith",
         "order": [
-          "owl",
+          "wraith",
           "wolf"
         ],
         "forms": {
-          "owl": {
-            "label": "Shadow Owl",
+          "wraith": {
+            "label": "Wraith",
             "role": "Magical Animal Companion",
-            "size": -3,
-            "might": 13,
+            "size": 0,
+            "might": 10,
             "mightRealm": "Magic",
             "form": "Animal",
             "characteristics": {
-              "cun": 2,
-              "per": 5,
-              "pre": -1,
-              "com": -1,
-              "str": -6,
-              "sta": 1,
+              "cun": 0,
+              "per": 0,
+              "pre": 1,
+              "com": 1,
+              "str": 2,
+              "sta": 2,
               "dex": 2,
-              "qik": 4
+              "qik": 2
             },
-            "soak": 1,
-            "fatigue": "5 levels (OK / 0 / –1 / –3 / –5)",
-            "wounds": "Light –1 (1–2) · Medium –3 (3–4) · Heavy –5 (5–6) · Incapacitated (7–8) · Dead (9+)",
-            "combat": [
-              {
-                "name": "Talons & beak",
-                "init": 4,
-                "attack": 8,
-                "defense": 10,
-                "damage": 1
-              }
-            ],
             "powers": [
               {
-                "name": "Silent Flight",
-                "cost": "always on",
-                "detail": "flies in utter silence — a large bonus to Stealth in flight and to surprise."
+                "name": "Pack of One",
+                "cost": "2 points, Init +10, Animal",
+                "detail": "The wolf can create five duplicates of himself, who can then fight as a trained group. For these purposes, treat the wolf as having a Leadership score of 5, so that he can get the full +15 group bonus to his attacks. The power lasts until the pack brings down its opponent, which may be a group, or disengages from the fight. As the pack is really all one creature, the nomination of a vanguard is arbitrary. Further, the group does not need to disengage and reform when the vanguard is killed; it can seamlessly transfer the role to another wolf. Finally, the wolf only dies if all the copies are killed. When the duplicates vanish, the least wounded wolf remains."
               },
               {
-                "name": "Eyes of the Dark",
-                "cost": "always on",
-                "detail": "sees normally in total darkness."
+                "name": "Terrifying Howl",
+                "cost": "4 points, Init +0, Mentem",
+                "detail": "Anyone who hears the wolf’s howl is struck with fear of the wolf and of wilderness places away from the haunts of men. Someone already in a house will merely not want to leave. Overcoming this fear completely requires a Brave roll against an Ease Factor of 12. Acting sensibly while responding to it, such as heading back to the village carefully, requires a Brave roll against an Ease Factor of 6. Those who fail the easier roll simply flee in panic."
               },
               {
-                "name": "Cloak of Shadows",
-                "cost": "2 Might",
-                "detail": "wreathes itself in gloom, becoming very hard to see (as a strong Veil of Invisibility) for Sun; Penetration = Might − level."
-              },
-              {
-                "name": "Night's Messenger",
-                "cost": "1 Might",
-                "detail": "carries and repeats a short whispered message to a recipient it knows."
+                "name": "Wolf Lord",
+                "cost": "0 points, constant, Animal",
+                "detail": "Any wolf the magical wolf strikes in deadly combat dies instantly. In addition, the magical wolf can make mundane wolves follow his instructions even when he is not around, as long as the instructions are quite simple."
               }
             ],
             "abilities": [
               {
-                "name": "Awareness",
-                "speciality": "night / movement",
+                "name": "Area Lore",
+                "speciality": "game trails",
+                "score": 6
+              },
+              {
+                "name": "Brawl",
+                "speciality": "biting",
                 "score": 6
               },
               {
                 "name": "Hunt",
-                "speciality": "small prey",
-                "score": 5
+                "speciality": "in a pack",
+                "score": 7
               },
               {
-                "name": "Stealth",
-                "speciality": "silent flight",
+                "name": "Living Language",
+                "speciality": "hunting terminology",
                 "score": 5
               },
               {
                 "name": "Survival",
-                "speciality": "woodland at night",
-                "score": 4
-              },
-              {
-                "name": "Area Lore",
-                "speciality": "the covenant's waters",
-                "score": 3
-              },
-              {
-                "name": "Magic Lore",
-                "speciality": "magical beasts",
-                "score": 2
-              },
-              {
-                "name": "Second Sight",
-                "speciality": "regiones",
-                "score": 2
+                "speciality": "forests",
+                "score": 6
               }
             ],
-            "vis": "~2 pawns of Animal vis (in its feathers)",
-            "appearance": "A charcoal-black owl whose feathers seem to drink the light; amber eyes; moves in total silence.",
+            "vis": "4 pawns of Animal, in head.",
+            "appearance": "A white male wolf, larger than normal, looking extremely healthy. His eyes, in particular, sparkle more brightly than should be possible.",
             "personality": [
-              "Loyal (to Furtum)",
-              "Watchful",
-              "Secretive"
+              "Leader +3",
+              "Loyal +2"
             ],
-            "notes": "Magical Animal Companion — Might = 10 − Size (RAW). Combat totals and powers are a GM draft; tune to taste."
+            "notes": "Magical Animal Companion: Might = 10 − Size. Furtum's companion from 2026-10-06, replacing the Shadow Owl. Built in Foundry on the core Magical Wolf (Might 20, Size −1, Per +3), adjusted to white, Size 0, Might 10, Per 0. Qualities: Vocal, Thick Fur, Pack / Herd Leader, Keen Sense of Smell, Aggressive, Hardy, Pursuit Predator. Combat: Bite as a natural weapon (Init +0, Atk +3, Dfn +1, Dam +1)."
           },
           "wolf": {
             "label": "White Wolf — Lycanthrope form",
