@@ -11924,6 +11924,1419 @@
       "shortDescription": "Master Shipwright and guild master; builds the covenant shipyard on Man (from Fall 1225)",
       "biography": "Master Shipwright and guild master, recruited by Furtum in Fall 1225 (with liberal use of Aura of Rightful Authority) to build the covenant shipyard on the Isle of Man. English, Christian; born 1196. Sheet from his player (Fuchs.pdf), with the owner's fixes of 2026-10-04: Puissant applies to Profession: Shipwright, and the second Area Lore (5 xp) is score 1. Both Area Lores are unnamed on the sheet.",
       "foundryUuid": "Actor.rYzDGyWYuj1bEotB"
+    },
+    "Captain A": {
+      "name": "Captain A",
+      "foundryName": "Captain A",
+      "charType": "companion",
+      "unassignedCaptain": true,
+      "portrait": null,
+      "house": "",
+      "parens": null,
+      "sigil": null,
+      "born": null,
+      "age": 35,
+      "apparentAge": 35,
+      "characteristics": {
+        "int": 1,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "pre": 2,
+        "com": 2,
+        "dex": 0,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {},
+      "virtues": [
+        {
+          "name": "Ways Of The Sea",
+          "impact": "major",
+          "description": "You ha ve a deep understanding of a type of terrain, feeling more natural and at home there than anywhere else. Examples include Ways of the Forest, Ways of the Mountain, Ways of the Steppe or Ways of the Town. You get a +3 bonus to all rolls, including combat and Casting Scores, that directly involve that area and its inhabitants; mundane, magical, or faerie. In addition, you roll one fewer botch die than normal (which may mean you roll no botch dice) in rolls that pertain to your area of understanding. You are not normally molested by animals of the terrain, and though particularly vicious creatures may still attack you, at least they’ll accord you proper respect. (For Ways of the Town, this still applies to town animals, of which there are plenty in the medieval world, rather than people. The +3 bonus does apply to people.) You may choose this Virtue multiple times, for different types of terrain."
+        },
+        {
+          "name": "Arcane Lore",
+          "impact": "minor",
+          "description": "You may take Arcane Abilities during character generation. Unless you have The Gift, you cannot learn Parma Magica. You get an additional 50 experience points, which must be spent on Arcane Abilities. A Gifted character who is not a Hermetic magus and knows Parma Magica must take the Major Story Flaw Enemy: Entire Order of Hermes, as magi are bound by their Oath to slay the character on sight, unless he immediately joins the Order. Such a character cannot be played in a normal saga, as the other player characters have to kill him."
+        },
+        {
+          "name": "Inspirational",
+          "impact": "minor",
+          "description": "You are a stirring speaker or a heroic figure, and can urge people to great efforts. You give targets a +3 bonus to rolls for appropriate Personality Traits."
+        },
+        {
+          "name": "Educated (Vernacular)",
+          "impact": "minor",
+          "description": "This form of secular instruction, given by tutors to the scions of merchant houses, emphasizes practical skills likely to make the student suited to a leadership role in the family business. The character may purchase Academic Abilities during character creation. She also gains 50 additional experience points, which must be spent on Academic Abilities, Bargain, the Organization Lore of the character’s company, Profession Merchant, or the language of trade in the company’s region (usually Latin, Greek, or Arabic)."
+        },
+        {
+          "name": "Perfect Eye for (Commodity)",
+          "impact": "minor",
+          "description": "For one commodity, and products manufactured from it, the character never fails to make an accurate assessment of value. A character who has a perfect eye for wool, for example, can class wool by touch and always estimate its price accurately. The character can also price woolen cloth and woolen embroidery. A character with a perfect eye for gemstones can always spot fake, cracked, and illusory stones. Characters with this Virtue are prized employees, and are occasionally paid as consultants by other merchants. So long as they trade exclusively in the commodity that matches this Virtue, the character is very successful. If you are using the trading rules in City and Guild, they gain an extra (3 x Wealth Multiplier) Labor Points per year."
+        },
+        {
+          "name": "Factor",
+          "impact": "minor",
+          "description": "The character manages the interests of a trading house in a single city. This gives the character many advantages, which the main body of this chapter describes in detail. Many factors are junior partners in their companies, and they choose the Partner Virtue, not this one."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Feud",
+          "impact": "major",
+          "description": "Your family is involved in a feud. The opposing family or families are roughly of equivalent strength to your family and its allies. You are liable to be ambushed or attacked by opposing clansmen, and your family expects you to join raids against your enemies."
+        },
+        {
+          "name": "Wrathful (Major)",
+          "impact": "major",
+          "description": "You are prone to anger over the smallest issues, and your rage when you are thwarted in something major is terrible to behold."
+        },
+        {
+          "name": "Employed by Company",
+          "impact": "minor",
+          "description": "Characters with this Flaw are salaried employees, answerable to an employer. They may be merchants who travel on behalf of a company, or administrators who are answerable to the partners. On the other hand, they are also backed up by the resources of the company. See the Companies section, above, for more detail."
+        },
+        {
+          "name": "Missing Ear",
+          "impact": "minor",
+          "description": "You cannot accurately locate the direction of sounds, and suffer a penalty of –3 to hearing rolls."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Awareness",
+          "speciality": "Weather",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Bludgeon",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Normandy Coast Lore",
+          "speciality": "Coves",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Astronomy",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Aboard Ship",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Grains",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Carouse",
+          "speciality": "Drinking Songs",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Lore, Covenant",
+          "speciality": "Personalities",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Dominion Lore",
+          "speciality": "Saints",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Language: English",
+          "speciality": "Naval Terms",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Faerie Lore",
+          "speciality": "Sea Fairies",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Language: Low German",
+          "speciality": "Flemish",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Port Authorities",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Guile",
+          "speciality": "Lying about Cargo",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Law",
+          "speciality": "Hermetic Usage",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Crewman",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Sea Monsters",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Language: French",
+          "speciality": "Norman",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Covenants",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Profession: Sea Captain",
+          "speciality": "Normandy Coast",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Stealth",
+          "speciality": "Hiding",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Swim",
+          "speciality": "Oceans",
+          "xp": 15,
+          "score": 2
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Determined +1",
+        "Confident +1",
+        "Strategic -1",
+        "Wrathful +3"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "shortDescription": "Unassigned ship's captain (template): Factor and Feud, with Wrathful (Major), Employed by Company, Missing Ear. The company's man in port, whose family feud has already cost him an ear and his patience. Not yet part of the covenant.",
+      "biography": "An unassigned ship's-captain template (owner, 2026-10-06; balanced 2026-10-07), built from the Spare Grogs 'Ship's Captain' as a companion. Social Status: Factor (Merchant Adventurer dropped: one Social Status only). Flaws: Feud, Wrathful (Major), Employed by Company, Missing Ear. The company's man in port, whose family feud has already cost him an ear and his patience. The players will claim one per captain; a claimed captain is renamed and joins a ship's crew. Gear: quilted/fur armour and a dagger."
+    },
+    "Captain B": {
+      "name": "Captain B",
+      "foundryName": "Captain B",
+      "charType": "companion",
+      "unassignedCaptain": true,
+      "portrait": null,
+      "house": "",
+      "parens": null,
+      "sigil": null,
+      "born": null,
+      "age": 35,
+      "apparentAge": 35,
+      "characteristics": {
+        "int": 1,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "pre": 2,
+        "com": 2,
+        "dex": 0,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {},
+      "virtues": [
+        {
+          "name": "Ways Of The Sea",
+          "impact": "major",
+          "description": "You ha ve a deep understanding of a type of terrain, feeling more natural and at home there than anywhere else. Examples include Ways of the Forest, Ways of the Mountain, Ways of the Steppe or Ways of the Town. You get a +3 bonus to all rolls, including combat and Casting Scores, that directly involve that area and its inhabitants; mundane, magical, or faerie. In addition, you roll one fewer botch die than normal (which may mean you roll no botch dice) in rolls that pertain to your area of understanding. You are not normally molested by animals of the terrain, and though particularly vicious creatures may still attack you, at least they’ll accord you proper respect. (For Ways of the Town, this still applies to town animals, of which there are plenty in the medieval world, rather than people. The +3 bonus does apply to people.) You may choose this Virtue multiple times, for different types of terrain."
+        },
+        {
+          "name": "Arcane Lore",
+          "impact": "minor",
+          "description": "You may take Arcane Abilities during character generation. Unless you have The Gift, you cannot learn Parma Magica. You get an additional 50 experience points, which must be spent on Arcane Abilities. A Gifted character who is not a Hermetic magus and knows Parma Magica must take the Major Story Flaw Enemy: Entire Order of Hermes, as magi are bound by their Oath to slay the character on sight, unless he immediately joins the Order. Such a character cannot be played in a normal saga, as the other player characters have to kill him."
+        },
+        {
+          "name": "Inspirational",
+          "impact": "minor",
+          "description": "You are a stirring speaker or a heroic figure, and can urge people to great efforts. You give targets a +3 bonus to rolls for appropriate Personality Traits."
+        },
+        {
+          "name": "Educated (Vernacular)",
+          "impact": "minor",
+          "description": "This form of secular instruction, given by tutors to the scions of merchant houses, emphasizes practical skills likely to make the student suited to a leadership role in the family business. The character may purchase Academic Abilities during character creation. She also gains 50 additional experience points, which must be spent on Academic Abilities, Bargain, the Organization Lore of the character’s company, Profession Merchant, or the language of trade in the company’s region (usually Latin, Greek, or Arabic)."
+        },
+        {
+          "name": "Perfect Eye for (Commodity)",
+          "impact": "minor",
+          "description": "For one commodity, and products manufactured from it, the character never fails to make an accurate assessment of value. A character who has a perfect eye for wool, for example, can class wool by touch and always estimate its price accurately. The character can also price woolen cloth and woolen embroidery. A character with a perfect eye for gemstones can always spot fake, cracked, and illusory stones. Characters with this Virtue are prized employees, and are occasionally paid as consultants by other merchants. So long as they trade exclusively in the commodity that matches this Virtue, the character is very successful. If you are using the trading rules in City and Guild, they gain an extra (3 x Wealth Multiplier) Labor Points per year."
+        },
+        {
+          "name": "Factor",
+          "impact": "minor",
+          "description": "The character manages the interests of a trading house in a single city. This gives the character many advantages, which the main body of this chapter describes in detail. Many factors are junior partners in their companies, and they choose the Partner Virtue, not this one."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Plagued By Supernatural Entity",
+          "impact": "major",
+          "description": "Some supernatural being interferes in your life on a fairly regular basis. It may even have your best interests at heart, but the result is that you get dragged into stories. Suitable examples would be a demon trying to corrupt you, an angel trying to save you, a faerie playing games with you, or a ghost continuing the agenda she had while alive."
+        },
+        {
+          "name": "Low Self-Esteem",
+          "impact": "major",
+          "description": "You have a deflated opinion of your own selfworth. You begin the game with no Confidence Score, and never have any Confidence Points."
+        },
+        {
+          "name": "Employed by Company",
+          "impact": "minor",
+          "description": "Characters with this Flaw are salaried employees, answerable to an employer. They may be merchants who travel on behalf of a company, or administrators who are answerable to the partners. On the other hand, they are also backed up by the resources of the company. See the Companies section, above, for more detail."
+        },
+        {
+          "name": "Visions",
+          "impact": "minor",
+          "description": "You often see images related to emotionally or magically laden events. A vision might be of the past, a possible future, or a distant occurrence, and is often symbolic or confusing. Visions usually come to you at quiet times or in places connected with a powerful emotional or magical event, such as the site of a patricide or diabolic sacrifice. Your visions may warn you of dangers to come, or involve you in matters you would otherwise avoid.\n\nThe visions come purely at the storyguide’s discretion, and reveal only what he wants to reveal."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Awareness",
+          "speciality": "Weather",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Bludgeon",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Normandy Coast Lore",
+          "speciality": "Coves",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Astronomy",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Aboard Ship",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Grains",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Carouse",
+          "speciality": "Drinking Songs",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Lore, Covenant",
+          "speciality": "Personalities",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Dominion Lore",
+          "speciality": "Saints",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Language: English",
+          "speciality": "Naval Terms",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Faerie Lore",
+          "speciality": "Sea Fairies",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Language: Low German",
+          "speciality": "Flemish",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Port Authorities",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Guile",
+          "speciality": "Lying about Cargo",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Law",
+          "speciality": "Hermetic Usage",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Crewman",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Sea Monsters",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Language: French",
+          "speciality": "Norman",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Covenants",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Profession: Sea Captain",
+          "speciality": "Normandy Coast",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Stealth",
+          "speciality": "Hiding",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Swim",
+          "speciality": "Oceans",
+          "xp": 15,
+          "score": 2
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Determined +1",
+        "Confident -2",
+        "Strategic -1"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "shortDescription": "Unassigned ship's captain (template): Factor and Plagued By Supernatural Entity, with Low Self-Esteem, Employed by Company, Visions. Something from the deep keeps whispering to him; he half-believes it, and his employers think he is losing his nerve. Not yet part of the covenant.",
+      "biography": "An unassigned ship's-captain template (owner, 2026-10-06; balanced 2026-10-07), built from the Spare Grogs 'Ship's Captain' as a companion. Social Status: Factor (Merchant Adventurer dropped: one Social Status only). Flaws: Plagued By Supernatural Entity, Low Self-Esteem, Employed by Company, Visions. Something from the deep keeps whispering to him; he half-believes it, and his employers think he is losing his nerve. The players will claim one per captain; a claimed captain is renamed and joins a ship's crew. Gear: quilted/fur armour and a dagger."
+    },
+    "Captain C": {
+      "name": "Captain C",
+      "foundryName": "Captain C",
+      "charType": "companion",
+      "unassignedCaptain": true,
+      "portrait": null,
+      "house": "",
+      "parens": null,
+      "sigil": null,
+      "born": null,
+      "age": 35,
+      "apparentAge": 35,
+      "characteristics": {
+        "int": 1,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "pre": 2,
+        "com": 2,
+        "dex": 0,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {},
+      "virtues": [
+        {
+          "name": "Ways Of The Sea",
+          "impact": "major",
+          "description": "You ha ve a deep understanding of a type of terrain, feeling more natural and at home there than anywhere else. Examples include Ways of the Forest, Ways of the Mountain, Ways of the Steppe or Ways of the Town. You get a +3 bonus to all rolls, including combat and Casting Scores, that directly involve that area and its inhabitants; mundane, magical, or faerie. In addition, you roll one fewer botch die than normal (which may mean you roll no botch dice) in rolls that pertain to your area of understanding. You are not normally molested by animals of the terrain, and though particularly vicious creatures may still attack you, at least they’ll accord you proper respect. (For Ways of the Town, this still applies to town animals, of which there are plenty in the medieval world, rather than people. The +3 bonus does apply to people.) You may choose this Virtue multiple times, for different types of terrain."
+        },
+        {
+          "name": "Arcane Lore",
+          "impact": "minor",
+          "description": "You may take Arcane Abilities during character generation. Unless you have The Gift, you cannot learn Parma Magica. You get an additional 50 experience points, which must be spent on Arcane Abilities. A Gifted character who is not a Hermetic magus and knows Parma Magica must take the Major Story Flaw Enemy: Entire Order of Hermes, as magi are bound by their Oath to slay the character on sight, unless he immediately joins the Order. Such a character cannot be played in a normal saga, as the other player characters have to kill him."
+        },
+        {
+          "name": "Inspirational",
+          "impact": "minor",
+          "description": "You are a stirring speaker or a heroic figure, and can urge people to great efforts. You give targets a +3 bonus to rolls for appropriate Personality Traits."
+        },
+        {
+          "name": "Educated (Vernacular)",
+          "impact": "minor",
+          "description": "This form of secular instruction, given by tutors to the scions of merchant houses, emphasizes practical skills likely to make the student suited to a leadership role in the family business. The character may purchase Academic Abilities during character creation. She also gains 50 additional experience points, which must be spent on Academic Abilities, Bargain, the Organization Lore of the character’s company, Profession Merchant, or the language of trade in the company’s region (usually Latin, Greek, or Arabic)."
+        },
+        {
+          "name": "Perfect Eye for (Commodity)",
+          "impact": "minor",
+          "description": "For one commodity, and products manufactured from it, the character never fails to make an accurate assessment of value. A character who has a perfect eye for wool, for example, can class wool by touch and always estimate its price accurately. The character can also price woolen cloth and woolen embroidery. A character with a perfect eye for gemstones can always spot fake, cracked, and illusory stones. Characters with this Virtue are prized employees, and are occasionally paid as consultants by other merchants. So long as they trade exclusively in the commodity that matches this Virtue, the character is very successful. If you are using the trading rules in City and Guild, they gain an extra (3 x Wealth Multiplier) Labor Points per year."
+        },
+        {
+          "name": "Partner",
+          "impact": "major",
+          "description": "The character has a large financial stake in a wealthy company. This provides sufficient income for the character to live as well as a minor member of the nobility, but without military trappings. The company’s capo is answerable to his partners, and they are permitted, when practicable, to take their profits in service from the house’s captains and factors, if they wish. A partner may act in any of the roles of the house without taking the Virtue that corresponds to that role, save the role of capo, with the permission of the troupe. That is, a partner who is also a factor, merchant adventurer, local carrier, or urban merchant need not purchase that Virtue if she has this one."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Favors",
+          "impact": "major",
+          "description": "You owe a boon to someone (or to a great many people), and may be called upon to return the favor at any time. The consequences of ignoring such a request can range from mild to deadly serious, at the storyguide’s discretion."
+        },
+        {
+          "name": "Bigamist",
+          "impact": "major",
+          "description": "The character has two entirely separate lives, in two cities, and moves between the two as he trades. Bigamists have two spouses, and maintain two households, which they must pay for. The merchant’s annual cost of maintaining his business rises by (6 x Wealth Multiplier) Labor Points. Some bigamists mitigate this expense by pretending to be of lower status in their alternate life, which reduces the additional Labor Point cost by half (to 3 x Wealth Multiplier)."
+        },
+        {
+          "name": "Avaricious (Major)",
+          "impact": "major",
+          "description": "You want money, lots of money. When you have it, you do not spend it, but hoard it so that you can count it. You can be avaricious about physical things other than money, such as books or raw vis. In this case, you do not use the things you hoard, nor do you allow others to use them."
+        },
+        {
+          "name": "Overconfident (Minor)",
+          "impact": "minor",
+          "description": "You have a completely unshakable faith in your own abilities. You believe that you will always perform at, or slightly above, the peak of your abilities, and cannot imagine failure. If you actually botch, you come up with some rationalization as to what “really” happened."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Awareness",
+          "speciality": "Weather",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Bludgeon",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Normandy Coast Lore",
+          "speciality": "Coves",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Astronomy",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Aboard Ship",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Grains",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Carouse",
+          "speciality": "Drinking Songs",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Lore, Covenant",
+          "speciality": "Personalities",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Dominion Lore",
+          "speciality": "Saints",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Language: English",
+          "speciality": "Naval Terms",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Faerie Lore",
+          "speciality": "Sea Fairies",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Language: Low German",
+          "speciality": "Flemish",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Port Authorities",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Guile",
+          "speciality": "Lying about Cargo",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Law",
+          "speciality": "Hermetic Usage",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Crewman",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Sea Monsters",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Language: French",
+          "speciality": "Norman",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Covenants",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Profession: Sea Captain",
+          "speciality": "Normandy Coast",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Stealth",
+          "speciality": "Hiding",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Swim",
+          "speciality": "Oceans",
+          "xp": 15,
+          "score": 2
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Determined +1",
+        "Confident +1",
+        "Strategic -1",
+        "Avaricious +3",
+        "Overconfident +2"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "shortDescription": "Unassigned ship's captain (template): Partner and Favors, with Bigamist, Avaricious (Major), Overconfident (Minor). Two wives in two ports, and the favors he owes are what keep either from finding out. Not yet part of the covenant.",
+      "biography": "An unassigned ship's-captain template (owner, 2026-10-06; balanced 2026-10-07), built from the Spare Grogs 'Ship's Captain' as a companion. Social Status: Partner (Merchant Adventurer dropped: one Social Status only). Flaws: Favors, Bigamist, Avaricious (Major), Overconfident (Minor). Two wives in two ports, and the favors he owes are what keep either from finding out. The players will claim one per captain; a claimed captain is renamed and joins a ship's crew. Gear: quilted/fur armour and a dagger."
+    },
+    "Captain D": {
+      "name": "Captain D",
+      "foundryName": "Captain D",
+      "charType": "companion",
+      "unassignedCaptain": true,
+      "portrait": null,
+      "house": "",
+      "parens": null,
+      "sigil": null,
+      "born": null,
+      "age": 35,
+      "apparentAge": 35,
+      "characteristics": {
+        "int": 1,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "pre": 2,
+        "com": 2,
+        "dex": 0,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {},
+      "virtues": [
+        {
+          "name": "Ways Of The Sea",
+          "impact": "major",
+          "description": "You ha ve a deep understanding of a type of terrain, feeling more natural and at home there than anywhere else. Examples include Ways of the Forest, Ways of the Mountain, Ways of the Steppe or Ways of the Town. You get a +3 bonus to all rolls, including combat and Casting Scores, that directly involve that area and its inhabitants; mundane, magical, or faerie. In addition, you roll one fewer botch die than normal (which may mean you roll no botch dice) in rolls that pertain to your area of understanding. You are not normally molested by animals of the terrain, and though particularly vicious creatures may still attack you, at least they’ll accord you proper respect. (For Ways of the Town, this still applies to town animals, of which there are plenty in the medieval world, rather than people. The +3 bonus does apply to people.) You may choose this Virtue multiple times, for different types of terrain."
+        },
+        {
+          "name": "Arcane Lore",
+          "impact": "minor",
+          "description": "You may take Arcane Abilities during character generation. Unless you have The Gift, you cannot learn Parma Magica. You get an additional 50 experience points, which must be spent on Arcane Abilities. A Gifted character who is not a Hermetic magus and knows Parma Magica must take the Major Story Flaw Enemy: Entire Order of Hermes, as magi are bound by their Oath to slay the character on sight, unless he immediately joins the Order. Such a character cannot be played in a normal saga, as the other player characters have to kill him."
+        },
+        {
+          "name": "Inspirational",
+          "impact": "minor",
+          "description": "You are a stirring speaker or a heroic figure, and can urge people to great efforts. You give targets a +3 bonus to rolls for appropriate Personality Traits."
+        },
+        {
+          "name": "Educated (Vernacular)",
+          "impact": "minor",
+          "description": "This form of secular instruction, given by tutors to the scions of merchant houses, emphasizes practical skills likely to make the student suited to a leadership role in the family business. The character may purchase Academic Abilities during character creation. She also gains 50 additional experience points, which must be spent on Academic Abilities, Bargain, the Organization Lore of the character’s company, Profession Merchant, or the language of trade in the company’s region (usually Latin, Greek, or Arabic)."
+        },
+        {
+          "name": "Perfect Eye for (Commodity)",
+          "impact": "minor",
+          "description": "For one commodity, and products manufactured from it, the character never fails to make an accurate assessment of value. A character who has a perfect eye for wool, for example, can class wool by touch and always estimate its price accurately. The character can also price woolen cloth and woolen embroidery. A character with a perfect eye for gemstones can always spot fake, cracked, and illusory stones. Characters with this Virtue are prized employees, and are occasionally paid as consultants by other merchants. So long as they trade exclusively in the commodity that matches this Virtue, the character is very successful. If you are using the trading rules in City and Guild, they gain an extra (3 x Wealth Multiplier) Labor Points per year."
+        },
+        {
+          "name": "Partner",
+          "impact": "major",
+          "description": "The character has a large financial stake in a wealthy company. This provides sufficient income for the character to live as well as a minor member of the nobility, but without military trappings. The company’s capo is answerable to his partners, and they are permitted, when practicable, to take their profits in service from the house’s captains and factors, if they wish. A partner may act in any of the roles of the house without taking the Virtue that corresponds to that role, save the role of capo, with the permission of the troupe. That is, a partner who is also a factor, merchant adventurer, local carrier, or urban merchant need not purchase that Virtue if she has this one."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Fury",
+          "impact": "major",
+          "description": "A violent temper sometimes overwhelms you, sending you into a destructive, uncontrollable rage. You are likely to be provoked by some sort of specific event, such as being insulted, being hurt, or hearing the Order of Hermes disparaged. Roll 9+ on a stress die to avoid flying into a rage when such an event occurs, with another roll every round to try to calm yourself should you fail the first. On a botch, you try to kill everyone around you. While enraged you get +3 to Damage, but –1 on all other scores and rolls."
+        },
+        {
+          "name": "Black Sheep",
+          "impact": "major",
+          "description": "You come from a prestigious family, but you have somehow estranged yourself from your relatives. They have nothing to do with you, unless they wish to punish you somehow or make use of you. Those who resent your family’s power can take safe revenge by assaulting you. You begin the game with a bad Reputation of your choice at level 2, among those who respect your family."
+        },
+        {
+          "name": "Reckless",
+          "impact": "minor",
+          "description": "You tend not to notice that situations are threatening. You start with a Personality Trait of Reckless +3, and can never have a positive Personality Trait reflecting care or patience. Whenever the storyguide deems it necessary for you to check bravery or a similar Personality Trait, make a roll against your Reckless score instead. A success means you do not realize your danger, and can act immediately without further checks."
+        },
+        {
+          "name": "Weakness (drink)",
+          "impact": "minor",
+          "description": "You have a soft spot for some sort of object or person. In the face of this, all else is unimportant: promises are forgotten, duties neglected, and common sense cast to the winds. Examples include poets and storytellers, food, flattery, or a pretty face."
+        },
+        {
+          "name": "Missing Hand",
+          "impact": "minor",
+          "description": "Perhaps it was an accident or a punishment in your past that cost you one of your hands. Climbing, combat, and other activities normally requiring both hands are at a penalty of –3 or greater."
+        },
+        {
+          "name": "Obsessed",
+          "impact": "minor",
+          "description": "You are fixated on some prized object, action, or ideal. This interferes with your accomplishment of more immediate tasks. Examples might include obsessive protection of magi to the point that you attack those who insult them, or obsessive neatness where you keep yourself spotless and deride those who do not."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Awareness",
+          "speciality": "Weather",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Bludgeon",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Normandy Coast Lore",
+          "speciality": "Coves",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Astronomy",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Aboard Ship",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Grains",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Carouse",
+          "speciality": "Drinking Songs",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Lore, Covenant",
+          "speciality": "Personalities",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Dominion Lore",
+          "speciality": "Saints",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Language: English",
+          "speciality": "Naval Terms",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Faerie Lore",
+          "speciality": "Sea Fairies",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Language: Low German",
+          "speciality": "Flemish",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Port Authorities",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Guile",
+          "speciality": "Lying about Cargo",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Law",
+          "speciality": "Hermetic Usage",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Crewman",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Sea Monsters",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Language: French",
+          "speciality": "Norman",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Covenants",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Profession: Sea Captain",
+          "speciality": "Normandy Coast",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Stealth",
+          "speciality": "Hiding",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Swim",
+          "speciality": "Oceans",
+          "xp": 15,
+          "score": 2
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Determined +1",
+        "Confident +1",
+        "Strategic -1",
+        "Reckless +3",
+        "Short-tempered +3",
+        "Fond of drink +2",
+        "Obsessed (subject to choose) +2"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "shortDescription": "Unassigned ship's captain (template): Partner and Fury, with Black Sheep, Reckless, Weakness (drink), Missing Hand, Obsessed. A disowned son who bought his way into the company; his temper took a hand in a brawl, and he hasn't learned. Not yet part of the covenant.",
+      "biography": "An unassigned ship's-captain template (owner, 2026-10-06; balanced 2026-10-07), built from the Spare Grogs 'Ship's Captain' as a companion. Social Status: Partner (Merchant Adventurer dropped: one Social Status only). Flaws: Fury, Black Sheep, Reckless, Weakness (drink), Missing Hand, Obsessed. A disowned son who bought his way into the company; his temper took a hand in a brawl, and he hasn't learned. The players will claim one per captain; a claimed captain is renamed and joins a ship's crew. Gear: quilted/fur armour and a dagger."
+    },
+    "Captain E": {
+      "name": "Captain E",
+      "foundryName": "Captain E",
+      "charType": "companion",
+      "unassignedCaptain": true,
+      "portrait": null,
+      "house": "",
+      "parens": null,
+      "sigil": null,
+      "born": null,
+      "age": 35,
+      "apparentAge": 35,
+      "characteristics": {
+        "int": 1,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "pre": 2,
+        "com": 2,
+        "dex": 0,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {},
+      "virtues": [
+        {
+          "name": "Ways Of The Sea",
+          "impact": "major",
+          "description": "You ha ve a deep understanding of a type of terrain, feeling more natural and at home there than anywhere else. Examples include Ways of the Forest, Ways of the Mountain, Ways of the Steppe or Ways of the Town. You get a +3 bonus to all rolls, including combat and Casting Scores, that directly involve that area and its inhabitants; mundane, magical, or faerie. In addition, you roll one fewer botch die than normal (which may mean you roll no botch dice) in rolls that pertain to your area of understanding. You are not normally molested by animals of the terrain, and though particularly vicious creatures may still attack you, at least they’ll accord you proper respect. (For Ways of the Town, this still applies to town animals, of which there are plenty in the medieval world, rather than people. The +3 bonus does apply to people.) You may choose this Virtue multiple times, for different types of terrain."
+        },
+        {
+          "name": "Arcane Lore",
+          "impact": "minor",
+          "description": "You may take Arcane Abilities during character generation. Unless you have The Gift, you cannot learn Parma Magica. You get an additional 50 experience points, which must be spent on Arcane Abilities. A Gifted character who is not a Hermetic magus and knows Parma Magica must take the Major Story Flaw Enemy: Entire Order of Hermes, as magi are bound by their Oath to slay the character on sight, unless he immediately joins the Order. Such a character cannot be played in a normal saga, as the other player characters have to kill him."
+        },
+        {
+          "name": "Inspirational",
+          "impact": "minor",
+          "description": "You are a stirring speaker or a heroic figure, and can urge people to great efforts. You give targets a +3 bonus to rolls for appropriate Personality Traits."
+        },
+        {
+          "name": "Educated (Vernacular)",
+          "impact": "minor",
+          "description": "This form of secular instruction, given by tutors to the scions of merchant houses, emphasizes practical skills likely to make the student suited to a leadership role in the family business. The character may purchase Academic Abilities during character creation. She also gains 50 additional experience points, which must be spent on Academic Abilities, Bargain, the Organization Lore of the character’s company, Profession Merchant, or the language of trade in the company’s region (usually Latin, Greek, or Arabic)."
+        },
+        {
+          "name": "Perfect Eye for (Commodity)",
+          "impact": "minor",
+          "description": "For one commodity, and products manufactured from it, the character never fails to make an accurate assessment of value. A character who has a perfect eye for wool, for example, can class wool by touch and always estimate its price accurately. The character can also price woolen cloth and woolen embroidery. A character with a perfect eye for gemstones can always spot fake, cracked, and illusory stones. Characters with this Virtue are prized employees, and are occasionally paid as consultants by other merchants. So long as they trade exclusively in the commodity that matches this Virtue, the character is very successful. If you are using the trading rules in City and Guild, they gain an extra (3 x Wealth Multiplier) Labor Points per year."
+        },
+        {
+          "name": "Capo",
+          "impact": "major",
+          "description": "The character manages a trading company that has branches in at least two cities. This gives the character many advantages, which a later section of this chapter details. A capo who is also a partner in the business does not select the Partner Virtue, instead selecting Poor or Wealthy, as appropriate to his circumstances."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Feud",
+          "impact": "major",
+          "description": "Your family is involved in a feud. The opposing family or families are roughly of equivalent strength to your family and its allies. You are liable to be ambushed or attacked by opposing clansmen, and your family expects you to join raids against your enemies."
+        },
+        {
+          "name": "Unhappily Married",
+          "impact": "major",
+          "description": "Young merchants often marry for financial reasons. The character has married for money, not love, and seeks solace outside his marital bed. Unhappily married characters must hide their affairs of the heart from their spouses, their spouses’ families, and possibly from their partners’ spouses. In many areas, separation due to infidelity is permitted, although this is not divorce. In many such cases the wife’s dowry must be returned, in part or full."
+        },
+        {
+          "name": "Ambitious (Major)",
+          "impact": "major",
+          "description": "You want to be the most successful or powerful person in the world in some respect. You will not be distracted into doing things that do not contribute to your ambition, and are very eager to do things that advance it."
+        },
+        {
+          "name": "Arthritis",
+          "impact": "minor",
+          "description": "Your joints are stiff and often painful, making almost any prolonged movement difficult. You are at –3 to rolls involving repetitive movement, sustained over time. Occasionally, the pain is so great that you are seriously disabled. On any movement or combat botch, one of your joints may “lock up,” making the limb effectively useless (–6 to all rolls involving it) until you have a chance to rest it for a day or two."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Awareness",
+          "speciality": "Weather",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Bludgeon",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Normandy Coast Lore",
+          "speciality": "Coves",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Astronomy",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Aboard Ship",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Grains",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Carouse",
+          "speciality": "Drinking Songs",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Lore, Covenant",
+          "speciality": "Personalities",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Dominion Lore",
+          "speciality": "Saints",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Language: English",
+          "speciality": "Naval Terms",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Faerie Lore",
+          "speciality": "Sea Fairies",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Language: Low German",
+          "speciality": "Flemish",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Port Authorities",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Guile",
+          "speciality": "Lying about Cargo",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Law",
+          "speciality": "Hermetic Usage",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Crewman",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Sea Monsters",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Language: French",
+          "speciality": "Norman",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Covenants",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Profession: Sea Captain",
+          "speciality": "Normandy Coast",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Stealth",
+          "speciality": "Hiding",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Swim",
+          "speciality": "Oceans",
+          "xp": 15,
+          "score": 2
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Determined +1",
+        "Confident +1",
+        "Strategic -1",
+        "Ambitious +3",
+        "Faithful -2"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "shortDescription": "Unassigned ship's captain (template): Capo and Feud, with Unhappily Married, Ambitious (Major), Arthritis. An aging head of a trading house who married into money; the feud is with his wife's family's rivals, and he wants the company bigger before his hands give out. Not yet part of the covenant.",
+      "biography": "An unassigned ship's-captain template (owner, 2026-10-06; balanced 2026-10-07), built from the Spare Grogs 'Ship's Captain' as a companion. Social Status: Capo (Merchant Adventurer dropped: one Social Status only). Flaws: Feud, Unhappily Married, Ambitious (Major), Arthritis. An aging head of a trading house who married into money; the feud is with his wife's family's rivals, and he wants the company bigger before his hands give out. The players will claim one per captain; a claimed captain is renamed and joins a ship's crew. Gear: quilted/fur armour and a dagger."
+    },
+    "Captain F": {
+      "name": "Captain F",
+      "foundryName": "Captain F",
+      "charType": "companion",
+      "unassignedCaptain": true,
+      "portrait": null,
+      "house": "",
+      "parens": null,
+      "sigil": null,
+      "born": null,
+      "age": 35,
+      "apparentAge": 35,
+      "characteristics": {
+        "int": 1,
+        "per": 0,
+        "str": 0,
+        "sta": 0,
+        "pre": 2,
+        "com": 2,
+        "dex": 0,
+        "qik": 0
+      },
+      "size": 0,
+      "confidence": {
+        "label": "Confidence",
+        "score": 1,
+        "points": 3
+      },
+      "decrepitude": 0,
+      "warping": 0,
+      "arts": {},
+      "virtues": [
+        {
+          "name": "Ways Of The Sea",
+          "impact": "major",
+          "description": "You ha ve a deep understanding of a type of terrain, feeling more natural and at home there than anywhere else. Examples include Ways of the Forest, Ways of the Mountain, Ways of the Steppe or Ways of the Town. You get a +3 bonus to all rolls, including combat and Casting Scores, that directly involve that area and its inhabitants; mundane, magical, or faerie. In addition, you roll one fewer botch die than normal (which may mean you roll no botch dice) in rolls that pertain to your area of understanding. You are not normally molested by animals of the terrain, and though particularly vicious creatures may still attack you, at least they’ll accord you proper respect. (For Ways of the Town, this still applies to town animals, of which there are plenty in the medieval world, rather than people. The +3 bonus does apply to people.) You may choose this Virtue multiple times, for different types of terrain."
+        },
+        {
+          "name": "Arcane Lore",
+          "impact": "minor",
+          "description": "You may take Arcane Abilities during character generation. Unless you have The Gift, you cannot learn Parma Magica. You get an additional 50 experience points, which must be spent on Arcane Abilities. A Gifted character who is not a Hermetic magus and knows Parma Magica must take the Major Story Flaw Enemy: Entire Order of Hermes, as magi are bound by their Oath to slay the character on sight, unless he immediately joins the Order. Such a character cannot be played in a normal saga, as the other player characters have to kill him."
+        },
+        {
+          "name": "Inspirational",
+          "impact": "minor",
+          "description": "You are a stirring speaker or a heroic figure, and can urge people to great efforts. You give targets a +3 bonus to rolls for appropriate Personality Traits."
+        },
+        {
+          "name": "Educated (Vernacular)",
+          "impact": "minor",
+          "description": "This form of secular instruction, given by tutors to the scions of merchant houses, emphasizes practical skills likely to make the student suited to a leadership role in the family business. The character may purchase Academic Abilities during character creation. She also gains 50 additional experience points, which must be spent on Academic Abilities, Bargain, the Organization Lore of the character’s company, Profession Merchant, or the language of trade in the company’s region (usually Latin, Greek, or Arabic)."
+        },
+        {
+          "name": "Perfect Eye for (Commodity)",
+          "impact": "minor",
+          "description": "For one commodity, and products manufactured from it, the character never fails to make an accurate assessment of value. A character who has a perfect eye for wool, for example, can class wool by touch and always estimate its price accurately. The character can also price woolen cloth and woolen embroidery. A character with a perfect eye for gemstones can always spot fake, cracked, and illusory stones. Characters with this Virtue are prized employees, and are occasionally paid as consultants by other merchants. So long as they trade exclusively in the commodity that matches this Virtue, the character is very successful. If you are using the trading rules in City and Guild, they gain an extra (3 x Wealth Multiplier) Labor Points per year."
+        },
+        {
+          "name": "Capo",
+          "impact": "major",
+          "description": "The character manages a trading company that has branches in at least two cities. This gives the character many advantages, which a later section of this chapter details. A capo who is also a partner in the business does not select the Partner Virtue, instead selecting Poor or Wealthy, as appropriate to his circumstances."
+        }
+      ],
+      "flaws": [
+        {
+          "name": "Favors",
+          "impact": "major",
+          "description": "You owe a boon to someone (or to a great many people), and may be called upon to return the favor at any time. The consequences of ignoring such a request can range from mild to deadly serious, at the storyguide’s discretion."
+        },
+        {
+          "name": "Dark Secret",
+          "impact": "major",
+          "description": "You are haunted by something that would lead to shame, rejection, and possibly revenge if discovered. Hints about the secret continually arise, and there might be others who know it and could betray you. This makes you avoid certain places, dislike certain people, or fear certain things."
+        },
+        {
+          "name": "Optimistic (Major)",
+          "impact": "major",
+          "description": "You are convinced that everything will turn out for the best. This is not overconfidence, as you accept that you might well fail. Even if you do, however, you are sure that circumstances will mean that everything works to your benefit."
+        },
+        {
+          "name": "Poor Eyesight",
+          "impact": "minor",
+          "description": "Bleary vision impedes your performance. Rolls involving sight, including rolls to attack and defend, are at –3. New environments are disorienting and perhaps frightening for you. This Flaw can be combined with Missing Eye (above), but the penalties are cumulative."
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Awareness",
+          "speciality": "Weather",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Brawl",
+          "speciality": "Bludgeon",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Normandy Coast Lore",
+          "speciality": "Coves",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Artes Liberales",
+          "speciality": "Astronomy",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Athletics",
+          "speciality": "Aboard Ship",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Bargain",
+          "speciality": "Grains",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Carouse",
+          "speciality": "Drinking Songs",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Lore, Covenant",
+          "speciality": "Personalities",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Dominion Lore",
+          "speciality": "Saints",
+          "xp": 5,
+          "score": 1
+        },
+        {
+          "name": "Language: English",
+          "speciality": "Naval Terms",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Faerie Lore",
+          "speciality": "Sea Fairies",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Language: Low German",
+          "speciality": "Flemish",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Folk Ken",
+          "speciality": "Port Authorities",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Guile",
+          "speciality": "Lying about Cargo",
+          "xp": 50,
+          "score": 4
+        },
+        {
+          "name": "Law",
+          "speciality": "Hermetic Usage",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Leadership",
+          "speciality": "Crewman",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Magic Lore",
+          "speciality": "Sea Monsters",
+          "xp": 30,
+          "score": 3
+        },
+        {
+          "name": "Language: French",
+          "speciality": "Norman",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Order of Hermes Lore",
+          "speciality": "Covenants",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Profession: Sea Captain",
+          "speciality": "Normandy Coast",
+          "xp": 75,
+          "score": 5
+        },
+        {
+          "name": "Stealth",
+          "speciality": "Hiding",
+          "xp": 15,
+          "score": 2
+        },
+        {
+          "name": "Swim",
+          "speciality": "Oceans",
+          "xp": 15,
+          "score": 2
+        }
+      ],
+      "spells": [],
+      "personalityTraits": [
+        "Determined +1",
+        "Confident +1",
+        "Strategic -1",
+        "Optimistic +3",
+        "Secretive +2"
+      ],
+      "reputations": [],
+      "sanctum": "",
+      "familiar": null,
+      "activeWounds": [],
+      "shortDescription": "Unassigned ship's captain (template): Capo and Favors, with Dark Secret, Optimistic (Major), Poor Eyesight. The company's founding capital was pirate plunder, and the favors are owed to the people who know it. He is sure it will all work out. Not yet part of the covenant.",
+      "biography": "An unassigned ship's-captain template (owner, 2026-10-06; balanced 2026-10-07), built from the Spare Grogs 'Ship's Captain' as a companion. Social Status: Capo (Merchant Adventurer dropped: one Social Status only). Flaws: Favors, Dark Secret, Optimistic (Major), Poor Eyesight. The company's founding capital was pirate plunder, and the favors are owed to the people who know it. He is sure it will all work out. The players will claim one per captain; a claimed captain is renamed and joins a ship's crew. Gear: quilted/fur armour and a dagger."
     }
   }
 }

@@ -198,17 +198,6 @@
    "resolution": ""
   },
   {
-   "id": "tl003",
-   "type": "Tool",
-   "category": "Character Build",
-   "title": "Ships-Captain grog template cleanup: delete all but one flaw and all but one virtue when copying from the Spare Grogs folder.",
-   "context": "Per the GM's own note: pick one of (Feud / Favor / Plagued by Supernatural Entity / Fury) as the flaw, and one of (Factor / Partner / Capo) as the virtue, when generating a new ship's captain.\n\n**Update (2026-07-25) — GM:** BLOCKED on the sourcebook→DSL conversion (same dependency as t019/t020). Revisit once those resources are in-hand. Kept Open.",
-   "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
-   "raised_event": "",
-   "status": "Open",
-   "resolution": ""
-  },
-  {
    "id": "tl007",
    "type": "Tool",
    "category": "Rules",
@@ -899,6 +888,17 @@
    "raised_event": "",
    "resolution": "",
    "context": "New storytelling thread (owner, 2026-10-06), from *The Lion and the Lily* (Ile de France, 'Story Seed: Folk Magicians').\n\n**THE SOURCE:** 'The Gift is rare, but Paris is the largest city in Western Europe. Hidden in its population are many people who Hermetic magi did not discover before their Gifts manifested. The Order is blamed for the failings of these people, so Parisian magi need to police these urban hedge magicians. Some can be bought into the service of the Order. Some can be warned to avoid attention. Some are executed.'\n\n**WHY IT MATTERS HERE:** it shows how the Order in this Tribunal treats folk magicians, and the risk of teaching folk magic at volume.\n\n- Wilhelm's taught villagers produced a suicide and two killings (q028). Scarem Montem is deploying his thesis against villeins (t086). The Order takes the blame for either.\n- It also offers Wilhelm a market or recruiting ground, and Parisian magi as either enforcers or allies.\n\n**TO SETTLE:** whether to use it, and how it reaches the covenant: a Tribunal complaint, a Parisian magus at Durenmar or Bruges, or Wilhelm's research leading there."
+  },
+  {
+   "id": "q081",
+   "type": "Tool",
+   "category": "Character Build",
+   "status": "Open",
+   "raised_in": "Owner, 2026-10-06",
+   "raised_event": "",
+   "resolution": "",
+   "title": "Unassigned captains A–F — record which players claim them",
+   "context": "Owner to-do (2026-10-06): six ship's-captain templates are built and waiting. They are **not part of the covenant** until claimed: no ship, no XP-tracker row, not in the covenant ledger. In Foundry they are in the 'Captains (unassigned)' folder; on the site they are under Dramatis Personae → Unassigned Captains.\n\n**THE SIX** (the template's six Virtues plus the one Virtue and one Flaw shown):\n\n- **Captain A**: Factor + Feud (Foundry Actor.UfzAaukdXUyGFe2e)\n- **Captain B**: Factor + Plagued by Supernatural Entity (Foundry Actor.1OzB5xNg21rgaV4O)\n- **Captain C**: Partner + Favors (Foundry Actor.YclZCoFxWefr8peY)\n- **Captain D**: Partner + Fury (Foundry Actor.Lxr6jtKltnsNO5nY)\n- **Captain E**: Capo + Feud (Foundry Actor.WWdTAwN5hCADtYOX)\n- **Captain F**: Capo + Favors (Foundry Actor.TzPgQrzswJEa8pdC)\n\n**WHEN A PLAYER CLAIMS ONE:** rename it (site card and Foundry), assign its ship (ships.json crew and the Foundry ship folder), add it to the XP tracker and the covenant ledger, and clear its 'unassigned' flag.\n\n**BALANCED (owner, 2026-10-07):** all six are now **companions** ('grogs may not have Story Flaws'), and Merchant Adventurer is gone from every one: 'All characters must take one Social Status, and may only take more than one if the descriptions of the Virtues or Flaws explicitly note that they are compatible.' Factor, Partner or Capo is each captain's Social Status. Flaws added to match Virtue points:\n\n- **A** (8/8): Wrathful (Major), Employed by Company, Missing Ear.\n- **B** (8/8): Low Self-Esteem, Employed by Company, Visions.\n- **C** (10/10): Bigamist, Avaricious (Major), Overconfident (Minor).\n- **D** (10/10): Black Sheep, Reckless, Weakness (drink), Missing Hand, Obsessed.\n- **E** (10/10): Unhappily Married, Ambitious (Major), Arthritis.\n- **F** (10/10): Dark Secret, Optimistic (Major), Poor Eyesight.\n\n**STILL OPEN:** the template's build questions (Soak +1, Encumbrance) are tl020. Personality Traits added (owner, 2026-10-07), on the house convention of **+3 for a Major and +2 for a Minor Personality Flaw** (core traits 'normally range between +3 and –3'). Reckless is +3 by its own text: 'You start with a Personality Trait of Reckless +3'. A Wrathful +3; B Confident −2 (Low Self-Esteem); C Avaricious +3, Overconfident +2; D Reckless +3, Short-tempered +3 (Fury), Fond of drink +2, Obsessed +2; E Ambitious +3, Faithful −2 (Unhappily Married); F Optimistic +3, Secretive +2 (Dark Secret). The template's Determined +1, Confident +1 and Strategic −1 are kept. D's Obsessed still needs a subject."
   }
  ],
  "gmReference": {

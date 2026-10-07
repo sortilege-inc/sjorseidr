@@ -1040,6 +1040,17 @@
       "raised_event": "",
       "status": "Resolved",
       "resolution": "Closed (owner, 2026-10-06): no longer blocked. The Apprentices book is in the corpus and the site's character creator builds apprentices from it, and Stijntje's seasons were reviewed one by one on 2026-10-04."
+    },
+    {
+      "id": "tl003",
+      "type": "Tool",
+      "category": "Character Build",
+      "title": "Ships-Captain grog template cleanup: delete all but one flaw and all but one virtue when copying from the Spare Grogs folder.",
+      "context": "Per the GM's own note: pick one of (Feud / Favor / Plagued by Supernatural Entity / Fury) as the flaw, and one of (Factor / Partner / Capo) as the virtue, when generating a new ship's captain.\n\n**Update (2026-07-25) — GM:** BLOCKED on the sourcebook→DSL conversion (same dependency as t019/t020). Revisit once those resources are in-hand. Kept Open.",
+      "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
+      "raised_event": "",
+      "status": "Resolved",
+      "resolution": "Resolved (owner, 2026-10-06): applied. Six unassigned captains, Captain A–F, were built from the Spare Grogs 'Ship's Captain (pick one flaw)' template, each with one of Factor / Partner / Capo (City & Guild) and one of Favors / Feud / Fury / Plagued by Supernatural Entity. Tracking of player claims continues in q081."
     }
   ]
 }

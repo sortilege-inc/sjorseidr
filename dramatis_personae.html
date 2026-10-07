@@ -284,11 +284,13 @@ async function load(){
 const GROUPS = [
   {key:'magus',  head:'Magi of Other Covenants', sub:'Hermetic magi outside Sjórseiðr — rivals, hosts, and hands the party has dealt with.'},
   {key:'entity', head:'Dragons, Faeries & Spirits', sub:'The Magic- and Faerie-realm beings the covenant has bargained with, freed, taught, or courted.'},
+  {key:'captain', head:'Unassigned Captains', sub:'Ship\'s-captain templates waiting for a player to claim one. Not yet part of the covenant; a claimed captain is renamed and joins a ship.'},
   {key:'other',  head:'Others', sub:'Everyone else off the fleet.'},
 ];
 function groupKey(rec){
   if(rec.charType === 'magus') return 'magus';
   if(rec.charType === 'entity') return 'entity';
+  if(rec.unassignedCaptain) return 'captain';
   return 'other';
 }
 
@@ -306,6 +308,7 @@ function renderFilters(){
 function cardTags(rec){
   const t = [];
   if(rec.charType === 'magus' && rec.house) t.push(`<span class="pc-tag house">House ${esc(rec.house)}</span>`);
+  if(rec.unassignedCaptain) t.push(`<span class="pc-tag">Unassigned</span>`);
   if(rec.might != null) t.push(`<span class="pc-tag might">Might ${esc(rec.might)}${rec.mightRealm?' '+esc(rec.mightRealm):''}</span>`);
   else if(rec.mightRealm && rec.charType==='entity') t.push(`<span class="pc-tag might">${esc(rec.mightRealm)}</span>`);
   return t.length ? `<div class="pc-tags">${t.join('')}</div>` : '';
