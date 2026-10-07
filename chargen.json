@@ -6349,13 +6349,6 @@
    "source": "armdef-0.5-flaws"
   },
   {
-   "name": "Rebellious (The Sundered Eagle)",
-   "size": "Major or Minor",
-   "category": "Personality",
-   "text": "You react adversely to any attempt to impose authority over you, and work against those who are in command. You do not necessarily have any desire to be a leader yourself, but you don’t like to be pushed around.",
-   "source": "armdef-the-sundered-eagle-0.5-magical-landscape-virtues-flaws"
-  },
-  {
    "name": "Reckless",
    "size": "[\"Minor\", \"Major\", \"Free\", \"Major or Minor\"]",
    "category": "Personality",
