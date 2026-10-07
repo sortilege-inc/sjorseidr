@@ -1007,6 +1007,39 @@
       "raised_event": null,
       "status": "Resolved",
       "resolution": "Resolved (2026-10-06): all three items were already done on both the site (magi.json) and Foundry, checked against both. (1) Bargain specialty: Bartering. (2) Personality Trait: Annoyed +2 (owner confirmed). (3) Flawless Magic masteries: every spell has its Mastery ability: Chirurgeon's Healing Touch and Agility of the Cheetah, Precise Casting; Chamber of Spring Breezes, Reveal the Flaws of Mortal Flesh and Clear Sight of the Naiad, Quiet Casting; Scales of the Magical Weight and Sense the Nature of Vis, Penetration; Doublet of Impenetrable Silk and Lungs of the Fish, Multiple Casting; Aura of Rightful Authority, Still Casting; Call to Slumber, Magic Resistance. His free House-virtue slot stays the ST-approved Tremere Minor Magical Focus (Certamen)."
+    },
+    {
+      "id": "q025",
+      "type": "Question",
+      "category": "Rules",
+      "title": "Are the covenant's Aegis level, Aegis penetration, and regio levels genuinely zero, or just unconfigured in Foundry?",
+      "context": "Already flagged inline on covenant_ledger.html#covenant as possibly just unconfigured rather than narratively true — promoted here from the README into the actual Storyteller tracker since it's a genuine ruling needed before anyone treats covenant.json's aegis/regioLevels fields as fact.\n\n**Update (2026-07-25):** Data-checked against covenant.json — the fields are literally aegis {level:0, penetration:0} and regioLevels:0. Proposed disposition: treat these as UNCONFIGURED defaults, not narrative truth, until the GM sets real numbers; don't let any tool read them as fact. Note the cross-link to q019 (Ka'wa'ill's Aegis token): if the Aegis level is genuinely 0, any Might>0 creature already \"exceeds the level\" and crosses freely, making a token moot. Same class of issue as tl019 (Saga/Aura).",
+      "raised_in": "Flagged on covenant.html; promoted to a tracked question (2026-07-13)",
+      "raised_event": "",
+      "status": "Resolved",
+      "resolution": "Resolved (owner, 2026-10-06): the Aegis is real. Dagmar learned Aegis of the Hearth (Rego Vim 30), cast it in Summer 1221 ('Casting Aegis of the Hearth — Successful, targeting the Master Chart'), and it has been cast every year since (Fall 1223 near Harfleur). covenant.json now records Aegis level 30; its Penetration was never recorded and is left blank. The regio level of 0 is genuine: the fleet is not in a regio."
+    },
+    {
+      "id": "tl019",
+      "type": "Tool",
+      "category": "Rules",
+      "title": "Saga Type was left blank, and Aura Type/Level were left at Mundane/0 defaults in Foundry's covenant configuration.",
+      "context": "See also q025 (Aegis/regio levels recorded as zero) — this is the same class of \"never configured vs. narratively true\" issue, just for Saga Type and Aura specifically.\n\n**Update (2026-07-25):** Data-checked against covenant.json — the Saga Type half is DONE: sagaType is now filled ('Pulsed/Medium'), so tl019's \"Saga Type was left blank\" premise is stale. Still outstanding: Aura Type/Level remain at the Mundane/0 default. Recommend treating that (like the Aegis/regio values in q025) as an unconfigured Foundry default rather than a narrative fact — needs a GM ruling, not a data fix. See q025.",
+      "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
+      "raised_event": "",
+      "status": "Resolved",
+      "resolution": "Resolved (owner, 2026-10-06): Saga Type was already set ('Pulsed/Medium'). The Aura of Mundane/0 is correct: the Missing Aura Hook stands (owner, 2026-10-06), so the covenant's base aura is zero at sea and each lab uses the aura where it is. (Labs in Foundry currently read aura 7 from the covenant actor's linked scene, the Normandy Tribunal map; that is a separate issue.)"
+    },
+    {
+      "id": "tl022",
+      "type": "Tool",
+      "category": "Rules",
+      "title": "Apprentice-creation rules were flagged for review.",
+      "context": "Alongside a note that Dustin's delegation of teaching to Henri (for Stijntje) went well — the review itself was never confirmed done.\n\n**Update (2026-07-25) — GM:** BLOCKED on the sourcebook→DSL conversion (same dependency as t019/t020). Revisit once those resources are in-hand. Kept Open.",
+      "raised_in": "GM's Notion prep notes (undated), root campaign page / Foundry Notes",
+      "raised_event": "",
+      "status": "Resolved",
+      "resolution": "Closed (owner, 2026-10-06): no longer blocked. The Apprentices book is in the corpus and the site's character creator builds apprentices from it, and Stijntje's seasons were reviewed one by one on 2026-10-04."
     }
   ]
 }

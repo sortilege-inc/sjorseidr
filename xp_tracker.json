@@ -12632,6 +12632,26 @@
    "detail": "teaching: Code of Hermes+16 (taught by Valerian: Com 2 + Teaching 0 + 3 + 6 single student = 11, + Apt Student 5)",
    "covenant": null,
    "source": "owner ruling 2026-10-04 (Menu B')"
+  },
+  "Wilhelm Stienauer::1225-spring": {
+   "activity": true,
+   "deferred": false,
+   "act": "exposure",
+   "xp": 2,
+   "xpType": "Rego",
+   "targets": [
+    {
+     "type": "Rego",
+     "xp": 1
+    },
+    {
+     "type": "Terram",
+     "xp": 1
+    }
+   ],
+   "detail": "exposure: Rego+1, Terram+1 (building the two stone sleds at Durenmar)",
+   "covenant": null,
+   "source": "owner ruling 2026-10-04 (Durenmar is Spring 1225); Foundry 2026-10-06"
   }
  }
 }

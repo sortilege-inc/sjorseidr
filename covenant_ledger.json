@@ -6588,7 +6588,7 @@
    "cutoff": "9999",
    "populated": true,
    "state": {
-    "aegis": null,
+    "aegis": 30,
     "penetration": null,
     "regio": null,
     "economics": {
@@ -6848,7 +6848,7 @@
       "category": "magi",
       "job": "House Bonisagus",
       "points": 5,
-      "yearBorn": 1198,
+      "yearBorn": 1197,
       "qty": 1,
       "actorId": null,
       "ship": null,

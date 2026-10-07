@@ -13,8 +13,9 @@
   "sagaType": "Pulsed/Medium",
   "narrator": "Jordan",
   "aegis": {
-    "level": 0,
-    "penetration": 0
+    "level": 30,
+    "penetration": null,
+    "note": "Aegis of the Hearth (Rego Vim 30), learned by Dagmar (Winter 1220-21 – Spring 1221) and cast each year since Summer 1221 (Fall 1223 near Harfleur). Penetration not recorded. Regio 0 is correct: the fleet is not in a regio (owner, 2026-10-06)."
   },
   "regioLevels": 0,
   "loyalty": {

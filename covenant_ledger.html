@@ -520,7 +520,7 @@ const PANELS={
         ${ch.amendmentsNote?`<p class="cov-p" style="font-size:13px">${esc(ch.amendmentsNote)}</p>`:''}
         <ul class="cov-ul">${(ch.amendments||[]).map(a=>`<li>${esc(a)}</li>`).join('')}</ul></div>`:''}
       <div class="cov-sec"><div class="lab-sec-t">Aegis &amp; Regio</div>${aegisNote}
-        <div class="mtile-grid">${metaTile('Aegis Level',ag.level??0)}${metaTile('Aegis Penetration',ag.penetration??0)}${metaTile('Regio Levels',d.regioLevels??0)}</div></div>
+        <div class="mtile-grid">${metaTile('Aegis Level',ag.level??0)}${metaTile('Aegis Penetration',ag.penetration??'—')}${metaTile('Regio Levels',d.regioLevels??0)}</div></div>
       <div class="cov-sec"><div class="lab-sec-t">Loyalty</div>
         <div class="mtile-grid">${metaTile('Prevailing',lp.prevailing??'—')}${metaTile('Modifier',lp.modifier??'—')}${metaTile('Equipment',cap(lm.equipment)||'—')}${metaTile('Wages',cap(lm.wages)||'—')}${metaTile('Familiarity',lm.familiarity??'—')}${metaTile('Events',lm.events??'—')}</div></div>
       <div class="cov-sec"><div class="lab-sec-t">Covenant Virtues &amp; Flaws</div>
